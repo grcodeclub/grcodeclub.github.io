@@ -4,7 +4,7 @@
         <meta property="og:title" content="Λεξικό Όρων Πληροφορικής">
         <script src="https://grcodeclub.github.io/js/jquery.js"></script>
         <script src="https://grcodeclub.gr/more/menu.js"></script>
-        <script src="https://grcodeclub.github.io/js/head.js"></script>
+        <script src="https://grcodeclub.github.io/javascript/add-elements/head.js"></script>
         <style>
            table, th, td {
                 border: 1px solid rgba(255, 255, 255, 0.176);
@@ -36,9 +36,10 @@
                                 <li><a href="https://grcodeclub.gr/linux/orologia" class="link">Linux</a></li>
                             </ul>
                         </div>   <br>         
-                        <div  class="search"><input type="input" class="form__field" placeholder="Αναζήτηση" id='searchInput'/></div>
-                        <br>
-                    <table ID="table" class="style2">
+                        <div style="display: none;" class="search" id="search"><input type="input" class="form__field" placeholder="Αναζήτηση" id='searchInput'/></div>
+                        <br>                        <input type="checkbox" style="display: inline;" id="show">Αναζήτηση</input>
+
+                    <table id="table" class="style2">
                         <tr><td>Όρος</td> <td>Μετάφραση</td> <td>Περιγραφή</td></tr>
                         <tr><td>ASCII</td> <td></td> <td>Το Ascii (American Standard Code for Information Interchange) είναι το πιο γνωστό πρότυπο για αποθήκευση αρχείων κειμένου. Στηρίζεται σε μια αναπαράσταση χαρακτήρων όπου κάθε χαρακτήρας αναπαρίσταται με 7 bits. Έτσι επιτρέπει την ύπαρξη μόνο 127 διαφορετικών χαρακτήρων (λατινικούς).</td></tr>
                         <tr><td>Βάση Δεδομένων</td> <td>Database</td> <td>Μια βάση δεδομένων είναι μια οργανωμένη συλλογή δεδομένων που μπορεί να αποθηκεύσει, ανακτήσει και επεξεργαστεί πληροφορίες.</td></tr>
@@ -48,9 +49,12 @@
                         <tr><td>Εικονική Πραγματικότητα</td> <td>Virtual Reality - VR</td> <td>Η εικονική πραγματικότητα αναφέρεται σε ένα περιβάλλον που δημιουργείται από υπολογιστή και παρουσιάζεται στον χρήστη με τη χρήση ειδικών συσκευών</td></tr>
                         <tr><td>Μηχανική Μάθηση</td> <td>Machine Learning</td> <td>Η μηχανική μάθηση είναι ένα υποσύνολο της τεχνητής νοημοσύνης που επιτρέπει στους υπολογιστές να μαθαίνουν από δεδομένα και να βελτιώνουν την απόδοσή τους με τον χρόνο.</td></tr>
                         <tr><td>User Interface - UI</td> <td>Διεπαφή Χρήστη</td> <td>Είναι τρόπος με τον οποίο ο χρήστης αλληλεπιδρά με ένα λογισμικό ή μια συσκευή, συμπεριλαμβανομένου του γραφικού περιβάλλοντος.</td></tr>
+
                     </table>
+                    <div class="pagination" id="pagination"></div>
+                    <script src="https://grcodeclub.github.io/javascript/tables/pages-3-cells.js"></script>    
                     <script src="https://grcodeclub.gr/javascript/search/search_table_row_cells_0.js"></script>
-                    </div><!-- Τέλος Background Κειμένου-->
+                </div><!-- Τέλος Background Κειμένου-->
             </div> <!--Τέλος Κειμένου-->
 
         </div> <!--Τέλος container-->
