@@ -1,44 +1,138 @@
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=0.8">
-        <meta property="og:image" content="https://grcodeclub.gr/file/background/4.png"/>
-        <meta content="image/png" property="og:image:type"/>
-        <meta content="1200" property="og:image:width"/>
-        <meta content="628" property="og:image:height"/>
-        <meta id="grcodeclub" property="og:title" content="GrCode Club">
-        <meta name="description" content="Greek Code Club">
-        <script src="https://grcodeclub.gr/js/jquery.js"></script>
-        <link rel="manifest" href="manifest.json">
-        <script src="https://grcodeclub.github.io/js/head.js"></script>
-        <style>
-            .text_bg{min-width: 400px;}
-            .card:hover {
-            transform: scale(1.1);}
-        </style>
-    </head>
 
-    <body class="basic">
-        <div class="container">
-                <div id="add_headder_and_menu"></div><script src="https://grcodeclub.gr/js/headder_and_menu.js"></script>
-            
-            <div class="Text"> <!--Αρχή Κειμένου-->
-                <a href="https://grcodeclub.gr/"><img src="https://grcodeclub.gr/files-page/graphics/back.png" class="logo_back"></a>
-                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
-                    <br>
-                    <div class="card-container" style="justify-content: center;">
-                        <a href="https://grcodeclub.gr/post/"><div class="card" style="background:black;"><h2><u>Δημοσιεύσεις</u></h2></div></a>
-                        <a href="https://grcodeclub.gr/more/orologia"><div class="card" style="background:black;"><h2><u>Ορολογία</u></h2></div></a>
-                        <a href="https://grcodeclub.gr/more/google"><div class="card" style="background:black;"><h2><u>Υπηρεσίες της Google</u></h2></div></a>  
-                        <a href="https://grcodeclub.gr/image/"><div class="card" style="background:black;"><h2><u>Εικόνες</u></h2></div></a>
-                        <a href="https://grcodeclub.gr/more/microsoft-office/"><div class="card" style="background:black;"><h2><u>Microsoft Office και Microsoft 365</u></h2></div></a>
-                        <a href="https://grcodeclub.gr/post/create"><div class="card" style="background:black;"><h2><u>Δημιουργία Σελίδας</u></h2></div></a>
-                    </div>
-                </div><!-- Τέλος Background Κειμένου-->
-            </div> <!--Τέλος Κειμένου-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W7C4G2DH');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7C4G2DH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="GrCode Club">
+    <meta name="twitter:image" content="https://grcodeclub.gr/files-page/background/main.jpg">        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>GrCode Club</title>
+    <script src="../js/main-header.js"></script>
+    <script src="../js/section.js"></script>
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/desktop.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel='icon' type='image/png' href='https://grcodeclub.github.io/files-page/logo/favicon.ico'>
+    <link rel="stylesheet" href="../css/social.css">
+    <link rel="stylesheet" href="../css/bg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        </div> <!--Τέλος container-->
-        
-        <!-- Footer -->
-        <footer id="add_footer"></footer><script src="https://grcodeclub.github.io/javascript/add-elements/footer.js"></script>
-    </body>
+    <style>
+            .box-container1 {
+        display: flex;
+        overflow: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px rgb(0, 0, 0);
+        border-radius: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 30px;
+        overflow-y: auto; /* Προσθήκη δυνατότητας κατακόρυφου scrolling */
+    }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <a href="https://www.grcodeclub.gr/"><img style="display: none;" id="logo" src="../files-page/logo/logo-head.png" width="20%" class="hide"></a>
+            <div class="show_desktop">
+                <ul style="font-size: 20px;">
+                    <li style=" flex-wrap: nowrap; white-space: nowrap;"><a href="./index.html">Αρχική Σελίδα</a></li>
+                    <li><a href="#info">Πληροφορίες</a></li>
+                    <li><a href="#services">Περιεχόμενα</a></li>
+                    <li><a href="#contact">Επικοινωνία</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+   
+    <section class="box animate-on-scroll" style="height: 100vh;" id="services">
+        <h2>Περιεχόμενα</h2>
+        <div class="box-container1">
+            <a href="https://grcodeclub.gr/programming/" class="service" style="text-decoration: none;">
+                <h3>Προγραμματισμός</h3>
+                <p>Ο προγραμματισμός επιτρέπει στους προγραμματιστές να δημιουργούν λογισμικό, εφαρμογές, ιστοσελίδες και πολλά άλλα. </p>
+            </a>
+            <a href="https://grcodeclub.gr/system/" class="service" style="text-decoration: none;">
+                <h3>Λειτουργικό Σύστημα</h3>
+                <p>Ένα λειτουργικό σύστημα είναι λογισμικό που διαχειρίζεται τους πόρους και τις λειτουργίες ενός υπολογιστικού συστήματος.</p>
+            </a>
+            <a href="https://grcodeclub.gr/linux/" class="service" style="text-decoration: none;">
+                <h3>Linux</h3>
+                <p>Το Linux είναι ένα λειτουργικό σύστημα όπως είναι και τα Winodws.</p>
+            </a>
+            <a href="https://grcodeclub.gr/windows/" class="service" style="text-decoration: none;">
+                <h3>Microsoft Windows</h3>
+                <p>Τα Windows είναι το λειτουργικό σύστημα της Microsoft είναι ο τρόπος επικοινωνίας με τον υπολογιστή μας .</p>
+            </a>
+            <a href="https://grcodeclub.gr/cybersecurity/" class="service" style="text-decoration: none;">
+                <h3>Κυβερνοασφάλεια</h3>
+                <p>Ο προγραμματισμός επιτρέπει στους προγραμματιστές να δημιουργούν λογισμικό, εφαρμογές, ιστοσελίδες και πολλά άλλα. </p>
+            </a>
+            <a href="https://grcodeclub.gr/network/" class="service" style="text-decoration: none;">
+                <h3>Δίκτυα Υπολογιστών</h3>
+                <p>Τα δίκτυα υπολογιστών αναφέρονται στη σύνδεση δύο ή περισσότερων υπολογιστών και συσκευών μεταξύ τους, έτσι ώστε να μπορούν να ανταλλάσσουν δεδομένα και πληροφορίες.</p>
+            </a>
+            <a href="https://grcodeclub.gr/programming/" class="service" style="text-decoration: none;">
+                <h3>Προγραμματισμός</h3>
+                <p>Ο προγραμματισμός επιτρέπει στους προγραμματιστές να δημιουργούν λογισμικό, εφαρμογές, ιστοσελίδες και πολλά άλλα. </p>
+            </a>
+            <a href="https://grcodeclub.gr/system/" class="service" style="text-decoration: none;">
+                <h3>Λειτουργικό Σύστημα</h3>
+                <p>Ένα λειτουργικό σύστημα είναι λογισμικό που διαχειρίζεται τους πόρους και τις λειτουργίες ενός υπολογιστικού συστήματος.</p>
+            </a>
+            <a href="https://grcodeclub.gr/linux/" class="service" style="text-decoration: none;">
+                <h3>Linux</h3>
+                <p>Το Linux είναι ένα λειτουργικό σύστημα όπως είναι και τα Winodws.</p>
+            </a>
+            <a href="https://grcodeclub.gr/windows/" class="service" style="text-decoration: none;">
+                <h3>Microsoft Windows</h3>
+                <p>Τα Windows είναι το λειτουργικό σύστημα της Microsoft είναι ο τρόπος επικοινωνίας με τον υπολογιστή μας .</p>
+            </a>
+            <a href="https://grcodeclub.gr/cybersecurity/" class="service" style="text-decoration: none;">
+                <h3>Κυβερνοασφάλεια</h3>
+                <p>Ο προγραμματισμός επιτρέπει στους προγραμματιστές να δημιουργούν λογισμικό, εφαρμογές, ιστοσελίδες και πολλά άλλα. </p>
+            </a>
+            <a href="https://grcodeclub.gr/network/" class="service" style="text-decoration: none;">
+                <h3>Δίκτυα Υπολογιστών</h3>
+                <p>Τα δίκτυα υπολογιστών αναφέρονται στη σύνδεση δύο ή περισσότερων υπολογιστών και συσκευών μεταξύ τους, έτσι ώστε να μπορούν να ανταλλάσσουν δεδομένα και πληροφορίες.</p>
+            </a>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="show_mobile" style="padding-bottom: 10%;"></div>
+    <footer>
+       <div class="show_desktop">
+        <ul class="social">
+            <li class="social-item"> <a class="facebook" href="https://www.facebook.com/grcode.club/" target="_blank"><span></span> <span></span> <span></span> <span></span><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li class="social-item"> <a class="instagram" href="https://www.instagram.com/grcode.club" target="_blank"><span></span> <span></span> <span></span> <span></span><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li class="social-item"> <a class="github" href="https://github.com/GrCodeClub" target="_blank"><span></span> <span></span> <span></span> <span></span><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li class="social-item"> <a class="youtube" href="https://www.youtube.com/@grcodeclub" target="_blank"><span></span> <span></span> <span></span> <span></span><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+
+       </div>
+        <div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+         </div>
+    </footer>
+</body>
 </html>
