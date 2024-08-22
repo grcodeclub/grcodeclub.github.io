@@ -1,0 +1,80 @@
+.sociallink {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+  }
+  
+  article {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    box-shadow: 0 0 6px -2px #000, 0 0 45px -20px #000;
+    color: #fff;
+    line-height: 90px;
+    transform: perspective(300px) rotateY(0deg);
+    transition: transform 0.4s linear, background-color 0s linear 0.2s, color 0s linear 0.2s;
+  }
+  
+  .sociallink:nth-child(1):hover article {
+    background-color: #3B5998;
+}
+
+  
+  .sociallink:nth-child(2):hover article {background: linear-gradient(45deg, #FD1D1D, #F56040, #FFC837);}
+  
+  .sociallink:nth-child(3):hover article {
+    background-color: #0c0a0a;
+  }
+  
+  .sociallink:nth-child(4):hover article {
+    background: linear-gradient(45deg, #FF0000, #CC0000, #990000);
+  }
+  
+  .sociallink:nth-child(5):hover article {
+    background-color: #000000;
+  }
+  
+  .sociallink:nth-child(6):hover article {
+    background-color: #ff1717;
+  }
+  
+  .sociallink:hover article {
+    transform: perspective(300px) rotateY(180deg);
+    color: #eee;
+    transition: transform 0.2s linear, background-color 0s linear 0.1s, color 0s linear 0.1s;
+  }
+  
+  span {
+    transition: transform 0s linear 0.2s, text-shadow 0s linear 0.2s;
+    display: block;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: antialiased;
+  }
+  
+  .sociallink:hover span {
+    transition: transform 0s linear 0.1s, text-shadow 0s linear 0.1s;
+    transform: scale(-1, 1);
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+  }
+  
+  .ss-icon {
+    font-family: "SSSocial";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+  }
