@@ -2,7 +2,7 @@
 
 Όλα τα αρχεία από το  [www.grcodeclub.gr](http://www.grcodeclub.gr) είναι αποθηκευμένα στο GitHub. Συγκεκριμένα αξoιoπησαμε την λειτουργεία GitHub Page. 
 
-Για βασικό repo δώσαμε ως όνομα   [**`grcodeclub.github.io`](https://github.com/grcodeclub/grcodeclub.github.io)** το οποίο είναι και το link για να πηγαίνει κάποιος στο website.
+Για βασικό repo δώσαμε ως όνομα   [`grcodeclub.github.io`](https://github.com/grcodeclub/grcodeclub.github.io) το οποίο είναι και το link για να πηγαίνει κάποιος στο website.
 
 > Ορίζοντας σε ένα repo ως όνομα, το URL που θα έχεις για να βλέπουν ως λογαριασμός στο GitHub, αυτόματος ορίζεται να φορτώνεται αυτόματα το συγκεκριμένο repo. (Αν δεν έχεις ορίσει στο URL κάποιο άλλο repo)
 Το URL που έχει κάθε λογαριασμός είναι `username.github.io`
@@ -29,7 +29,7 @@ URL ενός repo `username.github.io/name_repo`
 
 # Custom domain
 
-Στο repo [**`grcodeclub.github.io`](http://grcodeclub.github.io) , εισήγαμε το domain [`grcodeclub.gr`](http://grcodeclub.gr)** 
+Στο repo [`grcodeclub.github.io`](http://grcodeclub.github.io) , εισήγαμε το domain [`grcodeclub.gr`](http://grcodeclub.gr) 
 
 ![image.png](GrCode%20Club%20e159106c93b347aaaa0f5a422f952de0/image%204.png)
 
