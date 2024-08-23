@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('.sidebarMenuInner').append(menuLink);
     menuLink = '<li><a href="https://grcodeclub.github.io/network/orologia/">Ορολογία σχετικά με τα Δίκτυα Υπολογιστών</a></li>';
     $('.sidebarMenuInner').append(menuLink);
-     menuLink = '<li><a href="https://grcodeclub.github.io/linux/orologia/">Linux</a></li>';
+     menuLink = '<li><a href="https://grcodeclub.github.io/linux/orologia/">Ορολογία σχετικά με το Linux</a></li>';
     $('.sidebarMenuInner').append(menuLink);
     menuLink = '<li><a href="https://grcodeclub.github.io/system/orologia/">Ορολογία σχετικά με το Λειτουργικό Σύστημα</a></li>';
     $('.sidebarMenuInner').append(menuLink);
