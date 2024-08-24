@@ -8,19 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let cookieStatus = getCookie('cookiesAccepted');
 
-    if (cookieStatus === 'false') {
-        document.getElementById('cookie-banner').style.display = 'block';
-    }
     if (noacceptCookiesButton) {
             noacceptCookiesButton.onclick = function() {
-            setCookie('cookiesAccepted', 'false', 1);
+            setCookie_minutes('cookiesAccepted', 'false', 2);
             document.getElementById('cookie-banner').style.display = 'none';
         };
     
     }
     if (acceptCookiesButton) {
         acceptCookiesButton.onclick = function() {
-            setCookie_minutes('cookiesAccepted', 'true', 2);
+            setCookie('cookiesAccepted', 'true', 2);
             document.getElementById('cookie-banner').style.display = 'none';
             var cookieSwitch = document.getElementById('cookies-ga4');
                 if (cookieSwitch.checked) {
