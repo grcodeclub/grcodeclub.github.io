@@ -1,31 +1,35 @@
- document.addEventListener("DOMContentLoaded", function() {
-            // Παίρνουμε το τρέχον URL
-            const currentUrl = window.location.href;
-            
-            // Δημιουργούμε ένα URL αντικείμενο για εύκολο χειρισμό των τμημάτων του URL
-            const url = new URL(currentUrl);
+// Δημιουργούμε μια μεταβλητή για το πραγματικό URL
+let originalUrl;
 
-            // Παίρνουμε το πρώτο path segment
-            const firstPath = url.pathname.split('/')[1];
+// Όταν φορτώνει το DOM
+document.addEventListener("DOMContentLoaded", function() {
+    // Παίρνουμε το τρέχον URL
+    const currentUrl = window.location.href;
 
-            // Δημιουργούμε το νέο URL που θέλουμε να εμφανίζεται
-            const newUrl = `${url.origin}/${firstPath}/`;
+    // Αποθηκεύουμε το αρχικό URL
+    originalUrl = currentUrl;
 
-            // Αλλάζουμε το URL που φαίνεται στον χρήστη χωρίς να αλλάξουμε το περιεχόμενο
-            history.pushState({}, '', newUrl);
-        });
+    // Δημιουργούμε ένα URL αντικείμενο για εύκολο χειρισμό των τμημάτων του URL
+    const url = new URL(currentUrl);
 
-        // Συνάρτηση για την αντιγραφή του πραγματικού URL
-        function copyRealUrl() {
-            // Παίρνουμε το πραγματικό URL
-            const realUrl = window.location.href;
+    // Παίρνουμε το πρώτο path segment
+    const firstPath = url.pathname.split('/')[1];
 
-            // Χρησιμοποιούμε το Clipboard API για να αντιγράψουμε το URL
-            navigator.clipboard.writeText(realUrl).then(function() {
-                // Επιτυχής αντιγραφή
-                console.log('URL copied to clipboard: ' + realUrl);
-            }).catch(function(error) {
-                // Εμφανίζουμε μήνυμα σφάλματος αν κάτι πάει στραβά
-                console.error('Failed to copy URL: ', error);
-            });
-        }
+    // Δημιουργούμε το νέο URL που θέλουμε να εμφανίζεται
+    const newUrl = `${url.origin}/${firstPath}/`;
+
+    // Αλλάζουμε το URL που φαίνεται στον χρήστη χωρίς να αλλάξουμε το περιεχόμενο
+    history.pushState({}, '', newUrl);
+});
+
+// Συνάρτηση για την αντιγραφή του πραγματικού URL
+function copyRealUrl() {
+    // Χρησιμοποιούμε το Clipboard API για να αντιγράψουμε το αρχικό URL
+    navigator.clipboard.writeText(originalUrl).then(function() {
+        // Επιτυχής αντιγραφή
+        console.log('URL copied to clipboard: ' + originalUrl);
+    }).catch(function(error) {
+        // Εμφανίζουμε μήνυμα σφάλματος αν κάτι πάει στραβά
+        console.error('Failed to copy URL: ', error);
+    });
+}
