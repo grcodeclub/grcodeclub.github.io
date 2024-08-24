@@ -109,21 +109,22 @@ if ((event.ctrlKey &&
    });
 
 
-// Cookies
-var mycookies = document.createElement('script');
-mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
-document.head.appendChild(mycookies);
+document.addEventListener('DOMContentLoaded', function() {
 
+   // Jquery
+   var var_jquery = document.createElement('script');
+   var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
+   document.head.appendChild(var_jquery);
 
-// Jquery
-var var_jquery = document.createElement('script');
-var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
-document.head.appendChild(var_jquery);
-
-// Prism
-var var_prism = document.createElement('script');
-var_prism.src = 'https://grcodeclub.gr/js/prism.js';
-document.head.appendChild(var_prism);
+   // Prism
+   var var_prism = document.createElement('script');
+   var_prism.src = 'https://grcodeclub.gr/js/prism.js';
+   document.head.appendChild(var_prism);
+   
+    var mycookies = document.createElement('script');
+    mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
+    document.head.appendChild(mycookies);
+});
 
 // Prism
 var var_url = document.createElement('script');
