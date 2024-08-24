@@ -129,3 +129,8 @@ document.head.appendChild(var_prism);
 var var_url = document.createElement('script');
 var_url.src = 'https://grcodeclub.gr/js/url.js';
 document.head.appendChild(var_url);
+
+// Laoyt
+var var_laoyt = document.createElement('script');
+var_laoyt.src = 'https://grcodeclub.gr/js/add/headder_and_menu.js';
+document.head.appendChild(var_url);
