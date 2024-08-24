@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (acceptCookiesButton) {
         acceptCookiesButton.onclick = function() {
-            setCookie('cookiesAccepted', 'true', 365);
+            setCookie('cookiesAccepted', 'true', 2);
             document.getElementById('cookie-banner').style.display = 'none';
             var cookieSwitch = document.getElementById('cookies-ga4');
                 if (cookieSwitch.checked) {
