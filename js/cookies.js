@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (acceptCookiesButton) {
         acceptCookiesButton.onclick = function() {
-            setCookie('cookiesAccepted', 'true', 2);
+            setCookie_minutes('cookiesAccepted', 'true', 2);
             document.getElementById('cookie-banner').style.display = 'none';
             var cookieSwitch = document.getElementById('cookies-ga4');
                 if (cookieSwitch.checked) {
@@ -34,7 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+function setCookie_minutes(name, value, minutes) {
+    const d = new Date();
+    d.setTime(d.getTime() + (minutes * 60 * 1000)); // Υπολογισμός χρόνου λήξης σε χιλιοστά του δευτερολέπτου
+    const expires = "expires=" + d.toUTCString(); // Ρύθμιση της ημερομηνίας λήξης σε UTC
+    document.cookie = name + "=" + (value || "") + ";" + expires + ";path=/";
+}
 
 
   function setCookie(name, value, days) {
