@@ -41,6 +41,31 @@
 }    </style>
 </head>
 <body>
+
+
+<script>
+  // Ελέγχει αν το dataLayer υπάρχει, αν όχι, το αρχικοποιεί ως κενό πίνακα
+  window.dataLayer = window.dataLayer || [];
+  
+  // Ορίζει τη συνάρτηση gtag που προσθέτει επιχειρήματα στο dataLayer
+  function gtag(){dataLayer.push(arguments);}
+  
+  // Αρχικοποιεί το gtag και το dataLayer με την ημερομηνία και ώρα
+  gtag('js', new Date());
+
+  // Ρυθμίζει το Google Analytics με το Tracking ID
+  gtag('config', 'G-KP7YGYPW0R');
+  
+  // Στέλνει δεδομένα στο dataLayer για καταγραφή της επίσκεψης στη σελίδα
+  dataLayer.push({
+    'event': 'pageview',  // Καταγράφει το γεγονός της επίσκεψης στη σελίδα
+    'pagePath': window.location.pathname,  // Σημειώνει το μονοπάτι της τρέχουσας σελίδας (URL path)
+    'pageTitle': document.title  // Σημειώνει τον τίτλο της τρέχουσας σελίδας
+  });
+</script>
+
+
+    
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMLRVK48"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
