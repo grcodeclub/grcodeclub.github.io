@@ -111,18 +111,21 @@ if ((event.ctrlKey &&
 
 // Cookies
 var mycookies = document.createElement('script');
+mycookies.async = true; ti simaini auto ?
 mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
 document.head.appendChild(mycookies);
 
 
 // Jquery
 var var_jquery = document.createElement('script');
+var_jquery.async = true;
 var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
 document.head.appendChild(var_jquery);
 
 
 // Prism
 var var_prism = document.createElement('script');
+var_prism.async = true;
 var_prism.src = 'https://grcodeclub.gr/js/prism.js';
 document.head.appendChild(var_prism);
 
