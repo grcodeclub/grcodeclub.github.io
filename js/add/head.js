@@ -120,6 +120,22 @@ var var_jquery = document.createElement('script');
 var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
 document.head.appendChild(var_jquery);
 
+// Προσθήκη event listener για το φόρτωμα του jQuery
+var_jquery.onload = function() {
+    // Βρίσκουμε το script με το id="load_menu"
+    var loadMenuScript = document.getElementById('load_menu');
+    if (loadMenuScript) {
+        // Δημιουργούμε νέο script element για το load_menu
+        var newScript = document.createElement('script');
+        newScript.src = loadMenuScript.src;
+        document.head.appendChild(newScript);
+    } else {
+        console.error('Script with id="load_menu" not found.');
+    }
+};
+
+
+
 
 // Prism
 var var_prism = document.createElement('script');
