@@ -11,7 +11,8 @@ const htmlContent = `
                     <div class="layout">
                         <div><img src="https://grcodeclub.gr/files-page/logo/white.png" class="logo"/></div>
                         <div><h1 class="header_text"><a href="https://grcodeclub.gr/"><span class="header_text">GrCode Club</span></a></h1></div>
-                    </div> 
+                        <div style="padding-left: 10px;"><button onclick="copyRealUrl()" class="share-button">Share</button> </div>      
+        </div> 
                 </div> <!--Τέλος Επικεφαλίδας-->
                 <div class="Menu"> <!--Αρχή Menu-->
                     <div id="sidebarMenu" style="overflow: auto;">
@@ -25,6 +26,7 @@ const htmlContent = `
                     <div class="layout">
                         <div><img src="https://grcodeclub.gr/files-page/logo/white.png" class="logo"/></div>
                         <div><h1 class="header_text"><a href="https://grcodeclub.gr/"><span class="header_text">GrCode Club</span></a></h1></div>
+                        <div style="padding-left: 10px;"><button onclick="copyRealUrl()" class="share-button">Share</button> </div>      
                     </div> 
                 </div> <!--Τέλος Επικεφαλίδας σε κινητά -->
                 <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
