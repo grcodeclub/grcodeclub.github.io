@@ -111,7 +111,7 @@ if ((event.ctrlKey &&
 
 // Cookies
 var mycookies = document.createElement('script');
-mycookies.async = true; ti simaini auto ?
+mycookies.async = true;
 mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
 document.head.appendChild(mycookies);
 
