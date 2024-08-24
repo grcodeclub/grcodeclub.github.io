@@ -24,7 +24,7 @@
 }
 
 
-button {
+button.slide-prev, button.slide-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -44,10 +44,10 @@ button.slide-next {
     right: 10px;
 }
 
-button:focus {
+button.slide-prev, button.slide-next:focus {
     outline: none;
 }
 
-button:hover {
+button.slide-prev, button.slide-next:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
