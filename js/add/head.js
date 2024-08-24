@@ -129,8 +129,8 @@ var var_url = document.createElement('script');
 var_url.src = 'https://grcodeclub.gr/js/url.js';
 document.head.appendChild(var_url);
 
-    var var_share = document.createElement('script');
-    var_share.src = 'https://grcodeclub.gr/js/add/share.js';
-    document.body.appendChild(var_share);
+var var_share = document.createElement('script');
+var_share.src = 'https://grcodeclub.gr/js/add/share.js';
+document.head.appendChild(var_share);
 
 
