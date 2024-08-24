@@ -9,6 +9,8 @@ const htmlContent = `
     <button id="accept-cookies">Αποδοχή</button>
     <button id="reject-cookies">Απόρριψη</button>
 </div>
+<script src="https://grcodeclub.github.io/js/cookies.js"></script>
+
 <section class="show_desktop"> <!--Αρχή Εμφάνιση Υπολογιστή-->
                 <div class="Header"> <!--Αρχή Επικεφαλίδας-->
                     <div class="layout">
