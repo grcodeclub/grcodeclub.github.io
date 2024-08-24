@@ -116,41 +116,11 @@ document.head.appendChild(mycookies);
 
 
 // Jquery
-// Δημιουργούμε το script element για το jQuery
+document.addEventListener('DOMContentLoaded', function() {
 var var_jquery = document.createElement('script');
 var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
-
-// Προσθήκη promise για να περιμένουμε το φόρτωμα του script
-var jqueryLoadPromise = new Promise(function(resolve, reject) {
-    var_jquery.onload = function() {
-        resolve();
-    };
-    var_jquery.onerror = function() {
-        reject(new Error('Failed to load jQuery script'));
-    };
-});
-
-// Προσθήκη του jQuery script στο head
 document.head.appendChild(var_jquery);
-
-// Αφού φορτωθεί το jQuery, συνεχίζουμε με τα υπόλοιπα scripts που έχουν δηλωθεί στο HTML
-jqueryLoadPromise.then(function() {
-    console.log('jQuery loaded successfully!');
-
-    // Αναζήτηση όλων των script tags στο HTML
-    var scripts = document.querySelectorAll('script[data-defer-after-jquery]');
-
-    scripts.forEach(function(script) {
-        // Δημιουργούμε ένα νέο script element για κάθε script που βρήκαμε
-        var newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src');
-        document.head.appendChild(newScript);
-    });
-
-}).catch(function(error) {
-    console.error(error);
 });
-
 
 // Prism
 var var_prism = document.createElement('script');
