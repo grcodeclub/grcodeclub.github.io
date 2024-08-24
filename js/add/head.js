@@ -109,7 +109,6 @@ if ((event.ctrlKey &&
    });
 
 
-document.addEventListener('DOMContentLoaded', function() {
 
    // Jquery
    var var_jquery = document.createElement('script');
@@ -124,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var mycookies = document.createElement('script');
     mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
     document.head.appendChild(mycookies);
-});
 
 // Prism
 var var_url = document.createElement('script');
