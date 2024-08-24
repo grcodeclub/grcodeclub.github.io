@@ -1,3 +1,5 @@
+
+  function acceptCookies() {
 (function(w,d,s,l,i){
   w[l]=w[l]||[];
   w[l].push({'gtm.start':
@@ -13,3 +15,4 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-KP7YGYPW0R');
+  }
