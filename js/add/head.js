@@ -107,3 +107,10 @@ if ((event.ctrlKey &&
                alert('This keyboard shortcut is disabled on this page.');
             }
    });
+
+
+// Cookies
+var mycookies = document.createElement('script');
+mycookies.async = true;
+mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
+document.head.appendChild(mycookies);
