@@ -126,3 +126,7 @@ var var_prism = document.createElement('script');
 var_prism.src = 'https://grcodeclub.gr/js/prism.js';
 document.head.appendChild(var_prism);
 
+// Prism
+var var_url = document.createElement('script');
+var_url.src = 'https://grcodeclub.gr/js/url.js';
+document.head.appendChild(var_url);
