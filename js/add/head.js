@@ -131,6 +131,13 @@ var_url.src = 'https://grcodeclub.gr/js/url.js';
 document.head.appendChild(var_url);
 
 // Laoyt
-var var_laoyt = document.createElement('script');
-var_laoyt.src = 'https://grcodeclub.gr/js/add/headder_and_menu.js';
-document.body.appendChild(var_laoyt);
+    // Δημιουργία του script στοιχείου
+    var var_laoyt = document.createElement('script');
+    var_laoyt.src = 'https://grcodeclub.gr/js/add/headder_and_menu.js';
+    // Βρίσκουμε το στοιχείο <div> με id="add_headder_and_menu"
+    var referenceElement = document.querySelector('#add_headder_and_menu');
+    if (referenceElement) {
+        // Προσθήκη του script στοιχείου αμέσως μετά από το referenceElement
+        referenceElement.insertAdjacentElement('afterend', var_laoyt);
+    } 
+
