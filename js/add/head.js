@@ -114,3 +114,11 @@ var mycookies = document.createElement('script');
 mycookies.async = true;
 mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
 document.head.appendChild(mycookies);
+
+
+// Jquery
+var var_jquery = document.createElement('script');
+var_jquery.async = true;
+var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
+document.head.appendChild(var_jquery);
+
