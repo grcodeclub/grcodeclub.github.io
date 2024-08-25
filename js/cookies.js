@@ -4,14 +4,12 @@ window.addEventListener('load', function() {
     }
 
     if (getCookie('cookiesAccepted')) {
-         window.addEventListener('load', function() {
     // Εκτέλεση ενός event με το GA4 όταν η σελίδα φορτώνει
     gtag('event', 'page_reload', {
       'event_category': 'Page Load',
       'event_label': 'Page Reload Event',
       'value': 1
     });
-  });
     }
     
 
