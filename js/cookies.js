@@ -4,22 +4,12 @@ window.addEventListener('load', function() {
     }
 
     if (getCookie('cookiesAccepted')) {
-          var gaScript = document.createElement('script');
-  gaScript.async = true;
-  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KP7YGYPW0R';
-  document.head.appendChild(gaScript);
+        var gaScript = document.createElement('script');
+        gaScriploadTrackingScripts();
+    }
         
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-KP7YGYPW0R');
-}
-        
-   
-
     var acceptCookiesButton = document.getElementById('accept-cookies');
     var noacceptCookiesButton = document.getElementById('reject-cookies');
-    
     let cookieStatus = getCookie('cookiesAccepted');
 
     if (noacceptCookiesButton) {
@@ -105,7 +95,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-KP7YGYPW0R');
+if (!getCookie('_ga_KP7YGYPW0R')) { gtag('config', 'G-KP7YGYPW0R'); }
 }
 
 function loadMetaPixel() {
