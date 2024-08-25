@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (cookieSwitch.checked) {
                     loadTrackingScripts();
                 }
+            // Κλήση της λειτουργίας όταν φορτώνει η σελίδα
+            window.onload = loadMetaPixel;
+
         };
     } else {
         console.error('Accept Cookies button not found.');
@@ -116,6 +119,3 @@ function loadMetaPixel() {
     // Προσθήκη του noscript element στο body
     document.body.appendChild(noscript);
 }
-
-// Κλήση της λειτουργίας όταν φορτώνει η σελίδα
-window.onload = loadMetaPixel;
