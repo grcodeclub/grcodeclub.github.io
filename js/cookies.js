@@ -82,7 +82,7 @@ function setCookie_minutes(name, value, minutes) {
 
 function loadMetaPixel() {
     // Έλεγχος αν το Pixel έχει ήδη φορτωθεί
-    if (window.fbq && window.fbq.getState) {
+    if (window.fbq && typeof window.fbq === 'function') {
         console.log('Facebook Pixel already loaded.');
         return;
     }
@@ -102,6 +102,7 @@ function loadMetaPixel() {
             s.parentNode.insertBefore(t,s);
         }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
         
+        // Αρχικοποίηση του Pixel με το ID σου
         fbq('init', '1233204201195274');
         fbq('track', 'PageView');
     };
@@ -118,4 +119,5 @@ function loadMetaPixel() {
 
     document.body.appendChild(noscript);
 }
+
 
