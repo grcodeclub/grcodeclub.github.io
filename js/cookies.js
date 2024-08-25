@@ -101,12 +101,13 @@ function loadMetaPixel() {
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://connect.facebook.net/en_US/fbevents.js';
-    document.head.appendChild(script);
 
     script.onload = function() {
             fbq('init', '1233204201195274');
             fbq('track', 'PageView');
     };
+
+    document.head.appendChild(script);
 
     script.onerror = function() {
         console.error('Failed to load fbevents.js');
