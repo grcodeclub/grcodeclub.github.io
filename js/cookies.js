@@ -4,8 +4,7 @@ window.addEventListener('load', function() {
     }
 
     if (getCookie('cookiesAccepted')) {
-        var gaScript = document.createElement('script');
-        gaScriploadTrackingScripts();
+        loadTrackingScripts();
     }
         
     var acceptCookiesButton = document.getElementById('accept-cookies');
