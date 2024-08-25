@@ -79,20 +79,31 @@ function setCookie_minutes(name, value, minutes) {
   }
 
 function loadTrackingScripts() {
+    // Ελέγχουμε αν το script του Google Analytics έχει ήδη φορτωθεί
+    if (!window.gtagInitialized) {
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KP7YGYPW0R';
+        document.head.appendChild(gaScript);
 
-  var gaScript = document.createElement('script');
-  gaScript.async = true;
-  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KP7YGYPW0R';
-  document.head.appendChild(gaScript);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
 
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-KP7YGYPW0R', {
-    'cookie_update': false  // Αποτρέπει την ανανέωση του cookie σε κάθε φόρτωση της σελίδας
-});
-    
-  }
+        gtag('js', new Date());
+        gtag('config', 'G-KP7YGYPW0R', {
+            'cookie_update': false  // Αποτρέπει την ανανέωση του cookie σε κάθε φόρτωση της σελίδας
+        });
+
+        // Σημειώνουμε ότι το script έχει αρχικοποιηθεί
+        window.gtagInitialized = true;
+    } else {
+        // Αν το script είναι ήδη φορτωμένο, μόνο καταχωρούμε το event
+        gtag('config', 'G-KP7YGYPW0R', {
+            'cookie_update': false
+        });
+    }
+}
+
 
 function loadMetaPixel() {
    !function(f,b,e,v,n,t,s){
