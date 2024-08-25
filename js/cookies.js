@@ -23,13 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (cookieSwitch.checked) {
                     loadTrackingScripts();
                 }
-            // Κλήση της λειτουργίας όταν φορτώνει η σελίδα
-            loadMetaPixel();
+                cookieSwitch = document.getElementById('cookies-social');
+                 if (cookieSwitch.checked) {
+                     setCookie('cookiesSocial', 'true', 360);
+                }
 
         };
     } else {
         console.error('Accept Cookies button not found.');
     }
+    if(getCookie(cookiesSocial)){loadMetaPixel();}
 });
 
 
