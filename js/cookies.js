@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Accept Cookies button not found.');
     }
 
-        var cookieStatusSocial = getCookie('cookiesAccepted');
+        var cookieStatusSocial = getCookie('cookiesSocial');
             console.log(cookieStatusSocial);
 
     if (cookieStatusSocial === 'true') {
