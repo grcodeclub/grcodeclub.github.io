@@ -101,22 +101,16 @@ function loadMetaPixel() {
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+    document.head.appendChild(script);
 
     script.onload = function() {
-        if (typeof fbq === 'function') {
-            fbq.version = "2.9.165"; // Ρύθμιση της έκδοσης αφού η fbq έχει φορτωθεί
             fbq('init', '1233204201195274');
             fbq('track', 'PageView');
-        } else {
-            console.error('fbq is not defined after loading fbevents.js');
-        }
     };
 
     script.onerror = function() {
         console.error('Failed to load fbevents.js');
     };
-
-    document.head.appendChild(script);
 
     var noscript = document.createElement('noscript');
     var img = document.createElement('img');
