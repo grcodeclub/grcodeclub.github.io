@@ -98,25 +98,22 @@ function setCookie_minutes(name, value, minutes) {
   }
 
 function loadMetaPixel() {
-    if (window.fbq) return; // Έλεγχος αν το fbq είναι ήδη ορισμένο
-
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://connect.facebook.net/en_US/fbevents.js';
 
     script.onload = function() {
-        !function(f,b,e,v,n,t,s) {
-            if(f.fbq) return; n=f.fbq=function() {
-                n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments);
-            };
-            if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.9.165';
-            n.queue=[]; t=b.createElement(e); t.async=!0;
-            t.src=v; s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s);
-        }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        if (typeof fbq === 'function') {
+            fbq.version = "2.9.165"; // Ρύθμιση της έκδοσης αφού η fbq έχει φορτωθεί
+            fbq('init', '1233204201195274');
+            fbq('track', 'PageView');
+        } else {
+            console.error('fbq is not defined after loading fbevents.js');
+        }
+    };
 
-        fbq('init', '1233204201195274'); // Αντικατάστησε με το πραγματικό σου ID
-        fbq('track', 'PageView');
+    script.onerror = function() {
+        console.error('Failed to load fbevents.js');
     };
 
     document.head.appendChild(script);
@@ -131,5 +128,3 @@ function loadMetaPixel() {
 
     document.body.appendChild(noscript);
 }
-
-
