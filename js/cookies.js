@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (cookieSwitch.checked) {
                     loadTrackingScripts();
                 }
-                cookieSwitch = document.getElementById('cookies-social');
-                 if (cookieSwitch.checked) {
+                var cookieSwitch_Social = document.getElementById('cookies-social');
+                 if (cookieSwitch_Social.checked) {
                      setCookie('cookiesSocial', 'true', 360);
                 }
 
