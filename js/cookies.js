@@ -92,7 +92,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-KP7YGYPW0R'); 
-
+  }
 function loadMetaPixel() {
    !function(f,b,e,v,n,t,s){
        if(f.fbq)return;
