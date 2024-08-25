@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     loadTrackingScripts();
                 }
                 var cookieSwitch_Social = document.getElementById('cookies-social');
+                        console.log(cookieSwitch_Social.checked);
+
                  if (cookieSwitch_Social.checked) {
                      setCookie('cookiesSocial', 'true', 360);
                 }
