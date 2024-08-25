@@ -2,10 +2,9 @@ window.addEventListener('load', function() {
     if (!getCookie('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
-
-//    if (getCookie('cookiesAccepted')) {
- //       loadTrackingScripts();
-  //  }
+    if (getCookie('cookiesAccepted')) {
+       loadTrackingScripts();
+}
         
     var acceptCookiesButton = document.getElementById('accept-cookies');
     var noacceptCookiesButton = document.getElementById('reject-cookies');
@@ -81,11 +80,17 @@ function setCookie_minutes(name, value, minutes) {
 
 function loadTrackingScripts() {
 
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MMLRVK48');
+  var gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KP7YGYPW0R';
+  document.head.appendChild(gaScript);
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KP7YGYPW0R', {
+    'cookie_update': false  // Αποτρέπει την ανανέωση του cookie σε κάθε φόρτωση της σελίδας
+});
     
   }
 
