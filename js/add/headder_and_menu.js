@@ -1,9 +1,22 @@
-const htmlContent = `
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMLRVK48"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+        document.addEventListener('DOMContentLoaded', function() {
+            // Δημιουργία του iframe για το noscript
+            var noscript = document.createElement('noscript');
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-MMLRVK48';
+            iframe.height = '0';
+            iframe.width = '0';
+            iframe.style.display = 'none';
+            iframe.style.visibility = 'hidden';
+            noscript.appendChild(iframe);
+            // Εισαγωγή του noscript αμέσως μετά το άνοιγμα του <body>
+            var body = document.body;
+            if (body) {
+                body.insertBefore(noscript, body.firstChild);
+            }
+        });
 
+
+const htmlContent = `
    <div id="cookie-banner" style="display: none;">
     <p>Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας στην ιστοσελίδα μας. Επιλέξτε αν θέλετε να αποδεχτείτε ή να απορρίψετε όλα τα cookies:</p>
     <label><input type="checkbox" id="cookies-ga4" checked disabled>Ανάλυση και Παρακολούθηση</label><br>
