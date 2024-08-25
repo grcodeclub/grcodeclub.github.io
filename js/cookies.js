@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('load', function() {
     if (!getCookie('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
