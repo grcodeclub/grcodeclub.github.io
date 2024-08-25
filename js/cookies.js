@@ -96,37 +96,44 @@ function setCookie_minutes(name, value, minutes) {
     };
   }
 
+// Συνάρτηση για τη φόρτωση του Facebook Pixel δυναμικά
 function loadMetaPixel() {
-             console.log('Start');
-
+    // Δημιουργία του <script> element
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://connect.facebook.net/en_US/fbevents.js';
 
+    // Προσθήκη της λειτουργίας του Pixel
     script.onload = function() {
-        if (window.fbq) {
-            fbq('init', '1233204201195274'); // Αντικατάστησε με το πραγματικό σου ID
-            fbq('track', 'PageView');
-        }
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq) return; n=f.fbq=function() {
+                n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments);
+            };
+            if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
+            n.queue=[]; t=b.createElement(e); t.async=!0;
+            t.src=v; s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s);
+        }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        // Αρχικοποίηση του Pixel με το ID σου
+        fbq('init', '1233204201195274'); // Αντικατάστησε με το πραγματικό σου ID
+        fbq('track', 'PageView');
     };
 
-    script.onerror = function() {
-        console.error('Failed to load Facebook Pixel script.');
-    };
-
+    // Προσθήκη του script element στο <head>
     document.head.appendChild(script);
 
+    // Δημιουργία του <noscript> element για να προστεθεί σε περίπτωση που ο χρήστης έχει απενεργοποιήσει τη JavaScript
     var noscript = document.createElement('noscript');
     var img = document.createElement('img');
     img.height = 1;
     img.width = 1;
     img.style.display = 'none';
-    img.src = 'https://www.facebook.com/tr?id=1233204201195274&ev=PageView&noscript=1'; // Αντικατάστησε με το πραγματικό σου ID
+    img.src = 'https://www.facebook.com/tr?id=1233204201195274&ev=PageView&noscript=1';
     noscript.appendChild(img);
 
+    // Προσθήκη του noscript element στο body
     document.body.appendChild(noscript);
-             console.log('End');
-
 }
 
 
