@@ -32,7 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Accept Cookies button not found.');
     }
-    if (getCookie('cookiesSocial') === 'true') {loadMetaPixel();}
+    if (getCookie('cookiesSocial') === 'true') {
+        console.log('Before');
+        loadMetaPixel();
+         console.log('After');
+    }
 });
 
 
@@ -83,6 +87,8 @@ function setCookie_minutes(name, value, minutes) {
   }
 
 function loadMetaPixel() {
+             console.log('Start');
+
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://connect.facebook.net/en_US/fbevents.js';
@@ -109,6 +115,8 @@ function loadMetaPixel() {
     noscript.appendChild(img);
 
     document.body.appendChild(noscript);
+             console.log('End');
+
 }
 
 
