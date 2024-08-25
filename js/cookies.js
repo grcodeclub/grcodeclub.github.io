@@ -32,7 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Accept Cookies button not found.');
     }
-    if (getCookie('cookiesSocial') === 'true') {
+
+        var cookieStatusSocial = getCookie('cookiesAccepted');
+            console.log(cookieStatusSocial);
+
+    if (cookieStatusSocial === 'true') {
         console.log('Before');
         loadMetaPixel();
          console.log('After');
