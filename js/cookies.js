@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     loadTrackingScripts();
                 }
             // Κλήση της λειτουργίας όταν φορτώνει η σελίδα
-            window.onload = loadMetaPixel;
+            loadMetaPixel();
 
         };
     } else {
