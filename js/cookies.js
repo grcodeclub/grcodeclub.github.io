@@ -79,24 +79,9 @@ function setCookie_minutes(name, value, minutes) {
     return null;
   }
 
-function check_cookies(name) {
-    let nameEQ = name + "=";
-    let ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1);
-        if (c.indexOf(nameEQ) === 0) return true; // Το cookie υπάρχει
-    }
-    return false; // Το cookie δεν υπάρχει
-}
 
 
   function loadTrackingScripts() {
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MMLRVK48');
 
   var gaScript = document.createElement('script');
   gaScript.async = true;
@@ -106,8 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-if (!check_cookies('_ga_KP7YGYPW0R')) { gtag('config', 'G-KP7YGYPW0R'); }
-}
+gtag('config', 'G-KP7YGYPW0R'); 
 
 function loadMetaPixel() {
    !function(f,b,e,v,n,t,s){
