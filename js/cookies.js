@@ -80,14 +80,17 @@ function setCookie_minutes(name, value, minutes) {
   }
 
 
-// Λειτουργία για να εισάγει το Meta Pixel δυναμικά
 function loadMetaPixel() {
-    // Δημιουργία του <script> element
+    // Έλεγχος αν το Pixel έχει ήδη φορτωθεί
+    if (window.fbq && window.fbq.getState) {
+        console.log('Facebook Pixel already loaded.');
+        return;
+    }
+
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://connect.facebook.net/en_US/fbevents.js';
 
-    // Προσθήκη της λειτουργίας του Pixel
     script.onload = function() {
         !function(f,b,e,v,n,t,s) {
             if(f.fbq) return; n=f.fbq=function() {
@@ -99,15 +102,12 @@ function loadMetaPixel() {
             s.parentNode.insertBefore(t,s);
         }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
         
-        // Αρχικοποίηση του Pixel με το ID σου
         fbq('init', '1233204201195274');
         fbq('track', 'PageView');
     };
 
-    // Προσθήκη του script element στο <head>
     document.head.appendChild(script);
 
-    // Δημιουργία του <noscript> element για να προστεθεί σε περίπτωση που ο χρήστης έχει απενεργοποιήσει τη JavaScript
     var noscript = document.createElement('noscript');
     var img = document.createElement('img');
     img.height = 1;
@@ -116,6 +116,6 @@ function loadMetaPixel() {
     img.src = 'https://www.facebook.com/tr?id=1233204201195274&ev=PageView&noscript=1';
     noscript.appendChild(img);
 
-    // Προσθήκη του noscript element στο body
     document.body.appendChild(noscript);
 }
+
