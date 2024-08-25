@@ -113,5 +113,5 @@ function loadMetaPixel() {
        s.parentNode.insertBefore(t,s)}
     (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1233204201195274');
-    fbq('track', 'PageView');
+    fbq('track', 'Facebook');
 }
