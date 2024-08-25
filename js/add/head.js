@@ -121,9 +121,15 @@ if ((event.ctrlKey &&
    var var_prism = document.createElement('script');
    var_prism.src = 'https://grcodeclub.gr/js/prism.js';
    document.head.appendChild(var_prism);
-   
+
+       var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KP7YGYPW0R';
+        document.head.appendChild(gaScript);
+
     var mycookies = document.createElement('script');
     mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
     document.head.appendChild(mycookies);
+
 
 
