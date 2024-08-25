@@ -125,8 +125,4 @@ if ((event.ctrlKey &&
     mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
     document.head.appendChild(mycookies);
 
-// Prism
-var var_url = document.createElement('script');
-var_url.src = 'https://grcodeclub.gr/js/url.js';
-document.head.appendChild(var_url);
 
