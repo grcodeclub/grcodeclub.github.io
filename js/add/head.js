@@ -122,15 +122,6 @@ if ((event.ctrlKey &&
    var_prism.src = 'https://grcodeclub.gr/js/prism.js';
    document.head.appendChild(var_prism);
 
-       var gaScript = document.createElement('script');
-        gaScript.async = true;
-        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KP7YGYPW0R';
-        document.head.appendChild(gaScript);
-
-      var gtmScript = document.createElement('script');
-        gtmScript.async = true;
-        gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MMLRVK48';
-        document.head.appendChild(gtmScript);
 
     var mycookies = document.createElement('script');
     mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
