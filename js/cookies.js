@@ -2,9 +2,9 @@ window.addEventListener('load', function() {
     if (!getCookie('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
-//    if (getCookie('cookiesAccepted')) {
-//       event();
-//}
+  if (getCookie('cookiesAccepted')) {
+      loadTrackingScripts();
+}
         
     var acceptCookiesButton = document.getElementById('accept-cookies');
     var noacceptCookiesButton = document.getElementById('reject-cookies');
