@@ -23,30 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (cookieSwitch.checked) {
                     loadTrackingScripts();
                 }
-                var cookieSwitch_Social = document.getElementById('cookies-social');
-                        console.log(cookieSwitch_Social.checked);
-
-                 if (cookieSwitch_Social.checked) {
-                     setCookie('cookiesSocial', 'true', 360);
-                     loadMetaPixel();
-                }
-
         };
     } else {
         console.error('Accept Cookies button not found.');
     }
 
-        var cookieStatusSocial = getCookie('cookiesSocial');
-            console.log(cookieStatusSocial);
 
-    if (cookieStatusSocial === 'true') {
-        console.log('Before');
-        loadMetaPixel();
-         console.log('After');
-    }
-    else {
-    console.log('Cookie is not set to true.');
-}
 
 });
 
@@ -96,25 +78,3 @@ function setCookie_minutes(name, value, minutes) {
       gtag('config', 'G-KP7YGYPW0R');
     };
   }
-
-function loadMetaPixel() {
-   !function(f,b,e,v,n,t,s){
-       if(f.fbq)return;
-       n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-       if(!f._fbq)f._fbq=n;
-       n.push=n;
-       n.loaded=!0;
-       n.version='2.0';
-       n.queue=[];
-       t=b.createElement(e);
-       t.async=!0;
-       t.src=v;
-       s=b.getElementsByTagName(e)[0];
-       s.parentNode.insertBefore(t,s)}
-    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1233204201195274');
-    fbq('track', 'main');
-    fbq('track', 'programming');
-    fbq('track', 'network');
-
-}
