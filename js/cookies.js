@@ -3,9 +3,9 @@ window.addEventListener('load', function() {
         document.getElementById('cookie-banner').style.display = 'block';
     }
 
-    if (getCookie('cookiesAccepted')) {
-        loadTrackingScripts();
-    }
+//    if (getCookie('cookiesAccepted')) {
+ //       loadTrackingScripts();
+  //  }
         
     var acceptCookiesButton = document.getElementById('accept-cookies');
     var noacceptCookiesButton = document.getElementById('reject-cookies');
