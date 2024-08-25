@@ -79,4 +79,33 @@ function setCookie_minutes(name, value, minutes) {
     };
   }
 
+function loadMetaPixel() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+
+    script.onload = function() {
+        if (window.fbq) {
+            fbq('init', '1233204201195274'); // Αντικατάστησε με το πραγματικό σου ID
+            fbq('track', 'PageView');
+        }
+    };
+
+    script.onerror = function() {
+        console.error('Failed to load Facebook Pixel script.');
+    };
+
+    document.head.appendChild(script);
+
+    var noscript = document.createElement('noscript');
+    var img = document.createElement('img');
+    img.height = 1;
+    img.width = 1;
+    img.style.display = 'none';
+    img.src = 'https://www.facebook.com/tr?id=1233204201195274&ev=PageView&noscript=1'; // Αντικατάστησε με το πραγματικό σου ID
+    noscript.appendChild(img);
+
+    document.body.appendChild(noscript);
+}
+
 
