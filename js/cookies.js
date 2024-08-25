@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
         loadMetaPixel();
          console.log('After');
     }
+    else {
+    console.log('Cookie is not set to true.');
+}
+
 });
 
 
