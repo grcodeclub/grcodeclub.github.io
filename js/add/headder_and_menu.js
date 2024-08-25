@@ -1,7 +1,8 @@
 const htmlContent = `
    <div id="cookie-banner" style="display: none;">
     <p>Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας στην ιστοσελίδα μας. Επιλέξτε αν θέλετε να αποδεχτείτε ή να απορρίψετε όλα τα cookies:</p>
-    <label><input type="checkbox" id="cookies-ga4" checked disabled>Ανάλυση και Παρακολούθηση</label>
+    <label><input type="checkbox" id="cookies-ga4" checked disabled>Ανάλυση και Παρακολούθηση</label><br>
+    <label><input type="checkbox" id="cookies-social" checked>Social Media</label>
     <br>
     <button id="accept-cookies">Αποδοχή</button>
     <button id="reject-cookies">Απόρριψη</button>
