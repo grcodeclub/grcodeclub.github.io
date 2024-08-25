@@ -1,6 +1,7 @@
 window.addEventListener('load', function() {
     if (!getCookie('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
+        loadMetaPixel();
     }
 
     var acceptCookiesButton = document.getElementById('accept-cookies');
