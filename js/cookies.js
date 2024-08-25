@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Accept Cookies button not found.');
     }
-    if(getCookie(cookiesSocial)){loadMetaPixel();}
+    if (getCookie('cookiesSocial') === 'true') {loadMetaPixel();}
 });
 
 
