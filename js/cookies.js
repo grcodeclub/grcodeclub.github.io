@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
     if (!getCookie('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
-  if (!getCookie('cookiesAccepted')) {
+  if (getCookie('cookiesAccepted') === 'true') {
       loadTrackingScripts();
 }
         
