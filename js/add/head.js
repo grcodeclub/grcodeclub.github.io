@@ -105,7 +105,8 @@ if ((event.ctrlKey &&
      (event.key === 'F12') || 
      (event.key === 'F11')) {
               event.preventDefault();
-              /* alert('This keyboard shortcut is disabled on this page.');*/
+   console.log(event.key
+              alert('This keyboard shortcut is disabled on this page.');
             }
    });
 
