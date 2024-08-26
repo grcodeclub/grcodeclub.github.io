@@ -100,8 +100,8 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 // Αποτροπή των συντομεύσεων
 document.addEventListener('keydown', function(event) {
 if ((event.ctrlKey && 
-        (event.ctrlKey === 'u' || event.ctrlKey === 's' || event.ctrlKey === 'p') ||
-        (event.ctrlKey === 'θ' || event.ctrlKey === 'σ' || event.ctrlKey === 'π' )) || 
+        (event.key === 'u' || event.key === 's' || event.key === 'p') ||
+        (event.key === 'θ' || event.key === 'σ' || event.key === 'π' )) || 
      (event.key === 'F12') || 
      (event.key === 'F11')) {
               event.preventDefault();
