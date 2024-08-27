@@ -19,6 +19,7 @@ const cssLinks = [
     "https://grcodeclub.gr/web/css/grcodeclub/table.css",
    "https://grcodeclub.gr/web/css/grcodeclub/bg.css",
    "https://grcodeclub.gr/web/css/grcodeclub/social.css",
+   "https://grcodeclub.gr/web/css/grcodeclub/scrollbars.css",
    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 ];
 
