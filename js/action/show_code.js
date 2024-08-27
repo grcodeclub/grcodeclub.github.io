@@ -4,7 +4,7 @@ selectElement.addEventListener("change", function() {
     update_code(selectElement.value);
 });
 
-const selectElement1 = document.getElementById("code2");
+const selectElement1 = document.getElementById("code1");
 selectElement1.addEventListener("change", function() {
     document.getElementById("code").value = '-';
     update_code(selectElement1.value);
