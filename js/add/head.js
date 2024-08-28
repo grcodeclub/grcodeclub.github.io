@@ -1,7 +1,3 @@
-///////////////
-// Εισαγωγή CSS
-///////////////
-
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
     "https://grcodeclub.gr/web/css/grcodeclub/header_and_footer.css",
@@ -9,7 +5,7 @@ const cssLinks = [
     "https://grcodeclub.gr/web/css/grcodeclub/text.css",
     "https://grcodeclub.gr/web/css/grcodeclub/layout.css",
     "https://grcodeclub.gr/web/css/grcodeclub/code_bg.css",
-       "https://grcodeclub.gr/web/css/grcodeclub/menu.css",
+    "https://grcodeclub.gr/web/css/grcodeclub/menu.css",
     "https://grcodeclub.gr/web/css/grcodeclub/share.css",
     "https://grcodeclub.gr/web/css/grcodeclub/button.css",
     "https://grcodeclub.gr/web/css/grcodeclub/card.css",
@@ -17,24 +13,21 @@ const cssLinks = [
     "https://grcodeclub.gr/web/css/grcodeclub/img.css",
     "https://grcodeclub.gr/web/css/grcodeclub/prism.css",
     "https://grcodeclub.gr/web/css/grcodeclub/list.css",
-     "https://grcodeclub.gr/web/css/grcodeclub/table.css",
+    "https://grcodeclub.gr/web/css/grcodeclub/table.css",
     "https://grcodeclub.gr/web/css/grcodeclub/bg.css",
     "https://grcodeclub.gr/web/css/grcodeclub/social.css",
     "https://grcodeclub.gr/web/css/grcodeclub/scrollbars.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
  ];
  
- // Αρχικοποίηση head
- const head = document.head;
+ const head = document.head;     // Αρχικοποίηση head
  
  // Προσθήκη των αρχείων CSS στο head
  cssLinks.forEach(linkUrl => {
      const linkElement = document.createElement('link');
      linkElement.rel = 'stylesheet';
      linkElement.href = linkUrl;
- 
-     // Προσθήκη στο head
-     head.appendChild(linkElement);
+     head.appendChild(linkElement);  // Προσθήκη στο head
  });
  
  
@@ -58,84 +51,64 @@ const cssLinks = [
    faviconLink.type = 'image/png';
    faviconLink.href = url;
    faviconLink.sizes = `${width}x${height}`;
- 
    // Προσθήκη του στοιχείου <link> στο <head> του εγγράφου
    document.head.appendChild(faviconLink);
  });
  
- // Δημιουργία στοιχείου <link> για το favicon .ico
- const icoFaviconLink = document.createElement('link');
- icoFaviconLink.rel = 'shortcut icon';
- icoFaviconLink.type = 'image/x-icon';
- icoFaviconLink.href = 'https://grcodeclub.github.io/files-page/logo/favicon.ico';
+// Δημιουργία στοιχείου <link> για το favicon .ico
+const icoFaviconLink = document.createElement('link');
+icoFaviconLink.rel = 'shortcut icon';
+icoFaviconLink.type = 'image/x-icon';
+icoFaviconLink.href = 'https://grcodeclub.github.io/files-page/logo/favicon.ico';
+document.head.appendChild(icoFaviconLink);    // Προσθήκη του στοιχείου <link> στο <head> του εγγράφου
  
- // Προσθήκη του στοιχείου <link> στο <head> του εγγράφου
- document.head.appendChild(icoFaviconLink);
- 
- 
- ///////////////////////////////
- // Θέτουμε το title της σελίδας
- ///////////////////////////////
- document.title = 'GrCode Club';
- 
- // Δημιουργία ενός νέου στοιχείου <meta>
- const metaElement = document.createElement('meta');
+///////////////////////////////
+// Θέτουμε το title της σελίδας
+///////////////////////////////
+document.title = 'GrCode Club'; 
+const metaElement = document.createElement('meta');     // Δημιουργία ενός νέου στοιχείου <meta>
  
  
- ///////////
- // ViewPort
- ///////////
+///////////
+// ViewPort
+///////////
  
- // Ορίζουμε την ιδιότητα 'name' ως 'viewport'
- metaElement.setAttribute('name', 'viewport');
+metaElement.setAttribute('name', 'viewport');     // Ορίζουμε την ιδιότητα 'name' ως 'viewport'
+metaElement.setAttribute('content', 'width=device-width, initial-scale=0.8');     // Ορίζουμε την ιδιότητα 'content' με την τιμή που θέλουμε
+document.head.appendChild(metaElement);     // Προσθέτουμε το στοιχείο <meta> στο <head> του HTML εγγράφου
  
- // Ορίζουμε την ιδιότητα 'content' με την τιμή που θέλουμε
- // Σε αυτήν την περίπτωση, ορίζουμε initial-scale=0.8
- metaElement.setAttribute('content', 'width=device-width, initial-scale=0.8');
+document.addEventListener('contextmenu', event => event.preventDefault());      // Απενεργοποίηση του μενού περιβάλλοντος
  
- // Προσθέτουμε το στοιχείο <meta> στο <head> του HTML εγγράφου
- document.head.appendChild(metaElement);
- 
-  // Απενεργοποίηση του μενού περιβάλλοντος
- document.addEventListener('contextmenu', event => event.preventDefault());
- 
- // Αποτροπή των συντομεύσεων
- document.addEventListener('keydown', function(event) {
- if ((event.ctrlKey && 
-         (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'θ' || event.key === 'σ' || event.key === 'π' )) || 
+// Αποτροπή των συντομεύσεων
+document.addEventListener('keydown', function(event) {
+    if ((event.ctrlKey && 
+        (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'θ' || event.key === 'σ' || event.key === 'π' )) || 
         (event.key === 'F12') || (event.key === 'F11')) {
-               event.preventDefault();
-    console.log(event.key);
-               alert('This keyboard shortcut is disabled on this page.');
-             }
-    });
+            event.preventDefault();
+            console.log(event.key);
+            alert('This keyboard shortcut is disabled on this page.');
+    }
+});
  
- 
-    // Jquery
-    var var_jquery = document.createElement('script');
-    var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
-    document.head.appendChild(var_jquery);
- 
- 
-    // Prism
-    var var_prism = document.createElement('script');
-    var_prism.src = 'https://grcodeclub.gr/js/prism.js';
-    document.head.appendChild(var_prism);
- 
- 
-     var mycookies = document.createElement('script');
-     mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
-     document.head.appendChild(mycookies);
+ // Jquery
+var var_jquery = document.createElement('script');
+var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
+document.head.appendChild(var_jquery); 
+    
+// Prism
+var var_prism = document.createElement('script');
+var_prism.src = 'https://grcodeclub.gr/js/prism.js';
+document.head.appendChild(var_prism); 
+
+var mycookies = document.createElement('script');
+mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
+document.head.appendChild(mycookies);
  
     
 document.addEventListener('DOMContentLoaded', function() {
-    // Ελέγξτε αν υπάρχει το στοιχείο με id="search_table_page" στο body
-    if (document.getElementById('search_table_page')) {
-        // Δημιουργία του script στοιχείου
+    if (document.getElementById('search_table_page')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="search_table_page" στο body
         var search_tables_pages = document.createElement('script');
-        search_tables_pages.src = 'http://127.0.0.1:3000/c:/grcodeclub/search-tables-pages.js';
-        
-        // Επιλογή του head και προσθήκη του script
+        search_tables_pages.src = 'https://grcodeclub.gr/js/search/tables-pages.js';
         document.head.appendChild(search_tables_pages);
     }
 });
