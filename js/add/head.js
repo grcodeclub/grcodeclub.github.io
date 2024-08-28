@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(show_codes);
     }
 
-      if (document.body.id === 'network') {
+    if (document.body.id === 'network') {
         const script = document.createElement('script');
         script.src = 'https://grcodeclub.gr/network/js/menu.js';
         document.body.appendChild(script);
@@ -131,5 +131,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var headder_menu = document.createElement('script');
     headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
     document.head.appendChild(headder_menu);
+
+    var headder_menu = document.createElement('script');
+    add_footer.src = 'https://grcodeclub.gr/js/add/social.js';
+    document.head.appendChild(add_footer);
 });
 
