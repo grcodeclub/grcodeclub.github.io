@@ -128,6 +128,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(menu);
     }
 
+        if (document.body.id === 'cybersecurity') {
+        var menu = document.createElement('script');
+        menu.src = 'https://grcodeclub.gr/js/menu/cybersecurity.js';
+        document.body.appendChild(menu);
+    }
+
+
     if (document.body.id === 'system' || document.body.id === 'linux' || document.body.id === 'windows' || document.body.id === 'android'  ) {
         var menu = document.createElement('script');
         menu.src = 'https://grcodeclub.gr/js/menu/system.js';
