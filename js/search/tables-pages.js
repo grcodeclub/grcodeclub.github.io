@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemsPerPage = 15;
     let currentPage = 1;
 
-    const table1 = document.getElementById('table');
+    const table1 = document.getElementById('search_table_page');
     const rows1 = table1.querySelectorAll('tr');
     const headerRow = table1.querySelector('#title-table');
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function fullTable() {
-        const tableBody = document.querySelector('#table tbody');
+        const tableBody = document.querySelector('#search_table_page tbody');
         tableBody.innerHTML = '';
 
         // Add header row
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function applyRowColors() {
-        const tableRows = document.querySelectorAll('#table tbody tr:not(#title-table)'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
+        const tableRows = document.querySelectorAll('#search_table_page tbody tr:not(#title-table)'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
 
         tableRows.forEach((row, index) => {
             if (index % 2 === 0) {
