@@ -56,6 +56,7 @@ const htmlContent = `
                     <ul class="sidebarMenuInner"></ul>
                 </div>
             </section> <!--Τέλος εμφάνιση σε κινητά-->
+            <div class="Text"> <!--Αρχή Κειμένου-->
 `;
 
 // Εύρεση του στόχου με το id 'add_headder'
