@@ -19,7 +19,7 @@ window.onload = function() {
         '<li style="height: 200px;"></li>'
     ];
     
-        addMenuLinks(cloudMenuLinks);
+        addMenuLinks(menuLinks);
     }
 
 
@@ -35,7 +35,7 @@ window.onload = function() {
         '<li style="height: 200px;"></li>'
     ];
     
-        addMenuLinks(cloudMenuLinks);
+        addMenuLinks(menuLinks);
     }
 
     if (document.body.id === 'android') {
@@ -46,6 +46,6 @@ window.onload = function() {
         '<li><a href="https://grcodeclub.github.io/system">Λειτουργικά Συστήματα</a></li>',
         '<li style="height: 200px;"></li>'
         ];
-        addMenuLinks(networkMenuLinks);
+        addMenuLinks(menuLinks);
     }
 };
