@@ -9,12 +9,11 @@ function displayTable(page) {
     const end = start + itemsPerPage;
     table1.innerHTML = ''; // Καθαρίστε τον πίνακα πριν από την απόδοση
 
-    if (headerRow) {    table1.appendChild(headerRow.cloneNode(true));  console.lo(headerRow); }   // Προσθέστε την επικεφαλίδα
+    const paginatedItems = rows1.slice(1).slice(start, end); // Σημαντικό: παραλείπουμε την επικεφαλίδα μόνο για την αποκοπή
     // Σελιδοποιήστε τις γραμμές, παραλείποντας την επικεφαλίδα
     const paginatedItems = rows1.slice(start - 1, end - 1); // Σημαντικό: +1 γιατί έχουμε την επικεφαλίδα στην αρχή
-    paginatedItems.forEach(row => {
-        table1.appendChild(row.cloneNode(true)); // Χρησιμοποιήστε cloneNode για αντιγραφή της γραμμής
-    });
+    paginatedItems.forEach(row => { table1.appendChild(row.cloneNode(true)); } // Χρησιμοποιήστε cloneNode για αντιγραφή της γραμμής
+    );
 
     applyRowColors();
     displayPagination();
@@ -24,10 +23,7 @@ function displayTable(page) {
 function fullTable() {
     table1.innerHTML = ''; // Καθαρίστε τον πίνακα πριν από την απόδοση
 
-    // Προσθέστε την επικεφαλίδα
-    if (headerRow) {
-        table1.appendChild(headerRow.cloneNode(true));
-    }
+    if (headerRow) {    table1.appendChild(headerRow.cloneNode(true)); } // Προσθέστε την επικεφαλίδα
 
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
 
