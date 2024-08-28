@@ -135,9 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
       if (document.getElementById('back_page')) {  
-        script = document.createElement('script');
-        script.src = 'https://grcodeclub.gr/js/add/back_page.js';
-        document.body.appendChild(script);
+        script_back_page = document.createElement('script');
+        script_back_page.src = 'https://grcodeclub.gr/js/add/back_page.js';
+        document.body.appendChild(script_back_page);
       }
     var headder_menu = document.createElement('script');
     headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
