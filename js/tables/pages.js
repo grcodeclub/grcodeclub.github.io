@@ -2,35 +2,60 @@ const itemsPerPage = 15;
 let currentPage = 1;
 
 const table1 = document.getElementById('table_page');
-const rows1 = table1.querySelectorAll('tr');
-const headerRow = table1.querySelector('thead #title-table');
+const rows1 = Array.from(table1.querySelectorAll('tr'));
+const headerRow = table1.querySelector('tr#title-table');
 
 function displayTable(page) {
-    const start = (page - 1) * itemsPerPage + 1; // +1 to skip header row
+    const start = (page - 1) * itemsPerPage + 1; // +1 για να παραλείψουμε την επικεφαλίδα
     const end = start + itemsPerPage;
-    const tableBody = document.querySelector('#table_page tbody');
-    tableBody.innerHTML = '';
+    table1.innerHTML = ''; // Καθαρίστε τον πίνακα πριν από την απόδοση
 
-    // Add header row
+    // Προσθέστε την επικεφαλίδα
     if (headerRow) {
-        tableBody.appendChild(headerRow.cloneNode(true)); // Use cloneNode to keep original header
+        table1.appendChild(headerRow.cloneNode(true));
     }
 
-    // Paginate rows, skipping the header row
-    const paginatedItems = Array.from(rows1).slice(start, end);
+    // Σελιδοποιήστε τις γραμμές
+    const paginatedItems = rows1.slice(start, end);
     paginatedItems.forEach(row => {
-        tableBody.appendChild(row.cloneNode(true)); // Use cloneNode to copy row
+        if (row !== headerRow) { // Μην προσθέσετε ξανά την επικεφαλίδα
+            table1.appendChild(row.cloneNode(true));
+        }
     });
 
-    applyRowColors(); // Apply row colors after rendering the table
+    applyRowColors();
     displayPagination();
+}
+
+function fullTable() {
+    table1.innerHTML = ''; // Καθαρίστε τον πίνακα πριν από την απόδοση
+
+    // Προσθέστε την επικεφαλίδα
+    if (headerRow) {
+        table1.appendChild(headerRow.cloneNode(true));
+    }
+
+    const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+
+    rows1.forEach(row => {
+        if (row === headerRow) return; // Αποκλείστε την επικεφαλίδα
+
+        const cells = row.querySelectorAll('td');
+        const column1Match = cells[0].textContent.toLowerCase().includes(searchTerm);
+
+        if (column1Match) {
+            table1.appendChild(row.cloneNode(true));
+        }
+    });
+
+    applyRowColors();
 }
 
 function displayPagination() {
     const pagination = document.getElementById('pagination');
     pagination.innerHTML = '';
 
-    const totalPages = Math.ceil((rows1.length - 1) / itemsPerPage); // Adjusted for header row
+    const totalPages = Math.ceil((rows1.length - 1) / itemsPerPage); // Αφαιρέστε την επικεφαλίδα
     const maxPagesToShow = 5;
 
     let startPage = currentPage - 2;
@@ -61,14 +86,36 @@ function displayPagination() {
 }
 
 function applyRowColors() {
-    const tableRows = document.querySelectorAll('#table_page tbody tr:not(tr[id="title-table"])'); // Select all rows except header
+    const tableRows = table1.querySelectorAll('tr:not(#title-table)'); // Εξαίρεση της επικεφαλίδας
 
     tableRows.forEach((row, index) => {
         if (index % 2 === 0) {
-            row.style.backgroundColor = 'rgba(211, 211, 211, 0.211)'; // Change color to light gray for even rows
+            row.style.backgroundColor = 'rgba(211, 211, 211, 0.211)'; // Ανοιχτό γκρι
         }
     });
 }
 
-// Initial table display
-displayTable(currentPage);
+function checkAndDisplayTable() {
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput.value.trim() !== '') {
+        // Εμφάνιση ολόκληρου του πίνακα όταν υπάρχει όρος αναζήτησης
+        const pagination = document.getElementById('pagination');
+        searchInput.style.display = 'block';
+        pagination.style.display = 'none';
+        fullTable();
+    } else {
+        // Εμφάνιση σελιδοποιημένου πίνακα αν δεν υπάρχει όρος αναζήτησης
+        displayTable(currentPage);
+        searchInput.style.display = 'block'; // Διατηρήστε ορατό το πεδίο αναζήτησης
+        const pagination = document.getElementById('pagination');
+        pagination.style.display = 'block';
+    }
+}
+
+// Προσθέστε event listener στο πεδίο αναζήτησης
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', checkAndDisplayTable);
+
+// Αρχική εμφάνιση του πίνακα βασισμένη στην αναζήτηση
+checkAndDisplayTable();
