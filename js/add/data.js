@@ -123,8 +123,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (document.body.id === 'network') {
-        const script = document.createElement('script');
-        script.src = 'https://grcodeclub.gr/js/menu/network.js';
+        const network_menu = document.createElement('script');
+        network_menu.src = 'https://grcodeclub.gr/js/menu/network.js';
+        document.body.appendChild(network_menu);
+    }
+
+     if (document.body.id === 'cloud') {
+        const cloud_menu = document.createElement('script');
+        cloud_menu.src = 'https://grcodeclub.gr/js/menu/cloud.js';
         document.body.appendChild(script);
     }
     
