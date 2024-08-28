@@ -103,10 +103,6 @@ document.head.appendChild(var_prism);
 var mycookies = document.createElement('script');
 mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
 document.head.appendChild(mycookies);
- 
-var headder_menu = document.createElement('script');
-headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
-document.head.appendChild(headder_menu);
 
 document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('search_table_page')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="search_table_page" στο body
@@ -125,5 +121,8 @@ document.addEventListener('DOMContentLoaded', function() {
         show_codes.src = 'https://grcodeclub.gr/js/action/show_more_codes.js';
         document.head.appendChild(show_codes);
     }
+    var headder_menu = document.createElement('script');
+headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
+document.head.appendChild(headder_menu);
 });
 
