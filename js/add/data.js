@@ -122,16 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(show_codes);
     }
 
-    if (document.body.id === 'network') {
+    if (document.body.id === 'network' || document.body.id === 'cloud') {
         const network_menu = document.createElement('script');
         network_menu.src = 'https://grcodeclub.gr/js/menu/network.js';
         document.body.appendChild(network_menu);
-    }
-
-     if (document.body.id === 'cloud') {
-        const cloud_menu = document.createElement('script');
-        cloud_menu.src = 'https://grcodeclub.gr/js/menu/cloud.js';
-        document.body.appendChild(script);
     }
     
     var headder_menu = document.createElement('script');
