@@ -3,7 +3,7 @@ let currentPage = 1;
 
 const table1 = document.getElementById('search_table_page');
 const rows1 = table1.querySelectorAll('tr');
-const headerRow = table1.querySelector('#title-table');
+const headerRow = table1.querySelector('tr #title-page');
 console.log(headerRow);
 
 
