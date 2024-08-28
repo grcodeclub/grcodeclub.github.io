@@ -134,7 +134,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(script);
     }
     
-    
+      if (document.getElementById('back_page')) {  
+             const script = document.createElement('script');
+        script.src = 'https://grcodeclub.gr/js/add/back_page.js';
+        document.body.appendChild(script);
+      }
     var headder_menu = document.createElement('script');
     headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
     document.head.appendChild(headder_menu);
