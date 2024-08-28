@@ -123,15 +123,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (document.body.id === 'network' || document.body.id === 'cloud') {
-        const network_menu = document.createElement('script');
-        network_menu.src = 'https://grcodeclub.gr/js/menu/network.js';
-        document.body.appendChild(network_menu);
+        var menu = document.createElement('script');
+        menu.src = 'https://grcodeclub.gr/js/menu/network.js';
+        document.body.appendChild(menu);
     }
 
     if (document.body.id === 'system' || document.body.id === 'linux' || document.body.id === 'android'  ) {
-        const system_menu = document.createElement('script');
-        system_menu.src = 'https://grcodeclub.gr/js/menu/system.js';
-        document.body.appendChild(network_menu);
+        var menu = document.createElement('script');
+        menu.src = 'https://grcodeclub.gr/js/menu/system.js';
+        document.body.appendChild(menu);
     }
     
     var headder_menu = document.createElement('script');
