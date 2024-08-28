@@ -9,9 +9,16 @@ function displayTable(page) {
     const end = start + itemsPerPage;
     table1.innerHTML = ''; // Καθαρίστε τον πίνακα πριν από την απόδοση
 
-    const paginatedItems = rows1.slice(1).slice(start, end); // Σημαντικό: παραλείπουμε την επικεφαλίδα μόνο για την αποκοπή
+       // Εκτύπωση του headerRow για έλεγχο
+    if (headerRow) {
+        console.log('Επικεφαλίδα:', headerRow.outerHTML);
+        table1.appendChild(headerRow.cloneNode(true)); // Προσθέστε την επικεφαλίδα
+    } else {
+        console.log('Η επικεφαλίδα δεν βρέθηκε.');
+    }
+    
     // Σελιδοποιήστε τις γραμμές, παραλείποντας την επικεφαλίδα
-    const paginatedItems = rows1.slice(start - 1, end - 1); // Σημαντικό: +1 γιατί έχουμε την επικεφαλίδα στην αρχή
+    const paginatedItems = rows1.slice(1).slice(start, end); // Σημαντικό: παραλείπουμε την επικεφαλίδα μόνο για την αποκοπή
     paginatedItems.forEach(row => { table1.appendChild(row.cloneNode(true)); } // Χρησιμοποιήστε cloneNode για αντιγραφή της γραμμής
     );
 
