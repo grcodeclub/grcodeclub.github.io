@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(network_menu);
     }
 
-    if (document.body.id === 'system') {
+    if (document.body.id === 'system' || document.body.id === 'android'  ) {
         const system_menu = document.createElement('script');
         system_menu.src = 'https://grcodeclub.gr/js/menu/system.js';
         document.body.appendChild(network_menu);
