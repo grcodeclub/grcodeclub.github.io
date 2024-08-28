@@ -104,7 +104,11 @@ var mycookies = document.createElement('script');
 mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
 document.head.appendChild(mycookies);
  
-    
+
+var headder_menu = document.createElement('script');
+headder_menu.src = 'https://grcodeclub.gr/js//add/headder_and_menu_1.js';
+document.head.appendChild(headder_menu);
+
 document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('search_table_page')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="search_table_page" στο body
         var search_tables_pages = document.createElement('script');
