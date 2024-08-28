@@ -10,9 +10,9 @@ function displayTable(page) {
     const end = start + itemsPerPage;
     table1.innerHTML = ''; // Καθαρίστε τον πίνακα πριν από την απόδοση
 
-    if (headerRow) {    table1.appendChild(headerRow.cloneNode(true)); }   // Προσθέστε την επικεφαλίδα
+    if (headerRow) {    table1.appendChild(headerRow.cloneNode(true));  console.lo(headerRow); }   // Προσθέστε την επικεφαλίδα
     // Σελιδοποιήστε τις γραμμές, παραλείποντας την επικεφαλίδα
-    const paginatedItems = rows1.slice(start + 1, end + 1); // Σημαντικό: +1 γιατί έχουμε την επικεφαλίδα στην αρχή
+    const paginatedItems = rows1.slice(start - 1, end - 1); // Σημαντικό: +1 γιατί έχουμε την επικεφαλίδα στην αρχή
     paginatedItems.forEach(row => {
         table1.appendChild(row.cloneNode(true)); // Χρησιμοποιήστε cloneNode για αντιγραφή της γραμμής
     });
