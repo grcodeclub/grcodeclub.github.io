@@ -127,6 +127,13 @@ document.addEventListener('DOMContentLoaded', function() {
         script.src = 'https://grcodeclub.gr/js/menu/network.js';
         document.body.appendChild(script);
     }
+
+    if (document.body.id === 'website') {
+        const script = document.createElement('script');
+        script.src = 'https://grcodeclub.gr/js/menu/website.js';
+        document.body.appendChild(script);
+    }
+    
     
     var headder_menu = document.createElement('script');
     headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
