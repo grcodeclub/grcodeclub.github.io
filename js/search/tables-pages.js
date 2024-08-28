@@ -3,12 +3,12 @@ let currentPage = 1;
 
 const table1 = document.getElementById('search_table_page');
 const rows1 = table1.querySelectorAll('tr');
-const headerRow = table1.querySelector('tr #title-table');
+const headerRow = table1.querySelector('tr#title-table');
 
 function displayTable(page) {
     const start = (page - 1) * itemsPerPage + 1; // +1 to skip header row
     const end = start + itemsPerPage;
-    const tableBody = document.querySelector('#search_table_page tbody');
+    const tableBody = document.querySelector('#search_table_page tr');
     tableBody.innerHTML = '';
 
     // Add header row
@@ -27,7 +27,7 @@ function displayTable(page) {
 }
 
 function fullTable() {
-    const tableBody = document.querySelector('#search_table_page tbody');
+    const tableBody = document.querySelector('#search_table_page tr');
     tableBody.innerHTML = '';
 
     // Add header row
@@ -89,7 +89,7 @@ function displayPagination() {
 }
 
 function applyRowColors() {
-    const tableRows = document.querySelectorAll('#search_table_page tbody tr:not(tr[id="title-table"])'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
+    const tableRows = document.querySelectorAll('#search_table_page tr tr:not(tr[id="title-table"])'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
 
     tableRows.forEach((row, index) => {
         if (index % 2 === 0) {
