@@ -38,6 +38,21 @@ window.onload = function() {
         addMenuLinks(menuLinks);
     }
 
+            if (document.body.id === 'windows') {
+    var menuLinks = [
+            '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
+        '<li><a href="https://grcodeclub.github.io/windows">Microsoft Windows</a></li>',
+        '<li><a href="https://grcodeclub.github.io/windows/orologia">Ορολογία</a></li>',
+        '<li><a href="https://grcodeclub.github.io/windows/command">Γραμμή εντολών</a></li>',
+        '<li><a href="https://grcodeclub.github.io/windows/command/powershell">PowerShell</a></li>',
+        '<li><a href="https://grcodeclub.github.io/windows/more/run">Run Commands</a></li>',
+        '<li><a href="https://grcodeclub.github.io/windows/more/language-id">Language ID</a></li>',
+        '<li style="height: 200px;"></li>'
+    ];
+    
+        addMenuLinks(menuLinks);
+    }
+    
     if (document.body.id === 'android') {
         var networkMenuLinks = [
         '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
