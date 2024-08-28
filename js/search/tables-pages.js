@@ -4,10 +4,6 @@ let currentPage = 1;
 const table1 = document.getElementById('search_table_page');
 const rows1 = table1.querySelectorAll('tr');
 const headerRow = table1.querySelector('#title-page');
-console.log(headerRow);
-
-console.log("Table");
-console.log(rows1);
 
 function displayTable(page) {
     const start = (page - 1) * itemsPerPage + 1; // +1 to skip header row
