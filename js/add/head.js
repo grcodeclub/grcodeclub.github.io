@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (document.body.id === 'network') {
         const script = document.createElement('script');
-        script.src = 'https://grcodeclub.gr/network/js/menu.js';
+        script.src = 'https://grcodeclub.gr/js/menu/network.js';
         document.body.appendChild(script);
     }
     
