@@ -127,9 +127,16 @@ const cssLinks = [
      mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
      document.head.appendChild(mycookies);
  
-        var search_tables_pages = document.createElement('script');
-        search_tables_pages.src = 'http://127.0.0.1:3000/c:/grcodeclub/search-tables-pages.js';
-        document.head.appendChild(search_tables_pages);
+    
+// Ελέγξτε αν υπάρχει το στοιχείο με id="search_table_page" στο body
+if (document.getElementById('search_table_page')) {
+    // Δημιουργία του script στοιχείου
+    var search_tables_pages = document.createElement('script');
+    search_tables_pages.src = 'http://127.0.0.1:3000/c:/grcodeclub/search-tables-pages.js';
+    
+    // Επιλογή του head και προσθήκη του script
+    document.head.appendChild(search_tables_pages);
+}
     
  
  
