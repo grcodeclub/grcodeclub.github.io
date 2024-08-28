@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
       if (document.getElementById('back_page')) {  
-             const script = document.createElement('script');
+        script = document.createElement('script');
         script.src = 'https://grcodeclub.gr/js/add/back_page.js';
         document.body.appendChild(script);
       }
