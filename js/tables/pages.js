@@ -16,7 +16,7 @@ function displayTable(page) {
     }
 
     // Σελιδοποιήστε τις γραμμές, παραλείποντας την επικεφαλίδα
-    const paginatedItems = rows1.slice(1).slice(start, end); // Αρχίστε από την 2η γραμμή και κόψτε σωστά
+    const paginatedItems = rows1.slice(1).slice(start-1, end); // Αρχίστε από την 2η γραμμή και κόψτε σωστά
     paginatedItems.forEach(row => {
         table1.appendChild(row.cloneNode(true)); // Χρησιμοποιήστε cloneNode για αντιγραφή της γραμμής
     });
