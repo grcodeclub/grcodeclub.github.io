@@ -2,7 +2,7 @@ const itemsPerPage = 15;
 let currentPage = 1;
 const table1 = document.getElementById('table_page');
 const rows1 = Array.from(table1.querySelectorAll('tr'));
-const headerRow = table1.querySelector('tr #title-page'); // Σωστή επιλογή της επικεφαλίδας
+const headerRow = table1.querySelector('tr#title-page'); // Σωστή επιλογή της επικεφαλίδας
 
 function displayTable(page) {
     const start = (page - 1) * itemsPerPage + 1; // +1 για να παραλείψουμε την επικεφαλίδα
