@@ -116,5 +116,11 @@ document.addEventListener('DOMContentLoaded', function() {
         search_tables_pages.src = 'https://grcodeclub.gr/js/tables/pages.js';
         document.head.appendChild(search_tables_pages);
     }
+
+    if (document.getElementById('code')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        var show_codes = document.createElement('script');
+        show_codes.src = 'https://grcodeclub.gr/js/action/show_more_codes.js';
+        document.head.appendChild(show_codes);
+    }
 });
 
