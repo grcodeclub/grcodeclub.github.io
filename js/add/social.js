@@ -1,6 +1,6 @@
 // <footer><div id="add-social"></div><script src="./footer.js"></script></footer>
 // Βρες το στοιχείο <footer> με το id 'add_footer'
-const addFooter = document.getElementById('add-social');
+const addFooter = document.getElementById('addFooter');
 
 if (addFooter) {
     // Περιεχόμενο HTML που θα προστεθεί στο footer
