@@ -15,12 +15,10 @@ function displayTable(page) {
         table1.appendChild(headerRow.cloneNode(true));
     }
 
-    // Σελιδοποιήστε τις γραμμές
-    const paginatedItems = rows1.slice(start, end);
+    // Σελιδοποιήστε τις γραμμές, παραλείποντας την επικεφαλίδα
+    const paginatedItems = rows1.slice(start, end + 1).filter(row => row !== headerRow);
     paginatedItems.forEach(row => {
-        if (row !== headerRow) { // Μην προσθέσετε ξανά την επικεφαλίδα
-            table1.appendChild(row.cloneNode(true));
-        }
+        table1.appendChild(row.cloneNode(true)); // Χρησιμοποιήστε cloneNode για αντιγραφή της γραμμής
     });
 
     applyRowColors();
@@ -44,7 +42,7 @@ function fullTable() {
         const column1Match = cells[0].textContent.toLowerCase().includes(searchTerm);
 
         if (column1Match) {
-            table1.appendChild(row.cloneNode(true));
+            table1.appendChild(row.cloneNode(true)); // Χρησιμοποιήστε cloneNode για αντιγραφή της γραμμής
         }
     });
 
@@ -86,7 +84,7 @@ function displayPagination() {
 }
 
 function applyRowColors() {
-    const tableRows = table1.querySelectorAll('tr:not(#title-table)'); // Εξαίρεση της επικεφαλίδας
+    const tableRows = table1.querySelectorAll('tr:not(#title-table)'); // Εξαιρούμε την επικεφαλίδα
 
     tableRows.forEach((row, index) => {
         if (index % 2 === 0) {
