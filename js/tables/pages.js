@@ -61,7 +61,7 @@ function displayPagination() {
 }
 
 function applyRowColors() {
-    const tableRows = document.querySelectorAll('#search_table_page tbody tr:not(tr[id="title-table"])'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
+    const tableRows = document.querySelectorAll('#table_page tbody tr:not(tr[id="title-table"])'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
 
     tableRows.forEach((row, index) => {
         if (index % 2 === 0) {
