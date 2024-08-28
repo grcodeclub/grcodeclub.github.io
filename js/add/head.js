@@ -130,9 +130,12 @@ if ((event.ctrlKey &&
     mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
     document.head.appendChild(mycookies);
 
+// Ελέγχει αν υπάρχει το table με id 'search_table_page'
+if (document.getElementById('search_table_page')) {
     var search_tables_pages = document.createElement('script');
     search_tables_pages.src = 'https://grcodeclub.gr/js/search/tables-pages.js';
     document.head.appendChild(search_tables_pages);
+}
 
 
 
