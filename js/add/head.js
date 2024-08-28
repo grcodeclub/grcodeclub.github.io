@@ -121,8 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
         show_codes.src = 'https://grcodeclub.gr/js/action/show_more_codes.js';
         document.head.appendChild(show_codes);
     }
+
+      if (document.body.id === 'network') {
+        const script = document.createElement('script');
+        script.src = 'https://grcodeclub.gr/network/js/menu.js';
+        document.body.appendChild(script);
+    }
+    
     var headder_menu = document.createElement('script');
-headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
-document.head.appendChild(headder_menu);
+    headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
+    document.head.appendChild(headder_menu);
 });
 
