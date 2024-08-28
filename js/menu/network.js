@@ -11,8 +11,8 @@ window.onload = function() {
     if (document.body.id === 'cloud') {
         var cloudMenuLinks = [
             '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
-            '<li><a href="https://grcodeclub.gr/cloud/">Cloud</a></li>',
-            '<li><a href="https://grcodeclub.gr/cloud/basic">Βασικές Γνώσεις</a></li>',
+            '<li><a href="https://grcodeclub.gr/network/cloud/">Cloud</a></li>',
+            '<li><a href="https://grcodeclub.gr/network/cloud/basic">Βασικές Γνώσεις</a></li>',
             '<li><a href="https://grcodeclub.gr/network/">Δίκτυα Υπολογιστών</a></li>',
             '<li style="height: 200px;"></li>'
         ];
