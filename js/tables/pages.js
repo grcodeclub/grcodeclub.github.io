@@ -16,7 +16,7 @@ function displayTable(page) {
     }
 
     // Σελιδοποιήστε τις γραμμές, παραλείποντας την επικεφαλίδα
-    const paginatedItems = rows1.slice(start, end + 1).filter(row => row !== headerRow);
+    const paginatedItems = rows1.slice(1).slice(start - 1, end - 1); // Αρχίστε από την 2η γραμμή και κόψτε σωστά
     paginatedItems.forEach(row => {
         table1.appendChild(row.cloneNode(true)); // Χρησιμοποιήστε cloneNode για αντιγραφή της γραμμής
     });
@@ -24,6 +24,7 @@ function displayTable(page) {
     applyRowColors();
     displayPagination();
 }
+
 
 function fullTable() {
     table1.innerHTML = ''; // Καθαρίστε τον πίνακα πριν από την απόδοση
@@ -48,6 +49,7 @@ function fullTable() {
 
     applyRowColors();
 }
+
 
 function displayPagination() {
     const pagination = document.getElementById('pagination');
