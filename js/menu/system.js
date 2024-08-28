@@ -22,6 +22,22 @@ window.onload = function() {
         addMenuLinks(cloudMenuLinks);
     }
 
+
+        if (document.body.id === 'linux') {
+    var menuLinks = [
+        '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
+        '<li><a href="https://grcodeclub.github.io/linux/">Linux</li>',
+        '<li><a href="https://grcodeclub.github.io/linux/terminal">Terminal</li>',
+        '<li><a href="https://grcodeclub.github.io/linux/install">Εγκατάσταση Προγραμμάτων</li>',
+        '<li><a href="https://grcodeclub.github.io/linux/files">Αρχεία</a></li>',
+        '<li><a href="https://grcodeclub.github.io/linux/orologia">Ορολογία</a></li>',
+        '<li><a href="https://grcodeclub.github.io/linux/more/distro">Λίστα με τα Distro</a></li>',
+        '<li style="height: 200px;"></li>'
+    ];
+    
+        addMenuLinks(cloudMenuLinks);
+    }
+
     if (document.body.id === 'android') {
         var networkMenuLinks = [
         '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
