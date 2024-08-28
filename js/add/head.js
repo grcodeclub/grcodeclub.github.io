@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
     document.head.appendChild(headder_menu);
 
-    var headder_menu = document.createElement('script');
+    var add_footer = document.createElement('script');
     add_footer.src = 'https://grcodeclub.gr/js/add/social.js';
     document.head.appendChild(add_footer);
 });
