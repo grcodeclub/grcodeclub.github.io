@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayTable(page) {
         const start = (page - 1) * itemsPerPage + 1; // +1 to skip header row
         const end = start + itemsPerPage;
-        const tableBody = document.querySelector('#table tbody');
+        const tableBody = document.querySelector('#search_tables_pages  tbody');
         tableBody.innerHTML = '';
 
         // Add header row
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tableBody.appendChild(headerRow.cloneNode(true)); // Use cloneNode to keep original header
         }
 
-        const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+        const searchTerm = document.getElementById('#').value.trim().toLowerCase();
 
         rows1.forEach(row => {
             if (row === headerRow) return; // Skip header row
