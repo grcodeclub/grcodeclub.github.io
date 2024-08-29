@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (document.body.id === 'programming') {  
         var menu = document.createElement('script');
-        script_back_page.src = 'https://grcodeclub.gr/js/menu/programming.js';
-        document.body.appendChild(script_back_page);
+        menu.src = 'https://grcodeclub.gr/js/menu/programming.js';
+        document.body.appendChild(menu);
       }
     var headder_menu = document.createElement('script');
     headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
