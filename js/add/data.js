@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(script_back_page);
       }
 
-    if (document.getElementById('programming')) {  
+    if (document.body.id === 'programming') {  
         var menu = document.createElement('script');
         script_back_page.src = 'https://grcodeclub.gr/js/menu/programming.js';
         document.body.appendChild(script_back_page);
