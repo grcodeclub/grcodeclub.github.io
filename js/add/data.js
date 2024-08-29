@@ -152,7 +152,12 @@ document.addEventListener('DOMContentLoaded', function() {
         script_back_page.src = 'https://grcodeclub.gr/js/add/back_page.js';
         document.body.appendChild(script_back_page);
       }
-    
+
+    if (document.getElementById('programming')) {  
+        var menu = document.createElement('script');
+        script_back_page.src = 'https://grcodeclub.gr/js/menu/programming.js';
+        document.body.appendChild(script_back_page);
+      }
     var headder_menu = document.createElement('script');
     headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
     document.body.appendChild(headder_menu);
