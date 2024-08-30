@@ -178,11 +178,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(menu);
       }
 
-    
-    var headder_menu = document.createElement('script');
-    headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
-    document.body.appendChild(headder_menu);
+    if (document.getElementById('container')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        var headder_menu = document.createElement('script');
+        headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
+        document.body.appendChild(headder_menu);}
 
+    if (document.getElementById('container-notmenu')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        var headder_menu = document.createElement('script');
+        headder_menu.src = 'https://grcodeclub.gr/js/add/headder';
+        document.body.appendChild(headder_menu);}
+    
     var add_footer = document.createElement('script');
     add_footer.src = 'https://grcodeclub.gr/js/add/social.js';
     document.body.appendChild(add_footer);
