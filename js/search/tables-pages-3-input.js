@@ -92,11 +92,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function fullTable_searchInputAuthor() {
+    function fullTable_searchInput2() {
         const tableBody = document.querySelector('#search_table_page_3_input tbody');
         tableBody.innerHTML = '';
         if (headerRow) {tableBody.appendChild(headerRow.cloneNode(true));}         // Add header row
-        const searchTerm = document.getElementById('searchInputAuthor').value.trim().toLowerCase();
+        const searchTerm = document.getElementById('searchInput2').value.trim().toLowerCase();
         rows1.forEach(row => {
             if (row === headerRow) return; 
             const cells = row.querySelectorAll('td');
@@ -106,13 +106,13 @@ document.addEventListener('DOMContentLoaded', function() {
         applyRowColors(); // Εφαρμογή χρωματισμού μετά την απόδοση του πλήρους πίνακα
     }
     
-    function checkAndDisplayTable_searchInputAuthor() {
-        const searchInput1 = document.getElementById('searchInputAuthor');
+    function checkAndDisplayTable_searchInput2() {
+        const searchInput1 = document.getElementById('searchInput2');
         if (searchInput1.value.trim() !== '') {
             const pagination = document.getElementById('pagination'); // Display full table when search input is not empty
             searchInput1.style.display = 'block';
             pagination.style.display = 'none';
-            fullTable_searchInputAuthor();
+            fullTable_searchInput2();
         } else {
             displayTable(currentPage); // Otherwise, display paginated table
             searchInput1.style.display = 'block'; // Keep the search input visible
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput1 = document.getElementById('searchInput1');
     searchInput1.addEventListener('input', checkAndDisplayTable_searchInput);
     const searchInput2 = document.getElementById('searchInput2');
-    searchInput2.addEventListener('input', checkAndDisplayTable_searchInputAuthor);
+    searchInput2.addEventListener('input', checkAndDisplayTable_searchInput2);
     const searchInput3 = document.getElementById('searchInput3');
     searchInput3.addEventListener('input', checkAndDisplayTable_searchInputCategory);
     checkAndDisplayTable_searchInput();
@@ -163,11 +163,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput1 = document.getElementById('searchInput1');
-    const searchInputAuthor = document.getElementById('searchInput2');
+    const searchInput2 = document.getElementById('searchInput2');
     const searchInput3 = document.getElementById('searchInput3');
 
     function updatePlaceholdersAndInputs(activeInput) {
-    const inputs = [searchInput1, searchInputAuthor, searchInput3];
+    const inputs = [searchInput1, searchInput2, searchInput3];
     
     // Αποθήκευση αρχικών placeholders μόνο μία φορά
     inputs.forEach(input => {
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Initialize with original placeholders
-    [searchInput1, searchInputAuthor, searchInput3].forEach(input => {
+    [searchInput1, searchInput2, searchInput3].forEach(input => {
         input.setAttribute('data-original-placeholder', input.placeholder);
     });
 
@@ -204,8 +204,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updatePlaceholdersAndInputs(searchInput1);
     });
 
-    searchInputAuthor.addEventListener('input', function() {
-        updatePlaceholdersAndInputs(searchInputAuthor);
+    searchInput2.addEventListener('input', function() {
+        updatePlaceholdersAndInputs(searchInput2);
     });
 
     searchInput3.addEventListener('input', function() {
