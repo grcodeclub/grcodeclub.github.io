@@ -123,6 +123,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(show_codes);
     }
 
+        if (document.getElementById('search_table_page_3_input')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        var show_codes = document.createElement('script');
+        show_codes.src = 'https://grcodeclub.gr/js/search/tables-pages-3-input.js';
+        document.body.appendChild(show_codes);
+    }
+
+
     if (document.body.id === 'network' || document.body.id === 'cloud') {
         var menu = document.createElement('script');
         menu.src = 'https://grcodeclub.gr/js/menu/network.js';
