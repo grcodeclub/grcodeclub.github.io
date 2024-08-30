@@ -183,10 +183,10 @@ document.addEventListener('DOMContentLoaded', function() {
         headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
         document.body.appendChild(headder_menu);}
 
-    if (document.getElementById('container-notmenu')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
-        var headder = document.createElement('script');
-        headder.src = 'https://grcodeclub.gr/js/add/headder.js';
-        document.body.appendChild(headder);}
+    if (document.getElementById('add_headder')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        var add_headder = document.createElement('script');
+        add_headder.src = 'https://grcodeclub.gr/js/add/headder.js';
+        document.body.appendChild(add_headder);}
     
     var add_footer = document.createElement('script');
     add_footer.src = 'https://grcodeclub.gr/js/add/social.js';
