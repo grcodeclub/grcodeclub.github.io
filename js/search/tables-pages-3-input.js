@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
     const itemsPerPage = 10;
     let currentPage = 1;
 
@@ -121,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function fullTable_searchInputCategory() {
+    function fullTable_searchInput3() {
         const tableBody = document.querySelector('#search_table_page_3_input tbody');
         tableBody.innerHTML = '';
         if (headerRow) {tableBody.appendChild(headerRow.cloneNode(true));}         // Add header row
@@ -135,13 +134,13 @@ document.addEventListener('DOMContentLoaded', function() {
         applyRowColors(); // Εφαρμογή χρωματισμού μετά την απόδοση του πλήρους πίνακα
     }
     
-    function checkAndDisplayTable_searchInputCategory() {
+    function checkAndDisplayTable_searchInput3() {
         const searchInput1 = document.getElementById('searchInput3');
         if (searchInput1.value.trim() !== '') {
             const pagination = document.getElementById('pagination'); // Display full table when search input is not empty
             searchInput1.style.display = 'block';
             pagination.style.display = 'none';
-            fullTable_searchInputCategory();
+            fullTable_searchInput3();
         } else {
             displayTable(currentPage); // Otherwise, display paginated table
             searchInput1.style.display = 'block'; // Keep the search input visible
@@ -157,9 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput2 = document.getElementById('searchInput2');
     searchInput2.addEventListener('input', checkAndDisplayTable_searchInput2);
     const searchInput3 = document.getElementById('searchInput3');
-    searchInput3.addEventListener('input', checkAndDisplayTable_searchInputCategory);
+    searchInput3.addEventListener('input', checkAndDisplayTable_searchInput3);
     checkAndDisplayTable_searchInput();
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput1 = document.getElementById('searchInput1');
