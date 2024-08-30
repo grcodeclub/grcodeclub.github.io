@@ -166,6 +166,11 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.src = 'https://grcodeclub.gr/js/menu/programming.js';
         document.body.appendChild(menu);
       }
+        if (document.body.id === 'basic') {  
+        var menu = document.createElement('script');
+        menu.src = 'https://grcodeclub.gr/js/menu/basic.js';
+        document.body.appendChild(menu);
+      }
     var headder_menu = document.createElement('script');
     headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
     document.body.appendChild(headder_menu);
