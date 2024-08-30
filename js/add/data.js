@@ -184,9 +184,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(headder_menu);}
 
     if (document.getElementById('container-notmenu')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
-        var headder_menu = document.createElement('script');
-        headder_menu.src = 'https://grcodeclub.gr/js/add/headder';
-        document.body.appendChild(headder_menu);}
+        var headder = document.createElement('script');
+        headder.src = 'https://grcodeclub.gr/js/add/headder.js';
+        document.body.appendChild(headder);}
     
     var add_footer = document.createElement('script');
     add_footer.src = 'https://grcodeclub.gr/js/add/social.js';
