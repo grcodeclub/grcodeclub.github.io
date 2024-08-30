@@ -9,6 +9,7 @@ const cssLinks = [
     "https://grcodeclub.gr/website/css/grcodeclub/share.css",
     "https://grcodeclub.gr/website/css/grcodeclub/button.css",
     "https://grcodeclub.gr/website/css/grcodeclub/card.css",
+    "https://grcodeclub.gr/web/css/grcodeclub/manual.css",
     "https://grcodeclub.gr/website/css/grcodeclub/cookies.css",
     "https://grcodeclub.gr/website/css/grcodeclub/img.css",
     "https://grcodeclub.gr/website/css/grcodeclub/prism.css",
