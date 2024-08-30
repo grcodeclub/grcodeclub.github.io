@@ -8,7 +8,7 @@
     function displayTable(page) {
         const start = (page - 1) * itemsPerPage + 1; // +1 to skip header row
         const end = start + itemsPerPage;
-        const tableBody = document.querySelector('#search_table_page_3_input tbody');
+        const tableBody = document.querySelector('#search_table_page_3_input td');
         tableBody.innerHTML = '';
 
         // Add header row
@@ -54,7 +54,7 @@
     }
 
     function applyRowColors() {
-        const tableRows = document.querySelectorAll('#search_table_page_3_input tbody tr:not(#title-table)'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
+        const tableRows = document.querySelectorAll('#search_table_page_3_input td tr:not(#title-table)'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
         tableRows.forEach((row, index) => {
             if (index % 2 === 0) {
                 row.style.backgroundColor = 'rgba(211, 211, 211, 0.211)'; // Αλλάζουμε το χρώμα σε ανοιχτό γκρι για τις ζυγές γραμμές
@@ -63,7 +63,7 @@
     }
 
     function fullTable_searchInput() {
-        const tableBody = document.querySelector('#search_table_page_3_input tbody');
+        const tableBody = document.querySelector('#search_table_page_3_input td');
         tableBody.innerHTML = '';
         if (headerRow) {tableBody.appendChild(headerRow.cloneNode(true));}         // Add header row
         const searchTerm = document.getElementById('searchInput1').value.trim().toLowerCase();
@@ -92,7 +92,7 @@
     }
 
     function fullTable_searchInput2() {
-        const tableBody = document.querySelector('#search_table_page_3_input tbody');
+        const tableBody = document.querySelector('#search_table_page_3_input td');
         tableBody.innerHTML = '';
         if (headerRow) {tableBody.appendChild(headerRow.cloneNode(true));}         // Add header row
         const searchTerm = document.getElementById('searchInput2').value.trim().toLowerCase();
@@ -121,7 +121,7 @@
     }
 
     function fullTable_searchInput3() {
-        const tableBody = document.querySelector('#search_table_page_3_input tbody');
+        const tableBody = document.querySelector('#search_table_page_3_input td');
         tableBody.innerHTML = '';
         if (headerRow) {tableBody.appendChild(headerRow.cloneNode(true));}         // Add header row
         const searchTerm = document.getElementById('searchInput3').value.trim().toLowerCase();
