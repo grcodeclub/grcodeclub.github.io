@@ -106,6 +106,19 @@ mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
 document.head.appendChild(mycookies);
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    
+    if (document.getElementById('add_headder_and_menu')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        var headder_menu = document.createElement('script');
+        headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
+        document.body.appendChild(headder_menu);}
+
+    if (document.getElementById('add_headder')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        var add_headder = document.createElement('script');
+        add_headder.src = 'https://grcodeclub.gr/js/add/headder.js';
+        document.body.appendChild(add_headder);}
+
+    
     if (document.getElementById('search_table_page')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="search_table_page" στο body
         var search_tables_pages = document.createElement('script');
         search_tables_pages.src = 'https://grcodeclub.gr/js/search/tables-pages.js';
@@ -177,16 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.src = 'https://grcodeclub.gr/js/menu/basic.js';
         document.body.appendChild(menu);
       }
-
-    if (document.getElementById('add_headder_and_menu')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
-        var headder_menu = document.createElement('script');
-        headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
-        document.body.appendChild(headder_menu);}
-
-    if (document.getElementById('add_headder')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
-        var add_headder = document.createElement('script');
-        add_headder.src = 'https://grcodeclub.gr/js/add/headder.js';
-        document.body.appendChild(add_headder);}
     
     var add_footer = document.createElement('script');
     add_footer.src = 'https://grcodeclub.gr/js/add/social.js';
