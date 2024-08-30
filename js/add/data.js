@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(menu);
       }
 
-    if (document.getElementById('container')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+    if (document.getElementById('add_headder_and_menu')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
         var headder_menu = document.createElement('script');
         headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
         document.body.appendChild(headder_menu);}
