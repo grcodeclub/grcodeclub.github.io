@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const itemsPerPage = 10;
     let currentPage = 1;
 
-    const table1 = document.getElementById('table');
+    const table1 = document.getElementById('search_table_page_3_input');
     const rows1 = table1.querySelectorAll('tr');
     const headerRow = table1.querySelector('#title-table');
 
     function displayTable(page) {
         const start = (page - 1) * itemsPerPage + 1; // +1 to skip header row
         const end = start + itemsPerPage;
-        const tableBody = document.querySelector('#table tbody');
+        const tableBody = document.querySelector('#search_table_page_3_inputF tbody');
         tableBody.innerHTML = '';
 
         // Add header row
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function applyRowColors() {
-        const tableRows = document.querySelectorAll('#table tbody tr:not(#title-table)'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
+        const tableRows = document.querySelectorAll('#search_table_page_3_input tbody tr:not(#title-table)'); // Επιλέγουμε όλες τις γραμμές εκτός από την επικεφαλίδα
         tableRows.forEach((row, index) => {
             if (index % 2 === 0) {
                 row.style.backgroundColor = 'rgba(211, 211, 211, 0.211)'; // Αλλάζουμε το χρώμα σε ανοιχτό γκρι για τις ζυγές γραμμές
@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function fullTable_searchInput() {
-        const tableBody = document.querySelector('#table tbody');
+        const tableBody = document.querySelector('#search_table_page_3_input tbody');
         tableBody.innerHTML = '';
         if (headerRow) {tableBody.appendChild(headerRow.cloneNode(true));}         // Add header row
-        const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+        const searchTerm = document.getElementById('searchInput1').value.trim().toLowerCase();
         rows1.forEach(row => {
             if (row === headerRow) return; 
             const cells = row.querySelectorAll('td');
@@ -78,22 +78,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function checkAndDisplayTable_searchInput() {
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput.value.trim() !== '') {
+        const searchInput1 = document.getElementById('searchInput1');
+        if (searchInput1.value.trim() !== '') {
             const pagination = document.getElementById('pagination'); // Display full table when search input is not empty
-            searchInput.style.display = 'block';
+            searchInput1.style.display = 'block';
             pagination.style.display = 'none';
             fullTable_searchInput();
         } else {
             displayTable(currentPage); // Otherwise, display paginated table
-            searchInput.style.display = 'block'; // Keep the search input visible
+            searchInput1.style.display = 'block'; // Keep the search input visible
             const pagination = document.getElementById('pagination');
             pagination.style.display = 'block';
         }
     }
 
     function fullTable_searchInputAuthor() {
-        const tableBody = document.querySelector('#table tbody');
+        const tableBody = document.querySelector('#search_table_page_3_input tbody');
         tableBody.innerHTML = '';
         if (headerRow) {tableBody.appendChild(headerRow.cloneNode(true));}         // Add header row
         const searchTerm = document.getElementById('searchInputAuthor').value.trim().toLowerCase();
@@ -107,25 +107,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function checkAndDisplayTable_searchInputAuthor() {
-        const searchInput = document.getElementById('searchInputAuthor');
-        if (searchInput.value.trim() !== '') {
+        const searchInput1 = document.getElementById('searchInputAuthor');
+        if (searchInput1.value.trim() !== '') {
             const pagination = document.getElementById('pagination'); // Display full table when search input is not empty
-            searchInput.style.display = 'block';
+            searchInput1.style.display = 'block';
             pagination.style.display = 'none';
             fullTable_searchInputAuthor();
         } else {
             displayTable(currentPage); // Otherwise, display paginated table
-            searchInput.style.display = 'block'; // Keep the search input visible
+            searchInput1.style.display = 'block'; // Keep the search input visible
             const pagination = document.getElementById('pagination');
             pagination.style.display = 'block';
         }
     }
 
     function fullTable_searchInputCategory() {
-        const tableBody = document.querySelector('#table tbody');
+        const tableBody = document.querySelector('#search_table_page_3_input tbody');
         tableBody.innerHTML = '';
         if (headerRow) {tableBody.appendChild(headerRow.cloneNode(true));}         // Add header row
-        const searchTerm = document.getElementById('searchInputCategory').value.trim().toLowerCase();
+        const searchTerm = document.getElementById('searchInput3').value.trim().toLowerCase();
         rows1.forEach(row => {
             if (row === headerRow) return; 
             const cells = row.querySelectorAll('td');
@@ -136,15 +136,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function checkAndDisplayTable_searchInputCategory() {
-        const searchInput = document.getElementById('searchInputCategory');
-        if (searchInput.value.trim() !== '') {
+        const searchInput1 = document.getElementById('searchInput3');
+        if (searchInput1.value.trim() !== '') {
             const pagination = document.getElementById('pagination'); // Display full table when search input is not empty
-            searchInput.style.display = 'block';
+            searchInput1.style.display = 'block';
             pagination.style.display = 'none';
             fullTable_searchInputCategory();
         } else {
             displayTable(currentPage); // Otherwise, display paginated table
-            searchInput.style.display = 'block'; // Keep the search input visible
+            searchInput1.style.display = 'block'; // Keep the search input visible
             const pagination = document.getElementById('pagination');
             pagination.style.display = 'block';
         }
@@ -152,22 +152,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Add event listener to the search input
-    const searchInput = document.getElementById('searchInput');
-    searchInput.addEventListener('input', checkAndDisplayTable_searchInput);
-    const searchInputAthor = document.getElementById('searchInputAuthor');
-    searchInputAthor.addEventListener('input', checkAndDisplayTable_searchInputAuthor);
-    const searchInputCategory = document.getElementById('searchInputCategory');
-    searchInputCategory.addEventListener('input', checkAndDisplayTable_searchInputCategory);
+    const searchInput1 = document.getElementById('searchInput1');
+    searchInput1.addEventListener('input', checkAndDisplayTable_searchInput);
+    const searchInput2 = document.getElementById('searchInput2');
+    searchInput2.addEventListener('input', checkAndDisplayTable_searchInputAuthor);
+    const searchInput3 = document.getElementById('searchInput3');
+    searchInput3.addEventListener('input', checkAndDisplayTable_searchInputCategory);
     checkAndDisplayTable_searchInput();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchInput');
-    const searchInputAuthor = document.getElementById('searchInputAuthor');
-    const searchInputCategory = document.getElementById('searchInputCategory');
+    const searchInput1 = document.getElementById('searchInput1');
+    const searchInputAuthor = document.getElementById('searchInput2');
+    const searchInput3 = document.getElementById('searchInput3');
 
     function updatePlaceholdersAndInputs(activeInput) {
-    const inputs = [searchInput, searchInputAuthor, searchInputCategory];
+    const inputs = [searchInput1, searchInputAuthor, searchInput3];
     
     // Αποθήκευση αρχικών placeholders μόνο μία φορά
     inputs.forEach(input => {
@@ -195,21 +195,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Initialize with original placeholders
-    [searchInput, searchInputAuthor, searchInputCategory].forEach(input => {
+    [searchInput1, searchInputAuthor, searchInput3].forEach(input => {
         input.setAttribute('data-original-placeholder', input.placeholder);
     });
 
     // Add event listeners to each search input
-    searchInput.addEventListener('input', function() {
-        updatePlaceholdersAndInputs(searchInput);
+    searchInput1.addEventListener('input', function() {
+        updatePlaceholdersAndInputs(searchInput1);
     });
 
     searchInputAuthor.addEventListener('input', function() {
         updatePlaceholdersAndInputs(searchInputAuthor);
     });
 
-    searchInputCategory.addEventListener('input', function() {
-        updatePlaceholdersAndInputs(searchInputCategory);
+    searchInput3.addEventListener('input', function() {
+        updatePlaceholdersAndInputs(searchInput3);
     });
     
 });
