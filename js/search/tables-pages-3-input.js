@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-
     const itemsPerPage = 15;
     let currentPage = 1;
     
@@ -225,5 +223,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial table display based on search input
     checkAndDisplayTable();
-
-});
