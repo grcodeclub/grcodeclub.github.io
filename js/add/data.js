@@ -137,9 +137,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
         if (document.getElementById('search_table_page_3')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
-        var show_codessearch_table_page_3_input= document.createElement('script');
-        search_table_page_3_input.src = 'https://grcodeclub.gr/js/search/tables-pages-3-input.js';
-        document.body.appendChild(search_table_page_3_input);
+        var tables_pages_3 = document.createElement('script');
+        tables_pages_3.src = 'https://grcodeclub.gr/js/search/tables-pages-3-input.js';
+        document.body.appendChild(tables_pages_3);
     }
 
           if (document.getElementById('dropcard')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
