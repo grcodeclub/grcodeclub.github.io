@@ -77,8 +77,8 @@
     }
 
     function checkAndDisplayTable_searchInput() {
-        const searchInput1 = document.getElementById('searchInput1');
-        if (searchInput1.value.trim() !== '') {
+        const searchInput = document.getElementById('searchInput1');
+        if (searchInput.value.trim() !== '') {
             const pagination = document.getElementById('pagination'); // Display full table when search input is not empty
             searchInput1.style.display = 'block';
             pagination.style.display = 'none';
@@ -106,8 +106,8 @@
     }
     
     function checkAndDisplayTable_searchInput2() {
-        const searchInput1 = document.getElementById('searchInput2');
-        if (searchInput1.value.trim() !== '') {
+        const searchInput = document.getElementById('searchInput2');
+        if (searchInput.value.trim() !== '') {
             const pagination = document.getElementById('pagination'); // Display full table when search input is not empty
             searchInput1.style.display = 'block';
             pagination.style.display = 'none';
