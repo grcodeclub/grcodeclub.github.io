@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(show_codes);
     }
 
-        if (document.getElementById('search_table_page_3_input')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        if (document.getElementById('search_table_page_3')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
         var show_codessearch_table_page_3_input= document.createElement('script');
         search_table_page_3_input.src = 'https://grcodeclub.gr/js/search/tables-pages-3-input.js';
         document.body.appendChild(search_table_page_3_input);
