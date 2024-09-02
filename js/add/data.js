@@ -149,6 +149,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    if ((document.querySelector('.mytable') !== null)) {
+       var color_table = document.createElement('script');
+        color_table.src = 'https://grcodeclub.gr/js/tables/color.js';
+        document.body.appendChild(color_table);
+    }
+
+
     if (document.body.id === 'network' || document.body.id === 'cloud') {
         var menu = document.createElement('script');
         menu.src = 'https://grcodeclub.gr/js/menu/network.js';
