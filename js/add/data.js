@@ -130,9 +130,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(search_tables_pages);
     }
 
-    if (document.getElementById('code')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+    if (document.getElementById('code1')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
         var show_codes = document.createElement('script');
         show_codes.src = 'https://grcodeclub.gr/js/action/show_more_codes.js';
+        document.body.appendChild(show_codes);
+    }   else if (document.getElementById('code')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
+        var show_codes = document.createElement('script');
+        show_codes.src = 'https://grcodeclub.gr/js/action/show_code.js';
         document.body.appendChild(show_codes);
     }
 
