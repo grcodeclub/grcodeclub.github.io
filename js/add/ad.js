@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             padding: 2px 5px;
         }
 
-           @media (min-width: 321px) and (max-width: 768px) {
+           @media (max-width: 768px) {
             .ad-banner {
                 width: 320px;
                 height: 50px;
