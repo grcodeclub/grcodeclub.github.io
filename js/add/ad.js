@@ -31,9 +31,18 @@ document.addEventListener('DOMContentLoaded', function() {
             padding: 2px 5px;
         }
 
+           @media (min-width: 321px) and (max-width: 768px) {
             .ad-banner {
-                width: 50%;
-                height: 20%;
+                width: 320px;
+                height: 50px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .ad-banner {
+                width: 200px;
+                height: 200px;
+            }
             }
 
     `;
