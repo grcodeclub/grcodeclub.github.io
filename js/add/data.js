@@ -69,7 +69,6 @@ document.head.appendChild(icoFaviconLink);    // Προσθήκη του στο�
 document.title = 'GrCode Club'; 
 const metaElement = document.createElement('meta');     // Δημιουργία ενός νέου στοιχείου <meta>
  
- 
 ///////////
 // ViewPort
 ///////////
@@ -77,11 +76,9 @@ const metaElement = document.createElement('meta');     // Δημιουργία 
 metaElement.setAttribute('name', 'viewport');     // Ορίζουμε την ιδιότητα 'name' ως 'viewport'
 metaElement.setAttribute('content', 'width=device-width, initial-scale=0.8');     // Ορίζουμε την ιδιότητα 'content' με την τιμή που θέλουμε
 document.head.appendChild(metaElement);     // Προσθέτουμε το στοιχείο <meta> στο <head> του HTML εγγράφου
- 
-document.addEventListener('contextmenu', event => event.preventDefault());      // Απενεργοποίηση του μενού περιβάλλοντος
- 
-// Αποτροπή των συντομεύσεων
-document.addEventListener('keydown', function(event) {
+
+document.addEventListener('contextmenu', event => event.preventDefault());      // Απενεργοποίηση του μενού περιβάλλοντος 
+document.addEventListener('keydown', function(event) { // Αποτροπή των συντομεύσεων
     if ((event.ctrlKey && 
         (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'θ' || event.key === 'σ' || event.key === 'π' )) || 
         (event.key === 'F12') || (event.key === 'F11')) {
@@ -91,91 +88,41 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
- // Jquery
-var var_jquery = document.createElement('script');
-var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
-document.head.appendChild(var_jquery); 
-    
-// Prism
-var var_prism = document.createElement('script');
-var_prism.src = 'https://grcodeclub.gr/js/prism.js';
-document.head.appendChild(var_prism); 
+function addScriptHead(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        document.body.appendChild(script);
+    }
 
-var mycookies = document.createElement('script');
-mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
-document.head.appendChild(mycookies);
-
+addScriptHead('https://grcodeclub.gr/js/jquery.js');
+addScriptHead('https://grcodeclub.gr/js/prism.js');
+addScriptHead('https://grcodeclub.gr/js/cookies.js');
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Δηλώνουμε τη συνάρτηση addScript στο global scope
-function addScript(src) {
-    var script = document.createElement('script');
-    script.src = src;
-    document.body.appendChild(script);
-}
-    
-    if (document.getElementById('add_headder_and_menu')) {
-        addScript('https://grcodeclub.gr/js/add/headder_with_menu.js');
-    }
-
-    if (document.getElementById('add_headder')) {
-        addScript('https://grcodeclub.gr/js/add/headder.js');
+    function addScript(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        document.body.appendChild(script);
     }
     
-    if (document.getElementById('search_table_page')) {
-        addScript('https://grcodeclub.gr/js/search/tables-pages.js');
-    }
-
-    if (document.getElementById('table_page')) {
-        addScript('https://grcodeclub.gr/js/tables/pages.js');
-    }
-
-    if (document.getElementById('code1')) {
-        addScript('https://grcodeclub.gr/js/action/show_more_codes.js');
-    } else if (document.getElementById('code')) {
-        addScript('https://grcodeclub.gr/js/action/show_code.js');
-    }
-
-    if (document.getElementById('search_table_page_3')) {
-        addScript('https://grcodeclub.gr/js/search/tables-pages-3-input.js');
-    }
-
-    if (document.getElementById('dropcard')) {
-        addScript('https://grcodeclub.github.io/js/action/dropdown-cards.js');
-    }
-
-    if (document.querySelector('.mytable') !== null) {
-        addScript('https://grcodeclub.gr/js/tables/color.js');
-    }
-
-    if (document.body.id === 'network' || document.body.id === 'cloud') {
-        addScript('https://grcodeclub.gr/js/menu/network.js');
-    }
-
-    if (document.body.id === 'cybersecurity') {
-        addScript('https://grcodeclub.gr/js/menu/cybersecurity.js');
-    }
-
-    if (document.body.id === 'website') {
-        addScript('https://grcodeclub.gr/js/menu/website.js');
-    }
-
-    if (document.body.id === 'system' || document.body.id === 'linux' || document.body.id === 'windows' || document.body.id === 'android') {
-        addScript('https://grcodeclub.gr/js/menu/system.js');
-    }
-
-    if (document.getElementById('back_page')) {
-        addScript('https://grcodeclub.gr/js/add/back_page.js');
-    }
-
-    if (document.body.id === 'programming') {
-        addScript('https://grcodeclub.gr/js/menu/programming.js');
-    }
-
-    if (document.body.id === 'basic') {
-        addScript('https://grcodeclub.gr/js/menu/basic.js');
-    }
-
     addScript('https://grcodeclub.gr/js/add/social.js');
     addScript('https://grcodeclub.gr/js/shareURL.js');
+    
+    if (document.getElementById('add_headder_and_menu')) { addScript('https://grcodeclub.gr/js/add/headder_with_menu.js'); }
+    if (document.getElementById('add_headder')) { addScript('https://grcodeclub.gr/js/add/headder.js');}
+    if (document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
+    if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
+    if (document.getElementById('code1')) {addScript('https://grcodeclub.gr/js/action/show_more_codes.js');} 
+        else if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
+    if (document.getElementById('search_table_page_3')) { addScript('https://grcodeclub.gr/js/search/tables-pages-3-input.js'); }
+    if (document.getElementById('dropcard')) { addScript('https://grcodeclub.github.io/js/action/dropdown-cards.js'); }
+    if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
+    if (document.body.id === 'network' || document.body.id === 'cloud') { addScript('https://grcodeclub.gr/js/menu/network.js'); }
+    if (document.body.id === 'cybersecurity') {addScript('https://grcodeclub.gr/js/menu/cybersecurity.js'); }
+    if (document.body.id === 'website') { addScript('https://grcodeclub.gr/js/menu/website.js'); }
+    if (document.body.id === 'system' || document.body.id === 'linux' || document.body.id === 'windows' || document.body.id === 'android') {
+        addScript('https://grcodeclub.gr/js/menu/system.js');}
+    if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
+    if (document.body.id === 'programming') { addScript('https://grcodeclub.gr/js/menu/programming.js'); }
+    if (document.body.id === 'basic') { addScript('https://grcodeclub.gr/js/menu/basic.js'); }
 });
