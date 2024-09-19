@@ -91,23 +91,17 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-var addjs = document.createElement('script');
-
-addjs.src = 'https://grcodeclub.gr/js/jquery.js'; // Jquery
-document.head.appendChild(addjs); 
-    
-addjs.src = 'https://grcodeclub.gr/js/prism.js'; // Prism
-document.head.appendChild(addjs); 
-
-addjs.src = 'https://grcodeclub.gr/js/cookies.js'; // Import Cookies
-document.head.appendChild(addjs);
-
 // Δηλώνουμε τη συνάρτηση addScript στο global scope
 function addScript(src) {
     var script = document.createElement('script');
     script.src = src;
     document.body.appendChild(script);
 }
+
+addScript('https://grcodeclub.gr/js/jquery.js');
+addScript('https://grcodeclub.gr/js/prism.js');
+addScript('https://grcodeclub.gr/js/cookies.js');
+
 
 document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('add_headder_and_menu')) {
