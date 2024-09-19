@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function addScript(src) {
         var script = document.createElement('script');
         script.src = src;
-        document.body.appendChild(script);
+        document.head.appendChild(script);
     }
     
     addScript('https://grcodeclub.gr/js/add/social.js');
