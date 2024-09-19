@@ -13,9 +13,9 @@ window.onload = function() {
         '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
         '<li><a href="https://grcodeclub.github.io/system">Λειτουργικό Σύστημα</a></li>',
         '<li><a href="https://grcodeclub.github.io/system/orologia">Ορολογία</a></li>',
-        '<li><a href="https://grcodeclub.github.io/windows">Microsoft Windows</a></li>',
-        '<li><a href="https://grcodeclub.github.io/linux">Linux</li>',
-        '<li><a href="https://grcodeclub.github.io/system/android">Android</li>',
+        '<li><a href="https://grcodeclub.github.io/windows"><span class="fa-brands fa-windows" aria-hidden="true"></span> Microsoft Windows</a></li>',
+        '<li><a href="https://grcodeclub.github.io/linux"><span class="fa-brands fa-linux" aria-hidden="true"></span> Linux</li>',
+        '<li><a href="https://grcodeclub.github.io/system/android"><span class="fa-brands fa-android" aria-hidden="true"></span> Android</li>',
         '<li style="height: 200px;"></li>'
     ];
     
