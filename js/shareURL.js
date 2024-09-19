@@ -1,4 +1,4 @@
-function copyRealUrl() {
+function shareURL() {
     // Ελέγχουμε αν το Web Share API είναι διαθέσιμο
     if (navigator.share) {
         navigator.share({
