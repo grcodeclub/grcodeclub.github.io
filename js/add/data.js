@@ -106,15 +106,14 @@ mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
 document.head.appendChild(mycookies);
 
 
-// Δηλώνουμε τη συνάρτηση addScript στο global scope
+document.addEventListener('DOMContentLoaded', function() {
+    // Δηλώνουμε τη συνάρτηση addScript στο global scope
 function addScript(src) {
     var script = document.createElement('script');
     script.src = src;
     document.body.appendChild(script);
 }
-
-
-document.addEventListener('DOMContentLoaded', function() {
+    
     if (document.getElementById('add_headder_and_menu')) {
         addScript('https://grcodeclub.gr/js/add/headder_with_menu.js');
     }
