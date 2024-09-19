@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
     add_js.src = 'https://grcodeclub.gr/js/add/social.js';
     document.body.appendChild(add_js);
 
-    add_js.src = 'https://grcodeclub.gr/js/add/shareURL.js';
+    add_js.src = 'https://grcodeclub.gr/js/shareURL.js';
     document.body.appendChild(add_js);
 
 });
