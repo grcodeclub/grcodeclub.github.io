@@ -91,18 +91,19 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-var add_js = document.createElement('script');
+var addjs = document.createElement('script');
 
 add_js.src = 'https://grcodeclub.gr/js/jquery.js'; // Jquery
-document.head.appendChild(add_js); 
+document.head.appendChild(addjs); 
     
 add_js.src = 'https://grcodeclub.gr/js/prism.js'; // Prism
-document.head.appendChild(add_js); 
+document.head.appendChild(addjs); 
 
 add_js.src = 'https://grcodeclub.gr/js/cookies.js'; // Import Cookies
-document.head.appendChild(add_js);
+document.head.appendChild(addjs);
 
 document.addEventListener('DOMContentLoaded', function() {
+    var add_js = document.createElement('script');
     if (document.getElementById('add_headder_and_menu')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
         add_js.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
         document.body.appendChild(add_js);}
