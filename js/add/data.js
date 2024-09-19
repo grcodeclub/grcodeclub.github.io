@@ -93,13 +93,13 @@ document.addEventListener('keydown', function(event) {
 
 var addjs = document.createElement('script');
 
-add_js.src = 'https://grcodeclub.gr/js/jquery.js'; // Jquery
+addjs.src = 'https://grcodeclub.gr/js/jquery.js'; // Jquery
 document.head.appendChild(addjs); 
     
-add_js.src = 'https://grcodeclub.gr/js/prism.js'; // Prism
+addjs.src = 'https://grcodeclub.gr/js/prism.js'; // Prism
 document.head.appendChild(addjs); 
 
-add_js.src = 'https://grcodeclub.gr/js/cookies.js'; // Import Cookies
+addjs.src = 'https://grcodeclub.gr/js/cookies.js'; // Import Cookies
 document.head.appendChild(addjs);
 
 document.addEventListener('DOMContentLoaded', function() {
