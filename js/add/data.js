@@ -91,7 +91,7 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
 function addScriptHead(src) {
         var script = document.createElement('script');
         script.src = src;
-        document.body.appendChild(script);
+        document.head.appendChild(script);
     }
 
 addScriptHead('https://grcodeclub.gr/js/jquery.js');
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function addScript(src) {
         var script = document.createElement('script');
         script.src = src;
-        document.head.appendChild(script);
+        document.body.appendChild(script);
     }
     
     addScript('https://grcodeclub.gr/js/add/social.js');
