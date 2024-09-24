@@ -1,0 +1,42 @@
+.reveal {
+    background: url("./website-3374825_1280.jpg"),
+    linear-gradient(315deg, rgb(126, 131, 164) 0%, rgb(46, 0, 38) 50%, rgb(11, 3, 88) 100%);
+;
+    background-blend-mode: overlay; /* Δοκιμάστε άλλες επιλογές όπως multiply, screen, darken, etc. */
+    background-size: cover;
+background-position: center;
+
+color: #ccc;
+font-size: 30px;
+
+}
+
+.highlight {
+    background-color: rgb(118, 4, 82); /* Χρώμα υπογράμμισης */
+}
+
+table {
+    border-collapse: separate; /* Χρησιμοποιούμε separate για να έχουμε κενά μεταξύ των κελιών */
+
+    border-radius: 10px;
+    background-color: #cccccc6e;
+}
+
+th {
+    text-align: center; /* Κεντράρισμα του κειμένου */
+    white-space: nowrap; /* Αποτρέπει το σπάσιμο λέξεων */
+    border: none; /* Αφαιρούμε τα όρια */
+}
+
+td {
+    text-align: center; /* Κεντράρισμα του κειμένου */
+    white-space: nowrap; /* Αποτρέπει το σπάσιμο λέξεων */
+    border: none; /* Αφαιρούμε τα όρια */
+    padding: 100pc 100px 100px 100px;
+}
+
+
+table tr:nth-child(even) {
+    background-color: #6b0447; /* Χρώμα για τις ζευγάρες γραμμές */
+}
+
