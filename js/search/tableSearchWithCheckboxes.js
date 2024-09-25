@@ -49,7 +49,7 @@ function fullTable() {
     }
 
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-    const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked')).map(cb => cb.value);
+    const selectedCategory = document.getElementById('code1').value; // Ανάκτηση της επιλεγμένης κατηγορίας
 
     let foundResults = false; // Flag to track if any results were found
 
@@ -58,8 +58,8 @@ function fullTable() {
 
         const cells = row.querySelectorAll('td');
 
-        // Check if the category matches the selected checkboxes
-        const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(cells[0].textContent.trim());
+        // Check if the category matches the selected option (only if not "0")
+        const categoryMatch = selectedCategory === "0" || cells[0].textContent.trim() === selectedCategory;
 
         // Check if the search term matches
         const searchMatch = searchTerm === '' || cells[1].textContent.toLowerCase().includes(searchTerm);
@@ -136,10 +136,10 @@ function applyRowColors() {
 function checkAndDisplayTable() {
     const searchInput = document.getElementById('searchInput');
     const hasSearchTerm = searchInput.value.trim() !== '';
-    const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked')).map(cb => cb.value);
+    const selectedCategory = document.getElementById('code1').value; // Ανάκτηση της επιλεγμένης κατηγορίας
 
-    if (hasSearchTerm || selectedCategories.length > 0) {
-        // Εμφάνιση του πλήρους πίνακα όταν υπάρχει όρος αναζήτησης ή επιλεγμένες κατηγορίες
+    if (hasSearchTerm || selectedCategory !== "0") {
+        // Εμφάνιση του πλήρους πίνακα όταν υπάρχει όρος αναζήτησης ή επιλεγμένη κατηγορία
         fullTable();
     } else {
         // Διαφορετικά, εμφάνιση του σελιδοποιημένου πίνακα
@@ -151,11 +151,9 @@ function checkAndDisplayTable() {
 const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', checkAndDisplayTable);
 
-// Add event listeners to the category checkboxes
-const categoryCheckboxes = document.querySelectorAll('.category-checkbox');
-categoryCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', checkAndDisplayTable);
-});
+// Add event listener to the select dropdown
+const categorySelect = document.getElementById('code1');
+categorySelect.addEventListener('change', checkAndDisplayTable);
 
 // Initial table display based on search input and categories
 checkAndDisplayTable();
