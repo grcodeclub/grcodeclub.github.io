@@ -53,7 +53,7 @@ function fullTable() {
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
     
     // Get selected category from the select element
-    const selectedCategory = document.getElementById('font').value;
+    const selectedCategory = document.getElementById('selectOption').value;
 
     let foundResults = false; // Flag to track if any results were found
 
@@ -139,7 +139,7 @@ function applyRowColors() {
 
 function checkAndDisplayTable() {
     const searchInput = document.getElementById('searchInput');
-    const selectedCategory = document.getElementById('font').value;
+    const selectedCategory = document.getElementById('selectOption').value;
 
     if (searchInput.value.trim() !== '' || (selectedCategory !== '0')) {
         // Display full table when search input is not empty
@@ -164,7 +164,7 @@ const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', checkAndDisplayTable);
 
 // Add event listener to the category select
-const categorySelect = document.getElementById('font');
+const categorySelect = document.getElementById('selectOption');
 categorySelect.addEventListener('change', checkAndDisplayTable);
 
 // Initial table display based on search input and categories
