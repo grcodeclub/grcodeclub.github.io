@@ -139,16 +139,25 @@ function applyRowColors() {
 
 function checkAndDisplayTable() {
     const searchInput = document.getElementById('searchInput');
-    const hasSearchTerm = searchInput.value.trim() !== '';
     const selectedCategory = document.getElementById('code1').value;
 
-    // Εμφάνιση του πλήρους πίνακα όταν υπάρχει όρος αναζήτησης ή επιλεγμένη κατηγορία
-    if (hasSearchTerm || selectedCategory !== '0') {
+    if (searchInput.value.trim() !== '' || (selectedCategory !== '0')) {
+        // Display full table when search input is not empty
+        const pagination = document.getElementById('pagination');
+        searchInput.style.display = 'block';
+        pagination.style.display = 'none';
         fullTable();
     } else {
+        // Otherwise, display paginated table
         displayTable(currentPage);
+        searchInput.style.display = 'block'; // Keep the search input visible
+        const pagination = document.getElementById('pagination');
+        pagination.style.display = 'block';
     }
 }
+
+
+
 
 // Add event listener to the search input
 const searchInput = document.getElementById('searchInput');
