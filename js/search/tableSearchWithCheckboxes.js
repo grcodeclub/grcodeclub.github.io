@@ -61,7 +61,7 @@ function fullTable() {
         // Check if the category matches the selected option (only if not "0")
         const categoryMatch = selectedCategory === "0" || cells[0].textContent.trim() === selectedCategory;
 
-        // Check if the search term matches
+        // Check if the search term matches the second column
         const searchMatch = searchTerm === '' || cells[1].textContent.toLowerCase().includes(searchTerm);
 
         // Only show the row if it matches both the category and the search term
@@ -138,13 +138,8 @@ function checkAndDisplayTable() {
     const hasSearchTerm = searchInput.value.trim() !== '';
     const selectedCategory = document.getElementById('code1').value; // Ανάκτηση της επιλεγμένης κατηγορίας
 
-    if (hasSearchTerm || selectedCategory !== "0") {
-        // Εμφάνιση του πλήρους πίνακα όταν υπάρχει όρος αναζήτησης ή επιλεγμένη κατηγορία
-        fullTable();
-    } else {
-        // Διαφορετικά, εμφάνιση του σελιδοποιημένου πίνακα
-        displayTable(currentPage);
-    }
+    // Εμφάνιση του πλήρους πίνακα όταν υπάρχει όρος αναζήτησης ή επιλεγμένη κατηγορία
+    fullTable();
 }
 
 // Add event listener to the search input
