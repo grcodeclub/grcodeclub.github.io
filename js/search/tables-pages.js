@@ -36,37 +36,20 @@ function fullTable() {
     }
 
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-    const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked')).map(cb => cb.value);
-
-    let foundResults = false; // Flag to track if any results were found
 
     rows1.forEach(row => {
         if (row === headerRow) return; // Skip header row
 
+        // Get cells from the row
         const cells = row.querySelectorAll('td');
 
-        // Check if the category matches the selected checkboxes
-        const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(cells[0].textContent.trim());
+        // Check if at least one of the two specified columns contains the search term
+        const column1Match = cells[0].textContent.toLowerCase().includes(searchTerm);
 
-        // Check if the search term matches
-        const searchMatch = searchTerm === '' || cells[1].textContent.toLowerCase().includes(searchTerm);
-
-        // Only show the row if it matches both the category and the search term
-        if (categoryMatch && searchMatch) {
+        if (column1Match) {
             tableBody.appendChild(row.cloneNode(true)); // Use cloneNode to copy row
-            foundResults = true; // Mark that we found at least one result
         }
     });
-
-    // Αν δεν υπάρχουν αποτελέσματα, ενημερώνουμε τον πίνακα
-    if (!foundResults) {
-        const noResultsRow = document.createElement('tr');
-        const noResultsCell = document.createElement('td');
-        noResultsCell.colSpan = headerRow.cells.length; // Να καλύπτει όλες τις στήλες
-        noResultsCell.textContent = "Δεν βρέθηκαν αποτελέσματα";
-        noResultsRow.appendChild(noResultsCell);
-        tableBody.appendChild(noResultsRow);
-    }
 
     applyRowColors(); // Εφαρμογή χρωματισμού μετά την απόδοση του πλήρους πίνακα
 }
@@ -117,19 +100,17 @@ function applyRowColors() {
 
 function checkAndDisplayTable() {
     const searchInput = document.getElementById('searchInput');
-    const hasSearchTerm = searchInput.value.trim() !== '';
-    const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked')).map(cb => cb.value);
-
-    if (hasSearchTerm || selectedCategories.length > 0) {
-        // Εμφάνιση του πλήρους πίνακα όταν υπάρχει όρος αναζήτησης ή επιλεγμένες κατηγορίες
+    
+    if (searchInput.value.trim() !== '') {
+        // Display full table when search input is not empty
         const pagination = document.getElementById('pagination');
         searchInput.style.display = 'block';
         pagination.style.display = 'none';
         fullTable();
     } else {
-        // Διαφορετικά, εμφάνιση του σελιδοποιημένου πίνακα
+        // Otherwise, display paginated table
         displayTable(currentPage);
-        searchInput.style.display = 'block'; // Διατήρηση του search input ορατού
+        searchInput.style.display = 'block'; // Keep the search input visible
         const pagination = document.getElementById('pagination');
         pagination.style.display = 'block';
     }
@@ -139,11 +120,5 @@ function checkAndDisplayTable() {
 const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', checkAndDisplayTable);
 
-// Add event listeners to the category checkboxes
-const categoryCheckboxes = document.querySelectorAll('.category-checkbox');
-categoryCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', checkAndDisplayTable);
-});
-
-// Initial table display based on search input and categories
+// Initial table display based on search input
 checkAndDisplayTable();
