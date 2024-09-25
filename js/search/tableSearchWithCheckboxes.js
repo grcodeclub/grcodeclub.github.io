@@ -16,10 +16,23 @@ function displayTable(page) {
         tableBody.appendChild(headerRow.cloneNode(true)); // Use cloneNode to keep original header
     }
 
+    // Check if there are rows to display
+    if (rows1.length <= 1) {
+        const noResultsRow = document.createElement('tr');
+        const noResultsCell = document.createElement('td');
+        noResultsCell.colSpan = headerRow.cells.length; // Να καλύπτει όλες τις στήλες
+        noResultsCell.textContent = "Δεν υπάρχουν διαθέσιμες εγγραφές.";
+        noResultsRow.appendChild(noResultsCell);
+        tableBody.appendChild(noResultsRow);
+        return;
+    }
+
     // Paginate rows, skipping the header row
     const paginatedItems = Array.from(rows1).slice(start, end);
     paginatedItems.forEach(row => {
-        tableBody.appendChild(row.cloneNode(true)); // Use cloneNode to copy row
+        if (row !== headerRow) {
+            tableBody.appendChild(row.cloneNode(true)); // Use cloneNode to copy row
+        }
     });
 
     applyRowColors(); // Εφαρμογή χρωματισμού μετά την απόδοση του πίνακα
@@ -76,6 +89,11 @@ function displayPagination() {
     pagination.innerHTML = '';
 
     const totalPages = Math.ceil((rows1.length - 1) / itemsPerPage); // Adjusted for header row
+
+    if (totalPages < 1) {
+        return; // No pages to display
+    }
+
     const maxPagesToShow = 5;
 
     let startPage = currentPage - 2;
@@ -122,16 +140,10 @@ function checkAndDisplayTable() {
 
     if (hasSearchTerm || selectedCategories.length > 0) {
         // Εμφάνιση του πλήρους πίνακα όταν υπάρχει όρος αναζήτησης ή επιλεγμένες κατηγορίες
-        const pagination = document.getElementById('pagination');
-        searchInput.style.display = 'block';
-        pagination.style.display = 'none';
         fullTable();
     } else {
         // Διαφορετικά, εμφάνιση του σελιδοποιημένου πίνακα
         displayTable(currentPage);
-        searchInput.style.display = 'block'; // Διατήρηση του search input ορατού
-        const pagination = document.getElementById('pagination');
-        pagination.style.display = 'block';
     }
 }
 
