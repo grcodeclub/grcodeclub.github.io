@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('add_headder_and_menu')) { addScript('https://grcodeclub.gr/js/add/headder_with_menu.js'); }
     if (document.getElementById('add_headder')) { addScript('https://grcodeclub.gr/js/add/headder.js');}
 
-    if (document.querySelector('.category-checkbox') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
-    if (document.getElementById('search_table_page') && !document.querySelector('.category-checkbox')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
+    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
+    if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     
     if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
     if (document.getElementById('code1')) {addScript('https://grcodeclub.gr/js/action/show_more_codes.js');} 
