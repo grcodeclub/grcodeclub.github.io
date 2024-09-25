@@ -47,9 +47,13 @@ function fullTable() {
     if (headerRow) {
         tableBody.appendChild(headerRow.cloneNode(true)); // Use cloneNode to keep original header
     }
-
+   // Hide pagination
+   const pagination = document.getElementById('pagination');
+   pagination.style.display = 'none';
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-    const selectedCategory = document.getElementById('code1').value; // Ανάκτηση της επιλεγμένης κατηγορίας
+    
+    // Get selected category from the select element
+    const selectedCategory = document.getElementById('code1').value;
 
     let foundResults = false; // Flag to track if any results were found
 
@@ -58,10 +62,10 @@ function fullTable() {
 
         const cells = row.querySelectorAll('td');
 
-        // Check if the category matches the selected option (only if not "0")
-        const categoryMatch = selectedCategory === "0" || cells[0].textContent.trim() === selectedCategory;
+        // Check if the category matches the selected category from the select
+        const categoryMatch = selectedCategory === '0' || selectedCategory === cells[0].textContent.trim();
 
-        // Check if the search term matches the second column
+        // Check if the search term matches
         const searchMatch = searchTerm === '' || cells[1].textContent.toLowerCase().includes(searchTerm);
 
         // Only show the row if it matches both the category and the search term
@@ -136,17 +140,21 @@ function applyRowColors() {
 function checkAndDisplayTable() {
     const searchInput = document.getElementById('searchInput');
     const hasSearchTerm = searchInput.value.trim() !== '';
-    const selectedCategory = document.getElementById('code1').value; // Ανάκτηση της επιλεγμένης κατηγορίας
+    const selectedCategory = document.getElementById('code1').value;
 
     // Εμφάνιση του πλήρους πίνακα όταν υπάρχει όρος αναζήτησης ή επιλεγμένη κατηγορία
-    fullTable();
+    if (hasSearchTerm || selectedCategory !== '0') {
+        fullTable();
+    } else {
+        displayTable(currentPage);
+    }
 }
 
 // Add event listener to the search input
 const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', checkAndDisplayTable);
 
-// Add event listener to the select dropdown
+// Add event listener to the category select
 const categorySelect = document.getElementById('code1');
 categorySelect.addEventListener('change', checkAndDisplayTable);
 
