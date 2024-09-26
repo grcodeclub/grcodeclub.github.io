@@ -99,13 +99,11 @@ addScriptHead('https://grcodeclub.gr/js/prism.js');
 addScriptHead('https://grcodeclub.gr/js/cookies.js');
 
 document.addEventListener('DOMContentLoaded', function() {
-
-        // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
-                const currentURL = window.location.href;
+                const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
                 // Έλεγχος αν το URL ξεκινάει με grcodeclubb.gr/network
-                if (currentURL.startsWith('https://grcodeclub.gr/java')) {
-                    // Προσθήκη id στο body
-                    console.log(currentURL);
+                if (currentURL.startsWith('https://grcodeclub.gr/java') || currentURL.startsWith('https://grcodeclub.gr/python') || currentURL.startsWith('https://grcodeclub.gr/c') 
+                     || currentURL.startsWith('https://grcodeclub.gr/cpp')  || currentURL.startsWith('https://grcodeclub.gr/programming')  ){
+                    console.log(currentURL);   // Προσθήκη id στο body
                     document.body.id = 'programming';
                 }
     
