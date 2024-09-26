@@ -111,7 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
     else if (currentURL.startsWith('https://grcodeclub.gr/linux/')){document.body.id = 'linux';}
     else if (currentURL.startsWith('https://grcodeclub.gr/network/')){document.body.id = 'network';}
     else if (currentURL.startsWith('https://grcodeclub.gr/cybersecurity/')){document.body.id = 'cybersecurity';}
-        else if (currentURL.startsWith('https://grcodeclub.gr/website/')){document.body.id = 'website';}
+    else if (currentURL.startsWith('https://grcodeclub.gr/website/')){document.body.id = 'website';}
+    else if (currentURL.startsWith('https://grcodeclub.gr/javascript/')){document.body.id = 'website';}
     else {document.body.id = 'basic';}
 
     
