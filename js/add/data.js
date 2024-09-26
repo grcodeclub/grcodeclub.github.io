@@ -99,13 +99,20 @@ addScriptHead('https://grcodeclub.gr/js/prism.js');
 addScriptHead('https://grcodeclub.gr/js/cookies.js');
 
 document.addEventListener('DOMContentLoaded', function() {
-                const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
-                // Έλεγχος αν το URL ξεκινάει με grcodeclubb.gr/network
-                if (currentURL.startsWith('https://grcodeclub.gr/java') || currentURL.startsWith('https://grcodeclub.gr/python') || currentURL.startsWith('https://grcodeclub.gr/c') 
-                     || currentURL.startsWith('https://grcodeclub.gr/cpp')  || currentURL.startsWith('https://grcodeclub.gr/programming')  ){
-                    console.log(currentURL);   // Προσθήκη id στο body
-                    document.body.id = 'programming';
-                }
+    const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
+    // Έλεγχος αν το URL ξεκινάει με grcodeclubb.gr/network
+    if (currentURL.startsWith('https://grcodeclub.gr/java') || currentURL.startsWith('https://grcodeclub.gr/python') || currentURL.startsWith('https://grcodeclub.gr/c') 
+        || currentURL.startsWith('https://grcodeclub.gr/cpp')  || currentURL.startsWith('https://grcodeclub.gr/programming')  ){
+        document.body.id = 'programming';
+        }
+    else if (currentURL.startsWith('https://grcodeclub.gr/system')){document.body.id = 'system';}
+    else if (currentURL.startsWith('https://grcodeclub.gr/windows')){document.body.id = 'windows';}
+    else if (currentURL.startsWith('https://grcodeclub.gr/linux')){document.body.id = 'linux';}
+    else if (currentURL.startsWith('https://grcodeclub.gr/network')){document.body.id = 'network';}
+    else if (currentURL.startsWith('https://grcodeclub.gr/cybersecurity')){document.body.id = 'cybersecurity';}
+        else if (currentURL.startsWith('https://grcodeclub.gr/website')){document.body.id = 'website';}
+    else {document.body.id = 'basic';}
+
     
     function addScript(src) {
         var script = document.createElement('script');
