@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.id = 'programming';
         }
     else if (currentURL.startsWith('https://grcodeclub.gr/system')){document.body.id = 'system';}
+    else if (currentURL.startsWith('https://grcodeclub.gr/system/android')){document.body.id = 'android';}
     else if (currentURL.startsWith('https://grcodeclub.gr/windows')){document.body.id = 'windows';}
     else if (currentURL.startsWith('https://grcodeclub.gr/linux')){document.body.id = 'linux';}
     else if (currentURL.startsWith('https://grcodeclub.gr/network')){document.body.id = 'network';}
