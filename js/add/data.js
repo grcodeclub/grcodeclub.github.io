@@ -102,9 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
                 const currentURL = window.location.href;
-                        console.log(currentURL);
                 // Έλεγχος αν το URL ξεκινάει με grcodeclubb.gr/network
-                if (currentURL.startsWith('https://grcodeclubb.gr/java')) {
+                if (currentURL.startsWith('https://grcodeclub.gr/java')) {
                     // Προσθήκη id στο body
                     console.log(currentURL);
                     document.body.id = 'programming';
