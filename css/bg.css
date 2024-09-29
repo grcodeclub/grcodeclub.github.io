@@ -3,8 +3,9 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   
         /* Ορισμός Εικόνας και Διαβάθμισης */
-        background-image: url("https://grcodeclub.gr/files-page/background/main.jpg"), 
-                  linear-gradient(315deg, rgb(1, 8, 48) 0%, rgb(46, 0, 38) 50%, rgb(11, 3, 88) 100%);
+                background-image: url("https://grcodeclub.gr/files-page/background/main.jpg"), 
+                  linear-gradient(315deg, rgb(1, 8, 48) 0%, rgb(46, 0, 38) 50%, rgb(100, 100, 100) 100%);
+
                   background-blend-mode: overlay; /* Δοκιμάστε άλλες επιλογές όπως multiply, screen, darken, etc. */
                   background-size: cover;
         background-position: center;
