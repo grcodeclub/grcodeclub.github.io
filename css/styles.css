@@ -94,22 +94,3 @@ footer {
     }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 12px; /* Μικρότερο πλάτος scrollbar */
-    background: rgba(0, 0, 0, 0.2); /* Ελαφρύ μαύρο φόντο */
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1); /* Διάφανη γραμμή */
-    border: none;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #4e1f55, #a05273); /* Νέο gradient χρώμα */
-    border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    transition: background 0.3s ease; /* Ομαλή μετάβαση */
-}
