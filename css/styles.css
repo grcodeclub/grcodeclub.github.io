@@ -47,7 +47,7 @@ footer {
     white-space: nowrap; /* Εμποδίζει τον κείμενο από τον αναδιάταξη */
     margin: 0 auto; /* Ευθυγραμμίζει το κείμενο στο κέντρο */
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-    color: #ffdd57; /* Χρώμα κειμένου για αντίθεση */
+    color: #ccc; 
     font-size: 1.5rem; /* Μεγαλύτερο μέγεθος γραμματοσειράς */
 }
 
