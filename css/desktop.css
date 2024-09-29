@@ -136,7 +136,7 @@
     .service h3 {
         font-size: 1.5em;
         margin-bottom: 10px;
-        color: #E2BBE9; /* Πολύ ανοιχτό μωβ */
+        color: #ccc;
     }
     
     .contact {
@@ -149,7 +149,7 @@
     .contact h2 {
         font-size: 2.5em;
         margin-bottom: 20px;
-        color: #ccc; /* Πολύ ανοιχτό μωβ */
+        color: #ccc;
     }
     
 
