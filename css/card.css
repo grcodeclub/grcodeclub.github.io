@@ -1,8 +1,7 @@
-
 .slide-container {
     transition: transform 0.5s ease;
     border-radius: 10px;
-
+    overflow: hidden; /* Προσθέστε overflow:hidden για να κρύψετε το περιεχόμενο που δεν φαίνεται */
 }
 
 .slides {
@@ -11,18 +10,26 @@
 
 .card {
     border-radius: 10px;
-    min-height: 100%;  
+    min-height: 100%;
     min-width: 100%; /* Κάθε κάρτα καταλαμβάνει ολόκληρο το πλάτος του slider */
     box-sizing: border-box;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative; /* Για να προσθέσετε τη σκιά */
+    overflow: hidden; /* Για να μην προεξέχει το περιεχόμενο */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Μικρή αύξηση στο μέγεθος κατά το hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Σκιά κατά το hover */
 }
 
 .data-card {
-   text-align: justify;
-   margin-left: 5%; 
-   margin-right: 5%;
+    text-align: justify;
+    margin: 5% 5%; /* Μπορείτε να συνδυάσετε τα margin */
+    padding: 10px; /* Προσθέστε padding για να έχει καλύτερη εμφάνιση */
+    background-color: rgba(255, 255, 255, 0.8); /* Ελαφριά διαφάνεια για την κάρτα */
+    border-radius: 8px; /* Ελαφριά στρογγυλοποίηση */
 }
-
 
 button.slide-prev, button.slide-next {
     position: absolute;
@@ -34,6 +41,8 @@ button.slide-prev, button.slide-next {
     padding: 10px;
     cursor: pointer;
     z-index: 99;
+    border-radius: 5px; /* Στρογγυλοποίηση κουμπιών */
+    transition: background-color 0.3s ease; /* Ομαλή μετάβαση */
 }
 
 button.slide-prev {
@@ -48,6 +57,18 @@ button.slide-prev, button.slide-next:focus {
     outline: none;
 }
 
-button.slide-prev, button.slide-next:hover {
+button.slide-prev:hover, button.slide-next:hover {
     background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05); /* Ελαφριά αύξηση μεγέθους κατά το hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card {
+        min-width: 90%; /* Μειώστε το πλάτος για κινητές συσκευές */
+    }
+    
+    button.slide-prev, button.slide-next {
+        padding: 8px; /* Μειώστε το padding στα κουμπιά */
+    }
 }
