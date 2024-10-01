@@ -113,7 +113,7 @@
     }
     
         .box-container-full {
-        display: flex;
+         display: flex;
         overflow: auto;
         max-height: 450px;
         border-radius: 20px;
@@ -121,7 +121,9 @@
         border-radius: 20px;
         justify-content: space-around;
         flex-wrap: wrap;
+        height: 60%; /* Ύψος του container να καλύπτει ολόκληρο το παράθυρο */
         margin: 30px;
+        overflow-y: auto; /* Προσθήκη δυνατότητας κατακόρυφου scrolling */
     }
     
     .service {
