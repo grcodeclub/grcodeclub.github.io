@@ -69,6 +69,17 @@
         align-items: center;
         overflow-y: auto; /* Προσθήκη δυνατότητας κατακόρυφου scrolling */
     }
+
+     .box-container-full {
+        display: flex;
+        overflow: auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px rgb(0, 0, 0);
+        border-radius: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 30px;
+    }
     
     
     
