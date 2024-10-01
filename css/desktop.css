@@ -112,17 +112,7 @@
         overflow-y: auto; /* Προσθήκη δυνατότητας κατακόρυφου scrolling */
     }
     
-        .box-container-full {
-        display: flex;
-        overflow: auto;
-        max-height: 450px;
-        border-radius: 20px;
-        box-shadow: 0 10px 10px rgb(0, 0, 0);
-        border-radius: 20px;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin: 30px;
-    }
+    
     
     .service {
         
@@ -146,7 +136,7 @@
     .service h3 {
         font-size: 1.5em;
         margin-bottom: 10px;
-        color: #ccc;
+        color: #E2BBE9; /* Πολύ ανοιχτό μωβ */
     }
     
     .contact {
@@ -159,7 +149,7 @@
     .contact h2 {
         font-size: 2.5em;
         margin-bottom: 20px;
-        color: #ccc;
+        color: #5A639C; /* Σκούρο μωβ */
     }
     
 
