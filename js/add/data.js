@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.body.id === 'programming') { addScript('https://grcodeclub.gr/js/menu/programming.js'); }
     else if (document.body.id === 'network' || document.body.id === 'cloud') { addScript('https://grcodeclub.gr/js/menu/network.js'); }
     else if (document.body.id === 'cybersecurity') {addScript('https://grcodeclub.gr/js/menu/cybersecurity.js'); }
+    else if (document.body.id === 'image') {addScript('https://grcodeclub.gr/js/menu/more.js'); }
     else if (document.body.id === 'website') { addScript('https://grcodeclub.gr/js/menu/website.js'); }
     else if (document.body.id === 'mobile') { addScript('https://grcodeclub.gr/js/menu/mobile.js'); }
     else if (document.body.id === 'system' || document.body.id === 'linux' || document.body.id === 'windows') {addScript('https://grcodeclub.gr/js/menu/system.js');}
