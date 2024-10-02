@@ -15,7 +15,7 @@ window.onload = function() {
         '<li><a href="https://grcodeclub.github.io/system/orologia">Ορολογία</a></li>',
         '<li><a href="https://grcodeclub.github.io/windows"><span class="fa-brands fa-windows" aria-hidden="true"></span> Microsoft Windows</a></li>',
         '<li><a href="https://grcodeclub.github.io/linux"><span class="fa-brands fa-linux" aria-hidden="true"></span> Linux</li>',
-        '<li><a href="https://grcodeclub.github.io/system/android"><span class="fa-brands fa-android" aria-hidden="true"></span> Android</li>',
+        '<li><a href="https://grcodeclub.github.io/mobile/android"><span class="fa-brands fa-android" aria-hidden="true"></span> Android</li>',
         '<li style="height: 200px;"></li>'
     ];
     
@@ -56,8 +56,8 @@ window.onload = function() {
     if (document.body.id === 'android') {
         var networkMenuLinks = [
         '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
-        '<li><a href="https://grcodeclub.github.io/system/android"><span class="fa-brands fa-android" aria-hidden="true"></span> Android</li>',
-        '<li><a href="https://grcodeclub.github.io/system/android/versions">Eκδόσεις</a></li>',
+        '<li><a href="https://grcodeclub.github.io/mobile/android"><span class="fa-brands fa-android" aria-hidden="true"></span> Android</li>',
+        '<li><a href="https://grcodeclub.github.io/mobile/android/versions">Eκδόσεις</a></li>',
         '<li><a href="https://grcodeclub.github.io/system">Λειτουργικά Συστήματα</a></li>',
         '<li style="height: 200px;"></li>'
         ];
