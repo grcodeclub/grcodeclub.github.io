@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     else if (currentURL.startsWith('https://grcodeclub.gr/website/')){document.body.id = 'website';}
     else if (currentURL.startsWith('https://grcodeclub.gr/javascript/')){document.body.id = 'website';}
     else if (currentURL.startsWith('https://grcodeclub.gr/mobile/')){document.body.id = 'mobile';}
+    else if (currentURL.startsWith('https://grcodeclub.gr/more/image')){document.body.id = 'image';}
     else {document.body.id = 'basic';}
     
     function addScript(src) {
