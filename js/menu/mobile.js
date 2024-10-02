@@ -11,7 +11,7 @@ window.onload = function() {
     if (document.body.id === 'mobile') {
         menuLinks = [
             '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
-            '<li><a href="https://grcodeclub.gr/network/mobile/">Mobile</a></li>',
+            '<li><a href="https://grcodeclub.gr/mobile/">Κινητά</a></li>',
             '<li><a href="https://grcodeclub.github.io/mobile/android"><span class="fa-brands fa-android" aria-hidden="true"></span> Android</li>',
             '<li><a href="https://grcodeclub.github.io/mobile/android/versions"><span class="fa-brands fa-android" aria-hidden="true"></span> Android Eκδόσεις</li>',
             '<li><a href="https://grcodeclub.github.io/mobile/android/adb"><span class="fa-solid fa-terminal" aria-hidden="true"></span> Android Debug Bridge</li>',
