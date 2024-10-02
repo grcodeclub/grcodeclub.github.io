@@ -13,7 +13,8 @@ window.onload = function() {
             '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
             '<li><a href="https://grcodeclub.gr/network/mobile/">Mobile</a></li>',
             '<li><a href="https://grcodeclub.github.io/mobile/android"><span class="fa-brands fa-android" aria-hidden="true"></span> Android</li>',
-            '<li><a href="https://grcodeclub.github.io/mobile/android/versions"><span class="fa-brands fa-android" aria-hidden="true"></span> Eκδόσεις</li>',
+            '<li><a href="https://grcodeclub.github.io/mobile/android/versions"><span class="fa-brands fa-android" aria-hidden="true"></span> Android Eκδόσεις</li>',
+            '<li><a href="https://grcodeclub.github.io/mobile/android/adb"><span class="fa-solid fa-terminal" aria-hidden="true"></span> Android Debug Bridge</li>',
             '<li style="height: 200px;"></li>'
         ];
         addMenuLinks(menuLinks);
