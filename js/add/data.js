@@ -130,19 +130,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
-    
     if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
     if (document.getElementById('code1')) {addScript('https://grcodeclub.gr/js/action/show_more_codes.js');} 
         else if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
     if (document.getElementById('search_table_page_3')) { addScript('https://grcodeclub.gr/js/search/tables-pages-3-input.js'); }
     if (document.getElementById('dropcard')) { addScript('https://grcodeclub.github.io/js/action/dropdown-cards.js'); }
     if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
-    if (document.body.id === 'network' || document.body.id === 'cloud') { addScript('https://grcodeclub.gr/js/menu/network.js'); }
-    if (document.body.id === 'cybersecurity') {addScript('https://grcodeclub.gr/js/menu/cybersecurity.js'); }
-    if (document.body.id === 'website') { addScript('https://grcodeclub.gr/js/menu/website.js'); }
-    if (document.body.id === 'system' || document.body.id === 'linux' || document.body.id === 'windows' || document.body.id === 'android') {
-        addScript('https://grcodeclub.gr/js/menu/system.js');}
     if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
+    
     if (document.body.id === 'programming') { addScript('https://grcodeclub.gr/js/menu/programming.js'); }
-    if (document.body.id === 'basic') { addScript('https://grcodeclub.gr/js/menu/basic.js'); }
+    else if (document.body.id === 'network' || document.body.id === 'cloud') { addScript('https://grcodeclub.gr/js/menu/network.js'); }
+    else if (document.body.id === 'cybersecurity') {addScript('https://grcodeclub.gr/js/menu/cybersecurity.js'); }
+    else if (document.body.id === 'website') { addScript('https://grcodeclub.gr/js/menu/website.js'); }
+    else if (document.body.id === 'mobile') { addScript('https://grcodeclub.gr/js/menu/mobile.js'); }
+    else if (document.body.id === 'system' || document.body.id === 'linux' || document.body.id === 'windows') {addScript('https://grcodeclub.gr/js/menu/system.js');}
+    else { addScript('https://grcodeclub.gr/js/menu/basic.js'); }
+    
 });
