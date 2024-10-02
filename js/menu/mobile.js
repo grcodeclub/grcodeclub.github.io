@@ -12,7 +12,7 @@ window.onload = function() {
         var cloudMenuLinks = [
             '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
             '<li><a href="https://grcodeclub.gr/network/mobile/">Mobile</a></li>',
-            '<li><a href="https://grcodeclub.gr/network/mobile/android">Android</a></li>',
+            '<li><a href="https://grcodeclub.gr/mobile/android">Android</a></li>',
             '<li style="height: 200px;"></li>'
         ];
         addMenuLinks(cloudMenuLinks);
