@@ -7,9 +7,9 @@ window.onload = function() {
             });
         });
     }
-
+    var cloudMenuLinks ;
     if (document.body.id === 'mobile') {
-        var cloudMenuLinks = [
+        cloudMenuLinks = [
             '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
             '<li><a href="https://grcodeclub.gr/network/mobile/">Mobile</a></li>',
             '<li><a href="https://grcodeclub.gr/mobile/android">Android</a></li>',
@@ -19,7 +19,7 @@ window.onload = function() {
     }
 
         if (document.body.id === 'android') {
-        var networkMenuLinks = [
+        networkMenuLinks = [
         '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
         '<li><a href="https://grcodeclub.github.io/mobile">Mobile</a></li>',
         '<li><a href="https://grcodeclub.github.io/mobile/android"><span class="fa-brands fa-android" aria-hidden="true"></span> Android</li>',
