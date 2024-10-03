@@ -34,7 +34,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Δίκτυα Υπολογιστών</a>
+                <a class="nav-link" href="https://grcodeclub.gr/network">Δίκτυα Υπολογιστών</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
@@ -44,7 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Kυβερνοασφάλεια</a>
+                <a class="nav-link" href="https://grcodeclub.gr/cybersecurity">Kυβερνοασφάλεια</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Επιπλέον</a>
