@@ -78,7 +78,6 @@ function addScriptHead(src) {
         document.head.appendChild(script);
     }
 
-addScriptHead('https://grcodeclub.gr/js/jquery.js');
 addScriptHead('https://grcodeclub.gr/js/prism.js');
 addScriptHead('https://grcodeclub.gr/js/cookies.js');
 addScriptHead('https://code.jquery.com/jquery-3.5.1.slim.min.js');
