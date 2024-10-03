@@ -51,6 +51,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
                     <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
                     <a class="dropdown-item" href="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</a>
+
+ <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
+                    <a class="dropdown-item" href="https://grcodeclub.gr/c/">C</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/python/">Python</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/cpp/">C++</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/java/">Java</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/website/html">Html</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/website/css">CSS</a>
+                </div>
+            </li></ul>
+
+                    
                 </div>
             </li>
             <li class="nav-item dropdown">
