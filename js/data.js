@@ -80,8 +80,6 @@ function addScriptHead(src) {
 
 // Φορτώστε πρώτα jQuery
 addScriptHead('https://code.jquery.com/jquery-3.5.1.min.js'); // Αντικαταστήστε το slim.min.js με το min.js
-addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js'); // Popper.js
-addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'); // Bootstrap
 
 // Φορτώστε άλλα scripts
 addScriptHead('https://grcodeclub.gr/js/prism.js');
@@ -98,6 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     addScript('https://grcodeclub.gr/js/add/social.js');
     addScript('https://grcodeclub.gr/js/shareURL.js');
+    addScript('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js'); // Popper.js
+addScript('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'); // Bootstrap
     
     if (document.getElementById('addHead')) { addScript('https://grcodeclub.gr/js/add/head.js'); }
     if (document.getElementById('add_headder')) { addScript('https://grcodeclub.gr/js/add/headder.js');}
