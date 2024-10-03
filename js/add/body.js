@@ -65,6 +65,10 @@ const htmlContent = `
                     <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
                         <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
+                        <a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity/orologia/">Kυβερνοασφάλεια</a>
+                        <a class="dropdown-item" href="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</a>
+                        <a class="dropdown-item" href="https://grcodeclub.gr/network/orologia/">Δίκτυα Υπολογιστών</a>
+                        
                     </div>
                 </li>
                   <li class="nav-item dropdown">
