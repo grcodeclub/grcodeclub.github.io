@@ -60,19 +60,9 @@ const htmlContent = `
                 <li class="nav-item"></li>
                     <a class="nav-link" >Kυβερνοασφάλεια</a>
                 </li>
-
-            <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
-                        <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
-                    </div>
-                </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Επιπλέον</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
-                        <a class="nav-link" >Edit - Image</a>
-                    </div>
-                </li>
+                <li class="nav-item"></li>
+                <a class="nav-link" >Edit - Image</a>
+            </li>
             </ul>
         </div>
         </nav>
@@ -82,4 +72,6 @@ const htmlContent = `
 const addHeadderDiv = document.getElementById('addHeader');
 
 // Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
-if (addHeadderDiv) {addHeadderDiv.innerHTML = htmlContent;}
+if (addHeadderDiv) {
+    addHeadderDiv.innerHTML = htmlContent;
+}
