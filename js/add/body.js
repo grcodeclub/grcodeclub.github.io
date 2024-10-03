@@ -120,3 +120,7 @@ const addFooterDiv = document.getElementById('addFooter');
 
 // Προσθήκη του HTML περιεχομένου στο div με το id 'addFooter'
 if (addFooterDiv) {addFooterDiv.innerHTML = htmlContentFooter;}
+        // Εναλλαγή μεταξύ hamburger και close icon με βάση το άνοιγμα του μενού
+        document.querySelector('.navbar-toggler').addEventListener('click', function() {
+            this.classList.toggle('open');
+        });
