@@ -51,7 +51,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                        <a class="dropdown-item" href="https://grcodeclub.gr/network/">Περισσότερα</a>
                        <a class="dropdown-item" href="https://grcodeclub.gr/network/protocol/">Πρωτόκολλα</a>
                        <a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/services-port">Υπηρεσίες και Ports</a>
-                       <a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/application-and-protocols">WΕφαρμογή και Πρωτόκολλο</a>
+                       <a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/application-and-protocols">Εφαρμογή και Πρωτόκολλο</a>
+                       <a class="dropdown-item" href="https://grcodeclub.gr/network/cloud/">Cloud</a>
                     </div>
                     
             </li>
