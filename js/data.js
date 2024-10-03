@@ -78,11 +78,10 @@ function addScriptHead(src) {
     }
 
 addScriptHead('https://grcodeclub.gr/js/jquery.js');
-addScriptHead('https://grcodeclub.gr/js/prism.js');
-addScriptHead('https://grcodeclub.gr/js/cookies.js');
-addScriptHead('https://code.jquery.com/jquery-3.5.1.slim.min.js');
 addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
 addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js');
+addScriptHead('https://grcodeclub.gr/js/prism.js');
+addScriptHead('https://grcodeclub.gr/js/cookies.js');
 
 document.addEventListener('DOMContentLoaded', function() {
     
