@@ -85,7 +85,7 @@ function addScriptHead(src) {
 
 addScriptHead('https://grcodeclub.gr/js/jquery.js');
 addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
-addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js');
+addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js');
 addScriptHead('https://grcodeclub.gr/js/prism.js');
 addScriptHead('https://grcodeclub.gr/js/cookies.js');
 
