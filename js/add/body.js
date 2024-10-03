@@ -4,19 +4,6 @@ const htmlContentHeader = `
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<script>
-$(document).ready(function() {
-    $('.dropdown').hover(
-        function() {
-            $(this).find('.dropdown-menu').stop(true, true).slideDown(200);
-        },
-        function() {
-            $(this).find('.dropdown-menu').stop(true, true).slideUp(200);
-        }
-    );
-});
-</script>
-
     <div id="cookie-banner" style="display: none;">
         <p>Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας στην ιστοσελίδα μας. Επιλέξτε αν θέλετε να αποδεχτείτε ή να απορρίψετε όλα τα cookies:</p>
         <label><input type="checkbox" id="cookies-ga4" checked disabled>Ανάλυση και Παρακολούθηση</label><br>
