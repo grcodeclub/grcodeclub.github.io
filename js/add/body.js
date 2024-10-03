@@ -8,7 +8,7 @@ const htmlContentHeader = `
         <button id="reject-cookies">Απόρριψη</button>
     </div>
   <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="mymenu">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="www.grcodeclub.gr">
         <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
