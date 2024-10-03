@@ -2,7 +2,9 @@
 const cssLinks = [
     "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/custom-bootstrap.css"
+    "https://grcodeclub.gr/website/css/grcodeclub/custom-bootstrap.css",
+    "https://grcodeclub.gr/website/css/grcodeclub/scrollbars.css",
+     "https://grcodeclub.gr/website/css/grcodeclub/cookies.css"
  ];
  
  const head = document.head;     // Αρχικοποίηση head
