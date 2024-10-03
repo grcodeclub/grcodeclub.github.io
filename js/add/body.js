@@ -21,11 +21,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span>
             <!-- Hamburger SVG Icon -->
             <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
-                <path stroke="black" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/>
+                <path stroke="currentColor" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/>
             </svg>
             <!-- Close SVG Icon -->
             <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
-                <path stroke="black" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/>
+                <path stroke="currentColor" stroke-width="2" d="M6 6l18 18M6 24L24 6"/>
             </svg>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
