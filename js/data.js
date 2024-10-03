@@ -84,7 +84,6 @@ function addScriptBody(src, callback) {
     script.onload = callback; // Κλήση της callback συνάρτησης όταν το script φορτωθεί
     document.body.appendChild(script);
 }
-
 // Χρήση της addScriptBody για να φορτώσεις το jQuery
     addScriptBody('https://grcodeclub.gr/js/jquery.js', function() {
     console.log('jQuery φορτώθηκε με επιτυχία!');
@@ -100,6 +99,11 @@ function addScriptBody(src, callback) {
     });
 });
 
+    function addScript(src) {
+    var script = document.createElement('script');
+    script.src = src;
+    document.body.appendChild(script);
+}
 
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
