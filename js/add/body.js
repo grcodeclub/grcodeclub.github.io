@@ -47,7 +47,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </li>
             <li class="nav-item dropdown">
                  <a class="nav-link dropdown-toggle" id="navbarDropdown7" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">Δίκτυα Υπολογιστών</a>
-                     <div class="dropdown-menu"  aria-labelledby="navbarDropdown7" id="submenu">
+                     <div class="dropdown-menu"  aria-labelledby="navbarDropdown7">
                        <a class="dropdown-item" href="https://grcodeclub.gr/network/">Περισσότερα</a>
                        <a class="dropdown-item" href="https://grcodeclub.gr/network/protocol/">Πρωτόκολλα</a>
                        <a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/services-port">Υπηρεσίες και Ports</a>
