@@ -6,7 +6,8 @@ const cssLinks = [
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/table.css",
     "https://grcodeclub.gr/website/css/grcodeclub/scrollbars.css",
     "https://grcodeclub.gr/website/css/grcodeclub/main.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/cookies.css"
+    "https://grcodeclub.gr/website/css/grcodeclub/cookies.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
  ];
  
  const head = document.head;     // Αρχικοποίηση head
