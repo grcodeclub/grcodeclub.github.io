@@ -65,6 +65,7 @@ const htmlContent = `
                     <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
                         <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
+                        <a class="dropdown-item" href="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</a>
                     </div>
                 </li>
                   <li class="nav-item dropdown">
@@ -76,8 +77,15 @@ const htmlContent = `
             </ul>
         </div>
         </nav>
+`;
 
-        <footer class="bg-light text-center text-lg-start mt-5">
+// Εύρεση του στόχου με το id 'add_headder'
+const addHeadderDiv = document.getElementById('addHeader');
+
+// Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
+if (addHeadderDiv) {addHeadderDiv.innerHTML = htmlContent;}
+
+htmlContent = `        <footer class="bg-light text-center text-lg-start mt-5">
     <div class="container p-4">
         <section class="mb-4">
             <h5 class="text-uppercase">Επικοινωνία</h5>
@@ -109,11 +117,9 @@ const htmlContent = `
         &copy; 2024 Gr Code Club. All Rights Reserved.
     </div>
 </footer>
-
 `;
 
-// Εύρεση του στόχου με το id 'add_headder'
-const addHeadderDiv = document.getElementById('addHeader');
+addHeadderDiv = document.getElementById('addFooter');
 
 // Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
 if (addHeadderDiv) {addHeadderDiv.innerHTML = htmlContent;}
