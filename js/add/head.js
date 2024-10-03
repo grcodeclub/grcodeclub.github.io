@@ -15,6 +15,16 @@
 
 
 const htmlContent = `
+ <div id="cookie-banner" style="display: none;">
+    <p>Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας στην ιστοσελίδα μας. Επιλέξτε αν θέλετε να αποδεχτείτε ή να απορρίψετε όλα τα cookies:</p>
+    <label><input type="checkbox" id="cookies-ga4" checked disabled>Ανάλυση και Παρακολούθηση</label><br>
+    <label><input type="checkbox" id="cookies-social" checked>Social Media</label>
+    <br>
+    <button id="accept-cookies">Αποδοχή</button>
+    <button id="reject-cookies">Απόρριψη</button>
+</div>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
      <a class="navbar-brand" href="index.html">
             <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
         </a>        
@@ -55,6 +65,7 @@ const htmlContent = `
             </li>
             </ul>
         </div>
+        </nav>
 `;
 
 // Εύρεση του στόχου με το id 'add_headder'
