@@ -7,7 +7,7 @@ const htmlContentHeader = `
         <button id="accept-cookies">Αποδοχή</button>
         <button id="reject-cookies">Απόρριψη</button>
     </div>
-    <nav class="navbar navbar-expand-lg custom-navbar">
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
         <a class="navbar-brand" href="index.html">
             <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
         </a>
