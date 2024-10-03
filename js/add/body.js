@@ -40,6 +40,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a>
                     <a class="dropdown-item" href="https://grcodeclub.gr/website/html">Html</a>
                     <a class="dropdown-item" href="https://grcodeclub.gr/website/css">CSS</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/docker">Docker</a>
+                     <a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/matlab">MATLAB</a>
                 </div>
             </li>
             <li class="nav-item">
