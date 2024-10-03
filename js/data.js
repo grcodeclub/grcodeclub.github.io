@@ -94,15 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
         script.src = src;
         document.body.appendChild(script);
     }
-    
+    addScript('https://grcodeclub.gr/js/add/head.js');
     addScript('https://grcodeclub.gr/js/add/social.js');
     addScript('https://grcodeclub.gr/js/shareURL.js');
     addScript('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js'); // Popper.js
-addScript('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'); // Bootstrap
+    addScript('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'); // Bootstrap
     
-    if (document.getElementById('addHead')) { addScript('https://grcodeclub.gr/js/add/head.js'); }
-    if (document.getElementById('add_headder')) { addScript('https://grcodeclub.gr/js/add/headder.js');}
-
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
