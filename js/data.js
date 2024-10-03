@@ -99,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
     addScript('https://grcodeclub.gr/js/shareURL.js');
     addScript('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js'); // Popper.js
     addScript('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'); // Bootstrap
-    
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
