@@ -17,7 +17,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><div></div></span>
+        <span>
+            <!-- Hamburger SVG Icon -->
+            <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+                <path stroke="black" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+            <!-- Close SVG Icon -->
+            <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+                <path stroke="black" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -59,6 +67,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
     </div>
 </nav>
+
+
+
+<script>
+    // Εναλλαγή μεταξύ hamburger και close icon με βάση το άνοιγμα του μενού
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+        this.classList.toggle('open');
+    });
+</script>
+
+
+
+
+
+
+
 
 `;
 
