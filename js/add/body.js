@@ -80,6 +80,39 @@ const htmlContent = `
             </ul>
         </div>
         </nav>
+        <footer class="bg-light text-center w-100 mt-5">
+    <div class="container p-4">
+        <section class="mb-4">
+            <h5 class="text-uppercase">Επικοινωνία</h5>
+            <ul class="list-inline d-flex justify-content-center">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/grcodeclub" target="_blank" class="text-dark" title="Facebook">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.youtube.com/@grcodeclub" target="_blank" class="text-dark" title="YouTube">
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/grcode.club" target="_blank" class="text-dark" title="Instagram">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/GrCodeClub" target="_blank" class="text-dark" title="GitHub">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+        &copy; 2024 Gr Code Club. All Rights Reserved.
+    </div>
+</footer>
+
 `;
 
 // Εύρεση του στόχου με το id 'add_headder'
