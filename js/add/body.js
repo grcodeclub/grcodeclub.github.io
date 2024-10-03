@@ -50,7 +50,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Επιπλέον</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="max-height: 400px;">
                     <a class="nav-link" href="#">Edit - Image</a>
-                     <a class="nav-link dropdown-toggle" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία</a>
+                     <a class="nav-link dropdown-toggle dropdown-menu" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown4" style="max-height: 400px;">
                        <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
                        <a class="dropdown-item" href="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</a>
