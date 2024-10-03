@@ -71,20 +71,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<script>
-    // Εναλλαγή μεταξύ hamburger και close icon με βάση το άνοιγμα του μενού
-    document.querySelector('.navbar-toggler').addEventListener('click', function() {
-        this.classList.toggle('open');
-    });
-</script>
-
-
-
-
-
-
-
-
 `;
 
 // Εύρεση του στόχου με το id 'addHeader'
