@@ -52,7 +52,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                     <a class="dropdown-item" href="service1.html">Microsoft Windows</a>
-                    <a class="dropdown-item" href="service2.html">Linux</a>
+                     <a class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">Linux</a>
+                     <div class="dropdown-menu"  aria-labelledby="navbarDropdown5" id="submenu">
+                        <a class="dropdown-item" href="https://grcodeclub.gr/linux/">Περισσότερα</a>
+                       <a class="dropdown-item" href="https://grcodeclub.gr/linux/terminal/">Terminal</a>
+                       <a class="dropdown-item" href="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</a>
+                    </div>
                 </div>
             </li>
             <li class="nav-item">
