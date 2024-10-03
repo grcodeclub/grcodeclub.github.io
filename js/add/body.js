@@ -79,7 +79,10 @@ const htmlContent = `
                 </li>
             </ul>
         </div>
-        </nav>
+        </nav> 
+`;
+
+htmlContent = `
         <footer class="bg-light text-center w-100 mt-5">
     <div class="container p-4">
         <section class="mb-4">
@@ -116,7 +119,12 @@ const htmlContent = `
 `;
 
 // Εύρεση του στόχου με το id 'add_headder'
-const addHeadderDiv = document.getElementById('addMainBody');
+const addHeadderDiv = document.getElementById('addFooter');
+
+// Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
+if (addHeadderDiv) {
+    addHeadderDiv.innerHTML = htmlContent;
+}
 
 // Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
 if (addHeadderDiv) {
