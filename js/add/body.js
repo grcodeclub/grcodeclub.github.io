@@ -45,7 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/matlab">MATLAB</a>
                 </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
                  <a class="nav-link dropdown-toggle" id="navbarDropdown7" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">Δίκτυα Υπολογιστών</a>
                      <div class="dropdown-menu"  aria-labelledby="navbarDropdown7" id="submenu">
                        <a class="dropdown-item" href="https://grcodeclub.gr/network/">Περισσότερα</a>
