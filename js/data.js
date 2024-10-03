@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(script);
     }
 
-    addScript('https://grcodeclub.gr/js/add/head.js'); 
+    addScript('https://grcodeclub.gr/js/add/body.js'); 
     addScript('https://grcodeclub.gr/js/add/social.js');
     addScript('https://grcodeclub.gr/js/shareURL.js');
 
