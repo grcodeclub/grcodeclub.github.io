@@ -23,56 +23,63 @@ const htmlContent = `
     <button id="accept-cookies">Αποδοχή</button>
     <button id="reject-cookies">Απόρριψη</button>
 </div>
- <nav class="navbar navbar-expand-lg custom-navbar">
-    <a class="navbar-brand" href="index.html">
-        <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+     <a class="navbar-brand" href="index.html">
+            <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
+        </a>        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <div></div> <!-- Αυτή είναι η κεντρική γραμμή -->
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
+                        <a class="dropdown-item" href="service1.html">C</a>
+                        <a class="dropdown-item" href="service2.html">Python</a>
+                        <a class="dropdown-item" href="popular1.html">C++</a>
+                        <a class="dropdown-item" href="popular2.html">Java</a>
+                        <a class="dropdown-item" href="popular2.html">Php</a>
+                        <a class="dropdown-item" href="popular2.html">Html</a>
+                        <a class="dropdown-item" href="popular2.html">CSS</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" >Δίκτυα Υπολογιστών</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="service1.html">Microsoft Windows</a>
+                        <a class="dropdown-item" href="service2.html">Linux</a>
+                    </div>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link" >Kυβερνοασφάλεια</a>
+                </li>
+
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Προγραμματισμός
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
-                    <li><a class="dropdown-item" href="service1.html">C</a></li>
-                    <li><a class="dropdown-item" href="service2.html">Python</a></li>
-                    <li><a class="dropdown-item" href="popular1.html">C++</a></li>
-                    <li><a class="dropdown-item" href="popular2.html">Java</a></li>
-                    <li><a class="dropdown-item" href="popular2.html">Php</a></li>
-                    <li><a class="dropdown-item" href="popular2.html">Html</a></li>
-                    <li><a class="dropdown-item" href="popular2.html">CSS</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">Δίκτυα Υπολογιστών</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Λειτουργικά Συστήματα
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                    <li><a class="dropdown-item" href="service1.html">Microsoft Windows</a></li>
-                    <li><a class="dropdown-item" href="service2.html">Linux</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">Kυβερνοασφάλεια</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">Edit - Image</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
+                        <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
+                    </div>
+                </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Επιπλέον</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
+                        <a class="nav-link" >Edit - Image</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </nav>
 `;
 
 // Εύρεση του στόχου με το id 'add_headder'
 const addHeadderDiv = document.getElementById('addHeader');
 
 // Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
-if (addHeadderDiv) {
-    addHeadderDiv.innerHTML = htmlContent;
-}
+if (addHeadderDiv) {addHeadderDiv.innerHTML = htmlContent;}
