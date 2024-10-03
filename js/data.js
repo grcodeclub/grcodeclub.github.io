@@ -83,10 +83,6 @@ function addScriptHead(src) {
     }
 
 addScriptHead('https://grcodeclub.gr/js/jquery.js');
-addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
-addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
-addScriptHead('https://grcodeclub.gr/js/prism.js');
-addScriptHead('https://grcodeclub.gr/js/cookies.js');
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -96,6 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(script);
     }
 
+    addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
+addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
+addScriptHead('https://grcodeclub.gr/js/prism.js');
+addScriptHead('https://grcodeclub.gr/js/cookies.js');
     addScript('https://grcodeclub.gr/js/add/body.js'); 
     addScript('https://grcodeclub.gr/js/add/social.js');
     addScript('https://grcodeclub.gr/js/shareURL.js');
