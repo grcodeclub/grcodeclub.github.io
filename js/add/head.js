@@ -1,150 +1,66 @@
-// Λίστα με τους συνδέσμους προς τα αρχεία CSS
-const cssLinks = [
-    "https://grcodeclub.gr/web/css/grcodeclub/header_and_footer.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/main.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/text.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/layout.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/code_bg.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/menu.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/share.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/button.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/card.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/cookies.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/img.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/prism.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/list.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/table.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/bg.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/social.css",
-    "https://grcodeclub.gr/web/css/grcodeclub/scrollbars.css",
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
- ];
- 
- const head = document.head;     // Αρχικοποίηση head
- 
- // Προσθήκη των αρχείων CSS στο head
- cssLinks.forEach(linkUrl => {
-     const linkElement = document.createElement('link');
-     linkElement.rel = 'stylesheet';
-     linkElement.href = linkUrl;
-     head.appendChild(linkElement);  // Προσθήκη στο head
- });
- 
- 
- /////////////////
- /// Εισαγωγή Logo
- /////////////////
- 
- // Δημιουργία ενός πίνακα με τα μεγέθη που θέλετε να προσθέσετε
- const sizes = [
-   { width: 32, height: 32, url: 'https://grcodeclub.github.io/files-page/logo/32x32.png' },
-   { width: 48, height: 48, url: 'https://grcodeclub.github.io/files-page/logo/48x48.png' },
-   { width: 96, height: 96, url: 'https://grcodeclub.github.io/files-page/logo/96x96.png' },
-   { width: 144, height: 144, url: 'https://grcodeclub.github.io/files-page/logo/144x144.png' }
- ];
- 
- // Προσθήκη των favicons για κάθε μέγεθος
- sizes.forEach(({ width, height, url }) => {
-   // Δημιουργία νέου στοιχείου <link>
-   const faviconLink = document.createElement('link');
-   faviconLink.rel = 'icon';
-   faviconLink.type = 'image/png';
-   faviconLink.href = url;
-   faviconLink.sizes = `${width}x${height}`;
-   // Προσθήκη του στοιχείου <link> στο <head> του εγγράφου
-   document.head.appendChild(faviconLink);
- });
- 
-// Δημιουργία στοιχείου <link> για το favicon .ico
-const icoFaviconLink = document.createElement('link');
-icoFaviconLink.rel = 'shortcut icon';
-icoFaviconLink.type = 'image/x-icon';
-icoFaviconLink.href = 'https://grcodeclub.github.io/files-page/logo/favicon.ico';
-document.head.appendChild(icoFaviconLink);    // Προσθήκη του στοιχείου <link> στο <head> του εγγράφου
- 
-///////////////////////////////
-// Θέτουμε το title της σελίδας
-///////////////////////////////
-document.title = 'GrCode Club'; 
-const metaElement = document.createElement('meta');     // Δημιουργία ενός νέου στοιχείου <meta>
- 
- 
-///////////
-// ViewPort
-///////////
- 
-metaElement.setAttribute('name', 'viewport');     // Ορίζουμε την ιδιότητα 'name' ως 'viewport'
-metaElement.setAttribute('content', 'width=device-width, initial-scale=0.8');     // Ορίζουμε την ιδιότητα 'content' με την τιμή που θέλουμε
-document.head.appendChild(metaElement);     // Προσθέτουμε το στοιχείο <meta> στο <head> του HTML εγγράφου
- 
-document.addEventListener('contextmenu', event => event.preventDefault());      // Απενεργοποίηση του μενού περιβάλλοντος
- 
-// Αποτροπή των συντομεύσεων
-document.addEventListener('keydown', function(event) {
-    if ((event.ctrlKey && 
-        (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'θ' || event.key === 'σ' || event.key === 'π' )) || 
-        (event.key === 'F12') || (event.key === 'F11')) {
-            event.preventDefault();
-            console.log(event.key);
-            alert('This keyboard shortcut is disabled on this page.');
-    }
-});
- 
- // Jquery
-var var_jquery = document.createElement('script');
-var_jquery.src = 'https://grcodeclub.gr/js/jquery.js';
-document.head.appendChild(var_jquery); 
-    
-// Prism
-var var_prism = document.createElement('script');
-var_prism.src = 'https://grcodeclub.gr/js/prism.js';
-document.head.appendChild(var_prism); 
+            // Δημιουργία του iframe για το noscript
+            var noscript = document.createElement('noscript');
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-MMLRVK48';
+            iframe.height = '0';
+            iframe.width = '0';
+            iframe.style.display = 'none';
+            iframe.style.visibility = 'hidden';
+            noscript.appendChild(iframe);
+            // Εισαγωγή του noscript αμέσως μετά το άνοιγμα του <body>
+            var body = document.body;
+            if (body) {
+                body.insertBefore(noscript, body.firstChild);
+            }
 
-var mycookies = document.createElement('script');
-mycookies.src = 'https://grcodeclub.gr/js/cookies.js';
-document.head.appendChild(mycookies);
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (document.getElementById('search_table_page')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="search_table_page" στο body
-        var search_tables_pages = document.createElement('script');
-        search_tables_pages.src = 'https://grcodeclub.gr/js/search/tables-pages.js';
-        document.head.appendChild(search_tables_pages);
-    }
-    if (document.getElementById('table_page')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="search_table_page" στο body
-        var search_tables_pages = document.createElement('script');
-        search_tables_pages.src = 'https://grcodeclub.gr/js/tables/pages.js';
-        document.head.appendChild(search_tables_pages);
-    }
+const htmlContent = `
+     <a class="navbar-brand" href="index.html">
+            <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
+        </a>        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <div></div> <!-- Αυτή είναι η κεντρική γραμμή -->
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
+                        <a class="dropdown-item" href="service1.html">C</a>
+                        <a class="dropdown-item" href="service2.html">Python</a>
+                        <a class="dropdown-item" href="popular1.html">C++</a>
+                        <a class="dropdown-item" href="popular2.html">Java</a>
+                        <a class="dropdown-item" href="popular2.html">Php</a>
+                        <a class="dropdown-item" href="popular2.html">Html</a>
+                        <a class="dropdown-item" href="popular2.html">CSS</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Δίκτυα Υπολογιστών</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="service1.html">Microsoft Windows</a>
+                        <a class="dropdown-item" href="service2.html">Linux</a>
+                    </div>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link" href="#">Kυβερνοασφάλεια</a>
+                </li>
+                <li class="nav-item"></li>
+                <a class="nav-link" href="#">Edit - Image</a>
+            </li>
+            </ul>
+        </div>
+`;
 
-    if (document.getElementById('code')) {        // Ελέγξτε αν υπάρχει το στοιχείο με id="code" στο body
-        var show_codes = document.createElement('script');
-        show_codes.src = 'https://grcodeclub.gr/js/action/show_more_codes.js';
-        document.head.appendChild(show_codes);
-    }
+// Εύρεση του στόχου με το id 'add_headder'
+const addHeadderDiv = document.getElementById('addHead');
 
-    if (document.body.id === 'network') {
-        const script = document.createElement('script');
-        script.src = 'https://grcodeclub.gr/js/menu/network.js';
-        document.body.appendChild(script);
-    }
-
-    if (document.body.id === 'website') {
-        const script = document.createElement('script');
-        script.src = 'https://grcodeclub.gr/js/menu/website.js';
-        document.body.appendChild(script);
-    }
-    
-      if (document.getElementById('back_page')) {  
-        script_back_page = document.createElement('script');
-        script_back_page.src = 'https://grcodeclub.gr/js/add/back_page.js';
-        document.body.appendChild(script_back_page);
-      }
-    var headder_menu = document.createElement('script');
-    headder_menu.src = 'https://grcodeclub.gr/js/add/headder_with_menu.js';
-    document.head.appendChild(headder_menu);
-
-    var add_footer = document.createElement('script');
-    add_footer.src = 'https://grcodeclub.gr/js/add/social.js';
-    document.head.appendChild(add_footer);
-});
-
+// Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
+if (addHeadderDiv) {
+    addHeadderDiv.innerHTML = htmlContent;
+}
