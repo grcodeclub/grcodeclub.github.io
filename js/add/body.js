@@ -79,9 +79,7 @@ const htmlContent = `
 `;
 
 // Εύρεση του στόχου με το id 'add_headder'
-const addHeadderDiv = document.getElementById('addMainBody');
+const addHeadderDiv = document.getElementById('addHeader');
 
 // Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
-if (addHeadderDiv) {
-    addHeadderDiv.innerHTML = htmlContent;
-}
+if (addHeadderDiv) {addHeadderDiv.innerHTML = htmlContent;}
