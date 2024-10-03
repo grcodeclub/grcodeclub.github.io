@@ -19,13 +19,13 @@ const htmlContentHeader = `
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
-                    <a class="dropdown-item" href="service1.html">C</a>
-                    <a class="dropdown-item" href="service2.html">Python</a>
-                    <a class="dropdown-item" href="popular1.html">C++</a>
-                    <a class="dropdown-item" href="popular2.html">Java</a>
-                    <a class="dropdown-item" href="popular2.html">Php</a>
-                    <a class="dropdown-item" href="popular2.html">Html</a>
-                    <a class="dropdown-item" href="popular2.html">CSS</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/c/">C</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/python/">Python</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/cpp/">C++</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/java/">Java</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/website/html">Html</a>
+                    <a class="dropdown-item" href="https://grcodeclub.gr/website/css">CSS</a>
                 </div>
             </li>
             <li class="nav-item">
