@@ -128,7 +128,3 @@ htmlContent = `
 // Εύρεση του στόχου με το id 'add_headder'
  addHeadderDiv = document.getElementById('addFooter');
 
-// Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
-if (addHeadderDiv) {
-    addHeadderDiv.innerHTML = htmlContent;
-}
