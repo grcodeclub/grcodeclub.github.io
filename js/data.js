@@ -1,17 +1,20 @@
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
-    "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css",
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"];
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", // Bootstrap πρώτα
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css", // Font Awesome δεύτερο
+    "https://grcodeclub.github.io/website/css/grcodeclub/custom-bootstrap.css" // Custom Bootstrap τελευταίο
+];
  
- const head = document.head;     // Αρχικοποίηση head
+const head = document.head; // Αρχικοποίηση head
  
- // Προσθήκη των αρχείων CSS στο head
- cssLinks.forEach(linkUrl => {
-     const linkElement = document.createElement('link');
-     linkElement.rel = 'stylesheet';
-     linkElement.href = linkUrl;
-     head.appendChild(linkElement);  // Προσθήκη στο head
- });
+// Προσθήκη των αρχείων CSS στο head
+cssLinks.forEach(linkUrl => {
+    const linkElement = document.createElement('link');
+    linkElement.rel = 'stylesheet';
+    linkElement.href = linkUrl;
+    head.appendChild(linkElement); // Προσθήκη στο head
+});
+
  
  
  /////////////////
