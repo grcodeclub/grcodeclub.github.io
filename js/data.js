@@ -76,28 +76,24 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
     }
 });
 
-function addScriptHead(src) {
-        var script = document.createElement('script');
-        script.src = src;
-        script.onload = callback; // Καλεί τη συνάρτηση callback όταν το script έχει φορτωθεί
-        document.head.appendChild(script);
-    }
-
-addScriptHead('https://grcodeclub.gr/js/jquery.js');
-
 
 document.addEventListener('DOMContentLoaded', function() {
-    
-    function addScript(src) {
-        var script = document.createElement('script');
-        script.src = src;
-        document.body.appendChild(script);
-    }
+    function addScript(src, callback) {
+    var script = document.createElement('script');
+    script.src = src;
+    script.onload = callback; // Καλεί τη συνάρτηση callback όταν το script έχει φορτωθεί
+    document.body.appendChild(script);
+}
+document.addEventListener('DOMContentLoaded', function() {
+    addScript('https://grcodeclub.gr/js/jquery.js', function() {
+        addScript('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
+        addScript('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
+    });
+});
 
-    addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
-addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
-addScriptHead('https://grcodeclub.gr/js/prism.js');
-addScriptHead('https://grcodeclub.gr/js/cookies.js');
+
+    addScript('https://grcodeclub.gr/js/prism.js');
+    addScript('https://grcodeclub.gr/js/cookies.js');
     addScript('https://grcodeclub.gr/js/add/body.js'); 
     addScript('https://grcodeclub.gr/js/add/social.js');
     addScript('https://grcodeclub.gr/js/shareURL.js');
