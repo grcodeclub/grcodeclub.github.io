@@ -65,10 +65,6 @@ const htmlContent = `
                     <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
                         <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity/orologia/">Kυβερνοασφάλεια</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/network/orologia/">Δίκτυα Υπολογιστών</a>
-                        
                     </div>
                 </li>
                   <li class="nav-item dropdown">
@@ -79,52 +75,13 @@ const htmlContent = `
                 </li>
             </ul>
         </div>
-        </nav> 
+        </nav>
 `;
 
 // Εύρεση του στόχου με το id 'add_headder'
-const addHeadderDiv = document.getElementById('addHeader');
+const addHeadderDiv = document.getElementById('addMainBody');
 
 // Προσθήκη του HTML περιεχομένου στο div με το id 'add_headder'
 if (addHeadderDiv) {
     addHeadderDiv.innerHTML = htmlContent;
 }
-htmlContent = `
-        <footer class="bg-light text-center w-100 mt-5">
-    <div class="container p-4">
-        <section class="mb-4">
-            <h5 class="text-uppercase">Επικοινωνία</h5>
-            <ul class="list-inline d-flex justify-content-center">
-                <li class="list-inline-item">
-                    <a href="https://www.facebook.com/grcodeclub" target="_blank" class="text-dark" title="Facebook">
-                        <i class="fab fa-facebook fa-2x"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.youtube.com/@grcodeclub" target="_blank" class="text-dark" title="YouTube">
-                        <i class="fab fa-youtube fa-2x"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.instagram.com/grcode.club" target="_blank" class="text-dark" title="Instagram">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://github.com/GrCodeClub" target="_blank" class="text-dark" title="GitHub">
-                        <i class="fab fa-github fa-2x"></i>
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
-        &copy; 2024 Gr Code Club. All Rights Reserved.
-    </div>
-</footer>
-
-`;
-
-// Εύρεση του στόχου με το id 'add_headder'
- addHeadderDiv = document.getElementById('addFooter');
-
