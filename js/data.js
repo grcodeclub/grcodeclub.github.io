@@ -73,16 +73,20 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
 });
 
 function addScriptHead(src) {
-        var script = document.createElement('script');
-        script.src = src;
-        document.head.appendChild(script);
-    }
+    var script = document.createElement('script');
+    script.src = src;
+    document.head.appendChild(script);
+}
 
+// Φορτώστε πρώτα jQuery
+addScriptHead('https://code.jquery.com/jquery-3.5.1.min.js'); // Αντικαταστήστε το slim.min.js με το min.js
+addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js'); // Popper.js
+addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'); // Bootstrap
+
+// Φορτώστε άλλα scripts
 addScriptHead('https://grcodeclub.gr/js/prism.js');
 addScriptHead('https://grcodeclub.gr/js/cookies.js');
-addScriptHead('https://code.jquery.com/jquery-3.5.1.slim.min.js');
-addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
-addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js');
+
 
 document.addEventListener('DOMContentLoaded', function() {
     
