@@ -12,7 +12,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button id="accept-cookies">Αποδοχή</button>
         <button id="reject-cookies">Απόρριψη</button>
     </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="mymenu">
 
     <a class="navbar-brand" href="https://grcodeclub.gr">
         <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
