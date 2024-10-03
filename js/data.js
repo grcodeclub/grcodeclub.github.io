@@ -1,6 +1,6 @@
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
-    "https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css",
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css",
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/custom.css",
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/table.css",
@@ -84,7 +84,7 @@ function addScriptHead(src) {
 
 addScriptHead('https://grcodeclub.gr/js/jquery.js');
 addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
-addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js');
+addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
 addScriptHead('https://grcodeclub.gr/js/prism.js');
 addScriptHead('https://grcodeclub.gr/js/cookies.js');
 
