@@ -79,10 +79,12 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
 function addScriptHead(src) {
         var script = document.createElement('script');
         script.src = src;
+        script.onload = callback; // Καλεί τη συνάρτηση callback όταν το script έχει φορτωθεί
         document.head.appendChild(script);
     }
 
 addScriptHead('https://grcodeclub.gr/js/jquery.js');
+
 
 document.addEventListener('DOMContentLoaded', function() {
     
