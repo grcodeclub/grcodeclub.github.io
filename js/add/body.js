@@ -36,7 +36,7 @@ const htmlContent = `
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
                         <a class="dropdown-item" href="service1.html">C</a>
                         <a class="dropdown-item" href="service2.html">Python</a>
@@ -48,20 +48,20 @@ const htmlContent = `
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Δίκτυα Υπολογιστών</a>
+                    <a class="nav-link" >Δίκτυα Υπολογιστών</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="service1.html">Microsoft Windows</a>
                         <a class="dropdown-item" href="service2.html">Linux</a>
                     </div>
                 </li>
                 <li class="nav-item"></li>
-                    <a class="nav-link" href="#">Kυβερνοασφάλεια</a>
+                    <a class="nav-link" >Kυβερνοασφάλεια</a>
                 </li>
                 <li class="nav-item"></li>
-                <a class="nav-link" href="#">Edit - Image</a>
+                <a class="nav-link" >Edit - Image</a>
             </li>
             </ul>
         </div>
