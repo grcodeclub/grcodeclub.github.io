@@ -76,26 +76,30 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
     }
 });
 
-function addScriptHead(src) {
-        var script = document.createElement('script');
-        script.src = src;
-        document.head.appendChild(script);
-    }
-
 document.addEventListener('DOMContentLoaded', function() {    
-    function addScript(src) {
-        var script = document.createElement('script');
-        script.src = src;
-        document.body.appendChild(script);
-    }
-addScriptHead('https://grcodeclub.gr/js/jquery.js');
-    addScriptHead('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
-    addScriptHead('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
-    addScriptHead('https://grcodeclub.gr/js/prism.js');
-    addScriptHead('https://grcodeclub.gr/js/cookies.js');
+   // Συνάρτηση για να προσθέσεις ένα script στο head και να περιμένεις μέχρι να φορτωθεί
+function addScriptBody(src, callback) {
+    var script = document.createElement('script');
+    script.src = src;
+    script.onload = callback; // Κλήση της callback συνάρτησης όταν το script φορτωθεί
+    document.body.appendChild(script);
+}
+
+// Χρήση της addScriptBody για να φορτώσεις το jQuery
+    addScriptBody('https://grcodeclub.gr/js/jquery.js', function() {
+    console.log('jQuery φορτώθηκε με επιτυχία!');
+    
+    // Μπορείς να προσθέσεις εδώ άλλα scripts που εξαρτώνται από το jQuery
+        addScriptBody('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js', function() {
+        addScriptBody('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
+        addScriptBody('https://grcodeclub.gr/js/prism.js');
+    addScriptBody('https://grcodeclub.gr/js/cookies.js');
     addScript('https://grcodeclub.gr/js/add/body.js'); 
     addScript('https://grcodeclub.gr/js/add/social.js');
     addScript('https://grcodeclub.gr/js/shareURL.js');
+    });
+});
+
 
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
