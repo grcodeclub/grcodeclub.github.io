@@ -1,8 +1,8 @@
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
-    "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css",
-    "https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css",
+    "https://grcodeclub.gr/files-page/bootstrap/v4-5-0.css",
+    "https://grcodeclub.gr/files-page/bootstrap/font-awesome-6-6-0.css",
+    "https://grcodeclub.gr/files-page/bootstrap/bootstrap-icons.css",
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/custom.css",
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/table.css",
     "https://grcodeclub.gr/website/css/grcodeclub/scrollbars.css",
