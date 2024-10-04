@@ -7,11 +7,11 @@ const mymenu = `
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/">Επιλέξτε σελίδα</option>
         <option value="https://github.com/grcodeclub/c">GitHub</option>
-        <option value="https://grcodeclub.gr/command">Εντολές</option>
-        <option value="https://grcodeclub.gr/stract">Δομή - Struct</option>
-        <option value="https://grcodeclub.gr/library">Βιβλιοθήκες</option>
-        <option value="https://grcodeclub.gr/examples">Παραδείγματα</option>
-        <option value="https://grcodeclub.gr/files">Αρχεία</option>
+        <option value="https://grcodeclub.gr/c/command">Εντολές</option>
+        <option value="https://grcodeclub.gr/c/stract">Δομή - Struct</option>
+        <option value="https://grcodeclub.gr/c/library">Βιβλιοθήκες</option>
+        <option value="https://grcodeclub.gr/c/examples">Παραδείγματα</option>
+        <option value="https://grcodeclub.gr/c/files">Αρχεία</option>
     </select>
 </div>
 `;
