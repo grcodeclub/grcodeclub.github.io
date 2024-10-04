@@ -123,3 +123,13 @@ function addScriptBody(src, callback) {
 
     
 });
+
+
+        function goBackOnePath() {
+            const currentUrl = window.location.href;  // Παίρνουμε το τρέχον URL
+            const urlParts = currentUrl.split('/');   // Χωρίζουμε το URL στα τμήματα του
+            urlParts.pop();                           // Αφαιρούμε το τελευταίο μέρος (path)
+
+            const newUrl = urlParts.join('/');        // Επανασυνδέουμε το URL χωρίς το τελευταίο path
+            window.location.href = newUrl + '/';      // Ανακατευθύνουμε στη νέα διεύθυνση
+        }
