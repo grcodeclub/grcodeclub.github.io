@@ -123,6 +123,6 @@ function addScriptBody(src, callback) {
     if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
 
 
-
-     else if (currentURL.startsWith('https://grcodeclub.gr/c/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/c.js');}
+    const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
+    if (currentURL.startsWith('https://grcodeclub.gr/c/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/c.js');}
 });
