@@ -2,6 +2,7 @@
 const cssLinks = [
     "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css",
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css",
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/custom.css",
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/table.css",
     "https://grcodeclub.gr/website/css/grcodeclub/scrollbars.css",
@@ -123,13 +124,3 @@ function addScriptBody(src, callback) {
 
     
 });
-
-
-        function goBackOnePath() {
-            const currentUrl = window.location.href;  // Παίρνουμε το τρέχον URL
-            const urlParts = currentUrl.split('/');   // Χωρίζουμε το URL στα τμήματα του
-            urlParts.pop();                           // Αφαιρούμε το τελευταίο μέρος (path)
-
-            const newUrl = urlParts.join('/');        // Επανασυνδέουμε το URL χωρίς το τελευταίο path
-            window.location.href = newUrl + '/';      // Ανακατευθύνουμε στη νέα διεύθυνση
-        }
