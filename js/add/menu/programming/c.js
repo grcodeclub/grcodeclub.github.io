@@ -24,3 +24,14 @@ const nextDiv = addHeader.nextElementSibling;
 if (nextDiv) {
     nextDiv.insertAdjacentHTML('afterbegin', mymenu);
 }
+
+
+    // Συνάρτηση για την ανακατεύθυνση στη σελίδα ανάλογα με την επιλογή
+        function redirectToPage() {
+            const select = document.getElementById('page-select');
+            const selectedValue = select.value; // Παίρνουμε την τιμή του επιλεγμένου option
+            
+            if (selectedValue) {
+                window.location.href = selectedValue; // Ανακατεύθυνση στην επιλεγμένη σελίδα
+            }
+        }
