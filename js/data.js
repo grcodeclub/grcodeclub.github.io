@@ -122,5 +122,7 @@ function addScriptBody(src, callback) {
     if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
     if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
 
-    
+
+
+     else if (currentURL.startsWith('https://grcodeclub.gr/c/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/c.js');}
 });
