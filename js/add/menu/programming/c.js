@@ -1,18 +1,26 @@
+// Το HTML περιεχόμενο του dropdown
 const mymenu = `
- <label for="page-select" class="form-label">Επιλογή Σελίδας:</label>
-            <select id="page-select" class="form-select" onchange="redirectToPage()">
-                <option value="https://grcodeclub.gr/c/">Αρχική σελίδα</option>
-                <option value="https://github.com/grcodeclub/c">GitHub</option>
-                <option value="https://grcodeclub.gr/c/command">Εντολές</option>
-                <option value="https://grcodeclub.gr/c/stract">Δομή - Struct</option>
-                <option value="https://grcodeclub.gr/c/library">Βιβλιοθήκες</option>
-                <option value="https://grcodeclub.gr/c/examples">Παραδείγματα</option>
-                <option value="https://grcodeclub.gr/c/files">Αρχεία</option>
-            </select>
+<div class="dropdown-container highlight">
+    <label for="page-select" class="form-label">Επιλογή Σελίδας:</label>
+    <select id="page-select" class="form-select" onchange="redirectToPage()">
+        <option value="./">Επιλέξτε σελίδα</option>
+        <option value="https://github.com/grcodeclub/c">GitHub</option>
+        <option value="./command">Εντολές</option>
+        <option value="./stract">Δομή - Struct</option>
+        <option value="./library">Βιβλιοθήκες</option>
+        <option value="./examples">Παραδείγματα</option>
+        <option value="./files">Αρχεία</option>
+    </select>
+</div>
 `;
 
-// Εύρεση του στόχου με το id 'addHeader'
-const addMenu = document.getElementById('page_menu');
+// Εύρεση του στοιχείου με το id 'addHeader'
+const addHeader = document.getElementById('addHeader');
 
-// Προσθήκη του HTML περιεχομένου στο div με το id 'addHeader'
-if (addMenu) {addMenu.innerHTML = mymenu;}
+// Εύρεση του επόμενου στοιχείου (next sibling) μετά το 'addHeader'
+const nextDiv = addHeader.nextElementSibling;
+
+// Προσθήκη του HTML περιεχομένου στην αρχή του επόμενου div
+if (nextDiv) {
+    nextDiv.insertAdjacentHTML('afterbegin', mymenu);
+}
