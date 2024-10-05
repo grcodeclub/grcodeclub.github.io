@@ -31,96 +31,100 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px;">
-                    <a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/">Γλώσσες Προγραμματισμού</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/c/">C</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/python/">Python</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/cpp/">C++</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/java/">Java</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/website/html">Html</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/website/css">CSS</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/sql">SQL</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/docker">Docker</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/matlab">MATLAB</a>
-                </div>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px; overflow-y: auto;">
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/">Γλώσσες Προγραμματισμού</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/c/">C</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/python/">Python</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/cpp/">C++</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/java/">Java</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/html">Html</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/css">CSS</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/sql">SQL</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/docker">Docker</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/matlab">MATLAB</a></li>
+                </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown7" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Δίκτυα Υπολογιστών </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown7">
-                    <a class="dropdown-item" href="https://grcodeclub.gr/network/">Περισσότερα</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/network/protocol/">Πρωτόκολλα</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/services-port">Υπηρεσίες και Ports</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/application-and-protocols">Εφαρμογή και Πρωτόκολλο</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/network/cloud/">Cloud</a>
-                </div>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown7" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Δίκτυα Υπολογιστών</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown7">
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/">Περισσότερα</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/protocol/">Πρωτόκολλα</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/services-port">Υπηρεσίες και Ports</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/application-and-protocols">Εφαρμογή και Πρωτόκολλο</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/cloud/">Cloud</a></li>
+                </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                    <a class="nav-link" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a>
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Microsoft Windows </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown6">
-                        <a class="dropdown-item" href="https://grcodeclub.gr/windows/">Περισσότερα</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/windows/command/">Γραμμή εντολών</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/windows/command/powershell/">PowerShell</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/windows/more/run">Windows Run Commands</a>
-                    </div>
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Linux </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
-                        <a class="dropdown-item" href="https://grcodeclub.gr/linux/">Περισσότερα</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/linux/terminal/">Terminal</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</a>
-                    </div>
-                </div>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Microsoft Windows</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown6">
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/">Περισσότερα</a></li>
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/command/">Γραμμή εντολών</a></li>
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/command/powershell/">PowerShell</a></li>
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/more/run">Windows Run Commands</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Linux</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/">Περισσότερα</a></li>
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/terminal/">Terminal</a></li>
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown8" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kυβερνοασφάλεια</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown8" style="max-height: 400px;">
-                    <a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity">Kυβερνοασφάλεια</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity/tools">Εργαλεία</a>
-                    <a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity/attacks">Επιθέσεις</a>
-                </div>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown8" style="max-height: 400px; overflow-y: auto;">
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity">Kυβερνοασφάλεια</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity/tools">Εργαλεία</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity/attacks">Επιθέσεις</a></li>
+                </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Επιπλέο</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="max-height: 400px;">
-                    <a class="nav-link" href="#">Edit - Image</a>
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                        <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
-                        <a class="dropdown-item" href="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</a>
-                    </div>
-                </div>
-            </li>
-            </li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown3" style="max-height: 400px; overflow-y: auto;">
+                    <li><a class="dropdown-item" href="#">Edit - Image</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a></li>
+                            <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Submenu Action 1</a></li>
+                            <li><a class="dropdown-item" href="#">Submenu Action 2</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#">Sub-submenu</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Submenu Action 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Submenu Action 2</a></li>
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#">Sub-submenu</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Sub-submenu Action 1</a></li>
-                                            <li><a class="dropdown-item" href="#">Sub-submenu Action 2</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="dropdown-item" href="#">Sub-submenu Action 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Sub-submenu Action 2</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>
+
 
 `;
 
