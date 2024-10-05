@@ -1,6 +1,10 @@
 .link_here::before     {content: "🔗";}
-.link_here             {text-decoration: none;}
 h1.back_page           {display: inline-block;}
+
+.link_here {
+    text-decoration: none;
+    white-space: nowrap;
+}
 
 @media (pointer: coarse) {
     a:active {
