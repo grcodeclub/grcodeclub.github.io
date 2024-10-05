@@ -121,6 +121,9 @@ addScriptBody('https://grcodeclub.gr/js/jquery.js', function() {
             addScriptBody('https://grcodeclub.gr/js/cookies.js');
             addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
             addScriptBody('https://grcodeclub.gr/js/shareURL.js');
+
+                        $('#page-select').select2();
+
         });
     });
 });
