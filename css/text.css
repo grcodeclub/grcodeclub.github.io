@@ -1,10 +1,7 @@
 .link_here::before     {content: "🔗";}
 h1.back_page           {display: inline-block;}
 
-.link_here {
-    text-decoration: none;
-    white-space: nowrap;
-}
+.link_here {text-decoration: none;}
 
 @media (pointer: coarse) {
     a:active {
@@ -13,6 +10,12 @@ h1.back_page           {display: inline-block;}
         outline: none; /* Αφαιρεί το μπλε περίγραμμα */
     }
 }
+@media (min-width: 992px) {
+    .link_here {
+        white-space: nowrap;
+    }
+}
+
 
 div.text_bg {
     background-color: rgba(20, 20, 20, 0.85); /* Σκούρο γκρι με ελαφριά διαφάνεια */
