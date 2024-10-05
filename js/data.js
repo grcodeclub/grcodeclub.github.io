@@ -1,6 +1,6 @@
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
-    "https://grcodeclub.gr/css/bootstrap/v4-5-0.css",
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
     "https://grcodeclub.gr/css/bootstrap/bootstrap-icons.css",
     "https://grcodeclub.gr/css/bootstrap/custom.css",
     "https://grcodeclub.gr/css/bootstrap/table.css",
@@ -116,7 +116,8 @@ function addScriptBody(src, callback) {
     
     // Μπορείς να προσθέσεις εδώ άλλα scripts που εξαρτώνται από το jQuery
         addScriptBody('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js', function() {
-        addScriptBody('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
+       // addScriptBody('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js');
+            addScriptBody(' https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js');
         addScriptBody('https://grcodeclub.gr/js/prism.js');
     addScriptBody('https://grcodeclub.gr/js/cookies.js');
     addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
