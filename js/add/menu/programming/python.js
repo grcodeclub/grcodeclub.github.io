@@ -3,7 +3,7 @@
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
 <div class="dropdown-container highlight">
-    <label for="page-select" class="form-label">Επιλογή Σελίδας:</label>
+    <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/">Επιλέξτε σελίδα</option>
         <option value="https://github.com/grcodeclub/python">GitHub</option>
