@@ -125,5 +125,5 @@ function addScriptBody(src, callback) {
 
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
     if (currentURL.startsWith('https://grcodeclub.gr/c/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/c.js');}
-    else if (currentURL.startsWith('https://grcodeclub.gr/c/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/python.js');}
+    else if (currentURL.startsWith('https://grcodeclub.gr/python/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/python.js');}
 });
