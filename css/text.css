@@ -48,10 +48,8 @@ div.cmd {
     padding: 10px;
 }
 
-.form-select:focus {
-    background-color: #1c1c1c; /* Σκούρο μαύρο-γκρι */
 
-}
+
 a.link {
     padding: 4px;
     background-color: #1a1a1a; /* Σκούρο γκρι */
@@ -73,15 +71,21 @@ a.link:hover {
 
 h1.title {
     text-align: center;
-    background-color: rgb(133, 131, 131); /* Σκούρο γκρι με ελαφριά διαφάνεια */
+    background-color: #343a40; /* Σκούρο χρώμα */
     color: white; /* Απαλό γκρι */
     padding: 10px;
 }
 
 .contentsMenu{
-    background-color: rgb(133, 131, 131); /* Σκούρο γκρι με ελαφριά διαφάνεια */
+     background-color: #343a40; /* Σκούρο χρώμα */
     color: white; /* Απαλό γκρι */
 }
+
+.form-select,.form-select:focus{
+    background-color: #343a40; /* Σκούρο χρώμα */
+    color: #ccc;
+}
+
 
 section.tmp {
     background-color: #1a1a1a; /* Σκούρο φόντο */
