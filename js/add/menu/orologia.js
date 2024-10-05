@@ -51,9 +51,4 @@ window.onload = function() {
 
 };
 
-         // Εφαρμογή του Bootstrap Select μόλις φορτωθεί το DOM
-        document.addEventListener('DOMContentLoaded', function() {
-            // Εφαρμογή του Bootstrap Select
-            const selectElement = document.getElementById('page-select');
-            $(selectElement).selectpicker(); // Χρησιμοποιούμε jQuery για να ενεργοποιήσουμε το Bootstrap Select
-        });
+    
