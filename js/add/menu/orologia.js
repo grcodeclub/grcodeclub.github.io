@@ -62,8 +62,12 @@ window.onload = function() {
         }
     }
 
+                $('#outu').text('Επιλέξατε: ');
 
-     
+      $(document).ready(function() {
+            // Εφαρμογή του Select2
+            $('#page-select').select2();
+        });
 };
 
     
