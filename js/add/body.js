@@ -60,16 +60,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                    <a class="dropdown-item" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a>
+                    <a class="nav-link" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a>
                      <a class="nav-link dropdown-toggle" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">Microsoft Windows </a>
-                     <div class="dropdown-menu"  aria-labelledby="navbarDropdown6" id="submenu">
+                     <div class="dropdown-menu"  aria-labelledby="navbarDropdown6" >
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/">Περισσότερα</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/command/">Γραμμή εντολών</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/command/powershell/">PowerShell</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/more/run">Windows Run Commands</a>
                     </div>
                     <a class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">Linux </a>
-                    <div class="dropdown-menu"  aria-labelledby="navbarDropdown5" id="submenu">
+                    <div class="dropdown-menu"  aria-labelledby="navbarDropdown5" >
                         <a class="dropdown-item" href="https://grcodeclub.gr/linux/">Περισσότερα</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/linux/terminal/">Terminal</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</a>
@@ -89,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown3" style="max-height: 400px;">
                     <a class="nav-link" href="#">Edit - Image</a>
                     <a class="nav-link dropdown-toggle" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ορολογία </a>
-                    <div class="dropdown-menu"  aria-labelledby="navbarDropdown4" id="submenu">
+                    <div class="dropdown-menu"  aria-labelledby="navbarDropdown4" >
                        <a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Γενικά</a>
                        <a class="dropdown-item" href="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</a>
                     </div>
@@ -149,3 +149,5 @@ if (addFooterDiv) {addFooterDiv.innerHTML = htmlContentFooter;}
         document.querySelector('.navbar-toggler').addEventListener('click', function() {
             this.classList.toggle('open');
         });
+
+
