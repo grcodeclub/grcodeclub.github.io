@@ -1,38 +1,26 @@
- // Waiting for the DOM to load before executing the script
-        // Select all dropdown toggles
-        const dropdowns = document.querySelectorAll('.dropdown-toggle');
+     // Λάβετε όλα τα στοιχεία dropdown-toggle
+        const dropdownToggles = document.querySelectorAll('.dropdown-item.dropdown-toggle');
 
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (event) {
-                // Close all other dropdowns
-                dropdowns.forEach(otherDropdown => {
-                    if (otherDropdown !== dropdown) {
-                        const parentDropdown = otherDropdown.closest('.nav-item.dropdown');
-                        const menu = parentDropdown.querySelector('.dropdown-menu');
-                        if (menu.classList.contains('show')) {
-                            menu.classList.remove('show');
-                            otherDropdown.setAttribute('aria-expanded', 'false');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault(); // Αποφυγή του προεπιλεγμένου συνδέσμου
+
+                // Λάβετε το επόμενο υπομενού
+                const submenu = this.nextElementSibling;
+
+                // Αν το υπομενού υπάρχει, εναλλαγή εμφάνισης
+                if (submenu && submenu.classList.contains('dropdown-menu')) {
+                    submenu.classList.toggle('show'); // Προσθήκη ή αφαίρεση της κλάσης show
+                }
+
+                // Κλείσιμο όλων των άλλων υπομενού εκτός από το τρέχον
+                dropdownToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        const otherSubmenu = otherToggle.nextElementSibling;
+                        if (otherSubmenu && otherSubmenu.classList.contains('dropdown-menu')) {
+                            otherSubmenu.classList.remove('show'); // Αφαίρεση της κλάσης show
                         }
                     }
                 });
-
-                // Toggle the clicked dropdown
-                const parentDropdown = dropdown.closest('.nav-item.dropdown');
-                const menu = parentDropdown.querySelector('.dropdown-menu');
-                menu.classList.toggle('show');
-                dropdown.setAttribute('aria-expanded', menu.classList.contains('show'));
             });
         });
-
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function (event) {
-            dropdowns.forEach(dropdown => {
-                const parentDropdown = dropdown.closest('.nav-item.dropdown');
-                const menu = parentDropdown.querySelector('.dropdown-menu');
-                if (!parentDropdown.contains(event.target) && menu.classList.contains('show')) {
-                    menu.classList.remove('show');
-                    dropdown.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-    
