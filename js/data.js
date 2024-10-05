@@ -63,6 +63,25 @@ document.head.appendChild(icoFaviconLink);    // Προσθήκη του στο�
 ///////////////////////////////
 document.title = 'GrCode Club'; 
 const metaElement = document.createElement('meta');     // Δημιουργία ενός νέου στοιχείου <meta>
+
+
+
+// Δημιουργία του meta tag για Cache-Control
+var metaCacheControl = document.createElement('meta');
+metaCacheControl.setAttribute('http-equiv', 'Cache-Control');
+metaCacheControl.setAttribute('content', 'no-cache, no-store, must-revalidate');
+
+// Δημιουργία του meta tag για Expires
+var metaExpires = document.createElement('meta');
+metaExpires.setAttribute('http-equiv', 'Expires');
+metaExpires.setAttribute('content', '0');
+
+// Προσθήκη των meta tags στο head της σελίδας
+document.head.appendChild(metaCacheControl);
+document.head.appendChild(metaExpires);
+
+
+
  
 ///////////
 // ViewPort
