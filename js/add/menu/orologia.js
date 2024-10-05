@@ -12,17 +12,6 @@ const mymenu = `
     <option value="https://grcodeclub.gr/cybersecurity/orologia/">Κυβερνοασφάλεια</option>
     <option value="https://grcodeclub.gr/linux/orologia/">Linux</option>
 </select>
-
-<script>
-    $(document).ready(function() {
-            // Εφαρμογή του Select2
-            $('#page-select').select2();
-
-            // Εκτύπωση της επιλεγμένης τιμής
-                var selectedValue = $(this).val();
-                $('#selected-value').text('Επιλέξατε: ' + selectedValue);
-        });
-</script>
 </div>
 `;
 
@@ -59,17 +48,6 @@ window.onload = function() {
             break;
         }
     }
-
-                $('#outu').text('Επιλέξατε: ');
-
-      $(document).ready(function() {
-            // Εφαρμογή του Select2
-            $('#page-select').select2();
-
-                var selectedValue = $(this).val();
-                $('#selected-value').text('Επιλέξατε: ' + selectedValue);
-          
-        });
 };
 
     
