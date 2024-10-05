@@ -9,6 +9,7 @@ const cssLinks = [
     "https://grcodeclub.gr/css/main.css",
     "https://grcodeclub.gr/css/cookies.css",
     "https://grcodeclub.gr/css/manual.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css",
     "https://grcodeclub.gr/css/list.css",
     "https://grcodeclub.gr/css/text.css",
     "https://grcodeclub.gr/css/code_bg.css",
@@ -123,6 +124,7 @@ function addScriptBody(src, callback) {
     });
 
 addScriptBody('https://grcodeclub.gr/js/jquery.js', function() {
+    addScriptBody('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js');
     addScriptBody('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js', function() {
          $(document).ready(function() {
             $('#page-select').selectpicker(); // Ενεργοποίηση του Bootstrap Select
