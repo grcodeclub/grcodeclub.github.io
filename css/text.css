@@ -73,9 +73,14 @@ a.link:hover {
 
 h1.title {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(133, 131, 131); /* Σκούρο γκρι με ελαφριά διαφάνεια */
     color: white; /* Απαλό γκρι */
     padding: 10px;
+}
+
+.contentsMenu{
+    background-color: rgb(133, 131, 131); /* Σκούρο γκρι με ελαφριά διαφάνεια */
+    color: white; /* Απαλό γκρι */
 }
 
 section.tmp {
