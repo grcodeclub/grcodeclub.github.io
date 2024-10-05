@@ -5,6 +5,10 @@
 }
 
 
+        @media (max-width: 992px) {
+            .navbar-nav {
+                margin-right: 15px; /* Προσθέτει margin δεξιά μόνο σε κινητές συσκευές */
+            }
 
 
         .dropdown-submenu {
