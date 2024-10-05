@@ -2,7 +2,7 @@
 const cssLinks = [
     "https://grcodeclub.gr/css/bootstrap/v5-3-3.css",
     "https://grcodeclub.gr/css/bootstrap/bootstrap-icons.css",
-    "https://grcodeclub.gr/css/bootstrap/select.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css",
     "https://grcodeclub.gr/css/bootstrap/custom.css",
     "https://grcodeclub.gr/css/bootstrap/table.css",
     "https://grcodeclub.gr/css/scrollbars.css",
@@ -118,7 +118,6 @@ function addScriptBody(src, callback) {
             addScriptBody('https://grcodeclub.gr/js/prism.js');
             addScriptBody('https://grcodeclub.gr/js/cookies.js');
             addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
-            addScriptBody('https://grcodeclub.gr/js/add/social.js');
             addScriptBody('https://grcodeclub.gr/js/shareURL.js');
         });
     });
