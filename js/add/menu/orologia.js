@@ -67,6 +67,12 @@ window.onload = function() {
       $(document).ready(function() {
             // Εφαρμογή του Select2
             $('#page-select').select2();
+
+           $('#page-select').on('change', function() {
+                var selectedValue = $(this).val();
+                $('#selected-value').text('Επιλέξατε: ' + selectedValue);
+            });
+          
         });
 };
 
