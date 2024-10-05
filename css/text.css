@@ -71,9 +71,9 @@ a.link:hover {
     border-radius: 5px;
 }
 
-.title {
+h1.title {
     text-align: center;
-    background-color: #262626; /* Σκούρο φόντο */
+    background-color: rgba(0, 0, 0, 0.1);
     color: white; /* Απαλό γκρι */
     padding: 10px;
 }
