@@ -1,7 +1,6 @@
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
     "https://grcodeclub.gr/files-page/bootstrap/v4-5-0.css",
-    "https://grcodeclub.gr/files-page/bootstrap/font-awesome-6-6-0.css",
     "https://grcodeclub.gr/files-page/bootstrap/bootstrap-icons.css",
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/custom.css",
     "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/table.css",
@@ -13,7 +12,8 @@ const cssLinks = [
     "https://grcodeclub.gr/website/css/grcodeclub/text.css",
     "https://grcodeclub.gr/website/css/grcodeclub/code_bg.css",
     "https://grcodeclub.gr/website/css/grcodeclub/prism.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/img.css"
+    "https://grcodeclub.gr/website/css/grcodeclub/img.css".
+    "https://grcodeclub.gr/files-page/bootstrap/font-awesome-6-6-0.css"
  ];
  
  const head = document.head;     // Αρχικοποίηση head
