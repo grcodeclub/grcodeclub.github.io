@@ -51,11 +51,9 @@ window.onload = function() {
 
 };
 
-          const selectElement = document.getElementById('page-select');
+         // Εφαρμογή του Bootstrap Select μόλις φορτωθεί το DOM
+        document.addEventListener('DOMContentLoaded', function() {
             // Εφαρμογή του Bootstrap Select
-            const selectPicker = new bootstrap.Select(selectElement);
-
-        function redirectToPage() {
-            const selectedValue = document.getElementById("page-select").value;
-            window.location.href = selectedValue;
-        }
+            const selectElement = document.getElementById('page-select');
+            $(selectElement).selectpicker(); // Χρησιμοποιούμε jQuery για να ενεργοποιήσουμε το Bootstrap Select
+        });
