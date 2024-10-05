@@ -1,5 +1,4 @@
-     // Λάβετε όλα τα στοιχεία dropdown-toggle
-        const dropdownToggles = document.querySelectorAll('.dropdown-item.dropdown-toggle');
+   const dropdownToggles = document.querySelectorAll('.dropdown-item.dropdown-toggle');
 
         dropdownToggles.forEach(toggle => {
             toggle.addEventListener('click', function (e) {
@@ -23,4 +22,16 @@
                     }
                 });
             });
+        });
+
+        // Κλείσιμο υπομενού όταν κάνετε κλικ οπουδήποτε αλλού
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.dropdown')) {
+                dropdownToggles.forEach(toggle => {
+                    const submenu = toggle.nextElementSibling;
+                    if (submenu && submenu.classList.contains('dropdown-menu')) {
+                        submenu.classList.remove('show'); // Αφαίρεση της κλάσης show
+                    }
+                });
+            }
         });
