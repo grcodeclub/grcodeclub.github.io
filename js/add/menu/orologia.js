@@ -56,10 +56,7 @@ window.onload = function() {
     }
 
 
-       $(document).ready(function() {
-            $('#page-select').selectpicker(); // Ενεργοποίηση του Bootstrap Select
-        });
-
+     
 };
 
     
