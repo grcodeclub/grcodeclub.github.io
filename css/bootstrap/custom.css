@@ -4,7 +4,7 @@
 	margin-bottom: 20px;
 }
 
-.dropdown-toggle .dropdown-arrow {
+.dropdown-toggle {
     display: inline-block;
     transition: transform 0.3s ease; /* Ομαλή μετάβαση */
     transform: rotate(-90deg); /* Αρχικά το βελάκι δείχνει αριστερά (90 μοίρες αριστερόστροφα) */
