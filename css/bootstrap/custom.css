@@ -4,6 +4,27 @@
 	margin-bottom: 20px;
 }
 
+
+
+/* Βεβαιωθείτε ότι το γονικό dropdown έχει position: relative */
+.nav-item.dropdown {
+    position: relative; /* Ήταν ήδη παρόν */
+}
+
+/* Για τα nested dropdowns */
+.dropdown-menu {
+    position: absolute; /* Καθορίζει τη θέση */
+    top: 0; /* Ρυθμίζει την κάθετη θέση */
+    left: 100%; /* Για να το τοποθετήσει δεξιά */
+    display: none; /* Απόκρυψη από προεπιλογή */
+}
+
+/* Να το δείχνει όταν το γονικό dropdown είναι ανοιχτό */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Εμφάνιση κατά την αιωρούμενη κατάσταση */
+}
+
+
 /* Όταν το dropdown είναι ανοιχτό */
 .nav-link.dropdown-toggle::after{
     transform: rotate(90deg); /* Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
@@ -85,6 +106,9 @@
     background-image: none; /* Αφαίρεση προεπιλεγμένου background image */
     position: relative; /* Απόλυτη τοποθέτηση για γραμμές */
 }
+
+
+
 
 /* Δημιουργία custom γραμμών για το hamburger icon */
 .navbar-toggler-icon:before, 
