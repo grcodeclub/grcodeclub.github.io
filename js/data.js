@@ -125,8 +125,9 @@ function addScriptBody(src, callback) {
 
 addScriptBody('https://grcodeclub.gr/js/jquery.js', function() {
     addScriptBody('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js', function() {
-        // Κώδικας που εκτελείται μόλις φορτωθεί το bootstrap-select
-        console.log('Bootstrap Select φορτώθηκε επιτυχώς');
+         $(document).ready(function() {
+            $('#page-select').selectpicker(); // Ενεργοποίηση του Bootstrap Select
+        });
     });
 });
 
