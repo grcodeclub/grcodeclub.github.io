@@ -36,18 +36,11 @@ div.cmd {
 
 .highlight {
     padding: 10px;
-    background-color: #1c1c1c; /* Σκούρο μαύρο-γκρι */
+    background-color: #3d3e3f89; /* Σκούρο μαύρο-γκρι */
     color: #dcdcdc;
 }
 
 .form-label{ color: #dcdcdc;}
-        .form-select {
-    background-color: #1c1c1c; /* Σκούρο μαύρο-γκρι */
-    color: #dcdcdc;
-    border-radius: 10px;
-    padding: 10px;
-}
-
 
 
 a.link {
@@ -77,12 +70,12 @@ h1.title {
 }
 
 .contentsMenu{
-     background-color: #343a40; /* Σκούρο χρώμα */
+    background-color: #3d3e3f89; /* Σκούρο μαύρο-γκρι */
     color: white; /* Απαλό γκρι */
 }
 
 .form-select,.form-select:focus{
-    background-color: #343a40; /* Σκούρο χρώμα */
+    background-color: #3d3e3f89; /* Σκούρο μαύρο-γκρι */
     color: #ccc;
 }
 
