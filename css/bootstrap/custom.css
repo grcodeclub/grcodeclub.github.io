@@ -5,14 +5,13 @@
 }
 
 /* Όταν το dropdown είναι ανοιχτό */
-.nav-link.dropdown-toggle{
+.nav-link.dropdown-toggle::after{
     transform: rotate(90deg); /* Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
 }
 
-.nav-link.dropdown-toggle.open{
-    transform: rotate(0deg); /* Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
+.nav-link.dropdown-toggle::after[aria-expanded="true"] {
+    transform: rotate(180deg); /* Περιστροφή 180 μοίρες */
 }
-
 
   /* Αφαίρεση του default background του navbar-toggler-icon */
         .navbar-toggler-icon {
