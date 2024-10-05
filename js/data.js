@@ -119,10 +119,7 @@ function addScriptBody(src, callback) {
     // Φόρτωση άλλων scripts μετά την επιτυχή φόρτωση του jQuery
     addScriptBody('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js', function() {
         addScriptBody('https://grcodeclub.gr/js/bootstrap@5.3.3.js', function() {
-            addScriptBody('https://grcodeclub.gr/js/add/submenus.js', function() {
-                console.log('Submenus.js φορτώθηκε με επιτυχία!');
-                // Μπορείς να καλέσεις τη λειτουργία που είναι υπεύθυνη για την εκκίνηση των dropdown menus αν χρειάζεται
-            });
+            addScriptBody('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js');
             addScriptBody('https://grcodeclub.gr/js/prism.js');
             addScriptBody('https://grcodeclub.gr/js/cookies.js');
             addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
@@ -137,8 +134,6 @@ function addScriptBody(src, callback) {
     script.src = src;
     document.body.appendChild(script);
 }
-
-    addScript('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js');
     
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
