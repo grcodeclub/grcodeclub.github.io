@@ -1,24 +1,4 @@
-     .sidebar {
-            width: 10%;
-            background: #f8f9fa;
-            position: fixed;
-            top: 56px; /* Ύψος του οριζόντιου μενού */
-            left: 0;
-            bottom: 0;
-            overflow-y: auto;
-            padding-top: 20px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-        }
-        .content {
-            margin-left: 10%; /* το πλάτος του sidebar */
-        }
-        .sidebar-nav {
-            display: flex; /* Οριζόντια διάταξη */
-            flex-direction: row; /* Επίσης ρυθμίστε σε row */
-            justify-content: space-around; /* Ισομοιρασμένα στοιχεία */
-            padding: 10px 0; /* Προσθέστε padding */
-        }
-        @media (max-width: 768px) {
+
             .sidebar {
                 position: relative; /* Αλλαγή σε relative για κινητά */
                 margin-left: 0; /* Μη προσθέσετε περιθώριο */
@@ -38,4 +18,4 @@
                 flex: 1; /* Κάντε τα στοιχεία του nav να έχουν ίσο πλάτος */
                 text-align: center; /* Κεντράρετε το κείμενο */
             }
-        }
+        
