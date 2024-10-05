@@ -64,21 +64,24 @@ a.link:hover {
 
 h1.title {
     text-align: center;
-    background-color: #3d3e3f89; /* Σκούρο μαύρο-γκρι */
-    color: white; /* Απαλό γκρι */
+    background-color: #343a40; /* Σκούρο χρώμα */
+    color: #ccc;
     padding: 10px;
 }
 
 .contentsMenu{
-    background-color: #3d3e3f89; /* Σκούρο μαύρο-γκρι */
-    color: white; /* Απαλό γκρι */
-}
-
-.form-select,.form-select:focus{
-    background-color: #3d3e3f89; /* Σκούρο μαύρο-γκρι */
+    background-color: #343a40; /* Σκούρο χρώμα */
     color: #ccc;
 }
 
+.form-select{
+    background-color: #3d3e3f89; /* Σκούρο μαύρο-γκρι */
+    color: black;
+}
+.form-select:focus{
+     background-color: #343a40; /* Σκούρο χρώμα */
+     color: #ccc;
+}
 
 section.tmp {
     background-color: #1a1a1a; /* Σκούρο φόντο */
