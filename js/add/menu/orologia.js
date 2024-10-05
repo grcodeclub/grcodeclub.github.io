@@ -15,8 +15,15 @@ const mymenu = `
 
 <script>
     $(document).ready(function() {
-        $('#page-select').select2(); // Εφαρμογή του Select2
-    });
+            // Εφαρμογή του Select2
+            $('#page-select').select2();
+
+            // Εκτύπωση της επιλεγμένης τιμής
+            $('#page-select').on('change', function() {
+                var selectedValue = $(this).val();
+                $('#selected-value').text('Επιλέξατε: ' + selectedValue);
+            });
+        });
 </script>
 </div>
 `;
