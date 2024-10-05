@@ -5,7 +5,7 @@
 }
 
 /* Όταν το dropdown είναι ανοιχτό */
-.nav-link.dropdown-toggle.close{
+.nav-link.dropdown-toggle{
     transform: rotate(90deg); /* Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
 }
 
