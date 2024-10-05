@@ -4,7 +4,7 @@
 const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
+    <select id="page-select" class="form-select contentsMenu" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/orologia/">Διαφορά</option>
         <option value="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</option>
         <option value="https://grcodeclub.gr/network/orologia/">Δίκτυα Υπολογιστών</option>
