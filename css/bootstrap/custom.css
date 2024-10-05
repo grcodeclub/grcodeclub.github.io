@@ -5,8 +5,8 @@
 }
 
 /* Όταν το dropdown είναι ανοιχτό */
-.dropdown-toggle[aria-expanded="true"] .dropdown-arrow {
-    transform: rotate(0deg); /* Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
+.nav-link.dropdown-toggle::after{
+    transform: rotate(90deg); /* Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
 }
 
 
