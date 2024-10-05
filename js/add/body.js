@@ -59,6 +59,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a>
                      <a class="nav-link dropdown-toggle" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">Microsoft Windows</a>
                      <div class="dropdown-menu"  aria-labelledby="navbarDropdown6" id="submenu">
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/">Περισσότερα</a>
@@ -76,7 +77,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://grcodeclub.gr/cybersecurity">Kυβερνοασφάλεια</a>
+                     <a class="nav-link dropdown-toggle" id="cysber" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kυβερνοασφάλεια</a>
+                <div class="dropdown-menu" aria-labelledby="cysber" style="max-height: 400px;">
+                    <a  class="nav-link" href="https://grcodeclub.gr/cybersecurity">Kυβερνοασφάλεια</a>
+                    <a  class="nav-link" href="#">Εργαλεία</a>
+                    <a  class="nav-link" href="https://grcodeclub.gr/cybersecurity/tools">Εργαλεία</a>
+                    <a  class="nav-link" href="https://grcodeclub.gr/cybersecurity/attacks">Επιθέσεις</a>
+                </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Επιπλέον</a>
