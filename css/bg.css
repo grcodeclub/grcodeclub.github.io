@@ -1,0 +1,113 @@
+body,#mobile{
+  background-image: url("https://grcodeclub.gr/files-page/background/main.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+
+}
+
+.edit{
+  background-image: url("https://grcodeclub.gr/files-page/background/graphic.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+}
+
+
+#android{
+  background-image: url("https://grcodeclub.gr/files-page/background/android.png");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}
+
+#image{
+  background-image: url("https://grcodeclub.gr/files-page/background/image.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}
+
+
+#windows{
+  background-image: url("https://grcodeclub.gr/files-page/background/windows.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}
+
+#linux{
+  background-image: url("https://grcodeclub.gr/files-page/background/linux.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}
+
+#network, #cloud{
+  background-image: url("https://grcodeclub.gr/files-page/background/network.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}
+
+#system{
+  background-image: url("https://grcodeclub.gr/files-page/background/computer.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}
+
+#website{
+  background-image: url("https://grcodeclub.gr/files-page/background/website.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}
+
+
+#programming{
+  background-image: url("https://grcodeclub.gr/files-page/background/coding.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}
+
+
+
+#cybersecurity {
+  background-image: url("https://grcodeclub.gr/files-page/background/cybersecurity.jpg");
+  margin: 0;
+  font-family: "Arial";
+  background-size: cover;
+  background-attachment: fixed; /* Κάνει την εικόνα σταθερή */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+ 
+}

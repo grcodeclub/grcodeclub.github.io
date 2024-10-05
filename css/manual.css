@@ -1,0 +1,31 @@
+            blockquote {
+	margin-left: 1%;
+                padding: 0.5em;
+    font-size: 14px;
+    color: black;
+    background-color: lightgray;
+	border-left: 8px solid rgb(255, 2, 2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+h1.mytext,
+h2.mytext,
+h3.mytext{
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+    margin-left: 0.5%;
+}
+
+code {
+	background: rgba(15, 14, 13, 0.607);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+    	color: #eb5757;
+
+}

@@ -1,0 +1,88 @@
+.link_here::before     {content: "🔗";}
+.link_here             {text-decoration: none;}
+h1.back_page           {display: inline-block;}
+
+@media (pointer: coarse) {
+    a:active {
+        background-color: transparent; /* Αφαιρεί το μπλε χρώμα φόντου */
+        color: inherit; /* Επαναφέρει το χρώμα κειμένου */
+        outline: none; /* Αφαιρεί το μπλε περίγραμμα */
+    }
+}
+
+div.text_bg {
+    background-color: rgba(20, 20, 20, 0.85); /* Σκούρο γκρι με ελαφριά διαφάνεια */
+    color: #e0e0e0; /* Απαλό γκρι για το κείμενο */
+    border-radius: 20px;
+    text-align: justify;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); /* Σκιά για εφέ ανύψωσης */
+}
+
+div.cmd {
+    background-color: rgb(10, 10, 60); /* Σκούρο μπλε-μαύρο */
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.highlight {
+    padding: 10px;
+    background-color: #1c1c1c; /* Σκούρο μαύρο-γκρι */
+    color: #dcdcdc;
+}
+
+.form-label{ color: #dcdcdc;}
+        .form-select {
+    background-color: #1c1c1c; /* Σκούρο μαύρο-γκρι */
+    color: #dcdcdc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-select:focus {
+    background-color: #1c1c1c; /* Σκούρο μαύρο-γκρι */
+
+}
+a.link {
+    padding: 4px;
+    background-color: #1a1a1a; /* Σκούρο γκρι */
+    color: #f0f0f0; /* Ανοιχτό γκρι */
+    min-width: 80px;
+    margin: auto;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.link span { font-size: 18px; }
+a.link:hover {
+    padding: 4px;
+    color: #1a1a1a; /* Αντίθετο χρώμα στο hover */
+    background-color: #ffffff;
+    min-width: 80px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+    background-color: #262626; /* Σκούρο φόντο */
+    color: white; /* Απαλό γκρι */
+    padding: 10px;
+}
+
+section.tmp {
+    background-color: #1a1a1a; /* Σκούρο φόντο */
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+p.cmd {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}

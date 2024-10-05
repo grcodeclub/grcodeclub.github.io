@@ -1,0 +1,62 @@
+table {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+
+.noBorder{
+  text-align: left;
+  background-color: white;
+  border:none;
+}
+
+caption{
+  background-color: blue;
+  color: white;
+  font-size: 35px;
+  }
+
+#search_table_page, #search_table_page_3,.mytable,
+#table_page {
+    width: 100%;
+    border-collapse: collapse; /* Ενοποίηση περιγραμμάτων κελιών */
+    padding: 8px; /* Μείωση του padding για καλύτερη προσαρμογή στην εκτύπωση */
+    overflow-wrap: break-word; /* Σπάσιμο μεγάλων λέξεων */
+    font-size: 18px;
+}
+
+#search_table_page td, #search_table_page_3 td,.mytable,
+#table_page td {
+    padding: 10px; /* Πάχος padding για τα κελιά */
+    padding: 8px;  /* Μείωση του padding για καλύτερη προσαρμογή στην εκτύπωση */
+}
+
+/* Στυλ για οθόνες με πλάτος έως 720px */
+@media only screen and (max-width: 720px) {
+    #search_table_page,.mytable,
+  #search_table_page_3,
+    #table_page {
+        border-spacing: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.418);
+        border-radius: 20px;
+        max-width: 100%;
+        overflow-x: auto;
+        table-layout: fixed; /* Εξασφαλίζει ότι οι στήλες δεν ξεφεύγουν από το πλάτος του πίνακα */
+    }
+}
+
+/* Στυλ για οθόνες με πλάτος μεγαλύτερο ή ίσο με 720px */
+@media only screen and (min-width: 720px) {
+    #search_table_page,.mytable,
+  #search_table_page_3,
+    #table_page {
+        border-spacing: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.418);
+        border-radius: 20px;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+

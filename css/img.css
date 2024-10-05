@@ -1,0 +1,16 @@
+img.logo_menu{
+  width: 30px;
+  height: 30px; }
+
+
+img{
+	max-width: 99.5%;
+	margin-left: 0.5%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}

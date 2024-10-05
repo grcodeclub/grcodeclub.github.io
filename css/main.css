@@ -1,0 +1,50 @@
+div.search{
+ background-color: #000000d5; 
+ text-align: center; }
+
+html {scroll-behavior: smooth;}
+.hidden { display: none; }
+@media only screen and (min-width: 720px) {
+  .show_mobile  {display: none;}
+  .show_desktop   {display: block;}
+  .sidebarMenuInner{max-height: 100%; }
+}
+
+@media only screen and (max-width: 720px) {
+  .show_mobile {display: block;}
+  .show_desktop {display: none;}
+} 
+
+ /*Text Input*/
+    
+    .form__field {
+      font-family: inherit;
+      width: 100%;
+      border: 0;
+      outline: 0;
+      font-size: 1.3rem;
+      color: rgb(255, 255, 255);
+      padding: 7px 0;
+      background: transparent;
+      width:250px;
+      text-align: center;
+    }
+    .form__field::placeholder {color: white;}
+    
+      .form__field_more {
+      font-family: inherit;
+      border: 0;
+      outline: 0;
+      font-size: 1.3rem;
+      color: rgb(255, 255, 255);
+      padding: 7px 0;
+      background: transparent;
+      width:250px;
+      text-align: center;
+    }
+    .form__field_more::placeholder {color: white;}  
+
+
+
+
+

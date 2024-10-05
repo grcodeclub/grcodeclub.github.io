@@ -1,0 +1,36 @@
+.list {
+  display: inline-block;
+  list-style-type: none;  
+}
+.div_center{
+  justify-content: center;
+}
+.list-container {justify-content: center;}
+
+ul{
+  list-style-type: none;
+  padding-left: 25;
+  margin: 0;
+  text-align: left;
+}
+
+li{
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+
+@media only screen and (min-width: 720px) {
+    .list-container {
+      display: flex;
+      justify-content: center;
+    }
+    .list {
+      display: inline-block;
+      margin-right: 20px;
+      list-style-type: none;
+    }
+
+  ul.no_space {white-space: nowrap;}
+
+  }

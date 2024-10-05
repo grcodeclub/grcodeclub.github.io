@@ -1,0 +1,47 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Επιτρέπει την αναδίπλωση στην επόμενη γραμμή */
+  justify-content: flex-start; /* Ξεκινά από τα αριστερά */
+  align-items: flex-start; /* Ξεκινά από τα πάνω */
+  gap: 20px; /* Απόσταση ανάμεσα στις κάρτες */
+  margin-left: 15px;
+  align-items: center;
+  justify-content: center;  
+  
+
+}
+
+.card {
+  text-align: center;
+  width: 300px;
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 4px rgb(2, 175, 138);
+}
+
+
+.dropcard {
+border-radius: 5px;
+overflow: hidden;
+margin: 20px;
+}
+
+.card-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease-in-out;
+background-color: #000000af;
+width: 100%;
+}
+
+.showCardButton {
+background-color: #000000af;
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+text-align: left;
+}

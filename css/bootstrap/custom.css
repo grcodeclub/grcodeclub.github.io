@@ -1,0 +1,110 @@
+.custom-navbar {
+    background-color: #343a40; /* Σκούρο χρώμα */
+    color: white; /* Λευκό κείμενο */
+	margin-bottom: 20px;
+}
+
+  /* Αφαίρεση του default background του navbar-toggler-icon */
+        .navbar-toggler-icon {
+            background-image: none;
+        }
+        
+        /* Προσαρμογή για το hamburger και το X */
+        .hamburger-icon, .close-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Απόκρυψη του close icon από την αρχή */
+        .close-icon {
+            display: none;
+        }
+
+        /* Εναλλαγή κατά το άνοιγμα του μενού */
+        .navbar-toggler.open .hamburger-icon {
+            display: none;
+        }
+        .navbar-toggler.open .close-icon {
+            display: block;
+        }
+
+@media (min-width: 992px) {
+   .container{margin-top: 10%}
+#submenu {
+  left: auto;
+    top:0px;
+    right: 100%;
+}
+
+}
+
+@media (max-width: 992px) {
+   .container{margin-top: 20%}
+}
+
+.navbar-expand-lg {
+	right: 0;
+}
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #ffffff; /* Λευκό χρώμα για τις συνδέσεις */
+}
+
+.dropdown-menu a{
+	color: white;
+}
+
+.dropdown-menu{
+	background-color: #343a40;
+	border-color: #343a40;
+}
+
+.nav-item{
+	right: 0;
+}
+.custom-navbar .nav-link:hover {
+    color: #ffc107; /* Χρώμα όταν περνάει ο δείκτης του ποντικιού */
+}
+
+/* Τροποποίηση του background color του κουμπιού */
+.navbar-toggler {
+    border-color: #000000; /* Μαύρο φόντο */
+}
+
+/* Αφαίρεση του προεπιλεγμένου background image */
+.navbar-toggler-icon {
+    background-image: none; /* Αφαίρεση προεπιλεγμένου background image */
+    position: relative; /* Απόλυτη τοποθέτηση για γραμμές */
+}
+
+/* Δημιουργία custom γραμμών για το hamburger icon */
+.navbar-toggler-icon:before, 
+.navbar-toggler-icon:after,
+.navbar-toggler-icon div {
+    content: '';
+    display: block;
+    width: 30px; /* Πλάτος γραμμής */
+    height: 3px; /* Ύψος γραμμής */
+    background-color: white; /* Χρώμα γραμμής */
+    margin: 6px 0; /* Κενό ανάμεσα στις γραμμές */
+    position: absolute; /* Απόλυτη τοποθέτηση */
+    left: 0; /* Ευθυγράμμιση στα αριστερά */
+}
+
+/* Ρυθμίσεις για τις τρεις γραμμές */
+.navbar-toggler-icon:before {
+    top: -4px; /* Πρώτη γραμμή πάνω */
+}
+
+.navbar-toggler-icon div {
+    top: 6px; /* Κεντρική γραμμή */
+}
+
+.navbar-toggler-icon:after {
+    top: 18px; /* Τρίτη γραμμή κάτω */
+}
+
+/* Προσαρμογή του χρώματος κατά το hover */
+.navbar-toggler:hover {
+    background-color: #444444; /* Σκούρο γκρι κατά το hover */
+}

@@ -1,0 +1,45 @@
+     .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin-left: 40px; /* Απόσταση από την αριστερή πλευρά */
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 20px; /* Απόσταση από την αριστερή πλευρά */
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 110px; /* Χώρος από την αριστερή πλευρά */
+            top: 0; /* Ξεκινάει από την κορυφή */
+            height: 100%; /* Μήκος της γραμμής */
+            border-left: 3px solid #575857; /* Πράσινη γραμμή */
+            z-index: 0; /* Βεβαιώνουμε ότι είναι πίσω από το περιεχόμενο */
+        }
+
+        .timeline-item h5 {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Στυλ για τις ετικέτες (πτυχίο, σεμινάριο) */
+        .badge {
+            position: absolute;
+            left: -70px; /* Χώρος από την αριστερή πλευρά */
+            background-color: #404243; /* Χρώμα φόντου */
+            color: #fff; /* Χρώμα κειμένου */
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            left: -80px;
+            width: 160px;
+        }
+
+
+
+        .timeline-item.left {
+            padding-left: 140px; /* Απόσταση για τα αριστερά στοιχεία */
+        }
