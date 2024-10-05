@@ -6,11 +6,11 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/orologia/">Διαφορά</option>
+        <option value="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</option>
         <option value="https://grcodeclub.gr/network/orologia/">Δίκτυα Υπολογιστών</option>
-        <option value="https://grcodeclub.gr/programming/orologia/">Δίκτυα Υπολογιστών</option>
         <option value="https://grcodeclub.gr/system/orologia/">Λειτουργικά Συστήματα</option>
-        <option value="https://grcodeclub.gr/linux/orologia//">Linux</option>
         <option value="https://grcodeclub.gr/cybersecurity/orologia/">Κυβερνοασφάλεια</option>
+        <option value="https://grcodeclub.gr/linux/orologia//">Linux</option>
     </select>
 </div>
 `;
