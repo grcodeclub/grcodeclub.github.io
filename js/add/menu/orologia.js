@@ -15,7 +15,7 @@ const mymenu = `
 
 <script>
     $(document).ready(function() {
-        $('#page-select').selectpicker(); // Εφαρμογή του Select2
+        $('#page-select').select2(); // Εφαρμογή του Select2
     });
 </script>
 </div>
