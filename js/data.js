@@ -13,7 +13,7 @@ const cssLinks = [
     "https://grcodeclub.gr/website/css/grcodeclub/code_bg.css",
     "https://grcodeclub.gr/website/css/grcodeclub/prism.css",
     "https://grcodeclub.gr/website/css/grcodeclub/img.css",
-    "https://grcodeclub.gr/files-page/bootstrap/font-awesome-6-6-0.css"
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
  ];
  
  const head = document.head;     // Αρχικοποίηση head
