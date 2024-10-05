@@ -50,3 +50,11 @@ window.onload = function() {
         }
     }
 };
+
+
+const submenu = ``;
+
+const addMemnu = document.getElementById('sidebar'); // Εύρεση του στόχου με το id 'addHeader'
+
+if (addMemnu) {addMemnu.innerHTML = submenu;} // Προσθήκη του HTML περιεχομένου στο div με το id 'addHeader
+
