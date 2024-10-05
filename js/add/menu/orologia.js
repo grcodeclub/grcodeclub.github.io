@@ -4,14 +4,20 @@
 const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
-    <select id="page-select" class="form-control selectpicker" data-live-search="true" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/orologia/">Διαφορά</option>
-        <option value="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</option>
-        <option value="https://grcodeclub.gr/network/orologia/">Δίκτυα Υπολογιστών</option>
-        <option value="https://grcodeclub.gr/system/orologia/">Λειτουργικά Συστήματα</option>
-        <option value="https://grcodeclub.gr/cybersecurity/orologia/">Κυβερνοασφάλεια</option>
-        <option value="https://grcodeclub.gr/linux/orologia//">Linux</option>
-    </select>
+<select id="page-select" class="form-select">
+    <option value="https://grcodeclub.gr/orologia/">Διαφορά</option>
+    <option value="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</option>
+    <option value="https://grcodeclub.gr/network/orologia/">Δίκτυα Υπολογιστών</option>
+    <option value="https://grcodeclub.gr/system/orologia/">Λειτουργικά Συστήματα</option>
+    <option value="https://grcodeclub.gr/cybersecurity/orologia/">Κυβερνοασφάλεια</option>
+    <option value="https://grcodeclub.gr/linux/orologia/">Linux</option>
+</select>
+
+<script>
+    $(document).ready(function() {
+        $('#page-select').select2(); // Εφαρμογή του Select2
+    });
+</script>
 </div>
 `;
 
