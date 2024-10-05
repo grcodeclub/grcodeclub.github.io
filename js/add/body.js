@@ -62,14 +62,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                     <a class="nav-link" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a>
                      <a class="nav-link dropdown-toggle" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">Microsoft Windows </a>
-                     <div class="dropdown-menu"  aria-labelledby="navbarDropdown1" >
+                     <div class="dropdown-menu"  aria-labelledby="navbarDropdown6" >
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/">Περισσότερα</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/command/">Γραμμή εντολών</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/command/powershell/">PowerShell</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/windows/more/run">Windows Run Commands</a>
                     </div>
                     <a class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">Linux </a>
-                    <div class="dropdown-menu"  aria-labelledby="navbarDropdown1" >
+                    <div class="dropdown-menu"  aria-labelledby="navbarDropdown5" >
                         <a class="dropdown-item" href="https://grcodeclub.gr/linux/">Περισσότερα</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/linux/terminal/">Terminal</a>
                         <a class="dropdown-item" href="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</a>
