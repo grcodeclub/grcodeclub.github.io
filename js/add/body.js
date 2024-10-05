@@ -107,7 +107,7 @@ const htmlContentFooter = `
     <footer class="bg-light text-center text-lg-start mt-5">
         <div class="container p-4">
             <section class="mb-4">
-                <h5 class="text-uppercase"><u>Social Media</u></h5>
+                <h5 class="text-uppercase">Social Media</h5>
                 <ul class="list-inline d-flex justify-content-center">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com/grcodeclub" target="_blank" class="text-dark" title="Facebook">
