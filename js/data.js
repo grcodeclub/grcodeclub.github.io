@@ -150,5 +150,5 @@ addScriptBody('https://grcodeclub.gr/js/jquery.js', function() {
              || currentURL.startsWith('https://grcodeclub.gr/system/orologia/')  || currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/'))
         {addScriptBody('https://grcodeclub.github.io/js/add/menu/orologia.js');}
 
-    addScript('https://grcodeclub.gr/js/add/function-jQuery.js');
+    addScriptBody('https://grcodeclub.gr/js/add/function-jQuery.js');
 });
