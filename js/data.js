@@ -153,5 +153,5 @@ function addScriptBody(src, callback) {
     else if (currentURL.startsWith('https://grcodeclub.gr/python/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/python.js');}
     else if (currentURL.startsWith('https://grcodeclub.gr/orologia/') || currentURL.startsWith('https://grcodeclub.gr/network/orologia/')  || currentURL.startsWith('https://grcodeclub.gr/programming/orologia/')
              || currentURL.startsWith('https://grcodeclub.gr/system/orologia/')  || currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/'))
-        {addScriptBody('https://grcodeclub.github.io/js/add/menu/olorogia.js');}
+        {addScriptBody('https://grcodeclub.github.io/js/add/menu/orologia.js');}
 });
