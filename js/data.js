@@ -111,17 +111,25 @@ function addScriptBody(src, callback) {
     document.body.appendChild(script);
 }
 // Χρήση της addScriptBody για να φορτώσεις το jQuery
+
     addScriptBody('https://grcodeclub.gr/js/jquery.js', function() {
-        console.log('jQuery φορτώθηκε με επιτυχία!');
-        addScriptBody('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js');
-        addScriptBody('https://grcodeclub.gr/js/add/submenus.js');
-        addScriptBody(' https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js');
-        addScriptBody('https://grcodeclub.gr/js/prism.js');
-        addScriptBody('https://grcodeclub.gr/js/cookies.js');
-        addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
-        addScriptBody('https://grcodeclub.gr/js/add/social.js');
-        addScriptBody('https://grcodeclub.gr/js/shareURL.js');
+    console.log('jQuery φορτώθηκε με επιτυχία!');
+
+    // Φόρτωση άλλων scripts μετά την επιτυχή φόρτωση του jQuery
+    addScriptBody('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js', function() {
+        addScriptBody('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', function() {
+            addScriptBody('https://grcodeclub.gr/js/add/submenus.js', function() {
+                console.log('Submenus.js φορτώθηκε με επιτυχία!');
+                // Μπορείς να καλέσεις τη λειτουργία που είναι υπεύθυνη για την εκκίνηση των dropdown menus αν χρειάζεται
+            });
+            addScriptBody('https://grcodeclub.gr/js/prism.js');
+            addScriptBody('https://grcodeclub.gr/js/cookies.js');
+            addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
+            addScriptBody('https://grcodeclub.gr/js/add/social.js');
+            addScriptBody('https://grcodeclub.gr/js/shareURL.js');
+        });
     });
+});
 
     function addScript(src) {
     var script = document.createElement('script');
