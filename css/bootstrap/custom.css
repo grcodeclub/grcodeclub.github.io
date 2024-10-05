@@ -14,16 +14,8 @@
 /* Για τα nested dropdowns */
 .dropdown-menu {
     position: absolute; /* Καθορίζει τη θέση */
-    top: 0; /* Ρυθμίζει την κάθετη θέση */
-    left: 100%; /* Για να το τοποθετήσει δεξιά */
     display: none; /* Απόκρυψη από προεπιλογή */
 }
-
-/* Να το δείχνει όταν το γονικό dropdown είναι ανοιχτό */
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block; /* Εμφάνιση κατά την αιωρούμενη κατάσταση */
-}
-
 
 /* Όταν το dropdown είναι ανοιχτό */
 .nav-link.dropdown-toggle::after{
