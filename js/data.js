@@ -117,7 +117,7 @@ function addScriptBody(src, callback) {
 
     // Φόρτωση άλλων scripts μετά την επιτυχή φόρτωση του jQuery
     addScriptBody('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js', function() {
-        addScriptBody('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', function() {
+        addScriptBody('https://grcodeclub.gr/js/bootstrap@5.3.3.js', function() {
             addScriptBody('https://grcodeclub.gr/js/add/submenus.js', function() {
                 console.log('Submenus.js φορτώθηκε με επιτυχία!');
                 // Μπορείς να καλέσεις τη λειτουργία που είναι υπεύθυνη για την εκκίνηση των dropdown menus αν χρειάζεται
