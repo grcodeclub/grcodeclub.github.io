@@ -2,17 +2,17 @@
 const cssLinks = [
     "https://grcodeclub.gr/files-page/bootstrap/v4-5-0.css",
     "https://grcodeclub.gr/files-page/bootstrap/bootstrap-icons.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/custom.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/bootstrap/table.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/scrollbars.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/main.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/cookies.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/manual.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/list.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/text.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/code_bg.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/prism.css",
-    "https://grcodeclub.gr/website/css/grcodeclub/img.css",
+    "https://grcodeclub.gr/css/bootstrap/custom.css",
+    "https://grcodeclub.gr/css/bootstrap/table.css",
+    "https://grcodeclub.gr/css/scrollbars.css",
+    "https://grcodeclub.gr/css/main.css",
+    "https://grcodeclub.gr/css/cookies.css",
+    "https://grcodeclub.gr/css/manual.css",
+    "https://grcodeclub.gr/css/list.css",
+    "https://grcodeclub.gr/css/text.css",
+    "https://grcodeclub.gr/css/code_bg.css",
+    "https://grcodeclub.gr/css/prism.css",
+    "https://grcodeclub.gr/css/img.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
  ];
  
