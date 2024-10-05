@@ -1,5 +1,5 @@
      .sidebar {
-            width: 3%;
+            width: 10%;
             background: #f8f9fa;
             position: fixed;
             top: 56px; /* Ύψος του οριζόντιου μενού */
@@ -10,7 +10,7 @@
             box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         }
         .content {
-            margin-left: 3%; /* το πλάτος του sidebar */
+            margin-left: 10%; /* το πλάτος του sidebar */
         }
         .sidebar-nav {
             display: flex; /* Οριζόντια διάταξη */
