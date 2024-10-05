@@ -52,7 +52,25 @@ window.onload = function() {
 };
 
 
-const submenu = ``;
+const submenu = `
+  <ul style="list-style-type: none;" class="navsubmenu">
+            <li class="submenu">
+                <a class="nav-link active" href="#">Επιλογή A</a>
+            </li>
+            <li class="submenu">
+                <a class="nav-link" href="#">Επιλογή B</a>
+            </li>
+            <li class="submenu">
+                <a class="nav-link" href="#">Επιλογή C</a>
+            </li>
+            <li class="submenu">
+                <a class="nav-link" href="#">Επιλογή D</a>
+            </li>
+            <li class="submenu">
+                <a class="nav-link" href="#">Επιλογή E</a>
+            </li>
+        </ul>
+        `;
 
 const addMemnu = document.getElementById('sidebar'); // Εύρεση του στόχου με το id 'addHeader'
 
