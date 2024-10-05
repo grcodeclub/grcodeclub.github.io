@@ -97,8 +97,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
     </div>
 </nav>
-<div class="sidebar" id="sidebar"></div>
-
 `;
 
 const addHeaderDiv = document.getElementById('addHeader'); // Εύρεση του στόχου με το id 'addHeader'
