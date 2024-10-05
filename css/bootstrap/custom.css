@@ -6,16 +6,25 @@
 
 
 
-/* Βεβαιωθείτε ότι το γονικό dropdown έχει position: relative */
-.nav-item.dropdown {
-    position: relative; /* Ήταν ήδη παρόν */
-}
 
-/* Για τα nested dropdowns */
-.dropdown-menu {
-    position: absolute; /* Καθορίζει τη θέση */
-    display: none; /* Απόκρυψη από προεπιλογή */
-}
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            left: 100%;
+            top: 0;
+            margin-top: 0;
+        }
+
+        /* Αλλάζουμε την τοποθέτηση του submenu όταν είναι κοντά στην άκρη */
+        .dropdown-submenu .dropdown-menu.left {
+            left: auto;
+            right: 100%;
+        }
+
+
+
 
 /* Όταν το dropdown είναι ανοιχτό */
 .nav-link.dropdown-toggle::after{
