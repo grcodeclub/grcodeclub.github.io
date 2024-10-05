@@ -9,8 +9,8 @@
     transform: rotate(90deg); /* Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
 }
 
-.nav-link.dropdown-toggle::after[aria-expanded="true"] {
-    transform: rotate(0deg); /* Περιστροφή 180 μοίρες */
+.nav-link.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(0deg); /* Περιστροφή 0 μοίρες για το βέλος προς τα κάτω */
 }
 
   /* Αφαίρεση του default background του navbar-toggler-icon */
