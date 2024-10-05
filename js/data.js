@@ -115,7 +115,6 @@ function addScriptBody(src, callback) {
 
     addScriptBody('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js', function() {
         addScriptBody('https://grcodeclub.gr/js/bootstrap@5.3.3.js', function() {
-            addScriptBody('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js');
             addScriptBody('https://grcodeclub.gr/js/prism.js');
             addScriptBody('https://grcodeclub.gr/js/cookies.js');
             addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
@@ -124,12 +123,16 @@ function addScriptBody(src, callback) {
         });
     });
 
+        addScriptBody('https://grcodeclub.gr/js/jquery.js', function() {
+                   addScriptBody('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js');
+    });
+
     function addScript(src) {
     var script = document.createElement('script');
     script.src = src;
     document.body.appendChild(script);
 }
-    addScript('https://grcodeclub.gr/js/jquery.js');
+
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
