@@ -43,8 +43,10 @@ window.onload = function() {
     
     // Έλεγχος για να βρούμε το κατάλληλο option
     for (let option of select.options) {
+         console.log(currentUrl, option.value)
         if (option.value === currentUrl) {
             select.value = option.value; // Ρύθμιση του επιλεγμένου option
+            console.log(select.value)
             break;
         }
     }
