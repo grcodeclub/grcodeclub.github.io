@@ -1,0 +1,28 @@
+.select2-search__field {
+    background-color: #343a40; /* Χρώμα φόντου για το πεδίο αναζήτησης */
+    color: #ffffff; /* Χρώμα κειμένου για το πεδίο αναζήτησης */
+}
+.select2-search{
+    background-color: #343a40;
+}
+
+
+        .select2-container--default .select2-results__option {
+            color: #fffafa; /* Χρώμα κειμένου για τις επιλογές */
+            background-color: #343a40; /* Χρώμα φόντου για τις επιλογές */
+        }
+
+        .select2-container--default .select2-selection--single {
+            background-color: #343a40; /* Χρώμα φόντου */
+            border-radius: 0.25rem; /* Ακτίνα γωνίας */
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #ffffff; /* Χρώμα κειμένου */
+        }
+
+
+       /* Χρώμα φόντου για την επιλεγμένη επιλογή στην λίστα */
+       .select2-container--default .select2-results__option--highlighted[aria-selected] {
+        background-color: #292828b7; /* Μπλε χρώμα φόντου για την επιλεγμένη επιλογή */
+            color: #ffffff; /* Λευκό χρώμα κειμένου για την επιλεγμένη επιλογή */
+        }
