@@ -1,7 +1,9 @@
-.link_here::before     {content: "🔗";}
 h1.back_page           {display: inline-block;}
-
+/*
+.link_here::before     {content: "🔗";}
 .link_here {text-decoration: none;}
+
+ */
 
 @media (pointer: coarse) {
     a:active {
@@ -16,7 +18,7 @@ h1.back_page           {display: inline-block;}
     }
 }
 
-        .openlink {
+        .link_here {
   text-transform: uppercase; /* Κεφαλαιοποιεί το κείμενο */
   background-color: #484c4c30; /* Προεπιλεγμένο χρώμα φόντου (teal) */
   color: #000000; /* Άσπρο χρώμα για το κείμενο */
@@ -32,7 +34,7 @@ h1.back_page           {display: inline-block;}
   box-shadow: 0 4px 6px rgb(48, 48, 49); /* Προσθήκη σκιάς για 3D εφέ */
 
 }
-.openlink:hover {
+.link_here:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Βαθύτερη σκιά στο hover */
   transform: translateY(2px); /* Ελαφριά κίνηση προς τα πάνω για 3D εφέ */
 
