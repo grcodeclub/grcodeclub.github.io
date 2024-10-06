@@ -60,41 +60,44 @@ function redirectFromTermSelect() {
 
 // Συνδυασμένος κώδικας για το window.onload
 window.onload = function() {
-    const termselect = document.getElementById('select-term');
-    const pageselect = document.getElementById('page-select');
-    const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
+      // Χρησιμοποιούμε setTimeout για να περιμένουμε 5 δευτερόλεπτα
+    setTimeout(function() {
+        const termselect = document.getElementById('select-term');
+        const pageselect = document.getElementById('page-select');
+        const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
 
-    // Αναθέτουμε τα onchange events αφού τα στοιχεία έχουν φορτωθεί
+            // Αναθέτουμε τα onchange events αφού τα στοιχεία έχουν φορτωθεί
     if (pageselect) {
         pageselect.onchange = redirectFromPageSelect;
     }
     if (termselect) {
         termselect.onchange = redirectFromTermSelect;
     }
+        
+        // Έλεγχος για το page-select
+        if (pageselect) {
+            if (currentUrl.startsWith('https://grcodeclub.gr/linux/terminal/')) {
+                pageselect.value = 'https://grcodeclub.gr/linux/terminal/';
+            } else {
+                for (let option of pageselect.options) {
+                    if (option.value === currentUrl) {
+                        pageselect.value = option.value;
+                        break;
+                    }
+                }
+            }
+            $('#page-select').select2(); // Εφαρμογή του select2 για το page-select
+        }
 
-    // Έλεγχος για το page-select
-    if (pageselect) {
-        if (currentUrl.startsWith('https://grcodeclub.gr/linux/terminal/')) {
-            pageselect.value = 'https://grcodeclub.gr/linux/terminal/';
-        } else {
-            for (let option of pageselect.options) {
-                if (option.value === currentUrl) {
-                    pageselect.value = option.value;
+        // Έλεγχος για το select-term
+        if (termselect) {
+            for (let termoption of termselect.options) {
+                if (termoption.value === currentUrl) {
+                    termselect.value = termoption.value;
                     break;
                 }
             }
+            $('#select-term').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το select-term
         }
-        $('#page-select').select2(); // Εφαρμογή του select2 για το page-select
-    }
-
-    // Έλεγχος για το select-term
-    if (termselect) {
-        for (let termoption of termselect.options) {
-            if (termoption.value === currentUrl) {
-                termselect.value = termoption.value;
-                break;
-            }
-        }
-        $('#select-term').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το select-term
-    }
+    }, 5000); // 5000 ms = 5 δευτερόλεπτα
 };
