@@ -27,6 +27,7 @@ const termMenu = `
     <option value="https://grcodeclub.gr/linux/terminal/files/">Διαχείριση Αρχείων και Καταλόγων</option>
     <option value="https://grcodeclub.gr/linux/terminal/network">Εντολές Δικτύου</option>
     <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
+        <option value="https://grcodeclub.gr/linux/terminal/files/decompress">Τρόπος αποσυμπίεσης αρχείων</option>
     <option value="https://grcodeclub.gr/linux/terminal/files/grep">Εντολή: grep</option>
     <option value="https://grcodeclub.gr/linux/terminal/tools/git">Εντολή: git</option>
     <option value="https://grcodeclub.gr/linux/terminal/system/apt">Εντολή: apt</option>
