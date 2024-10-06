@@ -141,10 +141,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
     if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
 
-  addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
+    addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
 
-
-
+   const highlights = document.querySelectorAll('.highlight');
+    highlights.forEach(function(highlight) {
+        const hr = document.createElement('hr');
+        highlight.parentNode.insertBefore(hr, highlight);
+    });
 
 
     
