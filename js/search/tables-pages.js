@@ -83,7 +83,7 @@ function displayPagination() {
         const prevButton = document.createElement('li');
         prevButton.className = 'page-item';
         const prevLink = document.createElement('a');
-        prevLink.className = 'page-link1';
+        prevLink.className = 'page-link';
         prevLink.textContent = 'Προηγούμενη';
         prevLink.href = '#';
 
@@ -101,7 +101,7 @@ function displayPagination() {
         const button = document.createElement('li');
         button.className = `page-item ${i === currentPage ? 'active' : ''}`;
         const link = document.createElement('a');
-        link.className = 'page-link1';
+        link.className = 'page-link';
         link.textContent = i;
         link.href = '#';
 
@@ -120,7 +120,7 @@ function displayPagination() {
         const nextButton = document.createElement('li');
         nextButton.className = 'page-item1';
         const nextLink = document.createElement('a');
-        nextLink.className = 'page-link1';
+        nextLink.className = 'page-link';
         nextLink.textContent = 'Επόμενη';
         nextLink.href = '#';
 
