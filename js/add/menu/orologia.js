@@ -11,7 +11,7 @@ const mymenu = `
     <option value="https://grcodeclub.gr/system/orologia/">Λειτουργικά Συστήματα</option>
     <option value="https://grcodeclub.gr/cybersecurity/orologia/">Κυβερνοασφάλεια</option>
     <option value="https://grcodeclub.gr/linux/orologia/">Linux</option>
-    <option value="https://grcodeclub.gr/windows/orologia/">Microsoft Windows</option>
+    <option value="https://grcodeclub.gr/windows/orologia">Microsoft Windows</option>
 </select>
 </div>
 `;
