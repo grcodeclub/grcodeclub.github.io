@@ -23,7 +23,7 @@ if (nextDiv && !nextDiv.querySelector('#page-select')) {
 
 // Το HTML περιεχόμενο του δεύτερου dropdown
 const termMenu = `
-<select id="term-select" class="form-select" onchange="redirectToPage()">
+<select id="select-term" class="form-select" onchange="redirectToPage()">
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
     <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
     <option value="https://grcodeclub.gr/linux/terminal/files/grep">grep</option>
@@ -35,15 +35,15 @@ const termMenu = `
 </select>
 `;
 
-// Εύρεση του στοιχείου με το id 'linux-menu'
-const addTerm = document.getElementById('linux-menu');
+// Εύρεση του στοιχείου με το id 'linux-term'
+const addTerm = document.getElementById('linux-term');
 if (addTerm) { 
     addTerm.innerHTML = termMenu;
 }
 
 // Συνάρτηση για την ανακατεύθυνση στη σελίδα ανάλογα με την επιλογή
 function redirectToPage() {
-    const termselect = document.getElementById('term-select');
+    const termselect = document.getElementById('select-term');
     const selectedValue = termselect ? termselect.value : null;
     if (selectedValue) {
         window.location.href = selectedValue;
@@ -58,7 +58,7 @@ function redirectToPage() {
 
 // Συνδυασμένος κώδικας για το window.onload
 window.onload = function() {
-    const termselect = document.getElementById('term-select');
+    const termselect = document.getElementById('select-term');
     const pageselect = document.getElementById('page-select');
     const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
 
@@ -77,7 +77,7 @@ window.onload = function() {
         $('#page-select').select2(); // Εφαρμογή του select2 για το page-select
     }
 
-    // Έλεγχος για το term-select
+    // Έλεγχος για το select-term
     if (termselect) {
         for (let termoption of termselect.options) {
             if (termoption.value === currentUrl) {
@@ -85,6 +85,6 @@ window.onload = function() {
                 break;
             }
         }
-        $('#term-select').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το term-select
+        $('#select-term').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το select-term
     }
 };
