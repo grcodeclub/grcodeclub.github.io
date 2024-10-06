@@ -11,10 +11,13 @@ var mymenu = `
 </div>
 `;
 
+const currentUrl = window.location.href;  
+
+
 // Εύρεση του στοιχείου με το id 'addHeader'
-var addHeader = document.getElementById('addHeader');
+const addHeader = document.getElementById('addHeader');
 // Εύρεση του επόμενου στοιχείου (next sibling) μετά το 'addHeader'
-var nextDiv = addHeader.nextElementSibling;
+const nextDiv = addHeader.nextElementSibling;
 // Προσθήκη του HTML περιεχομένου στην αρχή του επόμενου div
 if (nextDiv) { nextDiv.insertAdjacentHTML('afterbegin', mymenu); }
 
@@ -48,8 +51,7 @@ if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
 
 
 window.onload = function() {
-    var select = document.getElementById('page-select');
-    currentUrl = window.location.href; // Παίρνουμε το τρέχον UR 
+    const select = document.getElementById('page-select');
     // Έλεγχος για να βρούμε το κατάλληλο option
     for (var option of select.options) {
         if (option.value === currentUrl) {
