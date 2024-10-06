@@ -29,7 +29,7 @@ console.log("URL:"); // Αν δεν ισχύει, εκτύπωση του τρέ
 console.log("URL:", currentURL); // Αν δεν ισχύει, εκτύπωση του τρέχοντος URL
 if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
      console.log("Terminal Menu");
-     mymenu = `
+     const termmymenu = `
         <div class="dropdown-container contentsMenu">
             <label for="termianal-select" class="form-label">Περιεχόμενα :</label>
             <select id="termianal-select" class="form-select" onchange="redirectToPage()">
@@ -41,7 +41,7 @@ if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
 
     const linuxmenu = document.getElementById('linux-menu'); // Ελέγξτε ότι το 'linux-menu' υπάρχει
     if (linuxmenu) {
-        linuxmenu.innerHTML = mymenu; // Προσθέτει το dropdown στο DOM
+        linuxmenu.innerHTML = termmymenu; // Προσθέτει το dropdown στο DOM
         $('#termianal-select').select2(); // Εφαρμογή του Select2 αμέσως μετά την προσθήκη του HTML
     }
 }
