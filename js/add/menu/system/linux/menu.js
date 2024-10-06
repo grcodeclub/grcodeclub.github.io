@@ -4,7 +4,7 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/linux/">Linux</option>
-        <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
+        <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων</option>
         <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
     </select>
 </div>
