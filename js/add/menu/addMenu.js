@@ -21,11 +21,8 @@ fetch(currentURL)
             else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/ip.js');} 
             else if (currentURL.startsWith('https://grcodeclub.gr/linux/')) {
                     addScript('https://grcodeclub.github.io/js/add/menu/system/linux/menu.js');
-if (currentURL === 'https://grcodeclub.gr/linux/') {
-    addScript('https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js');
-} else {
-    console.log("Η τρέχουσα διεύθυνση URL δεν ταιριάζει με την αναμενόμενη.",currentURL);
-}            }
+                     if (currentURL === 'https://grcodeclub.gr/linux/terminal/') {addScript('https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js');
+                     } else {console.log("Η τρέχουσα διεύθυνση URL δεν ταιριάζει με την αναμενόμενη.",currentURL);}            }
         }
         else {console.log("Η σελίδα δεν είναι διαθέσιμη. Κωδικός κατάστασης: " + response.status);}
     })
