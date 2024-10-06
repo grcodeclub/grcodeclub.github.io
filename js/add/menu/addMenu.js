@@ -11,3 +11,4 @@ const currentURL = window.location.href;  // Λειτουργία για να ε
              || currentURL.startsWith('https://grcodeclub.gr/system/orologia/')  || currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/'))
         {addScript('https://grcodeclub.github.io/js/add/menu/orologia.js');}
     else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/ip/')){addScript('https://grcodeclub.github.io/js/add/menu/network/ip.js');}
+    else if (currentURL.startsWith('https://grcodeclub.gr/linux')){addScript('https://grcodeclub.github.io/js/add/menu/system/linux.js');}
