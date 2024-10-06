@@ -40,22 +40,19 @@ window.onload = function() {
 };
 
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
-    if (currentURL.startsWith('https://grcodeclub.gr/linux/termianl')){
+    if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')){
         mymenu = `
             <div class="dropdown-container contentsMenu">
                 <label for="page-select" class="form-label">Περιεχόμενα :</label>
-            <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/linux/">Linux</option>
-    <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
-    <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
-</select>
-</div>
-`;
+                <select id="page-select" class="form-select" onchange="redirectToPage()">
+                    <option value="https://grcodeclub.gr/linux/">Linux</option>
+                    <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
+                    <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
+                </select>
+            </div>    `;
      addHeader = document.getElementById('linux-menu');
      if (addHeaderDiv) {addHeaderDiv.innerHTML = htmlContentHeader;} 
-    window.onload = function() {
+     window.onload = function() {
           $(document).ready(function() { $('#page-select').select2();    }); // Εφαρμογή του Select2
         };
-
     }
-
