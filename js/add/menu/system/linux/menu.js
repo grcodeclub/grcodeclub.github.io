@@ -45,5 +45,9 @@ window.onload = function() {
     }
 
     // Εφαρμογή του Select2 χωρίς το $(document).ready
-    $('#page-select').select2();
+   $('#page-select').select2({
+                placeholder: "Επιλέξτε ένα στοιχείο",
+                allowClear: true
+            });
+    
 };
