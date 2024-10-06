@@ -34,7 +34,7 @@ const termMenu = `
 </select>
 `;
 
-// Εύρεση του στοιχείου με το id 'linux-term'
+        // Εύρεση του στοιχείου με το id 'linux-term'
 const addTerm = document.getElementById('linux-term');
 if (addTerm) { 
     addTerm.innerHTML = termMenu;
@@ -60,8 +60,6 @@ function redirectFromTermSelect() {
 
 // Συνδυασμένος κώδικας για το window.onload
 window.onload = function() {
-      // Χρησιμοποιούμε setTimeout για να περιμένουμε 5 δευτερόλεπτα
-    setTimeout(function() {
         const termselect = document.getElementById('select-term');
         const pageselect = document.getElementById('page-select');
         const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
@@ -89,6 +87,8 @@ window.onload = function() {
             $('#page-select').select2(); // Εφαρμογή του select2 για το page-select
         }
 
+
+        
         // Έλεγχος για το select-term
         if (termselect) {
             for (let termoption of termselect.options) {
@@ -98,6 +98,4 @@ window.onload = function() {
                 }
             }
             $('#select-term').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το select-term
-        }
-    }, 1000); // 900 ms 
-};
+        }};
