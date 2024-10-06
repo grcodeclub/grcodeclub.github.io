@@ -5,6 +5,7 @@ const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
 <select id="page-select" class="form-select" onchange="redirectToPage()">
+    <option value="https://grcodeclub.gr/network/protocol/ip/ip">Internet Protocol</option>
     <option value="https://grcodeclub.gr/network/protocol/ip/ipv4">Internet Protocol v4</option>
     <option value="https://grcodeclub.gr/network/protocol/ip/ipv6">Internet Protocol v6</option>
     <option value="https://grcodeclub.gr/network/protocol/ip/packet_IPv4">Internet Protocol v4 Μορφή Πακέτο</option>
