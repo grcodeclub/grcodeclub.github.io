@@ -35,15 +35,17 @@ function redirectToPage() {
 window.onload = function() {
     const select = document.getElementById('page-select');
     const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
-    
-    // Έλεγχος για να βρούμε το κατάλληλο option
-    for (let option of select.options) {
+
+    if (currentUrl.startsWith('https://grcodeclub.gr/linux/terminal/')){select.value = 'https://grcodeclub.gr/linux/terminal/';}
+    else{
+         // Έλεγχος για να βρούμε το κατάλληλο option
+        for (let option of select.options) {
         if (option.value === currentUrl) {
             select.value = option.value; // Ρύθμιση του επιλεγμένου option
             break;
         }
     }
-
+    }
     // Εφαρμογή του Select2 χωρίς το $(document).ready
    $('#page-select').select2();
     
