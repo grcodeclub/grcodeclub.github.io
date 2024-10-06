@@ -44,10 +44,8 @@ window.onload = function() {
         }
     }
 
-     $('#term-select').select2({
-                placeholder: "Αναζήτηση", // Placeholder
-                allowClear: true
-            });
+                $('#term-select').select2();
+
 };
 
     
