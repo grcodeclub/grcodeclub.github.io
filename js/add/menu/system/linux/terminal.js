@@ -43,8 +43,12 @@ window.onload = function() {
             break;
         }
     }
+const currentURTermL = window.location.href;  
+if (currentURTermL === 'https://grcodeclub.gr/linux/terminal/') {
+    select.value = 'https://grcodeclub.gr/linux/terminal/';
+}
 
-                $('#term-select').select2();
+            $('#term-select').select2();
 
 };
 
