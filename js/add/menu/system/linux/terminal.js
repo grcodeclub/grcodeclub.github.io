@@ -7,6 +7,7 @@ const mymenu = `
         <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων</option>
         <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
         <option value="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</option>
+        <option value="https://grcodeclub.gr/linux/more/distro">Distros</option>
     </select>
 </div>
 `;
