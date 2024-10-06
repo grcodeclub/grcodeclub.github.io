@@ -141,11 +141,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
     if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
 
-    const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
-    if (currentURL.startsWith('https://grcodeclub.gr/c/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/c.js');}
-    else if (currentURL.startsWith('https://grcodeclub.gr/python/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/programming/python.js');}
-    else if (currentURL.startsWith('https://grcodeclub.gr/orologia/') || currentURL.startsWith('https://grcodeclub.gr/network/orologia/')  || currentURL.startsWith('https://grcodeclub.gr/programming/orologia/')
-             || currentURL.startsWith('https://grcodeclub.gr/system/orologia/')  || currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/'))
-        {addScriptBody('https://grcodeclub.github.io/js/add/menu/orologia.js');}
-    else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/ip/')){addScriptBody('https://grcodeclub.github.io/js/add/menu/network/ip.js');}
+   addScriptBody('https://grcodeclub.github.io/js/add/menu/addMenu.js');}
 });
