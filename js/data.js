@@ -141,5 +141,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
     if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
 
-   addScriptBody('https://grcodeclub.github.io/js/add/menu/addMenu.js');}
+   addScriptBody('https://grcodeclub.github.io/js/add/menu/addMenu.js');
 });
