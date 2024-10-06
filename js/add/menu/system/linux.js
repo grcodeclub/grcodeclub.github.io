@@ -44,23 +44,17 @@ var currentURL = window.location.href; // Λειτουργία για να ελ�
 if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
      mymenu = `
         <div class="dropdown-container contentsMenu">
-            <label for="page-select" class="form-label">Περιεχόμενα :</label>
-            <select id="page-select" class="form-select" onchange="redirectToPage()">
+            <label for="termianal-select" class="form-label">Περιεχόμενα :</label>
+            <select id="termianal-select" class="form-select" onchange="redirectToPage()">
                 <option value="https://grcodeclub.gr/linux/">Linux</option>
                 <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
                 <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
             </select>
         </div>`;
 
-    var addHeaderDiv = document.getElementById('linux-menu'); // Ελέγξτε ότι το 'linux-menu' υπάρχει
+    addHeaderDiv = document.getElementById('linux-menu'); // Ελέγξτε ότι το 'linux-menu' υπάρχει
     if (addHeaderDiv) {
         addHeaderDiv.innerHTML = mymenu; // Προσθέτει το dropdown στο DOM
-        $('#page-select').select2(); // Εφαρμογή του Select2 αμέσως μετά την προσθήκη του HTML
+        $('#termianal-select').select2(); // Εφαρμογή του Select2 αμέσως μετά την προσθήκη του HTML
     }
 }
-
-function redirectToPage() {
-    var selectedValue = $('#page-select').val(); // Χρησιμοποιεί το στοιχείο που καλεί τη λειτουργία
-    window.location.href = selectedValue; // Ανακατεύθυνση
-}
-
