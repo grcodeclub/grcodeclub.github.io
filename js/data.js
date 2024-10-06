@@ -5,6 +5,7 @@ const cssLinks = [
     "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css",
     "https://grcodeclub.gr/css/select2.css",
+    "https://grcodeclub.gr/css/table.css",
     "https://grcodeclub.gr/css/bootstrap/custom.css",
     "https://grcodeclub.gr/css/scrollbars.css",
     "https://grcodeclub.gr/css/cookies.css",
