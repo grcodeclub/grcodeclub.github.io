@@ -31,7 +31,7 @@ if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
      console.log("Terminal Menu");
      const termmymenu = `
         <div class="dropdown-container contentsMenu">
-            <label for="termianal-select" class="form-label">Περιεχόμενα :</label>
+            <label for="termianal-select" class="form-label">Εντολες :</label>
             <select id="termianal-select" class="form-select" onchange="redirectToPage()">
                 <option value="https://grcodeclub.gr/linux/">Linux</option>
                 <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
