@@ -3,7 +3,7 @@
 // Το HTML περιεχόμενο του dropdown
 const termMenu = `
 <select id="term-select" class="form-select" onchange="redirectToPage()">
-      <option value="https://grcodeclub.gr/linux/terminal/">Διάλεξε κατηγορία ή εντολή</option>
+      <optio></option>
       <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
       <option value="https://grcodeclub.gr/linux/terminal/files/grep">grep</option>
       <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
@@ -46,9 +46,10 @@ window.onload = function() {
 
     $(document).ready(function() {
             // Εφαρμογή του Select2
-            $('#term-select').select2();
-
-          
+            $('#term-select').select2({
+                placeholder: "Αναζήτηση",
+                allowClear: true
+            });
         });
 };
 
