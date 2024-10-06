@@ -24,12 +24,12 @@ const termMenu = `
 <select id="select-term" class="form-select">
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
     <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
-    <option value="https://grcodeclub.gr/linux/terminal/files/grep">grep</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
     <option value="https://grcodeclub.gr/linux/terminal/files/">Διαχείριση Αρχείων και Καταλόγων</option>
-    <option value="https://grcodeclub.gr/linux/terminal/tools/git">Git-Commands</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/apt">apt</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/snap">snap</option>
+    <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
+    <option value="https://grcodeclub.gr/linux/terminal/files/grep">Εντολή: grep</option>
+    <option value="https://grcodeclub.gr/linux/terminal/tools/git">Εντολή: git</option>
+    <option value="https://grcodeclub.gr/linux/terminal/system/apt">Εντολή: apt</option>
+    <option value="https://grcodeclub.gr/linux/terminal/system/snap">Εντολή: snap</option>
 </select>
 `;
 
