@@ -13,10 +13,15 @@
     <div class="container">
         <h1 class="title">Προφίλ Ομάδας</h1>
         <p>Μπορείτε εισαγόταν τος url ενός προφίλ, να δείτε αν ανήκει στην ομάδα μας.</p>
-        
+        <p><strong><u>Προσοχή το URL να μην τελειώνει με / και να ξεκινάει με https:// ή http://</u></strong>
+            <br><strong>Σωστό:</strong> https://grcodeclub.github.io | <strong>Λάθος:</strong> https://grcodeclub.github.io/ 
+        </p>
         <!-- Είσοδος για το URL του προφίλ -->
         <div class="mb-3">
-            <input type="text" class="form-control" id="searchId" placeholder="Έλεγχος προφίλ">
+            <div class="input-group">
+                <span class="input-group-text">URL</span> <!-- Προσθήκη του http:// -->
+                <input type="text" class="form-control" id="searchURL" placeholder="Έλεγχος προφίλ">
+            </div>
         </div>
         <hr>
         
@@ -114,26 +119,31 @@
             });
         }
 
-        // Συνάρτηση αναζήτησης χρήστη με βάση το URL
         function searchUserByURL() {
-            const searchId = document.getElementById('searchId').value.trim(); // Λάβετε το ID ως κείμενο
-            // Φιλτράρισμα χρηστών με βάση το URL του προφίλ
-            const filteredUsers = allUsers.filter(user => user.profileLink.toString().toLowerCase().includes(searchId.toLowerCase())); 
-            
-            const selectedPosition = document.getElementById('positionFilter').value; // Επιλεγμένη θέση
-            // Φιλτράρισμα βάσει θέσης
-            const finalFilteredUsers = selectedPosition ? filteredUsers.filter(user => user.position === selectedPosition) : filteredUsers;
+    const searchURL = document.getElementById('searchURL').value.trim(); // Λάβετε το ID ως κείμενο
+    const positionFilter = document.getElementById('positionFilter'); // Λάβετε το φίλτρο θέσεων
 
-            // Εμφάνιση μηνύματος αν δεν υπάρχει χρήστης
-            const noUserMessage = document.getElementById('noUserMessage');
-            if (finalFilteredUsers.length === 0 && searchId !== '') {
-                noUserMessage.classList.remove('d-none'); // Εμφάνιση μηνύματος ότι δεν βρέθηκε χρήστης
-                displayUsers([]); // Καθαρίστε τις κάρτες χρηστών
-            } else {
-                noUserMessage.classList.add('d-none'); // Απόκρυψη του μηνύματος
-                displayUsers(finalFilteredUsers.length > 0 ? finalFilteredUsers : allUsers); // Επαναφορά αν δεν βρεθούν χρήστες
-            }
-        }
+    // Φιλτράρισμα χρηστών με βάση το URL του προφίλ
+    const filteredUsers = allUsers.filter(user => user.profileLink.toString().toLowerCase() === searchURL.toLowerCase()); 
+    
+    const selectedPosition = positionFilter.value; // Επιλεγμένη θέση
+    // Φιλτράρισμα βάσει θέσης
+    const finalFilteredUsers = selectedPosition ? filteredUsers.filter(user => user.position === selectedPosition) : filteredUsers;
+
+    // Εμφάνιση μηνύματος αν δεν υπάρχει χρήστης
+    const noUserMessage = document.getElementById('noUserMessage');
+    if (finalFilteredUsers.length === 0 && searchURL !== '') {
+        noUserMessage.classList.remove('d-none'); // Εμφάνιση μηνύματος ότι δεν βρέθηκε χρήστης
+        displayUsers([]); // Καθαρίστε τις κάρτες χρηστών
+    } else {
+        noUserMessage.classList.add('d-none'); // Απόκρυψη του μηνύματος
+        displayUsers(finalFilteredUsers.length > 0 ? finalFilteredUsers : allUsers); // Επαναφορά αν δεν βρεθούν χρήστες
+    }
+
+    // Κλείδωμα ή απενεργοποίηση του select
+    positionFilter.disabled = searchURL !== ''; // Απενεργοποίηση αν υπάρχει κείμενο
+}
+
 
         // Συνάρτηση φιλτραρίσματος χρηστών βάσει θέσης
         function filterByPosition() {
@@ -145,7 +155,7 @@
         }
 
         // Προσθέτει τον ακροατή για το γεγονός εισαγωγής
-        document.getElementById('searchId').addEventListener('input', searchUserByURL); // Όταν πληκτρολογηθεί κάτι
+        document.getElementById('searchURL').addEventListener('input', searchUserByURL); // Όταν πληκτρολογηθεί κάτι
         document.getElementById('positionFilter').addEventListener('change', filterByPosition); // Ακροατής για αλλαγή θέσης
 
         loadUsers(); // Φόρτωση χρηστών κατά την αρχική φόρτωση της σελίδας
