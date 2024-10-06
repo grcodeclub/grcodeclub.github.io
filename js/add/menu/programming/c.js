@@ -55,4 +55,10 @@ window.onload = function() {
             const targetValue = "https://grcodeclub.gr/c/library/";
             select.value = targetValue;    
     }
+        $(document).ready(function() {
+            // Εφαρμογή του Select2
+            $('#page-select').select2();
+
+          
+        });
 };
