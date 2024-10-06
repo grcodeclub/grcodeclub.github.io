@@ -48,8 +48,10 @@ if (currentURTermL === 'https://grcodeclub.gr/linux/terminal/') {
     select.value = 'https://grcodeclub.gr/linux/terminal/';
 }
 
-            $('#term-select').select2();
-
+  $('#term-select').select2({
+                placeholder: "Αναζήτηση",
+                allowClear: true
+            });
 };
 
     
