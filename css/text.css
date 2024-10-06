@@ -40,8 +40,9 @@ div.cmd {
     color: #dcdcdc;
 }
 
-.form-label{ color: #dcdcdc;}
-
+.form-label{ color: #dcdcdc;
+margin-left: 2%;
+font-size: 20px;}
 
 a.link {
     padding: 4px;
