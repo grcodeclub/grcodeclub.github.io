@@ -44,10 +44,7 @@ window.onload = function() {
             break;
         }
     }
-const currentURTermL = window.location.href;  
-if (currentURTermL === 'https://grcodeclub.gr/linux/terminal/') {
-    pageselect.value = 'https://grcodeclub.gr/linux/terminal/';
-}
+if (currentUrl.startsWith('https://grcodeclub.gr/linux/terminal/')){pageselect.value = 'https://grcodeclub.gr/linux/terminal/';}
 
   $('#term-select').select2({
                 placeholder: "Αναζήτηση",
