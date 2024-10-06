@@ -16,6 +16,28 @@ h1.back_page           {display: inline-block;}
     }
 }
 
+        .openlink {
+  text-transform: uppercase; /* Κεφαλαιοποιεί το κείμενο */
+  background-color: #484c4c30; /* Προεπιλεγμένο χρώμα φόντου (teal) */
+  color: #000000; /* Άσπρο χρώμα για το κείμενο */
+  border: none; /* Καμία γραμμή περιγράμματος */
+  border-radius: 5px;
+  display: inline-block; /* Για να εμφανίζεται σε σειρά με άλλα στοιχεία */
+  height: 36px; /* Ύψος κουμπιού */
+  line-height: 36px; /* Κάθετη ευθυγράμμιση κειμένου */
+  padding: 0 16px; /* Εσωτερικό padding (γέμισμα) αριστερά και δεξιά */
+  text-align: center; /* Ευθυγράμμιση του κειμένου στο κέντρο */
+  text-decoration: none; /* Αφαιρεί την υπογράμμιση από τον σύνδεσμο */
+  cursor: pointer; /* Δείκτης χεριού όταν περνά το ποντίκι */
+  box-shadow: 0 4px 6px rgb(48, 48, 49); /* Προσθήκη σκιάς για 3D εφέ */
+
+}
+.openlink:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Βαθύτερη σκιά στο hover */
+  transform: translateY(2px); /* Ελαφριά κίνηση προς τα πάνω για 3D εφέ */
+
+    background-color: #484c4c89; /* Προεπιλεγμένο χρώμα φόντου (teal) */
+}
 
 div.text_bg {
     background-color: rgba(20, 20, 20, 0.85); /* Σκούρο γκρι με ελαφριά διαφάνεια */
