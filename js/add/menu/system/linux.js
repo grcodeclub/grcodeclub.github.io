@@ -42,6 +42,7 @@ window.onload = function() {
 var currentURL = window.location.href; // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
 if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
+     console.log("Terminal Menu");
      mymenu = `
         <div class="dropdown-container contentsMenu">
             <label for="termianal-select" class="form-label">Περιεχόμενα :</label>
