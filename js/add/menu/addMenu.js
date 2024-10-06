@@ -19,7 +19,10 @@ fetch(currentURL)
                        currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/')) {
                         addScript('https://grcodeclub.github.io/js/add/menu/orologia.js'); } 
             else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/ip.js');} 
-            else if (currentURL.startsWith('https://grcodeclub.gr/linux/')) {addScript('https://grcodeclub.github.io/js/add/menu/system/linux/menu.js');}
+            else if (currentURL.startsWith('https://grcodeclub.gr/linux/')) {
+                    addScript('https://grcodeclub.github.io/js/add/menu/system/linux/menu.js');
+                     if (currentURL === 'https://grcodeclub.gr/linux/'){ addScript('https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js'); }
+            }
         }
         else {console.log("Η σελίδα δεν είναι διαθέσιμη. Κωδικός κατάστασης: " + response.status);}
     })
