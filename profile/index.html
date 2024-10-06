@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/linux.png"/>
+    <meta property="og:title" content="Linux">
+    <title>GrCode Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Σύνδεση με CSS Bootstrap για το στυλ -->
+    <script src="https://grcodeclub.gr/js/data.js"></script> <!-- Σύνδεση με εξωτερικό αρχείο JavaScript -->
+</head>
+<body>
+    <div id="addHeader"></div> <!-- Θέση για πρόσθετο header αν χρειαστεί -->
+    <div class="container">
+        <h1 class="title">Προφίλ Ομάδας</h1>
+        <p>Μπορείτε εισαγόταν τος url ενός προφίλ, να δείτε αν ανήκει στην ομάδα μας.</p>
+        
+        <!-- Είσοδος για το URL του προφίλ -->
+        <div class="mb-3">
+            <input type="text" class="form-control" id="searchId" placeholder="Έλεγχος προφίλ">
+        </div>
+        <hr>
+        
+        <!-- Επιλογή Θέσης -->
+        <div class="mb-3">
+            <label for="positionFilter" class="form-label" style="color: black;">Φιλτράρισμα Θέσεων</label>
+            <select class="form-select" id="positionFilter">
+                <!-- Οι επιλογές θα προστεθούν δυναμικά -->
+            </select>
+        </div>
+        <hr>
+        
+        <!-- Τοποθέτηση των καρτών χρηστών -->
+        <div class="row" id="user-cards">
+            <!-- Οι κάρτες χρηστών θα προστεθούν εδώ -->
+        </div>
+        
+        <!-- Μήνυμα που εμφανίζεται αν δεν βρεθεί χρήστης -->
+        <div id="noUserMessage" class="alert alert-warning d-none" role="alert">
+            Δεν υπάρχει προφίλ με αυτό το URL
+        </div>
+    </div>
+
+    <script>
+        let allUsers = []; // Για αποθήκευση όλων των χρηστών
+
+        // Συνάρτηση για φόρτωση των χρηστών από το JSON αρχείο
+        async function loadUsers() {
+            try {
+                const jsonFilePath = './users.json'; // Διαδρομή του JSON αρχείου
+                console.log(`Trying to fetch users from: ${jsonFilePath}`); // Εκτύπωση της διαδρομής
+                
+                const response = await fetch(jsonFilePath); // Προσπάθεια λήψης του JSON αρχείου
+                console.log(response); // Δες την απάντηση του fetch
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`); // Έλεγξε αν η απάντηση είναι ok
+                }
+
+                const data = await response.json(); // Μετατροπή της απάντησης σε JSON
+                allUsers = data.users; // Αποθήκευσε όλους τους χρήστες
+
+                displayUsers(allUsers); // Προβολή όλων των χρηστών
+                populatePositionFilter(allUsers); // Γέμισμα του φίλτρου θέσεων
+            } catch (error) {
+                console.error('Σφάλμα κατά τη φόρτωση των χρηστών:', error); // Εμφάνιση σφάλματος στην κονσόλα
+            }
+        }
+
+        // Συνάρτηση για γέμισμα του φίλτρου θέσεων
+        function populatePositionFilter(users) {
+            const positionFilter = document.getElementById('positionFilter'); // Λήψη του dropdown
+            const positions = new Set(users.map(user => user.position)); // Εξαγωγή μοναδικών θέσεων
+
+            // Καθαρισμός των υπάρχοντων επιλογών
+            positionFilter.innerHTML = '<option value="">Όλες οι Θέσεις</option>'; // Επαναφορά της αρχικής επιλογής
+
+            // Δημιουργία των νέων επιλογών
+            positions.forEach(position => {
+                const option = document.createElement('option'); // Δημιουργία νέας επιλογής
+                option.value = position; // Ρύθμιση της τιμής της επιλογής
+                option.textContent = position.charAt(0).toUpperCase() + position.slice(1); // Κεφαλαία το πρώτο γράμμα
+                positionFilter.appendChild(option); // Προσθήκη της επιλογής στο dropdown
+            });
+        }
+
+        // Συνάρτηση για προβολή των χρηστών
+        function displayUsers(users) {
+            const userCards = document.getElementById('user-cards'); // Λήψη του container για τις κάρτες χρηστών
+            userCards.innerHTML = ''; // Καθάρισμα των υπάρχουσων καρτών
+
+            users.forEach(user => {
+                // Δημιουργία του HTML για κάθε κάρτα χρήστη
+                const cardHTML = `
+                    <div class="col-md-4 mb-4" style="margin-bottom: 5%;">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-4">
+                                    <img src="${user.profileImage}" class="card-img-top" alt="Profile Image"> <!-- Εικόνα χρήστη -->
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${user.username}</h5> <!-- Όνομα χρήστη -->
+                                        <p class="card-text">Θέση: ${user.position}</p> <!-- Θέση χρήστη -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-0 mt-2">
+                                <a href="${user.profileLink}" class="btn btn-primary">Προβολή Προφίλ</a> <!-- Σύνδεσμος προς το προφίλ -->
+                            </div>
+                        </div>
+                    </div>
+                `;
+                userCards.innerHTML += cardHTML; // Προσθήκη της κάρτας στο container
+            });
+        }
+
+        // Συνάρτηση αναζήτησης χρήστη με βάση το URL
+        function searchUserByURL() {
+            const searchId = document.getElementById('searchId').value.trim(); // Λάβετε το ID ως κείμενο
+            // Φιλτράρισμα χρηστών με βάση το URL του προφίλ
+            const filteredUsers = allUsers.filter(user => user.profileLink.toString().toLowerCase().includes(searchId.toLowerCase())); 
+            
+            const selectedPosition = document.getElementById('positionFilter').value; // Επιλεγμένη θέση
+            // Φιλτράρισμα βάσει θέσης
+            const finalFilteredUsers = selectedPosition ? filteredUsers.filter(user => user.position === selectedPosition) : filteredUsers;
+
+            // Εμφάνιση μηνύματος αν δεν υπάρχει χρήστης
+            const noUserMessage = document.getElementById('noUserMessage');
+            if (finalFilteredUsers.length === 0 && searchId !== '') {
+                noUserMessage.classList.remove('d-none'); // Εμφάνιση μηνύματος ότι δεν βρέθηκε χρήστης
+                displayUsers([]); // Καθαρίστε τις κάρτες χρηστών
+            } else {
+                noUserMessage.classList.add('d-none'); // Απόκρυψη του μηνύματος
+                displayUsers(finalFilteredUsers.length > 0 ? finalFilteredUsers : allUsers); // Επαναφορά αν δεν βρεθούν χρήστες
+            }
+        }
+
+        // Συνάρτηση φιλτραρίσματος χρηστών βάσει θέσης
+        function filterByPosition() {
+            const selectedPosition = document.getElementById('positionFilter').value; // Λάβετε την επιλεγμένη θέση
+            // Φιλτράρισμα με βάση τη θέση
+            const filteredUsers = allUsers.filter(user => selectedPosition ? user.position === selectedPosition : true); 
+
+            displayUsers(filteredUsers.length > 0 ? filteredUsers : allUsers); // Επαναφορά αν δεν βρεθούν χρήστες
+        }
+
+        // Προσθέτει τον ακροατή για το γεγονός εισαγωγής
+        document.getElementById('searchId').addEventListener('input', searchUserByURL); // Όταν πληκτρολογηθεί κάτι
+        document.getElementById('positionFilter').addEventListener('change', filterByPosition); // Ακροατής για αλλαγή θέσης
+
+        loadUsers(); // Φόρτωση χρηστών κατά την αρχική φόρτωση της σελίδας
+    </script>
+
+    <div id="addFooter"></div> <!-- Θέση για πρόσθετο footer αν χρειαστεί -->
+</body>
+</html>
