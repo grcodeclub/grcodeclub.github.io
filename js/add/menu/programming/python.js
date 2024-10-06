@@ -74,5 +74,12 @@ const submenu = `
 
 const addMemnu = document.getElementById('sidebar'); // Εύρεση του στόχου με το id 'addHeader'
 
-if (addMemnu) {addMemnu.innerHTML = submenu;} // Προσθήκη του HTML περιεχομένου στο div με το id 'addHeader
 
+if (addMemnu) {addMemnu.innerHTML = submenu;} // Προσθήκη του HTML περιεχομένου στο div με το id 'addHeader
+window.onload = function() {
+    $(document).ready(function() {
+            // Εφαρμογή του Select2
+            $('#page-select').select2();
+        });
+
+};
