@@ -22,7 +22,6 @@ fetch(currentURL)
             else if (currentURL.startsWith('https://grcodeclub.gr/linux/')) { 
                 addScript('https://grcodeclub.github.io/js/add/menu/system/linux/menu.js');
                 if (currentURL === 'https://grcodeclub.gr/linux/'){
-                     addScript('https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js');
                 }
             }
         }
