@@ -25,7 +25,7 @@ function redirectToPage() {
     if (selectedValue) { window.location.href = selectedValue; }// Ανακατεύθυνση στην επιλεγμένη σελίδα
 }
 
-const currentURL = window.location.href; // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
+var currentURL = window.location.href; // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 console.log("URL:"); // Αν δεν ισχύει, εκτύπωση του τρέχοντος URL
 console.log("URL:", currentURL); // Αν δεν ισχύει, εκτύπωση του τρέχοντος URL
 if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
@@ -50,7 +50,7 @@ if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
 
 window.onload = function() {
     var select = document.getElementById('page-select');
-    var currentUrl = window.location.href; // Παίρνουμε το τρέχον UR 
+    currentUrl = window.location.href; // Παίρνουμε το τρέχον UR 
     // Έλεγχος για να βρούμε το κατάλληλο option
     for (var option of select.options) {
         if (option.value === currentUrl) {
