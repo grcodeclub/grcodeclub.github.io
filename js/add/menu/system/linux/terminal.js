@@ -25,6 +25,7 @@ const termMenu = `
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
     <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
     <option value="https://grcodeclub.gr/linux/terminal/files/">Διαχείριση Αρχείων και Καταλόγων</option>
+    <option value="https://grcodeclub.gr/linux/terminal/network">Εντολές Δικτύου</option>
     <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
     <option value="https://grcodeclub.gr/linux/terminal/files/grep">Εντολή: grep</option>
     <option value="https://grcodeclub.gr/linux/terminal/tools/git">Εντολή: git</option>
