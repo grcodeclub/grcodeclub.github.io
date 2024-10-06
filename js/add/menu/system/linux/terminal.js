@@ -34,6 +34,7 @@ function redirectToPage() {
 // Ρύθμιση του επιλεγμένου option με βάση το τρέχον URL
 window.onload = function() {
     const select = document.getElementById('term-select');
+    const pageselect = document.getElementById('[page-select');
     const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
     
     // Έλεγχος για να βρούμε το κατάλληλο option
@@ -45,7 +46,7 @@ window.onload = function() {
     }
 const currentURTermL = window.location.href;  
 if (currentURTermL === 'https://grcodeclub.gr/linux/terminal/') {
-    select.value = 'https://grcodeclub.gr/linux/terminal/';
+    pageselect.value = 'https://grcodeclub.gr/linux/terminal/';
 }
 
   $('#term-select').select2({
