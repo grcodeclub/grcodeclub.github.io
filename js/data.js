@@ -143,12 +143,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
 
-   const highlights = document.querySelectorAll('.highlight');
-    highlights.forEach(function(highlight) {
-        const hr = document.createElement('hr');
-        highlight.parentNode.insertBefore(hr, highlight);
-    });
-
-
     
 });
