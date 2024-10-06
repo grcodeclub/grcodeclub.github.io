@@ -45,7 +45,6 @@ if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
     const linuxmenu = document.getElementById('linux-menu'); // Ελέγξτε ότι το 'linux-menu' υπάρχει
     if (linuxmenu) {
         linuxmenu.innerHTML = termmymenu; // Προσθέτει το dropdown στο DOM
-        $('#termianal-select').select2(); // Εφαρμογή του Select2 αμέσως μετά την προσθήκη του HTML
     }
 }
 
@@ -59,6 +58,8 @@ window.onload = function() {
             break;
         }
     }
-
+    if (linuxmenu) {
+    $('#termianal-select').select2(); // Εφαρμογή του Select2 αμέσως μετά την προσθήκη του HTML
+    }
   $(document).ready(function() { $('#page-select').select2();    }); // Εφαρμογή του Select2
 };
