@@ -46,7 +46,7 @@ window.onload = function() {
 
     // Εφαρμογή του Select2 χωρίς το $(document).ready
    $('#page-select').select2({
-                placeholder: "Αναζήτηση",
+                placeholder: "Διάλεξε κατηγορία ή εντολή",
                 allowClear: true
             });
     
