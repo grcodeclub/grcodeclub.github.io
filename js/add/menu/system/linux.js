@@ -26,6 +26,7 @@ function redirectToPage() {
 }
 
 const currentURL = window.location.href; // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
+console.log("URL:"); // Αν δεν ισχύει, εκτύπωση του τρέχοντος URL
 console.log("URL:", currentURL); // Αν δεν ισχύει, εκτύπωση του τρέχοντος URL
 if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
      console.log("Terminal Menu");
