@@ -38,9 +38,9 @@ window.onload = function() {
     const termcurrentUrl = window.location.href; // Παίρνουμε το τρέχον URL
     
     // Έλεγχος για να βρούμε το κατάλληλο option
-    for (let option of termselect.options) {
+    for (let termoption of termselect.options) {
         if (option.value === termcurrentUrl) {
-            termselect.value = option.value; // Ρύθμιση του επιλεγμένου option
+            termselect.value = termoption.value; // Ρύθμιση του επιλεγμένου option
             break;
         }
     }
