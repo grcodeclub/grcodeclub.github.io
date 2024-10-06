@@ -52,10 +52,12 @@
    .container{margin-top: 10%}
 }
 
-.dropdown-menu{
+.dropdown-menu, .dropdown{
 	background-color: #343a40;
 	border-color: #343a40;
 }
+.dropdown a {color: white;}
+
 
 /* Αφαίρεση του προεπιλεγμένου background image */
 .navbar-toggler-icon {
