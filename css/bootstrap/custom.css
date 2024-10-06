@@ -1,6 +1,6 @@
 .navbar-expand-lg { right: 0; }
 .custom-navbar .navbar-brand, .custom-navbar .nav-link color: #ffffff; } /* Λευκό χρώμα για τις συνδέσεις */
-.dropdown-menu li a{ color: white; }
+.dropdown-menu ul{ color: white; }
 .nav-item{ right: 0; }
 .custom-navbar .nav-link:hover { color: #ffc107; }  /* Χρώμα όταν περνάει ο δείκτης του ποντικιού */ 
 .navbar-toggler { border-color: #000000; } /* Τροποποίηση του background color του κουμπιού */
