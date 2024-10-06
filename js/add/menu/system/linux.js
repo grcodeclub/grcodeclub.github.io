@@ -40,7 +40,7 @@ if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
         </div>`;
 
     const linuxmenu = document.getElementById('linux-menu'); // Ελέγξτε ότι το 'linux-menu' υπάρχει
-    if (addHeaderDiv) {
+    if (linuxmenu) {
         linuxmenu.innerHTML = mymenu; // Προσθέτει το dropdown στο DOM
         $('#termianal-select').select2(); // Εφαρμογή του Select2 αμέσως μετά την προσθήκη του HTML
     }
