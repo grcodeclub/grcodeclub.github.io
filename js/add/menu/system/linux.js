@@ -27,7 +27,7 @@ function redirectToPage() {
     var selectedValue = select.value; // Παίρνουμε την τιμή του επιλεγμένου option
     if (selectedValue) { window.location.href = selectedValue; }// Ανακατεύθυνση στην επιλεγμένη σελίδα
 }
-
+    const linuxmenu = document.getElementById('linux-menu'); // Ελέγξτε ότι το 'linux-menu' υπάρχει
 console.log("URL:"); // Αν δεν ισχύει, εκτύπωση του τρέχοντος URL
 console.log("URL:", currentURL); // Αν δεν ισχύει, εκτύπωση του τρέχοντος URL
 if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
@@ -35,14 +35,14 @@ if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
      const termmymenu = `
         <div class="dropdown-container contentsMenu">
             <label for="termianal-select" class="form-label">Εντολες :</label>
-            <select id="termianal-select" class="form-select" onchange="redirectToPage()">
-                <option value="https://grcodeclub.gr/linux/">Linux</option>
-                <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
-                <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
-            </select>
+          <select id="select2" style="width: 200px;">
+           <option value="A">Option A</option>
+           <option value="B">Option B</option>
+           <option value="C">Option C</option>
+           <option value="D">Option D</option>
+       </select>
         </div>`;
 
-    const linuxmenu = document.getElementById('linux-menu'); // Ελέγξτε ότι το 'linux-menu' υπάρχει
     if (linuxmenu) {
         linuxmenu.innerHTML = termmymenu; // Προσθέτει το dropdown στο DOM
     }
@@ -58,8 +58,9 @@ window.onload = function() {
             break;
         }
     }
-    if (linuxmenu) {
-    $('#termianal-select').select2(); // Εφαρμογή του Select2 αμέσως μετά την προσθήκη του HTML
-    }
-  $(document).ready(function() { $('#page-select').select2();    }); // Εφαρμογή του Select2
+     $(document).ready(function() {
+            // Initialize Select2 for both select elements
+            $('#page-select').select2();
+                $('select2').select2(); // Εφαρμογή του Select2 αμέσως μετά την προσθήκη του HTML
+        });
 };
