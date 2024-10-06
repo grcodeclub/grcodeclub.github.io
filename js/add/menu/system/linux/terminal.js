@@ -3,8 +3,8 @@
 // Το HTML περιεχόμενο του dropdown
 const termMenu = `
 <div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα :</label>
-<select id="page-select" class="form-select" onchange="redirectToPage()">
+    <label for="term-select" class="form-label">Περιεχόμενα :</label>
+<select id="term-select" class="form-select" onchange="redirectToPage()">
       <option value="https://grcodeclub.gr/linux/">Linux</option>
       <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
       <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
@@ -44,7 +44,7 @@ window.onload = function() {
 
     $(document).ready(function() {
             // Εφαρμογή του Select2
-            $('#page-select').select2();
+            $('#term-select').select2();
 
           
         });
