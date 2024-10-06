@@ -1,60 +1,24 @@
-// Ο κώδικας παραμένει ο ίδιος για την προσθήκη του πρώτου dropdown
-
-// Το HTML περιεχόμενο του πρώτου dropdown
-const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα :</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/linux/">Linux</option>
-        <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων</option>
-        <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
-    </select>
-</div>
-`;
-
-// Εύρεση του στοιχείου με το id 'addHeader'
-const addHeader = document.getElementById('addHeader');
-
-// Προσθήκη του HTML περιεχομένου αν δεν έχει ήδη προστεθεί
-const nextDiv = addHeader ? addHeader.nextElementSibling : null;
-if (nextDiv && !nextDiv.querySelector('#page-select')) {
-    nextDiv.insertAdjacentHTML('afterbegin', mymenu);
-}
-
-// Το HTML περιεχόμενο του δεύτερου dropdown
-const termMenu = `
-<select id="select-term" class="form-select" onchange="redirectToPage()">
-    <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
-    <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
-    <option value="https://grcodeclub.gr/linux/terminal/files/grep">grep</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
-    <option value="https://grcodeclub.gr/linux/terminal/files/">Διαχείριση Αρχείων και Καταλόγων</option>
-    <option value="https://grcodeclub.gr/linux/terminal/tools/git">Git-Commands</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/apt">apt</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/snap">snap</option>
-</select>
-`;
-
-// Εύρεση του στοιχείου με το id 'linux-term'
-const addTerm = document.getElementById('linux-term');
-if (addTerm) { 
-    addTerm.innerHTML = termMenu;
-}
-
-// Συνάρτηση για την ανακατεύθυνση στη σελίδα ανάλογα με την επιλογή
-function redirectToPage() {
-    const termselect = document.getElementById('select-term');
-    const selectedValue = termselect ? termselect.value : null;
-    if (selectedValue) {
-        window.location.href = selectedValue;
-    }
-
+// Συνάρτηση για την ανακατεύθυνση στη σελίδα από το page-select
+function redirectFromPageSelect() {
     const pageselect = document.getElementById('page-select');
     const pageSelectedValue = pageselect ? pageselect.value : null;
     if (pageSelectedValue) {
         window.location.href = pageSelectedValue;
     }
 }
+
+// Συνάρτηση για την ανακατεύθυνση στη σελίδα από το select-term
+function redirectFromTermSelect() {
+    const termselect = document.getElementById('select-term');
+    const termSelectedValue = termselect ? termselect.value : null;
+    if (termSelectedValue) {
+        window.location.href = termSelectedValue;
+    }
+}
+
+// Χρησιμοποιούμε διαφορετικές συναρτήσεις onchange για κάθε dropdown
+document.getElementById('page-select').onchange = redirectFromPageSelect;
+document.getElementById('select-term').onchange = redirectFromTermSelect;
 
 // Συνδυασμένος κώδικας για το window.onload
 window.onload = function() {
