@@ -33,14 +33,14 @@ function redirectToPage() {
 
 // Ρύθμιση του επιλεγμένου option με βάση το τρέχον URL
 window.onload = function() {
-    const select = document.getElementById('term-select');
+    const termselect = document.getElementById('term-select');
     const pageselect = document.getElementById('[page-select');
-    const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
+    const termcurrentUrl = window.location.href; // Παίρνουμε το τρέχον URL
     
     // Έλεγχος για να βρούμε το κατάλληλο option
-    for (let option of select.options) {
-        if (option.value === currentUrl) {
-            select.value = option.value; // Ρύθμιση του επιλεγμένου option
+    for (let option of termselect.options) {
+        if (option.value === termcurrentUrl) {
+            termselect.value = option.value; // Ρύθμιση του επιλεγμένου option
             break;
         }
     }
