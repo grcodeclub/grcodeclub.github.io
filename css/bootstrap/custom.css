@@ -17,6 +17,13 @@
 /* Προσαρμογή του χρώματος κατά το hover */
 .navbar-toggler:hover { background-color: #444444; /* Σκούρο γκρι κατά το hover */ }
 
+
+        .select2-container--default .select2-selection--single .select2-selection__placeholder {
+            color: white; /* Χρώμα του placeholder */
+        }
+
+
+
 .custom-navbar {
 	background-color: #343a40; /* Σκούρο χρώμα */
     	color: white; /* Λευκό κείμενο */
