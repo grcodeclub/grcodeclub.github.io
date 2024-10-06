@@ -44,7 +44,6 @@ window.onload = function() {
             break;
         }
     }
-if (currentUrl.startsWith('https://grcodeclub.gr/linux/terminal/')){pageselect.value = 'https://grcodeclub.gr/linux/terminal/';}
 
   $('#term-select').select2({
                 placeholder: "Αναζήτηση",
