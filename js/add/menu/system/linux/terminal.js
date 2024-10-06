@@ -85,6 +85,6 @@ window.onload = function() {
                 break;
             }
         }
-        $('#term-select').select2({ placeholder: "Αναζήτηση", allowClear: true }); // Εφαρμογή του select2 για το term-select
+        $('#term-select').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το term-select
     }
 };
