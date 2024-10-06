@@ -34,7 +34,7 @@ if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
      console.log("Terminal Menu");
      const termmymenu = `
         <div class="dropdown-container contentsMenu">
-            <label for="termianal-select" class="form-label">Εντολες :</label>
+            <label for="select2" class="form-label">Εντολες :</label>
           <select id="select2" style="width: 200px;">
            <option value="A">Option A</option>
            <option value="B">Option B</option>
