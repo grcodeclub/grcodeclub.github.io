@@ -3,7 +3,7 @@
 // Το HTML περιεχόμενο του dropdown
 const termMenu = `
 <select id="term-select" class="form-select" onchange="redirectToPage()">
-      <option></option>
+      <option></option> <!-- Placeholder option -->
       <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
       <option value="https://grcodeclub.gr/linux/terminal/files/grep">grep</option>
       <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
