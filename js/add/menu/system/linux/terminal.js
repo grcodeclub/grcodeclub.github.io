@@ -44,13 +44,10 @@ window.onload = function() {
         }
     }
 
-    $(document).ready(function() {
-            // Εφαρμογή του Select2
-            $('#term-select').select2({
-                placeholder: "Αναζήτηση",
+     $('#term-select').select2({
+                placeholder: "Αναζήτηση", // Placeholder
                 allowClear: true
             });
-        });
 };
 
     
