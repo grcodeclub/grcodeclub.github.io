@@ -60,23 +60,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Microsoft Windows</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown6">
-                            <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/">Περισσότερα</a></li>
-                            <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/command/">Γραμμή εντολών</a></li>
-                            <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/command/powershell/">PowerShell</a></li>
-                            <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/more/run">Windows Run Commands</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item dropdown-toggle" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Linux</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
-                            <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/">Περισσότερα</a></li>
-                            <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/terminal/">Terminal</a></li>
-                            <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</a></li>
-                        </ul>
-                    </li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/">Microsoft Windows</a></li>
+                     <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/">Linux</a></li>            
                 </ul>
             </li>
             <li class="nav-item dropdown">
