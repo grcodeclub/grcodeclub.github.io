@@ -99,5 +99,5 @@ window.onload = function() {
             }
             $('#select-term').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το select-term
         }
-    }, 5000); // 900 ms 
+    }, 900); // 900 ms 
 };
