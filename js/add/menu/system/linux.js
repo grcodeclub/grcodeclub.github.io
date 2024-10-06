@@ -39,7 +39,7 @@ window.onload = function() {
   $(document).ready(function() { $('#page-select').select2();    }); // Εφαρμογή του Select2
 };
 
-var currentURL = window.location.href; // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
+const currentURL = window.location.href; // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
 if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {
      console.log("Terminal Menu");
