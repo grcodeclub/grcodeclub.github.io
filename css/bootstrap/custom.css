@@ -32,9 +32,8 @@
 	left: 100%;
         top: 0;
         margin-top: 0;
+}
 
-
-.dropdown-item{color:white;}
 
 /* Αλλάζουμε την τοποθέτηση του submenu όταν είναι κοντά στην άκρη */
 .dropdown-submenu .dropdown-menu.left {
@@ -56,6 +55,7 @@
 	background-color: #343a40;
 	border-color: #343a40;
 }
+
 .dropdown a {color: white;}
 
 
