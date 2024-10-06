@@ -23,11 +23,11 @@ if (addTerm) {addTerm.innerHTML = termMenu;} // Προσθήκη του HTML π�
 
 // Συνάρτηση για την ανακατεύθυνση στη σελίδα ανάλογα με την επιλογή
 function redirectToPage() {
-    const select = document.getElementById('term-select');
-    const selectedValue = select.value; // Παίρνουμε την τιμή του επιλεγμένου option
+    const termselect = document.getElementById('term-select');
+    const termselectedValue = termselect.value; // Παίρνουμε την τιμή του επιλεγμένου option
     
-    if (selectedValue) {
-        window.location.href = selectedValue; // Ανακατεύθυνση στην επιλεγμένη σελίδα
+    if (termselectedValue) {
+        window.location.href = termselectedValue; // Ανακατεύθυνση στην επιλεγμένη σελίδα
     }
 }
 
