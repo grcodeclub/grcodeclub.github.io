@@ -2,12 +2,16 @@
 
 // Το HTML περιεχόμενο του dropdown
 const termMenu = `
-<div class="dropdown-container contentsMenu">
 <select id="term-select" class="form-select" onchange="redirectToPage()">
-      <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
+      <option value="https://grcodeclub.gr/linux/terminal/">Διάλεξε κατηγορία ή εντολή</option>
+      <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
+      <option value="https://grcodeclub.gr/linux/terminal/files/grep">grep</option>
+      <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
+      <option value="https://grcodeclub.gr/linux/terminal/files/">Διαχείριση Αρχείων και Καταλόγων</option>
+      <option value="https://grcodeclub.gr/linux/terminal/tools/git">Git-Commands</option>
+      <option value="https://grcodeclub.gr/linux/terminal/system/apt">apt</option>
+      <option value="https://grcodeclub.gr/linux/terminal/system/snap">snap</option>
 </select>
-<br>
-</div>
 `;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
