@@ -1,8 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {    
-
-
 function addScript(src) {
-        var script = document.createElement('script');
+        script = document.createElement('script');
         script.src = src;
         document.body.appendChild(script);
     }
@@ -30,8 +27,3 @@ fetch(currentURL)
         // Χειρισμός σφάλματος, π.χ., σε περίπτωση δικτύου
         console.error("Σφάλμα κατά την αίτηση:", error);
     });
-
-
-
-
-});
