@@ -1,7 +1,7 @@
 // Ο κώδικας παραμένει ο ίδιος για την προσθήκη του dropdown
 
 // Το HTML περιεχόμενο του dropdown
-const mymenu = `
+const termMenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
 <select id="page-select" class="form-select" onchange="redirectToPage()">
@@ -13,15 +13,11 @@ const mymenu = `
 `;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
-const addHeader = document.getElementById('linux-menu');
+const addTerm = document.getElementById('linux-menu');
 
 // Εύρεση του επόμενου στοιχείου (next sibling) μετά το 'addHeader'
-const nextDiv = addHeader.nextElementSibling;
+if (addTerm) {addTerm.innerHTML = termMenu;} // Προσθήκη του HTML περιεχομένου στο div με το id 'addHeader
 
-// Προσθήκη του HTML περιεχομένου στην αρχή του επόμενου div
-if (nextDiv) {
-    nextDiv.insertAdjacentHTML('afterbegin', mymenu);
-}
 
 // Συνάρτηση για την ανακατεύθυνση στη σελίδα ανάλογα με την επιλογή
 function redirectToPage() {
