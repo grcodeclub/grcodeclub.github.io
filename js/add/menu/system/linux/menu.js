@@ -1,14 +1,12 @@
-// Ο κώδικας παραμένει ο ίδιος για την προσθήκη του dropdown
-
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
-<select id="page-select" class="form-select" onchange="redirectToPage()">
-      <option value="https://grcodeclub.gr/linux/">Linux</option>
-      <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
-      <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
-</select>
+    <select id="page-select" class="form-select" onchange="redirectToPage()">
+        <option value="https://grcodeclub.gr/linux/">Linux</option>
+        <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων Linux</option>
+        <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
+    </select>
 </div>
 `;
 
@@ -18,8 +16,8 @@ const addHeader = document.getElementById('addHeader');
 // Εύρεση του επόμενου στοιχείου (next sibling) μετά το 'addHeader'
 const nextDiv = addHeader.nextElementSibling;
 
-// Προσθήκη του HTML περιεχομένου στην αρχή του επόμενου div
-if (nextDiv) {
+// Προσθήκη του HTML περιεχομένου στην αρχή του επόμενου div (αν δεν έχει ήδη προστεθεί)
+if (nextDiv && !nextDiv.querySelector('#page-select')) {
     nextDiv.insertAdjacentHTML('afterbegin', mymenu);
 }
 
@@ -46,12 +44,6 @@ window.onload = function() {
         }
     }
 
-    $(document).ready(function() {
-            // Εφαρμογή του Select2
-            $('#page-select').select2();
-
-          
-        });
+    // Εφαρμογή του Select2 χωρίς το $(document).ready
+    $('#page-select').select2();
 };
-
-    
