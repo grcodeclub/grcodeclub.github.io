@@ -3,7 +3,7 @@
 // Το HTML περιεχόμενο του dropdown
 const termMenu = `
 <select id="term-select" class="form-select" onchange="redirectToPage()">
-      <option></option> <!-- Placeholder option -->
+            <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
       <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
       <option value="https://grcodeclub.gr/linux/terminal/files/grep">grep</option>
       <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
@@ -23,7 +23,7 @@ if (addTerm) {addTerm.innerHTML = termMenu;} // Προσθήκη του HTML π�
 
 // Συνάρτηση για την ανακατεύθυνση στη σελίδα ανάλογα με την επιλογή
 function redirectToPage() {
-    const select = document.getElementById('page-select');
+    const select = document.getElementById('term-select');
     const selectedValue = select.value; // Παίρνουμε την τιμή του επιλεγμένου option
     
     if (selectedValue) {
@@ -33,7 +33,7 @@ function redirectToPage() {
 
 // Ρύθμιση του επιλεγμένου option με βάση το τρέχον URL
 window.onload = function() {
-    const select = document.getElementById('page-select');
+    const select = document.getElementById('term-select');
     const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
     
     // Έλεγχος για να βρούμε το κατάλληλο option
