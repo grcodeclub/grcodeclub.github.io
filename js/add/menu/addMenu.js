@@ -5,9 +5,7 @@
     }
 
 const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
-
-const currentURL = window.location.href; // Παράδειγμα τρέχοντος URL
-
+a
 // Κάνε αίτημα στο currentURL για να ελέγξεις την κατάσταση
 fetch(currentURL)
     .then(response => {
