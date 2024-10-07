@@ -1,5 +1,10 @@
 [
      {
+          "title": "test24",
+          "description": "reewW",
+          "link": "https://chatgpt."
+     },
+     {
           "title": "2353",
           "description": "3432",
           "link": "file:///home/dimitris/Documents/index.html"
@@ -18,10 +23,5 @@
           "title": "Τίτλος 3",
           "description": "Περιγραφή της ενημέρωσης της σελίδας 3",
           "link": "https://example.com/link3"
-     },
-     {
-          "title": "Τίτλος 4",
-          "description": "Περιγραφή της ενημέρωσης της σελίδας 4",
-          "link": "https://example.com/link4"
      }
 ]
