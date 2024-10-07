@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <p class="card-text">${item.description}</p>
                     </div>
-                    <div class="card-footer"><small class="text-muted">${newsItem.date}</div>
+                    <div class="card-footer"><small class="text-muted">${item.date}</div>
                 `;
                 col.appendChild(card);
                 uploadPageContainer.appendChild(col);
