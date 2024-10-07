@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
     // Έλεγχος αν έχει αποδεχτεί τα cookies
+    console.log('Cookie cookiesAccepted: ', getCookie('cookiesAccepted'));
     if (!getCookie('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
@@ -7,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
     if (getCookie('cookiesAccepted') === 'true') {
         loadTrackingScripts();
     }
-
+    console.log('Cookie value: ', getCookie('cookiesAccepted'));
     // Αναφορά στα κουμπιά αποδοχής/απόρριψης cookies
     var acceptCookiesButton = document.getElementById('accept-cookies');
     var noacceptCookiesButton = document.getElementById('reject-cookies');
