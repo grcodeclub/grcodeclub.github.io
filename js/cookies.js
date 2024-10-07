@@ -1,5 +1,5 @@
+window.addEventListener('load', function() {
     if (!getCookie('cookiesAccepted')) {
-        console.log('Το cookie cookiesAccepted δεν υπάρχει.');
         document.getElementById('cookie-banner').style.display = 'block';
     }
   if (getCookie('cookiesAccepted') === 'true') {
@@ -47,6 +47,9 @@
     else {
     console.log('Cookie is not set to true.');
 }
+
+});
+
 
 
 function setCookie_minutes(name, value, minutes) {
