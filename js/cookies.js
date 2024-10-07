@@ -1,59 +1,57 @@
-    // Έλεγχος αν έχει αποδεχτεί τα cookies
-    console.log('Cookie cookiesAccepted: ', getCookie('cookiesAccepted'));
+window.addEventListener('load', function() {
     if (!getCookie('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
-
-    if (getCookie('cookiesAccepted') === 'true') {
-        loadTrackingScripts();
-    }
-    console.log('Cookie value: ', getCookie('cookiesAccepted'));
-    // Αναφορά στα κουμπιά αποδοχής/απόρριψης cookies
+  if (getCookie('cookiesAccepted') === 'true') {
+      loadTrackingScripts();
+}
+        
     var acceptCookiesButton = document.getElementById('accept-cookies');
     var noacceptCookiesButton = document.getElementById('reject-cookies');
+    let cookieStatus = getCookie('cookiesAccepted');
 
     if (noacceptCookiesButton) {
-        noacceptCookiesButton.onclick = function() {
+            noacceptCookiesButton.onclick = function() {
             setCookie_minutes('cookiesAccepted', 'false', 2);
             document.getElementById('cookie-banner').style.display = 'none';
         };
-    } else {
-        console.error('Reject Cookies button not found.');
+    
     }
-
     if (acceptCookiesButton) {
         acceptCookiesButton.onclick = function() {
             setCookie('cookiesAccepted', 'true', 2);
             document.getElementById('cookie-banner').style.display = 'none';
-
             var cookieSwitch = document.getElementById('cookies-ga4');
-            if (cookieSwitch && cookieSwitch.checked) {
-                loadTrackingScripts();
-            } else {
-                console.log('GA4 cookie switch not found or not checked.');
-            }
+                if (cookieSwitch.checked) {
+                    loadTrackingScripts();
+                }
+                var cookieSwitch_Social = document.getElementById('cookies-social');
+                        console.log(cookieSwitch_Social.checked);
 
-            var cookieSwitch_Social = document.getElementById('cookies-social');
-            if (cookieSwitch_Social && cookieSwitch_Social.checked) {
-                setCookie('cookiesSocial', 'true', 360);
-                loadMetaPixel();
-            } else {
-                console.log('Social cookie switch not found or not checked.');
-            }
+                 if (cookieSwitch_Social.checked) {
+                     setCookie('cookiesSocial', 'true', 360);
+                     loadMetaPixel();
+                }
+
         };
     } else {
         console.error('Accept Cookies button not found.');
     }
 
-    // Έλεγχος αν υπάρχει το cookie για τα social
-    var cookieStatusSocial = getCookie('cookiesSocial');
+        var cookieStatusSocial = getCookie('cookiesSocial');
+            console.log(cookieStatusSocial);
+
     if (cookieStatusSocial === 'true') {
         loadMetaPixel();
-    } else {
-        console.log('Social cookie not set to true.');
     }
+    else {
+    console.log('Cookie is not set to true.');
+}
 
-// Συνάρτηση για ρύθμιση cookie με διάρκεια σε λεπτά
+});
+
+
+
 function setCookie_minutes(name, value, minutes) {
     const d = new Date();
     d.setTime(d.getTime() + (minutes * 60 * 1000)); // Υπολογισμός χρόνου λήξης σε χιλιοστά του δευτερολέπτου
@@ -61,36 +59,41 @@ function setCookie_minutes(name, value, minutes) {
     document.cookie = name + "=" + (value || "") + ";" + expires + ";path=/";
 }
 
-// Συνάρτηση για ρύθμιση cookie με διάρκεια σε ημέρες
-function setCookie(name, value, days) {
+
+  function setCookie(name, value, days) {
     let date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     let expires = "expires=" + date.toUTCString();
     document.cookie = name + "=" + (value || "") + ";" + expires + ";path=/";
-}
+  }
 
-// Συνάρτηση για ανάγνωση cookie
-function getCookie(name) {
+  function getCookie(name) {
     let nameEQ = name + "=";
     let ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
+  }
+
+ function loadTrackingScripts() {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MMLRVK48');
+
 }
 
-// Φόρτωση tracking scripts (Google Tag Manager)
-function loadTrackingScripts() {
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MMLRVK48');
+function event(){
+    window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KP7YGYPW0R'); 
 }
 
-// Φόρτωση Meta Pixel
 function loadMetaPixel() {
    !function(f,b,e,v,n,t,s){
        if(f.fbq)return;
@@ -110,4 +113,5 @@ function loadMetaPixel() {
     fbq('track', 'main');
     fbq('track', 'programming');
     fbq('track', 'network');
+
 }
