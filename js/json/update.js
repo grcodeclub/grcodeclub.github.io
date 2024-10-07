@@ -9,7 +9,7 @@
             // Δημιουργία καρτών από τα δεδομένα
             jsonData.forEach(item => {
                 const col = document.createElement('div');
-                col.className = 'col-md-4 mb-4'; // Χρησιμοποιούμε Bootstrap columns
+                col.className = 'col'; // Χρησιμοποιούμε Bootstrap columns
                 
                 const card = document.createElement('div');
                 card.className = 'card';
