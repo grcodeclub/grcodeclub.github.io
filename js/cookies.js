@@ -98,25 +98,10 @@ gtag('config', 'G-KP7YGYPW0R');
 }
 
 function deleteAllCookies() {
-   // Λάβετε όλα τα cookies και διαχωρίστε τα σε έναν πίνακα
-var cookies = document.cookie.split(";");
-
-// Εμφανίστε τη λίστα με τα cookies
-console.log("Cookies πριν τη διαγραφή:");
-cookies.forEach(function(cookie) {
-    // Αφαιρέστε τα κενά στο όνομα του cookie
-    var name = cookie.split("=")[0].trim();
-    // Εμφανίστε το cookie
-    console.log(name);
-    
-    // Ρυθμίστε την ημερομηνία λήξης για τη διαγραφή
-    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
-        var cookies_expires = cookie.split("=")[4].trim();
-
-    // Εμφανίστε το νέο cookie με την ημερομηνία λήξης
-    console.log("New expires = " + cookies_expires);
-});
-
+    document.cookie.split(";").forEach(function(cookie) {
+        var name = cookie.split("=")[0];
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+    });
 }
 
 function loadMetaPixel() {
