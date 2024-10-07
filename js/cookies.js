@@ -98,8 +98,9 @@ gtag('config', 'G-KP7YGYPW0R');
 
 function deleteAllCookies() {
     // Πάρτε όλα τα cookies
+    console.log('deleteAllCookies called');
     const cookies = document.cookie.split(';');
-     console.log('deleteAllCookies');
+    console.log('deleteAllCookies');
     // Για κάθε cookie, ρυθμίστε την ημερομηνία λήξης στο παρελθόν
     for (let i = 0; i < cookies.length; i++) {
         const cookie = cookies[i];
