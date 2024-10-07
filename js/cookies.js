@@ -101,7 +101,7 @@ function deleteAllCookies() {
     document.cookie.split(";").forEach(function(cookie) {
         var name = cookie.split("=")[0];
             document.cookie = cookie + "=" + getCookie(cookie) + "; expires=Wed, 01 Jan 1997 00:00:00 GMT; path=/; SameSite=Lax;";
-            console.log("Delete " + name);
+            console.log("Delete " + name + "Value = " + getCookie(cookie));
     });
 }
 
