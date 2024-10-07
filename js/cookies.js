@@ -100,7 +100,7 @@ gtag('config', 'G-KP7YGYPW0R');
 function deleteAllCookies() {
     document.cookie.split(";").forEach(function(cookie) {
         var name = cookie.split("=")[0];
-        document.cookie = name"=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=grcodeclub.gr; SameSite=Lax;";
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=grcodeclub.gr; SameSite=Lax;";
             console.log(name + "=" + getCookie(cookie) + "; expires=Wed, 01 Jan 1997 00:00:00 GMT; path=/; SameSite=Lax;");
     });
 }
