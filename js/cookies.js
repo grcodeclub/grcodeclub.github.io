@@ -1,4 +1,3 @@
-window.addEventListener('DOMContentLoaded', function() {
     // Έλεγχος αν έχει αποδεχτεί τα cookies
     console.log('Cookie cookiesAccepted: ', getCookie('cookiesAccepted'));
     if (!getCookie('cookiesAccepted')) {
@@ -53,7 +52,6 @@ window.addEventListener('DOMContentLoaded', function() {
     } else {
         console.log('Social cookie not set to true.');
     }
-});
 
 // Συνάρτηση για ρύθμιση cookie με διάρκεια σε λεπτά
 function setCookie_minutes(name, value, minutes) {
