@@ -12,7 +12,10 @@ window.addEventListener('load', function() {
 
     if (noacceptCookiesButton) {
             noacceptCookiesButton.onclick = function() {
-            deleteAllCookies();
+            document.cookie.split(";").forEach(function(cookie) {
+        var name = cookie.split("=")[0];
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+    });
             setCookie_minutes('cookiesAccepted', 'false', 2);
             document.getElementById('cookie-banner').style.display = 'none';
         };
