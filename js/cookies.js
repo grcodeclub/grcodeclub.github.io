@@ -1,4 +1,5 @@
     if (!getCookie('cookiesAccepted')) {
+        console.log('Το cookie cookiesAccepted δεν υπάρχει.');
         document.getElementById('cookie-banner').style.display = 'block';
     }
   if (getCookie('cookiesAccepted') === 'true') {
