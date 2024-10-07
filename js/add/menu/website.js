@@ -6,7 +6,7 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/">Επιλέξτε σελίδα</option>
-        <option value="https://grcodeclub.gr/website/more/font-awesome">Font Awesome</option>
+        <option value="https://grcodeclub.gr/website/more/font-awesome">Λίστα Font Awesome</option>
         <option value="https://grcodeclub.gr/website/more/uploadsite">Κατοχύρωση, Ανέβασμα και Αναζήτηση</option>
     </select>
 </div>
