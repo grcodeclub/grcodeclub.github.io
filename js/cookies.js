@@ -12,10 +12,7 @@ window.addEventListener('load', function() {
 
     if (noacceptCookiesButton) {
             noacceptCookiesButton.onclick = function() {
-            document.cookie.split(";").forEach(function(cookie) {
-        var name = cookie.split("=")[0];
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
-    });
+            deleteAllCookies();
             setCookie_minutes('cookiesAccepted', 'false', 2);
             document.getElementById('cookie-banner').style.display = 'none';
         };
@@ -23,6 +20,7 @@ window.addEventListener('load', function() {
     }
     if (acceptCookiesButton) {
         acceptCookiesButton.onclick = function() {
+
             setCookie('cookiesAccepted', 'true', 2);
             document.getElementById('cookie-banner').style.display = 'none';
             var cookieSwitch = document.getElementById('cookies-ga4');
@@ -100,18 +98,25 @@ gtag('config', 'G-KP7YGYPW0R');
 }
 
 function deleteAllCookies() {
-    // Πάρτε όλα τα cookies
-    console.log('deleteAllCookies called');
-    const cookies = document.cookie.split(';');
-    console.log('deleteAllCookies');
-    // Για κάθε cookie, ρυθμίστε την ημερομηνία λήξης στο παρελθόν
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i];
-        const eqPos = cookie.indexOf('=');
-        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        // Διαγραφή του cookie
-        setCookie(name, '', -1); // Καλεί την setCookie για διαγραφή
-    }
+   // Λάβετε όλα τα cookies και διαχωρίστε τα σε έναν πίνακα
+var cookies = document.cookie.split(";");
+
+// Εμφανίστε τη λίστα με τα cookies
+console.log("Cookies πριν τη διαγραφή:");
+cookies.forEach(function(cookie) {
+    // Αφαιρέστε τα κενά στο όνομα του cookie
+    var name = cookie.split("=")[0].trim();
+    // Εμφανίστε το cookie
+    console.log(name);
+    
+    // Ρυθμίστε την ημερομηνία λήξης για τη διαγραφή
+    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+        var cookies_expires = cookie.split("=")[4].trim();
+
+    // Εμφανίστε το νέο cookie με την ημερομηνία λήξης
+    console.log("New expires = " + cookies_expires);
+});
+
 }
 
 function loadMetaPixel() {
