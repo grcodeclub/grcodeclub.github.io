@@ -129,9 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
         script.src = src;
         document.body.appendChild(script);
     }
-    
-    addScript('https://grcodeclub.gr/js/cookies.js');
 
+    if (window.location.href.startsWith('https://grcodeclub.gr')) {addScript('https://grcodeclub.gr/js/cookies.js');} 
+
+    
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
