@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/website.png">
+    <meta property="og:title" content="Κωδικοί & σύμβολα χαρακτήρων HTML">
+    <title>GrCode Club - Ειδήσεις</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+
+<body>
+    <div id="addHeader"></div>
+
+    <div class="container">
+        <h1 class="title">Eνημερώσεις</h1>
+
+        <div id="newsContainer" class="row mb-4">
+            <!-- Οι κάρτες ειδήσεων θα προστεθούν εδώ δυναμικά -->
+        </div>
+
+        <!-- Κουμπιά Σελιδοποίησης -->
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>
+
+        <script>
+            let newsData = [];
+            const itemsPerPage = 10; // Αριθμός ειδήσεων ανά σελίδα
+            let currentPage = 1; // Αρχική σελίδα
+
+            // Λειτουργία για την φόρτωση των δεδομένων JSON
+            function loadNews() {
+                fetch('https://grcodeclub.gr/files-page/json/news.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        newsData = data;
+                        displayNews();
+                        updatePagination();
+                    })
+                    .catch(error => console.error('Σφάλμα κατά τη φόρτωση του JSON:', error));
+            }
+
+            // Λειτουργία για την εμφάνιση των ειδήσεων
+            function displayNews() {
+                const newsContainer = document.getElementById('newsContainer');
+                newsContainer.innerHTML = ''; // Καθαρισμός του περιεχομένου
+
+                // Υπολογισμός της αρχής και του τέλους της λίστας
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = Math.min(startIndex + itemsPerPage, newsData.length);
+
+                // Δημιουργία κάρτας για κάθε είδηση στην τρέχουσα σελίδα
+                for (let i = startIndex; i < endIndex; i++) {
+                    const newsItem = newsData[i];
+                    const card = document.createElement('div');
+                    card.className = 'col-md-4 mb-4'; // Κλάση για τη διάταξη των καρτών
+                    card.innerHTML = `
+                        <div class="card">
+                            <div class="card-header">${newsItem.title}</div>
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${newsItem.description}</p>
+                            </div>
+                                <div class="card-footer"><small class="text-muted">${newsItem.date}</div>
+                            </div>
+                    `;
+                    newsContainer.appendChild(card);
+                }
+            }
+
+            // Ενημέρωση κουμπιών σελιδοποίησης
+            function updatePagination() {
+                const pagination = document.getElementById('pagination');
+                pagination.innerHTML = ''; // Καθαρισμός της προηγούμενης σελιδοποίησης
+
+                const totalPages = Math.ceil(newsData.length / itemsPerPage); // Υπολογισμός συνολικών σελίδων
+
+                // Δημιουργία κουμπιού "Προηγούμενη"
+                if (currentPage > 1) {
+                    const prevItem = document.createElement('li');
+                    prevItem.className = 'page-item';
+                    prevItem.innerHTML = `<a class="page-link" href="#" aria-label="Προηγούμενη" onclick="goToPage(${currentPage - 1})">&laquo;</a>`;
+                    pagination.appendChild(prevItem);
+                }
+
+                // Δημιουργία κουμπιών αριθμών σελίδας
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageItem = document.createElement('li');
+                    pageItem.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                    pageItem.innerHTML = `<a class="page-link" href="#" onclick="goToPage(${i})">${i}</a>`;
+                    pagination.appendChild(pageItem);
+                }
+
+                // Δημιουργία κουμπιού "Επόμενη"
+                if (currentPage < totalPages) {
+                    const nextItem = document.createElement('li');
+                    nextItem.className = 'page-item';
+                    nextItem.innerHTML = `<a class="page-link" href="#" aria-label="Επόμενη" onclick="goToPage(${currentPage + 1})">&raquo;</a>`;
+                    pagination.appendChild(nextItem);
+                }
+            }
+
+            // Λειτουργία για να μεταβείς σε άλλη σελίδα
+            function goToPage(page) {
+                currentPage = page;
+                displayNews();
+                updatePagination();
+            }
+
+            // Φόρτωση των ειδήσεων κατά την εκκίνηση
+            loadNews();
+        </script>
+    </div>
+
+    <div id="addFooter"></div>
+
+</body>
+
+</html>
