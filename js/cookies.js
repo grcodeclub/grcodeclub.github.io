@@ -12,6 +12,7 @@ window.addEventListener('load', function() {
 
     if (noacceptCookiesButton) {
             noacceptCookiesButton.onclick = function() {
+            deleteAllCookies();
             setCookie_minutes('cookiesAccepted', 'false', 2);
             document.getElementById('cookie-banner').style.display = 'none';
         };
@@ -93,6 +94,20 @@ function event(){
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-KP7YGYPW0R'); 
+}
+
+function deleteAllCookies() {
+    // Πάρτε όλα τα cookies
+    const cookies = document.cookie.split(';');
+    
+    // Για κάθε cookie, ρυθμίστε την ημερομηνία λήξης στο παρελθόν
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i];
+        const eqPos = cookie.indexOf('=');
+        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        // Διαγραφή του cookie
+        setCookie(name, '', -1); // Καλεί την setCookie για διαγραφή
+    }
 }
 
 function loadMetaPixel() {
