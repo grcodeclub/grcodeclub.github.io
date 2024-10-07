@@ -1,5 +1,11 @@
 [
      {
+          "title": "Προσθήκη νέας σελίδας ",
+          "description": "Δημιούργησαμε νέα σελίδα για την γλώσσα προγραμματισμού ",
+          "link": "https://grcodeclub.gr/php/",
+          "date": "2024-10-07"
+     },
+     {
           "title": "Δημιουργία νέας σελίδας",
           "description": "Κατασκευή Ιστοσελίδων",
           "link": "https://grcodeclub.gr/website/",
@@ -20,12 +26,6 @@
      {
           "title": "Δημιουργία νέας σελίδας",
           "description": "Κατοχύρωση , Ανέβασμα και Αναζήτηση",
-          "link": "https://grcodeclub.gr/website/more/uploadsite",
-          "date": "2024-10-07"
-     },
-     {
-          "title": "Κατοχύρωση , Ανέβασμα και Αναζήτηση",
-          "description": "Δημιουργία σελίδας",
           "link": "https://grcodeclub.gr/website/more/uploadsite",
           "date": "2024-10-07"
      }
