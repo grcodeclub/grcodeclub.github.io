@@ -34,7 +34,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px; overflow-y: auto;">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/">Γλώσσες Προγραμματισμού</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/">Κατασκευή Ιστοσελίδων</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/">Ανάπτυξη Ιστοσελίδων</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/c/">C</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/python/">Python</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/cpp/">C++</a></li>
