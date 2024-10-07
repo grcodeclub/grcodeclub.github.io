@@ -1,6 +1,6 @@
   // Λειτουργία για την φόρτωση των δεδομένων JSON
   function loadJSON() {
-    fetch('https://grcodeclub.gr/files-page/json/update.json')
+    fetch('https://grcodeclub.gr/files-page/json/news.json')
         .then(response => response.json())
         .then(jsonData => {
             const uploadPageContainer = document.getElementById('uploadpage');
@@ -17,8 +17,8 @@
                     <div class="card-header">${item.title}</div>
                     <div class="card-body">
                         <p class="card-text">${item.description}</p>
-                        <a href="${item.link}" target="_blank" class="btn btn-dark">Προβολή σελίδας </a>
                     </div>
+                    <div class="card-footer"><small class="text-muted">${newsItem.date}</div>
                 `;
                 col.appendChild(card);
                 uploadPageContainer.appendChild(col);
