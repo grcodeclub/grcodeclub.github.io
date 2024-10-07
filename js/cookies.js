@@ -1,4 +1,3 @@
-window.addEventListener('load', function() {
     if (!getCookie('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
@@ -47,9 +46,6 @@ window.addEventListener('load', function() {
     else {
     console.log('Cookie is not set to true.');
 }
-
-});
-
 
 
 function setCookie_minutes(name, value, minutes) {
