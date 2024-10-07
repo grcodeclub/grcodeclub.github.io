@@ -100,7 +100,7 @@ gtag('config', 'G-KP7YGYPW0R');
 function deleteAllCookies() {
     document.cookie.split(";").forEach(function(cookie) {
         var name = cookie.split("=")[0];
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+            document.cookie = cookieName + "=" + cookieValue + "; xpires=Wed, 01 Jan 1997 00:00:00 GMT; path=/; SameSite=Lax;";
             console.log("Delete " + name);
     });
 }
