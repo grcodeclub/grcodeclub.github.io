@@ -36,6 +36,7 @@ function fullTable() {
     }
 
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+    const normalizedSearchTerm = searchTerm.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // Κανονικοποίηση αναζητούμενου όρου
 
     rows1.forEach(row => {
         if (row === headerRow) return; // Skip header row
@@ -43,8 +44,9 @@ function fullTable() {
         // Get cells from the row
         const cells = row.querySelectorAll('td');
 
-        // Check if at least one of the two specified columns contains the search term
-        const column1Match = cells[0].textContent.toLowerCase().includes(searchTerm);
+        // Normalize the text in the first column and check if it contains the normalized search term
+        const column1Text = cells[0].textContent.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const column1Match = column1Text.includes(normalizedSearchTerm);
 
         if (column1Match) {
             tableBody.appendChild(row.cloneNode(true)); // Use cloneNode to copy row
@@ -118,7 +120,7 @@ function displayPagination() {
     // Next button
     if (currentPage < totalPages) {
         const nextButton = document.createElement('li');
-        nextButton.className = 'page-item1';
+        nextButton.className = 'page-item';
         const nextLink = document.createElement('a');
         nextLink.className = 'page-link';
         nextLink.textContent = 'Επόμενη';
