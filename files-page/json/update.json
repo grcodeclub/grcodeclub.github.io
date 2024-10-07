@@ -8,21 +8,20 @@
         "title": "Τίτλος 2",
         "description": "Περιγραφή της ενημέρωσης της σελίδας 2",
         "link": "https://example.com/link2"
-    }
-      {
+    },
+    {
         "title": "Τίτλος 3",
         "description": "Περιγραφή της ενημέρωσης της σελίδας 3",
         "link": "https://example.com/link3"
-    }
-      {
+    },
+    {
         "title": "Τίτλος 4",
         "description": "Περιγραφή της ενημέρωσης της σελίδας 4",
         "link": "https://example.com/link4"
-    }
-      {
+    },
+    {
         "title": "Τίτλος 5",
         "description": "Περιγραφή της ενημέρωσης της σελίδας 5",
         "link": "https://example.com/link5"
     }
 ]
-
