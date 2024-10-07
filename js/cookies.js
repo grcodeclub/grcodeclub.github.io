@@ -29,7 +29,7 @@ window.addEventListener('load', function() {
                         console.log(cookieSwitch_Social.checked);
 
                  if (cookieSwitch_Social.checked) {
-                     setCookie('cookiesSocial', 'true', 360);
+                     setCookie('cookiesSocial', 'true', 2);
                      loadMetaPixel();
                 }
 
