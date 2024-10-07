@@ -23,7 +23,12 @@ fetch(currentURL)
             else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/ip.js');} 
             else if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {addScript('https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/linux/')) { addScript('https://grcodeclub.github.io/js/add/menu/system/linux/menu.js');}
-
+            else if (currentURL.startsWith('https://grcodeclub.gr/website/')) { 
+                        if (currentURL.startsWith('https://grcodeclub.gr/website/html/')) {}
+                        else if (currentURL.startsWith('https://grcodeclub.gr/website/css/')) {}
+                        else if (currentURL.startsWith('https://grcodeclub.gr/website/nodejs')) {}
+                        else {addScript('https://grcodeclub.github.io/js/add/menu/website.js');}
+            }
         }
         else {console.log("Η σελίδα δεν είναι διαθέσιμη. Κωδικός κατάστασης: " + response.status);}
     })
