@@ -8,7 +8,7 @@ const mymenu = `
         <option value="https://grcodeclub.gr/">Επιλέξτε σελίδα</option>
         <option value="https://grcodeclub.gr/website/more/font-awesome">Λίστα Font Awesome</option>
         <option value="https://grcodeclub.gr/website/more/uploadsite">Κατοχύρωση, Ανέβασμα και Αναζήτηση</option>
-        <option value="https://grcodeclub.gr/website/more/uploadsite">Κωδικοί & σύμβολα χαρακτήρων HTML</option>
+        <option value="https://grcodeclub.gr/website/more/input-symbols">Κωδικοί & σύμβολα χαρακτήρων HTML</option>
     </select>
 </div>
 `;
