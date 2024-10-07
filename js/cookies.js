@@ -62,6 +62,7 @@ function setCookie_minutes(name, value, minutes) {
 
   function setCookie(name, value, days) {
     let date = new Date();
+    console.log('Cookie set with expiration:', new Date(Date.now() + (2 * 24 * 60 * 60 * 1000)).toUTCString());
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     let expires = "expires=" + date.toUTCString();
     document.cookie = name + "=" + (value || "") + ";" + expires + ";path=/";
