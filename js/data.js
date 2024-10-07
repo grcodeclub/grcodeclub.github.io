@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
             addScriptBody('https://grcodeclub.gr/js/bootstrap@5.3.3.js', function() {
                 addScriptBody('https://grcodeclub.gr/js/prism.js');
                 addScriptBody('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js');
-                addScriptBody('https://grcodeclub.gr/js/cookies.js');
                 addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
                 addScriptBody('https://grcodeclub.gr/js/shareURL.js');
                 addScriptBody('https://grcodeclub.gr/js/add/function-jQuery.js');
@@ -130,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
         script.src = src;
         document.body.appendChild(script);
     }
+    
+    addScript('https://grcodeclub.gr/js/cookies.js');
 
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
