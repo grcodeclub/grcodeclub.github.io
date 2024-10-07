@@ -50,10 +50,6 @@ window.onload = function() {
     }
 
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
-    if (currentURL.startsWith('https://grcodeclub.gr/c/library/')){
-            const targetValue = "https://grcodeclub.gr/c/library/";
-            select.value = targetValue;    
-    }
         $(document).ready(function() {
             // Εφαρμογή του Select2
             $('#page-select').select2();
