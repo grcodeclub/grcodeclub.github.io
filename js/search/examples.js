@@ -67,7 +67,7 @@ function displayFiles(files) {
 
         // Δημιουργία του στοιχείου anchor (link)
         const fileLink = document.createElement('a');
-        fileLink.href = `files/${file.link}`; // URL του αρχείου
+        fileLink.href = `${file.link}`; // URL του αρχείου
         fileLink.innerHTML = `<i class="fas fa-code"></i> ${file.name}`;
         fileLink.target = '_blank'; // Άνοιγμα σε νέα καρτέλα
         fileLink.className = 'repo'; // Προσθήκη της κλάσης repo
