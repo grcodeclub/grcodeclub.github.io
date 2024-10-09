@@ -42,7 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/html/">Html</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/css/">CSS</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/javascript/">JavaScript</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/javascript/">JavaScript</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/sql">SQL</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/docker">Docker</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/matlab">MATLAB</a></li>
