@@ -4,7 +4,7 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select">
         <option value="https://grcodeclub.gr/windows/">Microsoft Windows</option>
-        <option value="https://grcodeclub.gr/windows/command-line">Command Line</option>
+        <option value="https://grcodeclub.gr/windows/command-line/">Command Line</option>
         <option value="https://grcodeclub.gr/windows/powershell/">PowerShell</option>
         <option value="https://grcodeclub.gr/windows/more/run">Run Commands</option>
         <option value="https://grcodeclub.gr/windows/more/language-id">Language ID</option>
