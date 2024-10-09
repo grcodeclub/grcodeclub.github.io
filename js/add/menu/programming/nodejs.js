@@ -6,11 +6,7 @@ const mymenu = `
 <div class="dropdown-container highlight">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/website/css/">Επιλέξτε σελίδα</option>
-    <option value="https://grcodeclub.gr/website/css/properties">Βασικές ιδιότητε</option>
-    <option value="https://grcodeclub.gr/website/css/keyframes">Keyframes</option>
-    <option value="https://grcodeclub.gr/website/css/media">@media</option>
-    <option value="https://grcodeclub.gr/website/css/text">Κείμενο και Ιδιότητες</option>
+    <option value="https://grcodeclub.gr/website/nodejs/">Επιλέξτε σελίδα</option>
     </select>
 </div>
 `;
