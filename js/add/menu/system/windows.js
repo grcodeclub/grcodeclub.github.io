@@ -3,7 +3,7 @@ const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/windows/">Windows</option>
+        <option value="https://grcodeclub.gr/windows/">Microsoft Windows</option>
     </select>
 </div>
 `;
