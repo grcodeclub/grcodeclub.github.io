@@ -9,7 +9,6 @@ const mymenu = `
         <option value="https://github.com/grcodeclub/python">GitHub</option>
         <option value="https://grcodeclub.gr/python/command">Εντολές</option>
         <option value="https://grcodeclub.gr/python/library">Βιβλιοθήκες</option>
-        <option value="https://grcodeclub.gr/python/examples">Παραδείγματα</option>
         <option value="https://grcodeclub.gr/python/files">Αρχεία</option>
         <option value="https://grcodeclub.gr/python/terminal">Terminal</option>
     </select>
