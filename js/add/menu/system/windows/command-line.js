@@ -73,8 +73,8 @@ window.onload = function() {
         
         // Έλεγχος για το page-select
         if (pageselect) {
-            if (currentUrl.startsWith('https://grcodeclub.gr/windows/cmdinal/')) {
-                pageselect.value = 'https://grcodeclub.gr/windows/cmdinal/';
+            if (currentUrl.startsWith('https://grcodeclub.gr/windows/command-line/')) {
+                pageselect.value = 'https://grcodeclub.gr/windows/command-line/';
             } else {
                 for (let option of pageselect.options) {
                     if (option.value === currentUrl) {
