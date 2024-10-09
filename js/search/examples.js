@@ -21,7 +21,7 @@ function displayRepos(reposToDisplay) {
         folderIcon.style.marginRight = '5px'; // Προσθήκη κενών δεξιά από το εικονίδιο
         listItem.appendChild(folderIcon); // Προσθήκη του εικονιδίου στο στοιχείο λίστας
 
-        listItem.appendChild(document.createTextNode(`${repo.name}: ${repo.description}`)); // Προσθήκη του κειμένου
+        listItem.appendChild(document.createTextNode(`${repo.name}`)); // Προσθήκη του κειμένου
         
         listItem.onclick = () => showRepoDetails(repo);
         repoList.appendChild(listItem);
