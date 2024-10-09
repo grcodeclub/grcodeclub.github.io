@@ -5,7 +5,7 @@ const mymenu = `
 <div class="dropdown-container highlight">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/">Επιλέξτε σελίδα</option>
+        <option value="https://grcodeclub.gr/cpp/">Επιλέξτε σελίδα</option>
         <option value="https://github.com/grcodeclub/php/">GitHub</option>
         <option value="https://grcodeclub.gr/cpp/library/">Bιβλιοθήκες</option>
         <option value="https://grcodeclub.gr/cpp/commands">Βασικές εντολές</option>
