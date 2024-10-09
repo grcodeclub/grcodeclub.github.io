@@ -7,6 +7,12 @@ const mymenu = `
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/java/">Επιλέξτε σελίδα</option>
         <option value="grcodeclub.gr/java/commands/">Βασικές Εντολές</option>
+        <option value="grcodeclub.gr/java/class/">Class</option>
+        <option value="grcodeclub.gr/java/commands/arrays">Arrays</option>
+        <option value="grcodeclub.gr/java/examples">Παραδείγματα</option>
+        <option value="grcodeclub.gr/java/class/">Class</option>
+        <option value="grcodeclub.gr/java/class/extends">Extends</option>
+        <option value="grcodeclub.gr/java/class/interface">Interface</option>     
     </select>
 </div>
 `;
