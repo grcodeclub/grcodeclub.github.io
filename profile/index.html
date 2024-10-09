@@ -20,9 +20,17 @@
         <div class="mb-3">
             <div class="input-group">
                 <span class="input-group-text">URL</span> <!-- Προσθήκη του http:// -->
-                <input type="text" class="form-control" id="searchURL" placeholder="Έλεγχος προφίλ">
+                <input type="text" class="form-control select2" id="searchURL" placeholder="Έλεγχος προφίλ">
             </div>
         </div>
+        <script>
+$(document).ready(function() {
+    $('.select2').select2({
+        placeholder: "Έλεγχος προφίλ",
+        allowClear: true
+    });
+});
+</script>
         <hr>
         
         <!-- Επιλογή Θέσης -->
