@@ -1,16 +1,16 @@
-const selectElement = document.getElementById("page-select");
+const selectElement = document.getElementById("code");
 const loadElement = document.getElementById("load");
 selectElement.addEventListener("change", function() {
-  update_page-select(selectElement.value);
+  update_code(selectElement.value);
 });                  
-async function update_page-select(selectedValue) {
+async function update_code(selectedValue) {
 if (selectedValue === "-") {
-  loadElement.innerHTML = '<page-select> </page-select>';
+  loadElement.innerHTML = '<code> </code>';
 } else {
   try {
    const response = await fetch(selectedValue);
    const text = await response.text();
-   loadElement.innerHTML = `<pre><page-select class="language-py">${escapeHtml(text)}</page-select></pre>`;
+   loadElement.innerHTML = `<pre><code class="language-py">${escapeHtml(text)}</code></pre>`;
    Prism.highlightAll(); // Εφαρμόστε Prism.js στο νέο περιεχόμενο
   } catch (error) {
     loadElement.innerHTML = 'Σφάλμα κατά τη φόρτωση του αρχείου.';
