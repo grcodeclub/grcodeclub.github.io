@@ -34,10 +34,10 @@ const cssLinks = [
  
  // Δημιουργία ενός πίνακα με τα μεγέθη που θέλετε να προσθέσετε
  const sizes = [
-   { width: 32, height: 32, url: 'https://grcodeclub.github.io/css/logo/32x32.png' },
-   { width: 48, height: 48, url: 'https://grcodeclub.github.io/css/logo/48x48.png' },
-   { width: 96, height: 96, url: 'https://grcodeclub.github.io/css/logo/96x96.png' },
-   { width: 144, height: 144, url: 'https://grcodeclub.github.io/css/logo/144x144.png' }
+   { width: 32, height: 32, url: 'https://grcodeclub.github.io/files-page/logo/32x32.png' },
+   { width: 48, height: 48, url: 'https://grcodeclub.github.io/files-page/logo/48x48.png' },
+   { width: 96, height: 96, url: 'https://grcodeclub.github.io/files-page/logo/96x96.png' },
+   { width: 144, height: 144, url: 'https://grcodeclub.github.io/files-page/logo/144x144.png' }
  ];
  
  // Προσθήκη των favicons για κάθε μέγεθος
@@ -56,7 +56,7 @@ const cssLinks = [
 const icoFaviconLink = document.createElement('link');
 icoFaviconLink.rel = 'shortcut icon';
 icoFaviconLink.type = 'image/x-icon';
-icoFaviconLink.href = 'https://grcodeclub.github.io/css/logo/favicon.ico';
+icoFaviconLink.href = 'https://grcodeclub.gr/files-page/logo/favicon.ico';
 document.head.appendChild(icoFaviconLink);    // Προσθήκη του στοιχείου <link> στο <head> του εγγράφου
  
 ///////////////////////////////
