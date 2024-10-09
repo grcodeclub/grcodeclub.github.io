@@ -15,7 +15,8 @@ fetch(currentURL)
             if (currentURL.startsWith('https://grcodeclub.gr/c/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/c.js');} 
             else if (currentURL.startsWith('https://grcodeclub.gr/python/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/python.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/cpp/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/cpp.js');}
-            else if (currentURL.startsWith('https://grcodeclub.gr/php/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/php.js');} 
+            else if (currentURL.startsWith('https://grcodeclub.gr/php/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/php.js');}
+            else if (currentURL.startsWith('https://grcodeclub.gr/java/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/java.js');} 
             else if (currentURL.startsWith('https://grcodeclub.gr/orologia/') || currentURL.startsWith('https://grcodeclub.gr/network/orologia/') || 
                        currentURL.startsWith('https://grcodeclub.gr/programming/orologia/') ||currentURL.startsWith('https://grcodeclub.gr/system/orologia/') || 
                        currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/')
