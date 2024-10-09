@@ -6,20 +6,6 @@
             "position": "Developer",
             "profileImage": "https://via.placeholder.com/150?text=User+1",
             "profileLink": "https://dimitridedou.github.io"
-        },
-        {
-            "id": 2,
-            "username": "Μαρία ι.",
-            "position": "Backend Developer",
-            "profileImage": "https://via.placeholder.com/150?text=User+2",
-            "profileLink": "#"
-        },
-        {
-            "id": 3,
-            "username": "Νίκος Κ.",
-            "position": "Full Stack Developer",
-            "profileImage": "https://via.placeholder.com/150?text=User+3",
-            "profileLink": "#"
         }
        
     ]
