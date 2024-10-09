@@ -25,10 +25,11 @@ fetch(currentURL)
             else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/ip.js');} 
             else if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {addScript('https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/linux/')) { addScript('https://grcodeclub.github.io/js/add/menu/system/linux/menu.js');}
+            else if (currentURL.startsWith('https://grcodeclub.gr/javascript/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/javascript.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/website/')) { 
-                        if (currentURL.startsWith('https://grcodeclub.gr/website/html/')) {https://grcodeclub.github.io/js/add/menu/programming/html.js');}
-                        else if (currentURL.startsWith('https://grcodeclub.gr/website/css/')) {}
-                        else if (currentURL.startsWith('https://grcodeclub.gr/website/nodejs')) {}
+                        if (currentURL.startsWith('https://grcodeclub.gr/website/html/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/html.js');}
+                        else if (currentURL.startsWith('https://grcodeclub.gr/website/css/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/css.js');}
+                        else if (currentURL.startsWith('https://grcodeclub.gr/website/nodejs/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/nodejs.js');}
                         else {addScript('https://grcodeclub.github.io/js/add/menu/website.js');}
             }
         }
