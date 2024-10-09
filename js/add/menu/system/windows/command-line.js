@@ -24,7 +24,7 @@ if (nextDiv && !nextDiv.querySelector('#page-select')) {
 
 // Το HTML περιεχόμενο του δεύτερου dropdown
 const cmd = `
-<select id="select-term" class="form-select">
+<select id="select-cmd" class="form-select">
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
     <option value="https://grcodeclub.gr/windows/command-line/">Command Line</option>
     <option value="https://grcodeclub.gr/windows/command-line/network">Εντολές Δικτύου</option>
@@ -33,10 +33,10 @@ const cmd = `
 </select>
 `;
 
-        // Εύρεση του στοιχείου με το id 'linux-term'
-const addTerm = document.getElementById('linux-term');
-if (addTerm) { 
-    addTerm.innerHTML = cmd;
+        // Εύρεση του στοιχείου με το id 'linux-cmd'
+const addcmd = document.getElementById('linux-cmd');
+if (addcmd) { 
+    addcmd.innerHTML = cmd;
 }
 
 // Συνάρτηση για την ανακατεύθυνση από το page-select dropdown
@@ -48,18 +48,18 @@ function redirectFromPageSelect() {
     }
 }
 
-// Συνάρτηση για την ανακατεύθυνση από το select-term dropdown
-function redirectFromTermSelect() {
-    const termselect = document.getElementById('select-term');
-    const termSelectedValue = termselect ? termselect.value : null;
-    if (termSelectedValue) {
-        window.location.href = termSelectedValue;
+// Συνάρτηση για την ανακατεύθυνση από το select-cmd dropdown
+function redirectFromcmdSelect() {
+    const cmdselect = document.getElementById('select-cmd');
+    const cmdSelectedValue = cmdselect ? cmdselect.value : null;
+    if (cmdSelectedValue) {
+        window.location.href = cmdSelectedValue;
     }
 }
 
 // Συνδυασμένος κώδικας για το window.onload
 window.onload = function() {
-        const termselect = document.getElementById('select-term');
+        const cmdselect = document.getElementById('select-cmd');
         const pageselect = document.getElementById('page-select');
         const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
 
@@ -67,14 +67,14 @@ window.onload = function() {
     if (pageselect) {
         pageselect.onchange = redirectFromPageSelect;
     }
-    if (termselect) {
-        termselect.onchange = redirectFromTermSelect;
+    if (cmdselect) {
+        cmdselect.onchange = redirectFromcmdSelect;
     }
         
         // Έλεγχος για το page-select
         if (pageselect) {
-            if (currentUrl.startsWith('https://grcodeclub.gr/linux/terminal/')) {
-                pageselect.value = 'https://grcodeclub.gr/linux/terminal/';
+            if (currentUrl.startsWith('https://grcodeclub.gr/linux/cmdinal/')) {
+                pageselect.value = 'https://grcodeclub.gr/linux/cmdinal/';
             } else {
                 for (let option of pageselect.options) {
                     if (option.value === currentUrl) {
@@ -88,13 +88,13 @@ window.onload = function() {
 
 
         
-        // Έλεγχος για το select-term
-        if (termselect) {
-            for (let termoption of termselect.options) {
-                if (termoption.value === currentUrl) {
-                    termselect.value = termoption.value;
+        // Έλεγχος για το select-cmd
+        if (cmdselect) {
+            for (let cmdoption of cmdselect.options) {
+                if (cmdoption.value === currentUrl) {
+                    cmdselect.value = cmdoption.value;
                     break;
                 }
             }
-            $('#select-term').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το select-term
+            $('#select-cmd').select2({ placeholder: "Αναζήτηση εντολής ή σετ εντολών ", allowClear: true }); // Εφαρμογή του select2 για το select-cmd
         }};
