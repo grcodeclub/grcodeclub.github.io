@@ -2,7 +2,6 @@ h1.back_page           {display: inline-block;}
 /*
 .link_here::before     {content: "🔗";}
 .link_here {text-decoration: none;}
-
  */
 
 @media (pointer: coarse) {
@@ -58,11 +57,12 @@ div.cmd {
     padding: 10px;
 }
 
-.highlight {
+        .highlight {
+    margin-top: 10%;
     padding: 10px;
-    background-color: #3d3e3f89; /* Σκούρο μαύρο-γκρι */
-    color: #dcdcdc;
-}
+    background-color: #343a40;
+    color: white;
+    text-align: center;
 
 .form-label{ color: #dcdcdc;
 margin-left: 2%;
