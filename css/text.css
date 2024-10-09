@@ -6,6 +6,46 @@ h1.back_page           {display: inline-block;}
 
 
 
+#repo-list, #repo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+#repo-list, #repo-list {
+    list-style-type: none;
+    padding: 0;
+}
+.repo {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+
+a.repo{
+    color: black;
+    border-color: transparent;
+    text-decoration: none; /* Αφαίρεση της υπογράμμισης */   
+}
+
+.repo:hover, a.repo:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
         #code,#code1{
             width: 100%;
             background-color: rgb(211, 208, 208);
