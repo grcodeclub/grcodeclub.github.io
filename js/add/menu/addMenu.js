@@ -19,8 +19,8 @@ fetch(currentURL)
             else if (currentURL.startsWith('https://grcodeclub.gr/java/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/java.js');} 
             
             else if (currentURL.startsWith('https://grcodeclub.gr/windows/')) {
-                if (currentURL.startsWith('https://grcodeclub.gr/windows/command-line/')) {addScript('https://grcodeclub.gr/system/windows/command-line.js');}
-                else {addScript('https://grcodeclub.gr/system/windows/main.js');}
+                if (currentURL.startsWith('https://grcodeclub.gr/windows/command-line/')) {addScript('https://grcodeclub.github.io/js/add/menu/windows/command-line.js');}
+                else {addScript('https://grcodeclub.github.io/js/add/menu/system/windows/main.js');}
             } 
             
             else if (currentURL.startsWith('https://grcodeclub.gr/orologia/') || currentURL.startsWith('https://grcodeclub.gr/network/orologia/') || 
