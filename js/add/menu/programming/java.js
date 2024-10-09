@@ -6,6 +6,7 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/java/">Επιλέξτε σελίδα</option>
+        <option value="grcodeclub.gr/java/commands/">Βασικές Εντολές</option>
     </select>
 </div>
 `;
