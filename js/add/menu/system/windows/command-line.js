@@ -33,8 +33,8 @@ const cmd = `
 </select>
 `;
 
-        // Εύρεση του στοιχείου με το id 'linux-cmd'
-const addcmd = document.getElementById('linux-cmd');
+        // Εύρεση του στοιχείου με το id 'windows-cmd'
+const addcmd = document.getElementById('windows-cmd');
 if (addcmd) { 
     addcmd.innerHTML = cmd;
 }
@@ -73,8 +73,8 @@ window.onload = function() {
         
         // Έλεγχος για το page-select
         if (pageselect) {
-            if (currentUrl.startsWith('https://grcodeclub.gr/linux/cmdinal/')) {
-                pageselect.value = 'https://grcodeclub.gr/linux/cmdinal/';
+            if (currentUrl.startsWith('https://grcodeclub.gr/windows/cmdinal/')) {
+                pageselect.value = 'https://grcodeclub.gr/windows/cmdinal/';
             } else {
                 for (let option of pageselect.options) {
                     if (option.value === currentUrl) {
