@@ -9,7 +9,6 @@ const mymenu = `
         <option value="grcodeclub.gr/java/commands/">Βασικές Εντολές</option>
         <option value="grcodeclub.gr/java/class/">Class</option>
         <option value="grcodeclub.gr/java/commands/arrays">Arrays</option>
-        <option value="grcodeclub.gr/java/examples">Παραδείγματα</option>
         <option value="grcodeclub.gr/java/class/">Class</option>
         <option value="grcodeclub.gr/java/class/extends">Extends</option>
         <option value="grcodeclub.gr/java/class/interface">Interface</option>     
