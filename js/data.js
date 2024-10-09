@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
     if (document.getElementById('search_table_page_3')) { addScript('https://grcodeclub.gr/js/search/tables-pages-3-input.js'); }
     if (document.getElementById('dropcard')) { addScript('https://grcodeclub.github.io/js/action/dropdown-cards.js'); }
+    if (document.getElementById('repo-list')) { addScript('https://grcodeclub.github.io/js/search/examples.js'); }
     if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
     if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
 
