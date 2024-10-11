@@ -12,8 +12,8 @@ const cssLinks = [
     "https://grcodeclub.gr/css/cookies.css",
     "https://grcodeclub.gr/css/manual.css",
     "https://grcodeclub.gr/css/text.css",
-    "https://grcodeclub.gr/css/code_bg.css",
-    "https://grcodeclub.gr/css/prism.css",
+    "https://grcodeclub.gr/css/code/bg.css",
+    "https://grcodeclub.gr/css/code/prism.css",
     "https://grcodeclub.gr/css/img.css",
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
  ];
