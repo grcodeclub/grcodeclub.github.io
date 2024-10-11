@@ -6,7 +6,10 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
 <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/more/create/">Create GrCode Club</option>
+    <option value="https://grcodeclub.gr/more/create/post/">Δημιουργία περιεχομένου</option>
     <option value="https://grcodeclub.gr/more/create/dynamic-html">Δυναμική προσθήκη περιεχομένου</option>
+    <option value="https://grcodeclub.gr/more/create/github">GitHub Page</option>
+    <option value="https://grcodeclub.gr/more/create/google">Google Tools</option>
 </select>
 </div>
 `;
