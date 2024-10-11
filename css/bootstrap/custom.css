@@ -17,12 +17,9 @@
 /* Προσαρμογή του χρώματος κατά το hover */
 .navbar-toggler:hover { background-color: #444444; /* Σκούρο γκρι κατά το hover */ }
 
-
-        .select2-container--default .select2-selection--single .select2-selection__placeholder {
-            color: white; /* Χρώμα του placeholder */
-        }
-
-
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+	color: white; /* Χρώμα του placeholder */
+}
 
 .custom-navbar {
 	background-color: #343a40; /* Σκούρο χρώμα */
@@ -41,7 +38,6 @@
         margin-top: 0;
 }
 
-
 /* Αλλάζουμε την τοποθέτηση του submenu όταν είναι κοντά στην άκρη */
 .dropdown-submenu .dropdown-menu.left {
         left: auto;
@@ -55,8 +51,8 @@
 }
 
 @media (min-width: 992px) {
-    .nav-item,.navbar-brand { margin-left: 3%;}
-   .container{margin-top: 10%}
+	.nav-item,.navbar-brand { margin-left: 3%;}
+   	.container{margin-top: 10%}
 }
 
 .dropdown-menu{
@@ -66,23 +62,22 @@
 
 .dropdown a {color: white;}
 
-
 /* Αφαίρεση του προεπιλεγμένου background image */
 .navbar-toggler-icon {
-    background-image: none; /* Αφαίρεση προεπιλεγμένου background image */
-    position: relative; /* Απόλυτη τοποθέτηση για γραμμές */
+	background-image: none; /* Αφαίρεση προεπιλεγμένου background image */
+    	position: relative; /* Απόλυτη τοποθέτηση για γραμμές */
 }
 
 /* Δημιουργία custom γραμμών για το hamburger icon */
 .navbar-toggler-icon:before, 
 .navbar-toggler-icon:after,
 .navbar-toggler-icon div {
-    content: '';
-    display: block;
-    width: 30px; /* Πλάτος γραμμής */
-    height: 3px; /* Ύψος γραμμής */
-    background-color: white; /* Χρώμα γραμμής */
-    margin: 6px 0; /* Κενό ανάμεσα στις γραμμές */
-    position: absolute; /* Απόλυτη τοποθέτηση */
-    left: 0; /* Ευθυγράμμιση στα αριστερά */
+	content: '';
+    	display: block;
+    	width: 30px; /* Πλάτος γραμμής */
+    	height: 3px; /* Ύψος γραμμής */
+    	background-color: white; /* Χρώμα γραμμής */
+    	margin: 6px 0; /* Κενό ανάμεσα στις γραμμές */
+    	position: absolute; /* Απόλυτη τοποθέτηση */
+    	left: 0; /* Ευθυγράμμιση στα αριστερά */
 }
