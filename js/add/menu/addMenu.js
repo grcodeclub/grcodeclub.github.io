@@ -22,7 +22,7 @@ fetch(currentURL)
                 if (currentURL.startsWith('https://grcodeclub.gr/windows/command-line/')) {addScript('https://grcodeclub.gr/js/add/menu/system/windows/command-line.js');}
                 else {addScript('https://grcodeclub.github.io/js/add/menu/system/windows/main.js');}
             } 
-            
+            else if (currentURL.startsWith('https://grcodeclub.gr/mobile/')) {addScript('https://grcodeclub.github.io/js/add/menu/mobile.js');} 
             else if (currentURL.startsWith('https://grcodeclub.gr/orologia/') || currentURL.startsWith('https://grcodeclub.gr/network/orologia/') || 
                        currentURL.startsWith('https://grcodeclub.gr/programming/orologia/') ||currentURL.startsWith('https://grcodeclub.gr/system/orologia/') || 
                        currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/')
