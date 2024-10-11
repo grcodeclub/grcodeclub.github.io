@@ -8,6 +8,7 @@ const mymenu = `
     <option value="https://grcodeclub.gr/more/create/">Create GrCode Club</option>
     <option value="https://grcodeclub.gr/more/create/post/">Δημιουργία περιεχομένου</option>
     <option value="https://grcodeclub.gr/more/create/dynamic-html">Δυναμική προσθήκη περιεχομένου</option>
+    <option value="https://grcodeclub.gr/more/create/libraries-and-frameworks">Βιβλιοθήκες και Frameworks</option>
     <option value="https://grcodeclub.gr/more/create/github">GitHub Page</option>
     <option value="https://grcodeclub.gr/more/create/google">Google Tools</option>
 </select>
