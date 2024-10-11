@@ -136,10 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
-    if (document.getElementById('code1')) {addScript('https://grcodeclub.gr/js/action/show_more_codes.js');} 
-        else if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
     if (document.getElementById('search_table_page_3')) { addScript('https://grcodeclub.gr/js/search/tables-pages-3-input.js'); }
-    if (document.getElementById('dropcard')) { addScript('https://grcodeclub.github.io/js/action/dropdown-cards.js'); }
     if (document.getElementById('repo-list')) { addScript('https://grcodeclub.github.io/js/search/examples.js'); }
     if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
     if (document.getElementById('back_page')) { addScript('https://grcodeclub.gr/js/add/back_page.js'); }
