@@ -4,12 +4,12 @@
 const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
-<select id="page-select" class="form-select" onchange="redirectToPage()">
+    <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/mobile/">Κινητά</option>
     <option value="https://grcodeclub.gr/mobile/android/">Android</option>
     <option value="https://grcodeclub.gr/mobile/android/adb">Android Debug Bridge</option>
     <option value="https://grcodeclub.gr/mobile/android/version">Eκδόσεις Android</option>
-    <option value="https://grcodeclub.gr/mobile/android/more/android-secret-codes">Κρυφοί κωδικοί του Android</option>
+    <option value="https://grcodeclub.gr/mobile/android/android-secret-codes">Κρυφοί κωδικοί του Android</option>
 
 </select>
 </div>
