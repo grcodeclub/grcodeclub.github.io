@@ -77,7 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Επιπλέο</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown3" style="max-height: 400px; overflow-y: auto;">
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/info/news">Eνημερώσεις</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/mobile">Κινητά</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/create/">Δημιουργία Project</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/profile/">Προφίλ Ομάδας</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Ορολογία</a></li>
