@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}
     if (document.querySelector('.mytable') !== null) { addScript('https://grcodeclub.gr/js/tables/color.js'); }
+    if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
 
     addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
  
