@@ -1,59 +1,4 @@
-h1.back_page           {display: inline-block;}
-/*
-.link_here::before     {content: "🔗";}
-.link_here {text-decoration: none;}
- */
-
-
-
-#repo-list, #file-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-
-
-#repo-list, #file-list {
-    list-style-type: none;
-    padding: 0;
-}
-.repo {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin: 5px 0;
-    cursor: pointer;
-}
-
-
-a.repo{
-    color: black;
-    border-color: transparent;
-    text-decoration: none; /* Αφαίρεση της υπογράμμισης */   
-}
-
-.repo:hover, a.repo:hover {
-    background-color: #f1f1f1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-        #code,#code1{
-            width: 100%;
-            background-color: rgb(211, 208, 208);
-            border-radius: 5px;
-            padding: 5px;
-            border-color: rgb(211, 208, 208);
-        }
-
+h1.back_page {display: inline-block;}
 
 @media (pointer: coarse) {
     a:active {
@@ -68,37 +13,26 @@ a.repo{
     }
 }
 
-        .link_here {
-  text-transform: uppercase; /* Κεφαλαιοποιεί το κείμενο */
-  background-color: #484c4c30; /* Προεπιλεγμένο χρώμα φόντου (teal) */
-  color: #000000; /* Άσπρο χρώμα για το κείμενο */
-  border: none; /* Καμία γραμμή περιγράμματος */
-  border-radius: 5px;
-  display: inline-block; /* Για να εμφανίζεται σε σειρά με άλλα στοιχεία */
-  height: 36px; /* Ύψος κουμπιού */
-  line-height: 36px; /* Κάθετη ευθυγράμμιση κειμένου */
-  padding: 0 16px; /* Εσωτερικό padding (γέμισμα) αριστερά και δεξιά */
-  text-align: center; /* Ευθυγράμμιση του κειμένου στο κέντρο */
-  text-decoration: none; /* Αφαιρεί την υπογράμμιση από τον σύνδεσμο */
-  cursor: pointer; /* Δείκτης χεριού όταν περνά το ποντίκι */
-  box-shadow: 0 4px 6px rgb(48, 48, 49); /* Προσθήκη σκιάς για 3D εφέ */
-
+.link_here {
+    text-transform: uppercase; /* Κεφαλαιοποιεί το κείμενο */
+    background-color: #484c4c30; /* Προεπιλεγμένο χρώμα φόντου (teal) */
+    color: #000000; /* Άσπρο χρώμα για το κείμενο */
+    border: none; /* Καμία γραμμή περιγράμματος */
+    border-radius: 5px;
+    display: inline-block; /* Για να εμφανίζεται σε σειρά με άλλα στοιχεία */
+    height: 36px; /* Ύψος κουμπιού */
+    line-height: 36px; /* Κάθετη ευθυγράμμιση κειμένου */
+    padding: 0 16px; /* Εσωτερικό padding (γέμισμα) αριστερά και δεξιά */
+    text-align: center; /* Ευθυγράμμιση του κειμένου στο κέντρο */
+    text-decoration: none; /* Αφαιρεί την υπογράμμιση από τον σύνδεσμο */
+    cursor: pointer; /* Δείκτης χεριού όταν περνά το ποντίκι */
+    box-shadow: 0 4px 6px rgb(48, 48, 49); /* Προσθήκη σκιάς για 3D εφέ */
 }
+
 .link_here:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Βαθύτερη σκιά στο hover */
-  transform: translateY(2px); /* Ελαφριά κίνηση προς τα πάνω για 3D εφέ */
-
+    transform: translateY(2px); /* Ελαφριά κίνηση προς τα πάνω για 3D εφέ */
     background-color: #484c4c89; /* Προεπιλεγμένο χρώμα φόντου (teal) */
-}
-
-div.text_bg {
-    background-color: rgba(20, 20, 20, 0.85); /* Σκούρο γκρι με ελαφριά διαφάνεια */
-    color: #e0e0e0; /* Απαλό γκρι για το κείμενο */
-    border-radius: 20px;
-    text-align: justify;
-    margin-bottom: 100px;
-    padding-bottom: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); /* Σκιά για εφέ ανύψωσης */
 }
 
 div.cmd {
@@ -108,34 +42,18 @@ div.cmd {
     padding: 10px;
 }
 
-        .highlight {
+.highlight {
     margin-top: 10%;
     padding: 10px;
     background-color: #343a40;
     color: white;
     text-align: center;
-        }
-.form-label{ color: #dcdcdc;
-margin-left: 2%;
-font-size: 20px;}
-
-a.link {
-    padding: 4px;
-    background-color: #1a1a1a; /* Σκούρο γκρι */
-    color: #f0f0f0; /* Ανοιχτό γκρι */
-    min-width: 80px;
-    margin: auto;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.link span { font-size: 18px; }
-a.link:hover {
-    padding: 4px;
-    color: #1a1a1a; /* Αντίθετο χρώμα στο hover */
-    background-color: #ffffff;
-    min-width: 80px;
-    margin: auto;
-    border-radius: 5px;
+
+.form-label{
+    color: #dcdcdc;
+    margin-left: 2%;
+    font-size: 20px;
 }
 
 h1.title {
