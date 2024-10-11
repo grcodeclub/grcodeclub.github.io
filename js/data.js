@@ -113,10 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Χρήση της addScriptBody για να φορτώσεις το jQuery
     addScriptBody('https://grcodeclub.gr/js/libraries/jquery.js', function() {
-        addScriptBody('https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js', function() {
+        addScriptBody('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js', function() {
             addScriptBody('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js', function() {
                 addScriptBody('https://grcodeclub.gr/js/libraries/prism.js');
-                addScriptBody('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js');
+                addScriptBody('https://grcodeclub.gr/js/libraries/select2-4-0-13.css');
                 addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
                 addScriptBody('https://grcodeclub.gr/js/shareURL.js');
                 addScriptBody('https://grcodeclub.gr/js/add/function-jQuery.js');
