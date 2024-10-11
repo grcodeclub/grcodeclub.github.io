@@ -99,8 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 addScriptBody('https://grcodeclub.gr/js/libraries/prism.js');
                 addScriptBody('https://grcodeclub.gr/js/libraries/select2-4-0-13.css');
                 addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
-                addScriptBody('https://grcodeclub.gr/js/shareURL.js');
-                addScriptBody('https://grcodeclub.gr/js/add/function-jQuery.js');
             });
         });
     });
