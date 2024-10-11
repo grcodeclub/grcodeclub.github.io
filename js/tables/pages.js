@@ -90,3 +90,6 @@ function applyRowColors() {
 
 // Αρχική εμφάνιση του πίνακα
 displayTable(currentPage);
+
+// Εναλλαγή χρώματος φόντου στις γραμμές
+rows1.forEach((row, index) => { if (index % 2 === 0) { row.style.backgroundColor = 'rgba(211, 211, 211, 0.211)'; } });
