@@ -3,7 +3,6 @@ const cssLinks = [
     "https://grcodeclub.gr/css/libraries/font-awesome-5-15-4.css",
     "https://grcodeclub.gr/css/libraries/bootstrap/v5-3-3.css",
     "https://grcodeclub.gr/css/libraries/bootstrap/bootstrap-icons.css",
-    "https://grcodeclub.gr/css/libraries/bootstrap/bootstrap-icons",
     "https://grcodeclub.gr/css/libraries/bootstrap/table.css",
     "https://grcodeclub.gr/css/libraries/bootstrap/custom.css",
     "https://grcodeclub.gr/css/libraries/select2/v4-0-13.css",
