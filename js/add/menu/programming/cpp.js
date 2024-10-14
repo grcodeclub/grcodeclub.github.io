@@ -6,18 +6,25 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/cpp/">Επιλέξτε σελίδα</option>
-        <option value="https://github.com/grcodeclub/php/">GitHub</option>
+        <option value="https://github.com/grcodeclub/cpp/">GitHub</option>
         <option value="https://grcodeclub.gr/cpp/library/">Bιβλιοθήκες</option>
-        <option value="https://grcodeclub.gr/cpp/commands">Βασικές εντολές</option>
+    <optgroup label="Βασικές Εντολές">
+        <option value="https://grcodeclub.gr/cpp/commands/variables">Μεταβλητές</option>
+        <option value="https://grcodeclub.gr/cpp/commands/output_input">Είσοδος / Έξοδος</option>
+        <option value="https://grcodeclub.gr/cpp/commands/conditions">Δομή ελέγχου</option>
+        <option value="https://grcodeclub.gr/cpp/commands/loop">Δομή επανάληψης</option>
+        <option value="https://grcodeclub.gr/cpp/commands/function">Συναρτήσεις</option>
         <option value="https://grcodeclub.gr/cpp/pointers">Δείκτες</option>
-        <option value="https://grcodeclub.gr/cpp/files">Αρχεία</option>
+    </optgroup>
+    <optgroup label="Class">
         <option value="https://grcodeclub.gr/cpp/class/">Class</option>
         <option value="https://grcodeclub.gr/cpp/class/inheritance">Κληρονομικότητα</option>
         <option value="https://grcodeclub.gr/cpp/class/header-file">Header File</option>
         <option value="https://grcodeclub.gr/cpp/operator">Υπερφόρτωση τελεστών</option>
+    </optgroup>
+        <option value="https://grcodeclub.gr/cpp/files">Αρχεία</option>
         <option value="https://grcodeclub.gr/cpp/exception">Χειρισμός εξαιρέσεων</option>
         <option value="https://grcodeclub.gr/cpp/templates">Templates</option>
-        
     </select>
 </div>
 `;
