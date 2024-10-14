@@ -17,7 +17,7 @@ fetch(currentURL)
             else if (currentURL.startsWith('https://grcodeclub.gr/cpp/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/cpp.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/php/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/php.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/java/')) {addScript('https://grcodeclub.github.io/js/add/menu/programming/java.js');} 
-            else if (currentURL.startsWith('https://grcodeclub.gr/more/'){
+            else if (currentURL.startsWith('https://grcodeclub.gr/more/')){
                     if (currentURL.startsWith('https://grcodeclub.gr/more/office-suite')) {addScript('https://grcodeclub.github.io/js/add/menu/more/office-suite.js');} 
                     else if (currentURL.startsWith('https://grcodeclub.gr/more/create') && !currentURL.startsWith('https://grcodeclub.gr/more/create/post')) {addScript('https://grcodeclub.github.io/js/add/menu/more/create.js');}         
             } 
