@@ -7,8 +7,15 @@ const mymenu = `
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/python/">Επιλέξτε σελίδα</option>
         <option value="https://github.com/grcodeclub/python">GitHub</option>
-        <option value="https://grcodeclub.gr/python/command">Εντολές</option>
         <option value="https://grcodeclub.gr/python/library/">Βιβλιοθήκες</option>
+    <optgroup label="Βασικές Εντολές">
+        <option value="https://grcodeclub.gr/python/commands/variables">Μεταβλητές</option>
+        <option value="https://grcodeclub.gr/python/commands/output_input">Είσοδος / Έξοδος</option>
+        <option value="https://grcodeclub.gr/python/commands/conditions">Δομή ελέγχου</option>
+        <option value="https://grcodeclub.gr/python/commands/loop">Δομή επανάληψης</option>
+        <option value="https://grcodeclub.gr/python/commands/loop">Δομή επανάληψης</option>
+        <option value="https://grcodeclub.gr/python/commands/function">Συναρτήσεις</option>
+    </optgroup>
         <option value="https://grcodeclub.gr/python/files">Αρχεία</option>
         <option value="https://grcodeclub.gr/python/terminal">Terminal</option>
     </select>
