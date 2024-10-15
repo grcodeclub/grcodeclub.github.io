@@ -8,6 +8,7 @@ const mymenu = `
         <option value="https://grcodeclub.gr/cpp/">Επιλέξτε σελίδα</option>
         <option value="https://github.com/grcodeclub/cpp/">GitHub</option>
         <option value="https://grcodeclub.gr/cpp/library/">Bιβλιοθήκες</option>
+        <option value="https://grcodeclub.gr/cpp/operators">Τελεστές</option>  
     <optgroup label="Βασικές Εντολές">
         <option value="https://grcodeclub.gr/cpp/commands/variables">Μεταβλητές</option>
         <option value="https://grcodeclub.gr/cpp/commands/output_input">Είσοδος / Έξοδος</option>
