@@ -11,6 +11,7 @@ const mymenu = `
     <optgroup label="Βασικές Εντολές">
         <option value="https://grcodeclub.gr/java/commands/variables">Μεταβλητές</option>
         <option value="https://grcodeclub.gr/java/commands/output_input">Είσοδος / Έξοδος</option>
+        <option value="https://grcodeclub.gr/java/commands/loop">Δομή επανάληψης</option>
         <option value="https://grcodeclub.gr/java/commands/arrays">Arrays</option>
     </optgroup>
       <optgroup label="Class">
