@@ -6,12 +6,18 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/java/">Επιλέξτε σελίδα</option>
-        <option value="grcodeclub.gr/java/commands/">Βασικές Εντολές</option>
-        <option value="grcodeclub.gr/java/class/">Class</option>
-        <option value="grcodeclub.gr/java/commands/arrays">Arrays</option>
-        <option value="grcodeclub.gr/java/class/">Class</option>
-        <option value="grcodeclub.gr/java/class/extends">Extends</option>
-        <option value="grcodeclub.gr/java/class/interface">Interface</option>     
+        <option value="https://github.com/grcodeclub/java">GitHub</option>
+        <option value="https://grcodeclub.gr/c/library/">Βιβλιοθήκες</option>    
+    <optgroup label="Βασικές Εντολές">
+        <option value="https://grcodeclub.gr/java/commands/variables">Μεταβλητές</option>
+        <option value="https://grcodeclub.gr/java/commands/output_input">Είσοδος / Έξοδος</option>
+        <option value="https://grcodeclub.gr/java/commands/arrays">Arrays</option>
+    </optgroup>
+      <optgroup label="Class">
+        <option value="https://grcodeclub.gr/java/class/">Class</option>
+        <option value="https://grcodeclub.gr/java/class/interface">Interface</option>
+        <option value="https://grcodeclub.gr/java/class/extends">Extends</option>
+    </optgroup>
     </select>
 </div>
 `;
