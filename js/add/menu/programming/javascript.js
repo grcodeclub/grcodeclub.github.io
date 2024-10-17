@@ -8,6 +8,7 @@ const mymenu = `
     <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/javascript/">Επιλέξτε σελίδα</option>
     <option value="https://grcodeclub.gr/javascript/commands">Βασικές εντολές</option>
+        <option value="https://grcodeclub.gr/javascript/commands/arrays">Arrays</option>
     <option value="https://grcodeclub.gr/javascript/restriction">Περιορισμοί</option>
     <option value="https://grcodeclub.gr/javascript/messages">Mηνύματα - Ειδοποιήσεις</option>
     <option value="https://grcodeclub.gr/javascript/libraries-and-framework">Βιβλιοθήκες - Framework</option>
