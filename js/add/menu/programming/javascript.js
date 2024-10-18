@@ -12,11 +12,13 @@ const mymenu = `
     <option value="https://grcodeclub.gr/javascript/restriction">Περιορισμοί</option>
     <option value="https://grcodeclub.gr/javascript/messages">Mηνύματα - Ειδοποιήσεις</option>
     <option value="https://grcodeclub.gr/javascript/libraries-and-framework">Βιβλιοθήκες - Framework</option>
-    <option value="https://grcodeclub.gr/javascript/eventlisteners">EventListeners</option>
     <optgroup label="Βιβλιοθήκες">
         <option value="https://grcodeclub.gr/javascript/library/jquery">jQuery</option>
     </optgroup>
-
+    <optgroup label="DOM">
+        <option value="https://grcodeclub.gr/javascript/dom/">Βασικές Εντολές</option>
+        <option value="https://grcodeclub.gr/javascript/dom/eventlisteners">EventListeners</option>
+    </optgroup>
     </select>
 </div>
 `;
