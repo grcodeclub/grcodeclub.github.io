@@ -51,7 +51,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown7" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Δίκτυα Υπολογιστών</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown7">
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/">Περισσότερα</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/">Βασικές γνώσεις</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/tcp-ip">Μοντέλο TCP/IP</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/protocol/">Πρωτόκολλα</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/services-port">Υπηρεσίες και Ports</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/application-and-protocols">Εφαρμογή και Πρωτόκολλο</a></li>
