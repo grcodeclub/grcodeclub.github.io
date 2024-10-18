@@ -8,7 +8,7 @@ const mymenu = `
 <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/network/tcip-ip/">TCP/IP</option>
         <optgroup label="Φυσικό">
-          <option value="https://grcodeclub.gr/network/tcip-ip/physical/mac">MAC</option>
+          <option value="https://grcodeclub.gr/network/tcp-ip/physical/mac">MAC</option>
         </optgroup>
        <optgroup label="Δικτύου">
            <option value="https://grcodeclub.gr/network/protocol/ip/">Internet Protocol</option>
