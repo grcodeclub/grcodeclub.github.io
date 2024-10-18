@@ -6,7 +6,7 @@ const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
 <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/network/tcip-ip/">TCP/IP</option>
+    <option value="https://grcodeclub.gr/network/tcp-ip/">TCP/IP</option>
         <optgroup label="Φυσικό">
           <option value="https://grcodeclub.gr/network/tcp-ip/physical/mac">MAC</option>
         </optgroup>
