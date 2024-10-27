@@ -78,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown8" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Υλικό</a>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown8" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Υλικό υπολογιστών</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown8" style="max-height: 400px; overflow-y: auto;">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/pc">Εξαρτήματα υπολογιστή</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/pc">Μαθηματικοί τύποι ηλεκτρονικής</a></li>
