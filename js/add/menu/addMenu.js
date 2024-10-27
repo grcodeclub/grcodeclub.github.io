@@ -31,6 +31,14 @@ fetch(currentURL)
                        currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/')
                        || currentURL.startsWith('https://grcodeclub.gr/windows/orologia') ) {
                         addScript('https://grcodeclub.github.io/js/add/menu/orologia.js'); } 
+
+            else if (currentURL.startsWith('https://grcodeclub.gr/orologia/syntomografies') || currentURL.startsWith('https://grcodeclub.gr/network/orologia/syntomografies') || 
+                       currentURL.startsWith('https://grcodeclub.gr/programming/orologia/syntomografies') ||currentURL.startsWith('https://grcodeclub.gr/system/orologia/syntomografies') || 
+                       currentURL.startsWith('https://grcodeclub.gr/linux/orologia/syntomografies') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/syntomografies')
+                       || currentURL.startsWith('https://grcodeclub.gr/windows/orologia/syntomografies') ) {
+                        addScript('https://grcodeclub.github.io/js/add/menu/syntomografies.js'); } 
+
+                    
             else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/address-network/ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/ip.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/network/tcp-ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/tcp-ip.js');} 
             else if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {addScript('https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js');}
