@@ -6,6 +6,7 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
 <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/hardware/">Εισαγωγή</option>
+    <option value="https://grcodeclub.gr/hardware/code-resistors">Χρωματικός Κώδικας Αντιστάσεων</option>
     <option value="https://grcodeclub.gr/hardware/pc-builder">PC Builder</option>
     <option value="https://grcodeclub.gr/hardware/electronics">Μαθηματικοί τύποι ηλεκτρονικής</option>
 
