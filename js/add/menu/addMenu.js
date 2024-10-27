@@ -39,7 +39,7 @@ fetch(currentURL)
                         || currentURL.startsWith('https://grcodeclub.gr/hardware/orologia/')|| currentURL.startsWith('https://grcodeclub.gr/windows/orologia') ) {
                         addScript('https://grcodeclub.github.io/js/add/menu/orologia.js'); } 
 
-                    
+            else if (currentURL.startsWith('https://grcodeclub.gr/hardware/')) { addScript('https://grcodeclub.github.io/js/add/menu/hardware.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/address-network/ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/ip.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/network/tcp-ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/tcp-ip.js');} 
             else if (currentURL.startsWith('https://grcodeclub.gr/linux/terminal/')) {addScript('https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js');}
