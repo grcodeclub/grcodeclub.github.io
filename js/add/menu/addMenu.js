@@ -30,13 +30,13 @@ fetch(currentURL)
                         else if (currentURL.startsWith('https://grcodeclub.gr/orologia/syntomografies') || currentURL.startsWith('https://grcodeclub.gr/network/orologia/syntomografies') || 
                        currentURL.startsWith('https://grcodeclub.gr/programming/orologia/syntomografies') ||currentURL.startsWith('https://grcodeclub.gr/system/orologia/syntomografies') || 
                        currentURL.startsWith('https://grcodeclub.gr/linux/orologia/syntomografies') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/syntomografies')
-                       || currentURL.startsWith('https://grcodeclub.gr/windows/orologia/syntomografies') ) {
+                        || currentURL.startsWith('https://grcodeclub.gr/windows/hardware/syntomografies') || currentURL.startsWith('https://grcodeclub.gr/windows/orologia/syntomografies') ) {
                         addScript('https://grcodeclub.github.io/js/add/menu/syntomografies.js'); } 
                                 
             else if (currentURL.startsWith('https://grcodeclub.gr/orologia/') || currentURL.startsWith('https://grcodeclub.gr/network/orologia/') || 
                        currentURL.startsWith('https://grcodeclub.gr/programming/orologia/') ||currentURL.startsWith('https://grcodeclub.gr/system/orologia/') || 
                        currentURL.startsWith('https://grcodeclub.gr/linux/orologia/') || currentURL.startsWith('https://grcodeclub.gr/cybersecurity/orologia/')
-                       || currentURL.startsWith('https://grcodeclub.gr/windows/orologia') ) {
+                        || currentURL.startsWith('https://grcodeclub.gr/hardware/orologia/')|| currentURL.startsWith('https://grcodeclub.gr/windows/orologia') ) {
                         addScript('https://grcodeclub.github.io/js/add/menu/orologia.js'); } 
 
                     
