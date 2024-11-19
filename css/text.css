@@ -19,8 +19,10 @@ h1.back_page {display: inline-block;}
     color: #000000; /* Άσπρο χρώμα για το κείμενο */
     border: none; /* Καμία γραμμή περιγράμματος */
     border-radius: 5px;
+    white-space: nowrap;
+    word-break: keep-all;
     display: inline-block; /* Για να εμφανίζεται σε σειρά με άλλα στοιχεία */
-    height: 36px; /* Ύψος κουμπιού */
+    height: 30px; /* Ύψος κουμπιού */
     line-height: 36px; /* Κάθετη ευθυγράμμιση κειμένου */
     padding: 0 16px; /* Εσωτερικό padding (γέμισμα) αριστερά και δεξιά */
     text-align: center; /* Ευθυγράμμιση του κειμένου στο κέντρο */
