@@ -14,23 +14,21 @@ h1.back_page {display: inline-block;}
 }
 
         .link_here {
-    color: black; /* Άσπρο χρώμα για το κείμενο */
-    background-color: rgba(128, 128, 128, 0.158);
-    text-align: left;
-    border: none; /* Καμία γραμμή περιγράμματος */
-    border-radius: 5px;
-    padding: 3px;
+        background-color: rgba(0, 0, 0, 0.123);
+            border-radius: 5px;
+    padding: 4px;
+    color: rgb(0, 0, 0); /* Black χρώμα για το κείμενο */
     display: inline-block; /* Για να εμφανίζεται σε σειρά με άλλα στοιχεία */
     text-decoration: none; /* Αφαιρεί την υπογράμμιση από τον σύνδεσμο */
     cursor: pointer; /* Δείκτης χεριού όταν περνά το ποντίκι */
-    box-shadow: 0 4px 5px #444444; /* Προσθήκη σκιάς για 3D εφέ */
+
 }
 
 .link_here:hover {
-    color: white;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Βαθύτερη σκιά στο hover */
-    transform: translateY(2px); /* Ελαφριά κίνηση προς τα πάνω για 3D εφέ */
-    background-color: #444444; /* Προεπιλεγμένο χρώμα φόντου (teal) */
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0px 5px #000000; /* Προσθήκη σκιάς για 3D εφέ */
+    transform: translateY(1px); /* Ελαφριά κίνηση προς τα πάνω για 3D εφέ */
+    background-color: #44444436; /* Προεπιλεγμένο χρώμα φόντου (teal) */
 }
 
 
