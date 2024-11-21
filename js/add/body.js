@@ -78,9 +78,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Επιπλέο</a>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Περισσότερα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown3" style="max-height: 400px; overflow-y: auto;">
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/">Περισσότερο Υλικό</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/">Επιπλέον Υλικό</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/tools/">Online εργαλεία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/">Υλικό υπολογιστών</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/mobile">Κινητά</a></li>
