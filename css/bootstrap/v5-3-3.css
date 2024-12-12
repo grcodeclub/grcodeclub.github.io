@@ -3,7 +3,7 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root,[data-bs-theme=light] {
+:root,[data-bs-theme=light] { 
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -13459,3 +13459,6 @@ color:white;}
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+.nav-link.dropdown-toggle::after{ transform: rotate(90deg); } /* Όταν το dropdown είναι ανοιχτό | Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
+.nav-link.dropdown-toggle[aria-expanded="true"]::after {transform: rotate(0deg); } /* Περιστροφή 0 μοίρες για το βέλος προς τα κάτω */
