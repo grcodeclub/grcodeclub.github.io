@@ -10,7 +10,6 @@ const cssLinks = [
     "https://grcodeclub.gr/css/code/bg.css",
     "https://grcodeclub.gr/css/code/prism.css",
     "https://grcodeclub.gr/css/scrollbars.css",
-    "https://grcodeclub.gr/css/cookies.css",
     "https://grcodeclub.gr/css/manual.css",
     "https://grcodeclub.gr/css/text.css",
     "https://grcodeclub.gr/css/img.css"
@@ -108,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(script);
     }
 
-    if (window.location.href.startsWith('https://grcodeclub.gr')) {addScript('https://grcodeclub.gr/js/cookies.js');}     
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
