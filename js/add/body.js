@@ -1,17 +1,4 @@
 const htmlContentHeader = `
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMLRVK48"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<div id="cookie-banner" style="display: none;">
-    <p>Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας στην ιστοσελίδα μας. Επιλέξτε αν θέλετε να αποδεχτείτε ή να απορρίψετε όλα τα cookies:</p>
-    <label><input type="checkbox" id="cookies-ga4" checked disabled>Ανάλυση και Παρακολούθηση</label><br>
-    <label><input type="checkbox" id="cookies-social" checked>Social Media</label>
-    <br>
-    <button id="accept-cookies">Αποδοχή</button>
-    <button id="reject-cookies">Απόρριψη</button>
-</div>
 <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="mymenu">
     <a class="navbar-brand" href="https://grcodeclub.gr">
         <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
