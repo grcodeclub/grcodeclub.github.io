@@ -737,6 +737,7 @@ progress {
 @media (min-width: 992px) {
     .container,.container-lg,.container-md,.container-sm {
         max-width:960px;
+        margin-top: 25%
     }
 }
 
@@ -783,21 +784,8 @@ progress {
 .col {
     flex: 1 0 0%
 }
+.container{margin-top: 25%}
 
-.row-cols-auto>* {
-    flex: 0 0 auto;
-    width: auto
-}
-
-.row-cols-1>* {
-    flex: 0 0 auto;
-    width: 100%
-}
-
-.row-cols-2>* {
-    flex: 0 0 auto;
-    width: 50%
-}
 
 .row-cols-3>* {
     flex: 0 0 auto;
@@ -13463,3 +13451,48 @@ color:white;}
 
 .nav-link.dropdown-toggle::after{ transform: rotate(90deg); } /* Όταν το dropdown είναι ανοιχτό | Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
 .nav-link.dropdown-toggle[aria-expanded="true"]::after {transform: rotate(0deg); } /* Περιστροφή 0 μοίρες για το βέλος προς τα κάτω */
+
+
+
+.close-icon { display: none; }  /* Απόκρυψη του close icon από την αρχή */
+.navbar-toggler.open .hamburger-icon { display: none; }   /* Εναλλαγή κατά το άνοιγμα του μενού */
+.navbar-toggler.open .close-icon { display: block; }
+/* Ρυθμίσεις για τις τρεις γραμμές */
+.navbar-toggler-icon:before { top: -4px; /* Πρώτη γραμμή πάνω */ }
+.navbar-toggler-icon div { top: 6px; /* Κεντρική γραμμή */ }
+.navbar-toggler-icon:after { top: 18px; /* Τρίτη γραμμή κάτω */ }
+/* Προσαρμογή του χρώματος κατά το hover */
+.navbar-toggler:hover { background-color: #444444; /* Σκούρο γκρι κατά το hover */ }
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+	color: white; /* Χρώμα του placeholder */
+}
+
+.custom-navbar {
+	background-color: #343a40; /* Σκούρο χρώμα */
+    	color: white; /* Λευκό κείμενο */
+	margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+	.nav-item,.navbar-brand { margin-left: 3%;  margin-right: 3%; color:white;}
+}
+
+.dropdown-submenu .dropdown-menu {
+	left: 100%;
+        top: 0;
+        margin-top: 0;
+}
+
+/* Αλλάζουμε την τοποθέτηση του submenu όταν είναι κοντά στην άκρη */
+.dropdown-submenu .dropdown-menu.left {
+        left: auto;
+        right: 100%;
+}
+
+/* Προσαρμογή για το hamburger και το X */
+.hamburger-icon, .close-icon {
+	width: 30px;
+        height: 30px;
+        color:white;
+}
