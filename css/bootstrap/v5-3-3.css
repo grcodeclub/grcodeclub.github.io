@@ -4249,7 +4249,7 @@ textarea.form-control-lg {
 }
 
 .navbar-nav .nav-link.active,.navbar-nav .nav-link.show {
-    color: var(--bs-navbar-active-color);
+    color: white
 }
 
 .navbar-nav .dropdown-menu {
