@@ -116,6 +116,29 @@ const htmlContentFooter = `
                 </ul>
             </section>
         </div>
+    <br><button id="toggle-theme" class="btn btn-primary">Enable Dark Theme</button><br>
+
+  <script>
+    // Αρχική ρύθμιση του `data-bs-theme`
+    document.addEventListener('DOMContentLoaded', () => {
+      const body = document.body; // Αναφορά στο <body>
+      body.setAttribute('data-bs-theme', 'light'); // Ορισμός αρχικού θέματος
+
+      const button = document.getElementById('toggle-theme'); // Επιλογή του κουμπιού
+
+      // Λειτουργία αλλαγής θέματος
+      button.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-bs-theme'); // Τρέχον θέμα
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light'; // Υπολογισμός νέου θέματος
+        body.setAttribute('data-bs-theme', newTheme); // Ρύθμιση νέου θέματος
+
+        // Ενημέρωση του κουμπιού
+        button.textContent = newTheme === 'light' ? 'Enable Dark Theme' : 'Enable Light Theme';
+      });
+    });
+  </script>
+
+        
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
             &copy; 2024 Gr Code Club. All Rights Reserved.
         </div>
