@@ -3,8 +3,7 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root,[data-bs-theme=light] { 
-    --bs-blu: #0d6efd;
+:root,[data-bs-theme=light] {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -13,7 +12,6 @@
     --bs-orange: #fd7e14;
     --bs-yellow: #ffc107;
     --bs-green: #198754;
-    --bg-color: #343a40;
     --bs-teal: #20c997;
     --bs-cyan: #0dcaf0;
     --bs-black: #000;
@@ -715,7 +713,6 @@ progress {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
-    margin-top: 10%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-right: auto;
@@ -724,7 +721,7 @@ progress {
 
 @media (min-width: 576px) {
     .container,.container-sm {
-        max-width:540px;
+        max-width:540px
     }
 }
 
@@ -736,8 +733,7 @@ progress {
 
 @media (min-width: 992px) {
     .container,.container-lg,.container-md,.container-sm {
-        max-width:960px;
-        margin-top: 25%
+        max-width:960px
     }
 }
 
@@ -784,8 +780,21 @@ progress {
 .col {
     flex: 1 0 0%
 }
-.container{margin-top: 25%}
 
+.row-cols-auto>* {
+    flex: 0 0 auto;
+    width: auto
+}
+
+.row-cols-1>* {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.row-cols-2>* {
+    flex: 0 0 auto;
+    width: 50%
+}
 
 .row-cols-3>* {
     flex: 0 0 auto;
@@ -3882,7 +3891,7 @@ textarea.form-control-lg {
     padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
     clear: both;
     font-weight: 400;
-    color: white;
+    color: var(--bs-dropdown-link-color);
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
@@ -3893,7 +3902,7 @@ textarea.form-control-lg {
 
 .dropdown-item:focus,.dropdown-item:hover {
     color: var(--bs-dropdown-link-hover-color);
-    background-color: #ccc6c6;
+    background-color: var(--bs-dropdown-link-hover-bg)
 }
 
 .dropdown-item.active,.dropdown-item:active {
@@ -4178,7 +4187,7 @@ textarea.form-control-lg {
 .navbar {
     --bs-navbar-padding-x: 0;
     --bs-navbar-padding-y: 0.5rem;
-    --bs-navbar-color: white;
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
     --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
     --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
     --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
@@ -4197,7 +4206,6 @@ textarea.form-control-lg {
     --bs-navbar-toggler-focus-width: 0.25rem;
     --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
     position: relative;
-    background-color: var(--bg-color);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -4215,8 +4223,7 @@ textarea.form-control-lg {
 .navbar-brand {
     padding-top: var(--bs-navbar-brand-padding-y);
     padding-bottom: var(--bs-navbar-brand-padding-y);
-    margin-left: 3%;  
-    margin-right: 3%;
+    margin-right: var(--bs-navbar-brand-margin-end);
     font-size: var(--bs-navbar-brand-font-size);
     color: var(--bs-navbar-brand-color);
     text-decoration: none;
@@ -4238,8 +4245,7 @@ textarea.form-control-lg {
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none;
-    
+    list-style: none
 }
 
 .navbar-nav .nav-link.active,.navbar-nav .nav-link.show {
@@ -4247,9 +4253,7 @@ textarea.form-control-lg {
 }
 
 .navbar-nav .dropdown-menu {
-    position: static;
-    background-color: var(--bg-color);
-    
+    position: static
 }
 
 .navbar-text {
@@ -4259,7 +4263,8 @@ textarea.form-control-lg {
 }
 
 .navbar-text a,.navbar-text a:focus,.navbar-text a:hover {
-color:white;}
+    color: var(--bs-navbar-active-color)
+}
 
 .navbar-collapse {
     flex-basis: 100%;
@@ -4427,7 +4432,6 @@ color:white;}
 @media (min-width: 992px) {
     .navbar-expand-lg {
         flex-wrap:nowrap;
-        right: 0;
         justify-content: flex-start
     }
 
@@ -13448,51 +13452,3 @@ color:white;}
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
-
-.nav-link.dropdown-toggle::after{ transform: rotate(90deg); } /* Όταν το dropdown είναι ανοιχτό | Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
-.nav-link.dropdown-toggle[aria-expanded="true"]::after {transform: rotate(0deg); } /* Περιστροφή 0 μοίρες για το βέλος προς τα κάτω */
-
-
-
-.close-icon { display: none; }  /* Απόκρυψη του close icon από την αρχή */
-.navbar-toggler.open .hamburger-icon { display: none; }   /* Εναλλαγή κατά το άνοιγμα του μενού */
-.navbar-toggler.open .close-icon { display: block; }
-/* Ρυθμίσεις για τις τρεις γραμμές */
-.navbar-toggler-icon:before { top: -4px; /* Πρώτη γραμμή πάνω */ }
-.navbar-toggler-icon div { top: 6px; /* Κεντρική γραμμή */ }
-.navbar-toggler-icon:after { top: 18px; /* Τρίτη γραμμή κάτω */ }
-/* Προσαρμογή του χρώματος κατά το hover */
-.navbar-toggler:hover { background-color: #444444; /* Σκούρο γκρι κατά το hover */ }
-
-.select2-container--default .select2-selection--single .select2-selection__placeholder {
-	color: white; /* Χρώμα του placeholder */
-}
-
-.custom-navbar {
-	background-color: #343a40; /* Σκούρο χρώμα */
-    	color: white; /* Λευκό κείμενο */
-	margin-bottom: 20px;
-}
-
-@media (max-width: 992px) {
-	.nav-item,.navbar-brand { margin-left: 3%;  margin-right: 3%; color:white;}
-}
-
-.dropdown-submenu .dropdown-menu {
-	left: 100%;
-        top: 0;
-        margin-top: 0;
-}
-
-/* Αλλάζουμε την τοποθέτηση του submenu όταν είναι κοντά στην άκρη */
-.dropdown-submenu .dropdown-menu.left {
-        left: auto;
-        right: 100%;
-}
-
-/* Προσαρμογή για το hamburger και το X */
-.hamburger-icon, .close-icon {
-	width: 30px;
-        height: 30px;
-        color:white;
-}
