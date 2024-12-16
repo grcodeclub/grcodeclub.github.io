@@ -1,0 +1,81 @@
+.navbar-expand-lg { right: 0; }
+.custom-navbar .navbar-brand, .custom-navbar .nav-link{ color: #ffffff; } /* Λευκό χρώμα για τις συνδέσεις */
+.nav-item{ right: 0; }
+.custom-navbar .nav-link:hover { color: #ffc107; }  /* Χρώμα όταν περνάει ο δείκτης του ποντικιού */ 
+.navbar-toggler { border-color: #000000; } /* Τροποποίηση του background color του κουμπιού */
+.navbar-toggler-icon { background-image: none; } /* Αφαίρεση του default background του navbar-toggler-icon */
+.close-icon { display: none; }  /* Απόκρυψη του close icon από την αρχή */
+.dropdown-submenu {position: relative;}
+.navbar-toggler.open .hamburger-icon { display: none; }   /* Εναλλαγή κατά το άνοιγμα του μενού */
+.navbar-toggler.open .close-icon { display: block; }
+/* Ρυθμίσεις για τις τρεις γραμμές */
+.navbar-toggler-icon:before { top: -4px; /* Πρώτη γραμμή πάνω */ }
+.navbar-toggler-icon div { top: 6px; /* Κεντρική γραμμή */ }
+.navbar-toggler-icon:after { top: 18px; /* Τρίτη γραμμή κάτω */ }
+/* Προσαρμογή του χρώματος κατά το hover */
+.navbar-toggler:hover { background-color: #444444; /* Σκούρο γκρι κατά το hover */ }
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+	color: white; /* Χρώμα του placeholder */
+}
+
+.custom-navbar {
+	background-color: #343a40; /* Σκούρο χρώμα */
+    	color: white; /* Λευκό κείμενο */
+	margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+	.nav-item,.navbar-brand { margin-left: 3%;  margin-right: 3%; color:white;}
+        .container{margin-top: 25%}
+}
+
+.dropdown-submenu .dropdown-menu {
+	left: 100%;
+        top: 0;
+        margin-top: 0;
+}
+
+/* Αλλάζουμε την τοποθέτηση του submenu όταν είναι κοντά στην άκρη */
+.dropdown-submenu .dropdown-menu.left {
+        left: auto;
+        right: 100%;
+}
+
+/* Προσαρμογή για το hamburger και το X */
+.hamburger-icon, .close-icon {
+	width: 30px;
+        height: 30px;
+}
+
+@media (min-width: 992px) {
+	.nav-item,.navbar-brand { margin-left: 3%;}
+   	.container{margin-top: 10%}
+}
+
+.dropdown-menu{
+	background-color: #343a40;
+	border-color: #343a40;
+}
+
+.dropdown a {color: white;}
+
+/* Αφαίρεση του προεπιλεγμένου background image */
+.navbar-toggler-icon {
+	background-image: none; /* Αφαίρεση προεπιλεγμένου background image */
+    	position: relative; /* Απόλυτη τοποθέτηση για γραμμές */
+}
+
+/* Δημιουργία custom γραμμών για το hamburger icon */
+.navbar-toggler-icon:before, 
+.navbar-toggler-icon:after,
+.navbar-toggler-icon div {
+	content: '';
+    	display: block;
+    	width: 30px; /* Πλάτος γραμμής */
+    	height: 3px; /* Ύψος γραμμής */
+    	background-color: white; /* Χρώμα γραμμής */
+    	margin: 6px 0; /* Κενό ανάμεσα στις γραμμές */
+    	position: absolute; /* Απόλυτη τοποθέτηση */
+    	left: 0; /* Ευθυγράμμιση στα αριστερά */
+}
