@@ -26,9 +26,6 @@ function addCssFiles(cssUrls) {
  // Προσθήκη των αρχείων CSS στο head
  cssLinks.forEach(linkUrl => {addCssFiles(linkUrl); });
 
-if (document.querySelector('.command-line') || document.querySelector('.code_editor')) {    addCssFiles("https://grcodeclub.gr/css/code/prism.css");     console.log(`Βρέθηκαν στοιχεία με την κλάση "my-class"`);}
-
-
 // Εισαγωγή Logo 
 // Δημιουργία ενός πίνακα με τα μεγέθη που θέλετε να προσθέσετε
 const sizes = [
@@ -87,7 +84,11 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
          (event.key === 'F12') || (event.key === 'F11')) {event.preventDefault(); alert('This keyboard shortcut is disabled on this page.');}
 });
 
-document.addEventListener('DOMContentLoaded', function() {    
+document.addEventListener('DOMContentLoaded', function() {  
+
+    if (document.querySelector('.command-line') || document.querySelector('.code_editor')) {    addCssFiles("https://grcodeclub.gr/css/code/prism.css");     console.log(`Βρέθηκαν στοιχεία με την κλάση "my-class"`);}
+
+    
     // Συνάρτηση για να προσθέσεις ένα script στο head και να περιμένεις μέχρι να φορτωθεί
     function addScriptBody(src, callback) {
         var script = document.createElement('script');
