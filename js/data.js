@@ -91,25 +91,26 @@ document.addEventListener('DOMContentLoaded', function() {
         script.onload = callback; // Κλήση της callback συνάρτησης όταν το script φορτωθεί
         document.body.appendChild(script);
     }
+    // Χρήση της addScriptBody για να φορτώσεις το jQuery
+    addScriptBody('https://grcodeclub.gr/js/libraries/jquery.js', function() {
+        addScriptBody('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js', function() {
+            addScriptBody('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js', function() {
+                addScriptBody('https://grcodeclub.gr/js/libraries/prism.js');
+                addScriptBody('https://grcodeclub.gr/js/libraries/select2-4-0-13.js');
+                addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
+            });
+        });
+    });
 
-        function addScript(src) {
+    function addScript(src) {
         var script = document.createElement('script');
         script.src = src;
         document.body.appendChild(script);
     }
-    
-    // Χρήση της addScriptBody για να φορτώσεις το jQuery
-    addScriptBody('https://grcodeclub.gr/js/libraries/jquery.js', function() {
-        addScript('https://grcodeclub.gr/js/libraries/select2-4-0-13.js');
-        addScript('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js');
-        addScript('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js');
-        addScript('https://grcodeclub.gr/js/libraries/prism.js');
-        addScript('https://grcodeclub.gr/js/add/body.js');
-        addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
-    });
+    addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
 
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
-    if (document.getElementById('code')) { addScriptBody('https://grcodeclub.gr/js/action/show_code.js');}
+    if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
  
 });
