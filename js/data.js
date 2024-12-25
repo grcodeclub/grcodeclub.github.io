@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 };
 
 const handleScriptAddition = () => {
-    const matchingScript = Object.keys(scriptMappings).find(url => currentURL.startsWith(url));
+    const matchingScript = Object.keys(scriptMappings).find(url => currentURL.startsWith(url)); // Ελέγχει ποιο URL από τα κλειδιά του αντικειμένου `scriptMappings` ταιριάζει με το `currentURL`
     if (matchingScript) { addScript(scriptMappings[matchingScript]);  }
 };
 
