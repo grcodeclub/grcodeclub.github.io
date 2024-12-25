@@ -26,7 +26,7 @@ fetch(currentURL)
                 else {addScript('https://grcodeclub.github.io/js/add/menu/system/windows/main.js');}
             } 
             else if (currentURL.startsWith('https://grcodeclub.gr/mobile/')) {addScript('https://grcodeclub.github.io/js/add/menu/mobile.js');} 
-            else if (currentURL.startsWith('https://grcodeclub.gr/syntomografies/'){addScript('https://grcodeclub.github.io/js/add/menu/syntomografies.js'); } 
+            else if (currentURL.startsWith('https://grcodeclub.gr/syntomografies/')){addScript('https://grcodeclub.github.io/js/add/menu/syntomografies.js'); } 
             else if (currentURL.startsWith('https://grcodeclub.gr/orologia/'){addScript('https://grcodeclub.github.io/js/add/menu/orologia.js'); } 
             else if (currentURL.startsWith('https://grcodeclub.gr/hardware/')) { addScript('https://grcodeclub.github.io/js/add/menu/hardware.js');}
             else if (currentURL.startsWith('https://grcodeclub.gr/network/protocol/address-network/ip/')) {addScript('https://grcodeclub.github.io/js/add/menu/network/ip.js');}
