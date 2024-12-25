@@ -1,7 +1,7 @@
 const htmlContentHeader = `
 <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="mymenu">
     <a class="navbar-brand" href="https://grcodeclub.gr">
-        <img src="https://grcodeclub.gr/files-page/logo/logo-head.png" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
+        <img src="https://grcodeclub.gr/files-page/logo/logo-head.webp" alt="Το Λογότυπό μας" width="150" height="60" class="d-inline-block align-top">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="btnmenu_mobile">
         <span>
