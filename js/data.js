@@ -1,5 +1,3 @@
-addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
-
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
     "https://grcodeclub.gr/css/libraries/bootstrap/v5-3-3.css",
@@ -17,15 +15,6 @@ const cssLinks = [
     "https://grcodeclub.gr/css/img.css",
     "https://grcodeclub.gr/css/manual.css"
 ]; 
- const head = document.head;    // Αρχικοποίηση head
- 
- // Προσθήκη των αρχείων CSS στο head
- cssLinks.forEach(linkUrl => {
-     const linkElement = document.createElement('link');
-     linkElement.rel = 'stylesheet';
-     linkElement.href = linkUrl;
-     head.appendChild(linkElement);  // Προσθήκη στο head
- });
  
 // Εισαγωγή Logo 
 // Δημιουργία ενός πίνακα με τα μεγέθη που θέλετε να προσθέσετε
@@ -108,10 +97,20 @@ document.addEventListener('DOMContentLoaded', function() {
         script.src = src;
         document.body.appendChild(script);
     }
-
+    addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
 
  
 });
+
+ const head = document.head;    // Αρχικοποίηση head
+ 
+ // Προσθήκη των αρχείων CSS στο head
+ cssLinks.forEach(linkUrl => {
+     const linkElement = document.createElement('link');
+     linkElement.rel = 'stylesheet';
+     linkElement.href = linkUrl;
+     head.appendChild(linkElement);  // Προσθήκη στο head
+ });
