@@ -24,7 +24,7 @@ function addCssFiles(cssUrls) {
 }
 
  // Προσθήκη των αρχείων CSS στο head
- cssLinks.forEach(linkUrl => {addCssFiles("linkUrl"); });
+ cssLinks.forEach(linkUrl => {addCssFiles(linkUrl); });
 
 if (document.querySelector('.command-line') || document.querySelector('.code_editor')) {    addCssFiles("https://grcodeclub.gr/css/code/prism.css"); }
 
