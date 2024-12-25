@@ -1,3 +1,5 @@
+addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
+
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
     "https://grcodeclub.gr/css/libraries/bootstrap/v5-3-3.css",
@@ -111,6 +113,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
 
-    addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
  
 });
