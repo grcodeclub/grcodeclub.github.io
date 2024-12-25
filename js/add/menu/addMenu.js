@@ -1,5 +1,11 @@
 const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
+    function addScript(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        document.body.appendChild(script);
+    }
+
 // Κάνε αίτημα στο currentURL για να ελέγξεις την κατάσταση
 fetch(currentURL)
     .then(response => {
