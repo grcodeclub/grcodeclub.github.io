@@ -7,10 +7,10 @@ const mymenu = `
 <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/orologia/">Διαφορά</option>
     <option value="https://grcodeclub.gr/programming/orologia/">Προγραμματισμός</option>
-    <option value="https://grcodeclub.gr/network/orologia/">Δίκτυα Υπολογιστών</option>
+    <option value="https://grcodeclub.gr/orologia/network">Δίκτυα Υπολογιστών</option>
     <option value="https://grcodeclub.gr/system/orologia/">Λειτουργικά Συστήματα</option>
-    <option value="https://grcodeclub.gr/cybersecurity/orologia/">Κυβερνοασφάλεια</option>
-    <option value="https://grcodeclub.gr/linux/orologia/">Linux</option>
+    <option value="https://grcodeclub.gr/orologia/cybersecurity">Κυβερνοασφάλεια</option>
+    <option value="https://grcodeclub.gr/orologia/linux">Linux</option>
     <option value="https://grcodeclub.gr/hardware/orologia/">Υλικό υπολογιστών</option>
     <option value="https://grcodeclub.gr/windows/orologia">Microsoft Windows</option>
 </select>
