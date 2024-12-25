@@ -4,12 +4,9 @@ const cssLinks = [
     "https://grcodeclub.gr/css/libraries/bootstrap/bootstrap-icons.css",
     "https://grcodeclub.gr/css/libraries/bootstrap/table.css",
     "https://grcodeclub.gr/css/libraries/bootstrap/custom.css",
-    "https://grcodeclub.gr/css/libraries/select2/v4-0-13.css",
-    "https://grcodeclub.gr/css/libraries/select2/custom.css",
     "https://grcodeclub.gr/css/libraries/font-awesome/6-5-0.css",
     "https://grcodeclub.gr/css/code/bg.css",
     "https://grcodeclub.gr/css/scrollbars.css",
-    "https://grcodeclub.gr/css/manual.css",
     "https://grcodeclub.gr/css/text.css",
     "https://grcodeclub.gr/css/img.css",
     "https://grcodeclub.gr/css/manual.css"
@@ -86,7 +83,7 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
 
 document.addEventListener('DOMContentLoaded', function() {  
 
-    if (document.querySelector('.command-line') || document.querySelector('.code_editor')) {    addCssFiles("https://grcodeclub.gr/css/code/prism.css");     console.log(`Βρέθηκαν στοιχεία με την κλάση "my-class"`);}
+    if (document.querySelector('.command-line') || document.querySelector('.code_editor')) { addCssFiles("https://grcodeclub.gr/css/code/prism.css");}
 
     
     // Συνάρτηση για να προσθέσεις ένα script στο head και να περιμένεις μέχρι να φορτωθεί
@@ -157,5 +154,7 @@ fetch(currentURL)
         else {console.log("Η σελίδα δεν είναι διαθέσιμη. Κωδικός κατάστασης: " + response.status);}
     })
     .catch(error => {    console.error("Σφάλμα κατά την αίτηση:", error);    });
+
+    if (document.getElementById('page-select') { addCssFiles("https://grcodeclub.gr/css/code/v4-0-13.css"); addCssFiles("https://grcodeclub.gr/css/code/custom.css");}
 
 });
