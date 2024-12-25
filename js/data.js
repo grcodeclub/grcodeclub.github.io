@@ -8,7 +8,6 @@ const cssLinks = [
     "https://grcodeclub.gr/css/libraries/select2/custom.css",
     "https://grcodeclub.gr/css/libraries/font-awesome/6-5-0.css",
     "https://grcodeclub.gr/css/code/bg.css",
-    "https://grcodeclub.gr/css/code/prism.css",
     "https://grcodeclub.gr/css/scrollbars.css",
     "https://grcodeclub.gr/css/manual.css",
     "https://grcodeclub.gr/css/text.css",
@@ -24,7 +23,16 @@ const cssLinks = [
      linkElement.href = linkUrl;
      head.appendChild(linkElement);  // Προσθήκη στο head
  });
- 
+
+function addCssFiles(cssUrls) {
+     const linkElement = document.createElement('link');
+     linkElement.rel = 'stylesheet';
+     linkElement.href = cssUrls;
+     head.appendChild(linkElement);  // Προσθήκη στο head
+}
+
+addCssFiles("https://grcodeclub.gr/css/code/prism.css");
+
 // Εισαγωγή Logo 
 // Δημιουργία ενός πίνακα με τα μεγέθη που θέλετε να προσθέσετε
 const sizes = [
