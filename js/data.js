@@ -155,6 +155,6 @@ fetch(currentURL)
     })
     .catch(error => {    console.error("Σφάλμα κατά την αίτηση:", error);    });
 
-    if (document.getElementById('page-select') { addCssFiles("https://grcodeclub.gr/css/code/v4-0-13.css"); addCssFiles("https://grcodeclub.gr/css/code/custom.css");}
+    if (document.getElementById('page-select')) { addCssFiles("https://grcodeclub.gr/css/code/v4-0-13.css"); addCssFiles("https://grcodeclub.gr/css/code/custom.css");}
 
 });
