@@ -100,16 +100,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Χρήση της addScriptBody για να φορτώσεις το jQuery
     addScriptBody('https://grcodeclub.gr/js/libraries/jquery.js', function() {
-        addScriptBody('https://grcodeclub.gr/js/libraries/select2-4-0-13.js');
-        addScriptBody('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js');
-        addScriptBody('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js');
-        addScriptBody('https://grcodeclub.gr/js/libraries/prism.js');
-        addScriptBody('https://grcodeclub.gr/js/add/body.js');
-        addScriptBody('https://grcodeclub.gr/js/add/menu/addMenu.js');
+        addScript('https://grcodeclub.gr/js/libraries/select2-4-0-13.js');
+        addScript('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js');
+        addScript('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js');
+        addScript('https://grcodeclub.gr/js/libraries/prism.js');
+        addScript('https://grcodeclub.gr/js/add/body.js');
+        addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
     });
 
-    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScriptBody('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
-    if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScriptBody('https://grcodeclub.gr/js/search/tables-pages.js');}
+    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
+    if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
     if (document.getElementById('code')) { addScriptBody('https://grcodeclub.gr/js/action/show_code.js');}
  
 });
