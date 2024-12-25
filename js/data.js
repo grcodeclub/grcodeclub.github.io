@@ -14,16 +14,8 @@ const cssLinks = [
     "https://grcodeclub.gr/css/img.css",
     "https://grcodeclub.gr/css/manual.css"
 ]; 
- const head = document.head;    // Αρχικοποίηση head
- 
- // Προσθήκη των αρχείων CSS στο head
- cssLinks.forEach(linkUrl => {
-     const linkElement = document.createElement('link');
-     linkElement.rel = 'stylesheet';
-     linkElement.href = linkUrl;
-     head.appendChild(linkElement);  // Προσθήκη στο head
- });
 
+const head = document.head;    // Αρχικοποίηση head
 function addCssFiles(cssUrls) {
      const linkElement = document.createElement('link');
      linkElement.rel = 'stylesheet';
@@ -31,7 +23,11 @@ function addCssFiles(cssUrls) {
      head.appendChild(linkElement);  // Προσθήκη στο head
 }
 
-addCssFiles("https://grcodeclub.gr/css/code/prism.css");
+ // Προσθήκη των αρχείων CSS στο head
+ cssLinks.forEach(linkUrl => {addCssFiles("linkUrl"); });
+
+if (document.querySelector('.command-line') || document.querySelector('.code_editor')) {    addCssFiles("https://grcodeclub.gr/css/code/prism.css"); }
+
 
 // Εισαγωγή Logo 
 // Δημιουργία ενός πίνακα με τα μεγέθη που θέλετε να προσθέσετε
