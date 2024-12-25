@@ -5,13 +5,13 @@ const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
 <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/orologia/syntomografies">Διαφορά</option>
-    <option value="https://grcodeclub.gr/programming/orologia/syntomografies">Προγραμματισμός</option>
-    <option value="https://grcodeclub.gr/network/orologia/syntomografies">Δίκτυα Υπολογιστών</option>
-    <option value="https://grcodeclub.gr/system/orologia/syntomografies">Λειτουργικά Συστήματα</option>
-    <option value="https://grcodeclub.gr/cybersecurity/orologia/syntomografies">Κυβερνοασφάλεια</option>
-    <option value="https://grcodeclub.gr/linux/orologia/syntomografies">Linux</option>
-    <option value="https://grcodeclub.gr/windows/orologia/syntomografies">Microsoft Windows</option>
+    <option value="https://grcodeclub.gr/syntomografies">Διαφορά</option>
+    <option value="https://grcodeclub.gr/syntomografies/programming">Προγραμματισμός</option>
+    <option value="https://grcodeclub.gr/syntomografies/network">Δίκτυα Υπολογιστών</option>
+    <option value="https://grcodeclub.gr/syntomografies/system">Λειτουργικά Συστήματα</option>
+    <option value="https://grcodeclub.gr/syntomografies/cybersecurity">Κυβερνοασφάλεια</option>
+    <option value="https://grcodeclub.gr/syntomografies/linux">Linux</option>
+    <option value="https://grcodeclub.gr/syntomografies/windows">Microsoft Windows</option>
 </select>
 </div>
 `;
