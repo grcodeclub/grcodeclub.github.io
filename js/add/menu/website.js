@@ -7,6 +7,7 @@ const mymenu = `
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/">Επιλέξτε σελίδα</option>
         <option value="https://grcodeclub.gr/website/more/font-awesome">Λίστα Font Awesome</option>
+        <option value="https://grcodeclub.gr/website/more/http-methods">HTTP Μέθοδοι</option>
         <option value="https://grcodeclub.gr/website/more/uploadsite">Κατοχύρωση, Ανέβασμα και Αναζήτηση</option>
         <option value="https://grcodeclub.gr/website/more/seo">SEO (Search Engine Optimizatio)n</option>
         <option value="https://grcodeclub.gr/website/more/input-symbols">Κωδικοί & σύμβολα χαρακτήρων HTML</option>
