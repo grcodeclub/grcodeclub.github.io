@@ -83,34 +83,31 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
          (event.key === 'F12') || (event.key === 'F11')) {event.preventDefault(); alert('This keyboard shortcut is disabled on this page.');}
 });
 
-document.addEventListener('DOMContentLoaded', function() {    
-    // Συνάρτηση για να προσθέσεις ένα script στο head και να περιμένεις μέχρι να φορτωθεί
-    function addScriptBody(src, callback) {
-        var script = document.createElement('script');
-        script.src = src;
-        script.onload = callback; // Κλήση της callback συνάρτησης όταν το script φορτωθεί
-        document.body.appendChild(script);
-    }
-    // Χρήση της addScriptBody για να φορτώσεις το jQuery
-    addScriptBody('https://grcodeclub.gr/js/libraries/jquery.js', function() {
-        addScriptBody('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js', function() {
-            addScriptBody('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js', function() {
-                addScriptBody('https://grcodeclub.gr/js/libraries/prism.js');
-                addScriptBody('https://grcodeclub.gr/js/libraries/select2-4-0-13.js');
-                addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
-            });
-        });
-    });
-
+// Φόρτωση των scripts με defer
+document.addEventListener('DOMContentLoaded', function() {
     function addScript(src) {
         var script = document.createElement('script');
         script.src = src;
+        script.defer = true;
         document.body.appendChild(script);
     }
+
+    // Χρήση της addScript για φόρτωση των βιβλιοθηκών
+    addScript('https://grcodeclub.gr/js/libraries/jquery.js');
+    addScript('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js');
+    addScript('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js');
+    addScript('https://grcodeclub.gr/js/libraries/prism.js');
+    addScript('https://grcodeclub.gr/js/libraries/select2-4-0-13.js');
+    addScript('https://grcodeclub.gr/js/add/body.js');
     addScript('https://grcodeclub.gr/js/add/menu/addMenu.js');
 
-    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
-    if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
-    if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
- 
+    // Προσθήκη επιπλέον scripts ανάλογα με την ύπαρξη στοιχείων στη σελίδα
+    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) {
+        addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
+    if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) {
+        addScript('https://grcodeclub.gr/js/search/tables-pages.js');
+    }
+    if (document.getElementById('code')) {
+        addScript('https://grcodeclub.gr/js/action/show_code.js');
+    }
 });
