@@ -1,9 +1,3 @@
-function addScript(src) {
-        script = document.createElement('script');
-        script.src = src;
-        document.body.appendChild(script);
-    }
-
 const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
 // Κάνε αίτημα στο currentURL για να ελέγξεις την κατάσταση
