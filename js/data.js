@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addScriptBody('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js', function() {
             addScriptBody('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js', function() {
                 addScriptBody('https://grcodeclub.gr/js/libraries/prism.js');
+                addScriptBody('https://grcodeclub.gr/js/libraries/select2-4-0-13.js');
                 addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
             });
         });
