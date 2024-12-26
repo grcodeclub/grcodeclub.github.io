@@ -110,8 +110,8 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
 
     if (document.querySelector('.command-line') || document.querySelector('.code_editor') || document.getElementById('code')) { 
         addCssFiles("https://grcodeclub.gr/css/code/prism.css");
-        addScript('https://grcodeclub.gr/js/action/show_code.js');
         addScript('https://grcodeclub.gr/js/libraries/prism.js');
+        addScript('https://grcodeclub.gr/js/action/show_code.js');
     }
     
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
