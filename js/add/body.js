@@ -68,13 +68,13 @@ const htmlContentHeader = `
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Περισσότερα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown3" style="max-height: 400px; overflow-y: auto;">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/">Επιπλέον Υλικό</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/tools/">Online εργαλεία</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/tools">Online εργαλεία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/">Υλικό υπολογιστών</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/mobile">Κινητά</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/quiz/">Quiz</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/mobile/">Κινητά</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/quiz/">Quiz</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Ορολογία</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/syntomografies">Συντομογραφίες</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/create/">Δημιουργία Project</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/syntomografies">Συντομογραφίες</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/create/">Δημιουργία Project</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/profile/">Προφίλ Ομάδας</a></li>
                 </ul>
             </li>
