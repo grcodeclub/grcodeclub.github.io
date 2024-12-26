@@ -5,6 +5,7 @@ const cssLinks = [
     "https://grcodeclub.gr/css/libraries/bootstrap/table.css",
     "https://grcodeclub.gr/css/libraries/bootstrap/custom.css",
     "https://grcodeclub.gr/css/libraries/font-awesome/6-5-0.css",
+    "https://grcodeclub.gr/css/code/bg.css",
     "https://grcodeclub.gr/css/text.css",
     "https://grcodeclub.gr/css/elements.css"
 ]; 
@@ -81,7 +82,6 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
 document.addEventListener('DOMContentLoaded', function() {  
 
     if (document.querySelector('.command-line') || document.querySelector('.code_editor')) { 
-        addCssFiles("https://grcodeclub.gr/css/code/bg.css");
         addCssFiles("https://grcodeclub.gr/css/code/prism.css");
     }
 
