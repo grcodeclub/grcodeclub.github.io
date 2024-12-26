@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Δίκτυα Υπολογιστών | ARP">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+         <br><a class="btn btn-dark" href="./"><i class="bi bi-arrow-left"></i> </a><br><br>
+        <h1 class="title">ARP</h1> 
+        <p>Δυναμικός μηχανισμός εντοπισμού της MAC Διεύθυνσης μιας συσκευής στο δίκτυο, χρησιμοποιούντα την αντίστοιχη IP address της συσκευής.</p>
+        <p>Για να εντοπιστεί η MAC μιας συσκευής χρησιμοποιεί
+            <ol>
+                <li>ARP Reuest που είναι Broadcast και κάνουμε ερώτηση προς το δίκτυο </li>
+                <li>ARP Reply που είναι Unicast και είναι η απάντηση με την MAC Διεύθυνση</li>
+            </ol>
+        </p>
+        <p>Στον  Πίνακα ARP αποθηκεύουμε τα ζεύγη IP και MAC για τις συσκευές του δικτιού</p>
+        <a href="https://grcodeclub.github.io/network/files/ARP_domi.png" target="_blank"><img src="https://grcodeclub.github.io/network/files/ARP_domi.png" width="500" height="300"></a>
+        <h3 class="highlight">ARP Request</h3>
+        <ol>
+            <li>Κωδικός Λειτουργίας : 1</li>
+            <li>Το πεδίο MAC  Address του παραλήπτη έχει όλα τα bit 0</li>
+            <li>Το πεδίο MAC  Address του είναι γνωστό</li>
+            <li>Τα πεδία  IP Address του είναι γνωστά</li>
+        </ol>
+        <p>Το ARP Request ενθυλακώνεται σε ένα Ethernet Frame οπού :
+            <ol>
+                <li>Η MAC αποστολέα είναι γνωστή</li>
+                <li>Η MAC παραλήπτη είναι Broadcast, γιατί απευθύνεται σε όλους του Η/Υ του δίκτυο</li>
+            </ol>     
+        </p>
+        <h3 class="highlight">ARP Reply</h3>
+        <p> Η συσκευή που θα βρει ότι η IP αποστολέα στο arp reguest είναι η δική της θα απάντηση με ένα ARP Reply.<br> 
+            Το ARP Reply είναι UNICAST αφού γνωρίζει την IP και MAC διεύθυνση του παραλήπτη (από το ARP Reguest)<br>
+            Στο ARP πακέτο  ο κωδικός λειτουργίας θα είναι 2 </p>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

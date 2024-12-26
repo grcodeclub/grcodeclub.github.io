@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Δίκτυα Υπολογιστών | Internet Protocol v4 (Μορφή Πακέτο)">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Internet Protocol v4 <br> Μορφή Πακέτο</h1>
+        <p> 
+            Ένα πακέτο IPv4 αποτελείται από μια κεφαλίδα (header) και τα δεδομένα (data). Ας δούμε αναλυτικά τη μορφή ενός πακέτου IPv4:
+            <ol>
+                <li>Κεφαλίδα (Header):
+                    <ul>
+                        <li>Έκδοση (Version): Προσδιορίζει την έκδοση του πρωτοκόλλου IPv4, συνήθως η τιμή είναι 4.</li>
+                        <li>Μήκος Κεφαλίδας (Header Length): Καθορίζει το μήκος της κεφαλίδας σε 32-bit. Ο αριθμός αυτός πολλαπλασιάζεται με 4 για να προκύψει το πραγματικό μήκος της κεφαλίδας.</li>
+                        <li>Τύπος Υπηρεσίας (Type of Service): Χρησιμοποιείται για να καθορίσει την προτεραιότητα και την ποιότητα εξυπηρέτησης των πακέτων.</li>
+                        <li>Συνολικό Μήκος (Total Length): Αναφέρει το συνολικό μήκος του πακέτου (κεφαλίδα + δεδομένα) σε bytes.</li>
+                        <li>Αναγνωριστικό πηγής (Source Identification): Περιέχει τη διεύθυνση IP του αποστολέα του πακέτου.</li>
+                        <li>Αναγνωριστικό προορισμού (Destination Identification): Περιέχει τη διεύθυνση IP του παραλήπτη του πακέτου.</li>
+                        <li>Έλεγχος Σφαλμάτων (Checksum): Χρησιμοποιείται για να ελέγξει την ακεραιότητα της κεφαλίδας.</li>
+                    </ul>
+                </li>
+                <li>Δεδομένα (Data):
+                    <ul>
+                        <li>Τα δεδομένα περιέχουν την πραγματική πληροφορία που μεταφέρεται μέσω του πακέτου. Αυτά μπορεί να είναι μηνύματα, αρχεία, εντολές κ.λπ.</li>
+                    </ul>
+                </li>
+            </ol>
+            Το συνολικό μήκος του πακέτου (κεφαλίδα + δεδομένα) δεν πρέπει να υπερβαίνει το μέγιστο μήκος που μπορεί να υποστηρίξει ένα δίκτυο, γνωστό ως MTU (Maximum Transmission Unit).
+        </p>
+        <a href="https://grcodeclub.github.io/network/files/ipv4_πακέτο.png" target="_blank"> <img src="https://grcodeclub.github.io/network/files/ipv4_πακέτο.png" alt="IPv4 Πακέτο" class="mobile_img"></a>                        
+   
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

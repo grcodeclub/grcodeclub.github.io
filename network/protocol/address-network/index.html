@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Δίκτυα Υπολογιστών | Πρωτόκολλα Διαχείρισης Διευθύνσεων και Δικτύου">
+<title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1  class="title">Πρωτόκολλα Διαχείρισης Διευθύνσεων και Δικτύου</h1>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Πρωτόκολλο</td> <td>Όνομα</td> <td>Περιγραφή</td></tr>
+            <tr><td><a href="./ip" class="link_here">IP</a></td> <td>Internet Protocol</td> <td>Χρησιμοποιείται για τη μεταφορά πακέτων στο Internet.</td></tr>
+            <tr><td><a href="./icmp" class="link_here">ICMP</a></td> <td>Internet Control Message Protocol</td> <td>Χρησιμοποιείται για τη μεταφορά μηνυμάτων ελέγχου και σφαλμάτων στο Internet</td></tr>
+            <tr><td><a href="./arp" class="link_here">ARP</a></td> <td>Address Resolution Protocol</td> <td>Χρησιμοποιείται για τη εντοπισμό μιας διεύθυνσης MAC με βάση την διεύθυνση IP</td></tr>
+            <tr><td>RARP</td> <td>Reverse Address Resolution Protocol</td> <td>Χρησιμοποιείται για την αντίστροφη μετατροπή μιας διεύθυνσης MAC σε αντίστοιχη διεύθυνση IP</td></tr>
+            <tr><td>NAT</td> <td>Network Address Translation</td> <td>Τεχνική που επιτρέπει σε πολλές συσκευές στο εσωτερικό ενός δικτύου να χρησιμοποιούν μια ενιαία δημόσια διεύθυνση IP.</td></tr>
+        </table>    
+          <div class="pagination" id="pagination"></div>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
