@@ -81,8 +81,8 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
 document.addEventListener('DOMContentLoaded', function() {  
 
     if (document.querySelector('.command-line') || document.querySelector('.code_editor')) { 
-        addCssFiles("https://grcodeclub.gr/css/code/prism.css");
         addCssFiles("https://grcodeclub.gr/css/code/bg.css");
+        addCssFiles("https://grcodeclub.gr/css/code/prism.css");
     }
 
     
