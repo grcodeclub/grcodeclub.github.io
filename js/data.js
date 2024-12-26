@@ -99,7 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Αλυσίδα Promises
 loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     .then(() => loadScript('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js'))
-    .then(() => loadScript('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js'))
+    .then(() => loadScript('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js'))    
+    .then(() => loadScript('https://grcodeclub.gr/js/libraries/select2-4-0-13.js'))
     .then(() => loadScript('https://grcodeclub.gr/js/add/body.js'))
     .catch(error => console.error(error));
 
