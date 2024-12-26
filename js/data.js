@@ -8,7 +8,7 @@ const cssLinks = [
     "https://grcodeclub.gr/css/code/bg.css",
     "https://grcodeclub.gr/css/scrollbars.css",
     "https://grcodeclub.gr/css/text.css",
-    "https://grcodeclub.gr/css/img.css",
+    "https://grcodeclub.gr/css/elements.css",
 ]; 
 
 const head = document.head;    // Αρχικοποίηση head
