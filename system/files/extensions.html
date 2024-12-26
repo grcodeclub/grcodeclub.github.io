@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/system.png"/>
+    <meta property="og:title" content="Επεκτάσεις ονομάτων αρχείων">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Επεκτάσεις ονομάτων αρχείων</h1>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση ">
+        <br>
+        <label style="padding-left: 10px;">Φίλτρο:</label>
+        <select id="selectOption" name="code">
+            <option value="0">Όλα</option>
+            <option value="Εικόνα">Εικόνα</option>Ήχος
+            <option value="Βίντεο">Βίντεο</option>
+            <option value="Βίντεο">Ήχος</option>
+            <option value="Linux">Linux</option>
+            <option value="Android">Android</option>
+            <option value="Γλώσσα προγραμματισμού">Γλώσσα προγραμματισμού</option>
+            <option value="Windows">Windows</option>
+            <option value="Office Pack">Office Pack</option>
+            <option value="macOS">macOS</option>
+
+        </select><br><br>
+
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Κατηγορία</td><td>Επέκταση</td><td>Περιγραφή</td></tr>
+            <tr><td>Εικόνα</td><td>.jpg</td><td>Εικόνα JPEG</td></tr>
+            <tr><td>Εικόνα</td><td>.png</td><td>Εικόνα PNG με διαφάνεια</td></tr>
+            <tr><td>Εικόνα</td><td>.gif</td><td>Εικόνα GIF (γραφική ανταλλαγή μορφής)</td></tr>
+            <tr><td>Εικόνα</td><td>.bmp</td><td>Αρχείο εικόνας Bitmap</td></tr>
+            <tr><td>Εικόνα</td><td>.svg</td><td>Αρχείο Scalable Vector Graphics</td></tr>
+            <tr><td>Linux</td><td>.deb</td><td>Αρχείο πακέτου Debian</td></tr>
+            <tr><td>Android</td><td>.apk</td><td>Αρχείο εφαρμογής Android (Android Package)</td></tr>
+            <tr><td>Linux</td><td>.sh</td><td>Αρχείο shell script σε Linux/Unix</td></tr>
+            <tr><td></td><td>.txt</td><td>Απλό αρχείο κειμένου</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.html</td><td>Αρχείο HTML (HyperText Markup Language)</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.css</td><td>Αρχείο Cascading Style Sheets</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.js</td><td>Αρχείο JavaScript</td></tr>
+            <tr><td></td><td>.json</td><td>Αρχείο JavaScript Object Notation</td></tr>
+            <tr><td></td><td>.xml</td><td>Αρχείο eXtensible Markup Language</td></tr>
+            <tr><td></td><td>.pdf</td><td>Αρχείο Portable Document Format</td></tr>
+            <tr><td></td><td>.docx</td><td>Αρχείο Microsoft Word</td></tr>
+            <tr><td></td><td>.xlsx</td><td>Αρχείο Microsoft Excel</td></tr>
+            <tr><td></td><td>.pptx</td><td>Αρχείο Microsoft PowerPoint</td></tr>
+            <tr><td></td><td>.zip</td><td>Συμπιεσμένο αρχείο ZIP</td></tr>
+            <tr><td></td><td>.rar</td><td>Συμπιεσμένο αρχείο RAR</td></tr>
+            <tr><td></td><td>.7z</td><td>Συμπιεσμένο αρχείο 7-Zip</td></tr>
+            <tr><td></td><td>.tar</td><td>Αρχείο TAR (Tape Archive)</td></tr>
+            <tr><td></td><td>.iso</td><td>Αρχείο εικόνας δίσκου ISO</td></tr>
+            <tr><td>Windows</td><td>.exe</td><td>Εκτελέσιμο αρχείο Windows</td></tr>
+            <tr><td></td><td>.dll</td><td>Δυναμική βιβλιοθήκη συνδέσεων (Dynamic Link Library)</td></tr>
+            <tr><td>Windows</td><td>.bat</td><td>Batch αρχείο για αυτοματοποιημένα scripts στα Windows</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.py</td><td>Αρχείο Python</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.java</td><td>Αρχείο κώδικα Java</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.cpp</td><td>Αρχείο κώδικα C++</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.php</td><td>Αρχείο PHP (Hypertext Preprocessor)</td></tr>
+            <tr><td></td><td>.qcow2</td><td>Εικόνα δίσκου QEMU Copy-On-Write</td></tr>
+            <tr><td>macOS</td><td>.dmg</td><td>Αρχείο εικόνας δίσκου macOS</td></tr>
+            <tr><td></td><td>.log</td><td>Αρχείο καταγραφής συμβάντων (log file)</td></tr>
+            <tr><td></td><td>.ini</td><td>Αρχείο ρυθμίσεων (configuration) για Windows</td></tr>
+            <tr><td>Linux</td><td>.conf</td><td>Αρχείο διαμόρφωσης για Linux</td></tr>
+            <tr><td></td><td>.yaml</td><td>Αρχείο YAML</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.lua</td><td>Αρχείο Lua</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.md</td><td>Αρχείο Markdown</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.pl</td><td>Αρχείο Perl</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.swift</td><td>Αρχείο Swift</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.rb</td><td>Αρχείο Ruby</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.go</td><td>Αρχείο Go (Golang)</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.m</td><td>Αρχείο Objective-C</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.cs</td><td>Αρχείο C#</td></tr>
+            <tr><td></td><td>.vb</td><td>Αρχείο Visual Basic</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.asm</td><td>Αρχείο Assembly</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.rs</td><td>Αρχείο Rust</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.kt</td><td>Αρχείο Kotlin</td></tr>
+            <tr><td>Γλώσσα προγραμματισμού</td><td>.toml</td><td>Αρχείο Tom's Obvious, Minimal Languag</td></tr>
+            <tr><td></td><td>.ps1</td><td>Αρχείο PowerShell script</td></tr>
+            <tr><td></td><td>.vbs</td><td>Αρχείο Visual Basic Script</td></tr>
+            <tr><td></td><td>.rpm</td><td>Αρχείο πακέτου Red Hat Package Manager</td></tr>
+            <tr><td></td><td>.vhd</td><td>Εικονικός σκληρός δίσκος (Virtual Hard Disk)</td></tr>
+            <tr><td></td><td>.vmdk</td><td>Αρχείο εικονικού δίσκου VMware</td></tr>
+            <tr><td></td><td>.img</td><td>Αρχείο εικόνας δίσκου</td></tr>
+            <tr><td></td><td>.mp3</td><td>Αρχείο συμπιεσμένου ήχου MPEG Layer 3</td></tr>
+            <tr><td></td><td>.mp4</td><td>Αρχείο βίντεο MPEG-4</td></tr>
+            <tr><td>Windows</td><td>.msi</td><td>Αρχείο εγκατάστασης Windows Installer</td></tr>
+            <tr><td>Linux</td><td>.profile</td><td>Αρχείο ρυθμίσεων χρήστη</td></tr>
+            <tr><td>Office Pack</td><td>.odt</td><td>Αρχείο OpenDocument Text</td></tr>
+            <tr><td>Office Pack</td><td>.ods</td><td>Αρχείο OpenDocument Spreadsheet</td></tr>
+            <tr><td>Office Pack</td><td>.odp</td><td>Αρχείο OpenDocument Presentation</td></tr>
+            <tr><td>Office Pack</td><td>.odg</td><td>Αρχείο OpenDocument Graphics</td></tr>
+            <tr><td>Office Pack</td><td>.docx</td><td>Αρχείο Microsoft Word</td></tr>
+            <tr><td>Office Pack</td><td>.xlsx</td><td>Αρχείο Microsoft Excel</td></tr>
+            <tr><td>Office Pack</td><td>.pptx</td><td>Αρχείο Microsoft PowerPoint</td></tr>
+            <tr><td>Βίντεο</td><td>.mp4</td><td>Αρχείο βίντεο MPEG-4</td></tr>
+            <tr><td>Βίντεο</td><td>.avi</td><td>Αρχείο βίντεο Audio Video Interleave</td></tr>
+            <tr><td>Βίντεο</td><td>.mov</td><td>Αρχείο βίντεο QuickTime</td></tr>
+            <tr><td>Βίντεο</td><td>.wmv</td><td>Αρχείο βίντεο Windows Media Video</td></tr>
+            <tr><td>Ήχος</td><td>.aac</td><td>Αρχείο ήχου Advanced Audio Coding</td></tr>
+            <tr><td>Ήχος</td><td>.wav</td><td>Αρχείο ήχου Waveform Audio File Format</td></tr>
+            <tr><td>Εικόνα</td><td>.tiff</td><td>Αρχείο εικόνας Tagged Image File Format</td></tr>
+
+        </table>
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>        
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
