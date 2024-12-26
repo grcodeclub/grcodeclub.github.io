@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Docker">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming.png">
+
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming.png"/>
+    <meta property="og:title" content="GrCode Club | Docker">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Docker </h1>  
+                    <p>Το Docker είναι μια πλατφόρμα ανοικτού κώδικα που χρησιμοποιείται για την αυτοματοποίηση, την ανάπτυξη και την εκτέλεση εφαρμογών μέσα σε περιβάλλοντα περιορισμένων πόρων, γνωστά ως "containers".</p>
+                    <p>Η λογική του Docker, είναι ότι σηκώνουμε ένα container για κάθε service που θέλουμε.</p>
+                    
+                    <h2 class="highlight">Container</h2>
+                    <p>Ένα Docker Container χρησιμοποιεί το λειτουργικό και τον πυρήνα του host καθως δεν έχει δικό του πυρήνα. 
+                        Με αποτέλεσμα να είναι πολύ ποιο ελαφρύ και να ξοδεύει μόνο τα αναγκαία resources, για να τρέξουν τα services που θέλει.
+                    <br>Κάθε container είναι πλήρως απομονωμένο από το host λειτουργικό και από άλλα containers.
+                    <br>Κάθε container δεν κρατάει δεδομένα μέσα του. Δηλαδή αν τρέχουμε ένα container με mySQL, τα δεδομένα της βάσης θα χαθούν αν κάνουμε restart</p>
+                    
+                    <p><u>Βασικές εντολές διαχείρισης container</u></p>
+                    <p>Για να δούμε λοιπόν μία γενική εικόνα των container που έχουμε στο σύστημά μας, δίνουμε την εντολή:</p>
+                    <div class="terminal" ><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker ps -a</code></pre>           
+                    <pre><code class="language-bash" >CONTAINER ID    IMAGE              COMMAND            CREATED         STATUS          PORTS                NAMES
+8b3a2f0d4e25    nginx:latest       "nginx -g 'daemon   2 hours ago     Up 2 hours      0.0.0.0:80->80/tcp   apache</code></pre></div><ul>
+                        <li>CONTAINER ID: Ο αριθμός του κάθε container στο σύστημά μας.</li>
+                        <li>IMAGE: Η υπηρεσία που τρέχει το κάθε container.</li>
+                        <li>CREATED: Πότε δημιουργήθηκε το container.</li>
+                        <li>STATUS: Εδώ μπορούμε να δούμε αν το container λειτουργεί ή αν είναι σταματημένο.</li>
+                        <li>PORTS: Εδώ προβάλλονται τα port στα οποία τρέχει το κάθε container.</li>
+                        <li>NAMES: Εδώ είναι τα ονόματα που τους έχουμε δώσει.</li>
+                    </ul>
+
+                    <p>Να σταματήσουμε ένα container (π.χ apache).</p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stop apache</code></pre></div>                
+                    <p>Να ξεκινήσουμε ένα container (π.χ apache)</p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker start apache</code></pre></div>                    
+                    <p>Για να αφαιρέσουμε ένα container (π.χ apache) από το σύστημά μας θα πρέπει πρώτα να το σταματήσουμε και μετά να το διαγράψουμε.</p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rm -f apache</code></pre></div>
+                    <p>Για να διαγράψουμε μαζικά όλα τα container που έχουμε σταματημένα δίνουμε την εντολή</p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker container prune</code></pre></div>
+                    <p>Να μας εμφανίσιμή την port για ένα συγκεκριμένο container (π.χ apache). </p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker port apache</code></pre></div>
+
+                    <h2 class="highlight">Docker Image</h2>
+                    <p>Το Docker Image αποτελεί ένα αρχείο που περιλαμβάνει τις απαραίτητες οδηγίες για τη δημιουργία ενός container.</p>              
+                    <p><u>Βασικές εντολές διαχείρισης image</u></p>
+                    <p>Για να δούμε τώρα πόσα image βρίσκονται στον υπολογιστή μας.</p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker images</code></pre>
+                    <pre><code class="language-bash">REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+hello-world             latest              bf756fb1ae65        4 months ago        13.3kB</code></pre></div>
+                    <p>Για να κατεβάσουμε λοιπόν ένα image (π.χ. ubuntu)</p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker pull ubuntu:20.04</code></pre></div>
+                    <p>Για να διαγράψουμε ένα image με βάση το ID  </p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rmi bf756fb1ae65</code></pre></div>
+                    <p>Αν υπάρχουν περισσότερα από ένα image με το ίδιο ID έχουμε στο σύστημά.</p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rmi -f bf756fb1ae65</code></pre></div>
+                    <p>Για να διαγράψουμε τέλος όλα τα αχρησιμοποίητα image.</p>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker image prune</code></pre></div>
+                    <h2 class="highlight">Dockerfile</h2>
+                    <p>Το Dockerfile είναι ένα αρχείο κειμένου που χρησιμοποιείται για την δημιουργία Docker Image.</p>
+                    <p>Η <b>FROM</b> αυτή η εντολή καθορίζει ποια βασική εικόνα θα χρησιμοποιηθεί ως βάση για τη νέα εικόνα.>Παράδειγμα:</p>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">FROM ubuntu:20.04</code></pre></div></div>
+                  
+                    <p>Η <b>RUN</b> εκτελεί μια εντολή στο εσωτερικό της εικόνας κατά τη δημιουργία της. Χρησιμοποιείται για την εγκατάσταση πακέτων και την εκτέλεση εντολών.</p>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">RUN apt-get update && apt-get install -y nginx</code></pre></div></div>
+                                     
+                    <p>Η <b>COPY</b> χρησιμοποιούνται για την αντιγραφή αρχείων και φακέλων από τον υπολογιστή σας στο εσωτερικό της εικόνας.</p>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">COPY app /usr/src/app</code></pre></div></div>
+ 
+                    <p>Η <b>ADD</b> εκτελεί τις ίδιες λειτουργίες με την εντολή COPY, αλλά έχει και μερικές επιπλέον δυνατότητες. Ειδικότερα, μπορεί να αντιγράψει αρχεία από τον υπολογιστή σας στην εικόνα, αλλά μπορεί επίσης να αντιγράψει αρχεία από μια διεύθυνση URL ή να αποσυμπιέσει αρχεία τύπου tar αυτόματα.</p>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">ADD http://example.com/myapp.tar.gz /usr/src/</code></pre></div></div>
+
+                    <p>Η <b>WORKDIR</b> ορίζει τον φάκελο εργασίας για τις μελλοντικές εντολές στο Dockerfile</p>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">WORKDIR /usr/src/app</code></pre></div></div>
+
+                    <p>Η <b>EXPOSE</b> καθορίζει ποιες πόρτες θα είναι προσβάσιμες από τον υπολογιστή του host όταν εκτελεστεί η εικόνα.</p>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">EXPOSE 8080</code></pre></div></div>
+ 
+                    <p>Με το <b>CMD</b> δίνουμε την εντολή που θέλουμε να εκτελεστεί αμέσως μετά την εκκίνηση του container</p>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">CMD ["npm", "start"]</code></pre></div></div>
+
+                <h2 class="highlight">Βασικές εντολές διαχείρισης network</h2>
+                
+                <p>Το Docker δημιουργεί αυτόματα ένα bridge δίκτυο, το οποίο ονομάζεται "docker0" και μπορούμε να το δούμε δίνοντας στο τερματικό μας την εντολή:</p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ifconfig</code></pre></div>
+          
+                <p>Για να φτιάξουμε τώρα το δικό μας bridge network με όνομα "gr-code" θα δώσουμε την εντολή:</p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network create -d bridge gr-code</code></pre></div>
+
+                <p>Για να φτιάξουμε ένα overlay network με την ίδια ονομασία θα δώσουμε την εντολή:</p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network create -d overlay gr-code</code></pre></div>         
+            
+                <p> Για να δούμε λοιπόν μία λίστα των δικτύων μας θα δώσουμε την εντολή:</p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network ls</code></pre>
+                <pre class="language-bash"><code>NETWORK ID          NAME                DRIVER              SCOPE
+c1ae8a3bd6fb        bridge              bridge              local
+134626deef16        host                host                local
+7c00c10a741a        none                null                local</code></pre>
+                </div>         
+
+                    <ul>
+                        <li>NETWORK ID: Ο αριθμός του δικτύου.</li>
+                        <li>NAME: Το όνομα που έχουμε ορίσει στο δίκτυο.</li>
+                        <li>DRIVER: Ο driver μέσω του οποίου τρέχει το δίκτυό μας.</li>
+                        <li>SCOPE: Εδώ θα δούμε αν το δίκτυό μας είναι local ή αν εξυπηρετεί κάποιο cluster με Docker Swarm.</li>
+                    </ul>
+            
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
