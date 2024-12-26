@@ -81,9 +81,6 @@ document.addEventListener('keydown', function(event) { // Αποτροπή τω�
 
 document.addEventListener('DOMContentLoaded', function() {  
 
-    if (document.querySelector('.command-line') || document.querySelector('.code_editor')) { 
-        addCssFiles("https://grcodeclub.gr/css/code/prism.css");
-    }
 
     
   function loadScript(src) {
@@ -111,9 +108,14 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
         document.body.appendChild(script);
     }
 
+    if (document.querySelector('.command-line') || document.querySelector('.code_editor') || document.getElementById('code')) { 
+        addCssFiles("https://grcodeclub.gr/css/code/prism.css");
+        addScript('https://grcodeclub.gr/js/action/show_code.js');
+        addScript('https://grcodeclub.gr/js/libraries/prism.js');
+    }
+    
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
-    if (document.getElementById('code')) { addScript('https://grcodeclub.gr/js/action/show_code.js');}
 
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
