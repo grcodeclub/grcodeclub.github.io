@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/windows.png"/>
+    <meta property="og:title" content="Microsoft Windows | Windows Run Commands">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Windows Run Commands </h1>
+        <p>Το "Windows Run Commands" είναι ένα εργαλείο που σου επιτρέπει να εκτελέσεις γρήγορα εντολές, εφαρμογές, αρχεία ή να 
+            ανοίξεις φακέλους από ένα κεντρικό μέρος στα Windows. Το Run είναι ένα μικρό παράθυρο όπου μπορείς να πληκτρολογήσεις 
+            εντολές και να εκτελέσεις διάφορες εργασίες.<br>
+            Μπορείς να ανοίξεις το παράθυρο "Run" πατώντας ταυτόχρονα τα πλήκτρα Windows + R στο πληκτρολόγιο σου. Αφού εμφανιστεί 
+            το παράθυρο "Run", μπορείς να πληκτρολογήσεις μια εντολή ή μια διαδρομή φακέλου και να πατήσεις Enter για να την
+             εκτελέσεις.</p>
+             <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση αγγλικού όρου">
+             <br>
+             <table id="search_table_page" class="table table-bordered">
+                 <tr  id="title-table"><td>Εντολή</td><td>Περιγραφή</td></tr>
+            <tr><td>msconfig</td><td>Πρόσβαση στη διαμόρφωση συστήματος</td></tr>
+            <tr><td>resmon</td><td>Πρόσβαση στην παρακολούθηση πόρων</td></tr>
+            <tr><td>msinfo32</td><td>Πρόσβαση στις πληροφορίες συστήματος</td></tr>
+            <tr><td>sdclt</td><td>Πρόσβαση στο παράθυρο δημιουργίας αντιγράφων ασφαλείας και επαναφοράς</td></tr>
+            <tr><td>main.cpl</td><td>Πρόσβαση στις ιδιότητες του ποντικιού</td></tr>
+            <tr><td>regedit</td><td>Windows Registry</td></tr>
+            <tr><td>sysdm.cpl</td><td>Πρόσβαση στις ιδιότητες συστήματος</td></tr>
+            <tr><td>powercfg.cpl</td><td>Πρόσβαση στις Επιλογές Ενέργειας των Windows</td></tr>
+            <tr><td>optionalfeatures</td><td>Ανοίξτε τις δυνατότητες των Windows</td></tr>
+            <tr><td>magnify</td><td>Μεγεθυντικός φακός</td></tr>
+            <tr><td>charmap</td><td>Πίνακας χαρακτήρων</td></tr>
+            <tr><td>ncpa.cpl</td><td>Πρόσβαση στις Δικτυακές συνδέσεις</td></tr>
+            <tr><td>mrt</td><td>Εκτελέστε το Εργαλείο αφαίρεσης κακόβουλου λογισμικού</td></tr>
+            <tr><td>devmgmt.msc</td><td>Άνοιγμα της Διαχείρισης Συσκευών</td></tr>
+            <tr><td>netplwiz</td><td>Διαχείριση λογαριασμών χρηστών</td></tr>
+            <tr><td>services.msc</td><td>Ανοίξτε την εφαρμογή Υπηρεσίες</td></tr>
+            <tr><td>appwiz.cpl</td><td>Άνοιγμα Προγράμματα και δυνατότητες</td></tr>
+            <tr><td>control</td><td>Πίνακας Ελέγχου</td></tr>
+            <tr><td>“.” (period)</td><td>Άνοιγμα του τρέχοντα φάκελο χρήστη</td></tr>
+            <tr><td>osk</td><td>Ανοίγει το πληκτρολόγιο οθόνης</td></tr>
+            <tr><td>mdsched</td><td>Windows Memory Diagnostic</td></tr>
+            <tr><td>mstsc</td><td>Remote Desktop Connection</td></tr>
+            <tr><td>cmd</td><td>Command Prompt</td></tr>
+            <tr><td>winver</td><td>Windows Version</td></tr>
+            <tr><td>control folders</td><td>Επιλογές Εξερεύνησης Αρχείων</td></tr>
+            <tr><td>diskmgmt.msc</td><td>Διαχείριση δίσκων</td></tr>
+            <tr><td>powershell</td><td>Windows PowerShell Console</td></tr>
+            <tr><td>taskmgr</td><td>Task Manager</td></tr>
+            <tr><td>Documents</td><td>Έγγραφα</td></tr>
+            <tr><td>downloads</td><td>Λήψεις</td></tr>
+            <tr><td>desktop</td><td>Επιφάνεια εργασίας</td></tr>
+            <tr><td>music</td><td>Μουσική</td></tr>
+            <tr><td>pictures</td><td>Εικόνες</td></tr>
+            <tr><td>videos</td><td>Video</td></tr>
+            <tr><td>appdata</td><td>Φάκελος Εφαρμογών</td></tr>
+            <tr><td>system32</td><td>Φάκελος Σύστημα</td></tr>
+            <tr><td>%temp% ή temp</td><td>Φάκελος Προσωρινών Αρχείων</td></tr>
+            <tr><td>shell:startup</td><td>Φάκελος Εκκίνησης</td></tr>
+        </table>
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>    
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>
