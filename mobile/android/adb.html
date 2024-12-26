@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/android.png"/>
+    <meta property="og:title" content="Android | Android Debug Bridge">
+<title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Android Debug Bridge</h1>
+        <p>Το adb (Android Debug Bridge) είναι ένα εργαλείο γραμμής εντολών που επιτρέπει τη σύνδεση και διαχείριση Android 
+            συσκευών μέσω του υπολογιστή. Παρέχει δυνατότητες όπως απομακρυσμένος έλεγχος της συσκευής, εγκατάσταση εφαρμογών,
+             μεταφορά αρχείων, εκτέλεση εντολών στο shell της συσκευής, και αντιμετώπιση προβλημάτων. Χρησιμοποιείται κυρίως 
+             από προγραμματιστές και τεχνικούς για debugging, testing, και άλλες λειτουργίες συντήρησης των Android συσκευών.</p>
+        
+            <p>Εμφανίζει τις συσκευές που είναι συνδεδεμένες μέσω USB.</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb devices</code></pre></div>                
+            <p>Εγκαθιστά ένα αρχείο APK στη συσκευή.</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb install myapp.apk</code></pre></div>                
+            <p>Επανεκκίνηση συσκευής</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb reboot</code></pre></div>                
+            <p>Αντιγραφή αρχείου από τον υπολογιστή στη συσκευή</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb push myfile.txt /sdcard/</code></pre></div>                
+            <p>Άνοιγμα shell στη συσκευή</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb shell</code></pre></div>                
+            <p>Λήψη στιγμιότυπου οθόνης</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb shell screencap /sdcard/screenshot.png
+adb pull /sdcard/screenshot.png</code></pre></div>                
+            <p>Καταγραφή οθόνης (screen recording)</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb shell screenrecord /sdcard/record.mp4</code></pre></div>                
+            <p>Επανεκκίνηση σε recovery mode</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb reboot recovery</code></pre></div>                
+            <p>Αντιγραφή αρχείου από τη συσκευή στον υπολογιστή</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb pull /sdcard/myfile.txt</code></pre></div>                
+            <p>Εκτέλεση εφαρμογής</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">adb shell am start -n com.example/.MainActivity</code></pre></div>                
+</div>
+    <div id="addFooter"></div>
+</body>
+</html>
