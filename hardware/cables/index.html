@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/main.webp"/>
+    <meta property="og:title" content="Τύποι καλωδίων">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Τύποι καλωδίων</h1>
+        <label style="padding-left: 10px;">Φίλτρο:</label>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table">
+            <tr id="title-table"><td>Όνομα</td><td>Χρήση / Περιγραφή</td><td>Eικόνα</td></tr>
+            <tr><td>SATA Cable</td><td>Χρησιμοποιείται για σύνδεση σκληρών δίσκων και SSD με τη μητρική πλακέτα.</td><td><img src="./SATA Cable.webp" width="50%" class="img-fluid"></td></tr>
+            <tr><td>HDMI</td><td>Χρησιμοποιείται για τη σύνδεση οθονών και τηλεοράσεων, υποστηρίζει ήχο και εικόνα υψηλής ανάλυσης.</td><td><img src="./HDMI.webp"  width="50%" class="img-fluid"></td></tr>
+            <tr><td>DVI</td><td>Παλιότερο καλώδιο που χρησιμοποιείται κυρίως για σύνδεση οθονών. Υπάρχουν τύποι DVI-D (μόνο ψηφιακό) και DVI-I (ψηφιακό και αναλογικό).</td><td><img src="./DVI.webp" width="50%" class="img-fluid"></td></tr>
+            <tr><td>VGA</td><td>Αναλογικό καλώδιο που χρησιμοποιείται για παλιότερες οθόνες.</td><td><img src="./VGA.webp" width="50%" class="img-fluid"></td></tr>
+            <tr><td>Ethernet Cable</td><td>Χρησιμοποιείται για τη σύνδεση υπολογιστών σε τοπικά δίκτυα (LAN).</td><td><img src="./Ethernet.webp" width="50%" class="img-fluid"></td></tr>
+            <tr><td>USB Type-A</td><td></td><td><img src="./Type-A.webp" width="50%" class="img-fluid"></td></tr>
+            <tr><td>USB Type-B</td><td></td><td><img src="./Type-B.webp" width="50%" class="img-fluid"></td></tr></tr>
+            <tr><td>USB Type-C</td><td></td><td><img src="./Type-C.webp" width="50%" class="img-fluid"></td></tr></tr>
+            <tr><td>Micro USB</td><td></td><td><img src="./Micro-USB.webp" width="50%" class="img-fluid"></td></tr></tr>
+            <tr><td>Mini USB</td><td></td><td><img src="./Mini-USB.webp" width="50%" class="img-fluid"></td></tr></tr>
+            <tr><td>Thunderbolt Cable</td><td>Χρησιμοποιείται για τη σύνδεση υψηλής ταχύτητας περιφερειακών συσκευών και οθονών.</td><td><img src="./Thunderbolt.webp" width="50%" class="img-fluid"></td></tr></tr>
+            <tr><td>FireWire (IEEE 1394)</td><td>Παλιότερη τεχνολογία που χρησιμοποιούνταν για τη σύνδεση εξωτερικών σκληρών δίσκων και άλλων συσκευών, έχει σχεδόν αντικατασταθεί από το USB.</td><td><img src="./FireWire.webp" width="50%" class="img-fluid"></td></tr>
+            <tr><td>CPU Cooler Cable</td><td>Χρησιμοποιείται για τη σύνδεση της ψύκτρας της CPU στη μητρική πλακέτα.</td><td><img src="./CPU.webp" width="50%" class="img-fluid"></td></tr>
+            <tr><td>SAS Cable</td><td>Χρησιμοποιείται σε διακομιστές και αποθήκες για τη σύνδεση δίσκων με υψηλές ταχύτητες.</td><td><img src="./SAS.webp" width="50%" class="img-fluid"></td></tr>
+
+
+        </table>
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>   
+
+    </div>
+
+    <!-- Footer -->
+    <div id="addFooter"></div>
+</body>
+</html>
