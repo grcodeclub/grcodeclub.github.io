@@ -1,0 +1,66 @@
+[
+    {
+        "type": "open-ended",
+        "question": "Ποια γλώσσα χρησιμοποιείται κυρίως για web development;",
+        "correct": "HTML"
+    },
+    {
+        "type": "open-ended",
+        "question": "Ποια γλώσσα χρησιμοποιείται για τη δημιουργία δυναμικών ιστοσελίδων;",
+        "correct": "PHP"
+    },
+    {
+        "type": "open-ended",
+        "question": "Περιγράψτε τι είναι το Git και γιατί χρησιμοποιείται.",
+        "correct": "Το Git είναι ένα σύστημα ελέγχου εκδόσεων που επιτρέπει την παρακολούθηση αλλαγών στον κώδικα και τη συνεργασία πολλών προγραμματιστών."
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Τι είναι το CSS;",
+        "answers": [
+            "Γλώσσα προγραμματισμού",
+            "Γλώσσα στυλ για ιστοσελίδες",
+            "Βάση δεδομένων",
+            "Γλώσσα scripting"
+        ],
+        "correct": 1
+    },
+    {
+        "type": "open-ended",
+        "question": "Ποιο από tag χρησιμοποιείται για την εισαγωγή μιας εικόνας;",
+        "correct": "<img>"
+    },
+    {
+        "type": "open-ended",
+        "question": "Ποιο tag χρησιμοποιείται για τη δημιουργία μιας μη αριθμημένης λίστας;",
+        "correct": "<ul>"
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Τι σημαίνει HTML;",
+        "answers": [
+            "HyperText Markup Language",
+            "HyperText Machine Language",
+            "HighText Markup Language",
+            "HyperTool Markup Language"
+        ],
+        "correct": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Ποιο είναι το default attribute για την πηγή εικόνας;",
+        "answers": ["alt", "href", "src", "source"],
+        "correct": 2
+    },
+    {
+        "type": "open-ended",
+        "question": "Ποιο tag χρησιμοποιείται για να εμφανιστεί έντονο κείμενο;",
+        "correct": "<strong>"
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Ποιο tag ορίζει ένα κελί σε πίνακα;",
+        "answers": ["<table>", "<td>", "<tr>", "<cell>"],
+        "correct": 1
+    }
+]

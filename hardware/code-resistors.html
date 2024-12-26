@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/main.jpg"/>
+    <meta property="og:title" content="Χρωματικός Κώδικας Αντιστάσεων">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+    <style>
+        .color-box {
+            width: 50px;
+            height: 20px;
+            display: inline-block;
+            margin: 5px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="addHeader"></div>
+
+    <div class="container">
+        <h1 class="title">Χρωματικός Κώδικας Αντιστάσεων</h1>
+          <!-- Table of colors and values -->
+          <h2>Πίνακας Τιμών Αντίστασης  </h2>
+          <table class="table table-bordered">
+                  <tr><th>Χρώμα</th><th>1ο</th><th>2ο</th><th>3o</th><th>4o</th></tr>
+                  <tr><td style="background-color: black; color: white;">Μαύρο</td><td>0</td><td>0</td><td>x10<sup>0</sup></td></tr>
+                  <tr><td style="background-color: brown;">Καφέ</td><td>1</td><td>1</td><td>x10<sup>1</sup></td><td>±1% (F)</td></tr>
+                  <tr><td style="background-color: red;">Κόκκινο</td><td>2</td><td>2</td><td>x10<sup>2</sup></td><td>±2% (G)</td></tr>
+                  <tr><td style="background-color: orange;">Πορτοκαλί</td><td>3</td><td>3</td><td>x10<sup>3</sup></td></tr>
+                  <tr><td style="background-color: yellow;">Κίτρινο</td><td>4</td><td>4</td><td>x10<sup>4</sup></td></tr>
+                  <tr><td style="background-color: green;">Πράσινο</td><td>5</td><td>5</td><td>x10<sup>5</sup></td><td>±0.5% (D)</td></tr>
+                  <tr><td style="background-color: blue;">Μπλε</td><td>6</td><td>6</td><td>x10<sup>6</sup></td><td>±0.25% (C)</td></tr>
+                  <tr><td style="background-color: purple;">Μωβ</td><td>7</td><td>7</td><td>x10<sup>7</sup></td><td>±0.1% (B)</td></tr>
+                  <tr><td style="background-color: gray;">Γκρι</td><td>8</td><td>8</td><td>x10<sup>8</sup></td><td>±0.05%(A)</td></tr>
+                  <tr><td style="background-color: white;">Λευκό</td><td>9</td><td>9</td><td>x10<sup>9</sup></td></tr>
+                  <tr><td style="background-color: gold;">Χρυσό</td><td></td><td></td><td>x10<sup>-1</sup> </td><td>±5% (J)</td></tr>
+                  <tr><td style="background-color: silver;">Ασημί</td><td></td><td></td><td>x10<sup>-2</sup> </td><td>±10% (K)</td></tr>
+          </table>
+          <ol>
+            <li>1η λωρίδα </li>
+            <li>2η λωρίδα </li>
+            <li>3η λωρίδα (πολλαπλασιαστής) </li>
+            <li>4η λωρίδα (ανοχή) </li>
+          </ol>
+          <h3><U>παράδειγμα</U></h3>
+          <div style="background-color: red;" class="color-box"></div>
+          <div style="background-color: purple;" class="color-box"></div>
+          <div style="background-color: green;" class="color-box"></div>
+          <div style="background-color: gold;" class="color-box"></div>
+          <ol>
+            <li>Tο κόκκινο και το μοβ δίνουν το ψηφίο 27</li>
+            <li>H τρίτη γραμμή που είναι πράσινη δίνει πολλαπλασιαστή. (x10<sup>5</sup> = 100.000)<br>Άρα: 27 * 100.000 = 2.700.000 Ω ή 2,7 MΩ </li>
+            <li>Mε ±5% αντοχή (4 γραμμή είναι Χρυσό).</li>
+        </ol>
+
+        <h2 class="highlight">Υπολογισμός</h2>
+        <div>
+            <label for="color1">1ος Δακτύλιος:</label>
+            <select id="color1" onchange="updateColor('color1', 'colorBox1')">
+                <option>-</option>
+                <option value="0" style="background-color: black;">Μαύρο</option>
+                <option value="1" style="background-color: brown;">Καφέ</option>
+                <option value="2" style="background-color: red;">Κόκκινο</option>
+                <option value="3" style="background-color: orange;">Πορτοκαλί</option>
+                <option value="4" style="background-color: yellow;">Κίτρινο</option>
+                <option value="5" style="background-color: green;">Πράσινο</option>
+                <option value="6" style="background-color: blue;">Μπλε</option>
+                <option value="7" style="background-color: purple;">Μωβ</option>
+                <option value="8" style="background-color: gray;">Γκρι</option>
+                <option value="9" style="background-color: white;">Λευκό</option>
+            </select>
+            
+        </div>
+    
+        <div>
+            <label for="color2">2ος Δακτύλιος:</label>
+            <select id="color2" onchange="updateColor('color2', 'colorBox2')">
+                <option>-</option>
+                <option value="0" style="background-color: black;">Μαύρο</option>
+                <option value="1" style="background-color: brown;">Καφέ</option>
+                <option value="2" style="background-color: red;">Κόκκινο</option>
+                <option value="3" style="background-color: orange;">Πορτοκαλί</option>
+                <option value="4" style="background-color: yellow;">Κίτρινο</option>
+                <option value="5" style="background-color: green;">Πράσινο</option>
+                <option value="6" style="background-color: blue;">Μπλε</option>
+                <option value="7" style="background-color: purple;">Μωβ</option>
+                <option value="8" style="background-color: gray;">Γκρι</option>
+                <option value="9" style="background-color: white;">Λευκό</option>
+            </select>
+        </div>
+    
+        <div>
+            <label for="color3">3ος Δακτύλιος:</label>
+            <select id="color3" onchange="updateColor('color3', 'colorBox3')">
+                <option>-</option>
+                <option value="1" style="background-color: brown;">Καφέ (x10^1)</option>
+                <option value="10" style="background-color: red;">Κόκκινο (x10^2)</option>
+                <option value="100" style="background-color: orange;">Πορτοκαλί (x10^3)</option>
+                <option value="1000" style="background-color: yellow;">Κίτρινο (x10^4)</option>
+                <option value="10000" style="background-color: green;">Πράσινο (x10^5)</option>
+                <option value="100000" style="background-color: blue;">Μπλε (x10^6)</option>
+                <option value="1000000" style="background-color: purple;">Μωβ</option>
+                <option value="10000000" style="background-color: gray;">Γκρι</option>
+                <option value="100000000" style="background-color: white;">Λευκό</option>
+                <option value="0.1" style="background-color: gold;">Χρυσό (x10^-1)</option>
+                <option value="0.01" style="background-color: silver;">Ασημί (x10^-2)</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="tolerance">Tolerance:</label>
+            <select id="tolerance" onchange="updateToleranceColor()">
+                <option>-</option>
+                <option value="0.005" style="background-color: brown;">Καφέ (±1%)</option>
+                <option value="0.002" style="background-color: red;">Κόκκινο (±2%)</option>
+                <option value="0.0005" style="background-color: green;">Πράσινο (±0.5%)</option>
+                <option value="0.0025" style="background-color: blue;">Μπλε (±0.25%)</option>
+                <option value="0.005" style="background-color: purple;">Μωβ (±1%)</option>
+                <option value="0.0005" style="background-color: grey;">Πράσινο (±0.05%)</option>
+                <option value="0.005" style="background-color: gold;">Χρυσό (±5%)</option>
+                <option value="0.1" style="background-color: silver;">Ασημί (±10%)</option>
+            </select>
+        </div>
+        <br>
+        <div id="colorBox1" class="color-box"></div>
+        <div id="colorBox2" class="color-box"></div>
+        <div id="colorBox3" class="color-box"></div>
+        <div id="toleranceBox" class="color-box"></div><br>
+        <button onclick="calculateResistance()">Υπολόγισε Αντίσταση</button>
+
+        <h3 id="result"></h3>
+    
+        <script>
+            function updateColor(colorSelectId, colorBoxId) {
+                const selectElement = document.getElementById(colorSelectId);
+                const selectedColorOption = selectElement.options[selectElement.selectedIndex];
+                const colorBox = document.getElementById(colorBoxId);
+                
+                // Set the background color of the color box based on the selected option
+                colorBox.style.backgroundColor = selectedColorOption.style.backgroundColor;
+            }
+
+            function updateToleranceColor() {
+                const selectElement = document.getElementById("tolerance");
+                const selectedColorOption = selectElement.options[selectElement.selectedIndex];
+                const toleranceBox = document.getElementById("toleranceBox");
+                
+                // Set the background color of the tolerance box based on the selected option
+                toleranceBox.style.backgroundColor = selectedColorOption.style.backgroundColor;
+            }
+
+            function calculateResistance() {
+                const color1 = parseInt(document.getElementById("color1").value);
+                const color2 = parseInt(document.getElementById("color2").value);
+                const color3 = parseFloat(document.getElementById("color3").value);
+                const toleranceValue = document.getElementById("tolerance").value;
+    
+                const resistanceValue = (color1 * 10 + color2) * color3;
+    
+                document.getElementById("result").innerText = `Η αντίσταση είναι ${resistanceValue} Ohm ±${toleranceValue}.`;
+            }
+        </script>
+    </div>
+
+    <!-- Footer -->
+    <div id="addFooter"></div>
+</body>
+</html>

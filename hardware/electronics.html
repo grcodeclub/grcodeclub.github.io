@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/main.jpg"/>
+    <meta property="og:title" content="Μαθηματικοί τύποι για ηλεκτρονική">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="addHeader"></div>
+
+    <div class="container">
+        <h1 class="title">Μαθηματικοί τύποι για ηλεκτρονική</h1>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Όνομα</td> <td>Τύπος</td> <td>Περιγραφή</td></tr>
+            <tr><td>Συνεχές Ρεύμα (DC)</td><td>\( I_{DC} = \frac{V}{R} \)</td><td>Ρεύμα σταθερής κατεύθυνσης και σταθερού μεγέθους.</td></tr>
+            <tr><td>Εναλλασσόμενο Ρεύμα (AC)</td><td>\( I_{AC}(t) = I_0 \sin(\omega t) \)</td><td>Ρεύμα που αλλάζει κατεύθυνση και μέγεθος περιοδικά.</td></tr>
+            <tr><td>Ρεύμα Φορτίου</td><td>\( I = \frac{dQ}{dt} \)</td><td>Ρεύμα που προκαλείται από τη μεταβολή του ηλεκτρικού φορτίου με τον χρόνο.</td></tr>
+            <tr><td>Ρεύμα Βραχυκυκλώματος</td><td>Καμία εξίσωση</td><td>Μεγάλο ρεύμα που ρέει όταν τα άκρα ενός κυκλώματος συνδέονται άμεσα.</td></tr>
+            <tr><td>Στατικό Ρεύμα</td><td>\( I = \frac{V_{static}}{R} \)</td><td>Ρεύμα που ρέει σε αγωγό λόγω στατικού ηλεκτρισμού.</td></tr>
+            <tr><td>Φωτοηλεκτρικό Ρεύμα</td><td>\( I = q \cdot n \cdot A \)</td><td>Ρεύμα που παράγεται από την κίνηση ηλεκτρονίων λόγω φωτονίων σε φωτοβολταϊκά υλικά.</td></tr>
+            <tr><td>Ρεύμα Πυκνωτή</td><td>\( I_C = C \frac{dV}{dt} \)</td><td>Ρεύμα που διαρρέει έναν πυκνωτή κατά τη φόρτιση ή αποφόρτιση.</td></tr>                       
+            <tr><td>Αντίσταση</td><td>\( R = \frac{V}{I} \)</td><td>Ηλεκτρονικό εξάρτημα που περιορίζει τη ροή του ηλεκτρικού ρεύματος.</td>                        </tr>
+            <tr><td>Δίοδος</td><td>\( I = I_s (e^{\frac{V}{nV_T}} - 1) \)</td><td>Επιτρέπει τη ροή του ρεύματος μόνο προς μία κατεύθυνση.</td></tr>
+            <tr><td>Πυκνωτής</td><td>\( C = \frac{Q}{V} \)</td><td>Αποθηκεύει και απελευθερώνει ηλεκτρική ενέργεια.</td></tr>           
+            <tr><td>Πηνίο</td><td>\( V = L \frac{dI}{dt} \)</td><td>Αποθηκεύει ενέργεια στο μαγνητικό του πεδίο.</td></tr>
+            <tr><td>Τρανζίστορ (NPN)</td><td>\( I_C = \beta I_B \)</td><td>Ενισχύει σήματα ή λειτουργεί ως διακόπτης.</td></tr>
+            <tr><td>Διακόπτης</td><td>Καμία εξίσωση</td><td>Ανοιγοκλείνει ένα κύκλωμα επιτρέποντας ή σταματώντας τη ροή του ρεύματος.</td></tr>
+            <tr><td>LED</td><td>\( I = I_s (e^{\frac{V}{nV_T}} - 1) \)</td><td>Εκπέμπει φως όταν διέρχεται ρεύμα.</td></tr>
+            <tr><td>Zener Δίοδος</td><td>\( V_Z \approx σταθερό \)</td><td>Επιτρέπει ρεύμα προς την ανάστροφη κατεύθυνση σε συγκεκριμένη τάση διάσπασης.</td></tr>
+            <tr><td>Θερμίστορ</td><td>Καμία εξίσωση</td><td>Μεταβάλλει την αντίστασή του ανάλογα με τη θερμοκρασία.</td></tr>
+            <tr><td>Φωτοαντίσταση (LDR)</td><td>Καμία εξίσωση</td><td>Αλλάζει την αντίστασή της ανάλογα με την ένταση του φωτός.</td></tr>                          
+
+        </table>
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>        
+
+    </div>
+
+    <!-- Footer -->
+    <div id="addFooter"></div>
+</body>
+</html>

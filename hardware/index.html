@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/main.jpg"/>
+    <meta property="og:title" content="Υλικό υπολογιστών">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="addHeader"></div>
+
+    <div class="container">
+        <h1 class="title">Υλικό υπολογιστών</h1>
+        <label style="padding-left: 10px;">Φίλτρο:</label>
+        <select id="selectOption" name="code">
+            <option value="0">Όλα</option>
+            <option value="Καλώδιο">Καλώδιο</option>
+            <option value="Ολοκληρωμένα κυκλώματα">Ολοκληρωμένα κυκλώματα</option>
+            <option value="Τύποι πυκνωτών">Τύποι πυκνωτών</option>
+        </select><br><br>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Κατηγορία</td><td>Όνομα</td><td>Χρήση / Περιγραφή</td></tr>
+            <tr><td>Καλώδιο</td><td>SATA Cable</td><td>Χρησιμοποιείται για σύνδεση σκληρών δίσκων και SSD με τη μητρική πλακέτα.</td></tr>
+            <tr><td>Καλώδιο</td><td>HDMI</td><td>Χρησιμοποιείται για τη σύνδεση οθονών και τηλεοράσεων, υποστηρίζει ήχο και εικόνα υψηλής ανάλυσης.</td></tr>
+            <tr><td>Καλώδιο</td><td>DVI</td><td>Παλιότερο καλώδιο που χρησιμοποιείται κυρίως για σύνδεση οθονών. Υπάρχουν τύποι DVI-D (μόνο ψηφιακό) και DVI-I (ψηφιακό και αναλογικό).</td></tr>
+            <tr><td>Καλώδιο</td><td>VGA</td><td>Αναλογικό καλώδιο που χρησιμοποιείται για παλιότερες οθόνες.</td></tr>
+            <tr><td>Καλώδιο</td><td>Ethernet Cable</td><td>Χρησιμοποιείται για τη σύνδεση υπολογιστών σε τοπικά δίκτυα (LAN).</td></tr>
+            <tr><td>Καλώδιο</td><td>USB</td><td>USB Type-A, USB Type-Β ,USB Type-C, Micro USB, Mini USB</td></tr>
+            <tr><td>Καλώδιο</td><td>Thunderbolt Cable</td><td>Χρησιμοποιείται για τη σύνδεση υψηλής ταχύτητας περιφερειακών συσκευών και οθονών.</td></tr>
+            <tr><td>Καλώδιο</td><td>FireWire (IEEE 1394)</td><td>Παλιότερη τεχνολογία που χρησιμοποιούνταν για τη σύνδεση εξωτερικών σκληρών δίσκων και άλλων συσκευών, έχει σχεδόν αντικατασταθεί από το USB.</td></tr>
+            <tr><td>Καλώδιο</td><td>CPU Cooler Cable</td><td>Χρησιμοποιείται για τη σύνδεση της ψύκτρας της CPU στη μητρική πλακέτα.</td></tr>
+            <tr><td>Καλώδιο</td><td>SAS Cable</td><td>Χρησιμοποιείται σε διακομιστές και αποθήκες για τη σύνδεση δίσκων με υψηλές ταχύτητες.</td></tr>
+            <tr><td>Καλώδιο</td><td>Charging Cables</td><td>Καλώδια που χρησιμοποιούνται για τη φόρτιση φορητών συσκευών όπως smartphones και tablets (συνήθως USB-C ή Micro USB)</td></tr>
+            <tr><td>Ολοκληρωμένα κυκλώματα</td><td>Small Scale Integration (SSI)</td><td>-</td></tr>
+            <tr><td>Ολοκληρωμένα κυκλώματα</td><td>Medium Scale Integration (MSI)</td><td>-</td></tr>
+            <tr><td>Ολοκληρωμένα κυκλώματα</td><td>Large Scale Integration (LSI)</td><td>-</td></tr>
+            <tr><td>Ολοκληρωμένα κυκλώματα</td><td>Very Large Scale Integration (VLSI) w</td><td>-</td></tr>
+            <tr><td>Ολοκληρωμένα κυκλώματα</td><td>Ultra Large Scale Integration (ULSI)</td><td>-</td></tr>
+            <tr><td>Τύποι πυκνωτών</td><td>Ceramic Capacitors</td><td>-</td></tr>
+            <tr><td>Τύποι πυκνωτών</td><td>Electrolytic Capacitors</td><td>-</td></tr>
+            <tr><td>Τύποι πυκνωτών</td><td>Tantalum Capacitors</td><td>-</td></tr>
+            <tr><td>Τύποι πυκνωτών</td><td>Polymer Capacitors</td><td>-</td></tr>
+            <tr><td>Τύποι πυκνωτών</td><td>Film Capacitors</td><td>-</td></tr>
+            <tr><td>Τύποι πυκνωτών</td><td>Ultra</td><td>-</td></tr>
+            <tr><td>Τύποι πυκνωτών</td><td>Ultra</td><td>-</td></tr>
+
+
+        </table>
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>   
+
+    </div>
+
+    <!-- Footer -->
+    <div id="addFooter"></div>
+</body>
+</html>
