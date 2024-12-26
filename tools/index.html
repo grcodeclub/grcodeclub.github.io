@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/main.jpg"/>
+    <meta property="og:title" content="Δωρεάν online εργαλεία">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Δωρεάν online εργαλεία</h1>
+        <label style="padding-left: 10px;">Φίλτρο:</label>
+        <select id="selectOption" name="code">
+            <option value="0">Όλα</option>
+            <option value="Create by GrCode Club">Create by GrCode Club</option>
+            <option value="Edit / Social">Edit / Social</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="Convert">Convert</option>
+            <option value="Edit files">Edit files</option>
+            <option value="Web">Web</option>
+            <option value="Δίκτυα">Δίκτυα</option>
+
+        </select><br><br>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Κατηγορία</td><td>Όνομα</td><td>Χρήση / Περιγραφή</td></tr>
+            <tr><td>Edit / Social</td><td><a target="_blank" class="link_here" href="https://www.photopea.com/">Photopea</a></td><td>Σας επιτρέπει να επεξεργάζεστε φωτογραφίες, να εφαρμόζετε εφέ, φίλτρα, να προσθέτετε κείμενο, να περικόβετε ή να αλλάζετε μέγεθος εικόνων. <strong>Παρέχει παρόμοιες δυνατότητες με το Photoshop.</strong></td></tr>
+            <tr><td>Cybersecurity</td><td><a target="_blank" class="link_here" href="https://gchq.github.io/CyberChef/">CyberChef</a></td><td></td></tr>
+            <tr><td>Edit / Social</td><td><a target="_blank" class="link_here" href="https://codesnap.dev/editor">CodeSnap</a></td><td>Για τη δημιουργία εικόνων του αποσπάσματος του κώδικά σας.</td></tr>
+            <tr><td>Edit / Social</td><td><a target="_blank" class="link_here" href="https://www.qrcode-monkey.com/?utm_campaign=&utm_content=&gad_source=1">QRCode Monkey</a></td><td>Δημιουργία QR Code</td></tr>
+            <tr><td>Cybersecurity</td><td><a target="_blank" class="link_here" href="https://www.revshells.com/">Reverse Shell Generator</a></td><td></td></tr>
+            <tr><td>Edit / Social</td><td><a target="_blank" class="link_here" href="https://webqr.com/">Web QR</a></td><td>Διαβάζει QR Code</td></tr>
+            <tr><td>Cybersecurity</td><td><a target="_blank" class="link_here" href="https://chandanbn.github.io/cvss/">CVSS v3.1 Base Score Calculator</a></td><td></td></tr>
+            <tr><td>Web</td><td><a target="_blank" class="link_here" href="https://www.urldecoder.org/">URL Decode and Encode</a></td><td></td></tr>
+            <tr><td>Edit files</td><td><a target="_blank" class="link_here" href="https://www.ilovepdf.com/">iLovePDF</a></td><td>Για επεξεργασία PDF</td></tr>
+            <tr><td>Cybersecurity</td><td><a target="_blank" class="link_here" href="https://www.base64decode.org/">Base64 Decode and Encode</a></td><td></td></tr>
+            <tr><td>Convert</td><td><a target="_blank" class="link_here" href="https://www.rapidtables.com/convert/number/binary-to-decimal.html">Δυαδικό σε δεκαδικό</a></td><td></td></tr>
+            <tr><td>Convert</td><td><a target="_blank" class="link_here" href="https://www.rapidtables.com/convert/number/decimal-to-binary.html">Δεκαδικό σε δυαδικό</a></td><td></td></tr>
+            <tr><td>Δίκτυα</td><td><a target="_blank" class="link_here" href="https://jodies.de/ipcalc">IP Calculator</a></td><td>Υπολογίζει: Netmask, Network Address, Broadcast, HostMin, HostMax, Hosts/Net</td></tr>
+            <tr><td>Δίκτυα</td><td><a target="_blank" class="link_here" href="https://ipinfo.io/">IPinfo</a></td><td>Εμφανίζει την Public  IP που έχεις.</td></tr>
+            <tr><td>Create by GrCode Club</td><td><a target="_blank" class="link_here" href="https://grcodeclub.github.io/more/tools/markdown">Markdown</a></td><td>Markdown Preview</td></tr>
+            <tr><td>Cybersecurity</td><td><a target="_blank" class="link_here" href="https://www.virustotal.com/gui/home/upload">VirusTotal</a></td><td>Αναλύστε ύποπτα αρχεία, Domains, IP και διευθύνσεις URL για να εντοπίσετε κακόβουλο λογισμικό και άλλες παραβιάσεις.</td></tr>
+            <tr><td>Edit / Social</td><td><a target="_blank" class="link_here" href="https://www.remove.bg/">remove.bg</a></td><td>Αναλύστε ύποπτα αρχεία, Domains, IP και διευθύνσεις URL για να εντοπίσετε κακόβουλο λογισμικό και άλλες παραβιάσεις.</td></tr>
+            <tr><td>Web</td><td><a target="_blank" class="link_here" href="https://pagespeed.web.dev/">PageSpeed Insights</a></td><td>Το PageSpeed Insights (PSI) είναι ένα εργαλείο της Google που παρέχει πληροφορίες για την απόδοση μιας ιστοσελίδας.</td></tr>
+            <tr><td>Cybersecurity</td><td><a target="_blank" class="link_here" href="https://morsecodetranslator.com/">Morse Code Translator</a></td><td>Δίνει τη δυνατότητα σε οποιονδήποτε να μεταφράσει κείμενο σε κώδικα Μορς ή να μετατρέψει τον κώδικα Μορς σε κείμενο.</td></tr>
+
+        </table>
+        <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

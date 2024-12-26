@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/main.jpg"/>
+    <meta property="og:title" content="GrCode Club">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="addHeader"></div>
+
+    <div class="container">
+        <h1 class="title">Δυναμική προσθήκη περιεχομένου στην HTML μέσω JavaScript</h1>
+        <p>Κατά τη διάρκεια της ανάπτυξης της ιστοσελίδας μας, κάθε σελίδα αντιστοιχούσε σε ένα ξεχωριστό αρχείο HTML. Ωστόσο, 
+            καθώς ο αριθμός των αρχείων αυξήθηκε, παρατηρήσαμε ότι οποιαδήποτε τροποποίηση σε κοινά στοιχεία, όπως η προσθήκη 
+            νέων αρχείων CSS ή JavaScript, ή αλλαγές σε επαναλαμβανόμενα τμήματα κώδικα (header, menu, footer), απαιτούσε να 
+            ενημερώνουμε κάθε αρχείο HTML ξεχωριστά.
+
+            Αυτό θα σήμαινε σημαντική αύξηση στον χρόνο συντήρησης και διαχείρισης του project.
+
+            Για να λύσουμε αυτό το πρόβλημα και να βελτιστοποιήσουμε τη διαδικασία, αποφασίσαμε να προσθέτουμε δυναμικά τα 
+            αρχεία CSS, JavaScript και τα κοινά τμήματα HTML (όπως το header, menu και footer) χρησιμοποιώντας JavaScript. 
+            Με αυτόν τον τρόπο, μπορούμε να κάνουμε αλλαγές σε ένα μόνο σημείο, εξοικονομώντας χρόνο και διασφαλίζοντας τη 
+            συνοχή σε όλες τις σελίδες μας.</p>
+
+            <p class="highlight">Δυναμική προσθήκη CSS αρχείων</p>
+            <p>Αυτό το απόσπασμα κώδικα JavaScript είναι σχεδιασμένο για την δυναμική προσθήκη αρχείων CSS στο &lt;head&gt; 
+                της HTML σελίδας. Ουσιαστικά, αντί να γίνεται χειροκίνητη εισαγωγή όλων των συνδέσμων CSS μέσα στο HTML 
+                αρχείο, χρησιμοποιούμε την JavaScript για να φορτώσει τα αρχεία CSS όταν η σελίδα εκτελείται.</p>
+                
+            <div class="bg_preview">
+                <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">const cssLinks = [
+"https://grcodeclub.gr/website/css/grcodeclub/header_and_footer.css",
+"https://grcodeclub.gr/website/css/grcodeclub/main.css",
+// περισσότερα CSS URLs εδώ...
+];
+const head = document.head; // Βρίσκουμε το &lt;head> της HTML
+// Προσθήκη των αρχείων CSS δυναμικά
+cssLinks.forEach(linkUrl => {
+const linkElement = document.createElement('link');
+linkElement.rel = 'stylesheet';
+linkElement.href = linkUrl;
+head.appendChild(linkElement); // Προσθήκη στο &lt;head>
+});</code></pre></div></div>
+
+            <p class="highlight">Δυναμική προσθήκη Meta Tags</p>
+            <p>Δημιουργούμε  και προσθέτουμε δυναμικά ένα στοιχείο &lt;meta> στο &lt;head> της HTML σελίδας, το οποίο είναι απαραίτητο για να διαμορφωθεί σωστά η προβολή της σε φορητές συσκευές.</p>
+            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">const metaElement = document.createElement('meta');     // Δημιουργία ενός νέου στοιχείου <meta>
+metaElement.setAttribute('name', 'viewport');     // Ορίζουμε την ιδιότητα 'name' ως 'viewport'
+metaElement.setAttribute('content', 'width=device-width, initial-scale=0.8');     // Ορίζουμε την ιδιότητα 'content' με την τιμή που θέλουμε
+document.head.appendChild(metaElement);     // Προσθέτουμε το στοιχείο &lt;meta> στο &lt;head> του HTML εγγράφου </code></pre></div></div>
+
+
+            <p class="highlight">Δυναμική προσθήκη JavaScript </p>
+            <p>Δημιουργούμε  και προσθέτουμε δυναμικά ένα στοιχείο &lt;javascript> στο  &lt;head> της HTML σελίδας.</p>
+            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">function addScript(src) {
+var script = document.createElement('script');
+script.src = src;
+document.head.appendChild(script); //  document.body.appendChild(script); αν θέλουμε να το βάλουμε στο body
+}
+addScript('https://grcodeclub.gr/js/jquery.js');
+addScript('https://grcodeclub.gr/js/prism.js');</code></pre></div></div>
+        <p>Πλεονεκτήματα:
+            <ol>
+                <li>Μπορείτε να φορτώνετε εξωτερικά αρχεία JavaScript δυναμικά, χωρίς να αγγίζετε το HTML.</li>
+                <li>Βελτιώνει τη διαχείριση μεγάλων projects όπου απαιτείται η φόρτωση πολλών αρχείων JS.</li>
+                <li>Γρήγορος τρόπος  για την ενσωμάτωση επιπλέον λειτουργιές  στη σελίδα σας.</li>
+            </ol>
+        </p>
+        <p>Επειδή υπάρχουν συγκεκριμένα JavaScript αρχεία που θέλουμε να φορτώσουμε σε συγκεκριμένες περιπτώσεις, ελέγχουμε αν 
+            υπάρχει το αντίστοιχο στοιχείο με το id ή την αντίστοιχη class. Αν το στοιχείο αυτό υπάρχει, τότε προχωράμε στη
+             φόρτωση του JavaScript αρχείου. Με αυτόν τον τρόπο, αποφεύγουμε τη φόρτωση αρχείων JavaScript που δεν θα χρειαστούν 
+             στις συγκεκριμένες σελίδες, βελτιώνοντας την απόδοση της εφαρμογής μας. </p>
+             <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">if (document.getElementById('table_page')) { addScript('https://grcodeclub.gr/js/tables/pages.js');}</code></pre></div></div>
+    </div>
+
+    <!-- Footer -->
+    <div id="addFooter"></div>
+</body>
+</html>

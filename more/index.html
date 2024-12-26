@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/main.png"/>
+    <meta property="og:title" content="GrCode Club">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+    <style>a{color:black;text-decoration: none;}</style>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container ">
+        <!-- Πεδίο Αναζήτησης -->
+        <input type="text" class="form-control" id="searchURL" placeholder="Αναζήτηση"><br>
+        <!-- Container για τις κάρτες -->
+        <div id="cardContainer">
+            <div class="card mb-3"><div class="card-header"><h5 class="card-title">Social Media</h5></div><div class="card-body"><p class="card-text">Social Media | Πλήρης Οδηγός</p><a href="https://grcodeclub.gr/more/pages/social-media.html" class="btn btn-dark">περισσότερα...</a></div><div class="card-footer"><div class="input-group mb-3"><span class="input-group-text"><i class="fas fa-calendar-days"></i></span><span class="input-group-text">26/11/2024</span><span class="input-group-text"><i class="fas fa-user"></i></span><span class="input-group-text" ><a href="#">GrCode Club</a></span></div></div></div>
+            <div class="card mb-3"><div class="card-header"><h5 class="card-title">Office Suite</h5></div><div class="card-body"><p class="card-text">Παρέχει μια λίστα με όλα τα προγράμματα Office που παρέχονται από την Google και την Microsoft</p><a href="https://grcodeclub.gr/more/office-suite/" class="btn btn-dark">περισσότερα...</a></div><div class="card-footer"><div class="input-group mb-3"><span class="input-group-text"><i class="fas fa-calendar-days"></i></span><span class="input-group-text">10/11/2024</span><span class="input-group-text"><i class="fas fa-user"></i></span><span class="input-group-text" ><a href="#">GrCode Club</a></span></div></div></div>
+            <div class="card mb-3"><div class="card-header"><h5 class="card-title">Υπηρεσίες της Google</h5></div><div class="card-body"><p class="card-text">Αναλυτική λίστα με όλες τις υπηρεσίες της Google που είναι online.</p><a href="https://grcodeclub.gr/more/google" class="btn btn-dark">περισσότερα...</a></div><div class="card-footer"><div class="input-group mb-3"><span class="input-group-text"><i class="fas fa-calendar-days"></i></span><span class="input-group-text">2/10/2024</span><span class="input-group-text"><i class="fas fa-user"></i></span><span class="input-group-text" ><a href="#">GrCode Club</a></span></div></div></div>
+            
+        </div>
+
+        <!-- Κουμπιά Σελιδοποίησης -->
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-left">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>
+    </div>
+    <div id="addFooter"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // Συνάρτηση για αφαίρεση τόνων
+        function removeDiacritics(str) {
+            return str
+                .normalize("NFD") // Διαχωρισμός γραμμάτων και τόνων
+                .replace(/[\u0300-\u036f]/g, ""); // Αφαίρεση τόνων
+        }
+
+        const itemsPerPage = 20; // Αριθμός αντικειμένων ανά σελίδα
+        let currentPage = 1; // Τρέχουσα σελίδα
+
+        const cardContainer = document.getElementById("cardContainer");
+        const pagination = document.getElementById("pagination");
+
+        // Εμφάνιση καρτών για την τρέχουσα σελίδα
+        function displayCards(query = "") {
+            const allCards = Array.from(document.querySelectorAll("#cardContainer .card"));
+            const filteredCards = allCards.filter(card => {
+                const title = removeDiacritics(card.querySelector(".card-title").textContent.toLowerCase());
+                return title.includes(query); // Φιλτράρει με βάση το query
+            });
+
+            // Απόκρυψη όλων των καρτών
+            allCards.forEach(card => (card.style.display = "none"));
+
+            // Εμφάνιση των καρτών της τρέχουσας σελίδας
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const visibleCards = filteredCards.slice(start, end);
+            visibleCards.forEach(card => (card.style.display = "")); // Εμφανίζει τις κάρτες
+
+            updatePagination(filteredCards.length);
+        }
+
+        // Ενημέρωση κουμπιών σελιδοποίησης
+        function updatePagination(totalItems) {
+            pagination.innerHTML = "";
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const li = document.createElement("li");
+                li.className = `page-item ${i === currentPage ? "active" : ""}`;
+                li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                li.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    currentPage = i;
+                    displayCards(document.getElementById("searchURL").value.toLowerCase());
+                });
+                pagination.appendChild(li);
+            }
+        }
+
+        // Αναζήτηση
+        document.getElementById("searchURL").addEventListener("input", function () {
+            const query = removeDiacritics(this.value.toLowerCase());
+            currentPage = 1; // Επιστροφή στην πρώτη σελίδα
+            displayCards(query);
+        });
+
+        // Πρώτη εμφάνιση
+        displayCards();
+    </script>
+</body>
+</html>
