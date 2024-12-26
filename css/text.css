@@ -1,6 +1,17 @@
 h1.back_page {display: inline-block;}
 p {text-align: justify;}
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/roboto.woff2') format('woff2');
+  font-display: swap;
+}
+
+body {font-family: 'Roboto', sans-serif;}
+
+
+
+
 blockquote {
 	margin-left: 1%;
     padding: 0.5em;
