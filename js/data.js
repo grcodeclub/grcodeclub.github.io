@@ -86,23 +86,23 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.command-line') || document.querySelector('.code_editor')) { addCssFiles("https://grcodeclub.gr/css/code/prism.css");}
 
     
-    // Συνάρτηση για να προσθέσεις ένα script στο head και να περιμένεις μέχρι να φορτωθεί
-    function addScriptBody(src, callback) {
-        var script = document.createElement('script');
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
         script.src = src;
-        script.onload = callback; // Κλήση της callback συνάρτησης όταν το script φορτωθεί
+        script.onload = () => resolve(`Loaded: ${src}`);
+        script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
         document.body.appendChild(script);
-    }
-    // Χρήση της addScriptBody για να φορτώσεις το jQuery
-    addScriptBody('https://grcodeclub.gr/js/libraries/jquery.js', function() {
-        addScriptBody('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js', function() {
-            addScriptBody('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js', function() {
-                 if (document.querySelector('.command-line') || document.querySelector('.code_editor')) {addScriptBody('https://grcodeclub.gr/js/libraries/prism.js');  console.log("Το Prism.js φορτώθηκε επιτυχώς.");}
-                addScriptBody('https://grcodeclub.gr/js/libraries/select2-4-0-13.js');
-                addScriptBody('https://grcodeclub.gr/js/add/body.js'); 
-            });
-        });
     });
+}
+
+// Αλυσίδα Promises
+loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
+    .then(() => loadScript('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js'))
+    .then(() => loadScript('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js'))
+    .then(() => loadScript('https://grcodeclub.gr/js/add/body.js'))
+    .catch(error => console.error(error));
+
 
     function addScript(src) {
         var script = document.createElement('script');
