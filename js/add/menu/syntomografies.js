@@ -10,7 +10,6 @@ const mymenu = `
     <option value="https://grcodeclub.gr/syntomografies/network">Δίκτυα Υπολογιστών</option>
     <option value="https://grcodeclub.gr/syntomografies/system">Λειτουργικά Συστήματα</option>
     <option value="https://grcodeclub.gr/syntomografies/cybersecurity">Κυβερνοασφάλεια</option>
-    <option value="https://grcodeclub.gr/syntomografies/linux">Linux</option>
     <option value="https://grcodeclub.gr/syntomografies/windows">Microsoft Windows</option>
 </select>
 </div>
