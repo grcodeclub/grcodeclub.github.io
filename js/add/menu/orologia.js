@@ -13,7 +13,7 @@ const mymenu = `
     <option value="https://grcodeclub.gr/orologia/linux">Linux</option>
     <option value="https://grcodeclub.gr/orologia/hardware">Υλικό υπολογιστών</option>
     <option value="https://grcodeclub.gr/orologia/windows">Microsoft Windows</option>
-    <option value="https://grcodeclub.gr/orologia/website">Ιστοσελίδας</option>
+    <option value="https://grcodeclub.gr/orologia/website">Ιστοσελίδες</option>
 </select>
 </div>
 `;
