@@ -1,19 +1,34 @@
 h1.back_page {display: inline-block;}
 p {text-align: justify;}
 
-@media (pointer: coarse) {
-    a:active {
-        background-color: transparent; /* Αφαιρεί το μπλε χρώμα φόντου */
-        color: inherit; /* Επαναφέρει το χρώμα κειμένου */
-        outline: none; /* Αφαιρεί το μπλε περίγραμμα */
-    }
-}
-@media (min-width: 992px) {
-    .link_here {
-        white-space: nowrap;
-    }
+blockquote {
+	margin-left: 1%;
+    padding: 0.5em;
+    font-size: 14px;
+    color: black;
+    background-color: lightgray;
+	border-left: 8px solid #343a40;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 
+h1.mytext,h2.mytext,h3.mytext{
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+    margin-left: 0.5%;
+}
+
+code {
+	background: #1b1e20;
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	tab-size: 2;
+	color: #ffffff;
+}
         .link_here {
         background-color: rgba(0, 0, 0, 0.123);
             border-radius: 5px;
@@ -31,7 +46,6 @@ p {text-align: justify;}
     transform: translateY(1px); /* Ελαφριά κίνηση προς τα πάνω για 3D εφέ */
     background-color: #44444436; /* Προεπιλεγμένο χρώμα φόντου (teal) */
 }
-
 
 
 div.cmd {
@@ -85,9 +99,21 @@ section.tmp {
     border-radius: 15px;
 }
 
-
 p.cmd {
     margin-left: 10px;
     margin-right: 10px;
     color: white;
+}
+
+@media (pointer: coarse) {
+    a:active {
+        background-color: transparent; /* Αφαιρεί το μπλε χρώμα φόντου */
+        color: inherit; /* Επαναφέρει το χρώμα κειμένου */
+        outline: none; /* Αφαιρεί το μπλε περίγραμμα */
+    }
+}
+@media (min-width: 992px) {
+    .link_here {
+        white-space: nowrap;
+    }
 }
