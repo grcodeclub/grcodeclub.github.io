@@ -51,7 +51,7 @@ const htmlContentHeader = `
                 <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/system/files/extensions">Επεκτάσεις αρχείων</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/system/files/extensions">Επεκτάσεις Αρχείων</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/">Microsoft Windows</a></li>
                      <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/">Linux</a></li>            
                 </ul>
@@ -68,8 +68,8 @@ const htmlContentHeader = `
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Περισσότερα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown3" style="max-height: 400px; overflow-y: auto;">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/">Επιπλέον Υλικό</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/tools">Online εργαλεία</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/">Υλικό υπολογιστών</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/tools">Online Εργαλεία</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/">Υλικό Υπολογιστών</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/mobile/">Κινητά</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/quiz/">Quiz</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Ορολογία</a></li>
