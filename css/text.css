@@ -1,6 +1,15 @@
 h1.back_page {display: inline-block;}
 p {text-align: justify;}
 
+body {
+  font-size: 16px; /* Κύριο κείμενο */
+  line-height: 1.5; /* Διάστημα μεταξύ γραμμών για καλύτερη ανάγνωση */
+}
+
+h1, h2, h3 {
+  font-size: 1.5em; /* Ανάλογα με το κύριο μέγεθος γραμματοσειράς */
+}
+
 @font-face {
   font-family: 'Roboto';
   src: url('fonts/roboto.woff2') format('woff2');
