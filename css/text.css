@@ -133,7 +133,9 @@ p.cmd {
     }
 }
 @media (min-width: 992px) {
-    .link_here {
-        white-space: nowrap;
-    }
+	.link_here {white-space: nowrap;}
+}
+
+@media (max-width: 992px){
+	p {font-size:13px;}
 }
