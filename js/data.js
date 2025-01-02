@@ -70,6 +70,7 @@ metaElement.setAttribute('name', 'viewport');     // Ορίζουμε την ι�
 metaElement.setAttribute('content', 'width=device-width, initial-scale=0.8');     // Ορίζουμε την ιδιότητα 'content' με την τιμή που θέλουμε
 document.head.appendChild(metaElement);     // Προσθέτουμε το στοιχείο <meta> στο <head> του HTML εγγράφου
 
+document.addEventListener('contextmenu', event => event.preventDefault());      // Απενεργοποίηση του μενού περιβάλλοντος
 document.addEventListener('keydown', function(event) { // Αποτροπή των συντομεύσεων
     if ((event.ctrlKey && 
          (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'θ' || event.key === 'σ' || event.key === 'π' )) || 
