@@ -2,35 +2,30 @@ h1.back_page {display: inline-block;}
 p {text-align: justify;}
 
 body {
-  font-size: 16px; /* Κύριο κείμενο */
-  line-height: 1.5; /* Διάστημα μεταξύ γραμμών για καλύτερη ανάγνωση */
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px; /* Κύριο κείμενο */
+	line-height: 1.5; /* Διάστημα μεταξύ γραμμών για καλύτερη ανάγνωση */
 }
 
 h1, h2, h3 {
-  font-size: 1.5em; /* Ανάλογα με το κύριο μέγεθος γραμματοσειράς */
+	font-size: 1.5em; /* Ανάλογα με το κύριο μέγεθος γραμματοσειράς */
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('fonts/roboto.woff2') format('woff2');
-  font-display: swap;
+	font-family: 'Roboto';
+	src: url('fonts/roboto.woff2') format('woff2');
+	font-display: swap;
 }
-
-body {font-family: 'Roboto', sans-serif;}
-
-
-
 
 blockquote {
 	margin-left: 1%;
-    padding: 0.5em;
-    font-size: 14px;
-    color: black;
-    background-color: lightgray;
+	padding: 0.5em;
+    	font-size: 14px;
+    	color: black;
+    	background-color: lightgray;
 	border-left: 8px solid #343a40;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-
+    	border-top-right-radius: 10px;
+    	border-bottom-right-radius: 10px;
 }
 
 h1.mytext,h2.mytext,h3.mytext{
@@ -38,7 +33,7 @@ h1.mytext,h2.mytext,h3.mytext{
 	line-height: 1.2;
 	font-weight: 600;
 	margin-bottom: 0;
-    margin-left: 0.5%;
+    	margin-left: 0.5%;
 }
 
 code {
@@ -49,80 +44,78 @@ code {
 	tab-size: 2;
 	color: #ffffff;
 }
-        .link_here {
-        background-color: rgba(0, 0, 0, 0.123);
-            border-radius: 5px;
-    padding: 4px;
-    color: rgb(0, 0, 0); /* Black χρώμα για το κείμενο */
-    display: inline-block; /* Για να εμφανίζεται σε σειρά με άλλα στοιχεία */
-    text-decoration: none; /* Αφαιρεί την υπογράμμιση από τον σύνδεσμο */
-    cursor: pointer; /* Δείκτης χεριού όταν περνά το ποντίκι */
-
+       
+.link_here{
+	color: rgb(6, 4, 69);
+        background-color: rgba(128, 128, 128, 0.241);
+        padding: 2px;
+        border-radius: 2px;
 }
 
-.link_here:hover {
-    color: rgb(0, 0, 0);
-    box-shadow: 0 0px 5px #000000; /* Προσθήκη σκιάς για 3D εφέ */
-    transform: translateY(1px); /* Ελαφριά κίνηση προς τα πάνω για 3D εφέ */
-    background-color: #44444436; /* Προεπιλεγμένο χρώμα φόντου (teal) */
+.link_here:hover{
+        color: rgb(6, 4, 69);
+        background-color: rgba(128, 128, 128, 0.639);
+        padding: 2px;
+        text-decoration: none;
+        border-radius: 2px;
 }
-
 
 div.cmd {
-    background-color: rgb(10, 10, 60); /* Σκούρο μπλε-μαύρο */
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
+    	background-color: rgb(10, 10, 60); /* Σκούρο μπλε-μαύρο */
+    	color: white;
+    	border-radius: 20px;
+    	padding: 10px;
 }
 
 .highlight {
-    margin-top: 10%;
-    padding: 10px;
-    background-color: #343a40;
-    color: white;
-    text-align: center;
+    	margin-top: 10%;
+    	padding: 10px;
+    	background-color: #343a40;
+    	color: white;
+    	text-align: center;
 }
 
 .form-label{
-    color: #dcdcdc;
-    margin-left: 2%;
-    font-size: 20px;
+    	color: #dcdcdc;
+    	margin-left: 2%;
+    	font-size: 20px;
 }
 
 h1.title {
-    text-align: center;
-    background-color: #343a40; /* Σκούρο χρώμα */
-    color: #ccc;
-    padding: 10px;
+	text-align: center;
+    	background-color: #343a40; /* Σκούρο χρώμα */
+    	color: #ccc;
+    	padding: 10px;
 }
 
 .contentsMenu{
-    background-color: #343a40; /* Σκούρο χρώμα */
-    color: #ccc;
+    	background-color: #343a40; /* Σκούρο χρώμα */
+	color: #ccc;
 }
 
 .form-select{
-    background-color: #b2b3b5; /* Σκούρο μαύρο-γκρι */
-    color: black;
+    	background-color: #b2b3b5; /* Σκούρο μαύρο-γκρι */
+    	color: black;
 }
+
 .form-select:focus{
-     background-color: #343a40; /* Σκούρο χρώμα */
-     color: #ccc;
+     	background-color: #343a40; /* Σκούρο χρώμα */
+    	color: #ccc;
 }
 
 section.tmp {
-    background-color: #1a1a1a; /* Σκούρο φόντο */
-    margin-left: 10%;
-    margin-right: 10%;
-    color: #e0e0e0;
-    padding: 20px;
-    border-radius: 15px;
+    	background-color: #1a1a1a; /* Σκούρο φόντο */
+    	margin-left: 10%;
+    	margin-right: 10%;
+    	color: #e0e0e0;
+    	padding: 20px;
+    	border-radius: 15px;
 }
 
 p.cmd {
-    margin-left: 10px;
-    margin-right: 10px;
-    color: white;
+    	margin-left: 10px;
+    	margin-right: 10px;
+    	color: white;
 }
 
 @media (pointer: coarse) {
