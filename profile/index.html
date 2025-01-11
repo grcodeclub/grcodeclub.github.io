@@ -105,40 +105,46 @@ $(document).ready(function() {
             });
         }
 
-        // Συνάρτηση για προβολή των χρηστών
         function displayUsers(users) {
-            const userCards = document.getElementById('user-cards'); // Λήψη του container για τις κάρτες χρηστών
-            userCards.innerHTML = ''; // Καθάρισμα των υπάρχουσων καρτών
+    const userCards = document.getElementById('user-cards'); // Λήψη του container για τις κάρτες χρηστών
+    userCards.innerHTML = ''; // Καθάρισμα των υπάρχοντων καρτών
 
-            users.forEach(user => {
-                // Δημιουργία του HTML για κάθε κάρτα χρήστη
-                const cardHTML = `
-                    <div class="col-md-4 mb-4" style="margin-bottom: 5%;">
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-4">
-                                    <img src="${user.profileImage}" class="card-img-top" alt="Profile Image"> <!-- Εικόνα χρήστη -->
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${user.username}</h5> <!-- Όνομα χρήστη -->
-                                        <p class="card-text">Θέση: ${user.position}</p> <!-- Θέση χρήστη -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mt-2">
-                                <a href="${user.profileLink}" class="btn btn-dark">Προβολή Προφίλ</a> <!-- Σύνδεσμος προς το προφίλ -->
+    users.forEach(user => {
+        // Δημιουργία του HTML για κάθε κάρτα χρήστη
+        const cardHTML = `
+            <div class="col-md-4 mb-4" style="margin-bottom: 5%;">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="${user.profileImage}" class="card-img-top" alt="Profile Image"> <!-- Εικόνα χρήστη -->
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${user.username}</h5> <!-- Όνομα χρήστη -->
+                                <p class="card-text">Θέση: ${user.position}</p> <!-- Θέση χρήστη -->
                             </div>
                         </div>
                     </div>
-                `;
-                userCards.innerHTML += cardHTML; // Προσθήκη της κάρτας στο container
-                 if (user['display-link-btn'] === 'true') {
-                    const profileLinkElement = document.getElementById(`profileLink-${user.id}`);
-                    profileLinkElement.setAttribute('disabled', 'true'); // Προσθέτουμε το disabled
-                }
-            });
+                    <div class="row g-0 mt-2">
+                        <a id="profileLink-${user.id}" href="${user.profileLink}" class="btn btn-dark">Προβολή Προφίλ</a> <!-- Σύνδεσμος προς το προφίλ -->
+                    </div>
+                </div>
+            </div>
+        `;
+        userCards.innerHTML += cardHTML; // Προσθήκη της κάρτας στο container
+
+        // Απενεργοποιούμε το link αν το display-link-btn είναι 'true'
+        if (user['display-link-btn'] === 'true') {
+            const profileLinkElement = document.getElementById(`profileLink-${user.id}`);
+            if (profileLinkElement) {
+                profileLinkElement.setAttribute('href', '#'); // Κάνουμε το href μη ενεργό
+                profileLinkElement.classList.add('disabled'); // Προσθέτουμε την κλάση disabled
+                profileLinkElement.setAttribute('aria-disabled', 'true'); // Ενεργοποιούμε το aria-disabled για προσβασιμότητα
+            }
         }
+    });
+}
+
 
         function searchUserByURL() {
     const searchURL = document.getElementById('searchURL').value.trim(); // Λάβετε το ID ως κείμενο
