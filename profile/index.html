@@ -91,7 +91,7 @@ $(document).ready(function() {
         // Συνάρτηση για γέμισμα του φίλτρου θέσεων
         function populatePositionFilter(users) {
             const positionFilter = document.getElementById('positionFilter'); // Λήψη του dropdown
-            const positions = new Set(users.map(user => user.position)); // Εξαγωγή μοναδικών θέσεων
+            const positions = new Set(users.map(user => user.category)); // Εξαγωγή μοναδικών θέσεων
 
             // Καθαρισμός των υπάρχοντων επιλογών
             positionFilter.innerHTML = '<option value="">Όλες οι Θέσεις</option>'; // Επαναφορά της αρχικής επιλογής
@@ -121,7 +121,7 @@ $(document).ready(function() {
                         <div class="col-8">
                             <div class="card-body">
                                 <h5 class="card-title">${user.username}</h5> <!-- Όνομα χρήστη -->
-                                <p class="card-text">Θέση: ${user.position}</p> <!-- Θέση χρήστη -->
+                                <p class="card-text">Κατηγορία: ${user.category}</p> <!-- Θέση χρήστη -->
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@ $(document).ready(function() {
     
     const selectedPosition = positionFilter.value; // Επιλεγμένη θέση
     // Φιλτράρισμα βάσει θέσης
-    const finalFilteredUsers = selectedPosition ? filteredUsers.filter(user => user.position === selectedPosition) : filteredUsers;
+    const finalFilteredUsers = selectedPosition ? filteredUsers.filter(user => user.category === selectedPosition) : filteredUsers;
 
     // Εμφάνιση μηνύματος αν δεν υπάρχει χρήστης
     const noUserMessage = document.getElementById('noUserMessage');
@@ -177,7 +177,7 @@ $(document).ready(function() {
         function filterByPosition() {
             const selectedPosition = document.getElementById('positionFilter').value; // Λάβετε την επιλεγμένη θέση
             // Φιλτράρισμα με βάση τη θέση
-            const filteredUsers = allUsers.filter(user => selectedPosition ? user.position === selectedPosition : true); 
+            const filteredUsers = allUsers.filter(user => selectedPosition ? user.category === selectedPosition : true); 
 
             displayUsers(filteredUsers.length > 0 ? filteredUsers : allUsers); // Επαναφορά αν δεν βρεθούν χρήστες
         }
