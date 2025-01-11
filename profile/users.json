@@ -2,10 +2,10 @@
     "users": [
         {
             "id": 1,
-            "username": "Δημητρής Δεδούσης (Δημιουργός GrCode Club)",
-            "position": "Developer",
-            "profileImage": "https://dimitridedou.github.io/files/profile.png",
-            "profileLink": "https://dimitridedou.github.io"
+            "username": "",
+            "position": "",
+            "profileImage": "",
+            "profileLink": ""
         }
        
     ]
