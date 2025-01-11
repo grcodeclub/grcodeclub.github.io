@@ -133,6 +133,10 @@ $(document).ready(function() {
                     </div>
                 `;
                 userCards.innerHTML += cardHTML; // Προσθήκη της κάρτας στο container
+                 if (user['display-link-btn'] === 'true') {
+                    const profileLinkElement = document.getElementById(`profileLink-${user.id}`);
+                    profileLinkElement.setAttribute('disabled', 'true'); // Προσθέτουμε το disabled
+                }
             });
         }
 
@@ -159,6 +163,7 @@ $(document).ready(function() {
 
     // Κλείδωμα ή απενεργοποίηση του select
     positionFilter.disabled = searchURL !== ''; // Απενεργοποίηση αν υπάρχει κείμενο
+    
 }
 
 
