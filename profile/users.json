@@ -2,8 +2,8 @@
     "users": [
         {
             "id": 1,
-            "username": "",
-            "position": "",
+            "username": "Username",
+            "category": "Programmer",
             "profileImage": "",
             "profileLink": "",
             "display-link-btn":"true"
