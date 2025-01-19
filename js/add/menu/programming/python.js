@@ -17,6 +17,7 @@ const mymenu = `
         <option value="https://grcodeclub.gr/python/commands/loop">Δομή επανάληψης</option>
         <option value="https://grcodeclub.gr/python/commands/function">Συναρτήσεις</option>
     </optgroup>
+        <option value="https://grcodeclub.gr/python/strings">Strings</option>
         <option value="https://grcodeclub.gr/python/files">Αρχεία</option>
         <option value="https://grcodeclub.gr/python/terminal">Terminal</option>
     </select>
