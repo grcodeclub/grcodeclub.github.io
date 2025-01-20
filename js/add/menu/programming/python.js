@@ -5,21 +5,25 @@ const mymenu = `
 <div class="dropdown-container highlight">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/python/">Επιλέξτε σελίδα</option>
+        <option value="https://grcodeclub.gr/python/">Επιλέξτε Σελίδα</option>
         <option value="https://github.com/grcodeclub/python">GitHub</option>
         <option value="https://grcodeclub.gr/python/library/">Βιβλιοθήκες</option>
         <option value="https://grcodeclub.gr/python/operators">Τελεστές</option>  
     <optgroup label="Βασικές Εντολές">
         <option value="https://grcodeclub.gr/python/commands/variables">Μεταβλητές</option>
         <option value="https://grcodeclub.gr/python/commands/output_input">Είσοδος / Έξοδος</option>
-        <option value="https://grcodeclub.gr/python/commands/conditions">Δομή ελέγχου</option>
-        <option value="https://grcodeclub.gr/python/commands/loop">Δομή επανάληψης</option>
-        <option value="https://grcodeclub.gr/python/commands/loop">Δομή επανάληψης</option>
+        <option value="https://grcodeclub.gr/python/commands/conditions">Δομή Ελέγχου</option>
+        <option value="https://grcodeclub.gr/python/commands/loop">Δομή Επανάληψης</option>
+        <option value="https://grcodeclub.gr/python/commands/loop">Δομή Επανάληψης</option>
         <option value="https://grcodeclub.gr/python/commands/function">Συναρτήσεις</option>
     </optgroup>
         <option value="https://grcodeclub.gr/python/strings">Strings</option>
         <option value="https://grcodeclub.gr/python/files">Αρχεία</option>
         <option value="https://grcodeclub.gr/python/terminal">Terminal</option>
+    <optgroup label="Βασικές Εντολές">
+            <option value="https://grcodeclub.gr/python/function/">Δημιουργία Συναρτήσεων</option>
+            <option value="https://grcodeclub.gr/python/function/lambda">lambda</option>
+    </optgroup>
     </select>
 </div>
 `;
