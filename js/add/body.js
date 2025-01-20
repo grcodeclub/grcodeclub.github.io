@@ -71,10 +71,8 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/tools">Online Εργαλεία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/">Υλικό Υπολογιστών</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/mobile/">Κινητά</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/quiz/">Quiz</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Ορολογία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/syntomografies">Συντομογραφίες</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/create/">Δημιουργία Project</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/profile/">Προφίλ Ομάδας</a></li>
                 </ul>
             </li>

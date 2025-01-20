@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/main.webp"/>
+    <meta property="og:title" content="Καριέρα - Θέσεις Εργασίας">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Καριέρα - Θέσεις Εργασίας</h1>
+        <label style="padding-left: 10px;">Φίλτρο:</label>
+        <select id="selectOption" name="code">
+            <option value="0">Όλα</option>
+            <option value="Web Developer">Web Developer</option>
+            <option value="Network">Network</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="IT">IT</option>
+
+        </select><br><br>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td><strong>Κατηγορία</strong></td><td><strong>Θέση Εργασία</strong></td><td><strong>Περιγραφή Θέσης</strong></td></tr>
+            <tr><td>Network</td>            <td>Network Engineer</td>      <td>Σχεδιασμός και συντήρηση δικτυακών υποδομών.</td></tr>
+            <tr><td>Web Developer</td>      <td>Full-Stack Developer</td>           <td>Εργασία σε front-end και back-end συστήματα</td></tr>
+            <tr><td>Web Developer</td>      <td>Front-End Development</td>          <td></td></tr>
+            <tr><td>Developer</td>          <td>Software Developer</td>           <td>Δημιουργία και ανάπτυξη λογισμικού ή εφαρμογών.</td></tr>
+            <tr><td>Web Developer</td>      <td>Back-End Development</td>           <td></td></tr>
+            <tr><td>DevOps</td>             <td>DevOps Cloud Engineer</td>          <td></td></tr>
+            <tr><td>DevOps</td>             <td>DevOps Engineer</td>                <td></td></tr>
+            <tr><td>Cybersecurity</td>      <td>Cybersecurity Analyst</td>          <td></td></tr>
+            <tr><td>Cybersecurity</td>      <td>Cybersecurity SOC Manager</td>      <td></td></tr>
+            <tr><td>Cybersecurity</td>      <td>Cybersecurity Tester</td>           <td></td></tr>
+            <tr><td>Cybersecurity</td>      <td>Penetrtion Tester</td>              <td>Έλεγχος ασφάλειας συστημάτων μέσω εξομοίωσης επιθέσεων.</td></tr>
+            <tr><td>Cybersecurity</td>      <td>Cybersecurity SOC Analyst</td>      <td></td></tr>
+            <tr><td>IT</td>                 <td>IT Helpdesk Technician</td>                               <td></td></tr>
+            <tr><td>IT</td>                 <td>IT System Administrator</td>                               <td></td></tr>
+            <tr><td>IT</td>                 <td>IT Support Specialist</td>                               <td></td></tr>
+            <tr><td>Developer</td>          <td>Game Developer</td>                               <td>Δημιουργία video games.</td></tr>
+            <tr><td>Developer</td>          <td>Mobile App Developer</td>                               <td>Ανάπτυξη εφαρμογών για κινητές συσκευές (Android, iOS).</td></tr>
+            <tr><td>Cloud</td>              <td>Cloud Engineer</td>                               <td>Σχεδιασμός, υλοποίηση και διαχείριση υπηρεσιών cloud (AWS, Azure, GCP).</td></tr>
+            <tr><td>Cloud</td>              <td>System Architect</td>                               <td></td></tr>
+            <tr><td>Developer</td>          <td>Game Developer</td>                               <td></td></tr>
+
+        </table>
+        <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
