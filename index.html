@@ -14,6 +14,39 @@
         .card:hover {transform: translateY(-5px);} .btn-primary:hover {background-color: #5b6e9f;}
         .card-img-top {height: 180px;object-fit: cover;border-bottom: 2px solid #ddd;}
         .btn-primary {border-radius: 30px;width: 100%;transition: background-color 0.3s ease;}
+        .calendar-widget {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .calendar-widget:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.489);
+    }
+
+    .calendar-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .calendar-icon {
+      font-size: 35px;
+      color: #039BE5;
+    }
+
+    .calendar-title {
+      font-size: 15px;
+      color: #333333;
+    }
       </style>
     <title>GrCode Club</title>
     <script src="https://grcodeclub.github.io/js/data.js"></script>
@@ -72,6 +105,13 @@
         <p>Η τεχνολογία αποτελεί αναπόσπαστο κομμάτι της σύγχρονης ζωής, επηρεάζοντας καθοριστικά κάθε πτυχή της καθημερινότητάς μας. Με τις καινοτομίες που εισάγει, έχει μεταμορφώσει ριζικά βασικούς τομείς, όπως η επικοινωνία, η υγεία, η εκπαίδευση και η εργασία. Οι λύσεις που προσφέρει όχι μόνο βελτιώνουν την ποιότητα ζωής, αλλά και αυξάνουν την παραγωγικότητα, δημιουργώντας νέες προοπτικές και αναδιαμορφώνοντας το μέλλον.<br>
             Στην καρδιά αυτής της τεχνολογικής επανάστασης βρίσκεται ο προγραμματισμός, η "γλώσσα" που δίνει ζωή σε κάθε τεχνολογική εφαρμογή. Μέσω του προγραμματισμού, αναπτύσσονται λογισμικά, εφαρμογές και αλγόριθμοι που διευκολύνουν την εργασία, την εκπαίδευση και την πρόσβαση στη γνώση. Από τις έξυπνες συσκευές και τα κοινωνικά δίκτυα έως τις πλατφόρμες ηλεκτρονικού εμπορίου, όλα βασίζονται σε προγραμματιστές που σχεδιάζουν και υλοποιούν τα συστήματα αυτά, φέρνοντας τις δυνατότητες της τεχνολογίας στα χέρια μας.</p>
             <br><br>
+            <hr>
+            <div class="calendar-widget" onclick="redirectToCalendar()">
+                <div class="calendar-content">
+                  <div class="calendar-icon">📅</div>
+                  <div class="calendar-title">Δες το Ημερολόγιο</div>
+                </div>
+              </div>
             <hr>
             <div class="container mt-5 d-flex justify-content-center">
                 <div class="card" style="width: 42rem;">
