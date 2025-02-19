@@ -113,7 +113,8 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     }
     
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
-    if (document.getElementById('search_table_page') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/tables-pages.js');}
+    if (document.getElementById('search_table_page') && document.getElementById('searchInput') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/Table_Pagination_Search.js');}
+    if (document.getElementById('search_table_page') && document.getElementById('searchInput2') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/Table_Pagination_2_Search.js');}
 
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
