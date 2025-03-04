@@ -12,6 +12,7 @@ const mymenu = `
         <option value="https://grcodeclub.gr/website/html/link">Σύνδεσμοι</option>
         <option value="https://grcodeclub.gr/website/html/input">&lt;input></option>
         <option value="https://grcodeclub.gr/website/html/list">Λίστες</option>
+        <option value="https://grcodeclub.gr/website/html/multimedia">Πολυμέσα</option>
         <option value="https://grcodeclub.gr/website/html/meta-tags">Meta Tags</option>
     </select>
 </div>
