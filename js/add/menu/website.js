@@ -12,7 +12,7 @@ const mymenu = `
         <option value="https://grcodeclub.gr/website/more/seo">SEO (Search Engine Optimizatio)n</option>
         <option value="https://grcodeclub.gr/website/more/input-symbols">Κωδικοί & σύμβολα χαρακτήρων HTML</option>
         <option value="https://grcodeclub.gr/website/libraries/boostrap">Class Bootstrap (5.3.3)</option>
-        <option value="https://grcodeclub.gr/website/cms/wordprees">WordPress</option>
+        <option value="https://grcodeclub.gr/website/cms/wordpress">WordPress</option>
     </select>
 </div>
 `;
