@@ -8,6 +8,7 @@ const mymenu = `
         <option value="https://grcodeclub.gr/">Επιλέξτε σελίδα</option>
         <option value="https://github.com/grcodeclub/php/">GitHub</option>
         <option value="https://grcodeclub.gr/php/commands">Εντολές</option>
+        <option value="https://grcodeclub.gr/php/files">Διαχείριση αρχείων</option>
         <option value="https://grcodeclub.gr/php/frameworks">frameworks</option>
         <option value="https://grcodeclub.gr/php/sql">SQL</option>
         <option value="https://grcodeclub.gr/php/system">Στοιχεία του υπολογιστή</option>
