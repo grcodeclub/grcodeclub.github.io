@@ -218,54 +218,22 @@ hr {
     color: var(--bs-heading-color)
 }
 
-.h1,h1 {
-    font-size: calc(1.375rem + 1.5vw)
-}
+/*
+.h1,h1 {font-size: calc(1.375rem + 1.5vw)}
+.h2,h2 {font-size: calc(1.325rem + .9vw)}
+.h3,h3 {font-size: calc(1.3rem + .6vw)}
+.h4,h4 {font-size: calc(1.275rem + .3vw)}
+.h5,h5 {font-size: 1.25rem}
+.h6,h6 {font-size: 1rem}
 
 @media (min-width: 1200px) {
-    .h1,h1 {
-        font-size:2.5rem
-    }
+    .h1,h1 {font-size:2.5rem}
+    .h2,h2 {font-size:2rem}
+    .h3,h3 {font-size:1.75rem}
+    .h4,h4 {font-size:1.5rem}
 }
 
-.h2,h2 {
-    font-size: calc(1.325rem + .9vw)
-}
-
-@media (min-width: 1200px) {
-    .h2,h2 {
-        font-size:2rem
-    }
-}
-
-.h3,h3 {
-    font-size: calc(1.3rem + .6vw)
-}
-
-@media (min-width: 1200px) {
-    .h3,h3 {
-        font-size:1.75rem
-    }
-}
-
-.h4,h4 {
-    font-size: calc(1.275rem + .3vw)
-}
-
-@media (min-width: 1200px) {
-    .h4,h4 {
-        font-size:1.5rem
-    }
-}
-
-.h5,h5 {
-    font-size: 1.25rem
-}
-
-.h6,h6 {
-    font-size: 1rem
-}
-
+*/
 p {
     margin-top: 0;
     margin-bottom: 1rem
@@ -285,39 +253,27 @@ address {
     line-height: inherit
 }
 
-ol,ul {
-    padding-left: 2rem
-}
+ol,ul { padding-left: 2rem }
 
 dl,ol,ul {
     margin-top: 0;
     margin-bottom: 1rem
 }
 
-ol ol,ol ul,ul ol,ul ul {
-    margin-bottom: 0
-}
+ol ol,ol ul,ul ol,ul ul { margin-bottom: 0 }
 
-dt {
-    font-weight: 700
-}
+dt { font-weight: 700 }
 
 dd {
     margin-bottom: .5rem;
     margin-left: 0
 }
 
-blockquote {
-    margin: 0 0 1rem
-}
+blockquote { margin: 0 0 1rem }
 
-b,strong {
-    font-weight: bolder
-}
+b,strong { font-weight: bolder }
 
-.small,small {
-    font-size: .875em
-}
+.small,small { font-size: .875em }
 
 .mark,mark {
     padding: .1875em;
@@ -332,13 +288,9 @@ sub,sup {
     vertical-align: baseline
 }
 
-sub {
-    bottom: -.25em
-}
+sub {bottom: -.25em}
 
-sup {
-    top: -.5em
-}
+sup { top: -.5em }
 
 a {
     color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
@@ -13438,17 +13390,11 @@ textarea.form-control-lg {
         display: table-cell!important
     }
 
-    .d-print-flex {
-        display: flex!important
-    }
+    .d-print-flex {display: flex!important}
 
-    .d-print-inline-flex {
-        display: inline-flex!important
-    }
+    .d-print-inline-flex {display: inline-flex!important}
 
-    .d-print-none {
-        display: none!important
-    }
+    .d-print-none {display: none!importan}
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
