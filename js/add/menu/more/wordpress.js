@@ -5,7 +5,8 @@ const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/website/cms/wordpress/">Εισαγωγή</option>
+    <option value="https://grcodeclub.gr/website/cms/wordpress/">WordPress</option>
+    <option value="https://grcodeclub.gr/website/cms/wordpress/wp-files">WordPress Files</option>
     <option value="https://grcodeclub.gr/website/cms/wordpress/plugins/">Plugins</option>
     <option value="https://grcodeclub.gr/website/cms/wordpress/plugins/action-hooks">Action Hooks</option>
 
