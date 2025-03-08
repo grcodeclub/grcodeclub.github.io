@@ -24,14 +24,6 @@ blockquote {
     	border-bottom-right-radius: 10px;
 }
 
-h1.mytext,h2.mytext,h3.mytext{
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-    	margin-left: 0.5%;
-}
-
 code {
 	background: #1b1e20;
 	border-radius: 3px;
