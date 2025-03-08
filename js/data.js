@@ -142,7 +142,8 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     'https://grcodeclub.gr/more/office-suite': 'https://grcodeclub.github.io/js/add/menu/more/office-suite.js',
     'https://grcodeclub.gr/more/create': 'https://grcodeclub.github.io/js/add/menu/more/create.js',
     'https://grcodeclub.gr/system/': 'https://grcodeclub.github.io/js/add/menu/system.js',
-    'https://grcodeclub.gr/more/create/post': 'https://grcodeclub.github.io/js/add/menu/more/create.js', // Εξαιρείται εάν περιλαμβάνει 'post'
+    'https://grcodeclub.gr/website/cms/wordpress': 'https://grcodeclub.github.io/js/add/menu/more/wordpress.js',
+    'https://grcodeclub.gr/more/create/post': 'https://grcodeclub.github.io/js/add/menu/more/create.js' // Εξαιρείται εάν περιλαμβάνει 'post'
 };
 
 const handleScriptAddition = () => {
