@@ -68,7 +68,7 @@ div.cmd {
 	color: white; /* Το κάνουμε λευκό για αντίθεση */
 	text-align: center;
 	padding: 5px;
-	background: radial-gradient(circle, black 40%, gray 60%, transparent 100%);
+	background: radial-gradient(circle,  #2d3237 40%, #545e67 63%, transparent 100%);
   }
   
 
