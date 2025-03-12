@@ -15,6 +15,12 @@
 .navbar-toggler:hover { background-color: #444444; /* Σκούρο γκρι κατά το hover */ }
 
 
+
+.navbar-nav {
+    flex-wrap: wrap;
+}
+
+
 /* Τροποποίηση  του κουμπι menu στο mobile */
 .navbar-toggler { 
     border-color: #ffffff !important; 
