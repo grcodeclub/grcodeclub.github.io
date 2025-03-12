@@ -48,7 +48,10 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/cloud/">Cloud</a></li>
                 </ul>
             </li>
+<<<<<<< HEAD
               <li class="nav-item dropdown">efweaf</li><li class="nav-item dropdown">efweaf</li><li class="nav-item dropdown">efweaf</li><li class="nav-item dropdown">efweaf</li>
+=======
+>>>>>>> origin/main
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
