@@ -126,7 +126,7 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     'https://grcodeclub.gr/java/': 'https://grcodeclub.github.io/js/add/menu/programming/java.js',
     'https://grcodeclub.gr/windows/command-line/': 'https://grcodeclub.gr/js/add/menu/system/windows/command-line.js',
     'https://grcodeclub.gr/windows/': 'https://grcodeclub.github.io/js/add/menu/system/windows/main.js',
-    'https://grcodeclub.gr/mobile/': 'https://grcodeclub.github.io/js/add/menu/mobile.js',
+    'https://grcodeclub.gr/mobile/android/': 'https://grcodeclub.github.io/js/add/menu/android.js',
     'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/js/add/menu/syntomografies.js',
     'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/js/add/menu/orologia.js',
     'https://grcodeclub.gr/hardware/': 'https://grcodeclub.github.io/js/add/menu/hardware.js',
