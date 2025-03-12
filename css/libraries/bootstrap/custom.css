@@ -18,6 +18,7 @@
 
 .navbar-nav {
     flex-wrap: wrap;
+    max-width: 95%;
 }
 
 
