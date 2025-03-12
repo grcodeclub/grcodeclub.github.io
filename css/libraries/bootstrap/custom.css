@@ -19,6 +19,7 @@
 .navbar-toggler { 
     border-color: #ffffff !important; 
     color: #ffffff !important;
+    margin-right: 2%;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
