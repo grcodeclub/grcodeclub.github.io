@@ -1,8 +1,7 @@
 .navbar-expand-lg { right: 0; }
 .custom-navbar .navbar-brand, .custom-navbar .nav-link{ color: #ffffff; } /* Λευκό χρώμα για τις συνδέσεις */
 .nav-item{ right: 0; }
-.custom-navbar .nav-link:hover { color: #ffc107; }  /* Χρώμα όταν περνάει ο δείκτης του ποντικιού */ 
-.navbar-toggler { border-color: #000000; } /* Τροποποίηση του background color του κουμπιού */
+.custom-navbar .nav-link:hover { color: #ffc107; }  /* Χρώμα όταν περνάει ο δείκτης του ποντικιού *
 .navbar-toggler-icon { background-image: none; } /* Αφαίρεση του default background του navbar-toggler-icon */
 .close-icon { display: none; }  /* Απόκρυψη του close icon από την αρχή */
 .dropdown-submenu {position: relative;}
@@ -14,6 +13,13 @@
 .navbar-toggler-icon:after { top: 18px; /* Τρίτη γραμμή κάτω */ }
 /* Προσαρμογή του χρώματος κατά το hover */
 .navbar-toggler:hover { background-color: #444444; /* Σκούρο γκρι κατά το hover */ }
+
+
+/* Τροποποίηση  του κουμπι menu στο mobile */
+.navbar-toggler { 
+    border-color: #ffffff !important; 
+    color: #ffffff !important;
+}
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
 	color: white; /* Χρώμα του placeholder */
