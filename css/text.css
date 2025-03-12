@@ -55,13 +55,23 @@ div.cmd {
     	padding: 10px;
 }
 
-.highlight {
+/* .highlight {
     	margin-top: 3%;
     	padding: 10px;
     	background-color: #343a40;
     	color: white;
     	text-align: center;
-}
+} */
+
+.highlight {
+	margin-top: 3%;
+	color: white; /* Το κάνουμε λευκό για αντίθεση */
+	text-align: center;
+	padding: 5px;
+	background: radial-gradient(circle, black 40%, gray 60%, transparent 100%);
+	border-radius: 40px; /* Προαιρετικά για πιο απαλές γωνίες */
+  }
+  
 
 .form-label{
     	color: #dcdcdc;
