@@ -34,7 +34,7 @@ const htmlContentHeader = `
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Web Development</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown6" style="max-height: 400px; overflow-y: auto;">
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/">Ανάπτυξη Ιστοσελίδων</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/build/">Ανάπτυξη Ιστοσελίδων</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/html/">Html</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/css/">CSS</a></li>
