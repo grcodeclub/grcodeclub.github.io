@@ -24,7 +24,7 @@ img{
 ::-webkit-scrollbar-track {
     background-color: #333; /* Σκούρο φόντο για το track */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7); /* Απαλότερη σκιά για πιο κομψό αποτέλεσμα */
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
      
 /* Handle */

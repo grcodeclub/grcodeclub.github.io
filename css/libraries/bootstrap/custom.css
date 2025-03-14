@@ -1,7 +1,7 @@
 .navbar-expand-lg { right: 0; }
 .custom-navbar .navbar-brand, .custom-navbar .nav-link{ color: #ffffff; } /* Λευκό χρώμα για τις συνδέσεις */
 .nav-item{ right: 0; }
-.custom-navbar .nav-link:hover { color: #ffc107; }  /* Χρώμα όταν περνάει ο δείκτης του ποντικιού */
+.custom-navbar .nav-link:hover { color: #6c757d; }  /* Χρώμα όταν περνάει ο δείκτης του ποντικιού */
 .close-icon { display: none; }  /* Απόκρυψη του close icon από την αρχή */
 .dropdown-submenu {position: relative;}
 
