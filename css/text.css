@@ -1,6 +1,3 @@
-h1.back_page {display: inline-block;}
-p {text-align: justify;}
-
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; /* Κύριο κείμενο */
@@ -13,15 +10,76 @@ body {
 	font-display: swap;
 }
 
+/*Heading h1*/
+
+h1{
+	font-size: 34px;
+	line-height: 34px;
+	letter-spacing: -1px;
+}
+h1.title {
+	text-align: center;
+    background-color: #343a40; /* Σκούρο χρώμα */
+    color: #ccc;
+    padding: 10px;
+}
+
+/*Heading h2*/
+h2{
+	font-size: 30px;
+	line-height: 32px;
+	letter-spacing: -0.8px;
+}
+h2.highlight {
+	margin-top: 3%;
+	color: white; /* Το κάνουμε λευκό για αντίθεση */
+	text-align: center;
+	padding: 5px;
+	background: radial-gradient(circle,  #2d3237 40%, #545e67 63%, transparent 100%);
+}
+  
+/*Heading h3*/
+h3{
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: -0.5px;
+}
+
+/*Heading h4*/
+h4{
+	font-size: 20px;
+	line-height: 22px;
+	letter-spacing: -0.4px;
+}
+
+/*Heading h5*/
+h5{
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: -0.2px;
+}
+
+/*Heading h6*/
+h6{
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: -0.1px;
+}
+
+/* Παράγραφος */
+p {
+	text-align: justify;
+}
+
 blockquote {
 	margin-left: 1%;
 	padding: 0.5em;
-    	font-size: 14px;
-    	color: black;
-    	background-color: lightgray;
+	font-size: 14px;
+	color: black;
+	background-color: lightgray;
 	border-left: 8px solid #343a40;
-    	border-top-right-radius: 10px;
-    	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 code {
@@ -32,96 +90,60 @@ code {
 	tab-size: 2;
 	color: #ffffff;
 }
-       
-.link_here{
+
+a.link_here{
 	color: rgb(6, 4, 69);
-        background-color: rgba(128, 128, 128, 0.241);
-        padding: 2px;
-        border-radius: 2px;
+	background-color: rgba(128, 128, 128, 0.241);
+	padding: 2px;
+	border-radius: 2px;
 }
 
-.link_here:hover{
-        color: rgb(6, 4, 69);
-        background-color: rgba(128, 128, 128, 0.639);
-        padding: 2px;
-        text-decoration: none;
-        border-radius: 2px;
+a.link_here:hover{
+	color: rgb(6, 4, 69);
+	background-color: rgba(128, 128, 128, 0.639);
+	padding: 2px;
+	text-decoration: none;
+	border-radius: 2px;
 }
-
-div.cmd {
-    	background-color: rgb(10, 10, 60); /* Σκούρο μπλε-μαύρο */
-    	color: white;
-    	border-radius: 20px;
-    	padding: 10px;
-}
-
-/* .highlight {
-    	margin-top: 3%;
-    	padding: 10px;
-    	background-color: #343a40;
-    	color: white;
-    	text-align: center;
-} */
-
-.highlight {
-	margin-top: 3%;
-	color: white; /* Το κάνουμε λευκό για αντίθεση */
-	text-align: center;
-	padding: 5px;
-	background: radial-gradient(circle,  #2d3237 40%, #545e67 63%, transparent 100%);
-  }
-  
 
 .form-label{
-    	color: #dcdcdc;
-    	margin-left: 2%;
-    	font-size: 20px;
-}
-
-h1.title {
-	text-align: center;
-    	background-color: #343a40; /* Σκούρο χρώμα */
-    	color: #ccc;
-    	padding: 10px;
+	color: #dcdcdc;
+	margin-left: 2%;
+	font-size: 20px;
 }
 
 .contentsMenu{
-    	background-color: #343a40; /* Σκούρο χρώμα */
+	background-color: #343a40; /* Σκούρο χρώμα */
 	color: #ccc;
 }
 
 .form-select{
-    	background-color: #b2b3b5; /* Σκούρο μαύρο-γκρι */
-    	color: black;
+	background-color: #b2b3b5; /* Σκούρο μαύρο-γκρι */
+	color: black;
 }
 
 .form-select:focus{
-     	background-color: #343a40; /* Σκούρο χρώμα */
-    	color: #ccc;
+	background-color: #343a40; /* Σκούρο χρώμα */
+	color: #ccc;
 }
 
 section.tmp {
-    	background-color: #1a1a1a; /* Σκούρο φόντο */
-    	margin-left: 10%;
-    	margin-right: 10%;
-    	color: #e0e0e0;
-    	padding: 20px;
-    	border-radius: 15px;
-}
-
-p.cmd {
-    	margin-left: 10px;
-    	margin-right: 10px;
-    	color: white;
+	background-color: #1a1a1a; /* Σκούρο φόντο */
+	margin-left: 10%;
+	margin-right: 10%;
+	color: #e0e0e0;
+	padding: 20px;
+	border-radius: 15px;
 }
 
 @media (pointer: coarse) {
-    a:active {
-        background-color: transparent; /* Αφαιρεί το μπλε χρώμα φόντου */
-        color: inherit; /* Επαναφέρει το χρώμα κειμένου */
-        outline: none; /* Αφαιρεί το μπλε περίγραμμα */
-    }
+	a:active {
+		background-color: transparent; /* Αφαιρεί το μπλε χρώμα φόντου */
+		color: inherit; /* Επαναφέρει το χρώμα κειμένου */
+		outline: none; /* Αφαιρεί το μπλε περίγραμμα */
+	}
 }
+
 @media (min-width: 992px) {
-	.link_here {white-space: nowrap;}
+	a.link_here {white-space: nowrap;}
 }
