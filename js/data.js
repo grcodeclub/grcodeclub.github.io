@@ -139,7 +139,7 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     'https://grcodeclub.gr/website/css/': 'https://grcodeclub.github.io/js/add/menu/programming/css.js',
     'https://grcodeclub.gr/website/nodejs/': 'https://grcodeclub.github.io/js/add/menu/programming/nodejs.js',
     'https://grcodeclub.gr/website/cms/wordpress': 'https://grcodeclub.github.io/js/add/menu/more/wordpress.js',
-    'https://grcodeclub.gr/website/': 'https://grcodeclub.github.io/js/add/menu/website.js',
+    'https://grcodeclub.gr/website/build/': 'https://grcodeclub.github.io/js/add/menu/website.js',
     'https://grcodeclub.gr/more/office-suite': 'https://grcodeclub.github.io/js/add/menu/more/office-suite.js',
     'https://grcodeclub.gr/more/create': 'https://grcodeclub.github.io/js/add/menu/more/create.js',
     'https://grcodeclub.gr/system/': 'https://grcodeclub.github.io/js/add/menu/system.js',

@@ -6,13 +6,9 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/">Επιλέξτε σελίδα</option>
-        <option value="https://grcodeclub.gr/website/more/font-awesome">Λίστα Font Awesome</option>
-        <option value="https://grcodeclub.gr/website/more/http-methods">HTTP Μέθοδοι</option>
-        <option value="https://grcodeclub.gr/website/more/uploadsite">Κατοχύρωση, Ανέβασμα και Αναζήτηση</option>
-        <option value="https://grcodeclub.gr/website/more/seo">SEO (Search Engine Optimizatio)</option>
-        <option value="https://grcodeclub.gr/website/more/input-symbols">Κωδικοί & σύμβολα χαρακτήρων HTML</option>
-        <option value="https://grcodeclub.gr/website/libraries/boostrap">Class Bootstrap (5.3.3)</option>
-        <option value="https://grcodeclub.gr/website/cms/wordpress">WordPress</option>
+        <option value="https://grcodeclub.gr/website/build/font-awesome">Λίστα Font Awesome</option>
+        <option value="https://grcodeclub.gr/website/build/input-symbols">Κωδικοί & σύμβολα χαρακτήρων HTML</option>
+        <option value="https://grcodeclub.gr/website/build/libraries/boostrap">Class Bootstrap (5.3.3)</option>
     </select>
 </div>
 `;
