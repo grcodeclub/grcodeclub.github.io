@@ -21,21 +21,31 @@ const htmlContentHeader = `
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px; overflow-y: auto;">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/">Γλώσσες Προγραμματισμού</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/">Ανάπτυξη Ιστοσελίδων</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/c/">C</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/python/">Python</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/cpp/">C++</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/java/">Java</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/html/">Html</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/css/">CSS</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/javascript/">JavaScript</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/nodejs/">Node.js</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/sql">SQL</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/docker">Docker</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/matlab">MATLAB</a></li>
                 </ul>
             </li>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Web Development</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown6" style="max-height: 400px; overflow-y: auto;">
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/">Ανάπτυξη Ιστοσελίδων</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/php/">Php</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/html/">Html</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/css/">CSS</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/javascript/">JavaScript</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/nodejs/">Node.js</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/more/uploadsite">Upload Website</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/more/seo">SEO</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/cms/wordpress/">WordPress</a></li>
+                </ul>
+            </li> 
+             
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Δίκτυα Υπολογιστών</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
