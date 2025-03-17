@@ -63,7 +63,7 @@ const htmlContentHeader = `
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/system/files/extensions">Επεκτάσεις Αρχείων</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/system/extensions">Επεκτάσεις Αρχείων</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/">Microsoft Windows</a></li>
                      <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/">Linux</a></li>            
                 </ul>
