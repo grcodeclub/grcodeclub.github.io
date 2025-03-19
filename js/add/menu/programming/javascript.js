@@ -6,7 +6,7 @@ const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/javascript/">Επιλέξτε σελίδα</option>
+    <option value="https://grcodeclub.gr/javascript/">Εισαγωγή</option>
     <option value="https://grcodeclub.gr/javascript/commands">Βασικές εντολές</option>
     <option value="https://grcodeclub.gr/javascript/commands/arrays">Arrays</option>
     <option value="https://grcodeclub.gr/javascript/restriction">Περιορισμοί</option>
