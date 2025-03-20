@@ -6,7 +6,7 @@
 .dropdown-submenu {position: relative;}
 
 .nav-link.dropdown-toggle {direction: rtl;}
-.nav-link.dropdown-toggle::after {transform: rotate(-90deg) !important;}
+.nav-link.dropdown-toggle::after {transform: rotate(-90deg);}
 
 /* Mobile Menu */
 /* Ρυθμίσεις για τις τρεις γραμμές */
