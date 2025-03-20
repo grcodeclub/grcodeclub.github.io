@@ -9,12 +9,6 @@ img{
 }
 
 
-/****** Start Βελος οταν ανοιγει το submenu ******/
-.nav-link.dropdown-toggle::after{ transform: rotate(90deg); } /* Όταν το dropdown είναι ανοιχτό | Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
-.nav-link.dropdown-toggle[aria-expanded="true"]::after {transform: rotate(0deg); } /* Περιστροφή 0 μοίρες για το βέλος προς τα κάτω */
-/****** Stop Βελος οταν ανοιγει το submenu ******/
-
-
 /****** Start Custom Scrollbars ******/
 ::-webkit-scrollbar {
     width: 10px; /* Πλάτος του scrollbar */
