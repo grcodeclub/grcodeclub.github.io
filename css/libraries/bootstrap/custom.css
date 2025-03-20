@@ -5,6 +5,8 @@
 .close-icon { display: none; }  /* Απόκρυψη του close icon από την αρχή */
 .dropdown-submenu {position: relative;}
 
+.nav-link.dropdown-toggle {direction: rtl;}
+.nav-link.dropdown-toggle::after {transform: rotate(-90deg) !important;}
 
 /* Mobile Menu */
 /* Ρυθμίσεις για τις τρεις γραμμές */
