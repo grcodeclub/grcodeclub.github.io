@@ -14,6 +14,10 @@
         .card:hover {transform: translateY(-5px);} .btn-primary:hover {background-color: #5b6e9f;}
         .card-img-top {height: 180px;object-fit: cover;border-bottom: 2px solid #ddd;}
         .btn-primary {border-radius: 30px;width: 100%;transition: background-color 0.3s ease;}
+        .widget-container {
+            display: flex;
+            gap: 10px; /* Απόσταση μεταξύ των widgets */
+        }
         .widget {
             background-color: #ffffff;
             border-radius: 20px;
@@ -32,19 +36,19 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.489);
     }
 
-    .calendar-content {
+    .widget-content {
         display: flex;
         text-decoration: none;
         flex-direction: column;
         align-items: center;
     }
 
-    .calendar-icon {
+    .widget-icon {
         font-size: 35px;
         color: #039BE5;
     }
 
-    .calendar-title {
+    .widget-title {
         font-size: 15px;
         color: #333333;
     }
@@ -107,22 +111,25 @@
             Στην καρδιά αυτής της τεχνολογικής επανάστασης βρίσκεται ο προγραμματισμός, η "γλώσσα" που δίνει ζωή σε κάθε τεχνολογική εφαρμογή. Μέσω του προγραμματισμού, αναπτύσσονται λογισμικά, εφαρμογές και αλγόριθμοι που διευκολύνουν την εργασία, την εκπαίδευση και την πρόσβαση στη γνώση. Από τις έξυπνες συσκευές και τα κοινωνικά δίκτυα έως τις πλατφόρμες ηλεκτρονικού εμπορίου, όλα βασίζονται σε προγραμματιστές που σχεδιάζουν και υλοποιούν τα συστήματα αυτά, φέρνοντας τις δυνατότητες της τεχνολογίας στα χέρια μας.</p>
             <br><br>
             <hr>
-            <a href="https://grcodeclub.github.io/more/calendar" style="text-decoration: none;">
-            <div class="widget">
-                <div class="calendar-content">
-                  <div class="calendar-icon">📅</div>
-                  <div class="calendar-title">Δες το Ημερολόγιο</div>
-                </div>
-              </div>
-            </a>
-            <a href="https://grcodeclub.gr/more/tools" style="text-decoration: none;">
-            <div class="widget">
-                <div class="calendar-content">
-                  <div class="calendar-icon">🛠️</div>
-                  <div class="calendar-title">Online Εργαλεία</div>
-                </div>
-              </div>
-            </a>
+            <div class="widget-container">
+  <a href="https://grcodeclub.github.io/more/calendar" style="text-decoration: none;">
+    <div class="widget">
+      <div class="calendar-content">
+        <div class="calendar-icon">📅</div>
+        <div class="calendar-title">Δες το Ημερολόγιο</div>
+      </div>
+    </div>
+  </a>
+  <a href="https://grcodeclub.gr/more/tools" style="text-decoration: none;">
+    <div class="widget">
+      <div class="calendar-content">
+        <div class="calendar-icon">🛠️</div>
+        <div class="calendar-title">Online Εργαλεία</div>
+      </div>
+    </div>
+  </a>
+</div>
+
             <hr>
             <div class="container mt-5 d-flex justify-content-center">
                 <div class="card" style="width: 42rem;">
