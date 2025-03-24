@@ -3,10 +3,9 @@
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
 <div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα :</label>
+    <label for="page-select" class="form-label">Περιεχόμενα</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/c/">Εισαγωγή</option>
-        <option value="https://github.com/grcodeclub/c">GitHub</option>
         <option value="https://grcodeclub.gr/c/library/">Βιβλιοθήκες</option>
         <option value="https://grcodeclub.gr/c/operators">Τελεστές</option>    
     <optgroup label="Βασικές Εντολές">
