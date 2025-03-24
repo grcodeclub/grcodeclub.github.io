@@ -1,7 +1,7 @@
 // Το HTML περιεχόμενο του πρώτου dropdown
 const mymenu = `
 <div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα :</label>
+    <label for="page-select" class="form-label">Περιεχόμενα</label>
     <select id="page-select" class="form-select">
         <option value="https://grcodeclub.gr/linux/">Linux</option>
         <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων</option>
@@ -23,6 +23,7 @@ if (nextDiv && !nextDiv.querySelector('#page-select')) {
 
 // Το HTML περιεχόμενο του δεύτερου dropdown
 const termMenu = `
+<label for="page-select" class="form-label">Εντολές</label>
 <select id="select-term" class="form-select">
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
     <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
