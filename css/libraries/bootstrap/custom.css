@@ -35,7 +35,7 @@
 }
 
 .contentsMenu{
-	background-color: #343a40; /* Σκούρο χρώμα */
+	background-color: #212529; /* Σκούρο χρώμα */
 	color: #ccc;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .custom-navbar {
-	background-color: #343a40; /* Σκούρο χρώμα */
+	background-color: #212529; /* Σκούρο χρώμα */
     	color: white; /* Λευκό κείμενο */
 	margin-bottom: 20px;
 }
@@ -85,8 +85,8 @@
 }
 
 .dropdown-menu{
-	background-color: #343a40;
-	border-color: #343a40;
+	background-color: #212529;
+	border-color: #212529;
 }
 
 .dropdown a {color: white;}
