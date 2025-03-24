@@ -6,7 +6,6 @@ const mymenu = `
     <label for="page-select" class="form-label">Περιεχόμενα :</label>
     <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/python/">Εισαγωγή</option>
-        <option value="https://github.com/grcodeclub/python">GitHub</option>
         <option value="https://grcodeclub.gr/python/library/">Βιβλιοθήκες</option>
         <option value="https://grcodeclub.gr/python/operators">Τελεστές</option>  
     <optgroup label="Βασικές Εντολές">
