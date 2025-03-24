@@ -19,7 +19,7 @@ h1{
 }
 h1.title {
 	text-align: center;
-    background-color: #343a40; /* Σκούρο χρώμα */
+    background-color: #212529; /* Σκούρο χρώμα */
     color: #ccc;
     padding: 10px;
 }
@@ -77,7 +77,7 @@ blockquote {
 	font-size: 14px;
 	color: black;
 	background-color: lightgray;
-	border-left: 8px solid #343a40;
+	border-left: 8px solid #212529;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
