@@ -1,16 +1,22 @@
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-<select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/network/tcp-ip/">TCP/IP</option>
-        <optgroup label="Φυσικό">
-          <option value="https://grcodeclub.gr/network/tcp-ip/physical/mac">MAC</option>
-        </optgroup>
-       <optgroup label="Δικτύου">
-           <option value="https://grcodeclub.gr/network/protocol/ip/">Internet Protocol</option>
-        </optgroup>
-</select>
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
+            <option value="https://grcodeclub.gr/network/tcp-ip/">TCP/IP</option>
+            <optgroup label="Φυσικό">
+              <option value="https://grcodeclub.gr/network/tcp-ip/physical/mac">MAC</option>
+            </optgroup>
+           <optgroup label="Δικτύου">
+               <option value="https://grcodeclub.gr/network/protocol/ip/">Internet Protocol</option>
+            </optgroup>
+                </select>
+        </div>
+    </div>
 </div>
 `;
 
