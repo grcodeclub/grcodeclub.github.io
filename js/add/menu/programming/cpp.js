@@ -2,33 +2,38 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/cpp/">Εισαγωγή</option>
-        <option value="https://github.com/grcodeclub/cpp/">GitHub</option>
-        <option value="https://grcodeclub.gr/cpp/library/">Bιβλιοθήκες</option>
-        <option value="https://grcodeclub.gr/cpp/operators">Τελεστές</option>  
-    <optgroup label="Βασικές Εντολές">
-        <option value="https://grcodeclub.gr/cpp/commands/variables">Μεταβλητές</option>
-        <option value="https://grcodeclub.gr/cpp/commands/output_input">Είσοδος / Έξοδος</option>
-        <option value="https://grcodeclub.gr/cpp/commands/conditions">Δομή ελέγχου</option>
-        <option value="https://grcodeclub.gr/cpp/commands/loop">Δομή επανάληψης</option>
-        <option value="https://grcodeclub.gr/cpp/commands/function">Συναρτήσεις</option>
-        <option value="https://grcodeclub.gr/cpp/pointers">Δείκτες</option>
-    </optgroup>
-    <optgroup label="Class">
-        <option value="https://grcodeclub.gr/cpp/class/">Class</option>
-        <option value="https://grcodeclub.gr/cpp/class/inheritance">Κληρονομικότητα</option>
-        <option value="https://grcodeclub.gr/cpp/class/header-file">Header File</option>
-        <option value="https://grcodeclub.gr/cpp/operator-overloading">Υπερφόρτωση τελεστών</option>
-    </optgroup>
-        <option value="https://grcodeclub.gr/cpp/files">Αρχεία</option>
-        <option value="https://grcodeclub.gr/cpp/exception">Χειρισμός εξαιρέσεων</option>
-        <option value="https://grcodeclub.gr/cpp/templates">Templates</option>
-    </select>
-</div>
-`;
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
+            <option value="https://grcodeclub.gr/cpp/">Εισαγωγή</option>
+            <option value="https://github.com/grcodeclub/cpp/">GitHub</option>
+            <option value="https://grcodeclub.gr/cpp/library/">Bιβλιοθήκες</option>
+            <option value="https://grcodeclub.gr/cpp/operators">Τελεστές</option>  
+        <optgroup label="Βασικές Εντολές">
+            <option value="https://grcodeclub.gr/cpp/commands/variables">Μεταβλητές</option>
+            <option value="https://grcodeclub.gr/cpp/commands/output_input">Είσοδος / Έξοδος</option>
+            <option value="https://grcodeclub.gr/cpp/commands/conditions">Δομή ελέγχου</option>
+            <option value="https://grcodeclub.gr/cpp/commands/loop">Δομή επανάληψης</option>
+            <option value="https://grcodeclub.gr/cpp/commands/function">Συναρτήσεις</option>
+            <option value="https://grcodeclub.gr/cpp/pointers">Δείκτες</option>
+        </optgroup>
+        <optgroup label="Class">
+            <option value="https://grcodeclub.gr/cpp/class/">Class</option>
+            <option value="https://grcodeclub.gr/cpp/class/inheritance">Κληρονομικότητα</option>
+            <option value="https://grcodeclub.gr/cpp/class/header-file">Header File</option>
+            <option value="https://grcodeclub.gr/cpp/operator-overloading">Υπερφόρτωση τελεστών</option>
+        </optgroup>
+            <option value="https://grcodeclub.gr/cpp/files">Αρχεία</option>
+            <option value="https://grcodeclub.gr/cpp/exception">Χειρισμός εξαιρέσεων</option>
+            <option value="https://grcodeclub.gr/cpp/templates">Templates</option>
+            </select>
+        </div>
+    </div>
+</div>`;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
 const addHeader = document.getElementById('addHeader');
