@@ -8,7 +8,7 @@ const mymenu = `
             <label for="page-select" class="form-label">Περιεχόμενα</label>
         </div>
         <div class="col">
-            <select id="page-select" class="form-select">
+            <select id="page-select" class="form-select" onchange="redirectToPage()">
                 <option value="https://grcodeclub.gr/mobile/">Κινητά</option>
                 <option value="https://grcodeclub.gr/mobile/android/">Android</option>
                 <option value="https://grcodeclub.gr/mobile/android/adb">Android Debug Bridge</option>
