@@ -27,7 +27,7 @@
             Με αυτόν τον τρόπο, μπορούμε να κάνουμε αλλαγές σε ένα μόνο σημείο, εξοικονομώντας χρόνο και διασφαλίζοντας τη 
             συνοχή σε όλες τις σελίδες μας.</p>
 
-            <p class="highlight">Δυναμική προσθήκη CSS αρχείων</p>
+            <h2 class="highlight">Δυναμική προσθήκη CSS αρχείων</h2>
             <p>Αυτό το απόσπασμα κώδικα JavaScript είναι σχεδιασμένο για την δυναμική προσθήκη αρχείων CSS στο &lt;head&gt; 
                 της HTML σελίδας. Ουσιαστικά, αντί να γίνεται χειροκίνητη εισαγωγή όλων των συνδέσμων CSS μέσα στο HTML 
                 αρχείο, χρησιμοποιούμε την JavaScript για να φορτώσει τα αρχεία CSS όταν η σελίδα εκτελείται.</p>
@@ -47,7 +47,7 @@ linkElement.href = linkUrl;
 head.appendChild(linkElement); // Προσθήκη στο &lt;head>
 });</code></pre></div></div>
 
-            <p class="highlight">Δυναμική προσθήκη Meta Tags</p>
+            <h2 class="highlight">Δυναμική προσθήκη Meta Tags</h2>
             <p>Δημιουργούμε  και προσθέτουμε δυναμικά ένα στοιχείο &lt;meta> στο &lt;head> της HTML σελίδας, το οποίο είναι απαραίτητο για να διαμορφωθεί σωστά η προβολή της σε φορητές συσκευές.</p>
             <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">const metaElement = document.createElement('meta');     // Δημιουργία ενός νέου στοιχείου <meta>
 metaElement.setAttribute('name', 'viewport');     // Ορίζουμε την ιδιότητα 'name' ως 'viewport'
@@ -55,7 +55,7 @@ metaElement.setAttribute('content', 'width=device-width, initial-scale=0.8');   
 document.head.appendChild(metaElement);     // Προσθέτουμε το στοιχείο &lt;meta> στο &lt;head> του HTML εγγράφου </code></pre></div></div>
 
 
-            <p class="highlight">Δυναμική προσθήκη JavaScript </p>
+            <h2 class="highlight">Δυναμική προσθήκη JavaScript </h2>
             <p>Δημιουργούμε  και προσθέτουμε δυναμικά ένα στοιχείο &lt;javascript> στο  &lt;head> της HTML σελίδας.</p>
             <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">function addScript(src) {
 var script = document.createElement('script');
