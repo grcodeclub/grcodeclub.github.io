@@ -3,7 +3,7 @@
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
 <div class="container">
-    <div class="row g-2 align-items-center">
+    <div class="row g-2 align-items-center dropdown-container contentsMenu">
         <div class="col-auto">
             <label for="page-select" class="form-label">Περιεχόμενα</label>
         </div>
@@ -18,6 +18,7 @@ const mymenu = `
         </div>
     </div>
 </div>
+
 `;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
