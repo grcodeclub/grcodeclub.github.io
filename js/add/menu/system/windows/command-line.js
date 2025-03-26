@@ -1,9 +1,6 @@
 // Το HTML περιεχόμενο του πρώτου dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select">
-       <div class="container dropdown-container contentsMenu">
+<div class="container dropdown-container contentsMenu">
     <div class="row g-2 align-items-center">
         <div class="col-auto">
             <label for="page-select" class="form-label">Περιεχόμενα</label>
@@ -18,9 +15,6 @@ const mymenu = `
     </select>
         </div>
     </div>
-</div>
-
-    </select>
 </div>
 `;
 
