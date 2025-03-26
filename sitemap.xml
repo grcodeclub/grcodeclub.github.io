@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://grcodeclub.gr/programming/languages/</loc><lastmod>2025-03-26</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+    <url><loc>https://grcodeclub.gr/programming/languages/sql</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/programming/languages/docker</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/programming/languages/matlab</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/c/</loc><lastmod>2025-03-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://grcodeclub.gr/java/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/cpp/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/python/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/php/</loc><lastmod>2025-03-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://grcodeclub.gr/website/html/</loc><lastmod>2025-03-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://grcodeclub.gr/website/css/</loc><lastmod>2025-03-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://grcodeclub.gr/javascript/</loc><lastmod>2025-03-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://grcodeclub.gr/network/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/network/protocol/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/network/more/list/services-port</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/network/more/list/application-and-protocols</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/system/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/windows/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/linux/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/cybersecurity/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/cybersecurity/tools/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/cybersecurity/attacks/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/mobile/android/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://grcodeclub.gr/website/cms/wordpress/</loc><lastmod>2025-03-15</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+</urlset>

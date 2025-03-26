@@ -101,7 +101,7 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/jobs">Καριέρα - Θέσεις Εργασίας</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Ορολογία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/syntomografies">Συντομογραφίες</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/profile/">Προφίλ Ομάδας</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/info/">Πληροφορίες</a></li>
                 </ul>
             </li>
         </ul>
