@@ -12,8 +12,9 @@
 }
 
 .select2-container--default .select2-selection--single {
-    background-color: #343a40; /* Χρώμα φόντου */
+    background-color: #00000066; /* Χρώμα φόντου */
     border-radius: 0.25rem; /* Ακτίνα γωνίας */
+    border: 1px solid #ffffff !important;
     margin: 0px 10px;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -32,5 +33,5 @@
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b{
 	margin-left: -14px !important;
-}
+	border-color: #ffffff transparent transparent transparent !important;
 }
