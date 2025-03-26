@@ -2,16 +2,21 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/mobile/">Κινητά</option>
-    <option value="https://grcodeclub.gr/mobile/android/">Android</option>
-    <option value="https://grcodeclub.gr/mobile/android/adb">Android Debug Bridge</option>
-    <option value="https://grcodeclub.gr/mobile/android/versions">Eκδόσεις Android</option>
-    <option value="https://grcodeclub.gr/mobile/android/more/android-secret-codes">Κρυφοί κωδικοί του Android</option>
-
-</select>
+<div class="container">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+            <select id="page-select" class="form-select">
+                <option value="https://grcodeclub.gr/mobile/">Κινητά</option>
+                <option value="https://grcodeclub.gr/mobile/android/">Android</option>
+                <option value="https://grcodeclub.gr/mobile/android/adb">Android Debug Bridge</option>
+                <option value="https://grcodeclub.gr/mobile/android/versions">Eκδόσεις Android</option>
+                <option value="https://grcodeclub.gr/mobile/android/more/android-secret-codes">Κρυφοί κωδικοί του Android</option>
+            </select>
+        </div>
+    </div>
 </div>
 `;
 
