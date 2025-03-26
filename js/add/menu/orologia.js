@@ -2,9 +2,13 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/orologia/">Διαφορά</option>
     <option value="https://grcodeclub.gr/orologia/programming">Προγραμματισμός</option>
     <option value="https://grcodeclub.gr/orologia/network">Δίκτυα Υπολογιστών</option>
@@ -14,7 +18,9 @@ const mymenu = `
     <option value="https://grcodeclub.gr/orologia/hardware">Υλικό υπολογιστών</option>
     <option value="https://grcodeclub.gr/orologia/windows">Microsoft Windows</option>
     <option value="https://grcodeclub.gr/orologia/website">Ιστοσελίδες</option>
-</select>
+            </select>
+        </div>
+    </div>
 </div>
 `;
 
