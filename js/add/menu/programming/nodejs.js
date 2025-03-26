@@ -3,12 +3,18 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/website/nodejs/">Εισαγωγή</option>
         <option value="https://grcodeclub.gr/website/nodejs/html-module">Html Module</option>
-    </select>
+        </select>
+        </div>
+    </div>
 </div>
 `;
 
