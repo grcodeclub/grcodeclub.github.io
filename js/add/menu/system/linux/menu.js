@@ -1,15 +1,20 @@
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/linux/">Linux</option>
-        <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων</option>
-        <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
-        <option value="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</option>
-        <option value="https://grcodeclub.gr/linux/more/distro">Distros</option>
-
-    </select>
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
+            <option value="https://grcodeclub.gr/linux/">Linux</option>
+            <option value="https://grcodeclub.gr/linux/linux-directory-structure">Δομή Καταλόγων</option>
+            <option value="https://grcodeclub.gr/linux/terminal/">Terminal</option>
+            <option value="https://grcodeclub.gr/linux/install/">Εγκατάσταση Προγραμμάτων</option>
+            <option value="https://grcodeclub.gr/linux/more/distro">Distros</option>    
+            </select>
+        </div>
+    </div>
 </div>
 `;
 
