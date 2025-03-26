@@ -33,7 +33,7 @@
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b{
 	border-color: #ffffff transparent transparent transparent !important;
-
+	margin-left: -14px !important;
 }
 
 .select2-container--open .select2-dropdown{
