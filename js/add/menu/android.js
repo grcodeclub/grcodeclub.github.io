@@ -2,8 +2,8 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="container">
-    <div class="row g-2 align-items-center dropdown-container contentsMenu">
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
         <div class="col-auto">
             <label for="page-select" class="form-label">Περιεχόμενα</label>
         </div>
