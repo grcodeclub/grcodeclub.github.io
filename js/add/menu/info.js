@@ -11,7 +11,7 @@ const mymenu = `
         <select id="page-select" class="form-select" onchange="redirectToPage()">
                 <option value="https://grcodeclub.gr/info/">Πληροφορίες</option>
                 <option value="https://grcodeclub.gr/info/creators/">Δημιουργοί</option>
-                <option value="https://grcodeclub.gr/info/creators/github/">GitHub Page</option>
+                <option value="https://grcodeclub.gr/info/github/">GitHub Page</option>
                 <option value="https://grcodeclub.gr/info/dynamic-html">Δυναμική προσθήκη περιεχομένου</option>
                 <option value="https://grcodeclub.gr/info/libraries-and-frameworks">Βιβλιοθήκες και Frameworks</option>
                 <option value="https://grcodeclub.gr/info/google">Google Tools</option>
