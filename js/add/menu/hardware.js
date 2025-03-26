@@ -2,16 +2,21 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-<select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/hardware/">Εισαγωγή</option>
-    <option value="https://grcodeclub.gr/hardware/cables/">Τύποι καλωδίων</option>
-    <option value="https://grcodeclub.gr/hardware/code-resistors">Χρωματικός Κώδικας Αντιστάσεων</option>
-    <option value="https://grcodeclub.gr/hardware/pc-builder">PC Builder</option>
-    <option value="https://grcodeclub.gr/hardware/electronics">Μαθηματικοί τύποι ηλεκτρονικής</option>
-
-</select>
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
+                <option value="https://grcodeclub.gr/hardware/">Εισαγωγή</option>
+                <option value="https://grcodeclub.gr/hardware/cables/">Τύποι καλωδίων</option>
+                <option value="https://grcodeclub.gr/hardware/code-resistors">Χρωματικός Κώδικας Αντιστάσεων</option>
+                <option value="https://grcodeclub.gr/hardware/pc-builder">PC Builder</option>
+                <option value="https://grcodeclub.gr/hardware/electronics">Μαθηματικοί τύποι ηλεκτρονικής</option>
+        </select>
+        </div>
+    </div>
 </div>
 `;
 
