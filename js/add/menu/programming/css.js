@@ -17,6 +17,7 @@ const mymenu = `
     <option value="https://grcodeclub.gr/website/css/text">Κείμενο και Ιδιότητες</option>
     <option value="https://grcodeclub.gr/website/css/table">Πίνακες</option>
     <option value="https://grcodeclub.gr/website/css/link">Link</option>
+    <option value="https://grcodeclub.gr/website/css/layout-properties">Εμφάνιση και Θέση</option>
         </select>
         </div>
     </div>
