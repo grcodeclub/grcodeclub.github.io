@@ -3,11 +3,22 @@ const mymenu = `
 <div class="dropdown-container contentsMenu">
     <label for="page-select" class="form-label">Περιεχόμενα</label>
     <select id="page-select" class="form-select">
-        <option value="https://grcodeclub.gr/windows/">Microsoft Windows</option>
-        <option value="https://grcodeclub.gr/windows/command-line/">Command Line</option>
-        <option value="https://grcodeclub.gr/windows/powershell/">PowerShell</option>
-        <option value="https://grcodeclub.gr/windows/more/run">Run Commands</option>
-        <option value="https://grcodeclub.gr/windows/more/language-id">Language ID</option>
+       <div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
+            <option value="https://grcodeclub.gr/windows/">Microsoft Windows</option>
+            <option value="https://grcodeclub.gr/windows/command-line/">Command Line</option>
+            <option value="https://grcodeclub.gr/windows/powershell/">PowerShell</option>
+            <option value="https://grcodeclub.gr/windows/more/run">Run Commands</option>
+            <option value="https://grcodeclub.gr/windows/more/language-id">Language ID</option>            
+    </select>
+        </div>
+    </div>
+</div>
 
     </select>
 </div>
