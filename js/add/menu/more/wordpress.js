@@ -2,15 +2,20 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/website/cms/wordpress/">WordPress</option>
-    <option value="https://grcodeclub.gr/website/cms/wordpress/wp-files">WordPress Files</option>
-    <option value="https://grcodeclub.gr/website/cms/wordpress/plugins/">Plugins</option>
-    <option value="https://grcodeclub.gr/website/cms/wordpress/plugins/action-hooks">Action Hooks</option>
-
-</select>
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
+            <option value="https://grcodeclub.gr/website/cms/wordpress/">WordPress</option>
+            <option value="https://grcodeclub.gr/website/cms/wordpress/wp-files">WordPress Files</option>
+            <option value="https://grcodeclub.gr/website/cms/wordpress/plugins/">Plugins</option>
+            <option value="https://grcodeclub.gr/website/cms/wordpress/plugins/action-hooks">Action Hooks</option>
+                </select>
+        </div>
+    </div>
 </div>
 `;
 
