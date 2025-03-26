@@ -19,6 +19,7 @@
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
         color: #ffffff; /* Χρώμα κειμένου */
+	width: 100%;
 }
 
 /* Χρώμα φόντου για την επιλεγμένη επιλογή στην λίστα */
@@ -30,6 +31,7 @@
 .select2-container .select2-selection--single .select2-selection__rendered{
 	padding-left: 15px !important;
 }
+
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b{
 	border-color: #ffffff transparent transparent transparent !important;
