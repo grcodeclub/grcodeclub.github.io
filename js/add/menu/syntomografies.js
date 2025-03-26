@@ -2,16 +2,22 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-<select id="page-select" class="form-select" onchange="redirectToPage()">
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/syntomografies">Διαφορά</option>
     <option value="https://grcodeclub.gr/syntomografies/programming">Προγραμματισμός</option>
     <option value="https://grcodeclub.gr/syntomografies/network">Δίκτυα Υπολογιστών</option>
     <option value="https://grcodeclub.gr/syntomografies/system">Λειτουργικά Συστήματα</option>
     <option value="https://grcodeclub.gr/syntomografies/cybersecurity">Κυβερνοασφάλεια</option>
     <option value="https://grcodeclub.gr/syntomografies/windows">Microsoft Windows</option>
-</select>
+            </select>
+        </div>
+    </div>
 </div>
 `;
 
