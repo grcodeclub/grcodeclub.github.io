@@ -19,7 +19,7 @@
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
         color: #ffffff; /* Χρώμα κειμένου */
-	width: 100%;
+	width: 100% !important;
 }
 
 /* Χρώμα φόντου για την επιλεγμένη επιλογή στην λίστα */
