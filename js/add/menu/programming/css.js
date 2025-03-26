@@ -3,9 +3,13 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
     <option value="https://grcodeclub.gr/website/css/">Εισαγωγή</option>
     <option value="https://grcodeclub.gr/website/css/properties">Βασικές ιδιότητες</option>
     <option value="https://grcodeclub.gr/website/css/keyframes">Keyframes</option>
@@ -13,9 +17,10 @@ const mymenu = `
     <option value="https://grcodeclub.gr/website/css/text">Κείμενο και Ιδιότητες</option>
     <option value="https://grcodeclub.gr/website/css/table">Πίνακες</option>
     <option value="https://grcodeclub.gr/website/css/link">Link</option>
-    </select>
-</div>
-`;
+        </select>
+        </div>
+    </div>
+</div>`;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
 const addHeader = document.getElementById('addHeader');
