@@ -2,24 +2,29 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<div class="dropdown-container contentsMenu">
-    <label for="page-select" class="form-label">Περιεχόμενα</label>
-    <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/c/">Εισαγωγή</option>
-        <option value="https://grcodeclub.gr/c/library/">Βιβλιοθήκες</option>
-        <option value="https://grcodeclub.gr/c/operators">Τελεστές</option>    
-    <optgroup label="Βασικές Εντολές">
-        <option value="https://grcodeclub.gr/c/commands/variables">Μεταβλητές</option>
-        <option value="https://grcodeclub.gr/c/commands/output_input">Είσοδος / Έξοδος</option>
-        <option value="https://grcodeclub.gr/c/commands/conditions">Δομή ελέγχου</option>
-        <option value="https://grcodeclub.gr/c/commands/loop">Δομή επανάληψης</option>
-        <option value="https://grcodeclub.gr/c/commands/function">Συναρτήσεις</option>
-    </optgroup>
-        <option value="https://grcodeclub.gr/c/files">Αρχεία</option>
-        <option value="https://grcodeclub.gr/c/stract">Δομή - Struct</option>
-    </select>
-</div>
-`;
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
+            <option value="https://grcodeclub.gr/c/">Εισαγωγή</option>
+            <option value="https://grcodeclub.gr/c/library/">Βιβλιοθήκες</option>
+            <option value="https://grcodeclub.gr/c/operators">Τελεστές</option>    
+        <optgroup label="Βασικές Εντολές">
+            <option value="https://grcodeclub.gr/c/commands/variables">Μεταβλητές</option>
+            <option value="https://grcodeclub.gr/c/commands/output_input">Είσοδος / Έξοδος</option>
+            <option value="https://grcodeclub.gr/c/commands/conditions">Δομή ελέγχου</option>
+            <option value="https://grcodeclub.gr/c/commands/loop">Δομή επανάληψης</option>
+            <option value="https://grcodeclub.gr/c/commands/function">Συναρτήσεις</option>
+        </optgroup>
+            <option value="https://grcodeclub.gr/c/files">Αρχεία</option>
+            <option value="https://grcodeclub.gr/c/stract">Δομή - Struct</option>
+            </select>
+        </div>
+    </div>
+</div>`;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
 const addHeader = document.getElementById('addHeader');
