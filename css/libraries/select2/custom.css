@@ -15,11 +15,9 @@
     background-color: #00000066; /* Χρώμα φόντου */
     border-radius: 0.25rem; /* Ακτίνα γωνίας */
     border: 1px solid #ffffff !important;
-    margin: 0px 10px;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
         color: #ffffff; /* Χρώμα κειμένου */
-	width: 100% !important;
 }
 
 /* Χρώμα φόντου για την επιλεγμένη επιλογή στην λίστα */
@@ -35,9 +33,4 @@
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b{
 	border-color: #ffffff transparent transparent transparent !important;
-	margin-left: -14px !important;
-}
-
-.select2-container--open .select2-dropdown{
-	margin: 0px 10px !important;
 }
