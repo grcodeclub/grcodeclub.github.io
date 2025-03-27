@@ -20,6 +20,7 @@ const htmlContentHeader = `
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px; overflow-y: auto;">
+                 <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/">Προγραμματισμός</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/languages/">Γλώσσες Προγραμματισμού</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/c/">C</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/python/">Python</a></li>
