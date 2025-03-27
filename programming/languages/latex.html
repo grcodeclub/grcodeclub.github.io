@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="LaTeX">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming.webp">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming.webp"/>
+    <meta property="og:title" content="LaTeX">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">LaTeX</h1>
+        <p>Το LaTeX είναι ένα σύστημα στοιχειοθεσίας εγγράφων που χρησιμοποιείται ευρέως για τη συγγραφή επιστημονικών και τεχνικών κειμένων. Πρόκειται για μια γλώσσα μορφοποίησης κειμένου.</p>
+        <h3>Χαρακτηριστικά του LaTeX</h3>
+        <ol>
+          <li>Ακαδημαϊκή χρήση: Ιδανικό για έγγραφα με μαθηματικούς τύπους, επιστημονικές εργασίες, διατριβές, βιβλία κ.λπ.</li>
+          <li>Αυτόματη μορφοποίηση: Διαχειρίζεται αυτόματα τη διάταξη του κειμένου, τις βιβλιογραφικές αναφορές, την αρίθμηση κεφαλαίων και εικόνων.</li>
+          <li>Επαγγελματική τυπογραφία: Παρέχει εξαιρετική ποιότητα εκτύπωσης.</li>
+          <li>Υποστήριξη μαθηματικών τύπων: Μπορείς να γράψεις περίπλοκες εξισώσεις με ακρίβεια.</li>
+          <li>Διαχωρισμός περιεχομένου από μορφοποίηση: Εστιάζεις στο περιεχόμενο χωρίς να ανησυχείς για το στυλ.</li>
+        </ol>
+        <h2 class="highlight">Βασική Δομή Ενός Εγγράφου LaTeX</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\documentclass{article}  % Ορίζει τον τύπο του εγγράφου
+\usepackage{amsmath}      % Ενεργοποιεί μαθηματικά πακέτα
+
+\begin{document}          % Έναρξη του εγγράφου
+
+\title{Εισαγωγή στο LaTeX}
+\author{Το Όνομά σου}
+\date{\today}
+\maketitle
+
+\section{Εισαγωγή}
+Αυτό είναι ένα παράδειγμα εγγράφου στο LaTeX.
+
+\section{Μαθηματικά}
+Μια εξίσωση:
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+\end{document}</code></pre></div></div>
+
+        <h2 class="highlight">Διαχείριση Μαθηματικών Τύπων</h2>
+        <h3><b>Βασικές εξισώσεις</b></h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\begin{equation}
+    a^2 + b^2 = c^2
+\end{equation}</code></pre></div></div>
+        <p>Για inline μαθηματικά, χρησιμοποίησε:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">Το Πυθαγόρειο θεώρημα είναι $a^2 + b^2 = c^2$.</code></pre></div></div>
+        <h3><b>Πίνακες εξισώσεων</b></h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\begin{align}
+    x + y &= 10 \\
+    x - y &= 4
+\end{align}</code></pre></div></div>
+        <h3><b>Κλάσματα, Ρίζες και Δυνάμεις</b></h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</code></pre></div></div>
+        <h3><b>Πίνακες Μαθηματικών Τύπων</b></h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\begin{array}{c|c}
+    x & y \\
+    \hline
+    1 & 2 \\
+    3 & 4
+\end{array}</code></pre></div></div>
+          <h3><b>Ορισμένα και αόριστα ολοκληρώματα</b></h3>
+          <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\int_a^b x^2 \,dx</code></pre></div></div>
+          <h3><b>Άθροισμα και Γινόμενο</b></h3>
+          <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}</code></pre></div></div>
+          <h3><b>Διανυσματική Ανάλυση</b></h3>
+          <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\vec{A} \times \vec{B} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\
+A_x & A_y & A_z \\
+B_x & B_y & B_z 
+\end{vmatrix}</code></pre></div></div>
+
+        <h2 class="highlight">Πίνακες στο LaTeX</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+A & B & C \\
+\hline
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+\hline
+\end{tabular}
+\caption{Παράδειγμα Πίνακα}
+\end{table}</code></pre></div></div>
+        <h2 class="highlight">Εισαγωγή Εικόνων</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\usepackage{graphicx} % Πρόσθεσε στο preamble
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{εικονα.jpg}
+    \caption{Παράδειγμα εικόνας}
+    \label{fig:example}
+\end{figure}</code></pre></div></div>
+        <h2 class="highlight">Βιβλιογραφία</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\begin{thebibliography}{9}
+
+\bibitem{latexcompanion}
+Leslie Lamport, \textit{LaTeX: A Document Preparation System}, Addison-Wesley, 1986.
+
+\end{thebibliography}</code></pre></div></div>
+        <h2 class="highlight">Διαχείριση Παραπομπών και Αναφορών</h2>
+        <p>Το LaTeX υποστηρίζει αναφορές μέσα στο κείμενο και αυτόματη δημιουργία βιβλιογραφίας χρησιμοποιώντας <code>BibTeX</code>:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\cite{latexcompanion}</code></pre></div></div>
+        <p>Ένα παράδειγμα αρχείου <code>.bib</code> για χρήση με BibTeX:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">@book{latexcompanion,
+  author    = {Leslie Lamport},
+  title     = {LaTeX: A Document Preparation System},
+  publisher = {Addison-Wesley},
+  year      = {1986}</code></pre></div></div>
+          <p>Στη συνέχεια, στο αρχείο .tex, προσθέτουμε:</p>
+          <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-latex">\bibliographystyle{plain}
+\bibliography{mybibliography}</code></pre></div></div>
+          <p>Εγκατάσταση του BibTeX</p>
+          <p>Το BibTeX περιλαμβάνεται στα περισσότερα πακέτα διανομής του LaTeX.</p>
+          <div class="bg_preview"><pre class="code_editor"><code class="language-latex">tlmgr install bibtex</code></pre></div>
+      </div>
+    <div id="addFooter"></div>
+</body>
+</html>
