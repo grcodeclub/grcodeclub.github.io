@@ -32,10 +32,10 @@ const cmd = `
 <label for="page-select" class="form-label">Εντολές</label>
 <select id="select-cmd" class="form-select">
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
-    <option value="https://grcodeclub.gr/windows/command-line/">Command Line</option>
-    <option value="https://grcodeclub.gr/windows/command-line/network">Εντολές Δικτύου</option>
-    <option value="https://grcodeclub.gr/windows/command-line/system/">Εντολές Συστήματος</option>
-    <option value="https://grcodeclub.gr/windows/command-line/system/winget">Winget</option>
+    <option value="https://grcodeclub.gr/microsoft-windows/command-line/">Command Line</option>
+    <option value="https://grcodeclub.gr/microsoft-windows/command-line/network">Εντολές Δικτύου</option>
+    <option value="https://grcodeclub.gr/microsoft-windows/command-line/system/">Εντολές Συστήματος</option>
+    <option value="https://grcodeclub.gr/microsoft-windows/command-line/system/winget">Winget</option>
 </select>
 `;
 
