@@ -29,7 +29,7 @@ if (nextDiv && !nextDiv.querySelector('#page-select')) {
 
 // Το HTML περιεχόμενο του δεύτερου dropdown
 const cmd = `
-<div class="container dropdown-container contentsMenu" style="margin-top:1%">
+<div class="container dropdown-container contentsMenu" style="margin-top:0%">
     <div class="row g-2 align-items-center">
         <div class="col-auto">
             <label for="page-select" class="form-label">Εντολές</label>
