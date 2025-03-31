@@ -7,11 +7,11 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-            <option value="https://grcodeclub.gr/windows/">Microsoft Windows</option>
-            <option value="https://grcodeclub.gr/windows/command-line/">Command Line</option>
-            <option value="https://grcodeclub.gr/windows/powershell/">PowerShell</option>
-            <option value="https://grcodeclub.gr/windows/more/run">Run Commands</option>
-            <option value="https://grcodeclub.gr/windows/more/language-id">Language ID</option>            
+            <option value="https://grcodeclub.gr/microsoft-windows/">Microsoft Windows</option>
+            <option value="https://grcodeclub.gr/microsoft-windows/command-line/">Command Line</option>
+            <option value="https://grcodeclub.gr/microsoft-windows/powershell/">PowerShell</option>
+            <option value="https://grcodeclub.gr/microsoft-windows/more/run">Run Commands</option>
+            <option value="https://grcodeclub.gr/microsoft-windows/more/language-id">Language ID</option>            
     </select>
         </div>
     </div>

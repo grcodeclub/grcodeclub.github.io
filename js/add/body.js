@@ -65,7 +65,7 @@ const htmlContentHeader = `
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/system/extensions">Επεκτάσεις Αρχείων</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/windows/">Microsoft Windows</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/microsoft-windows/">Microsoft Windows</a></li>
                      <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/">Linux</a></li>            
                 </ul>
             </li>
