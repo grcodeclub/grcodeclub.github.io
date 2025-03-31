@@ -29,14 +29,23 @@ if (nextDiv && !nextDiv.querySelector('#page-select')) {
 
 // Το HTML περιεχόμενο του δεύτερου dropdown
 const cmd = `
-<label for="page-select" class="form-label">Εντολές</label>
-<select id="select-cmd" class="form-select">
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Εντολές</label>
+        </div>
+        <div class="col">
+        <select id="select-cmd" class="form-select" onchange="redirectToPage()">
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
     <option value="https://grcodeclub.gr/microsoft-windows/command-line/">Command Line</option>
     <option value="https://grcodeclub.gr/microsoft-windows/command-line/network">Εντολές Δικτύου</option>
     <option value="https://grcodeclub.gr/microsoft-windows/command-line/system/">Εντολές Συστήματος</option>
     <option value="https://grcodeclub.gr/microsoft-windows/command-line/system/winget">Winget</option>
-</select>
+          
+    </select>
+        </div>
+    </div>
+</div>
 `;
 
         // Εύρεση του στοιχείου με το id 'windows-cmd'
