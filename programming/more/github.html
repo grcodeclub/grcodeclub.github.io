@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="GitHub">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/main.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/main.png"/>
+    <meta property="og:title" content="GitHub">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">GitHub</h1>
+        <p>Το GitHub είναι μια πλατφόρμα για αποθήκευση και συνεργασία σε projects με χρήση του Git. 
+            Στο GitHub μπορείς να ανεβάζεις τον κώδικά σου, να δουλεύεις σε ομάδες και να κρατάς ιστορικό αλλαγών.</p>
+        <h2 class="highlight">Βασικές Έννοιες</h2>
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr><td>Έννοια</td> <td>Περιγραφή</td></tr>
+            <tr><td>Repository (Repo)</td> <td>Αποθετήριο – εκεί που φυλάσσεται ο κώδικας</td></tr>
+            <tr><td>Commit</td><td>Μια αποθηκευμένη αλλαγή στο project</td></tr>
+            <tr><td>Branch</td><td>Διαφορετική εκδοχή του project</td></tr>
+            <tr><td>Pull Request (PR)</td><td>Πρόταση για να ενωθούν αλλαγές από ένα branch στο κύριο</td></tr>
+            <tr><td>Push</td><td>Στέλνει τις αλλαγές που έχεις κάνει τοπικά (στον υπολογιστή σου) στο αποθετήριο στο GitHub.</td></tr>
+            <tr><td>Clone</td><td>Αντιγραφή repo στον υπολογιστή σου</td></tr>
+            <tr><td>Fork</td><td>Δημιουργία αντιγράφου του repo στο δικό σου λογαριασμό</td></tr>
+        </table>
+        <h2 class="highlight">Αναλυτικά το "git push origin main":</h2>
+        <p>Στείλε τις αλλαγές μου από τον υπολογιστή μου στο GitHub (στο αποθετήριο), στο συγκεκριμένο branch που λέγεται main.</p>
+        <table id="search_table_page" class="table table-bordered">
+            <tr><td>Μέρος</td> <td>Περιγραφή</td></tr>
+            <tr><td>git</td><td>Το εργαλείο Git</td></tr>
+            <tr><td>push</td><td>"Σπρώξε" τις αλλαγές</td></tr>
+            <tr><td>origin</td><td>Το αποθετήριο στο GitHub</td></tr>
+            <tr><td>main</td><td>Το branch στο οποίο στέλνεις (π.χ. main ή master)</td></tr>
+        </table>
+        <h3>Παράδειγμα:</h3>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">echo "<h1>Hello GitHub</h1>" > index.html
+git add .
+git commit -m "Πρόσθεσα το αρχικό index"
+git push origin main</code></pre></div>
+        <h2 class="highlight">README</h2>
+        <p>Το README.md είναι το πρώτο αρχείο που βλέπει κάποιος όταν επισκέπτεται το αποθετήριό σου στο GitHub.</p>
+        <p>Γιατί είναι σημαντικό;</p>
+        <ol>
+            <li>Βοηθάει άλλους να καταλάβουν το project σου</li>
+            <li>Κάνει το repo σου να φαίνεται επαγγελματικό</li>
+            <li>Είναι απαραίτητο για open source συνεργασία</li>
+        </ol>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

@@ -119,6 +119,8 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
     const scriptMappings = {
+    'https://grcodeclub.gr/programming/languages/': 'https://grcodeclub.github.io/js/add/menu/black.js',
+    'https://grcodeclub.gr/programming/': 'https://grcodeclub.github.io/js/add/menu/programming/more.js',
     'https://grcodeclub.gr/c/': 'https://grcodeclub.github.io/js/add/menu/programming/c.js',
     'https://grcodeclub.gr/python/': 'https://grcodeclub.github.io/js/add/menu/programming/python.js',
     'https://grcodeclub.gr/cpp/': 'https://grcodeclub.github.io/js/add/menu/programming/cpp.js',
