@@ -29,8 +29,13 @@ if (nextDiv && !nextDiv.querySelector('#page-select')) {
 
 // Το HTML περιεχόμενο του δεύτερου dropdown
 const termMenu = `
-<label for="page-select" class="form-label">Εντολές</label>
-<select id="select-term" class="form-select">
+<div class="container dropdown-container contentsMenu" style="margin-top:0%">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Εντολές</label>
+        </div>
+        <div class="col">
+        <select id="select-term" class="form-select" onchange="redirectToPage()">
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
     <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
     <option value="https://grcodeclub.gr/linux/terminal/files/">Διαχείριση Αρχείων και Καταλόγων</option>
@@ -41,7 +46,10 @@ const termMenu = `
     <option value="https://grcodeclub.gr/linux/terminal/tools/git">Εντολή: git</option>
     <option value="https://grcodeclub.gr/linux/terminal/system/apt">Εντολή: apt</option>
     <option value="https://grcodeclub.gr/linux/terminal/system/snap">Εντολή: snap</option>
-</select>
+            </select>
+        </div>
+    </div>
+</div>
 `;
 
         // Εύρεση του στοιχείου με το id 'linux-term'
