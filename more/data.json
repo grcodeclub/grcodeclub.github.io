@@ -1,0 +1,43 @@
+[
+    {
+      "title": "Νομοθεσίες και Πρότυπα για Τεχνολογία, Κυβερνοασφάλεια & Developers",
+      "description": "Λίστα με Νομοθεσίες και ISO Πρότυπα για κυβερνοασφάλεια, προστασία δεδομένων και software development.",
+      "link": "https://grcodeclub.gr/more/post/tech_laws_overview",
+      "date": "2025-04-09",
+      "author": "GrCode Club",
+      "category": "tech"
+    },
+    {
+        "title": "Social Media",
+        "description": "Social Media | Πλήρης Οδηγός",
+        "link": "https://grcodeclub.gr/more/post/social-media",
+        "date": "2024-11-26",
+        "author": "GrCode Club",
+        "category": "social"
+      },
+      {
+        "title": "Office Suite",
+        "description": "Παρέχει μια λίστα με όλα τα προγράμματα Office που παρέχονται από την Google και την Microsoft",
+        "link": "https://grcodeclub.gr/more/office-suite/",
+        "date": "2024-11-10",
+        "author": "GrCode Club",
+        "category": "office"
+      },
+      {
+        "title": "Καριέρα - Θέσεις Εργασίας",
+        "description": "Προσπαθήσαμε να συγκεντρώσουμε μια λίστα με όλες τις διαθέσιμες θέσεις εργασίας στην αγορά.",
+        "link": "https://grcodeclub.gr/more/jobs",
+        "date": "2024-10-02",
+        "author": "GrCode Club",
+        "category": "office"
+      },
+      {
+        "title": "RGB",
+        "description": "-",
+        "link": "https://grcodeclub.gr/more/image/color-rgb",
+        "date": "2024-10-02",
+        "author": "GrCode Club",
+        "category": "image"
+      }
+  ]
+  
