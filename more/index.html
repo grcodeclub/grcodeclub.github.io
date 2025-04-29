@@ -9,92 +9,175 @@
     <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/main.jpg"/>
     <meta property="og:title" content="GrCode Club">
     <script src="https://grcodeclub.github.io/js/data.js"></script>
-    <style>a{color:black;text-decoration: none;}</style>
+    <style>
+        a{color:black;text-decoration: none;}
+        .filters { margin-bottom: 1rem; }
+    </style>
 </head>
-<body>ω
+<body>
     <div id="addHeader"></div>
-    <div class="container ">
-        <!-- Πεδίο Αναζήτησης -->
-        <input type="text" class="form-control" id="searchURL" placeholder="Αναζήτηση"><br>
-        <!-- Container για τις κάρτες -->
-        <div id="cardContainer">
-            <div class="card mb-3"><div class="card-header"><h5 class="card-title">Νομοθεσίες και Πρότυπα για Τεχνολογία, Κυβερνοασφάλεια & Developers</h5></div><div class="card-body"><p class="card-text">Λίστα με Νομοθεσίες και ISO Πρότυπα για κυβερνοασφάλεια, προστασία δεδομένων και software development.</p><a href="https://grcodeclub.gr/more/post/tech_laws_overview.html" class="btn btn-dark">περισσότερα...</a></div><div class="card-footer"><div class="input-group mb-3"><span class="input-group-text"><i class="fas fa-calendar-days"></i></span><span class="input-group-text">09/04/2025</span><span class="input-group-text"><i class="fas fa-user"></i></span><span class="input-group-text" ><a href="#">GrCode Club</a></span></div></div></div>
-            <div class="card mb-3"><div class="card-header"><h5 class="card-title">Social Media</h5></div><div class="card-body"><p class="card-text">Social Media | Πλήρης Οδηγός</p><a href="https://grcodeclub.gr/more/post/social-media.html" class="btn btn-dark">περισσότερα...</a></div><div class="card-footer"><div class="input-group mb-3"><span class="input-group-text"><i class="fas fa-calendar-days"></i></span><span class="input-group-text">26/11/2024</span><span class="input-group-text"><i class="fas fa-user"></i></span><span class="input-group-text" ><a href="#">GrCode Club</a></span></div></div></div>
-            <div class="card mb-3"><div class="card-header"><h5 class="card-title">Office Suite</h5></div><div class="card-body"><p class="card-text">Παρέχει μια λίστα με όλα τα προγράμματα Office που παρέχονται από την Google και την Microsoft</p><a href="https://grcodeclub.gr/more/office-suite/" class="btn btn-dark">περισσότερα...</a></div><div class="card-footer"><div class="input-group mb-3"><span class="input-group-text"><i class="fas fa-calendar-days"></i></span><span class="input-group-text">10/11/2024</span><span class="input-group-text"><i class="fas fa-user"></i></span><span class="input-group-text" ><a href="#">GrCode Club</a></span></div></div></div>
-            <div class="card mb-3"><div class="card-header"><h5 class="card-title">Καριέρα - Θέσεις Εργασίας</h5></div><div class="card-body"><p class="card-text">Αναλυτική λίστα με θέσεις εργασίας</p><a href="https://grcodeclub.gr/more/jobs" class="btn btn-dark">περισσότερα...</a></div><div class="card-footer"><div class="input-group mb-3"><span class="input-group-text"><i class="fas fa-calendar-days"></i></span><span class="input-group-text">2/10/2024</span><span class="input-group-text"><i class="fas fa-user"></i></span><span class="input-group-text" ><a href="#">GrCode Club</a></span></div></div></div>
-            <div class="card mb-3"><div class="card-header"><h5 class="card-title">QUIZ</h5></div><div class="card-body"><p class="card-text"></p><a href="https://grcodeclub.gr/quiz/" class="btn btn-dark">περισσότερα...</a></div><div class="card-footer"><div class="input-group mb-3"><span class="input-group-text"><i class="fas fa-calendar-days"></i></span><span class="input-group-text">2/10/2024</span><span class="input-group-text"><i class="fas fa-user"></i></span><span class="input-group-text" ><a href="#">GrCode Club</a></span></div></div></div>
+    <div class="container">
+        <!-- Πεδίο Αναζήτησης και Φίλτρο -->
+        <div class="filters">
+            <input type="text" class="form-control" id="search_table_page" placeholder="Αναζήτηση"><br>
+            <select id="filterCategory" class="form-control">
+                <option value="">Όλες οι Κατηγορίες</option>
+                <option value="tech">Τεχνολογία</option>
+                <option value="social">Social Media</option>
+                <option value="office">Office</option>
+                <option value="career">Καριέρα</option>
+                <option value="quiz">Quiz</option>
+                <option value="color">RGB</option>
+            </select><br>
         </div>
-        <!-- Κουμπιά Σελιδοποίησης -->
+
+        <div id="cardContainer"></div>
         <nav aria-label="Σελιδοποίηση">
             <ul id="pagination" class="pagination justify-content-left">
                 <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
             </ul>
-        </nav>
-    </div>
-    <div id="addFooter"></div>
+        </nav>    
 
-    <!-- JavaScript -->
-    <script>
-        // Συνάρτηση για αφαίρεση τόνων
-        function removeDiacritics(str) {
-            return str
-                .normalize("NFD") // Διαχωρισμός γραμμάτων και τόνων
-                .replace(/[\u0300-\u036f]/g, ""); // Αφαίρεση τόνων
+
+  <script>
+    const itemsPerPage = 5;
+    let currentPage = 1;
+    let data = [];
+
+    const sources = [
+      './data.json'
+    ];
+
+    async function loadData() {
+      const allData = [];
+      for (const url of sources) {
+        try {
+          const res = await fetch(url);
+          const json = await res.json();
+          allData.push(...json);
+        } catch (e) {
+          console.warn('Αποτυχία φόρτωσης:', url);
         }
+      }
+      // ταξινόμηση κατά ημερομηνία φθίνουσα
+      data = allData.sort((a, b) => new Date(b.date) - new Date(a.date));
+      filterAndRender();
+    }
 
-        const itemsPerPage = 20; // Αριθμός αντικειμένων ανά σελίδα
-        let currentPage = 1; // Τρέχουσα σελίδα
+    function removeDiacritics(str) {
+      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
 
-        const cardContainer = document.getElementById("cardContainer");
-        const pagination = document.getElementById("pagination");
+    function displayCards(filteredData) {
+      const container = document.getElementById("cardContainer");
+      container.innerHTML = "";
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const paginated = filteredData.slice(start, end);
 
-        // Εμφάνιση καρτών για την τρέχουσα σελίδα
-        function displayCards(query = "") {
-            const allCards = Array.from(document.querySelectorAll("#cardContainer .card"));
-            const filteredCards = allCards.filter(card => {
-                const title = removeDiacritics(card.querySelector(".card-title").textContent.toLowerCase());
-                return title.includes(query); // Φιλτράρει με βάση το query
-            });
+      paginated.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = `
+              <div class="card-header"><h5 class="card-title">${item.title}</h5></div>
+              <div class="card-body"><p>${item.description}</p>
+                <a href="${item.link}" class="btn btn-dark">περισσότερα...</a></div>
+              <div class="card-footer">
+                <small>${item.date} | ${item.author}</small>
+              </div>
+            `;
+        container.appendChild(div);
+        container.appendChild(document.createElement("br"));
+      });
 
-            // Απόκρυψη όλων των καρτών
-            allCards.forEach(card => (card.style.display = "none"));
+      updatePagination(filteredData.length);
+    }
 
-            // Εμφάνιση των καρτών της τρέχουσας σελίδας
-            const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const visibleCards = filteredCards.slice(start, end);
-            visibleCards.forEach(card => (card.style.display = "")); // Εμφανίζει τις κάρτες
+   // Ενημέρωση κουμπιών σελιδοποίησης
+   function updatePagination(totalItems) {
+    pagination.innerHTML = "";
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-            updatePagination(filteredCards.length);
-        }
+    if (totalPages <= 1) return;
 
-        // Ενημέρωση κουμπιών σελιδοποίησης
-        function updatePagination(totalItems) {
-            pagination.innerHTML = "";
-            const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-            for (let i = 1; i <= totalPages; i++) {
-                const li = document.createElement("li");
-                li.className = `page-item ${i === currentPage ? "active" : ""}`;
-                li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
-                li.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    currentPage = i;
-                    displayCards(document.getElementById("searchURL").value.toLowerCase());
-                });
-                pagination.appendChild(li);
+    // Προηγούμενη
+    if (totalPages > 5) {
+        const prev = document.createElement("li");
+        prev.className = `page-item ${currentPage === 1 ? "disabled" : ""}`;
+        prev.innerHTML = `<br><a class="page-link" href="#">Προηγούμενη</a>`;
+        prev.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                filterAndRender();
             }
-        }
-
-        // Αναζήτηση
-        document.getElementById("searchURL").addEventListener("input", function () {
-            const query = removeDiacritics(this.value.toLowerCase());
-            currentPage = 1; // Επιστροφή στην πρώτη σελίδα
-            displayCards(query);
         });
+        pagination.appendChild(prev);
+    }
 
-        // Πρώτη εμφάνιση
-        displayCards();
-    </script>
+    // Υπολογισμός εύρους αριθμών
+    let startPage = Math.max(currentPage - 2, 1);
+    let endPage = Math.min(startPage + 4, totalPages);
+    if (endPage - startPage < 4) {
+        startPage = Math.max(endPage - 4, 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+        const li = document.createElement("li");
+        li.className = `page-item ${i === currentPage ? "active" : ""}`;
+        li.innerHTML = `<br><a class="page-link" href="#">${i}</a>`;
+        li.addEventListener("click", (e) => {
+            e.preventDefault();
+            currentPage = i;
+            filterAndRender();
+        });
+        pagination.appendChild(li);
+    }
+
+    // Επόμενη
+    if (totalPages > 5) {
+        const next = document.createElement("li");
+        next.className = `page-item ${currentPage === totalPages ? "disabled" : ""}`;
+        next.innerHTML = `<br><a class="page-link" href="#">Επόμενη</a>`;
+        next.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                filterAndRender();
+            }
+        });
+        pagination.appendChild(next);
+    }
+}
+
+
+    function filterAndRender() {
+      const query = removeDiacritics(document.getElementById("search_table_page").value.toLowerCase());
+      const category = document.getElementById("filterCategory").value;
+
+      const filtered = data.filter(item => {
+        const title = removeDiacritics(item.title.toLowerCase());
+        const matchesSearch = title.includes(query);
+        const matchesCategory = !category || item.category === category;
+        return matchesSearch && matchesCategory;
+      });
+
+      displayCards(filtered);
+    }
+
+    document.getElementById("search_table_page").addEventListener("input", () => {
+      currentPage = 1;
+      filterAndRender();
+    });
+
+    document.getElementById("filterCategory").addEventListener("change", () => {
+      currentPage = 1;
+      filterAndRender();
+    });
+
+    // αρχική φόρτωση
+    loadData();
+  </script>
+        
 </body>
 </html>
