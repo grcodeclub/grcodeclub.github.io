@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Internet Protocol v4 (Μορφή Πακέτο)">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/network.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Internet Protocol v4 (Μορφή Πακέτο)">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+    <style>
+        table{border-color: black !important;}
+        .header{background-color: rgba(0, 0, 0, 0.203) !important; font-size: 15px;}
+        .sender{background-color: rgba(233, 245, 100, 0.2008) !important;}
+        .receiver{background-color: rgba(0, 255, 255, 0.168) !important;}
+    </style>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Internet Protocol v4 <br> Μορφή Πακέτο</h1>
+        <p> 
+            Ένα πακέτο IPv4 αποτελείται από μια κεφαλίδα (header) και τα δεδομένα (data). Ας δούμε αναλυτικά τη μορφή ενός πακέτου IPv4:
+            <ol>
+                <li>Κεφαλίδα (Header):
+                    <ul>
+                        <li>Έκδοση (Version): Προσδιορίζει την έκδοση του πρωτοκόλλου IPv4, συνήθως η τιμή είναι 4.</li>
+                        <li>Μήκος Κεφαλίδας (Header Length): Καθορίζει το μήκος της κεφαλίδας σε 32-bit. Ο αριθμός αυτός πολλαπλασιάζεται με 4 για να προκύψει το πραγματικό μήκος της κεφαλίδας.</li>
+                        <li>Τύπος Υπηρεσίας (Type of Service): Χρησιμοποιείται για να καθορίσει την προτεραιότητα και την ποιότητα εξυπηρέτησης των πακέτων.</li>
+                        <li>Συνολικό Μήκος (Total Length): Αναφέρει το συνολικό μήκος του πακέτου (κεφαλίδα + δεδομένα) σε bytes.</li>
+                        <li>Αναγνωριστικό πηγής (Source Identification): Περιέχει τη διεύθυνση IP του αποστολέα του πακέτου.</li>
+                        <li>Αναγνωριστικό προορισμού (Destination Identification): Περιέχει τη διεύθυνση IP του παραλήπτη του πακέτου.</li>
+                        <li>Έλεγχος Σφαλμάτων (Checksum): Χρησιμοποιείται για να ελέγξει την ακεραιότητα της κεφαλίδας.</li>
+                    </ul>
+                </li>
+                <li>Δεδομένα (Data):
+                    <ul>
+                        <li>Τα δεδομένα περιέχουν την πραγματική πληροφορία που μεταφέρεται μέσω του πακέτου. Αυτά μπορεί να είναι μηνύματα, αρχεία, εντολές κ.λπ.</li>
+                    </ul>
+                </li>
+            </ol>
+            Το συνολικό μήκος του πακέτου (κεφαλίδα + δεδομένα) δεν πρέπει να υπερβαίνει το μέγιστο μήκος που μπορεί να υποστηρίξει ένα δίκτυο, γνωστό ως MTU (Maximum Transmission Unit).
+        </p>
+        <table class="table table-bordered" style="text-align: center;">
+            <tr>
+                <th class="header" colspan="32">32 bit</th>
+            </tr>
+            <tr>
+              <th class="header" colspan="4" style="width: 12.5%;">4 bit</th>
+              <th  class="header"colspan="4" style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+            </tr>
+          
+            <tr class="field-row"><td colspan="4">Version</td><td colspan="4">Header Lenght</td><td colspan="8">Type of Service</td>
+                <td colspan="16">Total Lenght</td></tr>
+          
+            <tr>
+              <td colspan="16">ID</td>
+              <td colspan="4">Flags</td>
+              <td colspan="12">Offset</td>
+            </tr>
+            <tr>
+                <td colspan="8">Time to live (TTL)</td>
+                <td colspan="8">Protocol</td>
+                <td colspan="16">Checksum</td>
+            </tr>
+            <tr><td colspan="32">IP Αποστολέα</td></tr>
+            <tr><td colspan="32">IP Παραλήπτη</td></tr>
+            <tr><td colspan="32">Data</td></tr>
+          </table>
+   
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Το πρωτόκολλο ICMP">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/network.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Το πρωτόκολλο ICMP">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+         <br><a class="btn btn-dark" href="./"><i class="bi bi-arrow-left"></i> </a><br><br>
+        <h1 class="title">Internet Control Message Protocol (ICMP)</h1>
+        <p>Χρησιμοποιείται για τη μεταφορά μηνυμάτων ελέγχου και σφαλμάτων στο Διαδίκτυο</p>
+        <h2 class="highlight">Λίστα μηνυμάτων ελέγχου ICMP</h2>
+        
+        <div style="display: flex;">
+            <ul>
+                <li>0 - Echo Reply</li>
+                <li>1 - Reserved</li>
+                <li>2 - Reserved</li>
+                <li>3 - Destination Unreachable</li>
+                <li>4 - Source Quench</li>
+                <li>5 - Redirect Message</li>
+                <li>6 - Alternate Host Address</li>
+                <li>7 - Reserved</li>
+                <li>8 - Echo Request</li>
+                <li>9 - Router Advertisement</li>
+                <li>10 - Router Solicitation</li>
+                <li>11 - Time Exceeded</li>
+                <li>12 - Parameter Problem</li>
+                <li>13 - Timestamp</li>
+                <li>14 - Timestamp Reply</li>
+            </ul>
+            <ul>
+                <li>15 - Information Request</li>
+                <li>16 - Information Reply</li>
+                <li>17 - Address Mask Request</li>
+                <li>18 - Address Mask Reply</li>
+                <li>19 - Reserved for security</li>
+                <li>20-29 - Reserved for robustness experiment</li>
+                <li>30 - Traceroute</li>
+                <li>31 - Datagram Conversion Error</li>
+                <li>32 - Mobile Host Redirect</li>
+                <li>33 - IPv6 Where-Are-You</li>
+                <li>34 - IPv6 Here-I-Am</li>
+                <li>35 - Mobile Registration Request</li>
+                <li>36 - Mobile Registration Reply</li>
+                <li>37 - Domain Name Request</li>
+                <li>38 - Domain Name Reply</li>
+                <li>39 - SKIP Algorithm Discovery Protocol, Simple Key-Management for Internet Protocol</li>
+                <li>40 - Photuris, Security failures</li>
+                <li>41 - ICMP for experimental mobility protocols such as Seamoby [RFC4065]</li>
+                <li>42-255 - Reserved</li>
+            </ul>
+
+            
+        </div>
+
+        <br>
+        <h2 class="highlight">Δομή πακέτου ICMP</h2>
+        <table style="text-align: center; background-color: white;">
+
+                <tr>
+                    <th width="4%"> </th>
+                    <th  bgcolor="lightgrey" colspan="4" width="12%">Bits 0–3</th>
+                    <th  bgcolor="lightgrey" colspan="4" width="12%">4–7</th>
+                    <th  bgcolor="lightgrey" colspan="8" width="24%">8–15</th>
+                    <th  bgcolor="lightgrey" colspan="3" width="9%">16–18</th>
+                    <th  bgcolor="lightgrey" colspan="13" width="39%">19–31</th>
+                </tr>
+                <tr>
+                    <th  bgcolor="lightgrey">0</th>
+                    <td  style="border: 2px solid #161515;" colspan="4">Version</td>
+                    <td  style="border: 2px solid #161515;" colspan="4">IHL</td>
+                    <td  style="border: 2px solid #161515;" colspan="8">TOS/DSCP/ECN</td>
+                    <td  style="border: 2px solid #161515;" colspan="16">Total Length</td>
+                </tr>
+                <tr>
+                    <th  bgcolor="lightgrey">32</th>
+                    <td style="border: 2px solid #161515;" colspan="16">Identification</td>
+                    <td style="border: 2px solid #161515;" colspan="3">Flags</td>
+                    <td style="border: 2px solid #161515;" colspan="13">Fragment Offset</td>
+                </tr>
+                <tr>
+                    <th  bgcolor="lightgrey">64</th>
+                    <td style="border: 2px solid #161515;" colspan="8">Time to Live</td>
+                    <td style="border: 2px solid #161515;" colspan="8">Protocol</td>
+                    <td style="border: 2px solid #161515;" colspan="16">IP Header Checksum</td>
+                </tr>
+                <tr>
+                    <th  bgcolor="lightgrey">96</th>
+                    <td style="border: 2px solid #161515;" colspan="32">Source Address</td>
+                </tr>
+                <tr>
+                    <th bgcolor="lightgrey">128</th>
+                    <td style="border: 2px solid #161515;" colspan="32">Destination Address</td>
+                </tr>
+                <tr>
+                    <th bgcolor="lightgrey">160</th>
+                    <td style="border: 2px solid #161515;" bgcolor="lightblack" colspan="8">Type</td>
+                    <td style="border: 2px solid #161515;" bgcolor="lightblack" colspan="8">Code</td>
+                    <td style="border: 2px solid #161515;" bgcolor="lightblack" colspan="16">Checksum </td>
+                </tr>
+                <tr>
+                    <th bgcolor="lightgrey">192</th>
+                    <td style="border: 2px solid #161515;" bgcolor="lightblack" colspan="16">ID</td>
+                    <td style="border: 2px solid #161515;" bgcolor="lightblack" colspan="16">Sequence</td>
+                </tr>
+            </table>
+            <p><u>Type</u> Ο κωδικός του τύπου μηνύματος ICMP.
+                <br><br>
+                <u>Checksum</u> Το πεδίο αυτό χρησιμοποιείται για τον έλεγχο σφαλμάτων.
+                <br><br>
+                <u>ID</u> Η τιμή ID του πακέτου, η οποία επιστρέφεται στον υπολογιστή που δημιούργησε το πακέτο στην περίπτωση που έχουμε απάντηση ECHO REPLY.
+                <br><br>
+                <u>Sequence</u> Αυτό το πεδίο περιέχει την τιμή σειράς του πακέτου και επιστρέφεται στον υπολογιστή που δημιούργησε το πακέτο στην περίπτωση που έχουμε απάντηση ECHO REPLY.
+                <br>   <br>
+                <u>Code</u> Το πεδίο αυτό χρησιμοποιείται ως επέκταση του προηγούμενου. Για παράδειγμα εάν το πεδίο Type περιέχει την τιμή 3 (Destination Unreachable), τότε το πεδίο αυτό μπορεί να περιέχει έναν κωδικό από το 1 έως το 15 που να δίνει τον λόγο για τον οποίο ο υπολογιστής που ψάχνουμε είναι εκτός δικτύου.
+            </p>
+
+            <table class="style2">
+                <tr>
+                  <th>Type</th>
+                  <th>Code</th>
+                  <th>Περιγραφή</th>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>Echo Reply (Ping)<br> Απάντηση σε ένα μήνυμα Echo Request.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>0-15</td>
+                  <td>Destination Unreachable <br> Υποδεικνύει ότι ο προορισμός δεν είναι προσβάσιμος, με διάφορους κωδικούς για να περιγράψει τον λόγο.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>0-3</td>
+                    <td>Redirect  <br> Ενημερώνει τον αποστολέα ότι ο δρομολογητής της δικτύωσης θα πρέπει να αλλάξει τη διαδρομή.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>Echo Request (Ping)</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>0-1</td>
+                  <td>Time Exceeded <br> Υποδεικνύει ότι το πακέτο δεδομένων δεν μπορεί να παραδοθεί εντός ενός χρονικού ορίου.</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>0-2</td>
+                    <td>Parameter Problem <br> Υποδεικνύει ότι υπάρχει πρόβλημα με τα δεδομένα της κεφαλίδας του πακέτου.</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>0</td>
+                    <td>Timestamp Request</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>0</td>
+                    <td>Timestamp Reply</td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>0</td>
+                    <td>Information Request</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>0</td>
+                    <td>Information Reply</td>
+                  </tr>
+            </table>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
