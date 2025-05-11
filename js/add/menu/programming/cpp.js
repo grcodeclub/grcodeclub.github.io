@@ -27,7 +27,7 @@ const mymenu = `
             <option value="https://grcodeclub.gr/cpp/class/header-file">Header File</option>
             <option value="https://grcodeclub.gr/cpp/operator-overloading">Υπερφόρτωση τελεστών</option>
         </optgroup>
-            <option value="https://grcodeclub.gr/cpp/files">Αρχεία</option>
+            <option value="https://grcodeclub.gr/cpp/commands/files">Αρχεία</option>
             <option value="https://grcodeclub.gr/cpp/exception">Χειρισμός εξαιρέσεων</option>
             <option value="https://grcodeclub.gr/cpp/templates">Templates</option>
             </select>
