@@ -11,7 +11,7 @@ const mymenu = `
         <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/java/">Εισαγωγή</option>
         <option value="https://github.com/grcodeclub/java">GitHub</option>
-        <option value="https://grcodeclub.gr/java/library/">Βιβλιοθήκες</option>
+        <option value="https://grcodeclub.gr/java/library/">Bιβλιοθήκες και Class</option>
         <option value="https://grcodeclub.gr/java/operators">Τελεστές</option>  
     <optgroup label="Βασικές Εντολές">
         <option value="https://grcodeclub.gr/java/commands/variables">Μεταβλητές</option>
