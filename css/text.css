@@ -91,6 +91,7 @@ code {
 	color: #ffffff;
 }
 
+
 section.tmp {
 	background-color: #1a1a1a; /* Σκούρο φόντο */
 	margin-left: 10%;
@@ -116,5 +117,5 @@ section.tmp {
 
 a code{
 	white-space: nowrap;
-	
+
 }
