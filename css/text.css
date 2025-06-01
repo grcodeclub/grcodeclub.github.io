@@ -91,21 +91,6 @@ code {
 	color: #ffffff;
 }
 
-a.link_here{
-	color: rgb(6, 4, 69);
-	background-color: rgba(128, 128, 128, 0.241);
-	padding: 2px;
-	border-radius: 2px;
-}
-
-a.link_here:hover{
-	color: rgb(6, 4, 69);
-	background-color: rgba(128, 128, 128, 0.639);
-	padding: 2px;
-	text-decoration: none;
-	border-radius: 2px;
-}
-
 section.tmp {
 	background-color: #1a1a1a; /* Σκούρο φόντο */
 	margin-left: 10%;
@@ -126,4 +111,10 @@ section.tmp {
 
 @media (min-width: 992px) {
 	a.link_here {white-space: nowrap;}
+}
+
+
+a code{
+	white-space: nowrap;
+	
 }
