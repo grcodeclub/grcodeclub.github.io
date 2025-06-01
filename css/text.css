@@ -118,9 +118,9 @@ section.tmp {
 
 
 /* Link */
-a code{
+code a{
 	color: rgb(175 201 239);
 }
-a:hover code{
+code a:hover {
   color: white;
 }
