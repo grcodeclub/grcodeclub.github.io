@@ -118,16 +118,9 @@ section.tmp {
 
 
 /* Link */
-<<<<<<< HEAD
 a code{
 	color: rgb(175 201 239);
 }
 a:hover code{
-=======
-a {
-	color: rgb(175 201 239);
-}
-a:hover {
->>>>>>> origin/main
   color: white;
 }
