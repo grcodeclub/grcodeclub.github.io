@@ -115,7 +115,7 @@ section.tmp {
 }
 
 
-a code{
+a code:hover{
 	white-space: nowrap;
-
+	color: white;
 }
