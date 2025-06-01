@@ -89,6 +89,7 @@ code {
 	border-radius: 3px;
 	tab-size: 2;
 	color: #ffffff;
+	white-space: nowrap;
 }
 
 
@@ -115,7 +116,11 @@ section.tmp {
 }
 
 
+
+/* Link */
+a {
+	color: rgb(175 201 239);
+}
 a:hover {
-  white-space: nowrap;
   color: white;
 }
