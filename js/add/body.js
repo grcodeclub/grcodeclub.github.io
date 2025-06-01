@@ -145,7 +145,7 @@ const htmlContentFooter = `
         </div>
     
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
-            &copy; 2024 Gr Code Club. All Rights Reserved.
+            GrCode Club | <a  style="" href="https://dimitridedou.github.io/">@dimitridedou</a>
         </div>
     </footer>
 `;
