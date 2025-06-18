@@ -14,174 +14,183 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Docker </h1>  
-        <p>Το Docker είναι μια πλατφόρμα ανοικτού κώδικα που χρησιμοποιείται για την αυτοματοποίηση, την ανάπτυξη και την εκτέλεση εφαρμογών 
-            μέσα σε περιβάλλοντα περιορισμένων πόρων, γνωστά ως "containers".</p>
-        <p>Η λογική του Docker, είναι ότι σηκώνουμε ένα container για κάθε service που θέλουμε.</p>
-        <h2 class="highlight">Container</h2>
-            <p>Ένα Docker Container χρησιμοποιεί το λειτουργικό και τον πυρήνα του host καθως δεν έχει δικό του πυρήνα. 
+            <p><b>Το Docker είναι μια πλατφόρμα ανοικτού κώδικα που χρησιμοποιείται για την αυτοματοποίηση, την ανάπτυξη και την εκτέλεση εφαρμογών 
+                μέσα σε περιβάλλοντα περιορισμένων πόρων, γνωστά ως "containers".</b></p>
+            <p><b>Η λογική του Docker, είναι ότι σηκώνουμε ένα container για κάθε service που θέλουμε.</b></p>
+            <h2 class="highlight">Docker Image</h2>
+                <p><b>Το Docker Image αποτελεί ένα αρχείο που περιλαμβάνει τις απαραίτητες οδηγίες για τη δημιουργία ενός container.</b></p>              
+                <p><b>Βασικές εντολές διαχείρισης image</b></p>
+                <p><b>Για να δούμε τώρα πόσα image βρίσκονται στον υπολογιστή μας.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker images</code></pre>
+                <pre><code class="language-bash">REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+hello-world             latest              bf756fb1ae65        4 months ago        13.3kB</code></pre></div>
+                <p><b>Για να κατεβάσουμε λοιπόν ένα image (π.χ. ubuntu)</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker pull ubuntu:20.04</code></pre></div>
+                <p><b>Για να διαγράψουμε ένα image με βάση το ID  </b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rmi bf756fb1ae65</code></pre></div>
+                <p><b>Αν υπάρχουν περισσότερα από ένα image με το ίδιο ID έχουμε στο σύστημά.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rmi -f bf756fb1ae65</code></pre></div>
+                <p><b>Για να διαγράψουμε τέλος όλα τα αχρησιμοποίητα image.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker image prune</code></pre></div>
+            <h2 class="highlight">Container</h2>
+                <p><b>Ένα Docker Container χρησιμοποιεί το λειτουργικό και τον πυρήνα του host καθως δεν έχει δικό του πυρήνα. 
                 Με αποτέλεσμα να είναι πολύ ποιο ελαφρύ και να ξοδεύει μόνο τα αναγκαία resources, για να τρέξουν τα services που θέλει.
                 <br>Κάθε container είναι πλήρως απομονωμένο από το host λειτουργικό και από άλλα containers.
-                <br>Κάθε container δεν κρατάει δεδομένα μέσα του. Δηλαδή αν τρέχουμε ένα container με mySQL, τα δεδομένα της βάσης θα χαθούν αν κάνουμε restart</p>
-            <p><u>Βασικές εντολές διαχείρισης container</u></p>
-            <p>Για να δούμε λοιπόν μία γενική εικόνα των container που έχουμε στο σύστημά μας, δίνουμε την εντολή:</p>
-            <div class="terminal" ><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker ps -a</code></pre>           
-            <pre><code class="language-bash" >CONTAINER ID    IMAGE              COMMAND            CREATED         STATUS          PORTS                NAMES
+                <br>Κάθε container δεν κρατάει δεδομένα μέσα του. Δηλαδή αν τρέχουμε ένα container με mySQL, τα δεδομένα της βάσης θα χαθούν αν κάνουμε restart</b></p>
+                <p><b>Βασικές εντολές διαχείρισης container</b></p>
+                <p><b>Για να δούμε λοιπόν μία γενική εικόνα των container που έχουμε στο σύστημά μας, δίνουμε την εντολή:</b></p>
+                <div class="terminal" ><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker ps -a</code></pre>           
+                <pre><code class="language-bash" >CONTAINER ID    IMAGE              COMMAND            CREATED         STATUS          PORTS                NAMES
 8b3a2f0d4e25    nginx:latest       "nginx -g 'daemon   2 hours ago     Up 2 hours      0.0.0.0:80->80/tcp   apache</code></pre></div>
-            <ul>
-                <li>CONTAINER ID: Ο αριθμός του κάθε container στο σύστημά μας.</li>
-                <li>IMAGE: Η υπηρεσία που τρέχει το κάθε container.</li>
-                <li>CREATED: Πότε δημιουργήθηκε το container.</li>
-                <li>STATUS: Εδώ μπορούμε να δούμε αν το container λειτουργεί ή αν είναι σταματημένο.</li>
-                <li>PORTS: Εδώ προβάλλονται τα port στα οποία τρέχει το κάθε container.</li>
-                <li>NAMES: Εδώ είναι τα ονόματα που τους έχουμε δώσει.</li>
-            </ul>
-            <p>Να σταματήσουμε ένα container (π.χ apache).</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stop apache</code></pre></div>                
-            <p>Να ξεκινήσουμε ένα container (π.χ apache)</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker start apache</code></pre></div>                    
-            <p>Για να αφαιρέσουμε ένα container (π.χ apache) από το σύστημά μας θα πρέπει πρώτα να το σταματήσουμε και μετά να το διαγράψουμε.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rm -f apache</code></pre></div>
-            <p>Για να διαγράψουμε μαζικά όλα τα container που έχουμε σταματημένα δίνουμε την εντολή</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker container prune</code></pre></div>
-            <p>Να μας εμφανίσιμή την port για ένα συγκεκριμένο container (π.χ apache). </p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker port apache</code></pre></div>
-        <h2 class="highlight">Docker Image</h2>
-            <p>Το Docker Image αποτελεί ένα αρχείο που περιλαμβάνει τις απαραίτητες οδηγίες για τη δημιουργία ενός container.</p>              
-            <p><u>Βασικές εντολές διαχείρισης image</u></p>
-            <p>Για να δούμε τώρα πόσα image βρίσκονται στον υπολογιστή μας.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker images</code></pre>
-            <pre><code class="language-bash">REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-hello-world             latest              bf756fb1ae65        4 months ago        13.3kB</code></pre></div>
-            <p>Για να κατεβάσουμε λοιπόν ένα image (π.χ. ubuntu)</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker pull ubuntu:20.04</code></pre></div>
-            <p>Για να διαγράψουμε ένα image με βάση το ID  </p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rmi bf756fb1ae65</code></pre></div>
-            <p>Αν υπάρχουν περισσότερα από ένα image με το ίδιο ID έχουμε στο σύστημά.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rmi -f bf756fb1ae65</code></pre></div>
-            <p>Για να διαγράψουμε τέλος όλα τα αχρησιμοποίητα image.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker image prune</code></pre></div>
-        <h2 class="highlight">Dockerfile</h2>
-            <p>Το Dockerfile είναι ένα αρχείο κειμένου που χρησιμοποιείται για την δημιουργία Docker Image.</p>
-            <p>Η <b>FROM</b> αυτή η εντολή καθορίζει ποια βασική εικόνα θα χρησιμοποιηθεί ως βάση για τη νέα εικόνα.>Παράδειγμα:</p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">FROM ubuntu:20.04</code></pre></div></div>
-            <p>Η <b>RUN</b> εκτελεί μια εντολή στο εσωτερικό της εικόνας κατά τη δημιουργία της. Χρησιμοποιείται για την εγκατάσταση πακέτων και την εκτέλεση εντολών.</p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">RUN apt-get update && apt-get install -y nginx</code></pre></div></div>
-            <p>Η <b>COPY</b> χρησιμοποιούνται για την αντιγραφή αρχείων και φακέλων από τον υπολογιστή σας στο εσωτερικό της εικόνας.</p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">COPY app /usr/src/app</code></pre></div></div>        
-            <p>Η <b>ADD</b> εκτελεί τις ίδιες λειτουργίες με την εντολή COPY, αλλά έχει και μερικές επιπλέον δυνατότητες. Ειδικότερα, μπορεί να αντιγράψει αρχεία από τον υπολογιστή σας στην εικόνα, αλλά μπορεί επίσης να αντιγράψει αρχεία από μια διεύθυνση URL ή να αποσυμπιέσει αρχεία τύπου tar αυτόματα.</p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">ADD http://example.com/myapp.tar.gz /usr/src/</code></pre></div></div>    
-            <p>Η <b>WORKDIR</b> ορίζει τον φάκελο εργασίας για τις μελλοντικές εντολές στο Dockerfile</p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">WORKDIR /usr/src/app</code></pre></div></div>
-            <p>Η <b>EXPOSE</b> καθορίζει ποιες πόρτες θα είναι προσβάσιμες από τον υπολογιστή του host όταν εκτελεστεί η εικόνα.</p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">EXPOSE 8080</code></pre></div></div>
-            <p>Με το <b>CMD</b> δίνουμε την εντολή που θέλουμε να εκτελεστεί αμέσως μετά την εκκίνηση του container</p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-dockerfile">CMD ["npm", "start"]</code></pre></div></div>
-        <h2 class="highlight">Βασικές εντολές διαχείρισης Network</h2>
-            <p>Το Docker δημιουργεί αυτόματα ένα bridge δίκτυο, το οποίο ονομάζεται "docker0" και μπορούμε να το δούμε δίνοντας στο τερματικό μας την εντολή:</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ifconfig</code></pre></div>
-            <p>Για να φτιάξουμε τώρα το δικό μας bridge network με όνομα "gr-code" θα δώσουμε την εντολή:</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network create -d bridge gr-code</code></pre></div>
-            <p>Για να φτιάξουμε ένα overlay network με την ίδια ονομασία θα δώσουμε την εντολή:</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network create -d overlay gr-code</code></pre></div>         
-            <p> Για να δούμε λοιπόν μία λίστα των δικτύων μας θα δώσουμε την εντολή:</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network ls</code></pre>
-            <pre class="language-bash"><code>NETWORK ID          NAME                DRIVER              SCOPE
+                <ul>
+                    <li>CONTAINER ID: Ο αριθμός του κάθε container στο σύστημά μας.</li>
+                    <li>IMAGE: Η υπηρεσία που τρέχει το κάθε container.</li>
+                    <li>CREATED: Πότε δημιουργήθηκε το container.</li>
+                    <li>STATUS: Εδώ μπορούμε να δούμε αν το container λειτουργεί ή αν είναι σταματημένο.</li>
+                    <li>PORTS: Εδώ προβάλλονται τα port στα οποία τρέχει το κάθε container.</li>
+                    <li>NAMES: Εδώ είναι τα ονόματα που τους έχουμε δώσει.</li>
+                </ul>
+                <p><b>Να σταματήσουμε ένα container (π.χ apache).</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stop apache</code></pre></div>                
+                <p><b>Να ξεκινήσουμε ένα container (π.χ apache)</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker start apache</code></pre></div>                    
+                <p><b>Για να αφαιρέσουμε ένα container (π.χ apache) από το σύστημά μας θα πρέπει πρώτα να το σταματήσουμε και μετά να το διαγράψουμε.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker rm -f apache</code></pre></div>
+                <p><b>Για να διαγράψουμε μαζικά όλα τα container που έχουμε σταματημένα δίνουμε την εντολή</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker container prune</code></pre></div>
+                <p><b>Να μας εμφανίσιμή την port για ένα συγκεκριμένο container (π.χ apache). </b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker port apache</code></pre></div>
+            <h2 class="highlight">Βασικές εντολές διαχείρισης Network</h2>
+                <p><b>Το Docker δημιουργεί αυτόματα ένα bridge δίκτυο, το οποίο ονομάζεται "docker0" και μπορούμε να το δούμε δίνοντας στο τερματικό μας την εντολή:</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ifconfig</code></pre></div>
+                <p><b>Για να φτιάξουμε τώρα το δικό μας bridge network με όνομα "gr-code" θα δώσουμε την εντολή:</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network create -d bridge gr-code</code></pre></div>
+                <p><b>Για να φτιάξουμε ένα overlay network με την ίδια ονομασία θα δώσουμε την εντολή:</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network create -d overlay gr-code</code></pre></div>         
+                <p><b> Για να δούμε λοιπόν μία λίστα των δικτύων μας θα δώσουμε την εντολή:</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker network ls</code></pre>
+                <pre class="language-bash"><code>NETWORK ID          NAME                DRIVER              SCOPE
 c1ae8a3bd6fb        bridge              bridge              local
 134626deef16        host                host                local
 7c00c10a741a        none                null                local</code></pre></div>         
-            <ul>
-                <li>NETWORK ID: Ο αριθμός του δικτύου.</li>
-                <li>NAME: Το όνομα που έχουμε ορίσει στο δίκτυο.</li>
-                <li>DRIVER: Ο driver μέσω του οποίου τρέχει το δίκτυό μας.</li>
-                <li>SCOPE: Εδώ θα δούμε αν το δίκτυό μας είναι local ή αν εξυπηρετεί κάποιο cluster με Docker Swarm.</li>
-            </ul>
-          <h2 class="highlight">Docker Compose</h2>
-        <p>Το Docker Compose είναι ένα εργαλείο που σε βοηθάει να ξεκινάς πολλά containers μαζί με μία μόνο εντολή, χρησιμοποιώντας ένα αρχείο ρυθμίσεων σε μορφή YAML (συνήθως <code>docker-compose.yml</code>).</p>
-        <table  class="table table-bordered">
-            <tr><th>Εντολή</th><th>Περιγραφή</th></tr>
-            <tr><td><code>docker-compose up</code></td><td>Εκκινεί όλα τα services</td></tr>
-            <tr><td><code>docker-compose up -d</code></td><td>Εκκινεί στο background (detached mode)</td></tr>
-            <tr><td><code>docker-compose down</code></td><td>Σταματάει και διαγράφει containers/networks</td></tr>
-            <tr><td><code>docker-compose logs</code></td><td>Δείχνει logs όλων των services</td></tr>
-            <tr><td><code>docker-compose exec</code></td><td>Εκτελεί εντολή μέσα σε running container</td></tr>
-            <tr><td><code>docker-compose build</code></td><td>Κάνει build εικόνων από Dockerfile</td></tr>
-        </table>
-        <p>Αν θελουμε ενα συγκεκριμενο service - container βαζουμε στο τελος το ονομα του.</p>
-        <h2 class="highlight">Docker Swarm</h2>
-        <p>Το Docker Swarm σού επιτρέπει να τρέχεις containers σε πολλά μηχανήματα.</p>
-        <ul>
-            <li>Δημιουργεί "services" αντί για μεμονωμένα containers.</li>
-            <li>Διαχειρίζεται πολλά machines (nodes) σαν ένα σύστημα.</li>
-            <li>Αναπαράγει containers (replicas) για μεγαλύτερη διαθεσιμότητα.</li>
-            <li>Αν πέσει ένα node, μεταφέρει τα containers αλλού.</li>
-            <li>Μοιράζει το traffic αυτόματα στα replicas.</li>
-        </ul>
-        <p><u>Ρόλοι στο Swarm:</u></p>
-        <ul>
-            <li>Manager : Διαχειρίζεται το cluster, αποφασίζει</li>
-            <li>Worker : Τρέχει containers, εκτελεί tasks</li>
-        </ul>
-        <h2 class="highlight">Services</h2>
-            <p>Αν θέλουμε να εμφανίσουμε μια λίστα με όλες τις υπηρεσίες που εκτελούνται.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service ls</code></pre></div>
-            <p>Δείχνει πού και πώς τρέχουν τα containers του service</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service ps onoma_service</code></pre></div>
-            <p>Δείχνει τα logs ενός Docker Service που τρέχει σε περιβάλλον Docker Swarm με το όνομα onoma_service.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service log onoma_service</code></pre></div>
-            <p>Επαναδημιουργεί όλα τα tasks</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service update --force onoma_service=n</code></pre></div>
-            <p>Κάνει ενημέρωση (update) μιας Docker Swarm υπηρεσίας,ώστε τα tasks της υπηρεσίας να τρέχουν μόνο σε έναν συγκεκριμένο node, με hostname snf-79675.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service update --constraint-add 'node.hostname == snf-79675' onoma_service</code></pre></div>
-            <p>Αλλάζει τον αριθμό replicas</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service scale onoma_service=n</code></pre></div>
-            <p>Διαγράφει service</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service rm onoma_service</code></pre></div>
-            <p>Προβολή λεπτομερειών για ένα service</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service inspect onoma_service</code></pre></div>
-            <p>Επιστρέφει το service στην προηγούμενη έκδοση</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service rollback onoma_service</code></pre></div>
-            <p>Ζωντανά logs (follow mode)</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service logs -f onoma_service</code></pre></div>
-        
+                <ul>
+                    <li>NETWORK ID: Ο αριθμός του δικτύου.</li>
+                    <li>NAME: Το όνομα που έχουμε ορίσει στο δίκτυο.</li>
+                    <li>DRIVER: Ο driver μέσω του οποίου τρέχει το δίκτυό μας.</li>
+                    <li>SCOPE: Εδώ θα δούμε αν το δίκτυό μας είναι local ή αν εξυπηρετεί κάποιο cluster με Docker Swarm.</li>
+                </ul>
+            <h2 class="highlight">Docker Volumes</h2>
+                <p><b>Τα volumes είναι ο προτιμώμενος τρόπος αποθήκευσης δεδομένων στο Docker, έξω από το lifecycle του container (ώστε να μην χαθούν όταν το container διαγραφεί).</b></p>
+                <p><b>Δημιουργία Volume</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker volume create my_volume</code></pre></div>
+                <p><b>Λίστα με όλα τα Volumes</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker volume ls</code></pre></div>
+                <p><b>Πληροφορίες για Volume</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker volume inspect my_volume</code></pre></div>
+                <p><b>Διαγραφή Volume</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker volume rm my_volume</code></pre></div>
+                <p><b>Διαγραφή όλων των αχρησιμοποίητων Volumes</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker volume prune</code></pre></div>
+                <p><b>Πού αποθηκεύονται τα Volumes στον δίσκο;</b></p>
+                <p><b>Συνήθως: /var/lib/docker/volumes/</b></p>
+            <h2 class="highlight">Docker Compose</h2>
+                <p><b>Το Docker Compose είναι ένα εργαλείο που σε βοηθάει να ξεκινάς πολλά containers μαζί με μία μόνο εντολή, χρησιμοποιώντας ένα αρχείο ρυθμίσεων σε μορφή YAML (συνήθως <code>docker-compose.yml</code>).</b></p>
+                <table  class="table table-bordered">
+                    <tr><th>Εντολή</th><th>Περιγραφή</th></tr>
+                    <tr><td><code>docker-compose up</code></td><td>Εκκινεί όλα τα services</td></tr>
+                    <tr><td><code>docker-compose up -d</code></td><td>Εκκινεί στο background (detached mode)</td></tr>
+                    <tr><td><code>docker-compose down</code></td><td>Σταματάει και διαγράφει containers/networks</td></tr>
+                    <tr><td><code>docker-compose logs</code></td><td>Δείχνει logs όλων των services</td></tr>
+                    <tr><td><code>docker-compose exec</code></td><td>Εκτελεί εντολή μέσα σε running container</td></tr>
+                    <tr><td><code>docker-compose build</code></td><td>Κάνει build εικόνων από Dockerfile</td></tr>
+                </table>
+                <p><b>Αν θελουμε ενα συγκεκριμενο service - container βαζουμε στο τελος το ονομα του.</b></p>
+            <h2 class="highlight">Docker Swarm</h2>
+                <p><b>Το Docker Swarm σού επιτρέπει να τρέχεις containers σε πολλά μηχανήματα.</b></p>
+                <ul>
+                    <li>Δημιουργεί "services" αντί για μεμονωμένα containers.</li>
+                    <li>Διαχειρίζεται πολλά machines (nodes) σαν ένα σύστημα.</li>
+                    <li>Αναπαράγει containers (replicas) για μεγαλύτερη διαθεσιμότητα.</li>
+                    <li>Αν πέσει ένα node, μεταφέρει τα containers αλλού.</li>
+                    <li>Μοιράζει το traffic αυτόματα στα replicas.</li>
+                </ul>
+                <p><b>Ρόλοι στο Swarm:</b></p>
+                <ul>
+                    <li>Manager : Διαχειρίζεται το cluster, αποφασίζει</li>
+                    <li>Worker : Τρέχει containers, εκτελεί tasks</li>
+                </ul>
+                <p><b>Ενεργοποίηση Swarm Mode</b></p>
+                <ol>
+                    <li>Μετατρέπει το host σε Swarm manager.</li>
+                    <li>Εμφανίζει ένα join-token για να προσθέσεις worker nodes.</li>
+                </ol>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker swarm init</code></pre></div>
+                <p>Για συγκεκριμένη IP:</p>        
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker swarm init --advertise-addr &lt;IP></code></pre></div>
+                <p><b>Αποχώρηση από το υπάρχον Swarm</b></p>
+                <p>Αν ο node είναι worker, τρέξε:</p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ddocker swarm leave</code></pre></div>
+                <p>Αν ο node είναι manager, τρέξε:</p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker swarm leave --force</code></pre></div>
+                <p>⚠️ Αν είναι ο ΜΟΝΑΔΙΚΟΣ manager του swarm, η εντολή θα τερματίσει το cluster.</p>
+                <p><b>Έλεγχος κατάστασης swarm</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node ls</code></pre></div>
+                <p><b>Προσθήκη Worker / Manager Node</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker swarm join --token &lt;TOKEN> &lt;MANAGER-IP>:2377</code></pre></div>
+                <p><b>Ενημέρωση ενός service</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service update --image nginx:alpine web</code></pre></div>
+                <ul><li>Κάνει rolling update σε όλα τα replicas.</li></ul>
+            <h2 class="highlight">Services</h2>
+                <p><b>Αν θέλουμε να εμφανίσουμε μια λίστα με όλες τις υπηρεσίες που εκτελούνται.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service ls</code></pre></div>
+                <p><b>Δείχνει πού και πώς τρέχουν τα containers του service</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service ps onoma_service</code></pre></div>
+                <p><b>Δείχνει τα logs ενός Docker Service που τρέχει σε περιβάλλον Docker Swarm με το όνομα onoma_service.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service log onoma_service</code></pre></div>
+                <p><b>Επαναδημιουργεί όλα τα tasks</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service update --force onoma_service=n</code></pre></div>
+                <p><b>Κάνει ενημέρωση (update) μιας Docker Swarm υπηρεσίας,ώστε τα tasks της υπηρεσίας να τρέχουν μόνο σε έναν συγκεκριμένο node, με hostname snf-79675.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service update --constraint-add 'node.hostname == snf-79675' onoma_service</code></pre></div>
+                <p><b>Αλλάζει τον αριθμό replicas</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service scale onoma_service=n</code></pre></div>
+                <p><b>Διαγράφει service</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service rm onoma_service</code></pre></div>
+                <p><b>Προβολή λεπτομερειών για ένα service</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service inspect onoma_service</code></pre></div>
+                <p><b>Επιστρέφει το service στην προηγούμενη έκδοση</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service rollback onoma_service</code></pre></div>
+                <p><b>Ζωντανά logs (follow mode)</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker service logs -f onoma_service</code></pre></div>
         <h2 class="highlight">Node</h2>
-            <p>Ένα node είναι ένα μηχάνημα (server ή VM) που συμμετέχει σε ένα Swarm cluster.</p>
-            <p>Χρησιμοποιείται στο Docker Swarm mode και εμφανίζει μια λίστα με όλους τους nodes (μηχανές) που συμμετέχουν στο Swarm Cluster.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node ls</code></pre><pre class="language-bash"><code>ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+                <p><b>Ένα node είναι ένα μηχάνημα (server ή VM) που συμμετέχει σε ένα Swarm cluster.</b></p>
+                <p><b>Χρησιμοποιείται στο Docker Swarm mode και εμφανίζει μια λίστα με όλους τους nodes (μηχανές) που συμμετέχουν στο Swarm Cluster.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node ls</code></pre><pre class="language-bash"><code>ID                            HOSTNAME    STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
 m5kz8zq9abcde1n4yz45ty98      node1       Ready     Active         Leader           25.0.2
 qwe890vbn567zxc234asd789      node2       Ready     Active                          25.0.2
 fgh123rty456bnm890lkj123      node3       Ready     Active                          25.0.2</code></pre></div> 
-            <p>Εμφανίζει λεπτομερείς πληροφορίες για το συγκεκριμένο node snf-80512 στο Docker Swarm cluster, σε μορφή JSON.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node inspect snf-80512</code></pre></div>
-            <p>Δείχνει τα tasks που τρέχουν στο συγκεκριμένο node</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node ps onoma_node</code></pre></div>
-            <p>Ενημερώνει χαρακτηριστικά node</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node update</code></pre></div>                
-            <p>Προάγει node σε manager</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node promote onoma_node</code></pre></div>
-            <p>Υποβαθμίζει node σε worker</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node demote onoma_node</code></pre></div>                
-            <p>Αφαιρεί node από το swarm</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node rm onoma_node</code></pre></div>
-            <p>Αλλάζει το availability (active / pause / drain)</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node update --availability</code></pre></div>
-                
+                <p><b>Εμφανίζει λεπτομερείς πληροφορίες για το συγκεκριμένο node snf-80512 στο Docker Swarm cluster, σε μορφή JSON.</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node inspect snf-80512</code></pre></div>
+                <p><b>Δείχνει τα tasks που τρέχουν στο συγκεκριμένο node</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node ps onoma_node</code></pre></div>
+                <p><b>Ενημερώνει χαρακτηριστικά node</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node update</code></pre></div>                
+                <p><b>Προάγει node σε manager</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node promote onoma_node</code></pre></div>
+                <p><b>Υποβαθμίζει node σε worker</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node demote onoma_node</code></pre></div>                
+                <p><b>Αφαιρεί node από το swarm</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node rm onoma_node</code></pre></div>
+                <p><b>Αλλάζει το availability (active / pause / drain)</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker node update --availability</code></pre></div>
             <h2 class="highlight">Docker Config</h2>
-            <p>Το docker config επιτρέπει να : </p>
-            <ol>
-                <li>Ανεβάζεις αρχεία ρυθμίσεων (π.χ. Nginx, app settings) στο Swarm</li>
-                <li>Τα μοιράζεσαι σε services, χωρίς να τα "χώνεις" μέσα στο image</li>
-                <li>Είναι ασφαλής και εύκολος τρόπος να διαχειρίζεσαι αρχεία ρυθμίσεων σε περιβάλλον production</li>
-            </ol>
-    
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker config create nginx_config ./nginx.conf</code></pre></div>
-            <p>docker-compose.yml</p><div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-yml">services:
+                <p><b>Το docker config επιτρέπει να : </b></p>
+                <ol>
+                    <li>Ανεβάζεις αρχεία ρυθμίσεων (π.χ. Nginx, app settings) στο Swarm</li>
+                    <li>Τα μοιράζεσαι σε services, χωρίς να τα "χώνεις" μέσα στο image</li>
+                    <li>Είναι ασφαλής και εύκολος τρόπος να διαχειρίζεσαι αρχεία ρυθμίσεων σε περιβάλλον production</li>
+                </ol>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker config create nginx_config ./nginx.conf</code></pre></div>
+                <p><b>docker-compose.yml</b></p><div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-yml">services:
   web:
     image: nginx:latest
     ports:
@@ -189,18 +198,18 @@ fgh123rty456bnm890lkj123      node3       Ready     Active                      
     configs:
       - source: nginx_config
         target: /etc/nginx/nginx.conf</code></pre></div></div>
-        <h2 class="highlight">Docker Stack</h2>
-        <p>Ένα stack είναι ένας "ομάδα" από services που δουλεύουν μαζί (π.χ. database), και το docker stack τα εκκινεί, ενημερώνει και διαχειρίζεται όλα μαζί με ένα αρχείο YAML.</p>
-        <p>Κάνει deploy όλο το stack</p>
-        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack deploy -c docker-compose.yml mystack</code></pre></div>
-        <p>Δείχνει όλα τα stacks</p>
-        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack ls</code></pre></div>
-        <p>Δείχνει τα services του stack</p>
-        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack services mystack</code></pre></div>
-        <p>Δείχνει πού και πώς τρέχουν τα containers</p>
-        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack ps mystack</code></pre></div>
-        <p>Σβήνει το stack και όλα τα services του stack</p>
-        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack rm mystack</code></pre></div>
-<div id="addFooter"></div>
+            <h2 class="highlight">Docker Stack</h2>
+                <p><b>Ένα stack είναι ένας "ομάδα" από services που δουλεύουν μαζί (π.χ. database), και το docker stack τα εκκινεί, ενημερώνει και διαχειρίζεται όλα μαζί με ένα αρχείο YAML.</b></p>
+                <p><b>Κάνει deploy όλο το stack</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack deploy -c docker-compose.yml mystack</code></pre></div>
+                <p><b>Δείχνει όλα τα stacks</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack ls</code></pre></div>
+                <p><b>Δείχνει τα services του stack</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack services mystack</code></pre></div>
+                <p><b>Δείχνει πού και πώς τρέχουν τα containers</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack ps mystack</code></pre></div>
+                <p><b>Σβήνει το stack και όλα τα services του stack</b></p>
+                <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">docker stack rm mystack</code></pre></div>
+    <div id="addFooter"></div>
 </body>
 </html>
