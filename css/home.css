@@ -1,7 +1,7 @@
         .card{margin-bottom: 2%;} .card-header {font-weight: bold;}
-        .card:hover {transform: translateY(-5px);} .btn-primary:hover {background-color: #5b6e9f;}
+        .card:hover {transform: translateY(-5px);} .btn-dark:hover {background-color: #5b6e9f;}
         .card-img-top {height: 180px;object-fit: cover;border-bottom: 2px solid #ddd;}
-        .btn-primary {border-radius: 30px;width: 100%;transition: background-color 0.3s ease;}
+        .btn-dark {border-radius: 30px;width: 100%;transition: background-color 0.3s ease;}
         .widget-container {
             display: flex;
             gap: 10px; /* Απόσταση μεταξύ των widgets */
