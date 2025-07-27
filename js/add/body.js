@@ -44,7 +44,7 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/more/uploadsite">Upload Website</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/more/seo">SEO</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/cms/wordpress/">WordPress</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/more/http-methods">HTTP Μέθοδοι</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/more/http/">HTTP</a></li>
                 </ul>
             </li> 
              
