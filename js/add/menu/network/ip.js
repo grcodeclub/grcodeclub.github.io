@@ -12,7 +12,6 @@ const mymenu = `
     <option value="https://grcodeclub.gr/network/protocol/network-address/ip/">Internet Protocol</option>
     <option value="https://grcodeclub.gr/network/protocol/network-address/ip/ipv4">Internet Protocol v4</option>
     <option value="https://grcodeclub.gr/network/protocol/network-address/ip/ipv6">Internet Protocol v6</option>
-    <option value="https://grcodeclub.gr/network/protocol/network-address/ip/packet_IPv4">Internet Protocol v4 Μορφή Πακέτο</option>
             </select>
         </div>
     </div>
