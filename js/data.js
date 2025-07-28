@@ -124,7 +124,6 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     'https://grcodeclub.gr/mobile/android/': 'https://grcodeclub.github.io/js/add/menu/android.js',
     'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/js/add/menu/syntomografies.js',
     'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/js/add/menu/orologia.js',
-    'https://grcodeclub.gr/hardware/': 'https://grcodeclub.github.io/js/add/menu/hardware.js',
     'https://grcodeclub.gr/network/protocol/network-address/ip/': 'https://grcodeclub.github.io/js/add/menu/network/ip.js',
     'https://grcodeclub.gr/network/tcp-ip/': 'https://grcodeclub.github.io/js/add/menu/network/tcp-ip.js',
     'https://grcodeclub.gr/linux/terminal/': 'https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js',
