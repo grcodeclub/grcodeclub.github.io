@@ -154,18 +154,4 @@ fetch(currentURL)
     .catch(error => {    console.error("Σφάλμα κατά την αίτηση:", error);    });
 
 
-<<<<<<< HEAD
 });
-=======
-});
-
-
- // 1. Φορτώνουμε το script της Google AdSense δυναμικά
-    (function() {
-      var script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8204076348330244';
-      script.crossOrigin = 'anonymous';
-      document.head.appendChild(script);
-})();
->>>>>>> origin/main
