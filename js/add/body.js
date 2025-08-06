@@ -40,7 +40,6 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/html/">Html</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/css/">CSS</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/javascript/">JavaScript</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/website/nodejs/">Node.js</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/more/uploadsite">Upload Website</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/more/seo">SEO</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/website/cms/wordpress/">WordPress</a></li>
