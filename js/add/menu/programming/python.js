@@ -12,21 +12,16 @@ const mymenu = `
             <option value="https://grcodeclub.gr/python/">Εισαγωγή</option>
             <option value="https://grcodeclub.gr/python/library/">Βιβλιοθήκες</option>
             <option value="https://grcodeclub.gr/python/operators">Τελεστές</option>  
-        <optgroup label="Βασικές Εντολές">
             <option value="https://grcodeclub.gr/python/commands/variables">Μεταβλητές</option>
             <option value="https://grcodeclub.gr/python/commands/output_input">Είσοδος / Έξοδος</option>
             <option value="https://grcodeclub.gr/python/commands/conditions">Δομή Ελέγχου</option>
             <option value="https://grcodeclub.gr/python/commands/loop">Δομή Επανάληψης</option>
-            <option value="https://grcodeclub.gr/python/commands/loop">Δομή Επανάληψης</option>
-            <option value="https://grcodeclub.gr/python/commands/function">Συναρτήσεις</option>
-        </optgroup>
             <option value="https://grcodeclub.gr/python/strings">Strings</option>
             <option value="https://grcodeclub.gr/python/files">Αρχεία</option>
+            <option value="https://grcodeclub.gr/python/list">Λίστες</option>
             <option value="https://grcodeclub.gr/python/terminal">Terminal</option>
-        <optgroup label="Βασικές Εντολές">
-                <option value="https://grcodeclub.gr/python/function/">Δημιουργία Συναρτήσεων</option>
-                <option value="https://grcodeclub.gr/python/function/lambda">lambda</option>
-        </optgroup>
+            <option value="https://grcodeclub.gr/python/function/">Δημιουργία Συναρτήσεων</option>
+            <option value="https://grcodeclub.gr/python/function/lambda">lambda</option>
             </select>
         </div>
     </div>
