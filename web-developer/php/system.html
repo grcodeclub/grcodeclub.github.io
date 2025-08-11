@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Php | Στοιχεία του υπολογιστή">
+    <meta name="twitter:image" content="https://grcodeclub.gr/files-page/preview/programming/php.png">
+    <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/programming/php.png"/>
+    <meta property="og:title" content="Php | Στοιχεία του υπολογιστή">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Στοιχεία του υπολογιστή</h1>
+        <p>Πληροφορίες του διακομιστή (Server Information):Μπορείς να χρησιμοποιήσεις την phpinfo() για να εμφανίσεις 
+            πληροφορίες σχετικά με τη ρύθμιση παραμέτρων της PHP, το λειτουργικό σύστημα, τις εκδόσεις των εγκατεστημένων 
+            επεκτάσεων και πολλά άλλα:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor">
+<code class="language-php">&lt;?php
+phpinfo();
+?></code></pre></div></div>
+
+        <p>Εμφάνιση λειτουργικού συστήματος</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor">
+<code class="language-php">echo 'Λειτουργικό σύστημα: ' . php_uname('s') . PHP_EOL;</code></pre></div></div>
+
+        <p>Εμφάνιση ονόματος υπολογιστή</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor">
+<code class="language-php">echo 'Όνομα υπολογιστή: ' . php_uname('n') . PHP_EOL;</code></pre></div></div>
+
+        <p>Εμφάνιση έκδοσης λειτουργικού συστήματος</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor">
+<code class="language-php">echo 'Έκδοση λειτουργικού συστήματος: ' . php_uname('v') . PHP_EOL;</code></pre></div></div>
+
+        <p>Εμφάνιση αρχιτεκτονικής υπολογιστή</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor">
+<code class="language-php">echo 'Αρχιτεκτονική υπολογιστή: ' . php_uname('m') . PHP_EOL;</code></pre></div></div>
+
+    </div>
+</div>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

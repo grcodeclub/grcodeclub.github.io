@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="WordPress Plugins (Action Hooks)">
+        <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/website.png">
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/website.png">
+        <meta property="og:title" content="WordPress Plugins (Action Hooks)">
+        <script src="https://grcodeclub.github.io/js/data.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="addHeader"></div>
+                <div class="container">
+                    <h1 class="title">WordPress Plugins (Action Hooks)</h1>
+                    <h2 class="highlight" style="background-color: transparent;"><u>Τι είναι τα Action Hooks;</u></h2>
+                    <p>Τα Action Hooks είναι συγκεκριμένα σημεία στον κώδικα του WordPress όπου μπορείς να εισάγεις τη δική σου συνάρτηση (function) που θα εκτελεστεί όταν φτάσει το πρόγραμμα σε αυτά τα σημεία.</p>
+                    <h2 class="highlight">Pages & Post</h2>
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν αλλάζει η κατάσταση μιας ανάρτησης, π.χ., από προσχέδιο (draft) 
+                        σε δημοσιευμένη (published). Μπορείς να το χρησιμοποιήσεις για να παρακολουθήσεις αλλαγές κατάστασης στις αναρτήσεις.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('transition_post_status', 'my_custom_transition_post_status', 10, 3);</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν μια προγραμματισμένη ανάρτηση δημοσιεύεται. 
+                        Χρήσιμο για την εκτέλεση ενεργειών όταν δημοσιεύεται περιεχόμενο αυτόματα.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('publish_future_post', 'my_custom_publish_future_post');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται αμέσως μετά τη διαγραφή μιας ανάρτησης. 
+                        Μπορείς να το χρησιμοποιήσεις για να καθαρίσεις δεδομένα ή να κάνεις άλλες ενέργειες που σχετίζονται με τη διαγραφή αναρτήσεων.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('deleted_post', 'my_custom_deleted_post');</code></pre></div></div>  
+
+
+                    <h2 class="highlight">Plugins</h2>
+                    <p><strong>Περιγραφή: </strong>Εκτελείται αφού έχουν φορτωθεί όλα τα ενεργά plugins, 
+                        αλλά πριν το WordPress ξεκινήσει να εκτελεί άλλες λειτουργίες (όπως το init).
+                         Είναι ιδανικό για να αρχικοποιήσεις τις λειτουργίες του plugin σου ή να φορτώσεις μεταφράσεις.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('plugins_loaded', 'my_custom_plugin_loaded');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν ενεργοποιείται ένα plugin. Χρήσιμο για την εκτέλεση ενέργειες 
+                        κατά την ενεργοποίηση, όπως η δημιουργία πίνακων στη βάση δεδομένων ή η ρύθμιση προεπιλεγμένων τιμών.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('activate_plugin', 'my_custom_plugin_activate');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν ένα plugin απενεργοποιείται. Χρησιμοποιείται για να καθαρίσεις 
+                        προσωρινά δεδομένα ή να κάνεις άλλες ενέργειες κατά την απενεργοποίηση.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('deactivate_plugin', 'my_custom_plugin_deactivate');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν ένα plugin απεγκαθίσταται. Μπορείς να το χρησιμοποιήσεις για να 
+                        αφαιρέσεις πλήρως όλα τα δεδομένα που σχετίζονται με το plugin από τη βάση δεδομένων και το σύστημα αρχείων.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('uninstall_plugin', 'my_custom_plugin_uninstall');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Χρησιμοποιείται για να καθορίσεις μια συνάρτηση που θα εκτελείται όταν το plugin 
+                        σου ενεργοποιείται. Αυτή η συνάρτηση καθορίζεται κατά την εγγραφή του hook και δεν χρειάζεται να 
+                        χρησιμοποιήσεις το add_action.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">register_activation_hook(__FILE__, 'my_custom_plugin_activate');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong> Όπως το 'register_activation_hook', αλλά εκτελείται όταν το plugin απενεργοποιείται. Επίσης, δεν χρειάζεται να χρησιμοποιήσεις το add_action.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">register_deactivation_hook(__FILE__, 'my_custom_plugin_deactivate');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν ολοκληρώνεται η αναβάθμιση ενός plugin, θέματος ή του πυρήνα του WordPress. Χρησιμοποιείται συχνά για να εκτελείς κώδικα που πρέπει να τρέχει μετά από μια αναβάθμιση.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('upgrader_process_complete', 'my_custom_upgrader_process', 10, 2);</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Σου επιτρέπει να προσθέσεις προσαρμοσμένους συνδέσμους (όπως "Ρυθμίσεις") κάτω από το plugin στη σελίδα των plugins.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'my_custom_plugin_action_links');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται κατά τη φόρτωση της σελίδας plugins και σου επιτρέπει να επεξεργαστείς τη λίστα των plugins που εμφανίζονται εκεί.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_filter('network_admin_plugin_action_links_' . plugin_basename(__FILE__), 'my_custom_network_plugin_action_links');</code></pre></div></div>  
+
+                    <h2 class="highlight">Login & Logout</h2>
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν ένας χρήστης συνδέεται επιτυχώς στο WordPress. 
+                        Μπορείς να το χρησιμοποιήσεις για να καταγράψεις ή να παρακολουθήσεις συμβάντα σύνδεσης.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('wp_login', 'my_custom_login_function', 10, 2);</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν ένας χρήστης αποσυνδέεται από το WordPress. 
+                        Χρήσιμο για καθαρισμούς ή άλλες ενέργειες κατά την αποσύνδεση.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('wp_logout', 'my_custom_logout_function');</code></pre></div></div>  
+             
+
+                    <h2 class="highlight">Themes & </h2>
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται αμέσως μετά την ενεργοποίηση ενός θέματος. Χρησιμοποιείται συχνά για να 
+                        προσθέσεις υποστήριξη για διάφορες δυνατότητες του θέματος, όπως post-thumbnails, custom-logo, κ.λπ.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('after_setup_theme', 'my_custom_theme_setup');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong> Εκτελείται πριν την αλλαγή θέματος. 
+                        Χρήσιμο για καθαρισμούς ή άλλες ενέργειες πριν από τη μετάβαση σε ένα νέο θέμα.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('switch_theme', 'my_custom_switch_theme');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται ακριβώς πριν κλείσει η ετικέτα head σε κάθε σελίδα του frontend. Είναι ιδανικό για να προσθέσεις επιπλέον meta tags, styles ή scripts.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('wp_head', 'my_custom_wp_head');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται ακριβώς πριν κλείσει η ετικέτα footer σε κάθε σελίδα του frontend. 
+                        Συχνά χρησιμοποιείται για να προσθέσεις scripts που πρέπει να φορτωθούν στο τέλος της σελίδας.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('wp_footer', 'my_custom_wp_footer');</code></pre></div></div>  
+                    
+                    <p><strong>Περιγραφή: </strong>Χρησιμοποιείται για την προσθήκη (enqueue) scripts και styles στο frontend του site. 
+                        Είναι ο ενδεδειγμένος τρόπος για να συμπεριλάβεις CSS και JavaScript αρχεία.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('wp_enqueue_scripts', 'my_custom_scripts_function');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Χρησιμοποιείται για την προσθήκη scripts και styles στη σελίδα σύνδεσης του WordPress.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('login_enqueue_scripts', 'my_custom_login_scripts');</code></pre></div></div>  
+                
+                    <p><strong>Περιγραφή: </strong>Εκτελείται αμέσως πριν φορτωθεί το αρχείο header.php. Χρησιμοποιείται για να προσθέσεις κώδικα πριν το header του θέματος.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('get_header', 'my_custom_get_header');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong> Εκτελείται αμέσως πριν φορτωθεί το αρχείο sidebar.php. Χρησιμοποιείται για να προσθέσεις κώδικα πριν το sidebar του θέματος.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('get_sidebar', 'my_custom_get_sidebar');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται αμέσως πριν φορτωθεί το αρχείο footer.php. Χρησιμοποιείται για να προσθέσεις κώδικα πριν το footer του θέματος.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('get_footer', 'my_custom_get_footer');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Χρησιμοποιείται για να προσθέσεις ή να τροποποιήσεις τις κλάσεις (classes) που 
+                        αποδίδονται στην ετικέτα body του θέματος. Αυτό το hook είναι ένα φίλτρο, όχι action, αλλά χρησιμοποιείται 
+                            συχνά για προσαρμογές στο θέμα. </p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_filter('body_class', 'my_custom_body_class');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong> Όπως το 'body_class', αλλά για τις κλάσεις που αποδίδονται σε κάθε ανάρτηση (post). Χρησιμοποιείται για να προσθέσεις ή να τροποποιήσεις τις κλάσεις των αναρτήσεων στο loop του θέματος.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_filter('post_class', 'my_custom_post_class');</code></pre></div></div>  
+
+
+
+                    <h2 class="highlight">Διαφορα</h2>
+                    <p> <strong>Περιγραφή: </strong>Εκτελείται κατά την αρχική φόρτωση του WordPress, 
+                        αφού έχουν φορτωθεί όλα τα βασικά αρχεία, αλλά πριν γίνει οτιδήποτε άλλο. Είναι 
+                        κατάλληλο για την αρχικοποίηση των ρυθμίσεων, την εγγραφή τύπων περιεχομένου, 
+                        και την εκτέλεση άλλων λειτουργιών που χρειάζονται από νωρίς.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('init', 'my_custom_init_function');</code></pre></div></div>
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται όταν έχει ολοκληρωθεί πλήρως η φόρτωση του WordPress, 
+                        αφού έχουν φορτωθεί όλα τα plugins και τα θέματα. Είναι καλό για ενέργειες που απαιτούν να
+                        έχουν φορτωθεί όλα τα υπόλοιπα.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('wp_loaded', 'my_custom_loaded_function');</code></pre></div></div>  
+
+                    <p><strong>Περιγραφή: </strong>Εκτελείται κατά την έναρξη της σελίδας διαχείρισης, πριν φορτωθούν οι σελίδες του 
+                        admin panel. Είναι χρήσιμο για την καταχώρηση ρυθμίσεων, την επεξεργασία των δεδομένων της φόρμας, και άλλες
+                         διοικητικές εργασίες.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('admin_init', 'my_custom_admin_init_function');</code></pre></div></div>  
+
+
+                </div>
+            </div>
+    <div id="addFooter"></div>
+
+    </body>
+</html>

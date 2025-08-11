@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="JavaScript | Εντολές">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/javascript.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/javascript.png"/>
+    <meta property="og:title" content="JavaScript | Εντολές">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Arrays</h1>
+        <p class="highlight">Δημιουργία Arrays</p>
+        <p>Μπορείς να δημιουργήσεις έναν πίνακα χρησιμοποιώντας αγκύλες <code>[]</code>.</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">// Δημιουργία ενός κενών πίνακα
+let emptyArray = [];
+
+// Δημιουργία ενός πίνακα με μάρκες αυτοκινήτων
+let cars = ["Toyota", "Honda", "BMW"];</code></pre></div></div>
+
+        <p class="highlight">Πρόσβαση σε Στοιχεία Πίνακα</p>
+        <p>Η πρόσβαση σε στοιχεία του πίνακα γίνεται με χρήση του index</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">console.log(cars[0]); // Εκτυπώνει: Toyota
+console.log(cars[1]); // Εκτυπώνει: Honda
+console.log(cars[2]); // Εκτυπώνει: BMW</code></pre></div></div>
+
+        <p class="highlight">Μήκος του Πίνακα</p>
+        <p>Μπορείς να βρεις το μήκος (αριθμό στοιχείων) ενός πίνακα χρησιμοποιώντας την ιδιότητα <code>length</code>.</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">console.log(cars.length); // Εκτυπώνει: 3</code></pre></div></div>
+
+        <p class="highlight">Προσθήκη Στοιχείων</p>
+        <p>Στο τέλος χρησιμοποιώντας την <code>push()</code></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.push("Mercedes");
+console.log(cars); // Εκτυπώνει: ["Toyota", "Honda", "BMW", "Mercedes"]</code></pre></div></div>
+        <p>Στην αρχή χρησιμοποιώντας την <code>unshift()</code></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.unshift("Ford");
+console.log(cars); // Εκτυπώνει: ["Ford", "Toyota", "Honda", "BMW", "Mercedes"]</code></pre></div></div>
+    
+        <p class="highlight">Αφαίρεση Στοιχείων</p>
+        <p>Από το τέλος χρησιμοποιώντας την <code>pop()</code></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.pop(); // Αφαιρεί το τελευταίο στοιχείο (Mercedes)
+console.log(cars); // Εκτυπώνει: ["Ford", "Toyota", "Honda", "BMW"]</code></pre></div></div>
+        <p>Από την αρχή χρησιμοποιώντας την <code>shift()</code></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.shift(); // Αφαιρεί το πρώτο στοιχείο (Ford)
+console.log(cars); // Εκτυπώνει: ["Toyota", "Honda", "BMW"]</code></pre></div></div>
+
+        <p class="highlight">Αναζήτηση Στοιχείων</p>
+        <p>Μπορείς να βρεις τη θέση ενός στοιχείου στον πίνακα χρησιμοποιώντας την <code>indexOf()</code>.</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">let index = cars.indexOf("Honda");
+if (index !== -1) {
+    console.log(`Η Honda βρίσκεται στη θέση: ${index}`); // Εκτυπώνει: Η Honda βρίσκεται στη θέση: 1
+} else {
+    console.log("Η Honda δεν βρέθηκε στον πίνακα.");
+}</code></pre></div></div>
+
+    <p class="highlight">Δημιουργία Αντιγράφων Πίνακα</p>
+    <p>Μπορείς να δημιουργήσεις έναν νέο πίνακα από ένα υπάρχοντα χρησιμοποιώντας την <code>slice()</code>.</p>
+    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">let newcars = cars.slice(0, 2); // Παίρνει τα πρώτα 2 cars
+console.log(newcars); // Εκτυπώνει: ["Toyota", "Honda"]</code></pre></div></div>
+
+    <p class="highlight">Συνένωση Πινάκων</p>
+    <p>Μπορείς να συνενώσεις δύο ή περισσότερους πίνακες χρησιμοποιώντας την <code>concat()</code>.</p>
+    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript"></code>let morecars = newcars.concat(["Nissan", "Mazda"]);
+console.log(morecars); // Εκτυπώνει: ["Toyota", "Honda", "Nissan", "Mazda"]</pre></div></div>
+
+    <p class="highlight">Επαναλήψεις σε Πίνακες</p>
+    <p>Μπορείς να χρησιμοποιήσεις τις μεθόδους <code>forEach()</code> και <code>map()</code> για να επαναλάβεις τα στοιχεία του πίνακα.</p>
+    <ol>
+        <li>forEach(): Εκτελεί μια συνάρτηση για κάθε στοιχείο του πίνακα.
+            <br>
+            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.forEach((car) => {
+    console.log(car);
+});</code></pre></div></div>
+        </li>
+        <li>map(): Δημιουργεί έναν νέο πίνακα με τα αποτελέσματα της εκτέλεσης μιας συνάρτησης σε κάθε στοιχείο του αρχικού πίνακα.
+            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">let lengthcar = cars.map((car) => car.length);
+console.log(lengthcar); // Εκτυπώνει: [6, 5, 3]</code></pre></div></div>
+
+        </li>
+    </ol>
+
+
+
+
+
+
+
+
+</div>
+    <div id="addFooter"></div>
+</body>
+</html>

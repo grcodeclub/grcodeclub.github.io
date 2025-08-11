@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Η math.h της C">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="Η math.h της C">
+    <meta name="keywords" content="Η math.h της C">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">#include &lt;math.h&gt;</h1>
+
+        <div class="bg_preview" >
+            <div  class="appearance">
+                <div class="space"> 
+                    <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+                </div>
+                <div class="name_input">C</div>
+            </div>
+            <div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include  &lt;stdio.h&gt;         
+#include &lt;math.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define M_PI 3.14159265358979323846
+
+int main() {
+int x = 2;
+int y = 3;
+
+printf("Απόλυτη τιμή του x: %f\n",  fabs(x));
+printf("Απόλυτη τιμή του y: %f\n", fabs(y));
+printf("Το x υψωμένο στην δύναμη y: %d\n",  pow(x, y));
+printf("Τετραγωνική ρίζα του x: %f\n",  sqrt(x));
+printf("Η μητρική του x: %f\n",  sin(x));
+printf("Η συνημιτονική του x: %f\n", cos(x));
+printf("Στρογγυλοποίηση του x: %f\n", round(x));
+printf("Παράκρουση του x: %f\n", trunc(x));
+printf("Εκθετική του x: %d\n", exp(x));
+printf("Φυσικός λογάριθμος του x: %d\n", log(x));
+printf("Εκθετική του x με βάση 10: %d\n", pow(10, x));
+
+printf("Ο αριθμός πι: %d\n", M_PI);
+double radians = M_PI / 4;
+printf("Γωνία σε ακτίνιαν: %d\n", radians);
+printf("Η μητρική του x: %d\n", sin(radians));
+printf("Η συνημιτονική του x: %d\n", cos(radians));
+printf("Η εφαπτομενική του x: %d\n", tan(radians));
+printf("Αντίστροφος μητρικής του y: %d\n", asin(y));
+printf("Αντίστροφος συνημιτονικής του y: %d\n", acos(y));
+printf("Αντίστροφος εφαπτομενικής του y: %d\n", atan(y));
+return 0;
+}</code></pre></div></div>
+
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>

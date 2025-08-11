@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="CSS και Keyframes">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/css.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/css.png"/>
+    <meta property="og:title" content="CSS και Keyframes">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">keyframes</h1>
+
+        <h2 class="highlight">Βασική Σύνταξη</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@keyframes animationName {
+from {
+/* Στυλ στην αρχή της animation */
+}
+to {
+/* Στυλ στο τέλος της animation */
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight">Αν θέλετε να προσδιορίσετε ενδιάμεσα στάδια, μπορείτε να χρησιμοποιήσετε ποσοστά</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@keyframes animationName {
+0% {
+/* Στυλ στην αρχή της animation */
+}
+50% {
+/* Στυλ στο μέσο της animation */
+}
+100% {
+/* Στυλ στο τέλος της animation */
+}
+}</code></pre></div></div>
+        <h2 class="highlight">Σύνθετες Ρυθμίσεις Animation</h2>
+        <p>Χρονική Διάρκεια (Duration): Ορίζει πόσο χρόνο θα διαρκέσει η animation.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">animation-duration: 2s; /* 2 δευτερόλεπτα */</code></pre></div></div>
+        <p>Τρόπος Χρονοδιαγράμματος (Timing Function): Ορίζει την καμπύλη επιτάχυνσης της animation (πώς επιταχύνεται ή επιβραδύνεται).</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">animation-timing-function: ease; /* Άλλη επιλογές: linear, ease-in, ease-out, ease-in-out */</code></pre></div></div>
+        <p>Αναπαραγωγή (Iteration Count): Ορίζει πόσες φορές θα εκτελείται η animation.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">animation-iteration-count: infinite; /* 'infinite' για επαναλαμβανόμενη αναπαραγωγή */</code></pre></div></div>
+        <p>Κατεύθυνση (Direction): Ορίζει την κατεύθυνση της animation, αν θα επαναλαμβάνεται προς τα εμπρός ή πίσω.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">animation-direction: alternate; /* Άλλες επιλογές: normal, reverse, alternate-reverse */</code></pre></div></div>
+        <p>Καθυστέρηση (Delay): Ορίζει πόσο χρόνο να περιμένει πριν ξεκινήσει η animation.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">animation-delay: 1s; /* Καθυστέρηση 1 δευτερολέπτου */</code></pre></div></div>
+        <p>Συντελεστής Εφαρμογής (Fill Mode): Ορίζει πώς πρέπει να εμφανίζεται το στοιχείο πριν ή μετά την εκτέλεση της animation.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">animation-fill-mode: forwards; /* Άλλες επιλογές: none, backwards, both */</code></pre></div></div>
+
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

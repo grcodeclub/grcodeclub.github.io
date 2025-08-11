@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="Βασικές ιδιότητες στην CSS">
+        <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/css.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/css.png"/>
+    <meta property="og:title" content="Βασικές ιδιότητες στην CSS">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Βασικές ιδιότητες CSS</h1>
+
+        <p>Η ιδιότητα width καθορίζει το πλάτος ενός στοιχείου.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">div { width: 200px;}</code></pre></div></div>
+
+        <p>Η ιδιότητα height καθορίζει το ύψος ενός στοιχείου.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">div {  height: 100px;}</code></pre></div></div>
+
+
+        <p>Η ιδιότητα margin καθορίζει το κενό (margin) γύρω από ένα στοιχείο.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">div {margin: 20px;}
+div {margin-top: 20px;}
+div {margin-bottom: 20px;}
+div {margin-right: 20px;}
+div {margin-left: 20px;}</code></pre></div></div>
+
+        <p>Η ιδιότητα padding καθορίζει το εσωτερικό κενό (padding) ενός στοιχείου.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">div {padding: 20px;}
+div {padding-left: 20px;}
+div {padding-right: 20px;}
+div {padding-top: 20px;}
+div {padding-bottom: 20px;}</code></pre></div></div>
+
+        <p>Η ιδιότητα border καθορίζει το περίγραμμα (border) ενός στοιχείου.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">div {border: 2px solid black;}</code></pre></div></div>
+
+        <p>Η ιδιότητα background-color  καθορίζει το χρώμα φόντου ενός στοιχείου </p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">div {
+background-color: lightgray;
+}</code></pre></div></div>
+
+
+        <p>Η ιδιότητα float επηρεάζει τον τρόπο τοποθέτησης ενός στοιχείου και τον τρόπο που τα γύρω στοιχεία το περικλείουν.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">/* Το στοιχείο θα αριστερίζει και τα γύρω στοιχεία θα προσαρμόζονται στα δεξιά του. */
+.elementp1{float :left;}
+
+/* Το στοιχείο θα δεξιοτεντεί και τα γύρω στοιχεία θα προσαρμόζονται στα αριστερά του. */
+.element2{float: right;}
+
+/* Το στοιχείο θα παραμείνει σταθερά στην θέση του ανεξάρτητα από την κύλιση της σελίδας. 
+Θα είναι πάντα ορατό ακόμα και κατά την κύλιση της σελίδας. */
+.element3{float: fixed;}
+
+/*  Το στοιχείο δεν θα αλλάξει τη θέση του σε σχέση με την φυσική ροή.*/
+.element4{position: none;}
+</code></pre></div></div>
+
+
+        <p>Η ιδιότητα opacity καθορίζει τη διαφάνεια του στοιχείου.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">div {opacity: 0.7;}</code></pre></div></div>
+
+        <p>Η ιδιότητα list-style χρησιμοποιείται για να καθορίσει την εμφάνιση των στοιχείων λίστας, όπως τα bullet points ή αριθμημένα σημεία.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">/* τετράγωνα bullet points εσωτερικά */
+ul {list-style: square inside;}
+
+/* αριθμημένα σημεία εξωτερικά */
+ol { list-style: decimal outside;}
+
+/* κύκλοι bullet points */
+ul.circle-list {list-style: circle;}
+
+/* καμία εμφάνιση bullet points */
+ul.none-list {list-style: none;}
+</code></pre></div></div>
+
+
+        <p>Η ιδιότητα display ελέγχει τον τρόπο προβολής των στοιχείων στην ιστοσελίδα.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">/*Το στοιχείο εμφανίζεται ως block-level στοιχείο (καταλαμβάνει όλο το πλάτος του διαθέσιμου χώρου).*/
+.element1{display:block;}
+/*Το στοιχείο εμφανίζεται ως inline στοιχείο (καταλαμβάνει μόνο το χώρο που απαιτεί το περιεχόμενό του).*/
+.element2{display: inline;}
+/*Συνδυασμός των χαρακτηριστικών των inline και block.*/
+.element3{display: inline-block;}
+/*Εφαρμόζει ευέλικτο layout με το Flexbox model.*/
+.element3{display: flex;}
+/*Εφαρμόζει ευέλικτο layout με το CSS Grid model.*/
+.element4{display: grid;}
+/*Το στοιχείο δεν εμφανίζεται*/
+.element5{display: none;}</code></pre></div></div>
+
+        <p>Η ιδιότητα position ελέγχει τον τρόπο τοποθέτησης των στοιχείων στη σελίδα. </p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">/* Η θέση του στοιχείου καθορίζεται από τη φυσική ροή του 
+κειμένου και τοποθετείται κανονικά στη σελίδα. */
+.elementp1{position :static;}
+
+/* Το στοιχείο θα τοποθετηθεί σε σχέση με το πρώτο πάνω στοιχείο με non-static θέση. 
+Αν δεν υπάρχει τέτοιο στοιχείο, θα τοποθετηθεί σε σχέση με τον παράγοντα θέσης του body. */
+.element2{position :absolute;}
+
+/* Το στοιχείο θα παραμείνει σταθερά στην θέση του ανεξάρτητα από την κύλιση της σελίδας. 
+Θα είναι πάντα ορατό ακόμα και κατά την κύλιση της σελίδας. */
+.element3{position :fixed;}
+
+/* Το στοιχείο θα συμπεριφέρεται ως relative μέχρις ότου φτάσει
+σε μια καθορισμένη θέση, οπότε γίνεται fixed. Είναι ένας συνδυασμός των relative και fixed.*/
+.element4{position :sticky;}
+
+/* Το στοιχείο θα τοποθετηθεί σε σχέση με την αρχική του θέση, 
+αλλά δεν θα επηρεάσει την θέση των άλλων στοιχείων. */
+.element4{position :relative;}
+
+/*Επαναφέρει την τιμή της ιδιότητας position στην αρχική της τιμή.*/
+.element4{position :initial;}
+
+/*Κληρονομεί την τιμή της ιδιότητας position από το γονικό στοιχείο.*/
+.element4{position :inherit;}
+
+/*Επαναφέρει την τιμή της ιδιότητας position στο default για το εκάστοτε στοιχείο.*/
+.element4{position: unset;}</code></pre></div></div>
+
+        <p>Class και ID: Χρησιμοποιούνται για την επιλογή συγκεκριμένων στοιχείων.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">.class-name {
+property: value;
+}
+#id-name {
+property: value;
+}</code></pre></div></div>
+
+        <p> Επιλογή στοιχείων σε συγκεκριμένες καταστάσεις.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">//* :hover: Όταν το ποντίκι πάει πάνω από ένα στοιχείο, μπορεί να αλλάξει το χρώμα του κειμένου. */
+button:hover {
+background-color: lightgrey;
+}
+
+/* :active: Όταν ένας σύνδεσμος πατιέται, μπορεί να αλλάξει το χρώμα του προσωρινά. */
+a:active {
+color: red;
+}
+            
+/* :focus: Όταν ένα πεδίο εισαγωγής λαμβάνει εστίαση, μπορεί να αλλάξει το περίγραμμα.  */
+input:focus {
+border: 2px solid green;
+}
+
+/* :first-child: Το πρώτο παιδί ενός γονικού στοιχείου να έχει χρώμα purple. */
+p:li:first-child {
+color: purple;
+}  
+
+/* :last-child: Το τελευταίο παιδί ενός γονικού στοιχείου μπορεί να έχει χρώμα orange. */
+p:last-child {
+color: orange;
+}
+
+/* :nth-child(n): Εφαρμόζεται σε ένα στοιχείο που είναι το n-οστό παιδί του γονικού του. */
+p:nth-child(odd) {
+background-color: lightgray;
+}</code></pre></div></div>
+
+
+        <p>Media <br> To div θα εκτελεστεί σε οθόνες με πλάτος μέχρι 720px </p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (max-width: 720px) {
+div {
+background-color: lightgray;
+color: navy;
+}
+}</code></pre></div></div>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

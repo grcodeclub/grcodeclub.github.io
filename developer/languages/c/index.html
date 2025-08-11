@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Γλώσσα Προγραμματισμού C">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού C">
+    <meta name="keywords" content="Γλώσσα Προγραμματισμού C">
+</head>
+<body>
+    <div id="addHeader"></div>
+   
+</div>
+    <div class="container">
+           <h1 class="title">Γλώσσα προγραμματισμού C</h1>
+        <a href="https://github.com/grcodeclub/c" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+
+                    <p>Η C θεωρείται γενικά γλώσσα μέσου επιπέδου και αυτό γιατί συνδυάζει στοιχεία των γλωσσών υψηλού επιπέδου (high level languages) και η Pascal και στοιχεία των γλωσσών χαμηλού επιπέδου (low level languages), όπως είναι η Assembly.</p>
+                    <h2 class="highlight">Διαφορά μεταξύ C και C++</h2>
+                    <ol>
+                        <li>C++ αναπτύχθηκε ως επέκταση του C, και οι δύο γλώσσες έχουν σχεδόν την ίδια σύνταξη</li>
+                        <li>Η κύρια διαφορά μεταξύ του, ότι το C++ υποστηρίζει class και αντικείμενα, ενώ το C δεν το κάνει</li>
+                    </ol>
+                    <h2 class="highlight">Γράψιμο Προγράμματος</h2>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include <stdio.h>
+
+int main() {
+  printf("GrCode Club!");
+  return 0;
+}</code></pre></div></div>
+                    <p>Η C επιβάλλει τον καταμερισμό του προγράμματος σε ενότητες, που ονομάζονται συναρτήσεις (functions). Εάν είναι απαραίτητο, οι συναρτήσεις μπορούν να χωριστούν και σε μικρότερες συναρτήσεις. Επίσης, στη C το κύριο πρόγραμμα είναι κι αυτό μια συνάρτηση, που ονομάζεται main().</p>
+                    
+                    <h2 class="highlight">Τύποι δεδομένων</h2>
+                     <table id="table_page"  class="table table-bordered">
+                        <tr id="title-table"><td>Τύπος δεδομένων</td><td>Size (bit)</td><td class="d-none d-lg-block">Εύρος Τιμών</td><td>Περιγραφή</td></tr>
+                        <tr><td>boolean</td><td>8</td><td class="d-none d-lg-block">-</td><td>Αποθηκεύει αληθείς ή ψευδείς τιμές</td></tr>
+                        <tr><td>char</td><td>8</td><td class="d-none d-lg-block">-128 έως 127 (ή 0 έως 255 για unsigned)</td><td>Αποθηκεύει έναν χαρακτήρα/γράμμα/αριθμό ή τιμές ASCII</td></tr>
+                        <tr><td>short int</td><td>16</td><td class="d-none d-lg-block">-32,768 έως 32,767</td><td>Αποθηκεύει ακέραιους αριθμούς</td></tr>
+                        <tr><td>unsigned short int</td><td>16</td><td class="d-none d-lg-block">0 έως 65,535</td><td>Αποθηκεύει μη αρνητικούς ακέραιους αριθμούς</td></tr>
+                        <tr><td>int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647</td><td>Αποθηκεύει ακέραιους αριθμούς</td></tr>
+                        <tr><td>unsigned int</td><td>32</td><td class="d-none d-lg-block">0 έως 4,294,967,295</td><td>Αποθηκεύει μη αρνητικούς ακέραιους αριθμούς</td></tr>
+                        <tr><td>long int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647 </td><td>Αποθηκεύει μεγάλους ακέραιους αριθμούς</td></tr>
+                        <tr><td>unsigned long int</td><td>32</td><td class="d-none d-lg-block">0 έως 4,294,967,295 </td><td>Αποθηκεύει μη αρνητικούς μεγάλους ακέραιους αριθμούς</td></tr>
+                        <tr><td>signed long int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647 </td><td>Αποθηκεύει μεγάλους ακέραιους αριθμούς</td></tr>
+                        <tr><td>float</td><td>32</td><td class="d-none d-lg-block">περίπου -3.4E38 έως 3.4E38</td><td>Αποθηκεύει κλασματικούς αριθμούς με 6-7 δεκαδικά ψηφία</td></tr>
+                        <tr><td>double</td><td>64</td><td class="d-none d-lg-block">περίπου -1.7E308 έως 1.7E308</td><td>Αποθηκεύει κλασματικούς αριθμούς με 15 δεκαδικά ψηφία</td></tr>
+                        <tr><td>long double</td><td>64</td><td class="d-none d-lg-block">περίπου -3.4E4932 έως 1.1E4932</td><td>Αποθηκεύει κλασματικούς αριθμούς με πολύ μεγαλύτερη ακρίβεια</td></tr>                                   
+                    </table>
+                    <h2 class="highlight">Compiling</h2>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">gcc main.cpp -o my_program</code></pre></div>  
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

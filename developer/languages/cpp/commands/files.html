@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Διαχείριση Αρχείων στην C++">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png"/>
+    <meta property="og:title" content="Διαχείριση Αρχείων στην C++">
+    <meta charset="UTF-8">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+
+        <h1 class="title">Αρχεία</h1>
+        <h2 class="highlight"> Header: #include <fstream></h2>
+        <p>Το #include &lt;fstream> είναι ένα header αρχείο της C++ Standard Library που σου επιτρέπει να διαβάζεις και να γράφεις σε αρχεία (files).</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;fstream></code></pre></div></div>
+        <table class="table table-bordered">
+            <tr><th>Κλάση</th><th>Χρήση</th></tr>
+            <tr><td><code>ifstream</code></th><th>Για ανάγνωση από αρχεία (input file stream)</td></tr>
+            <tr><td><code>ofstream</code></th><th>Για εγγραφή σε αρχεία (output file stream)</td></tr>
+            <tr><td><code>fstream</code></th><th>Για ανάγνωση & εγγραφή ταυτόχρονα</td></tr>
+        </table>
+
+        <h2 class="highlight">Γραφή σε αρχείο (Write to file)</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include  &lt;fstream>
+using namespace std;
+
+int main() {
+    ofstream outFile("output.txt"); // Δημιουργεί ή αντικαθιστά αρχείο
+
+    if (outFile.is_open()) {
+        outFile << "GrCode Club!\n";
+        outFile << "Αυτό είναι ένα αρχείο.\n";
+        outFile.close(); // ΠΑΝΤΑ κλείσε το αρχείο
+    } else {
+        cout << "Δεν μπορώ να ανοίξω το αρχείο για εγγραφή.\n";
+    }
+
+    return 0;
+}</code></pre></div></div>
+        <h2  class="highlight">Ανάγνωση από αρχείο (Read from file)</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;fstream>
+#include &lt;iostream>
+#include &lt;string>
+using namespace std;
+
+int main() {
+    ifstream inFile("output.txt"); // Άνοιγμα για ανάγνωση
+    string line;
+
+    if (inFile.is_open()) {
+        while (getline(inFile, line)) {
+            cout << line << endl;
+        }
+        inFile.close();
+    } else {
+        cout << "Δεν μπορώ να ανοίξω το αρχείο για ανάγνωση.\n";
+    }
+
+    return 0;
+}</code></pre></div></div>
+        <h2 class="highlight">Προσθήκη (append) σε αρχείο</h2>
+        <ol>
+            <li><code>ofstream outFile("output.txt", ios::app);</code>
+            <ul><li>Δημιουργεί ένα αντικείμενο ofstream με όνομα outFile.</li><li>Ανοίγει το αρχείο output.txt σε λειτουργία προσθήκης (append).</li>
+            <li>Το flag ios::app σημαίνει:
+                <ul>
+                    <li>Αν το αρχείο υπάρχει, θα προσθέσει περιεχόμενο στο τέλος του χωρίς να διαγράψει τα παλιά.</li>
+                    <li>Αν δεν υπάρχει, το δημιουργεί.</li>
+                </ul>
+            </li></ul></li>
+        </ol>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">ofstream outFile("output.txt", ios::app); // Άνοιγμα σε λειτουργία append
+outFile << "Νέα γραμμή.\n";
+outFile.close();</code></pre></div></div>
+        <h2 class="highlight">Έλεγχος ύπαρξης αρχείου</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">ifstream file("output.txt");
+if (file.good()) {
+    cout << "Το αρχείο υπάρχει.\n";
+} else {
+    cout << "Το αρχείο ΔΕΝ υπάρχει.\n";
+}
+file.close();</code></pre></div></div>
+        <h3>Συνδυασμός ανάγνωσης και εγγραφής</h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">fstream file("data.txt", ios::in | ios::out | ios::app);</code></pre></div></div>
+        <table class="table table-bordered">
+            <tr><td>ios::in</td><td>Ανάγνωση</td></tr>
+            <tr><td>ios::out</td><td>Εγγραφή</td></tr>
+            <tr><td>ios::app</td><td>Προσθήκη στο τέλος</td></tr>
+            <tr><td>ios::trunc</td><td>Διαγραφή περιεχομένου</td></tr>
+            <tr><td>ios::binary</td><td>Δυαδική λειτουργία</td></tr>
+        </table>
+        <h2 class="highlight">Διαχείριση αριθμών</h2>
+        <ol>
+            <li><code>ofstream out("nums.txt");</code>
+                <ul>
+                    <li>Δημιουργεί ένα αντικείμενο ofstream με όνομα out.</li>
+                    <li>Ανοίγει ή δημιουργεί το αρχείο nums.txt για εγγραφή (write).</li>
+                    <li>Αν το αρχείο ήδη υπάρχει, διαγράφει το περιεχόμενό του και ξεκινά από την αρχή.</li>
+                </ul>
+            </li>
+            <li><code>out << 42 << " " << 3.14 << endl;</code><ul><li>Γράφει στο nums.txt: 42 3.14</li></ul></li>
+            <li><code>out.close();</code><ul><li>Κλείνει το αρχείο nums.txt</li></ul></li>
+            <li><code>ifstream in("nums.txt");</code><ul><li>Δημιουργεί αντικείμενο ifstream με όνομα in.</li><li>Ανοίγει το αρχείο nums.txt για ανάγνωση.</li></ul></li>
+            <li><code>in >> a >> b;</code><ul><li>Διαβάζει από το αρχείο nums.txt:</li><li>Το 42 μπαίνει στη a</li><li>Το 3.14 μπαίνει στη b</li></ul></li>
+        </ol>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">ofstream out("nums.txt");
+out << 42 << " " << 3.14 << endl;
+out.close();
+
+ifstream in("nums.txt");
+int a;
+double b;
+in >> a >> b;
+cout << "a = " << a << ", b = " << b << endl;
+in.close();</code></pre></div></div>
+        <h2 class="highlight">Έλεγχος αν άνοιξε σωστά το αρχείο</h2>
+        <p><u>Πάντα να ελέγχεις αν το αρχείο άνοιξε επιτυχώς</u></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">ifstream file("data.txt");
+if (!file) {
+    cerr << "Σφάλμα: Δεν άνοιξε το αρχείο.\n";
+    exit(1);
+}</code></pre></div></div>
+
+        <h2 class="highlight">Παραδείγματα</h2>
+        <label style="margin-left: 10px;">Αρχείο</label>
+        <select id="code" style="color: white;border-radius: 10px; background-color: rgba(0, 0, 0, 0.795); border: none;
+        font-size: 18px; outline: none; cursor: pointer;">
+                <option value="-">Διάλεξε αρχείο</option>
+                <option value="https://raw.githubusercontent.com/grcodeclub/cpp/main/files/append.cpp">Append</option>
+                <option value="https://raw.githubusercontent.com/grcodeclub/cpp/main/files/open.cpp">Open</option>
+                <option value="https://raw.githubusercontent.com/grcodeclub/cpp/main/files/read.cpp">Read</option>
+                <option value="https://raw.githubusercontent.com/grcodeclub/cpp/main/files/write-txt-file.cpp">Write</option>
+                <option value="https://raw.githubusercontent.com/grcodeclub/cpp/main/files/copy.cpp">Copy</option>
+                <option value="https://raw.githubusercontent.com/grcodeclub/cpp/main/files/file_check.cpp">File check</option>
+                <option value="https://raw.githubusercontent.com/grcodeclub/cpp/main/files/error-flags.cpp">error-flags.cpp</option>
+        </select> <br><br>
+        <div class="bg_preview"><div class="appearance"><div class="space"><div class="buttons1"></div><div class="buttons2"> </div><div class="buttons3"></div></div><div id="name"></div></div><div id="load"></div></div>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

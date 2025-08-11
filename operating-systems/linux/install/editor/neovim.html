@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Editor Neovim">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/linux.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/linux.png"/>
+    <meta property="og:title" content="Editor Neovim">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Neovim</h1>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Περιγραφή</td> <td>Εντολή</td></tr>
+            <tr><td>Λειτουργία για εντολές</td>      <td>:</td></tr>
+            <tr><td>Κανονική λειτουργία</td>    <td>ESC</td></tr>
+            <tr><td>Έξοδος και χωρίς αποθηκευμένες αλλαγές</td>    <td>:q!</td></tr>
+            <tr><td>Aποθηκεύστε το αρχείο, αλλά χωρίς έξοδο</td>     <td>:w</td></tr>
+            <tr><td>Aποθηκεύστε το αρχείο, αλλά χωρίς έξοδο</td> <td>:w filename</td></tr>
+            <tr><td>Highlight χαρακτήρες</td>       <td>v</td></tr>
+            <tr><td>Highlight χαρακτήρες</td>       <td>V</td></tr>
+            <tr><td>Αποθήκευση και έξοδο</td>     <td>:wq</td></tr>
+            <tr><td>Αποθήκευση και έξοδο</td>      <td>:x</td></tr>
+            <tr><td>Εμφάνιση αριθμών γραμμών</td>  <td>:set number</td></tr>
+            <tr><td>Έξοδος (αποτυχαίνει εάν υπάρχουν μη αποθηκευμένες αλλαγές)</td>      <td>:q</td></tr>
+            <tr><td>Λειτουργία εισαγωγής (πριν από τον κέρσορα)</td>       <td>i</td></tr>
+            <tr><td>Λειτουργία εισαγωγής (μετά από τον κέρσορα)</td>       <td>a</td></tr>
+            <tr><td>Λειτουργία εισαγωγής (αρχή της γραμμής)</td>       <td>I</td></tr>
+            <tr><td>Λειτουργία εισαγωγής (τέλος της γραμμής)</td>       <td>A</td></tr>
+            <tr><td>Αναζήτηση</td><td>/pattern</td></tr>
+            <tr><td>Next match</td>       <td>n</td></tr>
+            <tr><td>Prev match</td>       <td>N</td></tr>
+            <tr><td>Διαχωρίστε το παράθυρο οριζόντια</td>  <td>:split</td></tr>
+            <tr><td>Διαχωρίστε το παράθυρο κάθετα</td> <td>:vsplit</td></tr>
+            <tr><td>Άνοιγμα νέου παραθύρου οριζόντια</td>    <td>:new</td></tr>
+            <tr><td>Άνοιγμα νέου παραθύρου κάθετα</td>   <td>:vnew</td></tr> </table>
+          <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>    
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>

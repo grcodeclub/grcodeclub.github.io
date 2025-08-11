@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Internet Protocol v4">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/network.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Internet Protocol v4">
+    <meta name="keywords" content="IPv4">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div><div class="container">
+        <h1 class="title">Internet Protocol v4</h1>
+        <p>Η IPv4 (Internet Protocol version 4) είναι η τέταρτη έκδοση του πρωτοκόλλου Internet Protocol και είναι η πιο διαδεδομένη μορφή διευθυνσιοδότησης δικτύου. Χρησιμοποιείται για να αναγνωρίσει και να τοποθετήσει μοναδικές διευθύνσεις σε συσκευές που συνδέονται σε ένα δίκτυο.
+           <br>Η διεύθυνση IPv4 αποτελείται από 32 bits και συνήθως εκφράζεται ως τέσσερις δεκαδικοί αριθμοί, χωρισμένοι με τελείες. Κάθε δεκαδικός αριθμός αντιπροσωπεύει 8 bits (ή ένα byte) και μπορεί να πάρει τιμές από 0 έως 255. Έτσι, ένα παράδειγμα μιας διεύθυνσης IPv4 είναι η 192.168.0.1.
+            <br><br>Οι διευθύνσεις IPv4 χωρίζονται σε διάφορες κατηγορίες, όπως 
+            <ul>
+                <li>Διεύθυνση Δικτύου</li>
+                <li>Διεύθυνση Εκπομπής (Broadcast)</li>
+                <li>Διευθύνσεις Υπολογιστών
+                    <ol>
+                        <li>Είναι οι διευθύνσεις μεταξύ της διεύθυνσης δικτύου και της διεύθυνσης εκπομπής.</li>
+                        <li>Αυτές οι διευθύνσεις μπορούν να αποδοθούν σε υπολογιστές, router, εκτυπωτές κ.ά.</li>
+                    </ol>
+                </li>
+            </ul>
+            <br>
+            Οι διευθύνσεις δικτύου αναγνωρίζονται από τα πρώτα bits της διεύθυνσης και προσδιορίζουν το δίκτυο στο οποίο ανήκει ένας υπολογιστής. Οι διευθύνσεις ευρυεκπομπής χρησιμοποιούνται για να αποσταλούν μηνύματα σε όλες τις συσκευές ενός δικτύου, ενώ οι διευθύνσεις υπολογιστών αναγνωρίζουν μοναδικά τους υπολογιστές εντός ενός δικτύου.
+            <br><br>Μια από τις κύριες προκλήσεις της IPv4 είναι ότι οι διευθύνσεις τείνουν να εξαντλούνται λόγω της αύξησης του αριθμού των συνδεδεμένων συσκευών στο Διαδίκτυο. Για να αντιμετωπίσουν αυτό το πρόβλημα, έχει αναπτυχθεί η έκδοση IPv6, η οποία παρέχει έναν πολύ μεγαλύτερο χώρο διευθύνσεων.
+            <br><br>Ο χώρος των διευθύνσεων IPv4 είναι περιορισμένος, καθώς περιέχει περίπου 4,3 δισεκατομμύρια (2^32) μοναδικές διευθύνσεις. Ωστόσο, λόγω της αυξανόμενης σύνδεσης συσκευών στο Διαδίκτυο, οι διευθύνσεις IPv4 έχουν εξαντληθεί σε μεγάλο βαθμό. Γι' αυτόν τον λόγο, έχει αναπτυχθεί η έκδοση IPv6, που παρέχει έναν πολύ μεγαλύτερο χώρο διευθύνσεων για να αντιμετωπίσει αυτό το πρόβλημα.
+        </p>
+        <h2 class="highlight">Περιγραφή</h2>
+        <p>
+            Μια διεύθυνση IPv4 αποτελείται από τέσσερα οκτάδες (8 bits) και εμφανίζεται ως ένας συνδυασμός αριθμητικών τιμών από 0 έως 255, χωρισμένων με τελείες. Για παράδειγμα, η διεύθυνση IP "192.168.0.1" αποτελείται από τέσσερις οκτάδες, όπου η πρώτη οκτάδα είναι το πρώτο μέρος της διεύθυνσης, η δεύτερη οκτάδα είναι το δεύτερο μέρος, και ούτω καθεξής.
+        </p>
+
+        <h2 class="highlight">Μορφή Πακέτο</h2>
+        <p> 
+            Ένα πακέτο IPv4 αποτελείται από μια κεφαλίδα (header) και τα δεδομένα (data). Ας δούμε αναλυτικά τη μορφή ενός πακέτου IPv4:
+            <ol>
+                <li>Κεφαλίδα (Header):
+                    <ul>
+                        <li>Έκδοση (Version): Προσδιορίζει την έκδοση του πρωτοκόλλου IPv4, συνήθως η τιμή είναι 4.</li>
+                        <li>Μήκος Κεφαλίδας (Header Length): Καθορίζει το μήκος της κεφαλίδας σε 32-bit. Ο αριθμός αυτός πολλαπλασιάζεται με 4 για να προκύψει το πραγματικό μήκος της κεφαλίδας.</li>
+                        <li>Τύπος Υπηρεσίας (Type of Service): Χρησιμοποιείται για να καθορίσει την προτεραιότητα και την ποιότητα εξυπηρέτησης των πακέτων.</li>
+                        <li>Συνολικό Μήκος (Total Length): Αναφέρει το συνολικό μήκος του πακέτου (κεφαλίδα + δεδομένα) σε bytes.</li>
+                        <li>Αναγνωριστικό πηγής (Source Identification): Περιέχει τη διεύθυνση IP του αποστολέα του πακέτου.</li>
+                        <li>Αναγνωριστικό προορισμού (Destination Identification): Περιέχει τη διεύθυνση IP του παραλήπτη του πακέτου.</li>
+                        <li>Έλεγχος Σφαλμάτων (Checksum): Χρησιμοποιείται για να ελέγξει την ακεραιότητα της κεφαλίδας.</li>
+                    </ul>
+                </li>
+                <li>Δεδομένα (Data):
+                    <ul>
+                        <li>Τα δεδομένα περιέχουν την πραγματική πληροφορία που μεταφέρεται μέσω του πακέτου. Αυτά μπορεί να είναι μηνύματα, αρχεία, εντολές κ.λπ.</li>
+                    </ul>
+                </li>
+            </ol>
+            Το συνολικό μήκος του πακέτου (κεφαλίδα + δεδομένα) δεν πρέπει να υπερβαίνει το μέγιστο μήκος που μπορεί να υποστηρίξει ένα δίκτυο, γνωστό ως MTU (Maximum Transmission Unit).
+        </p>
+        <table class="table table-bordered" style="text-align: center;">
+            <tr>
+                <th class="header" colspan="32">32 bit</th>
+            </tr>
+            <tr>
+              <th class="header" colspan="4" style="width: 12.5%;">4 bit</th>
+              <th  class="header"colspan="4" style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+              <th class="header" colspan="4"  style="width: 12.5%;">4 bit</th>
+            </tr>
+            <tr class="field-row"><td colspan="4">Version</td><td colspan="4">Header Lenght</td><td colspan="8">Type of Service</td><td colspan="16">Total Lenght</td></tr><tr><td colspan="16">ID</td><td colspan="4">Flags</td><td colspan="12">Offset</td></tr>
+            <tr><td colspan="8">Time to live (TTL)</td><td colspan="8">Protocol</td><td colspan="16">Checksum</td></tr>
+            <tr><td colspan="32">IP Αποστολέα</td></tr>
+            <tr><td colspan="32">IP Παραλήπτη</td></tr>
+            <tr><td colspan="32">Data</td></tr>
+          </table>
+          <h2 class="highlight">Κλάσεις Διευθύνσεων IPv4</h2>
+          <table class="table table-bordered table-striped text-center align-middle">
+            <thead class="table-dark"><tr><th>Κλάση</th><th>1ο</th><th>Εύρος Διευθύνσεων</th><th>Μάσκα Υποδικτύου (Default)</th><th>Χρήση</th></tr></thead>
+            <tbody><tr><td>A</td><td>0 – 127</td><td>0.0.0.0 – 127.255.255.255</td><td>255.0.0.0</td><td>Πολύ μεγάλα δίκτυα</td></tr>
+                <tr><td>B</td><td>128 – 191</td><td>128.0.0.0 – 191.255.255.255</td><td>255.255.0.0</td><td>Μεσαία δίκτυα</td></tr>
+                <tr><td>C</td><td>192 – 223</td><td>192.0.0.0 – 223.255.255.255</td><td>255.255.255.0</td><td>Μικρά δίκτυα</td></tr>
+                <tr class="table-warning"><td>D</td><td>224 – 239</td><td>224.0.0.0 – 239.255.255.255</td><td>-</td><td>Multicast (ομαδική μετάδοση)</td></tr>
+                <tr class="table-secondary"><td>E</td><td>240 – 255</td><td>240.0.0.0 – 255.255.255.255</td><td>-</td><td>Κρατημένο για μελλοντική χρήση / Πειραματικό</td></tr></tbody>
+            </table>
+</div><div id="addFooter"></div></body></html>

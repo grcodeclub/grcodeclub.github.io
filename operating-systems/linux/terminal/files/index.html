@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Διαχείριση Αρχείων και Καταλόγων στα Linux">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/linux.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/linux.png"/>
+    <meta property="og:title" content="Διαχείριση Αρχείων και Καταλόγων στα Linux">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+    
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Διαχείριση Αρχείων και Καταλόγων</h1>
+        <div id="linux-term"></div>
+        <p class="highlight">Αρχεία και Καταλογοι</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">touch file.txt</code></pre></div>                
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">cat file.txt</code></pre></div>                
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">wc -l file.txt</code></pre></div>                
+        <p>Δημιουργεί έναν νέο κατάλογο.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">mkdir</code></pre></div>               
+        <p>Μετακινεί αρχεία και καταλόγους.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">mv</code></pre></div>                
+        <p>Βρίσκει αρχεία βάσει διάφορων κριτηρίων.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">find</code></pre></div>                
+        <p>Όλες τις χρονοσημάνσεις μαζί με άλλες πληροφορίες για ένα αρχείο εμφανίζονται με την εντολή stat (status).</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">stat</code></pre></div>                
+        <br>
+        <p class="highlight">Πλοήγηση στους καταλόγους</p>
+        <p>Εμφανίζει τον τρέχοντα κατάλογο εργασίας</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">pwd</code></pre></div>                
+        <p> Η μετάβαση σε έναν άλλον κατάλογο του Συστήματος γίνεται με την εντολή <b>cd</b> με όρισμα την απόλυτη ή διαδρομλη του καταλόγου,
+            τον οποίο θέλουμε να κάνουμε τρέχοντα.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">cd /home/grcodeclub</code></pre></div>                
+
+        <br>
+        <p class="highlight">Διαγραφή</p>
+        <p>Διαγράφει αρχεία ή καταλόγους. (Προσοχή: Μόνο με προσεκτική χρήση!)</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rm</code></pre></div>                
+        <p>Το <b>-f (--force)</b> διαγράφει χωρίς ερώτηση</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rm -f</code></pre></div>
+        <p>Επιβεβαίωση διαγραφής από τον χρήστη </p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rm -i</code></pre></div>                
+        <p>Διαγράφει άδειους καταλόγους</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rmdir</code></pre></div> 
+        <p>Διαγράφει άδειους καταλόγους και εμφανίζει μήνυμα για κάθε κατάλογο που διαγράφεται</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rmdir -v</code></pre></div> 
+        <p>Διαγράφει άδειους καταλόγους και τους γονικούς καταλόγους</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rmdir -p</code></pre></div> 
+        <p>Διαγράφει άδειους καταλόγους</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rmdir</code></pre></div> 
+        <p>Διαγράφει άδειους καταλόγους</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rmdir</code></pre></div> 
+        <p>Διαγράφει άδειους καταλόγους</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rmdir</code></pre></div> 
+        <p>Διαγράφει άδειους καταλόγους</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rm -d</code></pre></div> 
+        <p>Διαγράφει  όλα τα αρχεία και τους καταλόγους αναδρομικά</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rm -r</code></pre></div> 
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">rm -R</code></pre></div> 
+        
+        <br>
+        <p class="highlight">Περιεχόμενα ενος καταλόγους</p>
+        <p>Εμφανίζει τον τρέχοντα κατάλογο εργασίας</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">pwd</code></pre></div>                
+        <p>Εμφανίζει τα περιεχόμενα ενός καταλόγου.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls</code></pre></div>                
+        <p>Το <b>-l</b> ενός επιπρόσθετες πληροφορίες για κάθε αρχείο.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -l</code></pre></div>                
+        <p>Το <b>-a (--all)</b> εμφανίζει και τα αρχεία που το όνομά τους αρχίζει με τελεία (κρυφά αρχεία)</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -a</code></pre></div>                
+        <p></p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -t</code></pre></div>                
+        <p></p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -g</code></pre></div>                
+        <p>Το <b>-r (--reverse)</b> εμφανίζει τα αρχεία με αντίστροφη σειρά ταξινόμησης</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -r</code></pre></div>                
+        <p></p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -i</code></pre></div>  
+        <p>Το <b> -d (--directory)</b> Εμφανίζει επιπρόσθετες πληροφορίες για κάθε αρχείο</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -d</code></pre></div>                
+        <p>Το <b>-R</b> εμφανίζει αναδρομικά τα περιεχόμενα ενός καταλόγου και των υποκαταλόγων του</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -R</code></pre></div>                
+        <p></p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ls -S</code></pre></div>                
+        
+        <br>
+        <p class="highlight">Αντιγραφλη</p>
+        <p>Αντιγράφει αρχεία και καταλόγους.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">cp</code></pre></div>                
+        <p>Για να δημιουργήσουμε ένα αντίγραφο στον ίδιο κατάλογο με το πρωτότυπο αρκεί να δώσουμε αντί για όνομα κατάλογου το νεό όνομα του αρχείου.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">cp file.txt newfile.txt</code></pre></div>                
+        <br><br><br>
+        <p class="highlight">Δικαιώματα</p>
+        <p>Τροποποιεί τα δικαιώματα πρόσβασης σε αρχεία και καταλόγους.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod [file_name]</code></pre></div>                
+        <p>Execute permission</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod +x [file_name]</code></pre></div>                
+        <p>Read permission</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod +r [file_name]</code></pre></div>                
+        <p>Write permission</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod +w</code></pre></div>
+        <p>Read, write and execute permissions to the file owner:</p>          
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod u+rwx [file_name]</code></pre></div>
+        <p>Read, write and execute permissions to the file group:</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod g+rwx [file_name]</code></pre></div>
+        <p>Read, write and execute permissions to the file All (owner,groups,others):</p>               
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod a+rwx [file_name]</code></pre></div>
+        <p>Read, write and execute permissions to the file Others:</p>                          
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod o+rwx [file_name]</code></pre></div>                
+        <p>Remove write permission for the group:</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chmod g-w [file_name]</code></pre></div>                
+        <p>Αλλάζει τον κάτοχο ενός αρχείου ή καταλόγου.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">chown</code></pre></div>  
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>

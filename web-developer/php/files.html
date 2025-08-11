@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Διαχείριση αρχείων με την Php">
+    <meta name="twitter:image" content="https://grcodeclub.gr/files-page/preview/programming/php.png">
+    <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/programming/php.png"/>
+    <meta property="og:title" content="Διαχείριση αρχείων με την Php">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Διαχείριση αρχείων</h1>
+        <p>Η PHP παρέχει πολλές συναρτήσεις για εργασία με αρχεία και φακέλους. Μπορείς να διαβάσεις, γράψεις, διαγράψεις, ελέγξεις και χειριστείς αρχεία εύκολα.</p>
+        <h2 class="highlight">Άνοιγμα και Κλείσιμο Αρχείων</h2>
+        <p>Για να ανοίξεις ένα αρχείο, χρησιμοποιείς την <code>fopen()</code>, και όταν τελειώσεις, το κλείνεις με <code>fclose()</code>.</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $file = fopen("grcodeclub.txt", "r"); // Άνοιγμα αρχείου σε λειτουργία ανάγνωσης
+    fclose($file); // Κλείσιμο του αρχείου
+?></code></pre></div></div>
+    <p>Τρόποι ανοίγματος (mode)</p>
+    <table class="table table-bordered">
+        <tr><td><code>r</code></td><td>Άνοιγμα για ανάγνωση (το αρχείο πρέπει να υπάρχει)</td></tr>
+        <tr><td><code>w</code></td><td>Άνοιγμα για εγγραφή (διαγράφει το υπάρχον περιεχόμενο ή δημιουργεί νέο αρχείο)</td></tr>
+        <tr><td><code>a</code></td><td>Προσθήκη στο τέλος του αρχείου</td></tr>
+        <tr><td><code>x</code></td><td>Δημιουργία νέου αρχείου (αποτυγχάνει αν υπάρχει ήδη)</td></tr>
+        <tr><td><code>r+</code></td><td>Ανάγνωση & εγγραφή (χωρίς να διαγράφει το αρχείο)</td></tr>
+    </table>
+    <h2 class="highlight">Ανάγνωση Αρχείων (<code>fread()</code>, <code>fgets()</code>, <code>file_get_contents())</code></h2>
+    <p>Ανάγνωση ολόκληρου του αρχείου</p>   
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $file = fopen("grcodeclub.txt", "r"); 
+    $content = fread($file, filesize("grcodeclub.txt"));
+    echo $content;
+    fclose($file);
+?></code></pre></div></div>
+    <p>Ανάγνωση γραμμή-γραμμή (<code>fgets()</code>)</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $file = fopen("grcodeclub.txt", "r");
+    while (!feof($file)) { // Διαβάζει μέχρι το τέλος του αρχείου
+        echo fgets($file) . "<br>";
+    }
+    fclose($file);
+?></code></pre></div></div>
+    <p>Ανάγνωση ολόκληρου του αρχείου με μία εντολή (<code>file_get_contents()</code>)</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    echo file_get_contents("grcodeclub.txt");
+?></code></pre></div></div>
+
+    <h2 class="highlight">Εγγραφή σε Αρχεία <code>fwrite()</code>, <code>file_put_contents()</code></h2>
+    <p>Γράψιμο στο αρχείο με <code>fwrite()</code></p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $file = fopen("grcodeclub.txt", "w"); // Άνοιγμα σε λειτουργία εγγραφής
+    fwrite($file, "Γεια σου, κόσμε!\n");
+    fwrite($file, "Αυτή είναι η δεύτερη γραμμή.");
+    fclose($file);
+?></code></pre></div></div>
+    <p>Γράψιμο εύκολα με <code>file_put_contents()</code></p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    file_put_contents("grcodeclub.txt", "Αυτό είναι νέο περιεχόμενο!");
+?></code></pre></div></div>
+    <p>Το <code>file_put_contents()</code> αντικαθιστά το περιεχόμενο. Αν θέλεις να προσθέσεις περιεχόμενο χωρίς να διαγράψεις το προηγούμενο, πρόσθεσε <code>FILE_APPEND</code></p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    file_put_contents("grcodeclub.txt", "Νέα γραμμή\n", FILE_APPEND);
+?></code></pre></div></div>
+
+    <h2 class="highlight">Διαγραφή και Έλεγχος Αρχείων <code>unlink()</code>, <code>file_exists()</code></h2>
+    <p>Έλεγχος αν το αρχείο υπάρχει <code>grcodeclub</code></p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    if (file_exists("grcodeclub.txt")) {
+        echo "Το αρχείο υπάρχει!";
+    } else {
+        echo "Το αρχείο δεν βρέθηκε.";
+    }
+?></code></pre></div></div>
+    <p>Διαγραφή αρχείου <code>unlink()</code></p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    if (grcodeclub("grcodeclub.txt")) {
+        unlink("grcodeclub.txt"); // Διαγραφή του αρχείου
+        echo "Το αρχείο διαγράφηκε.";
+    }
+?></code></pre></div></div>
+
+    <h2 class="highlight">Δημιουργία και Διαχείριση Φακέλων <code>mkdir()</code>, <code>rmdir()</code>, <code>scandir()</code></h2>
+    <p>Δημιουργία φακέλου <code>mkdir()</code></p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    mkdir("new_folder");
+?></code></pre></div></div>
+    <p>Διαγραφή φακέλου <code>rmdir()</code></p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+        rmdir("new_folder"); // Ο φάκελος πρέπει να είναι άδειος
+?></code></pre></div></div>
+    <p>Λίστα αρχείων μέσα σε φάκελο <code>scandir()</code></p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $files = scandir(".");
+    print_r($files); // θα εμφανίσει μια λίστα με όλα τα αρχεία του τρέχοντος φακέλου.
+?></code></pre></div></div>
+
+    <h2 class="highlight">Μετακίνηση & Μετονομασία Αρχείων <code>rename()</code></h2>
+    <p>Μετονομασία αρχείου</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    rename("old_name.txt", "new_name.txt");
+?></code></pre></div></div>
+    <p>Μετακίνηση αρχείου</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    rename("file.txt", "folder/file.txt");
+?></code></pre></div></div>
+
+    <h2 class="highlight">Χρήση του <code>require()</code> και <code>include()</code> για την εισαγωγή και εκτέλεση αρχείων στην PHP</h2>
+    <p>το require(), το include() εισάγει και εκτελεί ένα εξωτερικό αρχείο PHP, αλλά η κύρια διαφορά είναι ότι αν το αρχείο δεν βρεθεί, το script συνεχίζει να εκτελείται και εμφανίζει μόνο μια προειδοποίηση (warning).</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    include 'header.php'; // Εισάγουμε το αρχείο header.php
+    echo "Η κύρια σελίδα.";
+?></code></pre></div></div>
+    <p><b>Διαφορά μεταξύ include() και require()</b>:Το include() εμφανίζει μόνο προειδοποίηση αν το αρχείο δεν βρεθεί, ενώ το require() σταματά την εκτέλεση του script.</p>
+
+    <h2 class="highlight">Χρήση του include_once() για την εισαγωγή αρχείων μία μόνο φορά στην PHP</h2>
+    <p>Αυτές οι συναρτήσεις λειτουργούν με τον ίδιο τρόπο όπως το include() και το require(), αλλά με τη διαφορά ότι εξασφαλίζουν ότι το ίδιο αρχείο δεν θα περιληφθεί ξανά κατά την εκτέλεση του script.</p>
+    <ol>
+        <li>include_once(): Αν το αρχείο έχει ήδη περιληφθεί, δεν θα το περιλάβει ξανά.</li>
+        <li>require_once(): Αν το αρχείο έχει ήδη περιληφθεί, δεν θα το περιλάβει ξανά (το ίδιο και για το require()).</li>
+    </ol>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    include_once 'header.php';  // Θα περιληφθεί μόνο μια φορά
+    include_once 'header.php';  // Δεν θα περιληφθεί ξανά
+?></code></pre></div></div>
+    
+    <h2 class="highlight">Χρήση της συνάρτησης <code>file_exists()</code> για έλεγχο ύπαρξης αρχείου ή φακέλου</h2>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    if (file_exists("example.txt")) {
+        echo "Το αρχείο υπάρχει!";
+    } else {
+        echo "Το αρχείο δεν βρέθηκε!";
+    }
+?></code></pre></div></div>
+
+    <h2 class="highlight">Χρήση της συνάρτησης <code>is_file()</code> ελέγχει αν το καθορισμένο path αναφέρεται σε ένα αρχείο.</h2>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    if (is_file("example.txt")) {
+        echo "Αυτό είναι ένα αρχείο!";
+    }
+?></code></pre></div></div>
+
+    <h2 class="highlight">Χρήση της συνάρτησης <code>is_dir()</code> ελέγχει αν το path αναφέρεται σε φάκελο (όχι αρχείο).</h2>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    if (is_dir("my_folder")) {
+        echo "Αυτός είναι ένας φάκελος!";
+    }
+?></code></pre></div></div>
+
+    <h2 class="highlight">Η συνάρτηση <code>copy()</code> αντιγράφει ένα αρχείο από μια τοποθεσία σε μια άλλη.</h2>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    copy("source.txt", "destination.txt");  // Αντιγράφει το αρχείο
+?></code></pre></div></div>
+
+    <h2 class="highlight">Η Η συνάρτηση <code>chmod()</code> αλλάζει τα δικαιώματα ενός αρχείου ή φακέλου.</h2>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    copy("source.txt", "destination.txt");  // Αντιγράφει το αρχείο
+?></code></pre></div></div>
+
+</div>
+    <div id="addFooter"></div>
+</body>
+</html>

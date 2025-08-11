@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@grcodeclub">
+  <meta name="twitter:title" content="CSS για Πίνακες">
+  <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/css.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/css.png"/>
+    <meta property="og:title" content="CSS για Πίνακες">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Πίνακες</h1>
+        <p>Οι πίνακες χρησιμοποιούνται για την οργάνωση δεδομένων σε γραμμές και στήλες. Με το CSS, μπορούμε να βελτιώσουμε την εμφάνιση και τη λειτουργικότητά τους.</p>        
+        
+        <h2 class="highlight">Βασική Μορφοποίηση με CSS</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-css">table {
+  width: 100%;
+  border-collapse: collapse; /* Ενώνει τα περιγράμματα */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Προσθέτει περίγραμμα */
+  padding: 10px; /* Καλύτερη εμφάνιση κελιών */
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4; /* Φόντο κεφαλίδας */
+  font-weight: bold;
+}</code></pre></div></div>
+
+    <h2 class="highlight">Εναλλάξ Χρώματα Σειρών</h2>
+    <p>Αυτός ο κώδικας CSS χρησιμοποιεί την ψευδοκλάση nth-child() για να εφαρμόσει διαφορετικά χρώματα στις σειρές (<tr>) ενός πίνακα, δημιουργώντας το εφέ ζέβρας (zebra striping). Ας αναλύσουμε πώς λειτουργεί:</p>
+    <ul>
+        <li>Η ψευδοκλάση nth-child(n) επιλέγει τα στοιχεία που είναι nth παιδιά του γονέα τους.</li>
+        <li>Στην περίπτωση του tr:nth-child(odd), επιλέγονται οι περιττές (odd) σειρές: 1η, 3η, 5η, κ.λπ.</li>
+        <li>Στην περίπτωση του tr:nth-child(even), επιλέγονται οι άρτιες (even) σειρές: 2η, 4η, 6η, κ.λπ.</li>
+    </ul>
+    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-css">tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Ανοιχτό γκρι */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9e9e9; /* Λίγο πιο σκούρο */
+}</code></pre></div></div>
+
+    <h2 class="highlight">Στρογγυλεμένες Γωνίες & Σκιά</h2>
+    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-css">table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}</code></pre></div></div>
+
+    <h2 class="highlight">Responsive Πίνακες (Για Κινητά & Μικρές Οθόνες)</h2>
+    <p>Αν ο πίνακάς μας έχει πολλές στήλες, μπορεί να μην χωράει σε μικρές οθόνες. Χρησιμοποιούμε <code>overflow-x: auto;</code> για να προσθέσουμε οριζόντια κύλιση όταν χρειάζεται.</p>
+    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (max-width: 600px) {
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+}</code></pre></div></div>
+
+
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

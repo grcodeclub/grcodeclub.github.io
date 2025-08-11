@@ -1,11 +1,11 @@
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
-    "https://grcodeclub.gr/css/libraries/bootstrap/v5-3-3.css",
-    "https://grcodeclub.gr/css/libraries/bootstrap/custom.css",
-    "https://grcodeclub.gr/css/libraries/font-awesome/6-5-0.css",
-    "https://grcodeclub.gr/css/code/bg.css",
-    "https://grcodeclub.gr/css/text.css",
-    "https://grcodeclub.gr/css/elements.css"
+    "https://grcodeclub.gr/files-page/css/libraries/bootstrap/v5-3-3.css",
+    "https://grcodeclub.gr/files-page/css/libraries/bootstrap/custom.css",
+    "https://grcodeclub.gr/files-page/css/libraries/font-awesome/6-5-0.css",
+    "https://grcodeclub.gr/files-page/css/code/bg.css",
+    "https://grcodeclub.gr/files-page/css/text.css",
+    "https://grcodeclub.gr/files-page/css/elements.css"
 ]; 
 
 const head = document.head;    // Αρχικοποίηση head
@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 // Αλυσίδα Promises
-loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
-    .then(() => loadScript('https://grcodeclub.gr/js/libraries/popper-v2-5-2.js'))
-    .then(() => loadScript('https://grcodeclub.gr/js/libraries/bootstrap@5-3-3.js'))    
-    .then(() => loadScript('https://grcodeclub.gr/js/libraries/select2-4-0-13.js'))
-    .then(() => loadScript('https://grcodeclub.gr/js/add/body.js'))
+loadScript('https://grcodeclub.gr/files-page/js/libraries/jquery.js')
+    .then(() => loadScript('https://grcodeclub.gr/files-page/js/libraries/popper-v2-5-2.js'))
+    .then(() => loadScript('https://grcodeclub.gr/files-page/js/libraries/bootstrap@5-3-3.js'))    
+    .then(() => loadScript('https://grcodeclub.gr/files-page/js/libraries/select2-4-0-13.js'))
+    .then(() => loadScript('https://grcodeclub.gr/files-page/js/add/body.js'))
     .catch(error => console.error(error));
 
 
@@ -100,14 +100,14 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     }
 
     if (document.querySelector('.command-line') || document.querySelector('.code_editor') || document.getElementById('code')) { 
-        addCssFiles("https://grcodeclub.gr/css/code/prism.css");
-        addScript('https://grcodeclub.gr/js/libraries/prism.js');
-        addScript('https://grcodeclub.gr/js/action/show_code.js');
+        addCssFiles("https://grcodeclub.gr/files-page/css/code/prism.css");
+        addScript('https://grcodeclub.gr/files-page/js/libraries/prism.js');
+        addScript('https://grcodeclub.gr/files-page/js/action/show_code.js');
     }
     
-    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/js/search/tableSearchWithSelect.js');}
-    if (document.getElementById('search_table_page') && document.getElementById('searchInput') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/Table_Pagination_Search.js');}
-    if (document.getElementById('search_table_page') && document.getElementById('searchInput2') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/js/search/Table_Pagination_2_Search.js');}
+    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/files-page/js/search/tableSearchWithSelect.js');}
+    if (document.getElementById('search_table_page') && document.getElementById('searchInput') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/files-page/js/search/Table_Pagination_Search.js');}
+    if (document.getElementById('search_table_page') && document.getElementById('searchInput2') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/files-page/js/search/Table_Pagination_2_Search.js');}
 
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
@@ -119,7 +119,7 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
     'https://grcodeclub.gr/cpp/': 'https://grcodeclub.github.io/js/add/menu/programming/cpp.js',
     'https://grcodeclub.gr/php/': 'https://grcodeclub.github.io/js/add/menu/programming/php.js',
     'https://grcodeclub.gr/java/': 'https://grcodeclub.github.io/js/add/menu/programming/java.js',
-    'https://grcodeclub.gr/microsoft-windows/command-line/': 'https://grcodeclub.gr/js/add/menu/system/windows/command-line.js',
+    'https://grcodeclub.gr/microsoft-windows/command-line/': 'https://grcodeclub.gr/files-page/js/add/menu/system/windows/command-line.js',
     'https://grcodeclub.gr/microsoft-windows/': 'https://grcodeclub.github.io/js/add/menu/system/windows/main.js',
     'https://grcodeclub.gr/mobile/android/': 'https://grcodeclub.github.io/js/add/menu/android.js',
     'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/js/add/menu/syntomografies.js',
@@ -142,7 +142,7 @@ loadScript('https://grcodeclub.gr/js/libraries/jquery.js')
 
 const handleScriptAddition = () => {
     const matchingScript = Object.keys(scriptMappings).find(url => currentURL.startsWith(url)); // Ελέγχει ποιο URL από τα κλειδιά του αντικειμένου `scriptMappings` ταιριάζει με το `currentURL`
-    if (matchingScript) { addScript(scriptMappings[matchingScript]); addCssFiles("https://grcodeclub.gr/css/libraries/select2/v4-0-13.css"); addCssFiles("https://grcodeclub.gr/css/libraries/select2/custom.css"); }
+    if (matchingScript) { addScript(scriptMappings[matchingScript]); addCssFiles("https://grcodeclub.gr/files-page/css/libraries/select2/v4-0-13.css"); addCssFiles("https://grcodeclub.gr/files-page/css/libraries/select2/custom.css"); }
 };
 
 // Έλεγχος αν η σελίδα είναι διαθέσιμη

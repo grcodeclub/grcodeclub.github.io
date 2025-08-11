@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Λίστες στην Html">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/html.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/html.png"/>
+    <meta property="og:title" content="Λίστες στην Html">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Λίστα</h1>
+        <p>Οι λίστες στην HTML αποτελούν ένα βασικό εργαλείο για τη δομημένη παρουσίαση περιεχομένου, επιτρέποντας την οργάνωση πληροφοριών με σαφή και ευανάγνωστο τρόπο. Διακρίνονται σε τρεις τύπους: μη διατεταγμένες (<code>&lt;ul></code>), όπου τα στοιχεία δεν έχουν συγκεκριμένη σειρά, διατεταγμένες (<code>&lt;ol></code>), όπου τα στοιχεία αριθμούνται ή ταξινομούνται, και λίστες ορισμών (<code>&lt;dl></code>), που χρησιμοποιούνται για τη συσχέτιση όρων με τις αντίστοιχες περιγραφές τους.</p>
+        <h2 class="highlight">Διατεταγμένη Λίστα (Ordered List)</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol>
+&lt;il>Στοιχείο 1&lt;/il>
+&lt;il>Στοιχείο 2&lt;/il>
+&lt;il>Στοιχείο 3&lt;/il>                        
+&lt;/ol></code></pre></div></div>
+        <ol>
+            <li>Στοιχείο 1</li>
+            <li>Στοιχείο 2</li>
+            <li>Στοιχείο 3</li>
+        </ol>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-roman;">
+&lt;li>Στοιχείο 1&lt;/li>
+&lt;li>Στοιχείο 2&lt;/li>
+&lt;li>Στοιχείο 3&lt;/li>
+&lt;/ol></code></pre></div></div>
+        <ol style="list-style:lower-roman;">
+            <li>Στοιχείο 1</li>
+            <li>Στοιχείο 2</li>
+            <li>Στοιχείο 3</li>
+        </ol>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-greek;">
+&lt;li>Στοιχείο 1&lt;/li>
+&lt;li>Στοιχείο 2&lt;/li>
+&lt;li>Στοιχείο 3&lt;/li>
+&lt;/ol></code></pre></div></div>
+        <ol style="list-style:lower-greek;">
+            <li>Στοιχείο 1</li>
+            <li>Στοιχείο 2</li>
+            <li>Στοιχείο 3</li>
+        </ol>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-latin;">
+&lt;li>Στοιχείο 1&lt;/li>
+&lt;li>Στοιχείο 2&lt;/li>
+&lt;li>Στοιχείο 3&lt;/li>
+&lt;/ol></code></pre></div></div>
+        <ol style="list-style:lower-latin;">
+            <li>Στοιχείο 1</li>
+            <li>Στοιχείο 2</li>
+            <li>Στοιχείο 3</li>
+        </ol>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:upper-latin;">
+&lt;li>Στοιχείο 1&lt;/li>
+&lt;li>Στοιχείο 2&lt;/li>
+&lt;li>Στοιχείο 3&lt;/li>
+&lt;/ol></code></pre></div></div>
+        <ol style="list-style:upper-latin;">
+            <li>Στοιχείο 1</li>
+            <li>Στοιχείο 2</li>
+            <li>Στοιχείο 3</li>
+        </ol>
+        <div class="bg_preview"><div  class="line-numbers">
+        <pre class="code_editor"><code class="language-html">&lt;ul style="list-style:circle;">
+&lt;li>Στοιχείο 1&lt;/li>
+&lt;li>Στοιχείο 2&lt;/li>
+&lt;li>Στοιχείο 3&lt;/li>
+&lt;/ul></code></pre></div></div>
+<ul style="list-style:circle;">
+<li>Στοιχείο 1</li>
+<li>Στοιχείο 2</li>
+<li>Στοιχείο 3</li>
+</ul>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ul style="list-style:disc;">
+&lt;li>Στοιχείο 1&lt;/li>
+&lt;li>Στοιχείο 2&lt;/li>
+&lt;li>Στοιχείο 3&lt;/li>
+&lt;/ul></code></pre></div></div>
+<ul style="list-style:disc;">
+<li>Στοιχείο 1</li>
+<li>Στοιχείο 2</li>
+<li>Στοιχείο 3</li>
+</ul>
+
+
+<div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;dl>
+  &lt;dt>HTML&lt;/dt>
+  &lt;dd>Μια γλώσσα σήμανσης για τη δημιουργία ιστοσελίδων.&lt;/dd>
+
+  &lt;dt>CSS&lt;/dt>
+  &lt;dd>Μια γλώσσα που χρησιμοποιείται για τη διαμόρφωση της εμφάνισης των ιστοσελίδων.&lt;/dd>
+
+  &lt;dt>JavaScript&lt;/dt>
+  &lt;dd>Μια γλώσσα προγραμματισμού που προσθέτει διαδραστικότητα στις ιστοσελίδες.&lt;/dd>
+&lt;/dl>
+</code></pre></div></div>
+<dl>
+  <dt>HTML</dt>
+  <dd>Μια γλώσσα σήμανσης για τη δημιουργία ιστοσελίδων.</dd>
+
+  <dt>CSS</dt>
+  <dd>Μια γλώσσα που χρησιμοποιείται για τη διαμόρφωση της εμφάνισης των ιστοσελίδων.</dd>
+
+  <dt>JavaScript</dt>
+  <dd>Μια γλώσσα προγραμματισμού που προσθέτει διαδραστικότητα στις ιστοσελίδες.</dd>
+</dl>
+
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

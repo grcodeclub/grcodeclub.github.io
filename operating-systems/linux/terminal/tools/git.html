@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="git">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/linux.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/linux.png"/>
+    <meta property="og:title" content="git">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+    
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Git-Commands</h1>
+        <div id="linux-term"></div>
+
+        <p>Αρχικοποιήστε ένα τοπικό αποθετήριο Git</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git init</code></pre></div>                
+        <p>Δημιουργήστε ένα τοπικό αντίγραφο ενός απομακρυσμένου repository</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git clone ssh://git@github.com/[username]/[repository-name].git	</code></pre></div>                
+        <p>Ελέγξετε την κατάσταση toy git</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git status</code></pre></div>                
+        <p>Προσθέστε ένα αρχείο</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git add [file-name.txt]</code></pre></div>                
+        <p>Λίστα κλάδων (ο αστερίσκος υποδηλώνει τον τρέχοντα κλάδο)</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git branch</code></pre></div>                
+        <p>Εφαρμογή των αλλαγών στο απομακρυσμένο αποθετήριο</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git push origin [branch name]</code></pre></div>                
+        <p>Ενημέρωση του τοπικού repository</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git pull origin [branch name]</code></pre></div>                
+        <p>Προβολή αλλαγών</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git log</code></pre></div>                
+        <p>Προβολή αλλαγών (Aναλυτικά)</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git log --summary</code></pre></div>                
+        <p>Προβολή αλλαγών (Συνοπτικά)</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git log --oneline</code></pre></div>                
+        <p>Προσθέστε ένα απομακρυσμένο αποθετήριο</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git remote add origin ssh://git@github.com/[username]/[repository-name].git</code></pre></div>                
+        <p>Set a repository's origin branch to SSH</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git remote set-url origin ssh://git@github.com/[username]/[repository-name].git</code></pre></div>                
+        <p>Διαγραφή του branch από το απομακρυσμένο αποθετήριο</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git push origin --delete old-branch-name</code></pre></div>
+        <p>Εύρεση του Commit ID</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git log</code></pre></div>
+        <p>Επαναφορά του branch στο συγκεκριμένο commit</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git reset --hard [commit-id]</code></pre></div>
+        <p>Εκτέλεσε Interactive Rebase</p>
+        <p>Αντικατάστησε το N με τον αριθμό των commits που θέλεις να εξετάσεις.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash"></code>git rebase -i HEAD~N</pre></div>
+        <p>Επιλογή Commit για Διαγραφή: Για να διαγράψεις ένα commit, απλά άλλαξε την λέξη pick σε drop δίπλα από το commit που θέλεις να διαγράψεις.</p>
+        <p>Δημιουργία νέου branch</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git checkout --orphan new-branch-name</code></pre></div>
+        <p>Το --orphan δημιουργεί ένα νέο branch χωρίς ιστορικό commits.</p>
+        <p>Αντικατάσταση του Παλιού Branch</p>
+        <p>Αν θέλεις να αντικαταστήσεις το παλιό branch με το νέο, μπορείς να διαγράψεις το παλιό branch από το απομακρυσμένο repository και να σπρώξεις το νέο branch:</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git push origin --delete old-branch-name
+git push origin new-branch-name</code></pre></div>
+        <p>Αν θέλεις να σπρώξεις το νέο branch ως το branch που αντικαθιστά το παλιό:</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git branch -M old-branch-name
+git push -f origin old-branch-name</code></pre></div>
+        <p></p>
+        <p>Παρέχει μια λεπτομερή αναφορά για το μέγεθος και τη δομή του repository, όπως το συνολικό μέγεθος των αντικειμένων, το μέγεθος του ιστορικού και τον αριθμό των αρχείων.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">git-sizer</code></pre></div>
+        <p>Processing blobs: 15<br>Processing trees: 37<br>Processing commits: 15 <br>Matching commits to trees: 15<br>Processing annotated tags: 0<br>Processing references: 1<br>No problems above the current threshold were found</p>
+        
+      </div>
+    <div id="addFooter"></div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="JavaScript και Περιορισμοί">
+        <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/javascript.png">
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/javascript.png"/>
+        <meta property="og:title" content="JavaScript και Περιορισμοί">
+        <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Περιορισμοί</h1>
+
+        <p>Αποτροπή Περιήγησης μέσω Συντόμευσης Πλήκτρων</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('keydown', function(event) {
+if ((event.key === 'F12') || // Αποτροπή F12 (άνοιγμα DevTools)
+(event.key === 'F11') || // Αποτροπή F11 (πλήρης οθόνη)
+(event.key === 'F5') ||  // Αποτροπή F5 (ανανέωση σελίδας)
+(event.ctrlKey && event.key === 'r') ) {  // Αποτροπή Ctrl + R (ανανέωση σελίδας)
+event.preventDefault();
+alert('This keyboard shortcut is disabled on this page.');
+}
+});
+</code></pre></div></div>
+
+        <p>Απενεργοποίηση του μενού περιβάλλοντος</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('contextmenu', event => event.preventDefault());</code></pre></div></div>
+
+        <p>Απενεργοποίηση Επιλογής Κειμένου</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('selectstart', event => event.preventDefault());</code></pre></div></div>
+
+        <p>Απενεργοποίηση Dragging Εικόνων και Στοιχείων</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('dragstart', event => event.preventDefault());</code></pre></div></div>
+
+        <p>Απενεργοποίηση Copy (Αντιγραφή)</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('copy', event => event.preventDefault());</code></pre></div></div>
+
+        <p>Απενεργοποίηση Cut (Αποκοπή)</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('cut', event => event.preventDefault());</code></pre></div></div>
+
+        <p>Απενεργοποίηση Paste (Επικόλληση)</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('paste', event => event.preventDefault());</code></pre></div></div>
+
+        <p>Απενεργοποίηση Κουμπιών του Ποντικιού (πέρα από το δεξί κλικ)</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('mousedown', function(event) {
+if (event.button === 1) { // Απενεργοποίηση του μεσαίου κλικ
+event.preventDefault();
+}
+});</code></pre></div></div>
+
+        <p>Απενεργοποίηση Πλήκτρων Πλοήγησης του Ποντικιού</p>
+        <p>Αυτό αποτρέπει τους χρήστες από τη χρήση των κουμπιών "μπρος" και "πίσω" του ποντικιού για την πλοήγηση στην ιστοσελίδα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">window.addEventListener('popstate', function(event) {
+event.preventDefault();
+alert('Back/Forward navigation is disabled.');
+});</code></pre></div></div>
+
+        <p>Απενεργοποίηση Scroll (Κύλιση)</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">window.addEventListener('scroll', function(event) {
+event.preventDefault();
+});</code></pre></div></div>
+
+        <p>Απενεργοποίηση Ζουμ με Πληκτρολόγιο ή Ποντίκι</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('keydown', function(event) {
+if ((event.ctrlKey && (event.key === '+' || event.key === '-' || event.key === '0')) || event.key === 'Escape') {
+event.preventDefault();
+}
+});</code></pre></div></div>
+
+        <p>Απενεργοποίηση Console Log</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">console.log = function() {}; // Απενεργοποίηση console.log
+console.warn = function() {}; // Απενεργοποίηση console.warn
+console.error = function() {}; // Απενεργοποίηση console.error</code></pre></div></div>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

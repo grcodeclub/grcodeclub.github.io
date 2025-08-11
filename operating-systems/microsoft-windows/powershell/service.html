@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="PowerShell - Yπηρεσίες">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/windows.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/windows.png"/>
+    <meta property="og:title" content="PowerShell - Yπηρεσίες">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">PowerShell | Yπηρεσίες</h1>
+                    
+        <p class="highlight">Get-Service</p>         
+        <p>Δείτε ποιες υπηρεσίες είναι εγκατεστημένες στον υπολογιστή σας.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Get-Service</code></pre></div>                   
+        <p>Επιστρέφει πληροφορίες για μια συγκεκριμένη υπηρεσία με βάση το όνομά της.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Get-Service -Name Service_Name_Here</code></pre></div>                   
+        <p>Επιστρέφει πληροφορίες για μια υπηρεσία με βάση την εμφανιζόμενη ετικέτα της.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Get-Service -DisplayName Display_Name_Here </code></pre></div>                   
+        <p>Επιστρέφει τις υπηρεσίες που βρίσκονται σε κατάσταση εκτέλεσης.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Get-Service | Where-Object { $_.Status -eq "Running" }</code></pre></div>                   
+        <p>Επιστρέφει τις υπηρεσίες ταξινομημένες κατά αλφαβητική σειρά βάσει της εμφανιζόμενης ετικέτα</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Get-Service | Sort-Object DisplayName</code></pre></div>                   
+        
+        <p class="highlight">Start-Service</p>
+        <p>Ξεκινά μια υπηρεσία που έχει διακοπεί.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Start-Service</code></pre></div>                   
+        <p>Αυτή η εντολή θα επιλέξει όλες τις υπηρεσίες που έχουν κατάσταση "Stopped" και στη συνέχεια θα τις ξεκινήσει χρησιμοποιώντας την εντολή Start-Service.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Get-Service | Where-Object { $_.Status -eq "Stopped" } | Start-Service</code></pre></div>                   
+        
+        <p class="highlight">Stop-Service</p>
+        <p>Διακόπτει μια υπηρεσία που εκτελείται.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Stop-Service</code></pre></div>                   
+        
+        <p class="highlight">Restart-Service</p>
+        <p>Επανεκκινεί μια υπηρεσία.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Restart-Service</code></pre></div>                   
+        
+        <p class="highlight">Set-Service</p>
+        <p>Επιτρέπει την τροποποίηση των ρυθμίσεων μιας υπηρεσίας.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Set-Service</code></pre></div>                   
+        <p>Αυτό θα ορίσει την υπηρεσία με το όνομα "MyService" να ξεκινά αυτόματα κατά την εκκίνηση του συστήματος.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Set-Service -Name "MyService" -StartupType Automatic</code></pre></div>                   
+        <p>Αυτό θα ορίσει την υπηρεσία με το όνομα "MyService" να εκτελείται υπό τον λογαριασμό που ορίζεται στη μεταβλητή $cred.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Set-Service -Name "MyService" -StartupType Automatic -Credential $cred</code></pre></div>                   
+        <p>Αυτό θα ορίσει την περιγραφή της υπηρεσίας "MyService" σε "My Custom Service".</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Set-Service -Name "MyService" -Description "My Custom Service"</code></pre></div>                   
+        
+        <p class="highlight">New-Service</p>
+        <p>Δημιουργεί μια νέα υπηρεσία.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">New-Service</code></pre></div>                   
+        <p class="highlight">Remove-Service</p>
+        <p>Αφαιρεί μια υπηρεσία από το σύστημα.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `"><code class="language-powershell">Remove-Service</code></pre></div>                   
+        
+
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>

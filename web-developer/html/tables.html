@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Πίνακες στην Html">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/html.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/html.png"/>
+    <meta property="og:title" content="Πίνακες στην Html">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Πίνακες</h1>
+        <p>Οι πίνακες χρησιμοποιούνται στην HTML για να οργανώνουν δεδομένα σε σειρές και στήλες. Μπορούν να εμφανίζουν πληροφορίες όπως στατιστικά στοιχεία, χρονοδιαγράμματα κ.λπ.</p>
+        
+        <h2 class="highlight">Βασική Δομή ενός Πίνακα</h2>
+        <p>Για να δημιουργήσουμε έναν πίνακα στην HTML, χρησιμοποιούμε την ετικέτα <code>&lt;table></code>. Ο πίνακας αποτελείται από:</p>
+        <ol>
+            <li>Γραμμές (<code>&lt;tr></code>): Ορίζουν τις σειρές του πίνακα.</li>
+            <li>Κελιά δεδομένων (<code>&lt;td></code>): Περιέχουν τις πληροφορίες του πίνακα.</li>
+            <li>Κεφαλίδες (<code>&lt;th></code>) → Δημιουργούν επικεφαλίδες στηλών με έντονη γραφή.</li>
+        </ol>
+        
+        <h2 class="highlight">Συγχώνευση Κελιών με colspan</h2>
+        <p>Χρησιμοποιούμε το <code>colspan</code> για να συγχωνεύσουμε κελιά σε περισσότερες από μία στήλες.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
+    &lt;tr>
+        &lt;th colspan="2">Ονοματεπώνυμο&lt;/th>
+        &lt;th>Ηλικία&lt;/th>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>Νίκος&lt;/td>
+        &lt;td>Παπαδόπουλος&lt;/td>
+        &lt;td>28&lt;/td>
+    &lt;/tr>
+&lt;/table></code></pre></div></div>
+        <ul><li>Το border="1" προσθέτει περίγραμμα στον πίνακα.</li></ul>
+
+        <h2 class="highlight">Συγχώνευση Κελιών με rowspan</h2>
+        <p>Χρησιμοποιούμε το <code>rowspan</code> για να συγχωνεύσουμε κελιά σε περισσότερες από μία γραμμές.</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
+    &lt;tr>
+        &lt;th rowspan="2">Όνομα&lt;/th>
+        &lt;td>Μαρία&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>Γιώργος&lt;/td>
+    &lt;/tr>
+&lt;/table></code></pre></div></div>
+        <ul><li>Το border="1" προσθέτει περίγραμμα στον πίνακα.</li></ul>
+    
+    <h2 class="highlight">Δομή και Οργάνωση Μεγάλων Πινάκων</h2>
+    <p>Όταν οι πίνακες περιέχουν μεγάλο όγκο δεδομένων, μπορούμε να τους οργανώσουμε καλύτερα χρησιμοποιώντας τις ετικέτες <code>&lt;thead></code>, <code>&lt;tbody></code>, <code>&lt;tfoot></code>.</p>
+    <p>Αυτές οι ετικέτες διαχωρίζουν τον πίνακα σε ξεχωριστά λογικά τμήματα:</p>
+    <ol>
+        <li><code>&lt;thead></code> : Περιέχει τις επικεφαλίδες.</li>
+        <li><code>&lt;tbody></code> : Περιέχει το κυρίως περιεχόμενο.</li>
+        <li><code>&lt;tfoot></code> : Περιέχει σύνολα, υποσημειώσεις ή στατιστικά δεδομένα.</li>
+    </ol>
+    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
+    &lt;thead>
+        &lt;tr>
+            &lt;th>Όνομα&lt;/th>
+            &lt;th>Ηλικία&lt;/th>
+            &lt;th>Πόλη&lt;/th>
+        &lt;/tr>
+    &lt;/thead>
+    &lt;tbody>
+        &lt;tr>
+            &lt;td>Μαρία&lt;/td>
+            &lt;td>25&lt;/td>
+            &lt;td>Αθήνα&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Γιώργος&lt;/td>
+            &lt;td>30&lt;/td>
+            &lt;td>Θεσσαλονίκη&lt;/td>
+        &lt;/tr>
+    &lt;/tbody>
+    &lt;tfoot>
+        &lt;tr>
+            &lt;td colspan="3">Σύνολο: 2 εγγραφές&lt;/td>
+        &lt;/tr>
+    &lt;/tfoot>
+&lt;/table></code></pre></div></div>
+    
+    <h2 class="highlight">Χρήση caption για Τίτλο Πίνακα</h2>
+    <p>Η ετικέτα <code>&lt;caption></code> προσθέτει έναν τίτλο στον πίνακα, βελτιώνοντας την προσβασιμότητα και την κατανόηση των δεδομένων.</p>
+    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
+    &lt;caption>Λίστα Χρηστών&lt;/caption>
+    &lt;tr>
+        &lt;th>Όνομα&lt;/th>
+        &lt;th>Ηλικία&lt;/th>
+        &lt;th>Πόλη&lt;/th>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>Μαρία&lt;/td>
+        &lt;td>25&lt;/td>
+        &lt;td>Αθήνα&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>Γιώργος&lt;/td>
+        &lt;td>30&lt;/td>
+        &lt;td>Θεσσαλονίκη&lt;/td>
+    &lt;/tr>
+&lt;/table></code></pre></div></div>
+</div>
+    <div id="addFooter"></div>
+</body>
+</html>

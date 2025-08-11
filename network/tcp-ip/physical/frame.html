@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Δομή MAC Frame">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/network.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Δομή MAC Frame">
+    <meta name="keywords" content="Δομή MAC Frame">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Δομή MAC Frame</h1>
+        <p>Ένα frame αποτελείται από διάφορα πεδία:</p>
+        <ol>
+            <li>Header:	Πληροφορίες ελέγχου, π.χ. διευθύνσεις αποστολέα/παραλήπτη</li>
+            <li>Payload: Τα πραγματικά δεδομένα που θέλουμε να στείλουμε</li>
+            <li>Trailer: Πληροφορίες για έλεγχο σφαλμάτων, π.χ. CRC</li>
+        </ol>
+        <hr>
+        <p>Τα παρακάτω πεδία υπάρχουν στο κάθε πακέτο που στέλνει ή λαμβάνει μια συσκευή μέσω Wi-Fi ή άλλου πρωτοκόλλου.</p>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark"><tr><th>Πεδίο</th><th>Μήκος (bytes)</th><th>Περιγραφή</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Frame Control</td><td>2</td><td>Πληροφορίες τύπου frame, flags</td></tr>
+        <tr><td>Duration / ID</td><td>2</td><td>Χρονική διάρκεια ή Association ID</td></tr>
+        <tr><td>Address 1</td><td>6</td><td>Διεύθυνση παραλήπτη (Receiver)</td></tr>
+        <tr><td>Address 2</td><td>6</td><td>Διεύθυνση αποστολέα (Transmitter)</td></tr>
+        <tr><td>Address 3</td><td>6</td><td>BSSID ή άλλη διεύθυνση</td></tr>
+        <tr><td>Sequence Control</td><td>2</td><td>Αριθμός σειράς & Fragment</td></tr>
+        <tr><td>Address 4 (προαιρετικό)</td><td>6</td><td>Ανάλογα τον τύπο του frame</td></tr>
+        <tr><td>Frame Body</td><td>Μεταβλητό</td><td>Δεδομένα του MAC επιπέδου</td></tr>
+        <tr><td>FCS (CRC)</td><td>4</td><td>Έλεγχος ακεραιότητας (CRC)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

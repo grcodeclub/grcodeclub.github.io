@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Γλώσσα Προγραμματισμού C | Αρχεία">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού C | Αρχεία">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+    <meta name="keywords" content="Γλώσσα Προγραμματισμού C | Αρχεία">
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Αρχεία</h1>
+                    <h2 class="highlight" ">Άνοιγμα και Κλείσιμο αρχείου</h2>
+                    <table class="table table-bordered">
+                        <tr><td>Συνάρτηση</td><td>Λειτουργία</td></tr>
+                        <tr><td>fopen()</td><td>Ανοιγεί ένα αρχείο</td></tr>
+                        <tr><td>fclose()</td><td>Κλείνει ένα αρχείο</td></tr>
+                        <tr><td>feof()</td><td>Επιστρέφει true(1) όταν έχουμε ξεπεράσει το τέλος ενός αρχείου</td></tr>
+                        <tr><td>ferror()</td><td>Επιστρέφει true(1) αν προκύψει κάποιο σφάλμα</td></tr>
+                        <tr><td>clearerr()</td><td>Καθαρίζει τη κατάσταση σφάλματος για ένα συγκεκριμένο αρχείο.</td></tr>
+                        <tr><td>fflush()</td><td>Αδειάζει την περιοχή προσωρινής αποθήκευσης εισόδου/εξόδου ενός αρχείου.</td></tr>
+                        <tr><td>fflushall()</td><td>Αδειάζει την περιοχή προσωρινής αποθήκευσης εισόδου/εξόδου όλων των αρχείων.</td></tr>
+                    </table>
+                    <h2 class="highlight" ">Καταστάσεις που μπόρουμε να ανοίξουμε ένα αρχειο</h2>
+                    <table class="table table-bordered">
+                            <tr><td>Κατάσταση</td><td>Τύπος</td><td>Λειτουργία</td><td>Δείκτης </td><td>Σχόλια</td></tr>
+                            <tr><td>"r"</td><td>Κειμένου</td><td>Ανάγνωση</td><td>Αρχή</td><td>Το αρχείο πρέπει να υπάρχει</td></tr>
+                            <tr><td>"w"</td><td>Κειμένου</td><td>Εγγραφή</td><td>Αρχή</td><td>Αν υπάρχει το αρχείο διαγράφονται τα περιεχόμενα του.</td></tr>
+                            <tr><td>"a"</td><td>Κειμένου</td><td>Εγγραφή</td><td>Τέλος</td><td></td></tr>
+                            <tr><td>"r+"</td><td>Κειμένου</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή</td><td>Το αρχείο πρέπει να υπάρχει</td></tr>
+                            <tr><td>"w+"</td><td>Κειμένου</td><td>Ανάγνωση / Εγγραφή </td><td>Αρχή</td><td>Αν υπάρχει το αρχείο διαγράφονται τα περιεχόμενα του.</td></tr>
+                            <tr><td>"a+"</td><td>Κειμένου</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή για ανάγνωση και τέλος για εγγραφή</td><td></td></tr>
+                            <tr><td>"rb"</td><td>Δυαδικό</td><td>Ανάγνωση</td><td>Αρχή</td><td>Το αρχείο πρέπει να υπάρχει</td></tr>
+                            <tr><td>"wb"</td><td>Δυαδικό</td><td>Εγγραφή</td><td>Αρχή</td><td>Αν υπάρχει το αρχείο διαγράφονται τα περιεχόμενα του</td></tr>
+                            <tr><td>"ab"</td><td>Δυαδικό</td><td>Εγγραφή</td><td>Τέλος</td><td></td></tr>
+                            <tr><td>"rb+"</td><td>Δυαδικό</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή</td><td>Το αρχείο πρέπει να υπάρχει</td></tr>
+                            <tr><td>"wb+"</td><td>Δυαδικό</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή</td><td>Αν υπάρχει το αρχείο διαγράφονται τα περιεχόμενα του.</td></tr>
+                            <tr><td>"ab+"</td><td>Δυαδικό</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή για ανάγνωση και τέλος για εγγραφή</td><td></td></tr>
+                    </table>
+                    <h2 class="highlight" ">Διαβάζοντας από ένα αρχείο</h2>
+                <div class="bg_preview">
+                      <div  class="appearance">
+                          <div class="space"><div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div></div>
+                          <div class="name_input">c</div>
+                      </div>
+                      <div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  FILE *file;
+  char ch;
+  // Άνοιγμα του αρχείου
+  file = fopen("example.txt", "r");
+  // Έλεγχος αν το αρχείο άνοιξε επιτυχώς
+  if (file == NULL) {
+      printf("Αδυναμία ανοίγματος του αρχείου.\n");
+      return 1;
+  }
+  // Διάβασμα χαρακτήρα προς χαρακτήρα και εκτύπωση
+  while ((ch = fgetc(file)) != EOF) {
+      printf("%c", ch);
+  }
+  // Κλείσιμο του αρχείου
+  fclose(file);  
+  return 0;
+}</code></pre></div></div>
+
+                <p class="highlight" ">Αρχεία Κειμένου</p>
+                <table class="table table-bordered">
+                        <tr><td>Συνάρτηση</td><td>Λειτουργία</td></tr>
+                      <tr><td>fputc()</td><td>Γράφει έναν χαρακτήρα σε ένα αρχείο</td></tr>
+                        <tr><td>fgetc()</td><td>Διαβάζει έναν χαρακτήρα από κάποιο αρχείο</td></tr>
+                        <tr><td>fprintf()</td><td>Πραγματοποιεί εγγραφή σε ένα αρχείο, όπως η printf στην οθόνη </td></tr>
+                        <tr><td>fscanf()</td><td>Πραγματοποιεί ανάγνωση από ένα αρχείο, όπως η scanf από το πληκτρολόγιο</td></tr>
+                        <tr><td>fgets()</td><td>Διαβάζει ένα σύνολο χαρακτήρων από ένα αρχείο</td></tr>
+                        <tr><td>fputs()</td><td>Γράφει ένα σύνολο χαρακτήρων σε ένα αρχείο.</td></tr>
+                        <tr><td>fwrite()</td><td>Γράφει σε ένα αρχείο ένα πλ΄θος από τμήματα συγκεκριμένου μεγέθους σε byte, τα οποια διαβάζει από κάποια περιοχή μνήμης.</td></tr>
+                        <tr><td>fread()</td><td>Έχει παρόμοια σύνταξη με την fwrite(), με την διαφορά ότι διαβαζει από κάποιο αρχείο ένα πλήθος από τμήματα συγκεκριμένου μεγέθους σε byte και τα τοποθετεί σε κάποια περιοχή μνήμης </td></tr>
+                    </table>
+                <p> Σύνταξη fread()</p>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">size_t fread(void *buffer,size_t arbyte, size_t fores, FILE *fp);</code></pre></div></div>
+                <p> Σύνταξη fwrite()</p>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">size_t fwrite(void *buffer,size_t arbyte, size_t fores, FILE *fp);</code></pre></div></div>
+                <ol>
+                    <li>buffer: Είναι ο δείκτης που δείχνει στην περιοχή της μνλημης απ΄την οποία θα διαβαστούν τα byte που θα εγραφούν στο αρχείο.</li>
+                    <li>arbyte: Δείχνει τον αριθμό των byte του κάθε τμήματος.</li>
+                    <li>fores: Δείχνει το πλήθος των τμημάτων που θα διαβαστούν</li>
+                    <li>fp: Καθαρίζει ρεύμα με το οποίο είναι συνδεδεμένο το αρχείο.</li>
+                </ol>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

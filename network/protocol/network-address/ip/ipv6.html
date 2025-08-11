@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Internet Protocol v6">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/network.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Internet Protocol v6">
+    <meta name="keywords" content="IPv6">
+    <style>
+            table.ipv6 {
+      table-layout: fixed;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .ipv6 td, .ipv6 th {
+      border: 1px solid #000;
+      padding: 10px 4px;
+      background-color: #e9f3fb;
+    }
+    .field-title {
+      font-weight: bold;
+    }
+    </style>
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Internet Protocol v6</h1>
+        <p>Το IPv6 (Internet Protocol version 6) είναι η έκδοση του πρωτοκόλλου διαδικτύου που αντικαθιστά το IPv4. Το IPv6 προσφέρει έναν πολύ μεγαλύτερο χώρο διευθύνσεων από το IPv4, επιτρέποντας έτσι τη σύνδεση μεγαλύτερου αριθμού συσκευών στο Διαδίκτυο. Ας ρίξουμε μια ματιά στα χαρακτηριστικά του IPv6:</p>
+        <ol>
+            <li>Μήκος Διευθύνσεων: Οι διευθύνσεις IPv6 αποτελούνται από 128 bits, γεγονός που εξασφαλίζει έναν πολύ μεγαλύτερο χώρο διευθύνσεων σε σύγκριση με τις 32-bit διευθύνσεις του IPv4. Αυτό σημαίνει ότι υπάρχουν περισσότερες από 3.4 x 10^38 διευθύνσεις IPv6, προσφέροντας ανεξάντλητη χωρητικότητα.                    </li>
+            <li>Αναπαράσταση: Οι διευθύνσεις IPv6 αναπαρίστανται σε δεκαεξαδική μορφή με οκτώ τετράδες (π.χ., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). Επίσης, μπορεί να χρησιμοποιηθεί η συμπίεση μηδενικών για να απλοποιηθεί η αναπαράσταση (π.χ., 2001:db8:85a3::8a2e:370:7334).                    </li>
+            <li>Αυτόματη Διαμόρφωση Διευθύνσεων (Automatic Address Configuration): Το IPv6 προσφέρει μηχανισμούς για την αυτόματη διαμόρφωση διευθύνσεων, όπως το Stateless Address Autoconfiguration (SLAAC), που επιτρέπει στις συσκευές να αποκτούν διευθύνσεις IPv6 χωρίς την ανάγκη για κεντρική διαχείριση.                    </li>
+            <li>Βελτιωμένη Ασφάλεια: Το IPv6 προσφέρει ενσωματωμένη υποστήριξη για την ασφάλεια, με συνδρομή στο πρωτόκολλο IPSec. Οι κεφαλίδες των πακέτων IPv6 υποστηρίζουν επίσης γραμμή σύνθετης διαχείρισης (Flow Label), η οποία μπορεί να χρησιμοποιηθεί για τον έλεγχο της ποιότητας εξυπηρέτησης (QoS) και άλλους σκοπούς.                    </li>
+            <li>Υποστήριξη για Πολλαπλές Διευθύνσεις: Οι συσκευές μπορούν να έχουν πολλές διευθύνσεις IPv6, προσφέροντας έτσι ευελιξία στη δικτύωση και στη διαμόρφωση τους.                    </li>
+        </ol>
+        <p>
+            Το IPv6 αποτελεί το μέλλον του Διαδικτύου και είναι σχεδιασμένο για να αντιμετωπίσει την εξάντληση των διευθύνσεων IPv4 και να παρέχει βελτιωμένες δυνατότητες και ασφάλεια.
+        </p>
+        <h2 class="highlight">Δομή IPv6 Πακέτου</h2>
+            <table class="table ipv6">
+      <tbody>
+        <!-- 1η Γραμμή -->
+        <tr>
+          <td colspan="1"><span class="field-title">Version</span><br>4 bits</td>
+          <td colspan="2"><span class="field-title">Traffic Class</span><br>8 bits</td>
+          <td colspan="5"><span class="field-title">Flow Label</span><br>20 bits</td>
+        </tr>
+
+        <!-- 2η Γραμμή -->
+        <tr>
+          <td colspan="4"><span class="field-title">Payload Length</span><br>16 bits</td>
+          <td colspan="2"><span class="field-title">Next Header</span><br>8 bits</td>
+          <td colspan="2"><span class="field-title">Hop Limit</span><br>8 bits</td>
+        </tr>
+
+        <!-- 3η Γραμμή -->
+        <tr>
+          <td colspan="8"><span class="field-title">Source Address</span><br>128 bits</td>
+        </tr>
+
+        <!-- 4η Γραμμή -->
+        <tr>
+          <td colspan="8"><span class="field-title">Destination Address</span><br>128 bits</td>
+        </tr>
+
+        <!-- 5η Γραμμή -->
+        <tr>
+          <td colspan="8"><span class="field-title">Payload (Data)</span><br>Μεταβλητό μήκος</td>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

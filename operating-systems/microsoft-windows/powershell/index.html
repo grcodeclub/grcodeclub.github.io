@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="PowerShell">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/windows.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/windows.png"/>
+    <meta property="og:title" content="PowerShell">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">PowerShell</h1>
+
+        <p>Το PowerShell είναι εργαλείο της Microsoft που βρίσκεται ήδη προεγκατεστημένο στα Windows 10 και δίνει τη 
+            δυνατότητα στους διαχειριστές συστημάτων να ελέγξουν κάθε πτυχή του λειτουργικού μέσω εντολών και scripts.</p>
+            <p>Εκτελεί μια επισκευή συστήματος για να εντοπίσει και να επιδιορθώσει τυχόν αρχεία συστήματος που έχουν καταστραφεί.</p>
+            
+            <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση αγγλικού όρου">
+            <br>
+            <table id="search_table_page" class="table table-bordered">
+        <tr  id="title-table"><td>Εντολή</td> <td>Περιγραφή</td></tr>
+        <tr><td><a href="./service" class="link_here">Get-Service</a></td> <td>Εμφάνιση πληροφοριών σχετικά με τα Services</td></tr>
+        <tr><td>Get-Process</td> <td>Εμφάνιση πληροφοριών σχετικά με τα processes</td></tr>
+        <tr><td>Get-EventLog</td> <td>Εμφάνιση πληροφοριών από αρχεία καταγραφής συμβάντων</td></tr>
+        <tr><td>Set-ExecutionPolicy</td> <td>Τροποποιήστε την πολιτική εκτέλεσης σεναρίου</td></tr>
+        <tr><td>Test-Connection</td> <td>Ελέγξτε τη συνδεσιμότητα με έναν απομακρυσμένο υπολογιστή</td></tr>
+        <tr><td>Out-File</td> <td>Αποθήκευσε την έξοδο του PowerShell σε ένα αρχείο</td></tr>
+        <tr><td>Get-Help</td> <td>Εμφάνιση πληροφοριών σχετικά με έννοιες και εντολές</td></tr>
+        <tr><td>Get-History</td> <td>Ανακτήστε πρόσφατες εντολές.</td></tr>
+        <tr><td>Get-Command</td> <td>Ανακτήστε όλες τις διαθέσιμες εντολές PowerShell</td></tr>
+        <tr><td>ConvertTo-HTML</td> <td>Δημιουργήστε ένα αρχείο HTML από την έξοδο PowerShell</td></tr>
+        <tr><td>Copy-Item</td> <td>Αντιγράψτε ένα αρχείο σε μια συγκεκριμένη τοποθεσία</td></tr>
+        <tr><td>Clear-History</td> <td>Διαγράψτε τις εγγραφές από το ιστορικό εντολών σας</td></tr>
+        <tr><td>Add-History</td> <td>AΠροσθέστε καταχωρήσεις στο ιστορικό εντολών σας</td></tr>
+        <tr><td>Format-Table</td> <td>Μορφοποιήστε την έξοδο PowerShell ως πίνακα</td></tr>
+        <tr><td>Format-List</td> <td>Μορφοποιήστε την έξοδο PowerShell ως λίστα</td></tr>
+        <tr><td>Clear-Content</td> <td>Διατηρήστε ένα στοιχείο ενώ διαγράφετε τα περιεχόμενα αυτού του στοιχείου</td></tr>
+        <tr><td>Checkpoint-Computer</td> <td>Ορίστε ένα σημείο επαναφοράς στο μηχάνημά σας</td></tr>
+        <tr><td>ForEach-Object</td> <td>Εκτελέστε μια λειτουργία σε κάθε στοιχείο σε ένα καθορισμένο group</td></tr>
+        <tr><td>Where-Object</td> <td>Επιλέξτε αντικείμενα με μια συγκεκριμένη ιδιότητα</td></tr>
+        <tr><td>Select-Object</td> <td>Επιλέξτε συγκεκριμένες ιδιότητες ενός αντικειμένου ή μιας ομάδας αντικειμένων</td></tr>
+        <tr><td>Write-Progress</td> <td>Εμφανίστε μια γραμμή προόδου σε ένα παράθυρο PowerShell</td></tr>
+        <tr><td>Debug-Process</td> <td>Επισυνάψτε ένα πρόγραμμα εντοπισμού σφαλμάτων σε μια διαδικασία που εκτελείται</td></tr>
+        <tr><td>Get-WinEvent</td> <td>Εμφάνιση αρχείων καταγραφής συμβάντων των Windows</td></tr>
+        <tr><td>Wait-Job</td> <td>Καταργήστε τη γραμμή εντολών μέχρι να ολοκληρωθεί η εκτέλεση των εργασιών παρασκηνίου</td></tr>
+    </table>
+    <nav aria-label="Σελιδοποίηση">
+        <ul id="pagination" class="pagination justify-content-center">
+            <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+        </ul>
+    </nav>    
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>

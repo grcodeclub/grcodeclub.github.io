@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="JavaScript | Εντολές">
+        <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/javascript.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/javascript.png"/>
+    <meta property="og:title" content="JavaScript | Εντολές">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Εντολές</h1>
+        <p class="highlight">Τύποι Δεδομένων</p>
+        <ol>
+            <li>String: Κείμενο</li>
+            <li>Number: Αριθμοί</li>
+            <li>Boolean: true ή false</li>
+            <li>Array: Λίστες</li>
+            <li>Object: Σύνθετες δομές δεδομένων</li>
+        </ol>
+        <p class="highlight">Σχόλια</p>
+        <div class="bg_preview"> <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">// Αυτό είναι ένα μονογραμμή σχόλιο
+
+/*
+Αυτό είναι ένα
+πολυγραμμή σχόλιο
+*/
+</code></pre></div></div>
+            
+        <p class="highlight">Mεταβλητές</p>
+        <p><code>let</code> και <code>const</code>: Χρησιμοποιούνται για τον ορισμό μεταβλητών. Οι μεταβλητές που δηλώνονται με let μπορούν να αλλάξουν τιμή, ενώ οι μεταβλητές που δηλώνονται με const είναι σταθερές και δεν μπορούν να αλλάξουν τιμή.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">let count = 10;
+const PI = 3.14159;</code></pre></div></div>
+
+        <p class="highlight">Εκτύπωση Mηνυμάτων</p>
+        <p>Στην console του προγράμματος περιήγησης.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">console.log("Hello, world!");</code></pre></div></div>
+
+        <p class="highlight">Μαθηματικές Εντολές</p>
+        <div class="bg_preview">
+            <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">let a = 10;
+let b = 5;
+
+console.log(a + b); // Πρόσθεση
+console.log(a - b); // Αφαίρεση
+console.log(a * b); // Πολλαπλασιασμός
+console.log(a / b); // Διαίρεση
+console.log(a % b); // Υπόλοιπο (modulus)
+</code></pre></div></div>
+
+        <p class="highlight">Λογικές Εντολές</p>
+        <div class="bg_preview">
+            <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">let a = true;
+let b = false;
+
+console.log(a && b); // AND
+console.log(a || b); // OR
+console.log(!a);      // NOT
+</code></pre></div></div>
+
+        <p class="highlight">Συνθήκες</p>
+        <p><code>if-else</code> Χρησιμοποιείται για τον έλεγχο της συνθήκης και την εκτέλεση κώδικα βάσει αυτής της συνθήκης.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">let age = 18;
+if (age >= 18) {
+console.log("Είστε ενήλικας.");
+} else {
+console.log("Είστε ανήλικος.");
+}</code></pre></div></div>
+
+
+        <p class="highlight">Επανάληψη </p>
+        <p><code>for</code> loop: Χρησιμοποιείται για την επανάληψη κώδικα συγκεκριμένο αριθμό φορών.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">for (let i = 0; i < 5; i++) {
+console.log(i);
+}</code></pre></div></div>
+
+        <p><code>while</code> loop: Χρησιμοποιείται για την επανάληψη κώδικα όσο μια συνθήκη είναι αληθής.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">let num = 0;
+while (num < 5) {
+console.log(num);
+num++;
+}</code></pre></div></div>
+
+        <p class="highlight">Συναρτήσεις</p>
+        <p><code>function</code> Χρησιμοποιείται για τον ορισμό και την κλήση συναρτήσεων.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">function greet(name) {
+console.log(`Καλημέρα, ${name}!`);
+}
+greet("ΓΙΩΡΓΟΣ");</code></pre></div></div>
+
+        <p class="highlight">Object</p>
+        <p>Χρησιμοποιείται για τη δημιουργία και διαχείριση αντικειμένων με ιδιότητες.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">let person = {
+firstName: "Γιάννης",
+age: 30
+};
+
+let onoma = person.firstName;
+let ilikia = person.age;
+
+console.log(onoma); // Γιάννης
+console.log(ilikia); // 30</code></pre></div></div>
+
+        <p class="highlight">Promises</p>
+        <p>Χρησιμοποιούνται για τη διαχείριση ασύγχρονων εργασιών και την αντιμετώπιση των αποτελεσμάτων τους.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">const fetchData = new Promise((resolve, reject) => {
+// Κώδικας για τη λήψη δεδομένων από κάποια πηγή
+if (dataReceived) {
+resolve(data);
+} else {
+reject("Αποτυχία λήψης δεδομένων");
+}
+});
+
+fetchData.then(data => {
+console.log(data);
+}).catch(error => {
+console.error(error);
+});</code></pre></div></div>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

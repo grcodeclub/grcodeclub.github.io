@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Γλώσσα Προγραμματισμού C | Δείκτες (Pointers)">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού C | Δείκτες (Pointers)">
+    <meta name="keywords" content="Δείκτες (Pointers) στη C">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Δείκτες (Pointers)</h1>
+        <h2 class="highlight">Διεύθυνση Μνήμης</h2>
+        <ol>
+            <li>Όταν μια μεταβλητή δημιουργείται στη C, μια διεύθυνση μνήμης εκχωρείται στη μεταβλητή.</li>
+            <li>Η διεύθυνση μνήμης είναι η θέση στην μνήμη του υπολογιστή, όπου αποθηκεύεται η μεταβλητή.</li>
+            <li>Όταν ορίζουμε μια τιμή στην μεταβλητή , στην πραγματικότητα η τιμή αποθηκεύετε στην συγκεκριμένη διεύθυνση μνήμης.</li>
+            <li>Όταν χρησιμοποιούμαι το & μπροστά από μια μεταβλητή, στην πραγματικότητα μιλάμε για την διεύθυνση μνήμης που δείχνει η συγκεκριμένη μεταβλητή.</li>
+        </ol>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-c">int x = 43;
+    printf("%p", &x);</code></pre></div></div>
+        <p><strong>Σημείωση:</strong> Η διεύθυνση μνήμης είναι σε δεκαεξαδική μορφή (0x.). </p>
+        <h2 class="highlight">Δείκτες</h2>
+        <p>Οι <code>pointers</code> στην C είναι μια από τις πιο ισχυρές και χαρακτηριστικές έννοιες της γλώσσας. Ένας δείκτης είναι μια μεταβλητή που αποθηκεύει τη διεύθυνση μνήμης μιας άλλης μεταβλητής. 
+            Με τους δείκτες μπορούμε να έχουμε άμεση πρόσβαση στη μνήμη και να διαχειριζόμαστε δεδομένα με πολύ ευέλικτο και αποτελεσματικό τρόπο.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 42;
+    int *ptr = &number;
+    //Εκτύπωση της τιμής που δείχνει ο δείκτης
+    printf("Value: %d\n", *ptr); </code></pre></div></div>
+    
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

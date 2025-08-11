@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Σύνδεσμοι στην Html">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/html.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/html.png"/>
+    <meta property="og:title" content="Σύνδεσμοι στην Html">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Σύνδεσμοι στην html</h1>
+        <h2 class="highlight">Σύνταξη των html συνδέσμων</h2>
+        Στη γλώσσα HTML οι σύνδεσμοι ορίζονται με την ετικέτα &lt;a> ως εξής:
+        <div style=" border-radius: 10px; background-color: rgb(12, 12, 1); margin-left: 10px; margin-right: 10px; padding-bottom: 2px;">
+            <div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href=”url”>κείμενο του συνδέσμου&lt;/a></code></pre>    
+        </div></div>
+        <h2 class="highlight">Τοπικοί σύνδεσμοι (Local Links)</h2>
+        <p>Ο τοπικός σύνδεσμος (local link) είναι ένας υπερσύνδεσμος που παραπέμπει σε μια άλλη σελίδα ή αρχείο μέσα στον ίδιο ιστότοπο. Σε αντίθεση με τους εξωτερικούς συνδέσμους, που οδηγούν σε διαφορετικούς ιστότοπους, οι τοπικοί σύνδεσμοι επιτρέπουν την πλοήγηση εντός της ίδιας ιστοσελίδας ή δικτυακής εφαρμογής.</p>
+        <p>Οι τοπικοί σύνδεσμοι χρησιμοποιούν σχετικά URL (relative URLs), δηλαδή διευθύνσεις που δεν περιλαμβάνουν το πλήρες URL με το πρωτόκολλο (π.χ., http://www.example.com). Αντίθετα, καθορίζουν τη διαδρομή σε σχέση με τη δομή των φακέλων του ιστότοπου.</p>
+        <div class="alert alert-warning" role="alert">
+            <p>Ένας τοπικός σύνδεσμος που παραπέμπει σε μια σελίδα "about.html" στον ίδιο φάκελο μπορεί να γραφτεί ως:</p>
+            <div style=" border-radius: 10px; background-color: rgb(12, 12, 1); margin-left: 10px; margin-right: 10px; padding-bottom: 2px;">
+                <div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href="about.html">Σχετικά με εμάς&lt;/a></code></pre>   </div>
+            </div>
+            <p>Αν η σελίδα βρίσκεται σε έναν υποφάκελο, η σύνταξη θα είναι:</p>
+            <div style=" border-radius: 10px; background-color: rgb(12, 12, 1); margin-left: 10px; margin-right: 10px; padding-bottom: 2px;">
+                <div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href="pages/about.html">Σχετικά με εμάς&lt;/a></code></pre>   </div>
+            </div>
+            <p>Για να επιστρέψουμε σε έναν ανώτερο φάκελο, χρησιμοποιούμε <code>../</code>, όπως στο παράδειγμα:</p>
+            <div style=" border-radius: 10px; background-color: rgb(12, 12, 1); margin-left: 10px; margin-right: 10px; padding-bottom: 2px;">
+                <div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href="../about.html">Σχετικά με εμάς&lt;/a></code></pre>   </div>
+            </div>
+        </div>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

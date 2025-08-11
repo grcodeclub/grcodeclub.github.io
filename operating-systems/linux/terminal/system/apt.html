@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Linux | Apt">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/linux.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/linux.png"/>
+    <meta property="og:title" content="Linux | Apt">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+    
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Apt</h1>
+        <div id="linux-term"></div>
+        <p>Ανανεώνει τη λίστα των διαθέσιμων πακέτων και των εκδόσεών τους.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt update</code></pre></div>
+        <p>Αναβαθμίζει όλα τα εγκατεστημένα πακέτα στο σύστημα στις τελευταίες διαθέσιμες εκδόσεις.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt upgrade</code></pre></div>
+        <p>Όπως το apt upgrade, αλλά με την προσθήκη ότι αφαιρεί πακέτα αν αυτό είναι αναγκαίο για την αναβάθμιση άλλων.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt full-upgrade</code></pre></div>
+        <p>Αφαιρεί το πακέτο με το όνομα [package_name] χωρίς να διαγράφει τα αρχεία ρυθμίσεων.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt remove [package_name]</code></pre></div>
+        <p>Αφαιρεί πακέτα που εγκαταστάθηκαν ως εξαρτήσεις και δεν χρειάζονται πλέον.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt autoremove</code></pre></div>
+        <p>Εμφανίζει μια λίστα πακέτων. Μπορεί να χρησιμοποιηθεί με διάφορες επιλογές.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt list</code></pre></div>
+        <p>Αναζητά πακέτα που ταιριάζουν με τον όρο αναζήτησης [search_term]</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt search [search_term]</code></pre></div>
+        <p>Εμφανίζει λεπτομερείς πληροφορίες για το πακέτο με το όνομα [package_name].</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt show [package_name]</code></pre></div>
+        <p>Καθαρίζει την κρυφή μνήμη από τα ληφθέντα πακέτα.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt clean</code></pre></div>
+        <p>Καθαρίζει την κρυφή μνήμη από πακέτα που δεν είναι πλέον διαθέσιμα στο αποθετήριο.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt autoclean</code></pre></div>
+ 
+      </div>
+
+    <div id="addFooter"></div>
+</body>
+</html>

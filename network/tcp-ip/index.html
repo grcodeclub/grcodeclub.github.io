@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="TCP/IP">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/network.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="TCP/IP">
+    <meta name="keywords" content="TCP/IP">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+    <style>
+        .nav-tabs {
+            overflow-y: hidden; 
+            flex-wrap: nowrap;
+            overflow-x: auto; 
+        }
+    </style>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Μοντέλο TCP/IP</h1>
+        <p>Το μοντέλο TCP/IP αποτελείται από τέσσερα επίπεδα:</p>
+        <table class="table table-bordered text-center">
+            <tr><th>OSI Layer</th><th>TCP/IP Layer</th><th>Όνομα PDU</th></tr>
+            <tr><td>Application (Εφαρμογής)</td><td rowspan="3">Application (Εφαρμογής)</td><td rowspan="3">Δεδομένα (Data)</td></tr>
+            <tr><td>Presentation (Παρουσίασης)</td></tr>
+            <tr><td>Session (Συνεδρίας)</td></tr>
+            <tr><td>Transport (Μεταφοράς)</td><td>Transport (Μεταφοράς)</td><td>Τμήμα (Segment)</td></tr>
+            <tr><td>Network (Δικτύου)</td><td>Network (Δικτύου)</td><td><a href="../protocol/network-address/ip/packet_IPv4.html">Πακέτο (Packet)</a></td></tr>
+            <tr><td>Data Link (Συνδέσμου)</td><td rowspan="2">Physical (Φυσικό)</td><td><a href="./physical/frame.html">Πλαίσιο (Frame)</a></td></tr>
+            <tr><td>Physical (Φυσικό)</td></<td><td>Bits</td><tr>
+        </table>
+        <p>Το PDU (Protocol Data Unit) είναι τα data που διαχειρίζεται το κάθε επίπεδο. Περιλαμβάνει τα δεδομένα που πρέπει να μεταφερθούν, 
+            καθώς και τις αντίστοιχες πληροφορίες, όπως επικεφαλίδα (header) ή/και υπογραφή (trailer), ανάλογα με το επίπεδο στο οποίο βρίσκεται."</p>
+                    <div class="card-body">
+                        <h2 class="card-title highlight">Ανάλυση των επιπέδων</h2>
+                        <br>
+                        <ul class="nav nav-tabs " id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#Physical" role="tab" aria-controls="home" aria-selected="true">Φυσικό</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#Network" role="tab" aria-controls="profile" aria-selected="false">Δικτύου</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#Transport" role="tab" aria-controls="profile" aria-selected="false">Μεταφοράς</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#Application" role="tab" aria-controls="profile" aria-selected="false">Εφαρμογής</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="Physical" role="tabpanel" aria-labelledby="home-tab">
+                                <p class="highlight">Επίπεδο Φυσικό</p>
+                                <p>Σε αυτό το επίπεδο ανήκουν οι δικτυακές τεχνολογίες όπως Ethernet. Το επίπεδο ασχολείται με την μετάδοση των bit μέσω διάφορων μέσων και αναλυτικότερα με τα ηλεκτρικά, μηχανικά και λειτουργικά χαρακτηριστικά των διασυνδέσεων. Επίσης ασχολείται με τον τρόπο που γίνεται η πρόσβαση στο φυσικό μέσον και καθορίζει τους κανόνες επικοινωνίας στο τοπικό δίκτυο.</p>
+                                <p>Δείτε επίσης: <a href="./physical/mac.html">Διεύθυνση MAC</a> , <a href="./physical/frame.html">Δομή MAC Frame</a> </p>
+                            </div>
+                            <div class="tab-pane fade" id="Network" role="tabpanel" aria-labelledby="profile-tab">
+                                <p class="highlight">Επίπεδο Δικτύου</p>
+                               <ol>
+                                <li><b>Δρομολόγηση (Routing):</b> Το επίπεδο δικτύου είναι υπεύθυνο για την επιλογή της διαδρομής που θα ακολουθήσουν τα δεδομένα μέσα στο δίκτυο, από τον αποστολέα προς τον παραλήπτη.</li>
+                                <li><b>Προσθήκη διεύθυνσης παραλήπτη:</b> Στο επίπεδο δικτύου προστίθενται οι IP διευθύνσεις, ώστε να γνωρίζει το δίκτυο ποιος είναι ο παραλήπτης του πακέτου.</li>
+                                <li><b>PDU του επιπέδου δικτύου:</b> Ονομάζεται πακέτο (packet) και περιέχει πληροφορίες όπως:
+                                <ul>
+                                    <li>IP διεύθυνση αποστολέα</li>
+                                    <li>IP διεύθυνση παραλήπτη</li>
+                                    <li>Άλλα στοιχεία για τη δρομολόγηση</li>
+                                </ul></li>
+                               </ol>
+                            <p>Δείτε επίσης: <a href="../protocol/network-address/ip/">Το πρωτόκολλο IP</a></p>
+
+                            </div>
+                            <div class="tab-pane fade" id="Transport" role="tabpanel" aria-labelledby="profile-tab">
+                                <p class="highlight">Επίπεδο Μεταφοράς</p>
+                                <p>Το επίπεδο μεταφοράς φροντίζει για τη μεταφορά των δεδομένων από τον αποστολέα στον παραλήπτη με τρόπο αξιόπιστο ή γρήγορο, ανάλογα με το πρωτόκολλο που χρησιμοποιείται.</p>
+                                <p>Κύριες λειτουργίες του:</p>
+                                <ol>
+                                    <li>Παραλαμβάνει τα δεδομένα από το επίπεδο εφαρμογής.</li>
+                                    <li>Διασπά τα δεδομένα σε μικρότερα κομμάτια (αν χρειαστεί), που ονομάζονται τμήματα (segments).</li>
+                                    <li>Παραδίδει τα τμήματα στο αμέσως κατώτερο επίπεδο (το επίπεδο δικτύου), για να ξεκινήσει η αποστολή μέσω του δικτύου.</li>
+                                </ol>
+                                <p>Έλεγχος Αξιοπιστίας:</p>
+                                <ol>
+                                    <li>Βεβαιώνεται ότι όλα τα τμήματα φτάνουν σωστά στον παραλήπτη.</li>
+                                    <li>Ελέγχει αν τα τμήματα:
+                                        <ul><li>Φτάνουν με τη σωστή σειρά.</li><li>Δεν έχουν σφάλματα ή απώλειες.</li></ul>
+                                    </li>
+                                    <li>Αν κάποιο τμήμα χαθεί ή περιέχει λάθη, το επίπεδο μεταφοράς ζητάει την επαναμετάδοση.</li>
+                                </ol>
+                                <p>Πρωτόκολλα που χρησιμοποιεί:</p>
+                                <ol>
+                                    <li><b>TCP (Transmission Control Protocol):</b><br>Προσφέρει αξιόπιστη μεταφορά με έλεγχο λαθών, σωστή σειρά παραλαβής και επιβεβαίωση παραλαβής (ACKs).</li>
+                                    <li><b>UDP (User Datagram Protocol):</b><br>Προσφέρει γρήγορη αλλά μη αξιόπιστη μεταφορά. Δεν εγγυάται ότι τα δεδομένα θα φτάσουν σωστά ή με τη σωστή σειρά. Χρησιμοποιείται σε εφαρμογές όπου η ταχύτητα είναι πιο σημαντική από την αξιοπιστία (π.χ. βίντεο, online παιχνίδια).</li>
+                                </ol>
+                            </div>
+                            <div class="tab-pane fade" id="Application" role="tabpanel" aria-labelledby="profile-tab">
+                                <p class="highlight">Επίπεδο Εφαρμογής</p>
+                                <p>Σε αυτό το επίπεδο ανήκουν οι υπηρεσίες του Διαδικτύου.</p>
+                            </div>
+
+                        </div>
+                    </div>
+        </div>
+
+
+    </div>
+    
+    <div id="addFooter"></div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px; /* Κύριο κείμενο */
+	line-height: 1.5; /* Διάστημα μεταξύ γραμμών για καλύτερη ανάγνωση */
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('fonts/roboto.woff2') format('woff2');
+	font-display: swap;
+}
+
+/*Heading h1*/
+
+h1{
+	font-size: 34px;
+	line-height: 34px;
+	letter-spacing: -1px;
+}
+h1.title {
+	text-align: center;
+    background-color: #212529; /* Σκούρο χρώμα */
+    color: #ccc;
+    padding: 10px;
+}
+
+/*Heading h2*/
+h2{
+	font-size: 30px;
+	line-height: 32px;
+	letter-spacing: -0.8px;
+}
+
+h2.highlight {
+	margin-top: 3%;
+	color: white; /* Το κάνουμε λευκό για αντίθεση */
+	text-align: center;
+	padding: 5px;
+	background: radial-gradient(circle, #212529 40%, #545e67 63%, transparent 100%);
+}
+  
+/*Heading h3*/
+h3{
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: -0.5px;
+}
+
+/*Heading h4*/
+h4{
+	font-size: 20px;
+	line-height: 22px;
+	letter-spacing: -0.4px;
+}
+
+/*Heading h5*/
+h5{
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: -0.2px;
+}
+
+/*Heading h6*/
+h6{
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: -0.1px;
+}
+
+/* Παράγραφος */
+p {
+	text-align: justify;
+}
+
+blockquote {
+	margin-left: 1%;
+	padding: 0.5em;
+	font-size: 14px;
+	color: black;
+	background-color: lightgray;
+	border-left: 8px solid #212529;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+code {
+	background: #1b1e20;
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	tab-size: 2;
+	color: #ffffff;
+	white-space: nowrap;
+}
+
+
+section.tmp {
+	background-color: #1a1a1a; /* Σκούρο φόντο */
+	margin-left: 10%;
+	margin-right: 10%;
+	color: #e0e0e0;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+@media (pointer: coarse) {
+	a:active {
+		background-color: transparent; /* Αφαιρεί το μπλε χρώμα φόντου */
+		color: inherit; /* Επαναφέρει το χρώμα κειμένου */
+		outline: none; /* Αφαιρεί το μπλε περίγραμμα */
+	}
+}
+
+
+@media (min-width: 992px) {
+	a.link_here {white-space: nowrap;}
+}
+
+
+
+/* Link */
+code a{
+	color: rgb(175 201 239);
+}
+code a:hover {
+  color: white;
+}

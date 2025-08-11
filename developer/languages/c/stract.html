@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Γλώσσα Προγραμματισμού C | Δομές (Specific Structures)">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού C και Δομές (Specific Structures)">
+    <meta name="keywords" content="Γλώσσα Προγραμματισμού C και Δομές (Specific Structures)">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+            <h1 class="title">Δομές (Specific Structures)</h1>
+            <p>Η δομή (structure) στην C επιτρέπει τη δημιουργία σύνθετων τύπων δεδομένων που μπορούν να περιέχουν πολλές μεταβλητές διαφορετικών τύπων, π.χ., ακέραιους, πραγματικούς αριθμούς, χαρακτήρες κ.λπ. Αυτό είναι χρήσιμο για την αναπαράσταση πραγματικών οντοτήτων, όπως αντικείμενα, άτομα ή αρχεία.</p>
+            <h2 class="highlight" id="tm">Stuct tm</h2>
+            <p>Χρησιμοποιείται για την αναπαράσταση ημερομηνιών και ωρών.Η δομή struct tm ορίζεται στο αρχείο κεφαλίδας <b><mark>&lt;time.h&gt;</mark></b> και έχει την εξής μορφή
+            <div class="bg_preview">
+                  <div  class="appearance">
+                      <div class="space"> 
+                          <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+                      </div>
+                      <div class="name_input">c</div>
+                  </div>
+                  <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct tm {
+int tm_sec;   // Αναπαριστά τα δευτερόλεπτα (0-59)
+int tm_min;   // Αναπαριστά τα λεπτά (0-59)
+int tm_hour;  // Αναπαριστά τις ώρες (0-23)
+int tm_mday;  // Αναπαριστά την ημέρα του μήνα (1-31)
+int tm_mon;   // Αναπαριστά τον μήνα (0-11, 0 = Ιανουάριος)
+int tm_year;  // Αναπαριστά το έτος (έτος - 1900)
+int tm_wday;  // Αναπαριστά την ημέρα της εβδομάδας(0-6, 0 = Κυριακή)
+int tm_yday;  // Αναπαριστά την ημέρα του έτους (0-365)
+int tm_isdst; // Aναπαριστά την ένδειξη θερινής ώρας
+              // (1 = θερινή ώρα, 0 = μη θερινή ώρα, -1 = άγνωστο)
+}; </code></pre></div></div>
+
+                  <h2 class="highlight" id="timeval">Struct timeval </h2>
+                  <p>Χρησιμοποιείται για την αναπαράσταση χρονικών διαστημάτων με ακρίβεια μέχρι τα μικροδευτερόλεπτα.
+                    Η δομή struct timeval ορίζεται στο αρχείο κεφαλίδας <b><mark>&lt;sys/time.h&gt;</mark></b> και έχει την εξής μορφή</p>
+                    <div class="bg_preview" >
+                        <div  class="appearance">
+                            <div class="space"> 
+                                <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+                            </div>
+                            <div class="name_input">c</div>
+                        </div>
+                        <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct timeval {
+time_t tv_sec; // Αναπαριστά τον αριθμό των δευτερολέπτων
+long tv_usec;  // Αναπαριστά τον αριθμό των μικροδευτερολέπτων
+};</code></pre></div></div>
+
+<h2 class="highlight" id="timespec">Stuct timespec</h2>
+<p>Χρησιμοποιείται για την αναπαράσταση χρονικών διαστημάτων με ακρίβεια μέχρι τα νανοδευτερόλεπτα.
+    <br><br>
+    Η δομή struct timespec ορίζεται στο αρχείο κεφαλίδας <b><mark>&lt;sys/time.h&gt;</mark></b> και έχει την εξής μορφή</p>
+
+
+  <div class="bg_preview" >
+    <div  class="appearance">
+        <div class="space"> 
+            <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+        </div>
+        <div class="name_input">c</div>
+    </div>
+    <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct timespec { 
+time_t tv_sec; //Αναπαριστά τον αριθμό των δευτερολέπτων.
+long tv_nsec;  //Αναπαριστά τον αριθμό των νανοδευτερολέπτων.
+};</code></pre></div></div>
+
+      
+
+<h2 class="highlight" id="sockaddr">Stuct sockaddr</h2>
+<p>
+    Η δομή sockaddr είναι μια βασική δομή που χρησιμοποιείται στην προγραμματιστική γλώσσα C για την προγραμματισμό των sockets. 
+    Ορίζεται στο αρχείο κεφαλίδας <b><mark>&lt;sys/socket.h&gt;</mark></b> και χρησιμοποιείται για να αναπαραστήσει μια γενική διεύθυνση socket.
+    Η δομή struct sockaddr είναι :
+    <ul>
+      <li>sa_family: καθορίζει την οικογένεια της διεύθυνσης, που καθορίζει τη μορφή των δεδομένων της διεύθυνσης</li>
+      <li>sa_data: είναι ένας πίνακας που περιέχει τις πραγματικές πληροφορίες της διεύθυνσης. Το μέγεθος του πίνακα sa_data μπορεί να ποικίλει ανάλογα με την οικογένεια της διεύθυνσης που χρησιμοποιείται.</li>
+    </ul>
+  </p>
+  <div class="bg_preview" >
+    <div  class="appearance">
+        <div class="space"> 
+            <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+        </div>
+        <div class="name_input">c</div>
+    </div>
+    <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct sockaddr {
+unsigned short sa_family;
+char sa_data[14];  
+};</code></pre></div></div>
+<h2 class="highlight" id="sockaddr_in">Stuct sockaddr_in</h2>
+                     <p>
+                    Η δομή sockaddr_in χρησιμοποιείται στη γλώσσα προγραμματισμού C για να αναπαραστήσει μια διεύθυνση IPv4 για τη χρήση με sockets. 
+                    Η δομή struct timeval ορίζεται στο αρχείο κεφαλίδας <b>&lt;netinet/in.h&gt;</b> και έχει την εξής μορφή:
+                    <ul>
+                      <li>sin_family: Η οικογένεια της διεύθυνσης, που συνήθως είναι AF_INET για IPv4.</li>
+                      <li>sin_port: Ο αριθμός θύρας στον οποίο ο ακροατής ή ο προορισμός του socket είναι συνδεδεμένος. Πρέπει να μετατραπεί στην αναγνωριστική μορφή δικτύου (network byte order) χρησιμοποιώντας τη συνάρτηση htons().</li>
+                      <li>sin_addr: Η διεύθυνση IPv4. Είναι μια δομή τύπου struct in_addr που περιέχει την αριθμητική αναπαράσταση της διεύθυνσης.</li>
+                    </ul>
+                  </p>
+                  <div class="bg_preview" >
+                    <div  class="appearance">
+                        <div class="space"> 
+                            <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+                        </div>
+                        <div class="name_input">c</div>
+                    </div>
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct sockaddr_in {
+  short sin_family;         
+  unsigned short sin_port;  
+  struct in_addr sin_addr;  
+  char sin_zero[8];       
+};</code></pre></div></div>
+
+<h2 class="highlight" id="sockaddr_in6">Stuct sockaddr_in6</h2>
+<p>Χρησιμοποιείται για την αναπαράσταση διευθύνσεων IPv6.<br>Η δομή sockaddr_in6 ορίζεται στο αρχείο κεφαλίδας <b><mark>#include &lt;netinet/in.h&gt;</mark></b> και έχει την εξής μορφή:
+    <ul>
+      <li>sin6_len: Το μέγεθος της δομής sockaddr_in6 σε bytes.</li>
+      <li>sin6_family: Η οικογένεια της διεύθυνσης (π.χ., AF_INET6 για το IPv6).</li>
+      <li>sin6_port: Ο αριθμός θύρας που αντιστοιχεί στη διεύθυνση.</li>
+      <li>sin6_flowinfo: Πληροφορίες ροής για τη διεύθυνση.</li>
+      <li>sin6_addr: Δομή in6_addr που περιέχει τη διεύθυνση IPv6.</li>
+      <li>sin6_scope_id: Ταυτότητα πεδίου εμβέλειας που χρησιμοποιείται για την αναγνώριση της εμβέλειας της διεύθυνσης.</li>
+    </ul></p>
+    <div class="bg_preview" >
+        <div  class="appearance">
+            <div class="space"> 
+                <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+            </div>
+            <div class="name_input">c</div>
+        </div>
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct sockaddr_in6 {
+sa_family_t     sin6_family;   // Οικογένεια διεύθυνσης (IPv6)
+in_port_t       sin6_port;     // Αριθμός θύρας (σε μορφή δικτύου)
+uint32_t        sin6_flowinfo; // Πληροφορίες ροής (για την εξυπηρέτηση QoS)
+struct in6_addr sin6_addr;     // Διεύθυνση IPv6
+uint32_t        sin6_scope_id; // Αναγνωριστικό εύρους (για περιοχή εύρους)
+}; </code></pre></div></div>
+
+
+<h2 class="highlight" id="stat">Stuct stat</h2>
+<p>
+    Η δομή struct stat περιέχει πληροφορίες για ένα αρχείο, όπως το αναγνωριστικό συσκευής, ο αριθμός inode, ο τύπος αρχείου και τα δικαιώματα πρόσβασης, το μέγεθος του αρχείου, ο χρήστης-κατόχος, η ομάδα-κατόχος, ο χρόνος τελευταίας πρόσβασης, ο χρόνος τελευταίας τροποποίησης και ο χρόνος τελευταίας αλλαγής των μεταδεδομένων. Οι συγκεκριμένες πληροφορίες εξαρτώνται από το λειτουργικό σύστημα και το σύστημα αρχείων που χρησιμοποιείται.
+    <br><br> 
+    Η δομή struct stat ορίζεται στο αρχείο κεφαλίδας <b>&lt;sys/stat.h&gt;</b> και έχει την εξής μορφή:
+    <ul>
+      <li>st_dev: ID της συσκευής που περιέχει το αρχείο.</li>
+      <li>st_ino: Αριθμός inode του αρχείου.</li>
+      <li>st_mode: Προστασία (δικαιώματα πρόσβασης) του αρχείου.</li>
+      <li>st_nlink: Αριθμός συμβολικών συνδέσμων προς το αρχείο.</li>
+      <li>st_uid: Αναγνωριστικό χρήστη του κατόχου.</li>
+      <li>st_gid: Αναγνωριστικό ομάδας του κατόχου.</li>
+      <li>st_rdev: ID συσκευής για ειδικά αρχεία (π.χ., χαρακτήρας ή μπλοκ συσκευή).</li>
+      <li>st_size: Συνολικό μέγεθος του αρχείου σε bytes.</li>
+      <li>st_blksize: Μέγεθος μπλοκ για επικοινωνία με το αρχείο.</li>
+      <li>st_blocks: Αριθμός εκχωρημένων μπλοκ για το αρχείο.</li>
+      <li>st_atime: Χρόνος τελευταίας πρόσβασης στο αρχείο.</li>
+      <li>st_mtime: Χρόνος τελευταίας τροποποίησης του αρχείου.</li>
+      <li>st_ctime: Χρόνος τελευταίας αλλαγής κατάστασης του αρχείου.</li>
+    </ul>
+  </p>
+
+  <div class="bg_preview" >
+    <div  class="appearance">
+        <div class="space"> 
+            <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+        </div>
+        <div class="name_input">C</div>
+    </div>
+    <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct stat {
+dev_t     st_dev;         // Αναγνωριστικό συσκευής
+ino_t     st_ino;         // Αριθμός inode
+mode_t    st_mode;        // Λειτουργική λειτουργία (π.χ. δικαιώματα πρόσβασης)
+nlink_t   st_nlink;       // Αριθμός συνδέσεων
+uid_t     st_uid;         // User ID του κατόχου
+gid_t     st_gid;         // Group ID του κατόχου
+dev_t     st_rdev;        // Αναγνωριστικό συσκευής για ειδικά αρχεία
+off_t     st_size;        // Μέγεθος αρχείου σε bytes
+blksize_t st_blksize;     // Μέγεθος μπλοκ διαμόρφωσης αρχείου σε bytes
+blkcnt_t  st_blocks;      // Συνολικός αριθμός μπλοκ αρχείου
+time_t    st_atime;       // Χρόνος τελευταίας πρόσβασης
+time_t    st_mtime;       // Χρόνος τελευταίας τροποποίησης
+time_t    st_ctime;       // Χρόνος τελευταίας αλλαγής δομής αρχείου
+};</code></pre></div></div>
+
+<h2 class="highlight" id="dirent">Stuct dirent</h2>
+<p>Οι δομές struct dirent χρησιμοποιούνται συνήθως με συναρτήσεις όπως η readdir() για την ανάγνωση των καταχωρίσιμων αρχείων ενός καταλόγου. Με τη χρήση της δομής struct dirent, μπορείτε να αποκτήσετε πρόσβαση σε πληροφορίες όπως τα ονόματα αρχείων και οι τύποι αρχείων που υπάρχουν σε έναν κατάλογο.
+    <br><br>
+    Η δομή struct dirent ορίζεται στο αρχείο κεφαλίδας <b>&lt;dirent.h&gt;</b> και έχει την εξής μορφή:
+    <ul>
+      <li>d_ino:    Ο αριθμός inode του αρχείου.</li>
+      <li>d_off:    Το offset (μετατόπιση) στον κατάλογο για αυτό το καταχωρίσιμο αρχείο.</li>
+      <li>d_reclen: Το μήκος της καταχώρισης του αρχείου.</li>
+    </ul>
+  </p>
+  <div class="bg_preview" >
+    <div  class="appearance">
+        <div class="space"> 
+            <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+        </div>
+        <div class="name_input">c</div>
+    </div>
+    <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct dirent {
+ino_t          d_ino;     // Αριθμός inode του αρχείου
+off_t          d_off;     // Μετατόπιση για τον επόμενο καταλόγο (όχι πάντα υποστηριζόμενη)
+unsigned short d_reclen;  // Μήκος εγγραφής
+unsigned char  d_type;    // Τύπος αρχείου
+char           d_name[];  // Όνομα αρχείου
+};</code></pre></div></div>
+
+
+<h2 class="highlight" id="flock">Stuct flock</h2>
+<p>
+    Η δομή flock χρησιμοποιείται στην γλώσσα προγραμματισμού C για τον έλεγχο κλειδώματος αρχείων (file locking). 
+    Χρησιμοποιείται για να εφαρμοστεί κλείδωμα σε ένα αρχείο ή να ελευθερωθεί κλείδωμα που ήδη υπάρχει.
+    Η δομή flock ορίζεται στο αρχείο κεφαλίδας <b>&lt;fcntl.h&gt;</b>.
+  <ul>
+    <li>l_type: Ο τύπος του κλειδώματος. Μπορεί να είναι μία από τις ακόλουθες τιμές:
+          <ol>
+            <li>F_RDLCK: Κλείδωμα για ανάγνωση (shared lock).</li>
+            <li>F_WRLCK: Κλείδωμα για εγγραφή (exclusive lock).</li>
+            <li>F_UNLCK: Απελευθέρωση του κλειδώματος.</li>
+          </ol> 
+    </li>
+    <li>l_whence: Η αφετηρία της μετατόπισης (offset) για τον υπολογισμό των πεδίων l_start και l_len. Μπορεί να είναι μία από τις ακόλουθες τιμές:
+          <ol>
+            <li>SEEK_SET: Από την αρχή του αρχείου.</li>
+            <li>SEEK_CUR: Από την τρέχουσα θέση στο αρχείο.</li>
+            <li>SEEK_END: Από το τέλος του αρχείου.</li>
+          </ol>
+    </li>
+    <li>l_start: Η αρχή της περιοχής που θα κλειδωθεί (offset) από την αφετηρία.</li>
+    <li>l_len: Το μήκος της περιοχής που θα κλειδωθεί (length) από την αφετηρία.</li>
+    <li>l_pid: Το αναγνωριστικό διεργασίας (PID) που κατέχει το κλείδωμα. Αυτό το πεδίο γεμίζεται από το σύστημα όταν το κλείδωμα εφαρμόζεται.</li>
+  </ul>
+  </p>
+  <div class="bg_preview" >
+    <div  class="appearance">
+        <div class="space"> 
+            <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+        </div>
+        <div class="name_input">C</div>
+    </div>
+    <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct flock {
+short l_type;    // Τύπος κλειδώματος (F_RDLCK, F_WRLCK, F_UNLCK)
+short l_whence;  // Αναφορά της μετατόπισης (SEEK_SET, SEEK_CUR, SEEK_END)
+off_t l_start;   // Αρχή της περιοχής προς κλείδωμα
+off_t l_len;     // Μέγεθος της περιοχής προς κλείδωμα
+pid_t l_pid;     // ID διεργασίας που κρατά το κλείδωμα (αν υπάρχει)
+};</code></pre></div></div>
+
+
+<h2 class="highlight" id="sigaction">Struct sigaction</h2>
+<p>
+    Η δομή struct sigaction είναι μια προκαθορισμένη (built-in) δομή στη γλώσσα προγραμματισμού C που χρησιμοποιείται για την καθορισμό της συμπεριφοράς ενός προγράμματος κατά τη λήψη σήματος (signal).
+    <br><br>
+    Η δομή struct sigaction ορίζεται στο αρχείο κεφαλίδας <b>&lt;signal.h&gt;</b> και έχει την εξής μορφή:
+    <ul>
+      <li>sa_handler: Δείκτης σε μια συνάρτηση χειρισμού σήματος, η οποία εκτελείται όταν λαμβάνεται το σήμα. Αυτό το μέλος χρησιμοποιείται κατά κύριο λόγο για την υποστήριξη των παλαιών μορφών χειρισμού σήματος.</li>
+      <li>sa_sigaction: Δείκτης σε μια συνάρτηση χειρισμού σήματος με επιπλέον πληροφορίες. </li>
+      <li>sa_mask: Ένα σύνολο σημάτων (sigset_t) που απενεργοποιούνται προσωρινά κατά την εκτέλεση της συνάρτησης χειρισμού. Αυτό εξασφαλίζει ότι το σήμα δεν θα επαναληφθεί κατά τη διάρκεια της εκτέλεσης της συνάρτησης.</li>
+      <li>sa_flags: Επιπλέον σημαίες που ελέγχουν τη συμπεριφορά της διαχείρισης σήματος. 
+        <ol>
+          <li>SA_RESTART</li>
+          <li>SA_NOCLDSTOP</li>
+          <li>SA_NODEFER</li>
+          <li>SA_RESETHAND</li>
+          <li>SA_SIGINFO</li>
+        </ol>
+      </li>
+      <li>sa_restorer: Δείκτης σε συνάρτηση αποκατάστασης (restorer function). Αυτό το μέλος χρησιμοποιείται κατά κύριο λόγο σε παλαιότερα συστήμα</li>
+    </ul>
+    <div class="bg_preview" >
+        <div  class="appearance">
+            <div class="space"> 
+                <div class="buttons1"> </div><div class="buttons2"> </div><div class="buttons3"> </div>
+            </div>
+            <div class="name_input">c</div>
+        </div>
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-c">
+struct sigaction {
+void (*sa_handler)(int);          // Δείκτης σε συνάρτηση χειρισμού σήματος
+void (*sa_sigaction)(int, siginfo_t *, void *);  // Δείκτης σε συνάρτηση χειρισμού σήματος με περισσότερες πληροφορίες
+sigset_t sa_mask;                  // Σήματα που εμποδίζονται κατά την εκτέλεση του χειριστή
+int sa_flags;                      // Πρόσθετες σημαίες (flags)
+void (*sa_restorer)(void);         // Ανακατασκευαστής στοιχείων αποθήκευσης στη στοίβα (deprecated)
+};</code></pre></div></div>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

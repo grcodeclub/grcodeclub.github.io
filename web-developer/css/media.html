@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="CSS | @media">
+        <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/css.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/css.png"/>
+    <meta property="og:title" content="CSS | @media">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">@media</h1>
+        <p>Στην CSS, η @media είναι μια εντολή που σου επιτρέπει να εφαρμόζεις συγκεκριμένους κανόνες στυλ μόνο όταν πληρούνται ορισμένες συνθήκες, όπως το μέγεθος της οθόνης, η διάσταση του περιβάλλοντος ή η κατάσταση της συσκευής. Αυτό το σύστημα χρησιμοποιείται κυρίως για να δημιουργήσεις responsive designs, δηλαδή σχεδιασμούς που προσαρμόζονται στις διάφορες οθόνες και συσκευές.</p>
+        <p class="highlight">Βασική Σύνταξη</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media media-type and (condition) {
+/* CSS rules here */
+}</code></pre></div></div>
+
+
+        <h2 class="highlight">Ορίζει ελάχιστο ή μέγιστο ύψος της οθόνης.</h2>
+        <p> Χρησιμοποιείται για στυλ που σχετίζονται με το ύψος του παραθύρου προγράμματος περιήγησης.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (max-width: 600px) {
+body {
+background-color: lightblue;
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight"> Ορίζει την κατεύθυνση της οθόνης (portrait ή landscape).</h2>
+        <p>Χρησιμοποιείται για προσαρμογές της  στυλ ανάλογα με την κατεύθυνση της οθόνης.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (orientation: portrait) {
+body {
+background-color: lightyellow;
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight"> Ορίζει την ανάλυση της οθόνης, συνήθως με μονάδα μέτρησης σε DPI (dots per inch) ή DPCM (dots per centimeter).</h2>
+        <p>Χρησιμοποιείται για να εφαρμόσει στυλ βασισμένα στην ανάλυση της οθόνης, όπως για να βελτιώσεις την εμφάνιση εικόνων σε οθόνες υψηλής ανάλυσης.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (min-resolution: 192dpi) {
+img {
+border: 2px solid black;
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight">Ορίζει τη σχέση διαστάσεων (πλάτος προς ύψος) της οθόνης ή του περιβάλλοντος.</h2>
+        <p>Χρησιμοποιείται για να προσαρμόσει το στυλ ανάλογα με την αναλογία διαστάσεων της οθόνης ή του στοιχείου.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (aspect-ratio: 16/9) {
+body {
+background-color: lightgray;
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight">Ορίζει τον αριθμό των χρωμάτων που υποστηρίζονται από την οθόνη.</h2>
+        <p>Χρησιμοποιείται για να προσδιορίσεις αν η οθόνη υποστηρίζει βασικά ή προηγμένα χρώματα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (color) {
+p {
+color: blue;
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight">Ορίζει τον αριθμό των χρωμάτων που υποστηρίζονται από την οθόνη, αλλά με διαφορετική μέτρηση από την ιδιότητα color.</h2>
+        <p>Χρησιμοποιείται για συσκευές με περιορισμένα χρώματα</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (color-index: 256) {
+body {
+background-color: lightpink;
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight">Ορίζει το πλάτος ή το ύψος της οθόνης της συσκευής, ανεξάρτητα από το μέγεθος του παραθύρου του προγράμματος περιήγησης.</h2>
+        <p>Χρησιμοποιείται για στυλ που πρέπει να εφαρμόζονται ανάλογα με τις διαστάσεις της οθόνης της συσκευής.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (device-width: 768px) {
+body {
+background-color: lightblue;
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight">Ορίζει την αναλογία διαστάσεων της συσκευής.</h2>
+        <p>Χρησιμοποιείται για να εφαρμόσει το  στυλ, ανάλογα με την αναλογία διαστάσεων της οθόνης της συσκευής.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media screen and (device-aspect-ratio: 16/9) {
+body {
+background-color: lightcoral;
+}
+}</code></pre></div></div>
+
+        <h2 class="highlight">Εφαρμογή Στυλ για Εκτύπωση</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-css">@media print {
+body {
+font-size: 12pt;
+}
+}</code></pre></div></div>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

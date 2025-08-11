@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@grcodeclub">
+  <meta name="twitter:title" content="Class | C++">
+  <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png">
+  <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png"/>
+  <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Class">
+  <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">C++ Class</h1>
+
+        <h2 class="highlight">Δημιουργήστε μια class</h2>
+        <p>Για να δημιουργήσετε μια class, χρησιμοποιήστε τη λέξη-κλειδί class:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class MyNumStr {       // The class
+public:         // Access specifier
+int x;          // Attribute (int variable)
+string mystr;   // Attribute (string variable)
+};</code></pre></div></div>
+         
+        <p>Η λέξη-κλειδί  Public είναι ένας προσδιοριστής πρόσβασης. Οι προσδιοριστές πρόσβασης καθορίζουν τον τρόπο πρόσβασης στα μέλη (χαρακτηριστικά και μέθοδοι) μιας κλάσης.
+        <br> Στην C++, υπάρχουν τρεις προσδιοριστές πρόσβασης:</p>
+        <ol>
+            <li>Public : ολα τα στοιχεια είναι προσβάσιμα εκτός της class</li>
+            <li>Private - δεν είναι δυνατή η πρόσβαση (ή η προβολή) των μελών εκτός της class</li>
+            <li>Protected - τα μέλη δεν είναι προσβάσιμα εκτός της class, ωστόσο, μπορούν να προσπελαστούν σε κλάσεις κληρονομιάς. </li>
+        </ol>
+        
+        <h2 class="highlight">Αντικείμενα</h2>
+        <p>Στον αντικειμενοστραφή προγραμματισμό, τα αντικείμενα (objects) είναι οντότητες που αποτελούνται από δεδομένα και δημιουργούνται από πρότυπα που ονομάζονται class και καθορίζουν τις ιδιότητες και τις συμπεριφορές του αντικειμένου.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class MyNumStr {       // The class
+  public:            
+    int x;        
+    string mystr;
+};
+
+int main() {
+  MyNumStr myObj;  // Δημιουργούμε ένα αντικείμενο της Class MyNumStr 
+
+  // Ορίζουμε τα χαρακτηριστικά και τιμές του αντικειμένου
+  myObj.x = 6;
+  myObj.mystr = "GrCode Club";
+
+  cout << myObj.x << "\n";
+  cout << myObj.mystr;
+
+  // Πολλαπλά αντικείμενα
+  MyNumStr myObj1; 
+  myObj1.x = 16;
+  myObj1.mystr = "GrCode";
+  cout << myObj1.x << "\n";
+  cout << myObj1.mystr;
+
+  return 0;
+}</code></pre></div></div>
+
+        <h2 class="highlight">Μέθοδοι (Μethods)</h2>
+        <p>Οι μέθοδοι είναι συναρτήσεις που σχετίζονται με το αντικείμενο και μπορούν να χρησιμοποιηθούν για τον χειρισμό των δεδομένων του ή την εκτέλεση άλλων ενεργειών.</p>
+        <p>Υπάρχουν δύο τρόποι για να ορίσετε συναρτήσεις που ανήκουν σε μια class:</p>
+        <p>1. Εσωτερικά μέσα στην ίδια την class.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class Mymsg {
+  public:              
+    void myMethod() {  
+      cout << "GrCode Club";
+    }
+};
+
+int main() {
+  Mymsg myObj;     
+  myObj.myMethod();  // Καλέστε τη μέθοδο myMethod()
+  return 0;
+}</code></pre></div></div>
+        <p>2.Εξωτερικά, έξω από την class.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class Mymsg {      
+  public:              
+    void myMethod();   
+};
+
+void Mymsg::myMethod() {
+  cout << "GrCode Club";
+}
+
+int main() {
+  Mymsg myObj;     
+  myObj.myMethod();  
+  return 0;
+}</code></pre></div></div>
+
+        <h2 class="highlight">Κατασκευαστές</h2>
+        <p>Ένας κατασκευαστής στη C++ είναι μια ειδική μέθοδος που καλείται αυτόματα όταν δημιουργείται ένα αντικείμενο μιας Class.</p>
+         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream.h>
+class CRectangle {
+    int width, height;
+    public:
+        CRectangle (int,int);
+        int area (void) {return (width*height);}
+};
+
+CRectangle::CRectangle (int a, int b) {
+    width = a;
+    height = b;
+}
+
+int main () {
+    CRectangle rect (3,4);
+    CRectangle rectb (5,6);
+    cout &lt;&lt;  "rect area: " &lt;&lt; rect.area() &lt;&lt; endl;
+    cout &lt;&lt; "rectb area: " &lt;&lt; rectb.area() &lt;&lt; endl;
+}</code></pre></div></div>
+
+          <h2 class="highlight">Καταστροφείς</h2>
+          <p>Ο καταστροφέας (destructor) επιτελεί την αντίστροφη λειτουργία από αυτή του κατασκευαστή. Καλείται αυτόματα όταν ένα αντικείμενο εξέρχεται από τη μνήμη, είτε διότι σταμάτησε να υφίσταται λόγος ύπαρξής του (π.χ. Ήταν δηλωμένο ως τοπικό αντικείμενο σε μια συνάρτηση της οποίας η εκτέλεση ολοκληρώθηκε), είτε επειδή είναι ένα δυναμικά ορισμένο αντικείμενο το οποίο αποδεσμεύεται μέσω του τελεστή delete.</p>
+          <p>Ο καταστροφέας δηλώνεται ως μια συνάρτηση-μέλος, η οποία έχει ακριβώς το ίδιο όνομα με την κλάση με <code>~</code> μπροστά. </p>
+          <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream.h>
+
+class CRectangle {
+    int *width, *height;
+    public:
+        CRectangle (int,int);
+        ~CRectangle ();
+        int area (void) {return (*width * *height);}
+};
+
+CRectangle::CRectangle (int a, int b) {
+    width = new int;
+    height = new int;
+    *width = a;
+    *height = b;
+}
+CRectangle::~CRectangle () {
+    delete width;
+    delete height;
+}
+
+int main () {
+    CRectangle rect (3,4), rectb (5,6);
+    cout &lt;&lt;  "rect area: " &lt;&lt; rect.area() &lt;&lt; endl;
+    cout &lt;&lt; "rectb area: " &lt;&lt; rectb.area() &lt;&lt; endl;
+    return 0;
+} </code></pre></div></div>
+
+         <h2 class="highlight">Virtual</h2>
+         <ol>
+           <li>Η λέξη-κλειδί virtual επιτρέπει  σε μέλος παράγωγης κλάσης που έχει το ίδιο όνομα με ένα μέλος της βασικής κλάσης, να καλείται από τα σχετικά αντικείμενα</li>
+           <li>Ο βασικός λόγος χρήσης μιας ιδεατής συνάρτησης είναι η δυνατότητα διαφοροποίησης της λειτουργικότητας της συνάρτησης στις παράγωγες κλάσεις</li>
+         </ol>
+        <h2 class="highlight">Αφηρημένες βασικές κλάσεις</h2>
+        <ol>
+          <li>Οι αφηρημένες (abstract) βασικές κλάσεις ορίζονται ως πρωτότυπα για τις παράγωγες κλάσεις τους. Δεν μπορούμε να ορίσουμε αντικείμενα για τις κλάσεις αυτές, παρά μόνο δείκτες σε αυτές.</li>
+          <li>Μια αφηρημένη κλάση έχει τουλάχιστον μια pure virtual συνάρτηση, η οποία δεν ορίζει κώδικα υλοποίησης   </li>
+        </ol>
+        <p><u>Καθαρά Εικονικές Μέθοδοι (Pure Virtual Methods)</u><br>Η κύρια ιδιότητα μιας αφηρημένης κλάσης είναι ότι περιέχει τουλάχιστον μία καθαρά εικονική μέθοδο. Μια καθαρά εικονική μέθοδος δηλώνεται με τη μορφή:</p>
+        <div class="bg_preview">
+          <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">virtual void methodName() = 0;</code></pre></div></div>
+        <p>Η δήλωση αυτή σημαίνει ότι η κλάση δεν παρέχει υλοποίηση για τη συγκεκριμένη μέθοδο και οι παράγωγες κλάσεις πρέπει να την υλοποιήσουν.</p>
+
+        
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

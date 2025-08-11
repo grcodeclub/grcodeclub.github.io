@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Δομή επανάληψης | C++">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Δομή επανάληψης">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Δομή επανάληψης</h1>
+           <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.
+           Οι πιο κοινές δομές επανάληψης είναι:</p>
+        <ol>
+            <li><code>for</code>: Χρησιμοποιείται για επανάληψη σε μια ακολουθία (λίστες, συμβολοσειρές, range κ.λπ.).</li>
+            <li><code>while</code>: Επαναλαμβάνει τον κώδικα όσο μια συνθήκη είναι αληθής.</li>
+            <li><code>do/while</code>:Αυτός ο βρόχος θα εκτελεί πρώτα τον κωδικά και μετά θα ελέγχει αν η συνθήκη είναι αληθής. Την πρώτη φορά θα εκτελεστεί ο βρόχος ακόμα και αν η συνθήκη είναι ψευδής.</li>
+        </ol>
+    <h2 class="highlight">Βρόχος while</h2>
+    <p>Η εντολή <code>while</code> στην C είναι μια δομή επανάληψης που εκτελεί ένα μπλοκ κώδικα επανειλημμένα όσο μια συνθήκη είναι αληθής. Χρησιμοποιείται όταν θέλουμε να επαναλάβουμε μια ενέργεια πολλές φορές, αλλά δεν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων.</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 1;
+while (i <= 5) {
+    cout << i << endl;
+    i++;
+}</code></pre></div></div>
+    <p class="highlight">Βρόχος for</p>
+    <p>Η εντολή <code>for</code> στην C είναι μια άλλη δομή επανάληψης, όπως η while, αλλά χρησιμοποιείται όταν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων που θέλουμε να εκτελέσει το πρόγραμμα. Η εντολή for είναι ιδιαίτερα χρήσιμη για βρόχους που αφορούν μετρημένες επαναλήψεις και προσφέρει μια πιο συμπυκνωμένη σύνταξη.</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">for (int j = 0; j < 3; j++) {
+    cout << j << endl;
+}</code></pre></div></div>
+
+          <h2 class="highlight">Βρόχος do/while</h2>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int i = 0;
+do {
+  cout << i << "\n";
+  i++;
+}
+while (i < 5);</code></pre></div></div>
+        
+</div>
+    <div id="addFooter"></div>
+</body>
+</html>

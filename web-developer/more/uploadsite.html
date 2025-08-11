@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Κατοχύρωση , Ανέβασμα και Αναζήτηση">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/website.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/website.png">
+    <meta property="og:title" content="Κατοχύρωση , Ανέβασμα και Αναζήτηση">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Κατοχύρωση , Ανέβασμα και Αναζήτηση</h1>
+        <input type="text" id="searchInput" class="form-control" placeholder="Αναζήτηση για όρους...">
+    
+        <div class="row mt-3" id="cardContainer">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">A Record</h5>
+                        <p>Η Α εγγραφή (A record) ή αλλιώς Address record καθορίζει ποια IP διεύθυνση αντιστοιχεί σε ένα όνομα χώρου. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">CNAME</h5>
+                        <p>Η Cname εγγραφή (Canonical Name record) συνδέει το αληθινό κανονικό (canonical) όνομα με ψεύτικα (alias) ονόματα που χρησιμοποιεί ο ίδιος ο υπολογιστής.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mail Exchanger Record (MX Record)</h5>
+                        <p>H MX εγγραφή (Mail Exchanger Record) αφορά μόνο την mail υπηρεσία μας και μας επιτρέπει να ανακατευθύνουμε τα emails που μας στέλνουν σε λογαριασμούς του domain μας σε οποιοδήποτε mail server θέλουμε εμείς. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Πιστοποιητικά SSL</h5>
+                        <h6><strong><u>Γιατί SSL;</u></strong></h6>
+                        <p> Το πιστοποιητικό SSL δημιουργεί μια ασφαλή σύνδεση μεταξύ του server που φιλοξενεί ένα website και του browser του επισκέπτη, προστατεύοντας έτσι όλες τις πληροφορίες που μεταφέρονται από και προς το website, όπως username, κωδικοί, αριθμοί πιστωτικών καρτών κτλ.                            </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function normalizeString(str) {
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        }
+    
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const searchValue = normalizeString(this.value);
+            const cards = document.querySelectorAll('.card');
+    
+            cards.forEach(card => {
+                const title = normalizeString(card.querySelector('.card-title').textContent);
+                if (title.includes(searchValue)) {
+                    card.parentElement.style.display = ''; // Δείξε την κάρτα
+                } else {
+                    card.parentElement.style.display = 'none'; // Κρύψε την κάρτα
+                }
+            });
+        });
+    </script>
+    
+</div>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

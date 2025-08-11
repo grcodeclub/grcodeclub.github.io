@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Command Line | Εντολές Διαχείριση Δικτύου">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/windows.webp"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/windows.webp"/>
+    <meta property="og:title" content="Command Line | Εντολές Διαχείριση Δικτύου">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Εντολές Διαχείριση Δικτύου</h1>
+        <div id="windows-cmd"></div>
+        <h2 class="highlight">ipconfig</h2>
+
+        <p>Εμφανίζει πληροφορίες για τις δικτυακές συνδέσεις και διευθύνσεις IP.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">ipconfig</code></pre></div>
+
+    <p>Εμφανίζει λεπτομερείς πληροφορίες για όλες τις δικτυακές συνδέσεις, συμπεριλαμβανομένων των διευθύνσεων MAC και διαμορφωμένων ρυθμίσεων DNS.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">ipconfig /all</code></pre></div>
+
+    <p>Καθαρίζει τη μνήμη cache του DNS, κάτι που μπορεί να βοηθήσει σε προβλήματα προσβασιμότητας ιστοσελίδων.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">ipconfig /flushdns</code></pre></div>
+
+    <p>Εμφανίζει τα καταχωρημένα DNS από τη μνήμη cache.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">ipconfig /displaydns</code></pre></div>
+
+    <p>Απελευθερώνουν και ανανεώνουν τη διεύθυνση IP αντίστοιχα..</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">ipconfig /release
+ipconfig /renew</code></pre></div>
+     
+        <h2 class="highlight">ping</h2>
+        <p>Αποστέλλει πακέτα ICMP σε έναν υπολογιστή για έλεγχο σύνδεσης.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">ping</code></pre></div>
+
+        <h2 class="highlight">tracert</h2>
+        <p>Εμφανίζει τη διαδρομή που ακολουθούν τα πακέτα για να φτάσουν σε έναν προορισμό.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">tracert </code></pre></div>
+
+        <h2 class="highlight">netstat</h2>
+    <p>Παρέχει πληροφορίες για τις δικτυακές συνδέσεις.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">netstat</code></pre></div>
+
+    <p>Εμφανίζει όλες τις διαθέσιμες δικτυακές συνδέσεις και τις ακούσιες πόρτες.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">netstat -a</code></pre></div>
+
+    <p>Εμφανίζει τις διευθύνσεις IP και τις αριθμημένες πόρτες αντί των ονομασιών κειμένου.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">netstat -n</code></pre></div>
+
+    <p>Εμφανίζει τη λίστα των εφαρμογών που συνδέονται με το δίκτυο και τις διαθέσιμες συνδέσεις.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">netstat -b</code></pre></div>
+
+    <p>Εμφανίζει τις δικτυακές συνδέσεις μόνο για το συγκεκριμένο πρωτόκολλο (π.χ. tcp ή udp).</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">netstat -p &lt;protocol&lat; </code></pre></div>
+
+
+    <p>Εμφανίζει τον πίνακα δρομολόγησης.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">netstat -r</code></pre></div>
+
+
+    <h2 class="highlight">net</h2>
+            
+    <p>Διαχειρίζεται τους χρήστες του δικτύου, συμπεριλαμβανομένης της αλλαγής κωδικών.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">net user</code></pre></div>
+
+
+    <p>Διαχειρίζεται τις ομάδες χρηστών του δικτύου.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">net group</code></pre></div>
+
+
+    <p>Εμφανίζει τους διαθέσιμους υπολογιστές και κοινόχρηστους φακέλους στο δίκτυο.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">net view</code></pre></div>
+
+    <p>Χρησιμοποιείται για τη σύνδεση και αποσύνδεση κοινόχρηστων και δικτυακών συσκευών.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">net use</code></pre></div>
+
+    <h2 class="highlight">Διαφορά</h2>
+    <p>Ανοίγει το παράθυρο των δικτυακών συνδέσεων για να διαμορφώσετε τις ρυθμίσεις του δικτύου.</p>
+    <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">ncpa.cpl</code></pre></div>
+
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Υποδικτύωση (Subnetting)">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/network.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/network.png"/>
+    <meta property="og:title" content="Υποδικτύωση (Subnetting)">
+    <meta name="keywords" content="Υποδικτύωση (Subnetting)">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+      <h1 class="title">Υποδικτύωση (Subnetting)</h1>
+      <p>Η υποδικτύωση (subnetting) στα δίκτυα υπολογιστών είναι η διαδικασία με την οποία ένα μεγάλο δίκτυο διαιρείται σε μικρότερα, πιο διαχειρίσιμα υποδίκτυα (subnets).</p>
+      <p>Όταν ένα δίκτυο έχει πολλά μηχανήματα (π.χ. εκατοντάδες ή χιλιάδες), δεν είναι πρακτικό να τα έχει όλα σε ένα ενιαίο δίκτυο. Η υποδικτύωση:</p>
+    <ol>
+        <li>Βελτιώνει την απόδοση: Μειώνει την κυκλοφορία δεδομένων μέσα στο δίκτυο, αφού τα δεδομένα περιορίζονται στα μικρότερα δίκτυα.</li>
+        <li>Αυξάνει την ασφάλεια: Τα υποδίκτυα μπορούν να απομονώνονται μεταξύ τους.</li>
+        <li>Διευκολύνει τη διαχείριση: Κάθε τμήμα της επιχείρησης/οργάνωσης μπορεί να έχει το δικό του υποδίκτυο.</li>
+    </ol>
+    <h2 class="highlight">Διαδικασία</h2>
+<ol>
+  <li>Υπολογίζουμε τον αριθμό των bits που πρέπει να «δανειστούμε» από το τμήμα Host ID της IP, προκειμένου να δημιουργήσουμε τα απαιτούμενα υποδίκτυα.</li>
+  <li>Υπολογίζουμε πόσα bits απομένουν για το Host ID, ώστε να γνωρίζουμε πόσοι hosts μπορούν να υπάρχουν σε κάθε υποδίκτυο.</li>
+  <li>Υπολογίζουμε τον αριθμό των hosts ανά υποδίκτυο, ο οποίος δίνεται από τον τύπο <strong>2ⁿ − 2</strong>, επειδή αφαιρούμε τη διεύθυνση του δικτύου και τη διεύθυνση broadcast.</li>
+</ol>
+    <h2 class="mb-4 highlight">Κατανομή Bit για Υποδικτύωση</h2>
+<table class="table table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Bits</th>
+      <th>Αν χρησιμοποιηθούν για Υποδίκτυα (2ⁿ)</th>
+      <th>Αν χρησιμοποιηθούν για Hosts ανά Υποδίκτυο (2ⁿ − 2)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>2</td><td>0</td></tr>
+    <tr><td>2</td><td>4</td><td>2</td></tr>
+    <tr><td>3</td><td>8</td><td>6</td></tr>
+    <tr><td>4</td><td>16</td><td>14</td></tr>
+    <tr><td>5</td><td>32</td><td>30</td></tr>
+    <tr><td>6</td><td>64</td><td>62</td></tr>
+    <tr><td>7</td><td>128</td><td>126</td></tr>
+    <tr><td>8</td><td>256</td><td>254</td></tr>
+    <tr><td>9</td><td>512</td><td>510</td></tr>
+    <tr><td>10</td><td>1024</td><td>1022</td></tr>
+    <tr><td>11</td><td>2048</td><td>2046</td></tr>
+    <tr><td>12</td><td>4096</td><td>4094</td></tr>
+    <tr><td>13</td><td>8192</td><td>8190</td></tr>
+    <tr><td>14</td><td>16384</td><td>16382</td></tr>
+    <tr><td>15</td><td>32768</td><td>32766</td></tr>
+    <tr><td>16</td><td>65536</td><td>65534</td></tr>
+    <tr><td>14</td><td>16384</td><td>16382</td></tr>
+<tr><td>15</td><td>32768</td><td>32766</td></tr>
+<tr><td>16</td><td>65536</td><td>65534</td></tr>
+<tr><td>17</td><td>131072</td><td>131070</td></tr>
+<tr><td>18</td><td>262144</td><td>262142</td></tr>
+<tr><td>19</td><td>524288</td><td>524286</td></tr>
+<tr><td>20</td><td>1048576</td><td>1048574</td></tr>
+<tr><td>21</td><td>2097152</td><td>2097150</td></tr>
+<tr><td>22</td><td>4194304</td><td>4194302</td></tr>
+<tr><td>23</td><td>8388608</td><td>8388606</td></tr>
+<tr><td>24</td><td>16777216</td><td>16777214</td></tr>
+<tr><td>25</td><td>33554432</td><td>33554430</td></tr>
+<tr><td>26</td><td>67108864</td><td>67108862</td></tr>
+<tr><td>27</td><td>134217728</td><td>134217726</td></tr>
+<tr><td>28</td><td>268435456</td><td>268435454</td></tr>
+<tr><td>29</td><td>536870912</td><td>536870910</td></tr>
+  </tbody>
+</table>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

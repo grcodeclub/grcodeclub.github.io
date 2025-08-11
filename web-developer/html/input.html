@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Τα Input Tag στην HTML">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/html.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/html.png"/>
+    <meta property="og:title" content="Τα Input Tag στην HTML">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">&lt;input></h1>
+
+        <p>Το &lt;input> είναι ένα ενσωματωμένο στοιχείο (inline element) στην HTML που χρησιμοποιείται για τη δημιουργία εισόδου δεδομένων από τον χρήστη σε μια ιστοσελίδα. Οι δυνατότητες που έχετε με το &lt;input> εξαρτώνται από τον τύπο του πεδίου εισόδου (input type). </p>
+        <h2 class="highlight">Radio</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="radio" name="gender" value="1"></code></pre></div></div>
+        <input type="radio" name="number" value="1"> 1 <br>
+        <input type="radio" name="number" value="2"> 2
+
+        <h2 class="highlight">Κουτί επιλογής (Checkbox)</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="checkbox"></code></pre></div></div>
+        <input type="checkbox"  style="display:inline-block;">Select 1 <br>
+        <input type="checkbox"  style="display:inline-block;">Select 2 <br>
+        <input type="checkbox" style="display:inline-block;">Select 3
+
+
+        <h2 class="highlight">Κατανομή (Range)</h2>
+        <p>Επιτρέπει στον χρήστη να επιλέξει μια τιμή από ένα εύρος μέσω ενός μπάρας.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="range" name="volume" min="0" max="100"></code></pre></div></div>
+        <input type="range" name="volume" min="0" max="100">
+
+        <h2 class="highlight">Κουτί κειμένου (Textarea)</h2>
+        <p>Δημιουργεί ένα πεδίο κειμένου που επιτρέπει στον χρήστη να εισάγει πολλαπλές γραμμές κειμένου.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;textarea name="comments" rows="4" cols="50">&lt;/textarea></code></pre></div></div>
+        <textarea name="comments" rows="4" cols="50"></textarea>
+
+        <h2 class="highlight">Κείμενο (Text)</h2>
+        <p>Αυτός είναι ο προεπιλεγμένος τύπος. Ο χρήστης μπορεί να εισαγάγει κείμενο.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="text" name="username"></code></pre></div></div>
+        <input type="text" name="username">
+
+        <h2 class="highlight">Κείμενο (Text) - Απενεργοποίηση Autofill (Αυτόματη Συμπλήρωση)</h2>
+        <p>Αυτό μπορεί να εμποδίσει τα προγράμματα περιήγησης από το να προσφέρουν αυτόματη συμπλήρωση σε φόρμες.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="text" autocomplete="off"></code></pre></div></div>
+
+        <h2 class="highlight">Διακομιστής αναζήτησης (Search)</h2>
+        <p>Αυτός είναι ο προεπιλεγμένος τύπος. Ο χρήστης μπορεί να εισαγάγει κείμενο.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="search" name="query"></code></pre></div></div>
+        <input type="search" name="query">
+
+        <h2 class="highlight">Κωδικός (Password)</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="password" name="password"></code></pre></div></div>
+        <input type="password" name="password">
+
+        <h2 class="highlight">Κουμπί υποβολής (Submit)</h2>
+        <p>Χρησιμοποιείται για να υποβάλετε μια φόρμα στον server.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="submit" value="Υποβολή"></code></pre></div></div>
+        <input type="submit" value="Υποβολή">
+
+        <h2 class="highlight">Κουμπί επαναφοράς (Reset)</h2>
+        <p>Χρησιμοποιείται για να επαναφέρετε τις τιμές των πεδίων εισόδου στην αρχική τους κατάσταση.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="reset" value="Επαναφορά"></code></pre></div></div>
+        <input type="reset" value="Επαναφορά">
+
+        <h2 class="highlight">Time</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="time"></code></pre></div></div>
+        <input type="time">
+    
+        <h2 class="highlight">Date</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="date"></code></pre></div></div>
+        <input type="date">
+
+        <h2 class="highlight">Date Time</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="datetime-local"></code></pre></div></div>
+        <input type="datetime-local">
+
+        <h2 class="highlight">Αριθμοί (Number)</h2>
+        <p>Επιτρέπει στον χρήστη να εισάγει αριθμητικές τιμές. Μπορείτε να ορίσετε το εύρος τιμών με τα min και max.</p>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="number" name="quantity" min="1" max="100"></code></pre></div></div>
+        <input type="number" name="quantity" min="1" max="100">
+        
+        <h2 class="highlight">URL</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="url" name="website"></code></pre></div></div>
+        <input type="url" name="website">
+
+        <h2 class="highlight">Color</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="color"></code></pre></div></div>
+        <input type="color">
+        
+        <h2 class="highlight">Email</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="email"></code></pre></div></div>
+        <input type="email">
+        
+        <h2 class="highlight">Upload File</h2>
+        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="file"></code></pre></div></div>
+        <input type="file">
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

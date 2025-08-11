@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@grcodeclub">
+  <meta name="twitter:title" content="Linux | Διαχείριση Συστήματος">
+  <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/linux.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/linux.png"/>
+    <meta property="og:title" content="Linux | Διαχείριση Συστήματος">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+    
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Διαχείριση Συστήματος</h1>
+        <div id="linux-term"></div>
+        <p>Εμφανίζει πληροφορίες για το σύστημα, όπως το όνομα του πυρήνα, την έκδοση κ.ά.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">uname -a</code></pre></div>                
+        <table class="table table-bordered">
+          <tr><td>-a,</td><td>&nbsp;--all</td><td> print all information, in the following order</td></tr>
+          <tr><td>-s,</td><td>&nbsp;--kernel-name</td><td>print the kernel name</td></tr>
+          <tr><td>-n,</td><td>&nbsp;--nodename</td><td>print the network node hostname</td></tr>
+          <tr><td>-r,</td><td>&nbsp;--kernel-release</td><td>print the kernel release</td></tr>
+          <tr><td>-m,</td><td>&nbsp;--machine</td><td>print the machine hardware name</td></tr>
+          <tr><td>-v,</td><td>&nbsp;--kernel-version</td><td>print the kernel version</td></tr>
+          <tr><td>-p,</td><td>&nbsp;--processor</td><td>print the processor type (non-portable)</td></tr>
+          <tr><td>-i,</td><td>&nbsp;--hardware-platform</td><td>print the hardware platform (non-portable)</td></tr>
+          <tr><td>-o,</td><td>&nbsp;--operating-system</td><td>print the operating system</td></tr>
+        </table>
+        <p>Εμφανίζει πληροφορίες σχετικά με την έκδοση της διανομής.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">lsb_release -a</code></pre></div>                
+
+        <h2 class="highlight">Διεργασίες</h2>
+        <p> Η εντολή top είναι μια άλλη εντολή που χρησιμοποιείται στο Linux για την παρακολούθηση των τρεχουσών διεργασιών στο σύστημα. Η top εμφανίζει μια δυναμικά 
+            ενημερωμένη λίστα με τις διεργασίες που τρέχουν στο σύστημα, με πληροφορίες όπως το PID (Process ID), το % CPU χρήσης, το % μνήμης, και άλλες σχετικές 
+            πληροφορίες. Μπορείτε επίσης να χρησιμοποιήσετε την top για να ταξινομήσετε τις διεργασίες ανά CPU, μνήμη, κλπ., και για να διαχειριστείτε τις διεργασίες 
+            από τη γραμμή εντολών.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">top</code></pre></div>
+        <p>Το htop είναι μια βελτιωμένη έκδοση της εντολής top στο Linux. </p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">htop</code></pre></div>
+        <p>Η εντολή top εμφανίζει πληροφορίες σχετικά με τις τρέχουσες διεργασίες (processes) στο σύστημα.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ps</code></pre></div>
+
+            
+        <h2 class="highlight">Διαχείριση σκληρού δίσκου</h2>
+        <p>Εμφανίζει τις πληροφορίες για τον χώρο αποθήκευσης.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">df -h</code></pre></div>                
+
+        <p>Εμφανίζει την χρήση δίσκου για συγκεκριμένους καταλόγους.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">du -h</code></pre></div>                
+
+        <p>Εργαλείο για τη διαχείριση των διαμερισμάτων στον σκληρό δίσκο.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">fdisk</code></pre></div>                
+
+        <p>Γραφικά εργαλεία για τη διαχείριση των διαμερισμάτων</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">gdisk
+gparted</code></pre></div>                
+
+        <p>Εμφανίζει πληροφορίες για την υγεία του σκληρού δίσκου.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">smartctl</code></pre></div>   
+      </div>
+
+    <div id="addFooter"></div>
+</body>
+</html>

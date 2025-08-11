@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Linux | Εντολή grep">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/linux.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/linux.png"/>
+    <meta property="og:title" content="Linux | Εντολή grep">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+    
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Grep</h1>
+        <div id="linux-term"></div>
+        <p>Χρησιμοποιώντας την παρακάτω εντολή θα μας εμφανίσει όλες τις γραμμές του αρχείου file.txt που περιέχουν την λέξη grcodeclub.</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep grcodeclub file.txt</code></pre></div>                
+
+            <p>Αναζήτηση σε πολλά αρχεία </p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep grcodeclub file1.txt file2.txt file3.txt</code></pre></div>                
+
+            <p>Αναζήτηση σε όλα τα αρχεία που βρίσκονται στο τρέχον φάκελο.</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep grcodeclub *</code></pre></div>                
+
+            <p>Για να βρείτε μόνο ολόκληρες λέξεις.</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -w grcodeclub file.txt</code></pre></div>                
+
+            <p>Για να εμφανίζει όλες τις γραμμές που εμφανίζεται η λέξη ανεξάρτητος αν είναι κεφάλαια ή πεζά.</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -i grcodeclub file.txt</code></pre></div>                
+
+            <p>Για να εμφανίσουμε όλες τις γραμμές που δεν περιέχουν το μοτίβο/λέξη  που δώσαμε.</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -v grcodeclub file1.txt</code></pre></div>                
+
+            <p>Για να δούμε σε ποια αρχεία από το τρέχον φάκελο περιχέουν την λέξη που δώσαμε.</p>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -l grcodeclub *</code></pre></div>                
+      </div>
+
+    <div id="addFooter"></div>
+</body>
+</html>

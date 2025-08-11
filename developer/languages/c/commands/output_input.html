@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Γλώσσα Προγραμματισμού C | Είσοδος / Έξοδος">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού C | Είσοδος / Έξοδος">
+    <meta name="keywords" content="Είσοδος / Έξοδος στη C">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Είσοδος / Έξοδος</h1>
+        <a href="https://github.com/grcodeclub/c/tree/main/examples/output_input" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>Δες παραδείγματα στο GitHub</a>
+        <p>Με την <code>printf()</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
+
+int main() {
+printf("GrCode Club!");
+return 0;
+}</code></pre></div></div>
+
+<p>Με την εντολή <code>scanf()</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user. </p>
+<div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
+
+int main() {
+int x;
+printf("Πληκτρολογήστε έναν αριθμό και πατήστε enter: \n"); 
+scanf("%d", &x);
+printf("Ο αριθμός είναι: %d", x);
+
+return 0;
+}</code></pre></div></div>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

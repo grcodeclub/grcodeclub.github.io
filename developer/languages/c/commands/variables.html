@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Γλώσσα Προγραμματισμού C | Μεταβλητές">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/c.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού C | Μεταβλητές">
+    <meta name="keywords" content="Γλώσσα Προγραμματισμού C και Μεταβλητές">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Μεταβλητές</h1>
+        <p>Στην C, οι μεταβλητές είναι βασικά στοιχεία προγραμματισμού που χρησιμοποιούνται 
+            για να αποθηκεύουν δεδομένα σε μια συγκεκριμένη θέση μνήμης του υπολογιστή, τα 
+            οποία μπορούν να μεταβληθούν κατά τη διάρκεια της εκτέλεσης του προγράμματος. 
+            Κάθε μεταβλητή έχει ένα όνομα, έναν τύπο δεδομένων και μία τιμή.</p>
+        
+        <h2 class="highlight">Βασικές Δηλώσεις</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int age = 25;
+float price = 12.99;
+double pi = 3.14159;
+char initial = 'A';
+char name[] = "John";</code></pre></div></div>
+
+    <h2 class="highlight">const</h2>
+    <p>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
+    <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
+x = 5;  // error: assignment of read-only variable 'x'</code></pre></div></div>
+
+    <h2 class="highlight">define</h2>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#define PI 3.14159</code></pre></div></div>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
