@@ -26,9 +26,9 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/python/">Python</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/cpp/">C++</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/java/">Java</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/sql/">SQL</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/docker/">Docker</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/matlab/">MATLAB</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/sql">SQL</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/docker">Docker</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/matlab">MATLAB</a></li>
                 </ul>
             </li>
             
