@@ -9,27 +9,27 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-            <option value="https://grcodeclub.gr/cpp/">Εισαγωγή</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/">Εισαγωγή</option>
             <option value="https://github.com/grcodeclub/cpp/">GitHub</option>
-            <option value="https://grcodeclub.gr/cpp/library/">Bιβλιοθήκες</option>
-            <option value="https://grcodeclub.gr/cpp/operators">Τελεστές</option>  
+            <option value="https://grcodeclub.gr/developer/languages/cpp/library/">Bιβλιοθήκες</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/operators">Τελεστές</option>  
         <optgroup label="Βασικές Εντολές">
-            <option value="https://grcodeclub.gr/cpp/commands/variables">Μεταβλητές</option>
-            <option value="https://grcodeclub.gr/cpp/commands/output_input">Είσοδος / Έξοδος</option>
-            <option value="https://grcodeclub.gr/cpp/commands/conditions">Δομή ελέγχου</option>
-            <option value="https://grcodeclub.gr/cpp/commands/loop">Δομή επανάληψης</option>
-            <option value="https://grcodeclub.gr/cpp/commands/function">Συναρτήσεις</option>
-            <option value="https://grcodeclub.gr/cpp/pointers">Δείκτες</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/variables">Μεταβλητές</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/output_input">Είσοδος / Έξοδος</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/conditions">Δομή ελέγχου</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/loop">Δομή επανάληψης</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/function">Συναρτήσεις</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/pointers">Δείκτες</option>
         </optgroup>
         <optgroup label="Class">
-            <option value="https://grcodeclub.gr/cpp/class/">Class</option>
-            <option value="https://grcodeclub.gr/cpp/class/inheritance">Κληρονομικότητα</option>
-            <option value="https://grcodeclub.gr/cpp/class/header-file">Header File</option>
-            <option value="https://grcodeclub.gr/cpp/operator-overloading">Υπερφόρτωση τελεστών</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/class/">Class</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/class/inheritance">Κληρονομικότητα</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/class/header-file">Header File</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/operator-overloading">Υπερφόρτωση τελεστών</option>
         </optgroup>
-            <option value="https://grcodeclub.gr/cpp/commands/files">Αρχεία</option>
-            <option value="https://grcodeclub.gr/cpp/exception">Χειρισμός εξαιρέσεων</option>
-            <option value="https://grcodeclub.gr/cpp/templates">Templates</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/files">Αρχεία</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/exception">Χειρισμός εξαιρέσεων</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/templates">Templates</option>
             </select>
         </div>
     </div>

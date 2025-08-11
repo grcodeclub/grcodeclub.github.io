@@ -9,26 +9,24 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/java/">Εισαγωγή</option>
-        <option value="https://github.com/grcodeclub/java">GitHub</option>
-        <option value="https://grcodeclub.gr/java/library/">Bιβλιοθήκες και Class</option>
-        <option value="https://grcodeclub.gr/java/operators">Τελεστές</option>  
-    <optgroup label="Βασικές Εντολές">
-        <option value="https://grcodeclub.gr/java/commands/variables">Μεταβλητές</option>
-        <option value="https://grcodeclub.gr/java/commands/output_input">Είσοδος / Έξοδος</option>
-        <option value="https://grcodeclub.gr/java/commands/loop">Δομή επανάληψης</option>
-        <option value="https://grcodeclub.gr/java/commands/conditions">Δομή ελέγχου</option>
-        <option value="https://grcodeclub.gr/java/commands/arrays">Arrays</option>
-    </optgroup>
-      <optgroup label="Class">
-        <option value="https://grcodeclub.gr/java/class/">Class</option>
-        <option value="https://grcodeclub.gr/java/class/interface">Interface</option>
-        <option value="https://grcodeclub.gr/java/class/extends">Extends</option>
-    </optgroup>
-        </select>
+            <option value="https://grcodeclub.gr/developer/languages/python/">Εισαγωγή</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/library/">Βιβλιοθήκες</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/operators">Τελεστές</option>  
+            <option value="https://grcodeclub.gr/developer/languages/python/commands/variables">Μεταβλητές</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/commands/output_input">Είσοδος / Έξοδος</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/commands/conditions">Δομή Ελέγχου</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/commands/loop">Δομή Επανάληψης</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/strings">Strings</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/files">Αρχεία</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/list">Λίστες</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/terminal">Terminal</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/function/">Δημιουργία Συναρτήσεων</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/function/lambda">lambda</option>
+            </select>
         </div>
     </div>
-</div>`;
+</div>
+`;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
 const addHeader = document.getElementById('addHeader');
@@ -63,12 +61,12 @@ window.onload = function() {
             break;
         }
     }
+};
 
-    const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
-        $(document).ready(function() {
+window.onload = function() {
+    $(document).ready(function() {
             // Εφαρμογή του Select2
             $('#page-select').select2();
-
-          
         });
+
 };

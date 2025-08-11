@@ -9,13 +9,22 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-            <option value="https://grcodeclub.gr/programming/">Προγραμματισμός</option>
-            <option value="https://grcodeclub.gr/programming/more/github">GitHub</option>
+            <option value="https://grcodeclub.gr/developer/languages/c/">Εισαγωγή</option>
+            <option value="https://grcodeclub.gr/developer/languages/c/library/">Βιβλιοθήκες</option>
+            <option value="https://grcodeclub.gr/developer/languages/c/operators">Τελεστές</option>    
+        <optgroup label="Βασικές Εντολές">
+            <option value="https://grcodeclub.gr/developer/languages/c/commands/variables">Μεταβλητές</option>
+            <option value="https://grcodeclub.gr/developer/languages/c/commands/output_input">Είσοδος / Έξοδος</option>
+            <option value="https://grcodeclub.gr/developer/languages/c/commands/conditions">Δομή ελέγχου</option>
+            <option value="https://grcodeclub.gr/developer/languages/c/commands/loop">Δομή επανάληψης</option>
+            <option value="https://grcodeclub.gr/developer/languages/c/commands/function">Συναρτήσεις</option>
+        </optgroup>
+            <option value="https://grcodeclub.gr/developer/languages/c/files">Αρχεία</option>
+            <option value="https://grcodeclub.gr/developer/languages/c/stract">Δομή - Struct</option>
             </select>
         </div>
     </div>
-</div>
-`;
+</div>`;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
 const addHeader = document.getElementById('addHeader');
@@ -50,12 +59,16 @@ window.onload = function() {
             break;
         }
     }
-};
 
-window.onload = function() {
-    $(document).ready(function() {
+    const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
+    if (currentURL.startsWith('https://grcodeclub.gr/developer/languages/c/library/')){
+            const targetValue = "https://grcodeclub.gr/developer/languages/c/library/";
+            select.value = targetValue;    
+    }
+        $(document).ready(function() {
             // Εφαρμογή του Select2
             $('#page-select').select2();
-        });
 
+          
+        });
 };

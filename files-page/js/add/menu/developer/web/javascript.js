@@ -1,3 +1,4 @@
+
 // Ο κώδικας παραμένει ο ίδιος για την προσθήκη του dropdown
 
 // Το HTML περιεχόμενο του dropdown
@@ -9,17 +10,22 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/">Εισαγωγή</option>
-        <option value="https://grcodeclub.gr/php/commands">Εντολές</option>
-        <option value="https://grcodeclub.gr/php/files">Διαχείριση αρχείων</option>
-        <option value="https://grcodeclub.gr/php/frameworks">frameworks</option>
-        <option value="https://grcodeclub.gr/php/sql">SQL</option>
-        <option value="https://grcodeclub.gr/php/system">Στοιχεία του υπολογιστή</option>
+    <option value="https://grcodeclub.gr/web-developer/javascript/commands">Βασικές εντολές</option>
+    <option value="https://grcodeclub.gr/web-developer/javascript/commands/arrays">Arrays</option>
+    <option value="https://grcodeclub.gr/web-developer/javascript/restriction">Περιορισμοί</option>
+    <option value="https://grcodeclub.gr/web-developer/javascript/messages">Mηνύματα - Ειδοποιήσεις</option>
+    <option value="https://grcodeclub.gr/web-developer/javascript/libraries-and-framework">Βιβλιοθήκες - Framework</option>
+    <optgroup label="Βιβλιοθήκες">
+        <option value="https://grcodeclub.gr/web-developer/javascript/library/jquery">jQuery</option>
+    </optgroup>
+    <optgroup label="DOM">
+        <option value="https://grcodeclub.gr/web-developer/javascript/dom/">Βασικές Εντολές</option>
+        <option value="https://grcodeclub.gr/web-developer/javascript/dom/eventlisteners">EventListeners</option>
+    </optgroup>
         </select>
         </div>
     </div>
-</div>
-`;
+</div>`;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
 const addHeader = document.getElementById('addHeader');

@@ -9,9 +9,9 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-<option value="https://grcodeclub.gr/system/">Εισαγωγή</option>
-        <option value="https://grcodeclub.gr/system/extensions">Επεκτάσεις Ονομάτων Αρχείων</option>
-        <option value="https://grcodeclub.gr/system/keyboard-shortcut">Συντομεύσεις Πληκτρολογίου</option>
+                <option value="https://grcodeclub.gr/operating-systems/">Εισαγωγή</option>
+                <option value="https://grcodeclub.gr/operating-systems/extensions">Επεκτάσεις Ονομάτων Αρχείων</option>
+                <option value="https://grcodeclub.gr/operating-systems/keyboard-shortcut">Συντομεύσεις Πληκτρολογίου</option>
             </select>
         </div>
     </div>

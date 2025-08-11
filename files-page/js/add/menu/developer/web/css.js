@@ -10,18 +10,14 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/javascript/commands">Βασικές εντολές</option>
-    <option value="https://grcodeclub.gr/javascript/commands/arrays">Arrays</option>
-    <option value="https://grcodeclub.gr/javascript/restriction">Περιορισμοί</option>
-    <option value="https://grcodeclub.gr/javascript/messages">Mηνύματα - Ειδοποιήσεις</option>
-    <option value="https://grcodeclub.gr/javascript/libraries-and-framework">Βιβλιοθήκες - Framework</option>
-    <optgroup label="Βιβλιοθήκες">
-        <option value="https://grcodeclub.gr/javascript/library/jquery">jQuery</option>
-    </optgroup>
-    <optgroup label="DOM">
-        <option value="https://grcodeclub.gr/javascript/dom/">Βασικές Εντολές</option>
-        <option value="https://grcodeclub.gr/javascript/dom/eventlisteners">EventListeners</option>
-    </optgroup>
+    <option value="https://grcodeclub.gr/web-developer/website/css/">Εισαγωγή</option>
+    <option value="https://grcodeclub.gr/web-developer/website/css/properties">Βασικές ιδιότητες</option>
+    <option value="https://grcodeclub.gr/web-developer/website/css/keyframes">Keyframes</option>
+    <option value="https://grcodeclub.gr/web-developer/website/css/media">@media</option>
+    <option value="https://grcodeclub.gr/web-developer/website/css/text">Κείμενο και Ιδιότητες</option>
+    <option value="https://grcodeclub.gr/web-developer/website/css/table">Πίνακες</option>
+    <option value="https://grcodeclub.gr/web-developer/website/css/link">Link</option>
+    <option value="https://grcodeclub.gr/web-developer/website/css/layout-properties">Εμφάνιση και Θέση</option>
         </select>
         </div>
     </div>

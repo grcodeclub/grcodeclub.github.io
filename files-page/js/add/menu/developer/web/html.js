@@ -10,14 +10,14 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/website/html/">Εισαγωγή</option>
-        <option value="https://grcodeclub.gr/website/html/text">Kείμενο</option>
-        <option value="https://grcodeclub.gr/website/html/link">Σύνδεσμοι</option>
-        <option value="https://grcodeclub.gr/website/html/input">&lt;input></option>
-        <option value="https://grcodeclub.gr/website/html/list">Λίστες</option>
-        <option value="https://grcodeclub.gr/website/html/tables">Πίνακες</option>
-        <option value="https://grcodeclub.gr/website/html/multimedia">Πολυμέσα</option>
-        <option value="https://grcodeclub.gr/website/html/meta-tags">Meta Tags</option>
+        <option value="https://grcodeclub.gr/web-developer/website/html/">Εισαγωγή</option>
+        <option value="https://grcodeclub.gr/web-developer/website/html/text">Kείμενο</option>
+        <option value="https://grcodeclub.gr/web-developer/website/html/link">Σύνδεσμοι</option>
+        <option value="https://grcodeclub.gr/web-developer/website/html/input">&lt;input></option>
+        <option value="https://grcodeclub.gr/web-developer/website/html/list">Λίστες</option>
+        <option value="https://grcodeclub.gr/web-developer/website/html/tables">Πίνακες</option>
+        <option value="https://grcodeclub.gr/web-developer/website/html/multimedia">Πολυμέσα</option>
+        <option value="https://grcodeclub.gr/web-developer/website/html/meta-tags">Meta Tags</option>
         </select>
         </div>
     </div>

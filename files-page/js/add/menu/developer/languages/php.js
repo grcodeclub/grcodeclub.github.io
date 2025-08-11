@@ -9,20 +9,13 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-            <option value="https://grcodeclub.gr/python/">Εισαγωγή</option>
-            <option value="https://grcodeclub.gr/python/library/">Βιβλιοθήκες</option>
-            <option value="https://grcodeclub.gr/python/operators">Τελεστές</option>  
-            <option value="https://grcodeclub.gr/python/commands/variables">Μεταβλητές</option>
-            <option value="https://grcodeclub.gr/python/commands/output_input">Είσοδος / Έξοδος</option>
-            <option value="https://grcodeclub.gr/python/commands/conditions">Δομή Ελέγχου</option>
-            <option value="https://grcodeclub.gr/python/commands/loop">Δομή Επανάληψης</option>
-            <option value="https://grcodeclub.gr/python/strings">Strings</option>
-            <option value="https://grcodeclub.gr/python/files">Αρχεία</option>
-            <option value="https://grcodeclub.gr/python/list">Λίστες</option>
-            <option value="https://grcodeclub.gr/python/terminal">Terminal</option>
-            <option value="https://grcodeclub.gr/python/function/">Δημιουργία Συναρτήσεων</option>
-            <option value="https://grcodeclub.gr/python/function/lambda">lambda</option>
-            </select>
+        <option value="https://grcodeclub.gr/web-developer/">Εισαγωγή</option>
+        <option value="https://grcodeclub.gr/web-developer/php/commands">Εντολές</option>
+        <option value="https://grcodeclub.gr/web-developer/php/files">Διαχείριση αρχείων</option>
+        <option value="https://grcodeclub.gr/web-developer/php/frameworks">frameworks</option>
+        <option value="https://grcodeclub.gr/web-developer/php/sql">SQL</option>
+        <option value="https://grcodeclub.gr/web-developer/php/system">Στοιχεία του υπολογιστή</option>
+        </select>
         </div>
     </div>
 </div>
@@ -61,12 +54,12 @@ window.onload = function() {
             break;
         }
     }
-};
 
-window.onload = function() {
-    $(document).ready(function() {
+    const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
+        $(document).ready(function() {
             // Εφαρμογή του Select2
             $('#page-select').select2();
-        });
 
+          
+        });
 };

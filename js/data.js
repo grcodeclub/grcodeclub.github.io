@@ -1,11 +1,11 @@
 // Λίστα με τους συνδέσμους προς τα αρχεία CSS
 const cssLinks = [
-    "https://grcodeclub.gr/files-page/css/libraries/bootstrap/v5-3-3.css",
-    "https://grcodeclub.gr/files-page/css/libraries/bootstrap/custom.css",
-    "https://grcodeclub.gr/files-page/css/libraries/font-awesome/6-5-0.css",
-    "https://grcodeclub.gr/files-page/css/code/bg.css",
-    "https://grcodeclub.gr/files-page/css/text.css",
-    "https://grcodeclub.gr/files-page/css/elements.css"
+    "https://grcodeclub.github.io/files-page/css/libraries/bootstrap/v5-3-3.css",
+    "https://grcodeclub.github.io/files-page/css/libraries/bootstrap/custom.css",
+    "https://grcodeclub.github.io/files-page/css/libraries/font-awesome/6-5-0.css",
+    "https://grcodeclub.github.io/files-page/css/code/bg.css",
+    "https://grcodeclub.github.io/files-page/css/text.css",
+    "https://grcodeclub.github.io/files-page/css/elements.css"
 ]; 
 
 const head = document.head;    // Αρχικοποίηση head
@@ -44,7 +44,7 @@ sizes.forEach(({ width, height, url }) => {
 const icoFaviconLink = document.createElement('link');
 icoFaviconLink.rel = 'shortcut icon';
 icoFaviconLink.type = 'image/x-icon';
-icoFaviconLink.href = 'https://grcodeclub.gr/files-page/logo/favicon.ico';
+icoFaviconLink.href = 'https://grcodeclub.github.io/files-page/logo/favicon.ico';
 document.head.appendChild(icoFaviconLink);    // Προσθήκη του στοιχείου <link> στο <head> του εγγράφου
  
 // Θέτουμε το title της σελίδας
@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 // Αλυσίδα Promises
-loadScript('https://grcodeclub.gr/files-page/js/libraries/jquery.js')
-    .then(() => loadScript('https://grcodeclub.gr/files-page/js/libraries/popper-v2-5-2.js'))
-    .then(() => loadScript('https://grcodeclub.gr/files-page/js/libraries/bootstrap@5-3-3.js'))    
-    .then(() => loadScript('https://grcodeclub.gr/files-page/js/libraries/select2-4-0-13.js'))
-    .then(() => loadScript('https://grcodeclub.gr/files-page/js/add/body.js'))
+loadScript('https://grcodeclub.github.io/files-page/files-pages/js/libraries/jquery.js')
+    .then(() => loadScript('https://grcodeclub.github.io/files-page/files-pages/js/libraries/popper-v2-5-2.js'))
+    .then(() => loadScript('https://grcodeclub.github.io/files-page/files-pages/js/libraries/bootstrap@5-3-3.js'))    
+    .then(() => loadScript('https://grcodeclub.github.io/files-page/files-pages/js/libraries/select2-4-0-13.js'))
+    .then(() => loadScript('https://grcodeclub.github.io/files-page/files-pages/js/add/body.js'))
     .catch(error => console.error(error));
 
 
@@ -100,49 +100,49 @@ loadScript('https://grcodeclub.gr/files-page/js/libraries/jquery.js')
     }
 
     if (document.querySelector('.command-line') || document.querySelector('.code_editor') || document.getElementById('code')) { 
-        addCssFiles("https://grcodeclub.gr/files-page/css/code/prism.css");
-        addScript('https://grcodeclub.gr/files-page/js/libraries/prism.js');
-        addScript('https://grcodeclub.gr/files-page/js/action/show_code.js');
+        addCssFiles("https://grcodeclub.github.io/files-page/css/code/prism.css");
+        addScript('https://grcodeclub.github.io/files-page/files-pages/js/libraries/prism.js');
+        addScript('https://grcodeclub.github.io/files-page/files-pages/js/action/show_code.js');
     }
     
-    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.gr/files-page/js/search/tableSearchWithSelect.js');}
-    if (document.getElementById('search_table_page') && document.getElementById('searchInput') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/files-page/js/search/Table_Pagination_Search.js');}
-    if (document.getElementById('search_table_page') && document.getElementById('searchInput2') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.gr/files-page/js/search/Table_Pagination_2_Search.js');}
+    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.github.io/files-page/files-pages/js/search/tableSearchWithSelect.js');}
+    if (document.getElementById('search_table_page') && document.getElementById('searchInput') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.github.io/files-page/files-pages/js/search/Table_Pagination_Search.js');}
+    if (document.getElementById('search_table_page') && document.getElementById('searchInput2') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.github.io/files-page/files-pages/js/search/Table_Pagination_2_Search.js');}
 
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
     const scriptMappings = {
-    'https://grcodeclub.gr/programming/languages/': 'https://grcodeclub.github.io/js/add/menu/black.js',
-    'https://grcodeclub.gr/programming/': 'https://grcodeclub.github.io/js/add/menu/programming/more.js',
-    'https://grcodeclub.gr/c/': 'https://grcodeclub.github.io/js/add/menu/programming/c.js',
-    'https://grcodeclub.gr/python/': 'https://grcodeclub.github.io/js/add/menu/programming/python.js',
-    'https://grcodeclub.gr/cpp/': 'https://grcodeclub.github.io/js/add/menu/programming/cpp.js',
-    'https://grcodeclub.gr/php/': 'https://grcodeclub.github.io/js/add/menu/programming/php.js',
-    'https://grcodeclub.gr/java/': 'https://grcodeclub.github.io/js/add/menu/programming/java.js',
-    'https://grcodeclub.gr/microsoft-windows/command-line/': 'https://grcodeclub.gr/files-page/js/add/menu/system/windows/command-line.js',
-    'https://grcodeclub.gr/microsoft-windows/': 'https://grcodeclub.github.io/js/add/menu/system/windows/main.js',
-    'https://grcodeclub.gr/mobile/android/': 'https://grcodeclub.github.io/js/add/menu/android.js',
-    'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/js/add/menu/syntomografies.js',
-    'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/js/add/menu/orologia.js',
-    'https://grcodeclub.gr/network/protocol/network-address/ip/': 'https://grcodeclub.github.io/js/add/menu/network/ip.js',
-    'https://grcodeclub.gr/linux/terminal/': 'https://grcodeclub.github.io/js/add/menu/system/linux/terminal.js',
-    'https://grcodeclub.gr/linux/': 'https://grcodeclub.github.io/js/add/menu/system/linux/menu.js',
-    'https://grcodeclub.gr/javascript/': 'https://grcodeclub.github.io/js/add/menu/programming/javascript.js',
-    'https://grcodeclub.gr/website/html/': 'https://grcodeclub.github.io/js/add/menu/programming/html.js',
-    'https://grcodeclub.gr/website/css/': 'https://grcodeclub.github.io/js/add/menu/programming/css.js',
-    'https://grcodeclub.gr/website/nodejs/': 'https://grcodeclub.github.io/js/add/menu/programming/nodejs.js',
-    'https://grcodeclub.gr/website/cms/wordpress': 'https://grcodeclub.github.io/js/add/menu/more/wordpress.js',
-    'https://grcodeclub.gr/website/build/': 'https://grcodeclub.github.io/js/add/menu/website.js',
-    'https://grcodeclub.gr/more/office-suite': 'https://grcodeclub.github.io/js/add/menu/more/office-suite.js',
-    'https://grcodeclub.gr/more/create': 'https://grcodeclub.github.io/js/add/menu/more/create.js',
-    'https://grcodeclub.gr/system/': 'https://grcodeclub.github.io/js/add/menu/system.js',
-    'https://grcodeclub.gr/info/': 'https://grcodeclub.github.io/js/add/menu/info.js',
-    'https://grcodeclub.gr/more/create/post': 'https://grcodeclub.github.io/js/add/menu/more/create.js' // Εξαιρείται εάν περιλαμβάνει 'post'
+    'https://grcodeclub.gr/developer/languages/': 'https://grcodeclub.github.io/files-pages/js/add/menu/black.js',
+    'https://grcodeclub.gr/developer/languages/c/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/languages/c.js',
+    'https://grcodeclub.gr/developer/languages/python/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/languages/python.js',
+    'https://grcodeclub.gr/developer/languages/cpp/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/languages/cpp.js',
+    'https://grcodeclub.gr/developer/languages/java/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/languages/java.js',
+    'https://grcodeclub.gr/web-developer/javascript/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/javascript.js',
+    'https://grcodeclub.gr/web-developer/html/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/html.js',
+    'https://grcodeclub.gr/web-developer/css/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/css.js',
+    'https://grcodeclub.gr/web-developer/nodejs/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/nodejs.js',
+    'https://grcodeclub.gr/web-developer/cms/wordpress': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/cms/wordpress.js',
+    'https://grcodeclub.gr/web-developer/build/': 'https://grcodeclub.github.io/files-pages/js/add/menu/website.js',
+    'https://grcodeclub.gr/web-developer/php/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/php.js',
+    'https://grcodeclub.gr/operating-systems/': 'https://grcodeclub.github.io/files-pages/js/add/menu/system.js',
+    'https://grcodeclub.gr/operating-systems/microsoft-windows/command-line/': 'https://grcodeclub.gr/files-page/files-pages/js/add/menu/system/windows/command-line.js',
+    'https://grcodeclub.gr/operating-systems/microsoft-windows/': 'https://grcodeclub.github.io/files-pages/js/add/menu/system/windows/main.js',
+    'https://grcodeclub.gr/operating-systems/linux/terminal/': 'https://grcodeclub.github.io/files-pages/js/add/menu/system/linux/terminal.js',
+    'https://grcodeclub.gr/operating-systems/linux/': 'https://grcodeclub.github.io/files-pages/js/add/menu/system/linux/menu.js',
+    'https://grcodeclub.gr/mobile/android/': 'https://grcodeclub.github.io/files-pages/js/add/menu/android.js',
+    'https://grcodeclub.gr/network/protocol/network-address/ip/': 'https://grcodeclub.github.io/files-pages/js/add/menu/network/ip.js',
+    'https://grcodeclub.gr/more/office-suite': 'https://grcodeclub.github.io/files-pages/js/add/menu/more/office-suite.js',
+    'https://grcodeclub.gr/more/create': 'https://grcodeclub.github.io/files-pages/js/add/menu/more/create.js',
+    'https://grcodeclub.gr/more/create/post': 'https://grcodeclub.github.io/files-pages/js/add/menu/more/create.js', // Εξαιρείται εάν περιλαμβάνει 'post'
+    'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/files-pages/js/add/menu/syntomografies.js',
+    'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/files-pages/js/add/menu/orologia.js',
+    'https://grcodeclub.gr/info/': 'https://grcodeclub.github.io/files-pages/js/add/menu/info.js'
+
 };
 
 const handleScriptAddition = () => {
     const matchingScript = Object.keys(scriptMappings).find(url => currentURL.startsWith(url)); // Ελέγχει ποιο URL από τα κλειδιά του αντικειμένου `scriptMappings` ταιριάζει με το `currentURL`
-    if (matchingScript) { addScript(scriptMappings[matchingScript]); addCssFiles("https://grcodeclub.gr/files-page/css/libraries/select2/v4-0-13.css"); addCssFiles("https://grcodeclub.gr/files-page/css/libraries/select2/custom.css"); }
+    if (matchingScript) { addScript(scriptMappings[matchingScript]); addCssFiles("https://grcodeclub.github.io/files-page/css/libraries/select2/v4-0-13.css"); addCssFiles("https://grcodeclub.github.io/files-page/css/libraries/select2/custom.css"); }
 };
 
 // Έλεγχος αν η σελίδα είναι διαθέσιμη

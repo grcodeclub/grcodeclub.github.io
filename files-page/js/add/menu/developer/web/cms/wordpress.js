@@ -9,10 +9,10 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-            <option value="https://grcodeclub.gr/website/cms/wordpress/">WordPress</option>
-            <option value="https://grcodeclub.gr/website/cms/wordpress/wp-files">WordPress Files</option>
-            <option value="https://grcodeclub.gr/website/cms/wordpress/plugins/">Plugins</option>
-            <option value="https://grcodeclub.gr/website/cms/wordpress/plugins/action-hooks">Action Hooks</option>
+            <option value="https://grcodeclub.gr/web-developer/cms/wordpress/">WordPress</option>
+            <option value="https://grcodeclub.gr/web-developer/cms/wordpress/wp-files">WordPress Files</option>
+            <option value="https://grcodeclub.gr/web-developer/cms/wordpress/plugins/">Plugins</option>
+            <option value="https://grcodeclub.gr/web-developer/cms/wordpress/plugins/action-hooks">Action Hooks</option>
                 </select>
         </div>
     </div>
