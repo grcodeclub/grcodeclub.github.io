@@ -112,31 +112,31 @@ loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
     const scriptMappings = {
-    'https://grcodeclub.gr/developer/languages/': 'https://grcodeclub.github.io/files-pages/js/add/menu/black.js',
-    'https://grcodeclub.gr/developer/languages/c/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/languages/c.js',
-    'https://grcodeclub.gr/developer/languages/python/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/languages/python.js',
-    'https://grcodeclub.gr/developer/languages/cpp/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/languages/cpp.js',
-    'https://grcodeclub.gr/developer/languages/java/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/languages/java.js',
-    'https://grcodeclub.gr/web-developer/javascript/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/javascript.js',
-    'https://grcodeclub.gr/web-developer/html/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/html.js',
-    'https://grcodeclub.gr/web-developer/css/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/css.js',
-    'https://grcodeclub.gr/web-developer/nodejs/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/nodejs.js',
-    'https://grcodeclub.gr/web-developer/cms/wordpress': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/cms/wordpress.js',
-    'https://grcodeclub.gr/web-developer/build/': 'https://grcodeclub.github.io/files-pages/js/add/menu/website.js',
-    'https://grcodeclub.gr/web-developer/php/': 'https://grcodeclub.github.io/files-pages/js/add/menu/developer/web/php.js',
-    'https://grcodeclub.gr/operating-systems/': 'https://grcodeclub.github.io/files-pages/js/add/menu/system.js',
+    'https://grcodeclub.gr/developer/languages/': 'https://grcodeclub.github.io/files-page/js/add/menu/black.js',
+    'https://grcodeclub.gr/developer/languages/c/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/languages/c.js',
+    'https://grcodeclub.gr/developer/languages/python/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/languages/python.js',
+    'https://grcodeclub.gr/developer/languages/cpp/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/languages/cpp.js',
+    'https://grcodeclub.gr/developer/languages/java/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/languages/java.js',
+    'https://grcodeclub.gr/web-developer/javascript/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/javascript.js',
+    'https://grcodeclub.gr/web-developer/html/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/html.js',
+    'https://grcodeclub.gr/web-developer/css/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/css.js',
+    'https://grcodeclub.gr/web-developer/nodejs/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/nodejs.js',
+    'https://grcodeclub.gr/web-developer/cms/wordpress': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/cms/wordpress.js',
+    'https://grcodeclub.gr/web-developer/build/': 'https://grcodeclub.github.io/files-page/js/add/menu/website.js',
+    'https://grcodeclub.gr/web-developer/php/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/php.js',
+    'https://grcodeclub.gr/operating-systems/': 'https://grcodeclub.github.io/files-page/js/add/menu/system.js',
     'https://grcodeclub.gr/operating-systems/microsoft-windows/command-line/': 'https://grcodeclub.gr/files-page/js/add/menu/system/windows/command-line.js',
-    'https://grcodeclub.gr/operating-systems/microsoft-windows/': 'https://grcodeclub.github.io/files-pages/js/add/menu/system/windows/main.js',
-    'https://grcodeclub.gr/operating-systems/linux/terminal/': 'https://grcodeclub.github.io/files-pages/js/add/menu/system/linux/terminal.js',
-    'https://grcodeclub.gr/operating-systems/linux/': 'https://grcodeclub.github.io/files-pages/js/add/menu/system/linux/menu.js',
-    'https://grcodeclub.gr/mobile/android/': 'https://grcodeclub.github.io/files-pages/js/add/menu/android.js',
-    'https://grcodeclub.gr/network/protocol/network-address/ip/': 'https://grcodeclub.github.io/files-pages/js/add/menu/network/ip.js',
-    'https://grcodeclub.gr/more/office-suite': 'https://grcodeclub.github.io/files-pages/js/add/menu/more/office-suite.js',
-    'https://grcodeclub.gr/more/create': 'https://grcodeclub.github.io/files-pages/js/add/menu/more/create.js',
-    'https://grcodeclub.gr/more/create/post': 'https://grcodeclub.github.io/files-pages/js/add/menu/more/create.js', // Εξαιρείται εάν περιλαμβάνει 'post'
-    'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/files-pages/js/add/menu/syntomografies.js',
-    'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/files-pages/js/add/menu/orologia.js',
-    'https://grcodeclub.gr/info/': 'https://grcodeclub.github.io/files-pages/js/add/menu/info.js'
+    'https://grcodeclub.gr/operating-systems/microsoft-windows/': 'https://grcodeclub.github.io/files-page/js/add/menu/system/windows/main.js',
+    'https://grcodeclub.gr/operating-systems/linux/terminal/': 'https://grcodeclub.github.io/files-page/js/add/menu/system/linux/terminal.js',
+    'https://grcodeclub.gr/operating-systems/linux/': 'https://grcodeclub.github.io/files-page/js/add/menu/system/linux/menu.js',
+    'https://grcodeclub.gr/mobile/android/': 'https://grcodeclub.github.io/files-page/js/add/menu/android.js',
+    'https://grcodeclub.gr/network/protocol/network-address/ip/': 'https://grcodeclub.github.io/files-page/js/add/menu/network/ip.js',
+    'https://grcodeclub.gr/more/office-suite': 'https://grcodeclub.github.io/files-page/js/add/menu/more/office-suite.js',
+    'https://grcodeclub.gr/more/create': 'https://grcodeclub.github.io/files-page/js/add/menu/more/create.js',
+    'https://grcodeclub.gr/more/create/post': 'https://grcodeclub.github.io/files-page/js/add/menu/more/create.js', // Εξαιρείται εάν περιλαμβάνει 'post'
+    'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/files-page/js/add/menu/syntomografies.js',
+    'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/files-page/js/add/menu/orologia.js',
+    'https://grcodeclub.gr/info/': 'https://grcodeclub.github.io/files-page/js/add/menu/info.js'
 
 };
 
