@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Python και Λίστες">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:title" content="Python και Λίστες">
+    <meta name="keywords" content="Python και Λίστες">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Λίστες</h1>
+        <a style="margin-bottom: 10px; margin-top: 10px;"
+  href="https://youtu.be/QXI5dCg3yMA?feature=shared"
+  class="btn btn-danger btn-lg d-flex align-items-center gap-2 px-4"
+  target="_blank"
+  rel="noopener noreferrer" >
+  <i class="fab fa-youtube fa-lg"></i>Λίστες και Μέθοδοι</a>
+        <h2 class="highlight">Δημιουργία λίστας</h2>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]</code></pre></div></div>
+
+        <h2 class="highlight">Στοιχεία της λίστας</h2>
+        <p>Αναφερόμαστε σε κάποιο συγκεκριμένο στοιχείο μιας λίστας γράφοντας το όνομα της λίστας ακολουθούμενο από το δείκτη του στοιχείου που μας ενδιαφέρει μέσα σε τετραγωνικές παρενθέσεις:</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+print(num_list[0])  # 1ο στοιχείο</code></pre></div></div>
+
+
+        <p>Εκτύπωση ολων των στοιχείων της λίστας</p>
+        <p></p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+print(num_list) # Αποτέλεσμα [1, 2, 3, 4, 5]</code></pre></div></div>
+
+        <p>Εκτύπωση ένα ένα στοιχείο της λίστας</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+for i in num_list:
+print(i)</code></pre></div></div>
+
+        <h2 class="highlight">Συναρτήσεις</h2>
+        <p>Χρησιμοποιούμε την μέθοδο <code>count()</code> για να βρούμε το πλήθος των εμφανίσεων μιας συγκεκριμένης τιμής μέσα στην λίστα.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 1, 1, 4, 5]
+print(num_list.count(1))</code></pre></div></div>
+
+        <p>Χρησιμοποιούμε την μέθοδο <code>index()</code> για να βρούμε την θέση μιας συγκεκριμένης τιμής μέσα στην λίστα. </p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 3, 2, 4, 5]
+print(num_list.index(3))</code></pre></div></div>
+
+        <p>Μήκος λίστας</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+print(len(num_list)) # Μήκος της λίστας</code></pre></div></div>
+
+        <p>Με την μέθοδο <code>append()</code> να προσθέσουμε ένα στοιχείο στο τέλος της λίστα.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+num_list.append(6)  # Προσθήκη του 6 στο τέλος της λίστας
+print(num_list) </code></pre></div></div>
+
+        <p>Mε την μέθοδο <code>extend()</code> προσθέτουμε  τα στοιχεία μιας άλλης λίστας στο τέλος της πρώτης.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+list2=[6,7,8,9]
+num_list.extend(list2)
+print(num_list)</code></pre></div></div>
+
+        <p>Χρησιμοποιούμε την μέθοδο <code>clear()</code> για να αφαιρέσουμε ΟΛΑ τα στοιχεία από μια λίστα. </p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+print(num_list)
+num_list.clear()
+print(num_list)</code></pre></div></div>
+
+        <p>Mε την μέθοδο <code>remove()</code> ή <code>pop()</code> αφαιρούμε στοιχεία από την λίστα. </p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+num_list.remove(4)  # Αφαίρεση του 4 από τη λίστα
+print(num_list)</code></pre></div></div>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+popped_element = num_list.pop()  # Αφαίρεση και επιστροφή του τελευταίου στοιχείου
+print(num_list)</code></pre></div></div>
+
+        <p>Έλεγχος αν υπάρχει το στοιχείο στην λίστα</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+if 5 in num_list:
+print("Το 5 υπάρχει στη λίστα.")</code></pre></div></div>
+
+        <p>Αντικατάσταση στοιχείων</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+num_list[2] = 42  # Αντικατάσταση του τρίτου στοιχείου με τον αριθμό 42
+print(num_list)</code></pre></div></div>
+
+        <p>Ταξινόμηση της λίστας</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+num_list.sort()
+print(num_list)</code></pre></div></div>
+
+        <p>Εμβέλεια (Slicing)</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+new_list = num_list[1:4]  # Εξαγωγή των στοιχείων από τη θέση 1 ως τη θέση 3
+print(new_list)</code></pre></div></div>
+
+        <p>Συνένωση</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+new_list = list1 + list2
+print(new_list)</code></pre></div></div>
+
+
+        <p>Αντιγραφή λίστας</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+new_list = num_list.copy()
+print(new_list)</code></pre></div></div>
+
+        <p>Έλεγχος κενής λίστας</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python"> num_list = [1, 2, 3, 4, 5]
+if not my_list:
+print("Η λίστα είναι κενή.")</code></pre></div></div>
+
+        <p>Προσπέλαση λίστας με βήμα</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list=[1,2,3,4,5,6,7,8,9,10]
+new_list = num_list[::2]  # Προσπέλαση κάθε δεύτερου στοιχείου
+print(new_list)
+# Αποτέλεσμα
+# [1, 3, 5, 7, 9]</code></pre></div></div>
+
+        <p>Enumeration</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list=[1,2,3,4,5,6,7,8,9,10]
+for index, value in enumerate(num_list):
+print(f"Το στοιχείο στη θέση {index} είναι {value}")</code></pre></div></div>
+
+        <p>Λίστες με διάφορα τύπους δεδομένων</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">mixed_list = ["GrCode Club", 3.14, True, [1, 2, 3]]
+# Τυπώνουμε τα στοιχεία της λίστας και τους τύπους τους
+for item in mixed_list:
+print(f"Στοιχείο: {item}, Τύπος: {type(item)}")
+</code></pre></div></div>
+
+        <p>Αντιστραμμένη λίστα</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+num_list.reverse()  # Αντιστροφή της λίστας 
+print(num_list)</code></pre></div></div>
+
+        <p>Δημιουργία νέας λίστας αντίστροφης λίστας με την συνάρτηση <code>reversed()</code> </p>                    
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+# Δημιουργία νέας λίστας
+reversed_list = list(reversed(num_list))
+print(reversed_list) 
+</code></pre></div></div>
+
+        <p>Χρησιμοποιούμε το [::-1] για να αντιστρέψουμε τη λίστα num_list και αποθηκεύουμε το αποτέλεσμα στη μεταβλητή new_list, και στη συνέχεια, το 
+            εκτυπώνουμε με τη χρήση της print().</p>                   
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+new_list=num_list[::-1]
+print(new_list)</code></pre></div></div>
+
+        <p>Χρησιμοποιούμε την μέθοδο reverse() για αντιστρέψουμε την θέση των στοιχείων μέσα στην λίστα.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-python">num_list = [1, 2, 3, 4, 5]
+num_list.reverse()
+print(num_list)</code></pre></div></div>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

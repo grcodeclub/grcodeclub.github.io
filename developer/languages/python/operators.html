@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Python και Τελεστές">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:title" content="Python και Τελεστές">
+    <meta name="keywords" content="Python και Τελεστές">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Τελεστές</h1>
+        <p class="highlight">Αριθμητικοί τελεστές</p>
+        <table class="table table-bordered">
+            <tr id="title-table"><td>Tελεστής</td> <td>Περιγραφή</td></tr>
+            <tr><td><code>x + y</code></td> <td>Πρόσθεση του <code>x</code> και του <code>y</code>.</td></tr>
+            <tr><td><code>x - y</code></td> <td>Αφαίρεση του <code>y</code> από το <code>x</code>.</td></tr>
+            <tr><td><code>x * y</code></td> <td>Πολλαπλασιασμός του <code>x</code> με το <code>y</code>.</td></tr>
+            <tr><td><code>x / y</code></td> <td>Διαίρεση του <code>x</code> με το <code>y</code>.</td></tr>
+            <tr><td><code>x % y</code></td> <td>Υπόλοιπο της διαίρεσης του <code>x</code> με το <code>y</code>.</td></tr>
+        </table>
+        <p class="highlight">Τελεστές ανάθεσης</p>
+        <table class="table table-bordered">
+            <tr id="title-table"><td>Tελεστής</td> <td>Περιγραφή</td></tr>
+            <tr><td><code>x = y</code></td> <td>Αναθέτει την τιμή του <code>y</code> στη μεταβλητή <code>x</code>.</td></tr>
+            <tr><td><code>x += y</code></td> <td>Προσθέτει το <code>y</code> στο <code>x</code> και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x + y</code>).</td></tr>
+            <tr><td><code>x -= y</code></td> <td>Αφαιρεί το <code>y</code> από το <code>x</code> και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x - y</code>).</td></tr>
+            <tr><td><code>x *= y</code></td> <td>Πολλαπλασιάζει το <code>x</code> με το <code>y</code> και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x * y</code>).</td></tr>
+            <tr><td><code>x /= y</code></td> <td>Διαιρεί το <code>x</code> με το <code>y</code> και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x / y</code>).</td></tr>
+            <tr><td><code>x %= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το υπόλοιπο της διαίρεσης του <code>x</code> με το <code>y</code> (ισοδύναμο με <code>x = x % y</code>).</td></tr>
+            <tr><td><code>x //= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το αποτέλεσμα της ακέραιας διαίρεσης του <code>x</code> με το <code>y</code> (ισοδύναμο με <code>x = x // y</code>).</td></tr>
+            <tr><td><code>x **= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το αποτέλεσμα του <code>x</code> υψωμένου στη δύναμη <code>y</code> (ισοδύναμο με <code>x = x ** y</code>).</td></tr>
+            <tr><td><code>x &= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το αποτέλεσμα του bitwise AND του <code>x</code> και του <code>y</code> (ισοδύναμο με <code>x = x & y</code>).</td></tr>
+            <tr><td><code>x |= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το αποτέλεσμα του bitwise OR του <code>x</code> και του <code>y</code> (ισοδύναμο με <code>x = x | y</code>).</td></tr>
+            <tr><td><code>x ^= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το αποτέλεσμα του bitwise XOR του <code>x</code> και του <code>y</code> (ισοδύναμο με <code>x = x ^ y</code>).</td></tr>
+            <tr><td><code>x >>= y</code></td> <td>Μετατοπίζει τα bits του <code>x</code> προς τα δεξιά κατά <code>y</code> θέσεις και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x >> y</code>).</td></tr>
+            <tr><td><code>x <<= y</code></td> <td>Μετατοπίζει τα bits του <code>x</code> προς τα αριστερά κατά <code>y</code> θέσεις και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x << y</code>).</td></tr>                                    
+        </table>
+        <p class="highlight">Τελεστές Σύγκρισης</p>
+        <table class="table table-bordered">
+            <tr id="title-table"><td>Tελεστής</td> <td>Περιγραφή</td></tr>
+            <tr><td><code>x < y</code></td> <td>Το <code>x</code> είναι μικρότερο από το <code>y</code>.</td></tr>
+            <tr><td><code>x > y</code></td> <td>Το <code>x</code> είναι μεγαλύτερο από το <code>y</code>.</td></tr>
+            <tr><td><code>x <= y</code></td> <td>Το <code>x</code> είναι μικρότερο ή ίσο με το <code>y</code>.</td></tr>
+            <tr><td><code>x >= y</code></td> <td>Το <code>x</code> είναι μεγαλύτερο ή ίσο με το <code>y</code>.</td></tr>
+            <tr><td><code>x == y</code></td> <td>Το <code>x</code> είναι ίσο με το <code>y</code>.</td></tr>           
+            <tr><td><code>x != y</code></td> <td>Το <code>x</code> δεν είναι ίσο με το <code>y</code>.</td></tr>
+        </table>
+        
+        <p class="highlight">Λογικοί Τελεστές</p>
+        <p>Μπορείς να συνδυάσεις πολλαπλές συνθήκες με τους λογικούς τελεστές:</p>    
+        <table class="table table-bordered">
+            <tr id="title-table"><td>Tελεστής</td> <td>Περιγραφή</td></tr>
+            <tr><td><code>and</code></td> <td>Αληθές μόνο αν όλες οι συνθήκες είναι αληθείς.</td></tr>
+            <tr><td><code>or</code></td> <td>Αληθές αν τουλάχιστον μία συνθήκη είναι αληθής.</td></tr>
+            <tr><td><code>not</code></td> <td>Αντιστρέφει την αλήθεια της συνθήκης.</td></tr>
+        </table>
+</div>
+
+        <div id="addFooter"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Python | Δομή Ελέγχου">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:title" content="Python | Δομή Ελέγχου">
+    <meta name="keywords" content="Python και Δομή Ελέγχου">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Δομή ελέγχου</h1>
+        <p>οι δομές ελέγχου χρησιμοποιούνται για τη λήψη αποφάσεων μέσα σε ένα πρόγραμμα. 
+            Αυτές οι δομές επιτρέπουν τον έλεγχο της ροής του προγράμματος, ανάλογα με το αν οι συνθήκες είναι αληθείς ή ψευδείς.
+        <br>Οι δομές ελέγχου είναι:</p>
+        <p>1) <code>if</code>: Ελέγχει μια συνθήκη και εκτελεί έναν κώδικα αν η συνθήκη είναι αληθής.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">x = 10
+if x > 5:
+    print("Το x είναι μεγαλύτερο από 5")</code></pre></div></div>
+       <p>2) <code>else</code>: Εκτελεί έναν κώδικα αν η συνθήκη στο if ή στο elseif (αν υπάρχει) είναι ψευδή.</p>
+       <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">x = 3
+if x > 5:
+    print("Το x είναι μεγαλύτερο από 5")
+else:
+    print("Το x είναι μικρότερο ή ίσο με 5")</code></pre></div></div>
+     <p>3) <code>elif</code>: Προσθέτει επιπλέον συνθήκες ελέγχου σε μια δήλωση if.</p>
+       <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">x = 7
+if x > 10:
+    print("Το x είναι μεγαλύτερο από 10")
+elif x == 7:
+    print("Το x είναι ίσο με 7")
+else:
+    print("Το x είναι μικρότερο από 10 αλλά δεν είναι 7") </code></pre></div></div>
+
+    <h2 class="highlight">Λογικοί Τελεστές</h2>
+    <p>Μπορείς να συνδυάσεις πολλαπλές συνθήκες με τους λογικούς τελεστές:</p>
+    <ol>
+        <li><code>and</code>: Αληθές μόνο αν όλες οι συνθήκες είναι αληθείς.</li>
+        <li><code>or</code>: Αληθές αν τουλάχιστον μία συνθήκη είναι αληθής.</li>
+        <li><code>not</code>: Αντιστρέφει την αλήθεια της συνθήκης.</li>
+    </ol>
+</div>
+
+        <div id="addFooter"></div>
+</body>
+</html>

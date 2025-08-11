@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Java και Class">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/java.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/java.png"/>
+    <meta property="og:title" content="Java και Class">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Class</h1>
+
+        <p>Ορισμός της κλάσης</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-java">public class ClassName {
+// Class body
+}</code></pre></div></div>
+<p>Μεταβλητές</p>
+<div class="bg_preview">
+<div  class="line-numbers"><pre class="code_editor"><code class="language-java">private String name; // private μεταβλητή
+public int age; // public μεταβλητή</code></pre></div></div>
+
+<p>Κατασκευαστής (Constructor)</p>
+<div class="bg_preview">
+<div  class="line-numbers"><pre class="code_editor"><code class="language-java">public ClassName(parameters) {
+// Constructor body
+</code></pre></div></div>
+
+<p>Μέθοδοι</p>
+<div class="bg_preview">
+<div  class="line-numbers"><pre class="code_editor"><code class="language-java">public ReturnType methodName(parameters) {
+// Method body
+</code></pre></div></div>
+
+<p>Δημιουργία αντικειμένου της κλάσης</p>
+<div class="bg_preview">
+<div  class="line-numbers"><pre class="code_editor"><code class="language-java">ClassName objectName = new ClassName(parameters);</code></pre></div></div>
+
+<p>Χρήση των μεθόδων και πεδίων της κλάσης</p>
+<div class="bg_preview">
+<div  class="line-numbers"><pre class="code_editor"><code class="language-java">objectName.methodName(parameters);
+objectName.fieldName;</code></pre></div></div>
+
+<p>Το this χρησιμοποιείται για να αναφερθεί στις μεταβλητές του τρέχοντος αντικειμένου της κλάσης.
+Συγκεκριμένα όταν υπάρχει σύγκρουση ονομάτων μεταξύ των πεδίων της κλάσης και των τοπικών μεταβλητών ή παραμέτρων ενός μεθόδου, το this χρησιμοποιείται για να διαχωρίσει το πεδίο της κλάσης από τις τοπικές μεταβλητές. Έτσι, καθορίζεται ότι αναφερόμαστε στο πεδίο του αντικειμένου, όχι στην τοπική μεταβλητή.</p>
+<div class="bg_preview">
+    <div  class="line-numbers"><pre class="code_editor"><code class="language-java">public Vehicle(String make, String model, int year, double price) {
+// Η εκχώρηση της τιμής της παραμέτρου make στην μεταβλητή make του τρέχοντος αντικειμένου της κλάσης Vehicle.
+// Το this.make αναφέρεται στην μεταβλητή make του τρέχοντος αντικειμένου, ενώ το make αναφέρεται στην παράμετρο του κατασκευαστή.
+this.make = make;
+this.model = model;
+this.year = year;
+this.price = price;
+}</code></pre></div></div>
+
+
+
+<h2 class="highlight_blue">Παράδειγμα</h2>
+<div class="bg_preview">
+    <div  class="line-numbers"><pre class="code_editor"><code class="language-java">public class Vehicle {
+// Fields (Instance Variables)
+private String make;
+private String model;
+private int year;
+private double price;
+// Constructor (Κατασκευαστής)
+public Vehicle(String make, String model, int year, double price) {
+this.make = make;
+this.model = model;
+this.year = year;
+this.price = price;
+}
+        
+// Methods
+public String getMake() {
+return make;
+}
+        
+public String getModel() {
+return model;
+}
+        
+public int getYear() {
+return year;
+}
+        
+public double getPrice() {
+return price;
+}
+        
+// Main method (for testing the class)
+public static void main(String[] args) {
+// Creating instances of the class
+Vehicle vehicle1 = new Vehicle("Toyota", "Camry", 2022, 25000.0);
+        
+// Using methods of the class
+System.out.println("Vehicle 1:");
+System.out.println("Make: " + vehicle1.getMake());
+System.out.println("Model: " + vehicle1.getModel());
+System.out.println("Year: " + vehicle1.getYear());
+System.out.println("Price: $" + vehicle1.getPrice());
+
+}
+} </code></pre></div></div>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

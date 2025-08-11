@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Python και Συμβολοσειρές">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:title" content="Python και Συμβολοσειρές">
+    <meta name="keywords" content="Python και Συμβολοσειρές">
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Python - Συμβολοσειρές</h1>
+        <a href="https://github.com/grcodeclub/python/tree/main/strings" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>Δες παραδείγματα στο GitHub</a>
+
+        <p>Η μέθοδος <code>capitalize()</code> κάνει το πρώτο γράμμα του string.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "grCode club"
+print(text.capitalize())  # Εκτύπωση: GrCode club</code></pre></div></div>
+
+        <p> Η μέθοδο <code>title()</code> κάνει capitalize κάθε πρώτο γράμμα κάθε λέξης στο string.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "grCode club"
+print(text.title())  # Εκτύπωση: GrCode Club</code></pre></div></div>
+
+        <p>Η μέθοδος <code>upper()</code> επιστρέφει τη συμβολοσειρά με κεφαλαία γράμματα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
+print(text.upper()) #Εκτύπωση 'GRCODE CLUB'</code></pre></div></div>
+
+        <p>Η μέθοδος <code>lower()</code> επιστρέφει τη συμβολοσειρά με πεζά γράμματα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
+print(text.lower()) #Εκτύπωση 'grcode club' </code></pre></div></div>
+
+        <p>Η μέθοδος <code>strip()</code> αφαιρεί οποιοδήποτε κενό διάστημα από την αρχή ή το τέλος.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text= "GrCode Club"
+print(text.strip()) #Εκτύπωση 'GrCode Club'</code></pre></div></div>
+
+        <p>Η μέθοδος <code>swapcase()</code> αλλάζει τα πεζά σε κεφαλαία και το αντίστροφο σε κάθε γράμμα του string.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text= "GrCode Club"
+print(text.swapcase())  # Εκτύπωση: gRcODE cLUB </code></pre></div></div> 
+
+        <p>Multiline Strings</p>
+        <p>Μπορείτε να χρησιμοποιήσετε 3 διπλά εισαγωγικά ή 3 μεμονωμένα αποσπάσματα:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = """Η Python είναι μια αντικειμενοστραφής γλώσσα προγραμματισμού (object-oriented) 
+υψηλού επιπέδου, με ενσωματωμένες δομές δεδομένων και 
+δυναμικές ιδιότητες. Αυτά την καθιστούν κατάλληλη για 
+ταχύτατο χτίσιμο εφαρμογών, πόσο μάλλον αν ένας
+προγραμματιστής ψάχνει για μια εύκολη στη χρήση γλώσσα"""
+print(text)</code></pre></div></div>
+
+        <p>Οι συμβολοσειρές ως πίνακας</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
+print(text[0]) #Εκτύπωση 'G'
+print(text[1]) #Εκτύπωση 'r'
+print(text[2]) #Εκτύπωση 'C'
+print(text[3]) #Εκτύπωση 'o'
+print(text[4]) #Εκτύπωση 'd'
+print(text[5]) #Εκτύπωση 'e'
+print(text[6]) #Εκτύπωση κενο
+print(text[7]) #Εκτύπωση 'C'
+print(text[8]) #Εκτύπωση 'l'
+print(text[9]) #Εκτύπωση 'u'
+print(text[10]) #Εκτύπωση 'b'</code></pre></div></div>
+
+
+        <p>Βρόχος και συμβολοσειρά</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">for x in "GrCode Club":
+print(x)</code></pre></div></div>
+
+
+        <p>Μήκος συμβολοσειράς </p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
+print(len(text)) #Εκτύπωση 11</code></pre></div></div>
+        
+
+        <p>Ελέγξτε μια συμβολοσειρά </p>
+        <p>Για να ελέγξουμε εάν μια συγκεκριμένη φράση ή χαρακτήρας υπάρχει σε μια συμβολοσειρά, μπορούμε να χρησιμοποιήσουμε τη λέξη-κλειδί <code>in</code>.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
+print("Gr" in text) #Εκτύπωση True</code></pre></div></div>
+        
+        <p>Για να ελέγξουμε αν μια συγκεκριμένη φράση ή χαρακτήρας ΔΕΝ υπάρχει σε μια συμβολοσειρά, μπορούμε να χρησιμοποιήσουμε τη λέξη-κλειδί <code>not in</code>.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">text = "GrCode Club"
+print("Hello" not in text) #Εκτύπωση True</code></pre></div></div>
+        
+        <h2 class="highlight">f-strings</h2>
+        <p><strong><u>Τι είναι τα f-strings;</u></strong><br>Τα f-strings (ή formatted string literals) εισήχθησαν στην Python 3.6 και αποτελούν έναν γρήγορο και εύκολο τρόπο για την εισαγωγή μεταβλητών και εκφράσεων μέσα σε μια συμβολοσειρά. Τα f-strings ξεκινούν με το πρόθεμα f και επιτρέπουν την ενσωμάτωση μεταβλητών και εκφράσεων μέσα σε αγκύλες {}.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">site = "GrCode Club"
+greeting = f"Καλώς ήρθατε στο {site}!"
+print(greeting)</code></pre></div></div><br>
+        <p><strong>Μορφοποίηση Αριθμών</strong></p>
+        <p>1) Δεκαδικά ψηφία:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">pi = 3.14159
+formatted = f"Το π είναι περίπου ίσο με {pi:.2f}."
+print(formatted)  # Το π είναι περίπου ίσο με 3.14.</code></pre></div></div>
+        <p>2) Αριθμοί με διαχωριστικά χιλιάδων:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">population = 123456789
+formatted = f"Ο πληθυσμός είναι {population:,}."
+print(formatted)  # Ο πληθυσμός είναι 123,456,789.</code></pre></div></div>
+        <p>3) Εκθετική μορφή:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">value = 0.00001234
+formatted = f"Η τιμή είναι {value:.2e}."
+print(formatted)  # Η τιμή είναι 1.23e-05.</code></pre></div></div><br>
+        <p><strong>Μορφοποίηση Συμβολοσειρών</strong></p>
+        <p>Μπορείτε να ευθυγραμμίσετε τις συμβολοσειρές μέσα από τα f-strings:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">name = "Μαρία"
+formatted = f"|{name:<10}|{name:^10}|{name:>10}|"
+print(formatted)  # |Μαρία     |   Μαρία   |     Μαρία|
+</code></pre></div></div><br>
+        <ol>
+                <li>< : Ευθυγράμμιση αριστερά.</li>
+                <li>^ : Κεντράρισμα.</li>
+                <li>> : Ευθυγράμμιση δεξιά.</li>
+        </ol>
+
+
+</div>
+    <div id="addFooter"></div>
+</body>
+</html>

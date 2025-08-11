@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Συναρτήσεις Python">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/python.png"/>
+    <meta property="og:title" content="Συναρτήσεις Python">
+    <meta name="keywords" content="Συναρτήσεις Python">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Συναρτήσεις</h1>
+        <p>Ο ορισμός μιας συνάρτησης (function definition) προσδιορίζει το όνομα της συνάρτησης και περιγράφει τις εντολές που θα εκτελεστούν με τη σειρά τους όταν η συνάρτηση κληθεί. Αυτός ο ορισμός είναι ουσιαστικά ο τρόπος με τον οποίο δηλώνουμε και καθορίζουμε τη συμπεριφορά μιας νέας λειτουργίας στον κώδικα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python"># Ορισμός της συνάρτησης
+def print_message():
+    print("GrCode Club")
+
+# Κλήση της συνάρτησης
+print_message()</code></pre></div></div>
+        <p>Η λέξη-κλειδί <code>def</code> χρησιμοποιείται για να δηλώσει ότι πρόκειται για τον ορισμό μιας συνάρτησης. Το όνομα της συνάρτησης, όπως το <code>print_message</code>, ακολουθεί τους ίδιους κανόνες που ισχύουν για τα ονόματα των μεταβλητών. Αυτό σημαίνει ότι μπορείτε να χρησιμοποιήσετε γράμματα, αριθμούς και ορισμένα σύμβολα στίξης, αλλά το όνομα δεν μπορεί να ξεκινά με αριθμό. Επίσης, δεν μπορείτε να χρησιμοποιήσετε λέξεις-κλειδιά της Python ως ονόματα συναρτήσεων και καλό είναι να αποφεύγετε να δίνετε το ίδιο όνομα σε μια συνάρτηση και μια μεταβλητή.</p>
+        <p><strong>Συνάρτηση χωρίς παραμέτρους</strong></p>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python"># Ορισμός της συνάρτησης
+def print_message():
+    print("GrCode Club")
+
+# Κλήση της συνάρτησης
+print_message()</code></pre></div></div>
+
+        <p><strong>Συνάρτηση με παραμέτρους</strong></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">def print_message(name):
+    print(f"Καλημέρα, {name}!")
+    
+# Κλήση συνάρτησης
+print_message("Γιάννης")</code></pre></div></div>
+
+        <p><strong>Συνάρτηση με επιστροφή τιμής</strong></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">def add_numbers(a, b):
+    return a + b
+
+# Κλήση συνάρτησης
+sum_result = add_numbers(5, 7)
+print("Το άθροισμα είναι:", sum_result)</code></pre></div></div>
+
+        <p><strong>Συνάρτηση με προεπιλεγμένες τιμές</strong></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">def greet(name="φίλε"):
+    print(f"Καλημέρα, {name}!")
+
+# Χρήση προεπιλεγμένης τιμής
+greet()
+# Παράκαμψη προεπιλεγμένης τιμής
+greet("Μαρία")</code></pre></div></div>
+
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

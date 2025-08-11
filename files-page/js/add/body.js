@@ -20,11 +20,11 @@ const htmlContentHeader = `
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Προγραμματισμός</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="max-height: 400px; overflow-y: auto;">
-                 <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/">Προγραμματισμός</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/programming/">Προγραμματισμός</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/">Γλώσσες Προγραμματισμού</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/c/">C</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/python/">Python</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/developer/languages/cpp/">C++</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/python/">Python</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/cpp/">C++</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/java/">Java</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/sql/">SQL</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/developer/languages/docker/">Docker</a></li>
@@ -62,10 +62,10 @@ const htmlContentHeader = `
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Λειτουργικά Συστήματα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/system/">Λειτουργικό Σύστημα</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/system/extensions">Επεκτάσεις Αρχείων</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/microsoft-windows/">Microsoft Windows</a></li>
-                     <li><a class="dropdown-item" href="https://grcodeclub.gr/linux/">Linux</a></li>            
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/">Λειτουργικό Σύστημα</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/extensions">Επεκτάσεις Αρχείων</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/microsoft-windows/">Microsoft Windows</a></li>
+                     <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/linux/">Linux</a></li>            
                 </ul>
             </li>
             <li class="nav-item dropdown">

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Java και Interface">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/programming/java.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/java.png"/>
+    <meta property="og:title" content="Java και Interface">
+    <script src="https://grcodeclub.github.io/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Interface</h1>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Interface</td> <td>Περιγραφή</td></tr>
+            <tr><td>Runnable</td><td>Ορίζει μια εργασία που μπορεί να εκτελείται από ένα νήμα (thread). Η μέθοδος <code>run()</code> περιγράφει τη λογική της εργασίας.</td></tr>
+            <tr><td>Callable&lt;V&gt;</td><td>Παρόμοιο με το <code>Runnable</code>, αλλά η μέθοδος <code>call()</code> επιστρέφει ένα αποτέλεσμα και μπορεί να ρίξει εξαιρέσεις.</td></tr>
+            <tr><td>Comparable&lt;T&gt;</td><td>Ορίζει τη μέθοδο <code>compareTo(T o)</code> που συγκρίνει το τρέχον αντικείμενο με το αντικείμενο τύπου <code>T</code> και επιστρέφει έναν αριθμό.</td></tr>
+            <tr><td>Iterable&lt;T&gt;</td><td>Ορίζει τη μέθοδο <code>iterator()</code> που επιστρέφει έναν <code>Iterator</code> για την επανάληψη στοιχείων του τύπου <code>T</code>.</td></tr>
+            <tr><td>Collection&lt;T&gt;</td><td>Επεκτείνει το <code>Iterable</code> και παρέχει μεθόδους για τη διαχείριση συλλογών αντικειμένων, όπως <code>add()</code>, <code>remove()</code> και <code>size()</code>.</td></tr>
+            <tr><td>List&lt;E&gt;</td><td>Επεκτείνει το <code>Collection</code> και παρέχει μεθόδους για την εργασία με στοιχεία σε μια σειριακή διάταξη, όπως <code>get()</code> και <code>set()</code>.</td></tr>
+            <tr><td>Set&lt;E&gt;</td><td>Επεκτείνει το <code>Collection</code> και αντιπροσωπεύει μια συλλογή χωρίς επαναλαμβανόμενα στοιχεία.</td></tr>
+            <tr><td>Map&lt;K, V&gt;</td><td>Εκπροσωπεί μια συλλογή ζευγών κλειδιού-τιμής. Παρέχει μεθόδους όπως <code>put()</code>, <code>get()</code> και <code>remove()</code> για την εργασία με ζεύγη κλειδιού-τιμής.</td></tr>
+            <tr><td>SortedMap&lt;K, V&gt;</td><td>Επεκτείνει το <code>Map</code> και διασφαλίζει ότι τα κλειδιά είναι ταξινομημένα σε φυσική σειρά ή μέσω ενός συγκριτή.</td></tr>
+            <tr><td>TreeMap&lt;K, V&gt;</td><td>Μια υλοποίηση του <code>SortedMap</code> που διατηρεί τα κλειδιά σε φυσική σειρά.</td></tr>
+            <tr><td>Comparator&lt;T&gt;</td><td>Ορίζει τη μέθοδο <code>compare(T o1, T o2)</code> που συγκρίνει δύο αντικείμενα του τύπου <code>T</code> και επιστρέφει έναν αριθμό για την ταξινόμηση.</td></tr>
+            <tr><td>Serializable</td><td>Δηλώνει ότι μια κλάση μπορεί να σειριοποιηθεί, δηλαδή να μετατραπεί σε ροή bytes για αποθήκευση ή μεταφορά.</td></tr>
+            <tr><td>Cloneable</td><td>Δηλώνει ότι ένα αντικείμενο μπορεί να κλωνοποιηθεί, δηλαδή να δημιουργηθεί ένα νέο αντικείμενο με την ίδια κατάσταση.</td></tr>
+            <tr><td>AutoCloseable</td><td>Ορίζει τη μέθοδο <code>close()</code> που καλείται για την αυτόματη απελευθέρωση πόρων, χρησιμοποιούμενη συχνά με το try-with-resources.</td></tr>
+            <tr><td>Observer</td><td>Επιτρέπει την παρακολούθηση (ή παρατήρηση) ενός αντικειμένου και ενημερώνει τους παρατηρητές του όταν το αντικείμενο αλλάζει.</td></tr>
+            <tr><td>EventListener</td><td>Ορίζει μεθόδους για τη διαχείριση γεγονότων, χρησιμοποιούμενος σε εφαρμογές GUI και άλλες περιπτώσεις που σχετίζονται με γεγονότα.</td></tr>
+            <tr><td>Iterator</td><td>Παρέχει μηχανισμό για την επανάληψη μέσω μιας συλλογής χωρίς να εκτίθεται η εσωτερική αναπαράσταση της συλλογής.</td></tr>
+            <tr><td>ListIterator</td><td>Επεκτείνει το <code>Iterator</code> και επιτρέπει αμφίδρομη επανάληψη μέσω μιας λίστας, καθώς και τροποποίηση των στοιχείων κατά την επανάληψη.</td></tr>
+            <tr><td>Deque&lt;E&gt;</td><td>Επεκτείνει το <code>Queue</code> και αντιπροσωπεύει μια διπλή ουρά, επιτρέποντας την εισαγωγή και αφαίρεση στοιχείων από και τις δύο άκρες.</td></tr>
+            <tr><td>Queue&lt;E&gt;</td><td>Αντιπροσωπεύει μια ουρά δεδομένων, επιτρέποντας την προσθήκη στοιχείων στο τέλος και την αφαίρεση στοιχείων από την αρχή.</td></tr>
+            <tr><td>Function&lt;T, R&gt;</td><td>Αναπαριστά μια συνάρτηση που δέχεται ένα όρισμα τύπου <code>T</code> και επιστρέφει ένα αποτέλεσμα τύπου <code>R</code>.</td></tr>
+            <tr><td>Predicate&lt;T&gt;</td><td>Αναπαριστά μια συνάρτηση που δέχεται ένα όρισμα τύπου <code>T</code> και επιστρέφει boolean, συνήθως για συνθήκες ή φίλτρα.</td></tr>
+            <tr><td>Supplier&lt;T&gt;</td><td>Αναπαριστά μια συνάρτηση που δεν δέχεται όρισμα και επιστρέφει ένα αποτέλεσμα τύπου <code>T</code>.</td></tr>
+            <tr><td>UnaryOperator&lt;T&gt;</td><td>Επεκτείνει το <code>Function</code> και αναπαριστά μια συνάρτηση που δέχεται και επιστρέφει το ίδιο τύπο δεδομένων <code>T</code>.</td></tr>
+            <tr><td>BinaryOperator&lt;T&gt;</td><td>Επεκτείνει το <code>BiFunction</code> και αναπαριστά μια συνάρτηση που δέχεται δύο παραμέτρους του τύπου <code>T</code> και επιστρέφει ένα αποτέλεσμα του τύπου <code>T</code>.</td></tr>
+            <tr><td>BiFunction&lt;T, U, R&gt;</td><td>Αναπαριστά μια συνάρτηση που δέχεται δύο παραμέτρους τύπου <code>T</code> και <code>U</code> και επιστρέφει ένα αποτέλεσμα τύπου <code>R</code>.</td></tr>
+            <tr><td>CharSequence</td><td>Αναπαριστά μια ακολουθία χαρακτήρων, παρέχοντας μεθόδους για την εργασία με κείμενο όπως <code>length()</code>, <code>charAt()</code> και <code>subSequence()</code>.</td></tr>
+        </table>
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>   
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
