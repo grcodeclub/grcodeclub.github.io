@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Κυβερνοασφάλεια | Wireshark">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/cybersecurity.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/cybersecurity.png"/>
+    <meta property="og:title" content="Κυβερνοασφάλεια | Wireshark">
+    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+     <br><a class="btn btn-dark" href="../"><i class="bi bi-arrow-left"></i> </a><br><br>
+    <div class="container">
+        <h1 class="title">Wireshark</h1>
+
+            <h2 class="highlight">Ethernet address </h2>
+            <p><u>Filter</u></p>
+            <ul>
+                <li>eth.dst == ff:ff:ff:ff:ff:ff</li>
+                <li>eth.dst == ff-ff-ff-ff-ff-ff</li>
+                <li>eth.dst == ffff.ffff.ffff</li>
+                <li>th.dst == ff:ff:ff:ff:ff:ff</li>
+            </ul>
+
+            <h2 class="highlight">IPv4</h2>
+            <p><u>Filter</u></p>
+            <ul>
+                <li>ip.addr == 129.111.0.0/16</li>
+                <li>ip.addr==192.168.0</li>
+                <li>eth.dst == ffff.ffff.ffff</li>
+                <li>th.dst == ff:ff:ff:ff:ff:ff</li>
+            </ul>
+
+            <h2 class="highlight">Text</h2>
+            <p><u>Filter</u></p>
+            <div class="line-numbers"><pre class="code_editor"><code class="language-">http.request.uri == "https://www.wireshark.org/</code></pre></div>
+
+            <h2 class="highlight">Streams</h2>
+            <ul>
+                <li>ASCII</li>
+                <li>C Arrays</li>
+                <li>EBCDIC</li>
+                <li>HEX Dump</li>
+                <li>UTF-8</li>
+                <li>UTF-16</li>
+                <li>YAML</li>
+            </ul>
+            <h2 class="highlight">YAML</h2>
+            <p>Το ouput του YAML χωρίζεται σε 2 κύριες ενότητες:</p>
+            <ol>
+                <li>peers : όπου για κάθε peer βρίσκουμε την ip  και τον αριθμό θύρας.</li>
+                <li>Η ενότητα packets όπου για κάθε packet βρίσκουμε :
+                    <ol>
+                        <li>το packet number στην αρχική καταγραφή</li>
+                        <li>το peer index</li>
+                        <li>το packet index  για αυτό το peer</li>
+                        <li>το timestamp σε δευτερόλεπτα</li>
+                        <li>τα data σε base64.</li>
+                    </ol>
+                </li>
+                <div class="line-numbers"><pre class="code_editor"><code class="language-">peers:
+  - peer: 0
+    host: 127.0.0.1
+    port: 54048
+  - peer: 1
+    host: 127.0.10.1
+    port: 5000
+packets:
+  - packet: 1
+    peer: 0
+    index: 0
+    timestamp: 1599485409.693955274
+    data: !!binary |
+      aGVsbG8K
+  - packet: 3
+    peer: 1
+    index: 0
+    timestamp: 1599485423.885866692
+    data: !!binary |
+      Ym9uam91cgo=</code></pre></div>
+
+            </ol>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>

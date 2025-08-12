@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Κυβερνοασφάλεια | Nmap">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/preview/cybersecurity.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/cybersecurity.png"/>
+    <meta property="og:title" content="Κυβερνοασφάλεια | Nmap">
+    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <br><a class="btn btn-dark" href="../"><i class="bi bi-arrow-left"></i> </a><br><br>
+    <div class="container">
+        <h1 class="title">Nmap</h1>
+
+        <p>Scan a Range of IP Address</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap 192.168.1.1-24</code></pre></div>  
+
+        <p>Scan Port</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -p- 192.168.1.5</code></pre></div>  
+
+        <p>Για να σαρώσετε τη θύρα TCP 80</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -p T:80 192.168.1.5</code></pre></div>  
+
+        <p>Για να σαρώσετε τη θύρα UDP 53</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -p U:53 192.168.1.5</code></pre></div>  
+
+        <p>Ping Scan Using Nmap</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -sP 192.168.1.1/20</code></pre></div>  
+
+        <p>Σάρωση πιο δημοφιλών ports</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -sS 192.168.1.5</code></pre></div>  
+
+        <p>Εμφάνιση ανοιχτών ports</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap –open 192.168.1.5</code></pre></div>  
+
+        <p>Ανίχνευση λειτουργικού συστήματος</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -O 192.168.1.5</code></pre></div>  
+
+        <p>Ανίχνευση έκδοσης υπηρεσίας</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -sV 192.168.1.5</code></pre></div>  
+
+        <p>Εκτελέστε σάρωση RPC</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -sR 192.168.1.5</code></pre></div>  
+
+        <p>Εκτελέστε μια επιθετική σάρωση</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -A 192.168.1.5</code></pre></div>  
+
+        <p>Force Reverse DNS Resolution</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -R 192.168.1.5</code></pre></div>  
+
+        <p>Disable Reverse DNS Resolution</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap -n 192.168.1.5</code></pre></div>  
+
+        <p>Για σάρωση ολόκληρου του δικτύου</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nmap 192.168.1.*</code></pre></div>  
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
