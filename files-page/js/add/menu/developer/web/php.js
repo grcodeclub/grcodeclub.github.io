@@ -9,7 +9,7 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/web-developer/">Εισαγωγή</option>
+        <option value="https://grcodeclub.gr/web-developer/php/">Εισαγωγή</option>
         <option value="https://grcodeclub.gr/web-developer/php/commands">Εντολές</option>
         <option value="https://grcodeclub.gr/web-developer/php/files">Διαχείριση αρχείων</option>
         <option value="https://grcodeclub.gr/web-developer/php/frameworks">frameworks</option>
