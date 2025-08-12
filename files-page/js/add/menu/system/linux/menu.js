@@ -44,7 +44,7 @@ window.onload = function() {
     const select = document.getElementById('page-select');
     const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
 
-    if (currentUrl.startsWith('https://grcodeclub.gr/linux/terminal/')){select.value = 'https://grcodeclub.gr/linux/terminal/';}
+    if (currentUrl.startsWith('https://grcodeclub.gr/operating-systems/linux/terminal/')){select.value = 'https://grcodeclub.gr/operating-systems/linux/terminal/';}
     else{
          // Έλεγχος για να βρούμε το κατάλληλο option
         for (let option of select.options) {
