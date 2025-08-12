@@ -13,7 +13,6 @@ const mymenu = `
                 <option value="https://grcodeclub.gr/mobile/android/">Android</option>
                 <option value="https://grcodeclub.gr/mobile/android/adb">Android Debug Bridge</option>
                 <option value="https://grcodeclub.gr/mobile/android/versions">Eκδόσεις Android</option>
-                <option value="https://grcodeclub.gr/mobile/android/more/android-secret-codes">Κρυφοί κωδικοί του Android</option>
             </select>
         </div>
     </div>
