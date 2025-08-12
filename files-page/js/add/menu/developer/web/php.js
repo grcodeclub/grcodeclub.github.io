@@ -12,8 +12,6 @@ const mymenu = `
         <option value="https://grcodeclub.gr/web-developer/php/commands">Εντολές</option>
         <option value="https://grcodeclub.gr/web-developer/php/files">Διαχείριση αρχείων</option>
         <option value="https://grcodeclub.gr/web-developer/php/frameworks">frameworks</option>
-        <option value="https://grcodeclub.gr/web-developer/php/sql">SQL</option>
-        <option value="https://grcodeclub.gr/web-developer/php/system">Στοιχεία του υπολογιστή</option>
         </select>
         </div>
     </div>
