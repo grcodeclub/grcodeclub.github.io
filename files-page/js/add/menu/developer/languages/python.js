@@ -10,7 +10,7 @@ const mymenu = `
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
             <option value="https://grcodeclub.gr/developer/languages/python/">Εισαγωγή</option>
-            <option value="https://grcodeclub.gr/developer/languages/python/library/">Βιβλιοθήκες</option>
+            <option value="https://grcodeclub.gr/developer/languages/python/library">Βιβλιοθήκες</option>
             <option value="https://grcodeclub.gr/developer/languages/python/operators">Τελεστές</option>  
             <option value="https://grcodeclub.gr/developer/languages/python/commands/variables">Μεταβλητές</option>
             <option value="https://grcodeclub.gr/developer/languages/python/commands/output_input">Είσοδος / Έξοδος</option>
