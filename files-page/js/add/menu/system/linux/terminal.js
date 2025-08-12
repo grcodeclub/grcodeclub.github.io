@@ -7,11 +7,11 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/operating-systems/linux/">Linux</option>
-        <option value="https://grcodeclub.gr/operating-systems/linux/linux-directory-structure">Δομή Καταλόγων</option>
-        <option value="https://grcodeclub.gr/operating-systems/linux/terminal/">Terminal</option>
-        <option value="https://grcodeclub.gr/operating-systems/linux/install/">Εγκατάσταση Προγραμμάτων</option>
-        <option value="https://grcodeclub.gr/operating-systems/linux/more/distro">Distros</option>
+            <option value="https://grcodeclub.gr/operating-systems/linux/">Linux</option>
+            <option value="https://grcodeclub.gr/operating-systems/linux-directory-structure">Δομή Καταλόγων</option>
+            <option value="https://grcodeclub.gr/operating-systems/linux/terminal/">Terminal</option>
+            <option value="https://grcodeclub.gr/operating-systems/linux/install/">Εγκατάσταση Προγραμμάτων</option>
+            <option value="https://grcodeclub.gr/operating-systems/linux/more/distro">Distros</option>    
             </select>
         </div>
     </div>
@@ -37,15 +37,15 @@ const termMenu = `
         <div class="col">
         <select id="select-term" class="form-select" onchange="redirectToPage()">
     <option value="" disabled selected hidden>Επιλέξτε μια επιλογή</option> <!-- Placeholder option που είναι κρυφό και ανενεργό -->
-    <option value="https://grcodeclub.gr/linux/terminal/system/">Εντολές Συστήματος</option>
-    <option value="https://grcodeclub.gr/linux/terminal/files/">Διαχείριση Αρχείων και Καταλόγων</option>
-    <option value="https://grcodeclub.gr/linux/terminal/network">Εντολές Δικτύου</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/users">Users</option>
-        <option value="https://grcodeclub.gr/linux/terminal/files/decompress">Τρόπος αποσυμπίεσης αρχείων</option>
-    <option value="https://grcodeclub.gr/linux/terminal/files/grep">Εντολή: grep</option>
-    <option value="https://grcodeclub.gr/linux/terminal/tools/git">Εντολή: git</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/apt">Εντολή: apt</option>
-    <option value="https://grcodeclub.gr/linux/terminal/system/snap">Εντολή: snap</option>
+    <option value="https://grcodeclub.gr/operating-systems/linux/terminal/system/">Εντολές Συστήματος</option>
+    <option value="https://grcodeclub.gr/operating-systems/linux/terminal/files/">Διαχείριση Αρχείων και Καταλόγων</option>
+    <option value="https://grcodeclub.gr/operating-systems/linux/terminal/network">Εντολές Δικτύου</option>
+    <option value="https://grcodeclub.gr/operating-systems/linux/terminal/system/users">Users</option>
+        <option value="https://grcodeclub.gr/operating-systems/linux/terminal/files/decompress">Τρόπος αποσυμπίεσης αρχείων</option>
+    <option value="https://grcodeclub.gr/operating-systems/linux/terminal/files/grep">grep</option>
+    <option value="https://grcodeclub.gr/operating-systems/linux/terminal/tools/git">git</option>
+    <option value="https://grcodeclub.gr/operating-systems/linux/terminal/system/apt">apt</option>
+    <option value="https://grcodeclub.gr/operating-systems/linux/terminal/system/snap">snap</option>
             </select>
         </div>
     </div>
@@ -92,8 +92,8 @@ window.onload = function() {
         
         // Έλεγχος για το page-select
         if (pageselect) {
-            if (currentUrl.startsWith('https://grcodeclub.gr/linux/terminal/')) {
-                pageselect.value = 'https://grcodeclub.gr/linux/terminal/';
+            if (currentUrl.startsWith('https://grcodeclub.gr/operating-systems/linux/terminal/')) {
+                pageselect.value = 'https://grcodeclub.gr/operating-systems/linux/terminal/';
             } else {
                 for (let option of pageselect.options) {
                     if (option.value === currentUrl) {
