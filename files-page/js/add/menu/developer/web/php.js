@@ -1,5 +1,4 @@
 // Ο κώδικας παραμένει ο ίδιος για την προσθήκη του dropdown
-
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
 <div class="container dropdown-container contentsMenu">
@@ -23,15 +22,12 @@ const mymenu = `
 
 // Εύρεση του στοιχείου με το id 'addHeader'
 const addHeader = document.getElementById('addHeader');
-
 // Εύρεση του επόμενου στοιχείου (next sibling) μετά το 'addHeader'
 const nextDiv = addHeader.nextElementSibling;
-
 // Προσθήκη του HTML περιεχομένου στην αρχή του επόμενου div
 if (nextDiv) {
     nextDiv.insertAdjacentHTML('afterbegin', mymenu);
 }
-
 // Συνάρτηση για την ανακατεύθυνση στη σελίδα ανάλογα με την επιλογή
 function redirectToPage() {
     const select = document.getElementById('page-select');
