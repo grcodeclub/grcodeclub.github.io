@@ -10,14 +10,14 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/web-developer/website/css/">Εισαγωγή</option>
-    <option value="https://grcodeclub.gr/web-developer/website/css/properties">Βασικές ιδιότητες</option>
-    <option value="https://grcodeclub.gr/web-developer/website/css/keyframes">Keyframes</option>
-    <option value="https://grcodeclub.gr/web-developer/website/css/media">@media</option>
-    <option value="https://grcodeclub.gr/web-developer/website/css/text">Κείμενο και Ιδιότητες</option>
-    <option value="https://grcodeclub.gr/web-developer/website/css/table">Πίνακες</option>
-    <option value="https://grcodeclub.gr/web-developer/website/css/link">Link</option>
-    <option value="https://grcodeclub.gr/web-developer/website/css/layout-properties">Εμφάνιση και Θέση</option>
+    <option value="https://grcodeclub.gr/web-developer/css/">Εισαγωγή</option>
+    <option value="https://grcodeclub.gr/web-developer/css/properties">Βασικές ιδιότητες</option>
+    <option value="https://grcodeclub.gr/web-developer/css/keyframes">Keyframes</option>
+    <option value="https://grcodeclub.gr/web-developer/css/media">@media</option>
+    <option value="https://grcodeclub.gr/web-developer/css/text">Κείμενο και Ιδιότητες</option>
+    <option value="https://grcodeclub.gr/web-developer/css/table">Πίνακες</option>
+    <option value="https://grcodeclub.gr/web-developer/css/link">Link</option>
+    <option value="https://grcodeclub.gr/web-developer/css/layout-properties">Εμφάνιση και Θέση</option>
         </select>
         </div>
     </div>
