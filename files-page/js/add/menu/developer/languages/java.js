@@ -9,21 +9,21 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/developer/languages/">Εισαγωγή</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/">Εισαγωγή</option>
         <option value="https://github.com/grcodeclub/java">GitHub</option>
-        <option value="https://grcodeclub.gr/developer/languages/library">Bιβλιοθήκες και Class</option>
-        <option value="https://grcodeclub.gr/developer/languages/operators">Τελεστές</option>  
+        <option value="https://grcodeclub.gr/developer/languages/java/library">Bιβλιοθήκες και Class</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/operators">Τελεστές</option>  
     <optgroup label="Βασικές Εντολές">
-        <option value="https://grcodeclub.gr/developer/languages/commands/variables">Μεταβλητές</option>
-        <option value="https://grcodeclub.gr/developer/languages/commands/output_input">Είσοδος / Έξοδος</option>
-        <option value="https://grcodeclub.gr/developer/languages/commands/loop">Δομή επανάληψης</option>
-        <option value="https://grcodeclub.gr/developer/languages/commands/conditions">Δομή ελέγχου</option>
-        <option value="https://grcodeclub.gr/developer/languages/commands/arrays">Arrays</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/commands/variables">Μεταβλητές</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/commands/output_input">Είσοδος / Έξοδος</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/commands/loop">Δομή επανάληψης</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/commands/conditions">Δομή ελέγχου</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/commands/arrays">Arrays</option>
     </optgroup>
       <optgroup label="Class">
-        <option value="https://grcodeclub.gr/developer/languages/class/">Class</option>
-        <option value="https://grcodeclub.gr/developer/languages/class/interface">Interface</option>
-        <option value="https://grcodeclub.gr/developer/languages/class/extends">Extends</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/class/">Class</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/class/interface">Interface</option>
+        <option value="https://grcodeclub.gr/developer/languages/java/class/extends">Extends</option>
     </optgroup>
         </select>
         </div>
