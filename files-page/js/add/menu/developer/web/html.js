@@ -10,14 +10,14 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-        <option value="https://grcodeclub.gr/web-developer/website/html/">Εισαγωγή</option>
-        <option value="https://grcodeclub.gr/web-developer/website/html/text">Kείμενο</option>
-        <option value="https://grcodeclub.gr/web-developer/website/html/link">Σύνδεσμοι</option>
-        <option value="https://grcodeclub.gr/web-developer/website/html/input">&lt;input></option>
-        <option value="https://grcodeclub.gr/web-developer/website/html/list">Λίστες</option>
-        <option value="https://grcodeclub.gr/web-developer/website/html/tables">Πίνακες</option>
-        <option value="https://grcodeclub.gr/web-developer/website/html/multimedia">Πολυμέσα</option>
-        <option value="https://grcodeclub.gr/web-developer/website/html/meta-tags">Meta Tags</option>
+        <option value="https://grcodeclub.gr/web-developer/html/">Εισαγωγή</option>
+        <option value="https://grcodeclub.gr/web-developer/html/text">Kείμενο</option>
+        <option value="https://grcodeclub.gr/web-developer/html/link">Σύνδεσμοι</option>
+        <option value="https://grcodeclub.gr/web-developer/html/input">&lt;input></option>
+        <option value="https://grcodeclub.gr/web-developer/html/list">Λίστες</option>
+        <option value="https://grcodeclub.gr/web-developer/html/tables">Πίνακες</option>
+        <option value="https://grcodeclub.gr/web-developer/html/multimedia">Πολυμέσα</option>
+        <option value="https://grcodeclub.gr/web-developer/html/meta-tags">Meta Tags</option>
         </select>
         </div>
     </div>
