@@ -1,7 +1,21 @@
 // Ο κώδικας παραμένει ο ίδιος για την προσθήκη του dropdown
 
 // Το HTML περιεχόμενο του dropdown
-const mymenu = ``;
+const mymenu = `
+<div class="container dropdown-container contentsMenu">
+    <div class="row g-2 align-items-center">
+        <div class="col-auto">
+            <label for="page-select" class="form-label">Περιεχόμενα</label>
+        </div>
+        <div class="col">
+        <select id="page-select" class="form-select" onchange="redirectToPage()">
+            <option value="https://grcodeclub.gr/more/social-media/">Social Media</option>
+            <option value="https://grcodeclub.gr/more/social-media/google">Google</option>
+        </select>
+        </div>
+    </div>
+</div>
+`;
 
 // Εύρεση του στοιχείου με το id 'addHeader'
 const addHeader = document.getElementById('addHeader');
@@ -28,20 +42,22 @@ function redirectToPage() {
 window.onload = function() {
     const select = document.getElementById('page-select');
     const currentUrl = window.location.href; // Παίρνουμε το τρέχον URL
-    
+    console.log(select);
+    console.log(select.options);
     // Έλεγχος για να βρούμε το κατάλληλο option
     for (let option of select.options) {
+         console.log(currentUrl, option.value);
         if (option.value === currentUrl) {
             select.value = option.value; // Ρύθμιση του επιλεγμένου option
+            console.log(select.value);
             break;
         }
     }
 
-    const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
-        $(document).ready(function() {
             // Εφαρμογή του Select2
             $('#page-select').select2();
 
           
-        });
 };
+
+    

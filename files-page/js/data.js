@@ -132,12 +132,9 @@ loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
     'https://grcodeclub.gr/mobile/android/': 'https://grcodeclub.github.io/files-page/js/add/menu/android.js',
     'https://grcodeclub.gr/network/protocol/network-address/ip/': 'https://grcodeclub.github.io/files-page/js/add/menu/network/ip.js',
     'https://grcodeclub.gr/more/office-suite': 'https://grcodeclub.github.io/files-page/js/add/menu/more/office-suite.js',
-    'https://grcodeclub.gr/more/create': 'https://grcodeclub.github.io/files-page/js/add/menu/more/create.js',
-    'https://grcodeclub.gr/more/create/post': 'https://grcodeclub.github.io/files-page/js/add/menu/more/create.js', // Εξαιρείται εάν περιλαμβάνει 'post'
+    'https://grcodeclub.gr/more/social-media': 'https://grcodeclub.github.io/files-page/js/add/menu/more/social-media.js',
     'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/files-page/js/add/menu/syntomografies.js',
-    'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/files-page/js/add/menu/orologia.js',
-    'https://grcodeclub.gr/info/': 'https://grcodeclub.github.io/files-page/js/add/menu/info.js'
-
+    'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/files-page/js/add/menu/orologia.js'
 };
 
 const handleScriptAddition = () => {
