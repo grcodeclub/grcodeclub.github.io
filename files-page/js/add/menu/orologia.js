@@ -19,6 +19,7 @@ const mymenu = `
     <option value="https://grcodeclub.gr/orologia/windows">Microsoft Windows</option>
     <option value="https://grcodeclub.gr/orologia/website">Ιστοσελίδες</option>
     <option value="https://grcodeclub.gr/orologia/editing">Editing</option>
+    <option value="https://grcodeclub.gr/orologia/social-media">Social Media</option>
             </select>
         </div>
     </div>
