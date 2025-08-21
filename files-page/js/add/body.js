@@ -39,8 +39,6 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/web-developer/html/">Html</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/web-developer/css/">CSS</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/web-developer/javascript/">JavaScript</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/web-developer/more/uploadsite">Upload Website</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/web-developer/more/seo">SEO</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/web-developer/cms/wordpress/">WordPress</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/web-developer/more/http/">HTTP</a></li>
                 </ul>
