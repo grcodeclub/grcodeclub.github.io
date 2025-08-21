@@ -11,7 +11,7 @@
     <meta name="keywords" content="Γλώσσα Προγραμματισμού C και Bιβλιοθήκες">
     <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
 </head>
-<body>
+<body> 
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Bιβλιοθήκες</h1>
@@ -21,10 +21,10 @@
             <tr id="title-table"><td>Βιβλιοθήκη</td> <td>Περιγραφή</td></tr>
             <tr><td><code>&lt;stdio.h&gt;</code></td><td>Βιβλιοθήκη εισόδου/εξόδου που παρέχει συναρτήσεις όπως <code class="code_bg">printf()</code> και <code>scanf()</code>.</td></tr>
             <tr><td><code>&lt;stdlib.h&gt;</code></td><td>Βιβλιοθήκη που παρέχει συναρτήσεις για τη διαχείριση μνήμης, δυναμική ανάθεση μνήμης και άλλες γενικές λειτουργίες.</td></tr>
-            <tr><td><code><a href="./math">&lt;math.h&gt;</a></code></td><td>Βιβλιοθήκη μαθηματικών που παρέχει συναρτήσεις όπως το τετραγωνικό ρίζωμα, η εκθετική συνάρτηση, οι τριγωνομετρικές συναρτήσεις και άλλες.</td></tr>
+            <tr><td><code>&lt;math.h&gt;</code></td><td>Βιβλιοθήκη μαθηματικών που παρέχει συναρτήσεις όπως το τετραγωνικό ρίζωμα, η εκθετική συνάρτηση, οι τριγωνομετρικές συναρτήσεις και άλλες.</td></tr>
             <tr><td><code>&lt;string.h&gt;</code></td><td>Βιβλιοθήκη για λειτουργίες σχετικές με τις συμβολοσειρές, όπως αντιγραφή, συγκατάθεση, σύγκριση και άλλες.</td></tr>
             <tr><td><code>&lt;ctype.h&gt;</code></td><td>Βιβλιοθήκη για τον έλεγχο και τη μετατροπή χαρακτήρων, όπως οι συναρτήσεις <code>isalpha()</code>, <code>isdigit()</code> και <code>toupper()</code>.</td></tr>
-            <tr><td><code>&lt;time.h&gt;</code></td><td>Βιβλιοθήκη που παρέχει συναρτήσεις για την εργασία με την χρονολογία και την ώρα, όπως η <code>time()</code> και η <code>strftime()</code>.</td></tr>
+            <tr><td><code><a  target="_blank" href="https://github.com/grcodeclub/c/tree/main/Libraries/Time">&lt;time.h&gt;</a></code></td><td>Βιβλιοθήκη που παρέχει συναρτήσεις για την εργασία με την χρονολογία και την ώρα, όπως η <code>time()</code> και η <code>strftime()</code>.</td></tr>
             <tr><td><code>&lt;stdbool.h&gt;</code></td><td>Βιβλιοθήκη που παρέχει τον τύπο δεδομένων <code>bool</code> και τις τιμές <code>true</code> και <code>false</code> για λογικές εκφράσεις.</td></tr>
             <tr><td><code>&lt;limits.h&gt;</code></td><td>Περιέχει σταθερές που παρέχουν πληροφορίες για τα όρια των διάφορων τύπων δεδομένων, όπως το μέγιστο και ελάχιστο τιμή.</td></tr>
             <tr><td><code>&lt;assert.h&gt;</code></td><td>Χρησιμοποιείται για την υλοποίηση ελέγχων της προϋπόθεσης και της ασφάλειας του προγράμματος.</td></tr>
@@ -32,15 +32,19 @@
             <tr><td><code>&lt;signal.h&gt;</code></td><td>Παρέχει τις δυνατότητες επικοινωνίας με το λειτουργικό σύστημα μέσω σημάτων.</td></tr>
             <tr><td><code>&lt;errno.h&gt;</code></td><td>Χρησιμοποιείται για τη διαχείριση σφαλμάτων που σχετίζονται με λειτουργίες συστήματος.</td></tr>
             <tr><td><code>&lt;pthread.h&gt;</code></td><td>Χρησιμοποιείται για τα threads.</td></tr>
-            <tr><td><code><a href="./unistd">&lt;unistd.h&gt;</a></code></td><td> Χρησιμοποιείται για διάφορες λειτουργίες συστήματος, όπως <code>sleep</code>.</td></tr>
-            <tr><td><code><a href="./curl" >&lt;curl/curl.h&gt;</a></code></td><td></td></tr>
-            <tr><td><code>&lt;winsock2.h&gt;</code></td><td>Επιτρέπει τη δημιουργία και διαχείριση δικτυακών συνδέσεων (Windows Sockets).</td></tr>
-            <tr><td><code><a href="./arpa">&lt;arpa/inet.h&gt;</a></code></td><td>Περιέχει δηλώσεις για συναρτήσεις που χρησιμοποιούνται για τη μετατροπή διευθύνσεων δικτύου και port από την αναπαράσταση δικτύου στην αναπαράσταση μηχανής και αντίστροφα.</td></tr>
-            <tr><td><code><a href="./arpa">&lt;arpa/tftp.h&gt;</a></code></td><td>Αυτή η επικεφαλίδα περιλαμβάνει δηλώσεις που αφορούν το TFTP (Trivial File Transfer Protocol), που χρησιμοποιείται για τη μεταφορά αρχείων μέσω δικτύου.</td></tr>
-            <tr><td><code><a href="./arpa">&lt;arpa/nameser.h&gt;</a></code></td><td>Αυτές οι επικεφαλίδες περιλαμβάνουν δηλώσεις που αφορούν το πρωτόκολλο DNS (Domain Name System), που χρησιμοποιείται για τη μετάφραση ονομάτων κειμένου σε διευθύνσεις IP και αντίστροφα.</td></tr>
-            <tr><td><code><a href="./arpa">&lt;arpa/nameser_compat.h&gt;</a></code></td><td>Αυτές οι επικεφαλίδες περιλαμβάνουν δηλώσεις που αφορούν το πρωτόκολλο DNS (Domain Name System), που χρησιμοποιείται για τη μετάφραση ονομάτων κειμένου σε διευθύνσεις IP και αντίστροφα.</td></tr>
-            <tr><td><code><a href="./arpa">&lt;arpa/inetd.h&gt;</a></code></td><td>Αυτή η επικεφαλίδα περιέχει δηλώσεις και συναρτήσεις που σχετίζονται με τον διαχειριστή υπηρεσιών (inetd), που είναι υπεύθυνος για την εκκίνηση δικτυακών υπηρεσιών όταν αυτές ζητούνται από το δίκτυο.</td></tr>
-            <tr><td><code><a href="./arpa">&lt;arpa/ftp.h&gt;</a></code></td><td>Αυτή η επικεφαλίδα περιλαμβάνει δηλώσεις που αφορούν το FTP (File Transfer Protocol), ένα πρωτόκολλο που χρησιμοποιείται για τη μεταφορά αρχείων μεταξύ δικτυακών συστημάτων.</td></tr>                        
+            <tr><td><code>&lt;unistd.h&gt;</code></td><td> Χρησιμοποιείται για διάφορες λειτουργίες συστήματος, όπως <code>sleep</code>.</td></tr>
+            <tr><td><code><a  target="_blank" href="https://github.com/grcodeclub/c/tree/main/Libraries/Network/curl" >&lt;curl/curl.h&gt;</a></code></td><td>-</td></tr>
+            <tr><td><code><a  target="_blank" href="https://github.com/grcodeclub/c/tree/main/Libraries/Network/winsock2">&lt;winsock2.h&gt;</a></code></td><td>Επιτρέπει τη δημιουργία και διαχείριση δικτυακών συνδέσεων (Windows Sockets).</td></tr>
+            <tr><td><code><a  target="_blank" href="https://github.com/grcodeclub/c/tree/main/Libraries/Network/arpa/inet">&lt;arpa/inet.h&gt;</a></code></td><td>Περιέχει δηλώσεις για συναρτήσεις που χρησιμοποιούνται για τη μετατροπή διευθύνσεων δικτύου και port από την αναπαράσταση δικτύου στην αναπαράσταση μηχανής και αντίστροφα.</td></tr>
+            <tr><td><code>&lt;arpa/tftp.h&gt;</code></td><td>Αυτή η επικεφαλίδα περιλαμβάνει δηλώσεις που αφορούν το TFTP (Trivial File Transfer Protocol), που χρησιμοποιείται για τη μεταφορά αρχείων μέσω δικτύου.</td></tr>
+            <tr><td><code>&lt;arpa/nameser.h&gt;</code></td><td>Αυτές οι επικεφαλίδες περιλαμβάνουν δηλώσεις που αφορούν το πρωτόκολλο DNS (Domain Name System), που χρησιμοποιείται για τη μετάφραση ονομάτων κειμένου σε διευθύνσεις IP και αντίστροφα.</td></tr>
+            <tr><td><code>&lt;arpa/nameser_compat.h&gt;</code></td><td>Αυτές οι επικεφαλίδες περιλαμβάνουν δηλώσεις που αφορούν το πρωτόκολλο DNS (Domain Name System), που χρησιμοποιείται για τη μετάφραση ονομάτων κειμένου σε διευθύνσεις IP και αντίστροφα.</td></tr>
+            <tr><td><code>&lt;arpa/inetd.h&gt;</code></td><td>Αυτή η επικεφαλίδα περιέχει δηλώσεις και συναρτήσεις που σχετίζονται με τον διαχειριστή υπηρεσιών (inetd), που είναι υπεύθυνος για την εκκίνηση δικτυακών υπηρεσιών όταν αυτές ζητούνται από το δίκτυο.</td></tr>
+            <tr><td><code>&lt;arpa/ftp.h&gt;</code></td><td>Αυτή η επικεφαλίδα περιλαμβάνει δηλώσεις που αφορούν το FTP (File Transfer Protocol), ένα πρωτόκολλο που χρησιμοποιείται για τη μεταφορά αρχείων μεταξύ δικτυακών συστημάτων.</td></tr>                        
+            <tr><td><code><a  target="_blank" href="https://github.com/grcodeclub/c/tree/main/System/windows">&lt;windows.h&gt;</a></code></td><td>-</td></tr>
+            <tr><td><code><a  target="_blank"  target="_blank" href="https://github.com/grcodeclub/c/blob/main/Libraries/System/linux/sys/sysinfo.c">&lt;sys/sysinfo.h&gt;</a></code></td><td>-</td></tr>
+            <tr><td><code>&lt;sys/types.h&gt;</code></td><td>-</td></tr>
+
         </table>
         <div class="pagination" id="pagination"></div>
     </div>

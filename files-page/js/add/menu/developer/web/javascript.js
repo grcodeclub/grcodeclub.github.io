@@ -15,13 +15,9 @@ const mymenu = `
     <option value="https://grcodeclub.gr/web-developer/javascript/restriction">Περιορισμοί</option>
     <option value="https://grcodeclub.gr/web-developer/javascript/messages">Mηνύματα - Ειδοποιήσεις</option>
     <option value="https://grcodeclub.gr/web-developer/javascript/libraries-and-framework">Βιβλιοθήκες - Framework</option>
-    <optgroup label="Βιβλιοθήκες">
         <option value="https://grcodeclub.gr/web-developer/javascript/library/jquery">jQuery</option>
-    </optgroup>
-    <optgroup label="DOM">
-        <option value="https://grcodeclub.gr/web-developer/javascript/dom/">Βασικές Εντολές</option>
+        <option value="https://grcodeclub.gr/web-developer/javascript/dom/">Βασικές Εντολές DOM</option>
         <option value="https://grcodeclub.gr/web-developer/javascript/dom/eventlisteners">EventListeners</option>
-    </optgroup>
         </select>
         </div>
     </div>
