@@ -3,9 +3,6 @@
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
 <div class="container dropdown-container contentsMenu">
-<nav aria-label="breadcrumb" id="breadcrumbNav" class="d-none d-md-block">
-  <ol class="breadcrumb" id="breadcrumb"></ol>
-</nav>
     <div class="row g-2 align-items-center">
         <div class="col-auto">
             <label for="page-select" class="form-label">Περιεχόμενα</label>
@@ -72,23 +69,3 @@ window.onload = function() {
           
         });
 };
-
-
-const breadcrumbContainer = document.getElementById("breadcrumb");
-if (breadcrumbContainer) {
-  const pathArray = window.location.pathname.split("/").filter(p => p);
-
-  let fullPath = window.location.origin;
-  breadcrumbContainer.innerHTML = `<li class="breadcrumb-item"><a href="${fullPath}/" style="color:white;">Αρχική</a></li>`;
-
-  pathArray.forEach((part, index) => {
-    fullPath += "/" + part;
-
-    if (index === pathArray.length - 1) {
-      breadcrumbContainer.innerHTML += `<li class="breadcrumb-item active" aria-current="page" style="color:white;">${decodeURIComponent(part)}</li>`;
-    } else {
-      breadcrumbContainer.innerHTML += `<li class="breadcrumb-item"><a href="${fullPath}/" style="color:white;">${decodeURIComponent(part)}</a></li>`;
-    }
-  });
-
-}
