@@ -3,7 +3,7 @@
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
 <div class="container dropdown-container contentsMenu">
-<nav aria-label="breadcrumb" id="breadcrumbNav">
+<nav aria-label="breadcrumb" id="breadcrumbNav" class="d-none d-md-block">
   <ol class="breadcrumb" id="breadcrumb"></ol>
 </nav>
     <div class="row g-2 align-items-center">
