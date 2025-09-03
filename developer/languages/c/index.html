@@ -64,43 +64,6 @@ int main() {
             <tr><td><code>--x</code></td> <td>Μείωση του <code>x</code> κατά 1 (προ-μείωση).</td></tr>
             <tr><td><code>++x</code></td> <td>Αύξηση του <code>x</code> κατά 1 (προ-αύξηση).</td></tr>
         </table>
-        <h2 class="highlight">Τελεστές ανάθεσης</h2>
-        <table class="table table-bordered">
-            <tr id="title-table"><td>Tελεστής</td> <td>Περιγραφή</td></tr>
-            <tr><td><code>x = y</code></td> <td>Αναθέτει την τιμή του <code>y</code> στη μεταβλητή <code>x</code>.</td></tr>
-            <tr><td><code>x += y</code></td> <td>Προσθέτει το <code>y</code> στο <code>x</code> και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x + y</code>).</td></tr>
-            <tr><td><code>x -= y</code></td> <td>Αφαιρεί το <code>y</code> από το <code>x</code> και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x - y</code>).</td></tr>
-            <tr><td><code>x *= y</code></td> <td>Πολλαπλασιάζει το <code>x</code> με το <code>y</code> και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x * y</code>).</td></tr>
-            <tr><td><code>x /= y</code></td> <td>Διαιρεί το <code>x</code> με το <code>y</code> και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x / y</code>).</td></tr>
-            <tr><td><code>x %= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το υπόλοιπο της διαίρεσης του <code>x</code> με το <code>y</code> (ισοδύναμο με <code>x = x % y</code>).</td></tr>
-            <tr><td><code>x &= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το αποτέλεσμα του bitwise AND του <code>x</code> και του <code>y</code> (ισοδύναμο με <code>x = x & y</code>).</td></tr>
-            <tr><td><code>x |= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το αποτέλεσμα του bitwise OR του <code>x</code> και του <code>y</code> (ισοδύναμο με <code>x = x | y</code>).</td></tr>
-            <tr><td><code>x ^= y</code></td> <td>Αναθέτει στη μεταβλητή <code>x</code> το αποτέλεσμα του bitwise XOR του <code>x</code> και του <code>y</code> (ισοδύναμο με <code>x = x ^ y</code>).</td></tr>
-            <tr><td><code>x >>= y</code></td> <td>Μετατοπίζει τα bits του <code>x</code> προς τα δεξιά κατά <code>y</code> θέσεις και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x >> y</code>).</td></tr>
-            <tr><td><code>x <<= y</code></td> <td>Μετατοπίζει τα bits του <code>x</code> προς τα αριστερά κατά <code>y</code> θέσεις και αναθέτει το αποτέλεσμα στη μεταβλητή <code>x</code> (ισοδύναμο με <code>x = x << y</code>).</td></tr>
-        </table>
-        <h2 class="highlight">Τελεστές Σύγκρισης</h2>
-        <table class="table table-bordered">
-            <tr id="title-table"><td>Tελεστής</td> <td>Περιγραφή</td></tr>
-            <tr><td><code>x < y</code></td> <td>Το <code>x</code> είναι μικρότερο από το <code>y</code>.</td></tr>
-            <tr><td><code>x > y</code></td> <td>Το <code>x</code> είναι μεγαλύτερο από το <code>y</code>.</td></tr>
-            <tr><td><code>x <= y</code></td> <td>Το <code>x</code> είναι μικρότερο ή ίσο με το <code>y</code>.</td></tr>
-            <tr><td><code>x >= y</code></td> <td>Το <code>x</code> είναι μεγαλύτερο ή ίσο με το <code>y</code>.</td></tr>
-            <tr><td><code>x == y</code></td> <td>Το <code>x</code> είναι ίσο με το <code>y</code>.</td></tr>           
-            <tr><td><code>x != y</code></td> <td>Το <code>x</code> δεν είναι ίσο με το <code>y</code>.</td></tr>
-        </table>
-        
-        <h2 class="highlight">Λογικοί Τελεστές</h2>
-        <p>Μπορείς να συνδυάσεις πολλαπλές συνθήκες με τους λογικούς τελεστές:</p>    
-        <table class="table table-bordered">
-            <tr id="title-table"><td>Tελεστής</td> <td>Περιγραφή</td></tr>
-            <tr><td><code>&&</code></td> <td>Αληθές μόνο αν όλες οι συνθήκες είναι αληθείς.</td></tr>
-            <tr><td><code>||</code></td> <td>Αληθές αν τουλάχιστον μία συνθήκη είναι αληθής.</td></tr>
-            <tr><td><code>!</code></td> <td>Αντιστρέφει την αλήθεια της συνθήκης.</td></tr>
-        </table>
-
-
-
                 </div>
     <div id="addFooter"></div>
 </body>
