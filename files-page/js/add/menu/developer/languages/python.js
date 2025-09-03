@@ -11,9 +11,6 @@ const mymenu = `
         <select id="page-select" class="form-select" onchange="redirectToPage()">
             <option value="https://grcodeclub.gr/developer/languages/python/">Εισαγωγή</option>
             <option value="https://grcodeclub.gr/developer/languages/python/library">Βιβλιοθήκες</option>
-            <option value="https://grcodeclub.gr/developer/languages/python/commands/output_input">Είσοδος / Έξοδος</option>
-            <option value="https://grcodeclub.gr/developer/languages/python/commands/conditions">Δομή Ελέγχου</option>
-            <option value="https://grcodeclub.gr/developer/languages/python/commands/loop">Δομή Επανάληψης</option>
             <option value="https://grcodeclub.gr/developer/languages/python/strings">Strings</option>
             <option value="https://grcodeclub.gr/developer/languages/python/files">Αρχεία</option>
             <option value="https://grcodeclub.gr/developer/languages/python/list">Λίστες</option>
