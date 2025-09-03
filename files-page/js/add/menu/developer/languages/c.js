@@ -2,10 +2,10 @@
 
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
-<nav aria-label="breadcrumb" id="breadcrumbNav" style="display:none;">
+<div class="container dropdown-container contentsMenu">
+<nav aria-label="breadcrumb" id="breadcrumbNav">
   <ol class="breadcrumb" id="breadcrumb"></ol>
 </nav>
-<div class="container dropdown-container contentsMenu">
     <div class="row g-2 align-items-center">
         <div class="col-auto">
             <label for="page-select" class="form-label">Περιεχόμενα</label>
