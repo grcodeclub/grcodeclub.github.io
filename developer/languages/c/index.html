@@ -53,17 +53,50 @@ int main() {
                     </table>
                     <h2 class="highlight">Compiling</h2>
                     <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">gcc main.cpp -o my_program</code></pre></div>  
-                           <h2 class="highlight">Αριθμητικοί τελεστές</h2>
-        <table class="table table-bordered">
-            <tr id="title-table"><td>Tελεστής</td> <td>Περιγραφή</td></tr>
-            <tr><td><code>x + y</code></td> <td>Πρόσθεση του <code>x</code> και του <code>y</code>.</td></tr>
-            <tr><td><code>x - y</code></td> <td>Αφαίρεση του <code>y</code> από το <code>x</code>.</td></tr>
-            <tr><td><code>x * y</code></td> <td>Πολλαπλασιασμός του <code>x</code> με το <code>y</code>.</td></tr>
-            <tr><td><code>x / y</code></td> <td>Διαίρεση του <code>x</code> με το <code>y</code>.</td></tr>
-            <tr><td><code>x % y</code></td> <td>Υπόλοιπο της διαίρεσης του <code>x</code> με το <code>y</code>.</td></tr>
-            <tr><td><code>--x</code></td> <td>Μείωση του <code>x</code> κατά 1 (προ-μείωση).</td></tr>
-            <tr><td><code>++x</code></td> <td>Αύξηση του <code>x</code> κατά 1 (προ-αύξηση).</td></tr>
-        </table>
+                    
+                    <h1 class="title">Μεταβλητές</h1>
+        <p>Στην C, οι μεταβλητές είναι βασικά στοιχεία προγραμματισμού που χρησιμοποιούνται 
+            για να αποθηκεύουν δεδομένα σε μια συγκεκριμένη θέση μνήμης του υπολογιστή, τα 
+            οποία μπορούν να μεταβληθούν κατά τη διάρκεια της εκτέλεσης του προγράμματος. 
+            Κάθε μεταβλητή έχει ένα όνομα, έναν τύπο δεδομένων και μία τιμή.</p>
+        
+        <h2 class="highlight">Βασικές Δηλώσεις</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int age = 25;
+float price = 12.99;
+double pi = 3.14159;
+char initial = 'A';
+char name[] = "John";</code></pre></div></div>
+
+    <h2 class="highlight">const</h2>
+    <p>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
+    <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
+x = 5;  // error: assignment of read-only variable 'x'</code></pre></div></div>
+
+    <h2 class="highlight">define</h2>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#define PI 3.14159</code></pre></div></div>
+
+ <h2 class="highlight">Δείκτες (Pointers)</h2>
+        <h3>Διεύθυνση Μνήμης</h3>
+        <ol>
+            <li>Όταν μια μεταβλητή δημιουργείται στη C, μια διεύθυνση μνήμης εκχωρείται στη μεταβλητή.</li>
+            <li>Η διεύθυνση μνήμης είναι η θέση στην μνήμη του υπολογιστή, όπου αποθηκεύεται η μεταβλητή.</li>
+            <li>Όταν ορίζουμε μια τιμή στην μεταβλητή , στην πραγματικότητα η τιμή αποθηκεύετε στην συγκεκριμένη διεύθυνση μνήμης.</li>
+            <li>Όταν χρησιμοποιούμαι το & μπροστά από μια μεταβλητή, στην πραγματικότητα μιλάμε για την διεύθυνση μνήμης που δείχνει η συγκεκριμένη μεταβλητή.</li>
+        </ol>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-c">int x = 43;
+    printf("%p", &x);</code></pre></div></div>
+        <p><strong>Σημείωση:</strong> Η διεύθυνση μνήμης είναι σε δεκαεξαδική μορφή (0x.). </p>
+        <h3>Δείκτες</h3>
+        <p>Οι <code>pointers</code> στην C είναι μια από τις πιο ισχυρές και χαρακτηριστικές έννοιες της γλώσσας. Ένας δείκτης είναι μια μεταβλητή που αποθηκεύει τη διεύθυνση μνήμης μιας άλλης μεταβλητής. 
+            Με τους δείκτες μπορούμε να έχουμε άμεση πρόσβαση στη μνήμη και να διαχειριζόμαστε δεδομένα με πολύ ευέλικτο και αποτελεσματικό τρόπο.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 42;
+    int *ptr = &number;
+    //Εκτύπωση της τιμής που δείχνει ο δείκτης
+    printf("Value: %d\n", *ptr); </code></pre></div></div>
+    
+
                 </div>
     <div id="addFooter"></div>
 </body>
