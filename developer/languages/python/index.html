@@ -51,22 +51,20 @@
         </ul>
 
         <!-- Έξοδος -->
-        <h2 class="highlight">Έξοδος (Output)</h2>
-        <p><code>print()</code> εμφανίζει δεδομένα στην κονσόλα.</p>
-        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">print("GrCode Club")</code></pre></div></div>
-        <p>Πολλαπλές τιμές:</p>
-        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">name = "Νίκος"
-age = 25
-print("Το όνομά μου είναι", name, "και είμαι", age, "χρονών.")</code></pre></div></div>
-
-        <!-- Είσοδος -->
-        <h2 class="highlight">Είσοδος (Input)</h2>
+        <h2 class="highlight">Είσοδος (Input) & Έξοδος (Output)</h2>
         <p>Με <code>input()</code> λαμβάνουμε δεδομένα από τον χρήστη:</p>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">name = input("Ποιο είναι το όνομά σου; ")
 print("Γειά σου, " + name)</code></pre></div></div>
         <p>Μετατροπή σε αριθμό:</p>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">age = int(input("Πόσο χρονών είσαι; "))
 print("Είσαι " + str(age) + " χρονών.")</code></pre></div></div>
+        <p><code>print()</code> εμφανίζει δεδομένα στην κονσόλα.</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">print("GrCode Club")</code></pre></div></div>
+        <p>Πολλαπλές τιμές:</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">name = "Νίκος"
+age = 25
+print("Το όνομά μου είναι", name, "και είμαι", age, "χρονών.")</code></pre></div></div>
+        
 
         <!-- Δομές ελέγχου -->
         <h2 class="highlight">Δομές ελέγχου</h2>
@@ -87,22 +85,19 @@ elif x == 7:
 else:
     print("Μικρότερο από 10 αλλά όχι 7")</code></pre></div></div>
 
-        <h2 class="highlight">For</h2>
-        <p>Για επανάληψη σε ακολουθίες:</p>
+        <h2 class="highlight">Επανάληψη</h2>
+        <h3>Επανάληψη: For</h3>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">for i in range(5):
     print(i)</code></pre></div></div>
         <p>Με αρχική/τελική/βήμα:</p>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">for i in range(2, 11, 2):
     print(i)</code></pre></div></div>
-
-        <!-- While -->
-        <h2 class="highlight">While</h2>
+        <h3>Επανάληψη: While</h3>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">i = 1
 while i <= 5:
     print(i)
     i = i + 1</code></pre></div></div>
-
-        <h2 class="highlight">Break και Continue</h2>
+        <h3 class="highlight">Break και Continue</h3>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">for i in range(10):
     if i == 5:
         break
@@ -112,14 +107,14 @@ while i <= 5:
         continue
     print(i)</code></pre></div></div>
 
-        <h2 class="highlight">Χρήσιμοι Σύνδεσμοι</h2>
-        <a href="https://github.com/grcodeclub/python/tree/main" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i> Δες παραδείγματα στο GitHub</a>
-        <a style="margin-bottom: 10px; margin-top: 10px;"
+    <h2 class="highlight">Χρήσιμοι Σύνδεσμοι</h2>
+    <a href="https://github.com/grcodeclub/python/tree/main" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i> Δες παραδείγματα στο GitHub</a>
+    <a style="margin-bottom: 10px; margin-top: 10px;"
            href="https://www.youtube.com/playlist?list=PLn8ko1jviiOs3qW8Chb3JKCBYGP_SFXwx"
            class="btn btn-danger btn-lg d-flex align-items-center gap-2 px-4"
            target="_blank" rel="noopener noreferrer">
            <i class="fab fa-youtube fa-lg"></i> Δες την Playlist στο YouTube
-        </a>
+    </a>
     </div>
 
     <div id="addFooter"></div>
