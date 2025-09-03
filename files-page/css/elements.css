@@ -4,6 +4,22 @@ img{
 }
 
 
+.breadcrumb {
+  --bs-breadcrumb-divider: '/'; /* αλλάζει το ">" σε "/" */
+}
+
+.breadcrumb,
+.breadcrumb a {
+  color: white; /* όλα λευκά */
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ddd; /* πιο ανοιχτό στο hover */
+}
+
+
+
 /****** Start Custom Scrollbars ******/
 ::-webkit-scrollbar {
     width: 10px; /* Πλάτος του scrollbar */

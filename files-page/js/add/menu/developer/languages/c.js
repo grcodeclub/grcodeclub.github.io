@@ -92,7 +92,4 @@ if (breadcrumbContainer) {
     }
   });
 
-  // Αλλάζουμε και το διαχωριστικό ">" σε "/"
-  document.querySelectorAll(".breadcrumb-item + .breadcrumb-item")
-    .forEach(el => el.style.setProperty("--bs-breadcrumb-divider", "'/'"));
 }
