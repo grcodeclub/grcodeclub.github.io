@@ -104,9 +104,6 @@ const htmlContentHeader = `
             </li>
         </ul>
     </div>
-<nav aria-label="breadcrumb" id="breadcrumbNav" style="display:none;">
-  <ol class="breadcrumb" id="breadcrumb"></ol>
-</nav>
 `;
 
 const addHeaderDiv = document.getElementById('addHeader'); // Εύρεση του στόχου με το id 'addHeader'
