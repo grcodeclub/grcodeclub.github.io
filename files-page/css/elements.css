@@ -4,8 +4,9 @@ img{
 }
 
 
-.breadcrumb {
-  --bs-breadcrumb-divider: '/'; /* αλλάζει το ">" σε "/" */
+.breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+  content: "/";
 }
 
 .breadcrumb,
