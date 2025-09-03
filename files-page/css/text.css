@@ -4,12 +4,6 @@ body {
 	line-height: 1.5; /* Διάστημα μεταξύ γραμμών για καλύτερη ανάγνωση */
 }
 
-@font-face {
-	font-family: 'Roboto';
-	src: url('fonts/roboto.woff2') format('woff2');
-	font-display: swap;
-}
-
 /*Heading h1*/
 
 h1{
