@@ -15,6 +15,11 @@ img{
   text-decoration: none;
 }
 
+#breadcrumb {
+  display: flex;
+  justify-content: center;
+}
+
 .breadcrumb a:hover {
   color: #ddd; /* πιο ανοιχτό στο hover */
 }
