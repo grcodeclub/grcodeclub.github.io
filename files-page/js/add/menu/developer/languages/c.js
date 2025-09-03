@@ -80,15 +80,19 @@ if (breadcrumbContainer) {
   const pathArray = window.location.pathname.split("/").filter(p => p);
 
   let fullPath = window.location.origin;
-  breadcrumbContainer.innerHTML = `<li class="breadcrumb-item"><a href="${fullPath}/">Αρχική</a></li>`;
+  breadcrumbContainer.innerHTML = `<li class="breadcrumb-item"><a href="${fullPath}/" style="color:white;">Αρχική</a></li>`;
 
   pathArray.forEach((part, index) => {
     fullPath += "/" + part;
 
     if (index === pathArray.length - 1) {
-      breadcrumbContainer.innerHTML += `<li class="breadcrumb-item active" aria-current="page">${decodeURIComponent(part)}</li>`;
+      breadcrumbContainer.innerHTML += `<li class="breadcrumb-item active" aria-current="page" style="color:white;">${decodeURIComponent(part)}</li>`;
     } else {
-      breadcrumbContainer.innerHTML += `<li class="breadcrumb-item"><a href="${fullPath}/">${decodeURIComponent(part)}</a></li>`;
+      breadcrumbContainer.innerHTML += `<li class="breadcrumb-item"><a href="${fullPath}/" style="color:white;">${decodeURIComponent(part)}</a></li>`;
     }
   });
+
+  // Αλλάζουμε και το διαχωριστικό ">" σε "/"
+  document.querySelectorAll(".breadcrumb-item + .breadcrumb-item")
+    .forEach(el => el.style.setProperty("--bs-breadcrumb-divider", "'/'"));
 }
