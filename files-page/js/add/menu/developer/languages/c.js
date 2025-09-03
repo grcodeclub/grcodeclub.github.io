@@ -14,7 +14,6 @@ const mymenu = `
         <select id="page-select" class="form-select" onchange="redirectToPage()">
             <option value="https://grcodeclub.gr/developer/languages/c/">Εισαγωγή</option>
             <option value="https://grcodeclub.gr/developer/languages/c/library">Βιβλιοθήκες</option>
-            <option value="https://grcodeclub.gr/developer/languages/c/operators">Τελεστές</option>    
             <option value="https://grcodeclub.gr/developer/languages/c/commands/variables">Μεταβλητές</option>
             <option value="https://grcodeclub.gr/developer/languages/c/commands/output_input">Είσοδος / Έξοδος</option>
             <option value="https://grcodeclub.gr/developer/languages/c/commands/conditions">Δομή ελέγχου</option>
