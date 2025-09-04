@@ -14,6 +14,7 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Php</h1>
+                <hr><a href="./frameworks" class="btn btn-outline-dark w-100">Δες επίσης τον πίνακα με τα Framaworks (Link here)</a><hr>
         <p>Η PHP (Hypertext Preprocessor) είναι μια δυναμική γλώσσα προγραμματισμού που κυρίως χρησιμοποιείται για την ανάπτυξη διαδικτυακών εφαρμογών. Η PHP επιτρέπει τη δημιουργία δυναμικών και διαδραστικών ιστοσελίδων, καθώς μπορεί να ενσωματωθεί μέσα στον κώδικα HTML.</p>
         <p>Ορισμένα βασικά χαρακτηριστικά της PHP περιλαμβάνουν:
             <ol>
@@ -29,9 +30,108 @@
 echo 'Έκδοση PHP: ' . phpversion() . PHP_EOL;
 echo 'Μέγιστο όριο μνήμης: ' . ini_get('memory_limit') . PHP_EOL;
 ?></code></pre></div></div> 
-    </div>
-</div>
-    </div>
+
+        <h2 class="highlight">Έξοδος κειμένου</h2>
+        <p>Στην PHP, η έξοδος κειμένου μπορεί να γίνει με διάφορους τρόπους, κυρίως χρησιμοποιώντας τις συναρτήσεις echo και print.</p>
+        <p>H <code>echo</code> χρησιμοποιείται για την εκτύπωση δεδομένων στην οθόνη. Μπορεί να εμφανίσει πολλαπλά ορίσματα χωρισμένα με κόμμα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">echo "Hello, world!";</code></pre></div></div>
+        <p>H <code>print</code> λειτουργεί παρόμοια με το echo, αλλά επιστρέφει πάντα την τιμή 1. Το 1 που επιστρέφει το print στην PHP σημαίνει ότι η εντολή εκτελέστηκε επιτυχώς.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $value = print "Hello";
+    echo "&lt;br>Η τιμή του \$value είναι: " . $value;
+?></code></pre></div></div>
+        <p>To <code>var_dump()</code> εμφανίζει τον τύπο και την τιμή μιας μεταβλητής.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $num = 42;
+    $text = "Hello";
+    var_dump($num);
+    var_dump($text);
+?></code></pre></div></div>
+        <h2 class="highlight">Δήλωση μεταβλητής</h2>
+        <p>Στην PHP, οι μεταβλητές δηλώνονται χρησιμοποιώντας το σύμβολο $ πριν από το όνομα της μεταβλητής. Δεν απαιτείται να δηλώσεις τον τύπο δεδομένων.<br><br>Κανόνες Ονοματοδοσίας Μεταβλητών</p>
+        <ol>
+            <li>Πρέπει να ξεκινά με <code>$</code> και γράμμα ή <code>_</code> (όχι αριθμό).</li>
+            <li>Μπορεί να περιέχει γράμματα, αριθμούς και <code>_</code>.</li>
+            <li>Είναι case-sensitive ($name ≠ $Name).</li>
+            <li>Δεν μπορεί να είναι δεσμευμένη λέξη της PHP</li>
+        </ol>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-php">$age = 30;
+$name = "John";</code></pre></div></div>
+        <p><code>isset()</code> – Έλεγχος αν μια μεταβλητή έχει οριστεί. Επιστρέφει true αν η μεταβλητή υπάρχει και δεν είναι NULL.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $name = "Γιώργος";
+    if (isset($name)) {
+        echo "Η μεταβλητή υπάρχει!";
+    }
+?></code></pre></div></div>
+        <p><code>empty()</code> – Έλεγχος αν μια μεταβλητή είναι κενή. Επιστρέφει <code>true</code> αν η μεταβλητή είναι κενή</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    $str = "";
+    if (empty($str)) {
+        echo "Η μεταβλητή είναι κενή!";
+    }
+?></code></pre></div></div>
+    <p><code>define()</code> – Ορισμός σταθεράς. Οι σταθερές δεν αλλάζουν τιμή κατά την εκτέλεση του προγράμματος.</p>    
+    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+    define("SITE_NAME", "My Website");
+    echo SITE_NAME;
+?></code></pre></div></div>
+
+        <h2 class="highlight">If</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">$grade = 85;
+if ($grade > 90) {
+echo "Excellent performance!";
+} elseif ($grade > 70) {
+echo "Good performance.";
+} else {
+echo "Needs improvement.";
+}</code></pre></div></div>
+
+        <h2 class="highlight">Βρόχοι (Loops)</h2>
+        <p><strong>Επανάληψη While</strong></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">$number = 1;
+while ($number <= 5) {
+echo "Number: " . $number . "<br>";
+$number++;
+}</code></pre></div></div>
+
+        <p><strong>Επανάληψη for</strong></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">for ($i = 1; $i <= 5; $i++) {
+echo "Number: " . $i . "<br>";
+}</code></pre></div></div>
+
+        <h2 class="highlight">Πίνακες</h2>
+        <p>Αν θέλεις να εμφανίσεις τον περιεχόμενο ενός πίνακα (array), το <code>print_r()</code> είναι πολύ χρήσιμο.</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+   $fruits = array("Μήλο", "Μπανάνα", "Πορτοκάλι");
+    print_r($fruits);
+?></code></pre></div></div>
+        
+        <h2 class="highlight">Λίστα</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">$colors = array("Red", "Green", "Blue");</code></pre></div></div>
+
+        <h2 class="highlight">Επανάληψη μέσω λίστας</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">$fruits = array("Apple", "Orange", "Apricot");
+foreach ($fruits as $fruit) {
+echo $fruit . "<br>";
+}</code></pre></div></div>
+
+        <h2 class="highlight">Συνάρτηση</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">function greet($name) {
+echo "Good morning, " . $name . "!";
+}
+greet("Dimitris");</code></pre></div></div>
+
+        <h2 class="highlight">Σύνδεσμοι</h2>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση GitHub">
+        <br>
+        <table id="search_table_page" class="table table-bordered">           
+            <tr id="title-table"><td>GitHub Repo (Link)</td></tr>
+        </table>
+<nav aria-label="Σελιδοποίηση">
+        <ul id="pagination" class="pagination justify-content-center"></ul>
+    </nav>
     <div id="addFooter"></div>
 </body>
 </html>

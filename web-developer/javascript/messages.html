@@ -13,17 +13,15 @@
 <body>
     <div id="addHeader"></div>
     <div class="container">
-        <h1 class="title">Mηνύματα - Ειδοποιήσεις</h1>
-        <p class="highlight">Beforeunload</p>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">window.addEventListener("beforeunload", function(event) {
+        <h2 class="highlight">Mηνύματα - Ειδοποιήσεις</h2>
+         <p><code>Beforeunload:</code> Αυτό το event τρέχει όταν ο χρήστης πάει να κλείσει ή να ανανεώσει τη σελίδα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">window.addEventListener("beforeunload", function(event) {
 // Προειδοποίηση για ανανέωση ή κλείσιμο της σελίδας
 const message = "Έχετε μη αποθηκευμένα δεδομένα. Θέλετε να συνεχίσετε;";
 event.returnValue = message; // Για συμβατότητα με παλαιότερους browsers
 return message; // Ορισμένα browsers χρειάζονται και αυτή τη γραμμή
 });</code></pre></div></div>
-
-        <p class="highlight">Alert</p>
+        <p><code>Alert:</code> Εμφανίζει ένα απλό pop-up μήνυμα με κουμπί OK.Ο χρήστης πρέπει να πατήσει ΟΚ για να συνεχίσει.Είναι blocking ⇒ σταματάει τον κώδικα μέχρι να το πατήσει ο χρήστης.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">// Εμφάνιση μηνύματος όταν ο χρήστης προσπαθεί να κάνει μια ενέργεια
 function showAlert() {
@@ -33,7 +31,7 @@ alert("Αυτό είναι ένα απλό μήνυμα!");
 // Κάλεσε τη συνάρτηση όταν χρειάζεται
 showAlert();</code></pre></div></div>
 
-        <p class="highlight">Confirm</p>
+        <p><code>Confirm: </code>Εμφανίζει παράθυρο με μήνυμα + δύο κουμπιά: OK και Cancel. Επιστρέφει true αν ο χρήστης πατήσει ΟΚ, και false αν πατήσει Cancel. Έτσι μπορείς να αποφασίσεις τι να κάνει ο κώδικας σου ανάλογα με την επιλογή.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">// Εμφάνιση επιβεβαίωσης
 function showConfirm() {
@@ -49,13 +47,11 @@ console.log("Ο χρήστης ακύρωσε.");
 // Κάλεσε τη συνάρτηση όταν χρειάζεται
 showConfirm();</code></pre></div></div>
 
-          <p class="highlight">PopUp</p>
-        <p>Το pop-up είναι ένα νέο παράθυρο του browser που ανοίγει ανεξάρτητα από την τρέχουσα σελίδα που βλέπει ο χρήστης. </p>
+        <p><code>PopUp:</code> Ανοίγει ένα νέο παράθυρο/καρτέλα στον browser.</p>
         <div class="bg_preview">
         <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">window.open("https://www.example.com", "popupWindow", "width=600,height=400");</code></pre></div></div>
 
-        <p class="highlight">Model <a href="https://github.com/grcodeclub/javascript/blob/main/website/messages/modal.html" target="_blank">(Προβολή Κώδικα | GitHub)</a></p>
-        <p>Τα modals είναι στοιχεία που εμφανίζονται μέσα στην ίδια σελίδα και συνήθως καλύπτουν το περιεχόμενο της σελίδας με ένα overlay ή διάφανο φόντο.</p>
+        <p><code>Model:</code> Τα modals δεν ανοίγουν νέο παράθυρο, αλλά είναι στοιχεία HTML μέσα στην ίδια σελίδα.Συνήθως έχουν ένα "overlay" (σκούρο/διάφανο φόντο) και εμφανίζονται σαν παράθυρο πάνω από το περιεχόμενο.</p>
 
 
     </div>

@@ -10,14 +10,10 @@ const mymenu = `
         </div>
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
-    <option value="https://grcodeclub.gr/web-developer/javascript/commands">Βασικές εντολές</option>
-    <option value="https://grcodeclub.gr/web-developer/javascript/commands/arrays">Arrays</option>
+    <option value="https://grcodeclub.gr/web-developer/javascript/arrays">Arrays</option>
     <option value="https://grcodeclub.gr/web-developer/javascript/restriction">Περιορισμοί</option>
     <option value="https://grcodeclub.gr/web-developer/javascript/messages">Mηνύματα - Ειδοποιήσεις</option>
     <option value="https://grcodeclub.gr/web-developer/javascript/libraries-and-framework">Βιβλιοθήκες - Framework</option>
-        <option value="https://grcodeclub.gr/web-developer/javascript/library/jquery">jQuery</option>
-        <option value="https://grcodeclub.gr/web-developer/javascript/dom/">Βασικές Εντολές DOM</option>
-        <option value="https://grcodeclub.gr/web-developer/javascript/dom/eventlisteners">EventListeners</option>
         </select>
         </div>
     </div>
