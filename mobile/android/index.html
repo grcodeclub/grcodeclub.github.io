@@ -13,8 +13,8 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Android</h1>
-
-        <p class="highlight">Τα κύρια μέρη του Android</p>
+                <a href="./adb" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-link"></i>Android Debug Bridge</a>
+        <h2 class="highlight">Τα κύρια μέρη του Android</h2>
         <ol style="margin-right: 10px;">
              <li>Πυρήνας (Kernel) : Ο πυρήνας Linux είναι συχνά χρησιμοποιούμενος στο Android.</li>
              <li>Βιβλιοθήκες (Libraries)</li>
@@ -24,7 +24,7 @@
              <li>Εφαρμογές Χρήστη (User Applications):</li>
         </ol>
         <p>Όλα τα παραπάνω συνεργάζονται για να παρέχουν την πλήρη λειτουργία του Android σε μια κινητή συσκευή</p>
-        <p class="highlight">Χαρακτηριστικά</p>
+        <h2 class="highlight">Χαρακτηριστικά</h2>
         <ol>
              <li>Υποστηρίζει πολλαπλές κατηγορίες συσκευών (πχ smartphone, tablet).</li>
              <li>Εφαρμογές: Προσφέρει μια μεγάλη ποικιλία εφαρμογών για διάφορες ανάγκες χρηστών.</li>
@@ -37,6 +37,32 @@
              <li>Παρέχει εργαλεία για τη διαχείριση της ενέργειας της μπαταρίας</li>
              <li>Περιλαμβάνει πολλές υπηρεσίες της Google, όπως το Google Maps, το Google Drive και άλλες.</li>
          </ol>
+
+         <h2 class="highlight">Eκδόσεις Android</h2>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page"  class="table table-bordered">
+            <tr id="title-table"><td>Android</td> <td>Codename</td> <td>API Level</td><td>Σημείωση</td></tr>
+            <tr><td>1.5</td><td>Cupcake</td><td>3</td><td>Δυνατότητα αποστολής βίντεο στο YouTube.</td></tr>
+            <tr><td>1.6</td><td>Donut</td><td>4</td><td>-</td></tr>
+            <tr><td>2.0</td><td>Eclair</td><td>5</td><td>-</td></tr>
+            <tr><td>2.2</td><td>Froyo</td><td>8</td><td>Wi-Fi hotspot,Adobe Flash</td></tr>
+            <tr><td>2.3</td><td>Gingerbread</td><td>9</td><td>NFC</td></tr>
+            <tr><td>4.0</td><td>Ice Cream Sandwich</td><td>14</td><td>Face Unlock</td></tr>
+            <tr><td>4.1</td><td>Jelly Bean</td><td>16</td><td>Δυνατότητα απενεργοποίησης ειδοποιήσεων σε συγκεκριμένη εφαρμογή.</td></tr>
+            <tr><td>4.4</td><td>KitKat</td><td>19</td><td>-</td></tr>
+            <tr><td>5.0 </td><td>Lollipop</td><td>21</td><td>Android Runtime <br>Λειτουργία Smart lock</td></tr>
+            <tr><td>5.1</td><td>Lollipop</td><td>22</td><td>Φωνητικές κλήσεις υψηλής ευκρίνειας, διαθέσιμες μεταξύ συσκευών 4G LTE με Android 5.1. Native Wi-Fi calling support (Version 5.1.1)</td></tr>
+            <tr><td>6.0</td><td>Marshmallow</td><td>23</td><td>Υποστήριξη USB-C</td></tr>
+            <tr><td>7.0</td><td>Nougat</td><td>24</td><td>-</td></tr>
+            <tr><td>8.0</td><td>Oreo</td><td>26</td><td>Βελτίωση ειδοποιήσεων<br>Wi-Fi Assistant<br>Google Play Protect</td></tr>
+            <tr><td>9.0</td><td>Pie</td><td>28</td><td>-</td></tr>
+            <tr><td>10.0</td><td>-</td><td>29</td><td>Notification Bubbles <br> Dark theme/mode</td></tr>
+            <tr><td>11.0</td><td>-</td><td>30</td><td>Εγγραφή οθόνης</td></tr>
+            <tr><td>12</td><td>-</td><td>31</td><td>Ευκολότερη κοινή χρήση Wi-Fi <BR>Scrolling Screenshot</td></tr>
+            <tr><td>13</td><td>-</td><td>33</td><td>-</td></tr>
+        </table>
+        <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
 </div>
     <div id="addFooter"></div>
 </body>
