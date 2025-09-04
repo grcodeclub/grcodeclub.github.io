@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 // Αλυσίδα Promises
-loadScript('https://grcodeclub.github.io/files-page/js/libraries/bootstrap@5-3-3.bundle.min.js')
-    .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/popper-v2-5-2.js'))
+loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
+    .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/bootstrap@5-3-3.bundle.min.js'))
     .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/bootstrap@5-3-3.js'))    
     .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/select2-4-0-13.js'))
     .then(() => loadScript('https://grcodeclub.github.io/files-page/js/add/body.js'))
