@@ -50,7 +50,6 @@ const htmlContentHeader = `
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/">Βασικές γνώσεις</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/roadmap">Roadmap</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/tcp-ip">Μοντέλο TCP/IP</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/protocol/">Πρωτόκολλα</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/services-port">Υπηρεσίες και Ports</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/application-and-protocols">Εφαρμογή και Πρωτόκολλο</a></li>

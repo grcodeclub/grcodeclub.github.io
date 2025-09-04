@@ -3,6 +3,12 @@ img{
     max-width: 100%;
 }
 
+.nav-tabs {
+            overflow-y: hidden; 
+            flex-wrap: nowrap;
+            overflow-x: auto; 
+        }
+
 /****** Start Custom Scrollbars ******/
 ::-webkit-scrollbar {
     width: 10px; /* Πλάτος του scrollbar */
