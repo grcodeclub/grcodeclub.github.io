@@ -11,17 +11,10 @@ const mymenu = `
         <select id="page-select" class="form-select" onchange="redirectToPage()">
             <option value="https://grcodeclub.gr/developer/languages/cpp/">Εισαγωγή</option>
             <option value="https://grcodeclub.gr/developer/languages/cpp/library">Bιβλιοθήκες</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/variables">Μεταβλητές</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/output_input">Είσοδος / Έξοδος</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/conditions">Δομή ελέγχου</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/loop">Δομή επανάληψης</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/function">Συναρτήσεις</option>
             <option value="https://grcodeclub.gr/developer/languages/cpp/pointers">Δείκτες</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/class/">Class</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/class/inheritance">Κληρονομικότητα</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/class/header-file">Header File</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/class">Class</option>
             <option value="https://grcodeclub.gr/developer/languages/cpp/operator-overloading">Υπερφόρτωση τελεστών</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/commands/files">Αρχεία</option>
+            <option value="https://grcodeclub.gr/developer/languages/cpp/files">Αρχεία</option>
             <option value="https://grcodeclub.gr/developer/languages/cpp/exception">Χειρισμός εξαιρέσεων</option>
             <option value="https://grcodeclub.gr/developer/languages/cpp/templates">Templates</option>
             </select>

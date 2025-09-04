@@ -19,6 +19,8 @@
                         <li>C++ αναπτύχθηκε ως επέκταση του C, και οι δύο γλώσσες έχουν σχεδόν την ίδια σύνταξη</li>
                         <li>Η κύρια διαφορά μεταξύ του, ότι το C++ υποστηρίζει class και αντικείμενα, ενώ το C δεν το κάνει</li>
                     </ol>
+         <h2 class="highlight">Μεταγλώττιση</h2>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">g++ main.cpp -o my_program</code></pre></div>          
         <h2 class="highlight">Βασικοί τύποι δεδομένων</h2>
         <table id="table_page" class="table table-bordered">
             <tr id="title-table"><td>Τύπος δεδομένων</td><td>Size</td><td>Περιγραφή</td></tr>
@@ -28,9 +30,132 @@
             <tr><td>float</td><td>4 bytes</td><td>Αποθηκεύει κλασματικούς αριθμούς που περιέχουν ένα ή περισσότερα δεκαδικά. Επαρκεί για αποθήκευση 6-7 δεκαδικών ψηφίων</td></tr>
             <tr><td>double</td><td>8 bytes</td><td>Αποθηκεύει κλασματικούς αριθμούς που περιέχουν ένα ή περισσότερα δεκαδικά. Επαρκεί για την αποθήκευση 15 δεκαδικών ψηφίων</td></tr>
         </table>
-        <h2 class="highlight">Μεταγλώττιση</h2>
-        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">g++ main.cpp -o my_program</code></pre></div>          
-    </div>
+         
+        <h2 class="highlight">Μεταβλητές</h2>
+    <p><strong>const: </strong>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
+    <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
+x = 5;  // error: assignment of read-only variable 'x'</code></pre></div></div>
+
+        <h2 class="highlight">Είσοδος & Έξοδος</h2>
+        <p>Με την <code>cout</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cout << "Κείμενο";	</code></pre></div></div>
+        <p>Με την εντολή <code>cin</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user. </p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cin >> x;</code></pre></div></div>
+
+        <h2 class="highlight">Δομή επανάληψης</h2>
+            <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.
+    <p>Η εντολή <code>while</code> στην C είναι μια δομή επανάληψης που εκτελεί ένα μπλοκ κώδικα επανειλημμένα όσο μια συνθήκη είναι αληθής. Χρησιμοποιείται όταν θέλουμε να επαναλάβουμε μια ενέργεια πολλές φορές, αλλά δεν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων.</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 1;
+while (i <= 5) {
+    cout << i << endl;
+    i++;
+}</code></pre></div></div>
+    <p>Η εντολή <code>for</code> στην C είναι μια άλλη δομή επανάληψης, όπως η while, αλλά χρησιμοποιείται όταν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων που θέλουμε να εκτελέσει το πρόγραμμα. Η εντολή for είναι ιδιαίτερα χρήσιμη για βρόχους που αφορούν μετρημένες επαναλήψεις και προσφέρει μια πιο συμπυκνωμένη σύνταξη.</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">for (int j = 0; j < 3; j++) {
+    cout << j << endl;
+}</code></pre></div></div>
+
+        <p>Η εντολή <code>do/while</code> εκτελεί πρώτα τον κωδικά και μετά θα ελέγχει αν η συνθήκη είναι αληθής. Την πρώτη φορά θα εκτελεστεί ο βρόχος ακόμα και αν η συνθήκη είναι ψευδής.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int i = 0;
+do {
+  cout << i << "\n";
+  i++;
+}
+while (i < 5);</code></pre></div></div>
+            
+            <h2 class="highlight">Δομή ελέγχου</h2>
+        <p>Η εντολή <code>if</code> στην C++ είναι μια δομή ελέγχου που επιτρέπει στο πρόγραμμα να εκτελέσει ένα συγκεκριμένο μπλοκ κώδικα μόνο εάν μια συνθήκη είναι αληθής (true).</p>
+
+        <p>Μπορείτε να χρησιμοποιήσετε αυτές τις συνθήκες για να εκτελέσετε διαφορετικές ενέργειες για διαφορετικές αποφάσεις.</p>
+        <p>Χρήση <code>if</code> για να καθορίσετε ένα μπλοκ κώδικα που πρόκειται να εκτελεστεί, εάν η συνθήκη είναι <u>true</u></p>
+<div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
+if (number > 5) {
+    cout << "Ο αριθμός είναι μεγαλύτερος από 5." << endl;
+}</code></pre></div></div>
+
+
+<p>Χρήση <code>else if</code> για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί, εάν η συνθήκη της <code>if</code> είναι false.
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
+if (number == 5) {
+    cout << "Ο αριθμός είναι 5.\n" << endl;
+}
+else if (number == 10) {
+    cout << "Ο αριθμός είναι 10.\n" << endl;
+}</code></pre></div></div>
+        <p>Χρήση <code>else</code> για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί, εάν η συνθήκη της <code>if</code> ή και της <code>else if</code> είναι false</p>
+        <div class="bg_preview">
+            <div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
+if (number == 5) {
+    cout << "Ο αριθμός είναι 5.\n" << endl;
+}
+else if (number == 10) {
+    cout << "Ο αριθμός είναι 10.\n" << endl;
+}
+else{
+    cout << "Ο αριθμός δεν είναι ουτε 5 ουτε 10." << endl;
+}</code></pre></div></div>
+
+
+    <p>Η εντολή <code>switch</code> στην C είναι μια δομή ελέγχου που χρησιμοποιείται για να διαχειρίζεται πολλαπλές συνθήκες με έναν οργανωμένο και εύχρηστο τρόπο. Είναι ιδιαίτερα χρήσιμη όταν χρειάζεται να ελεγχθεί η τιμή μιας μεταβλητής και να εκτελεστούν διαφορετικές ενέργειες ανάλογα με αυτήν την τιμή. </p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int day = 2;
+
+switch (day) {
+  case 1:
+     cout << "Δευτέρα" << endl;
+    break;
+  case 2:
+     cout << "Τρίτη" << endl;
+    break;
+  case 3:
+     cout << "Τετάρτη" << endl;
+    break;
+  case 4:
+     cout << "Πέμπτη" << endl;
+    break;
+  case 5:
+     cout << "Παρασκευή" << endl;
+    break;
+  case 6:
+     cout << "Σάββατο" << endl;
+    break;
+  case 7:
+     cout << "Κυριακή" << endl;
+    break;
+}</code></pre></div></div>
+
+                    <h2 class="highlight">Συναρτήσεις</h2>
+
+        <h3 class="highlight">Templates</h3>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">template <typename T> T myMax(T x, T y)
+{
+    return (x > y) ? x : y;
+}</code></pre></div></div>            
+            <h2 class="highlight">Χειρισμός εξαιρέσεων</h2>
+
+        <p>Στην C++, οι εξαιρέσεις χρησιμοποιούνται για να διαχειριστούν καταστάσεις λάθους ή απρόβλεπτες καταστάσεις που συμβαίνουν κατά την εκτέλεση του προγράμματος Η εξαίρεση μπορεί να συλληφθεί και να αντιμετωπιστεί κατάλληλα μέσω της δομής <code>try-catch</code>.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">try { // κώδικας που θα δοκιμαστεί
+    throw exception;}
+catch (type  exception) {
+    // κώδικας που θα εκτελεστεί σε περίπτωση εξαίρεσης
+}</code></pre></div></div>
+    <ol>
+        <li>Ο κώδικας στο μπλοκ try εκτελείται κανονικά</li>
+        <li>Αν κάτι συμβεί ο κώδικας χρησιμοποιεί τη λέξη throw και μια παράμετρο για να προκαλέσει εξαίρεση</li>
+        <li>Αν έχει συμβεί μια εξαίρεση, το μπλοκ catch εκτελείται λαμβάνοντας ως παράμετρο αυτή που περάστηκε από το throw</li>
+    </ol>
+    <p>Η C++ διαθέτει προκαθορισμένες κλάσεις εξαιρέσεων στην std βιβλιοθήκη. Η std::exception είναι η βασική κλάση από την οποία μπορούν να κληρονομηθούν άλλες κλάσεις εξαιρέσεων.</p>
+    <h2 class="highlight">Throwing Exceptions</h2>
+    <p>Για να ρίξεις μια εξαίρεση, χρησιμοποιούμε τη λέξη-κλειδί <code>throw</code>:</p>
+    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">if (something_wrong) {
+    throw std::runtime_error("Κάποιο σφάλμα συνέβη");
+}</code></pre></div></div>
+
+           </div>
     <div id="addFooter"></div>
 </body>
 </html>

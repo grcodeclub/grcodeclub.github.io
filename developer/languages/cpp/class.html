@@ -14,7 +14,6 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">C++ Class</h1>
-
         <h2 class="highlight">Δημιουργήστε μια class</h2>
         <p>Για να δημιουργήσετε μια class, χρησιμοποιήστε τη λέξη-κλειδί class:</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class MyNumStr {       // The class
@@ -159,7 +158,26 @@ int main () {
           <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">virtual void methodName() = 0;</code></pre></div></div>
         <p>Η δήλωση αυτή σημαίνει ότι η κλάση δεν παρέχει υλοποίηση για τη συγκεκριμένη μέθοδο και οι παράγωγες κλάσεις πρέπει να την υλοποιήσουν.</p>
 
-        
+        <h2 class="highlight">Κληρονομικότητα</h2>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class derived_class_name: public base_class_name;</code></pre></div></div>
+        <ol>
+          <li>Η κλάση που παράγεται από μια άλλη κλάση κληρονομεί όλα τα ορατά μέλη της βασικής κλάσης.</li>
+          <li>Όταν δημιουργούμε μια παράγωγη κλάση, τα protected μέλη της βασικής κλάσης μπορούν να χρησιμοποιηθούν από άλλα μέλη της παράγωγης κλάσης. Τα private μέλη, δεν μπορούν.</li>
+        </ol>
+        <table class="table table-bordered">
+          <tr><td>Πρόσβαση</td><td>public</td><td>protected</td><td>private</td></tr>
+          <tr><td>Μέλη της ίδιας κλάσης</td><td>ΝΑΙ</td><td>ΝΑΙ</td><td>ΝΑΙ</td></tr>
+          <tr><td>Μέλη παραγώμενων κλάσεων</td><td>ΝΑΙ</td><td>ΝΑΙ</td><td>ΟΧΙ</td></tr>
+          <tr><td>Μη μέλη (Αναφορά εκτός κλάσης, π.χ. από τη main(), άλλη κλάση, συνάρτηση, είτε καθολική είτε τοπική)</td><td>ΝΑΙ</td><td>ΟΧΙ</td><td>ΟΧΙ</td></tr>
+        </table>
+        <p><strong>Κάθε μέλος της βασικής κλάσης κληρονομείται εκτός απο :</strong></p>
+        <ol>
+          <li>τον κατασκευαστή</li>
+          <li>τον καταστροφέα</li>
+          <li>το μέλος operator=()</li>
+          <li>τις friend συναρτήσεις – κλάσεις</li>
+        </ol>
     </div>
     <div id="addFooter"></div>
 </body>

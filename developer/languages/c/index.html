@@ -13,8 +13,7 @@
 </head>
 <body>
     <div id="addHeader"></div>
-   
-</div>
+    </div>
     <div class="container">
            <h1 class="title">Γλώσσα προγραμματισμού C</h1>
         <a href="https://github.com/grcodeclub/c" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>GitHub</a>
@@ -27,7 +26,7 @@
                     </ol>
                     <h2 class="highlight">Γράψιμο Προγράμματος</h2>
                     <div class="bg_preview">
-                    <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include <stdio.h>
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;stdio.h>
 
 int main() {
   printf("GrCode Club!");
@@ -51,53 +50,161 @@ int main() {
                         <tr><td>double</td><td>64</td><td class="d-none d-lg-block">περίπου -1.7E308 έως 1.7E308</td><td>Αποθηκεύει κλασματικούς αριθμούς με 15 δεκαδικά ψηφία</td></tr>
                         <tr><td>long double</td><td>64</td><td class="d-none d-lg-block">περίπου -3.4E4932 έως 1.1E4932</td><td>Αποθηκεύει κλασματικούς αριθμούς με πολύ μεγαλύτερη ακρίβεια</td></tr>                                   
                     </table>
+
                     <h2 class="highlight">Compiling</h2>
                     <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">gcc main.cpp -o my_program</code></pre></div>  
-                    
-                    <h1 class="title">Μεταβλητές</h1>
-        <p>Στην C, οι μεταβλητές είναι βασικά στοιχεία προγραμματισμού που χρησιμοποιούνται 
-            για να αποθηκεύουν δεδομένα σε μια συγκεκριμένη θέση μνήμης του υπολογιστή, τα 
-            οποία μπορούν να μεταβληθούν κατά τη διάρκεια της εκτέλεσης του προγράμματος. 
-            Κάθε μεταβλητή έχει ένα όνομα, έναν τύπο δεδομένων και μία τιμή.</p>
+                    <h2 class="highlight">Μεταβλητές</h2>
+                    <p> Στην C, οι μεταβλητές είναι βασικά στοιχεία προγραμματισμού που χρησιμοποιούνται για να αποθηκεύουν δεδομένα σε μια συγκεκριμένη θέση μνήμης του υπολογιστή, τα 
+                        οποία μπορούν να μεταβληθούν κατά τη διάρκεια της εκτέλεσης του προγράμματος. Κάθε μεταβλητή έχει ένα όνομα, έναν τύπο δεδομένων και μία τιμή.</p>
         
-        <h2 class="highlight">Βασικές Δηλώσεις</h2>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int age = 25;
+                    <h2 class="highlight">Βασικές Δηλώσεις</h2>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int age = 25;
 float price = 12.99;
 double pi = 3.14159;
 char initial = 'A';
 char name[] = "John";</code></pre></div></div>
 
-    <h2 class="highlight">const</h2>
-    <p>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
-    <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
-    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
+
+                    <h2 class="highlight">Είσοδος & Έξοδος</h2>
+                    <a href="https://github.com/grcodeclub/c/tree/main/examples/output_input" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>Δες παραδείγματα στο GitHub</a><br>
+                    <p>Με την <code>printf()</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
+
+int main() {
+printf("GrCode Club!");
+return 0;
+}</code></pre></div></div>
+
+                    <p>Με την εντολή <code>scanf()</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user. </p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
+
+int main() {
+int x;
+printf("Πληκτρολογήστε έναν αριθμό και πατήστε enter: \n"); 
+scanf("%d", &x);
+printf("Ο αριθμός είναι: %d", x);
+
+return 0;
+}</code></pre></div></div>
+
+                    <h2 class="highlight">Δομή επανάληψης</h2>
+                    <a href="https://github.com/grcodeclub/c/tree/main/examples/loop" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>Δες παραδείγματα στο GitHub</a><br>
+                    <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.Οι πιο κοινές δομές επανάληψης είναι:</p>        
+                    <p>Η εντολή <code>while</code> στην C είναι μια δομή επανάληψης που εκτελεί ένα μπλοκ κώδικα επανειλημμένα όσο μια συνθήκη είναι αληθής. Χρησιμοποιείται όταν θέλουμε να επαναλάβουμε μια ενέργεια πολλές φορές, αλλά δεν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων.</p>
+                    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 1;
+while (i <= 5) {
+    printf("%d\n", i);
+    i++;
+}</code></pre></div></div>
+                    <p>Η εντολή <code>for</code> στην C είναι μια άλλη δομή επανάληψης, όπως η while, αλλά χρησιμοποιείται όταν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων που θέλουμε να εκτελέσει το πρόγραμμα. Η εντολή for είναι ιδιαίτερα χρήσιμη για βρόχους που αφορούν μετρημένες επαναλήψεις και προσφέρει μια πιο συμπυκνωμένη σύνταξη.</p>
+                    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">for (int j = 0; j < 3; j++) {
+    printf("Επανάληψη %d\n", j);
+ }</code></pre></div></div>
+                    <p><code>do/while</code>:Αυτός ο βρόχος θα εκτελεί πρώτα τον κωδικά και μετά θα ελέγχει αν η συνθήκη είναι αληθής. Την πρώτη φορά θα εκτελεστεί ο βρόχος ακόμα και αν η συνθήκη είναι ψευδής.</p>
+                    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 0;
+do {
+  printf("%d\n", i);
+  i++;
+}
+while (i < 5);</code></pre></div></div>
+
+
+                    <h2 class="highlight">const</h2>
+                    <p>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
+                    <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
 x = 5;  // error: assignment of read-only variable 'x'</code></pre></div></div>
 
-    <h2 class="highlight">define</h2>
-    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#define PI 3.14159</code></pre></div></div>
+                    <h2 class="highlight">define</h2>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#define PI 3.14159</code></pre></div></div>
 
- <h2 class="highlight">Δείκτες (Pointers)</h2>
-        <h3>Διεύθυνση Μνήμης</h3>
-        <ol>
-            <li>Όταν μια μεταβλητή δημιουργείται στη C, μια διεύθυνση μνήμης εκχωρείται στη μεταβλητή.</li>
-            <li>Η διεύθυνση μνήμης είναι η θέση στην μνήμη του υπολογιστή, όπου αποθηκεύεται η μεταβλητή.</li>
-            <li>Όταν ορίζουμε μια τιμή στην μεταβλητή , στην πραγματικότητα η τιμή αποθηκεύετε στην συγκεκριμένη διεύθυνση μνήμης.</li>
-            <li>Όταν χρησιμοποιούμαι το & μπροστά από μια μεταβλητή, στην πραγματικότητα μιλάμε για την διεύθυνση μνήμης που δείχνει η συγκεκριμένη μεταβλητή.</li>
-        </ol>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-c">int x = 43;
-    printf("%p", &x);</code></pre></div></div>
-        <p><strong>Σημείωση:</strong> Η διεύθυνση μνήμης είναι σε δεκαεξαδική μορφή (0x.). </p>
-        <h3>Δείκτες</h3>
-        <p>Οι <code>pointers</code> στην C είναι μια από τις πιο ισχυρές και χαρακτηριστικές έννοιες της γλώσσας. Ένας δείκτης είναι μια μεταβλητή που αποθηκεύει τη διεύθυνση μνήμης μιας άλλης μεταβλητής. 
-            Με τους δείκτες μπορούμε να έχουμε άμεση πρόσβαση στη μνήμη και να διαχειριζόμαστε δεδομένα με πολύ ευέλικτο και αποτελεσματικό τρόπο.</p>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 42;
+                    <h2 class="highlight">Δείκτες (Pointers)</h2>
+                    <h3>Διεύθυνση Μνήμης</h3>
+                    <ol>
+                        <li>Όταν μια μεταβλητή δημιουργείται στη C, μια διεύθυνση μνήμης εκχωρείται στη μεταβλητή.</li>
+                        <li>Η διεύθυνση μνήμης είναι η θέση στην μνήμη του υπολογιστή, όπου αποθηκεύεται η μεταβλητή.</li>
+                        <li>Όταν ορίζουμε μια τιμή στην μεταβλητή , στην πραγματικότητα η τιμή αποθηκεύετε στην συγκεκριμένη διεύθυνση μνήμης.</li>
+                        <li>Όταν χρησιμοποιούμαι το & μπροστά από μια μεταβλητή, στην πραγματικότητα μιλάμε για την διεύθυνση μνήμης που δείχνει η συγκεκριμένη μεταβλητή.</li>
+                    </ol>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-c">int x = 43;
+printf("%p", &x);</code></pre></div></div>
+                    <p><strong>Σημείωση:</strong> Η διεύθυνση μνήμης είναι σε δεκαεξαδική μορφή (0x.). </p>
+                    <p> Οι <code>pointers</code> στην C είναι μια από τις πιο ισχυρές και χαρακτηριστικές έννοιες της γλώσσας. Ένας δείκτης είναι μια μεταβλητή που αποθηκεύει τη 
+                        διεύθυνση μνήμης μιας άλλης μεταβλητής. Με τους δείκτες μπορούμε να έχουμε άμεση πρόσβαση στη μνήμη και να διαχειριζόμαστε δεδομένα με πολύ ευέλικτο και αποτελεσματικό τρόπο.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 42;
     int *ptr = &number;
     //Εκτύπωση της τιμής που δείχνει ο δείκτης
     printf("Value: %d\n", *ptr); </code></pre></div></div>
     
 
-                </div>
+                    <h2 class="highlight">Δομή ελέγχου</h2>
+                    <p>Η εντολή <code>if</code> στην C (και σε πολλές άλλες γλώσσες προγραμματισμού) είναι μια δομή ελέγχου που επιτρέπει στο πρόγραμμα να εκτελέσει ένα συγκεκριμένο μπλοκ κώδικα μόνο εάν μια συνθήκη είναι αληθής (true).</p>
+                    <ul>
+                        <li>Λιγότερο από: <code>a < b</code></li>
+                        <li>Λιγότερο ή ίσο με: <code>a <= b</code></li>
+                        <li>Μεγαλύτερο από: <code>a > b</code></li>
+                        <li>Μεγαλύτερη ή ίση με: <code>a >= b</code></li>
+                        <li>Ίση με <code>a == a</code></li>
+                        <li>Όχι ίση με: a!= b</li>
+                    </ul>
+                    <p>Μπορείτε να χρησιμοποιήσετε αυτές τις συνθήκες για να εκτελέσετε διαφορετικές ενέργειες για διαφορετικές αποφάσεις.</p>
+                    <p>Χρήση <code>if</code> για να καθορίσετε ένα μπλοκ κώδικα που πρόκειται να εκτελεστεί, εάν η συνθήκη είναι <u>true</u></p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
+if (number > 5) {
+printf("Ο αριθμός είναι μεγαλύτερος από 5.\n");
+}</code></pre></div></div>
+                    <p>Χρήση <code>else if</code> για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί, εάν η συνθήκη της <code>if</code> είναι false.
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
+if (number == 5) {
+    printf("Ο αριθμός είναι 5.\n");
+}
+else if (number == 10) {
+    printf("Ο αριθμός είναι 10.\n");
+}</code></pre></div></div>
+                    <p>Χρήση <code>else</code> για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί, εάν η συνθήκη της <code>if</code> ή και της <code>else if</code> είναι false</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
+if (number == 5) {
+    printf("Ο αριθμός είναι 5.\n");
+}
+else if (number == 10) {
+    printf("Ο αριθμός είναι 10.\n");
+}
+else{
+    printf("Ο αριθμός δεν είναι ουτε 5 ουτε 10.");
+}</code></pre></div></div>
+                    <p>Η εντολή <code>switch</code> στην C είναι μια δομή ελέγχου που χρησιμοποιείται για να διαχειρίζεται πολλαπλές συνθήκες με έναν οργανωμένο και εύχρηστο τρόπο. Είναι ιδιαίτερα χρήσιμη όταν χρειάζεται να ελεγχθεί η τιμή μιας μεταβλητής και να εκτελεστούν διαφορετικές ενέργειες ανάλογα με αυτήν την τιμή. </p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int day = 2;
+switch (day) {
+  case 1:
+    printf("Δευτέρα");
+    break;
+  case 2:
+    printf("Τρίτη");
+    break;
+  case 3:
+    printf("Τετάρτη");
+    break;
+  case 4:
+    printf("Πέμπτη");
+    break;
+  case 5:
+    printf("Παρασκευή");
+    break;
+  case 6:
+    printf("Σάββατο");
+    break;
+  case 7:
+    printf("Κυριακή");
+    break;
+}</code></pre></div></div>
+                
+        <h2 class="highlight">Συναρτήσεις</h2>
+        <p>Στη γλώσσα προγραμματισμού C, τα <code>functions</code> είναι τμήματα κώδικα που εκτελούν μια συγκεκριμένη εργασία. Επιτρέπουν την οργάνωση του κώδικα σε μικρότερα, διαχειρίσιμα κομμάτια, προάγοντας την επαναχρησιμοποίηση του κώδικα και την ευκολία συντήρησης.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int add(int a, int b) {
+    return a + b;
+    }</code></pre></div></div>
+    </div>
     <div id="addFooter"></div>
 </body>
 </html>
