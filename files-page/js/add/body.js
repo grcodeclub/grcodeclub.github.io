@@ -96,7 +96,6 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/tools">Online Εργαλεία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Ορολογία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/syntomografies">Συντομογραφίες</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/info">Πληροφορίες</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/image">Image</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/office-suite">Οffice Suite</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/social-media">Social Media</a></li>
