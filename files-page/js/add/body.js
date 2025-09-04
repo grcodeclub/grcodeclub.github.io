@@ -93,12 +93,13 @@ const htmlContentHeader = `
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown7" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Περισσότερα</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown7" style="max-height: 400px; overflow-y: auto;">
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/">Δημοσιεύσεις</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/tools">Online Εργαλεία</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/social-media">Social Media</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/orologia/">Ορολογία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/syntomografies">Συντομογραφίες</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/more/info">Πληροφορίες</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/image">Image</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/office-suite">Οffice Suite</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/more/social-media">Social Media</a></li>
                 </ul>
             </li>
         </ul>
