@@ -37,16 +37,26 @@
     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
 x = 5;  // error: assignment of read-only variable 'x'</code></pre></div></div>
 
-        <h2 class="highlight">Είσοδος & Έξοδος</h2>
-        <p>Με την <code>cout</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cout << "Κείμενο";	</code></pre></div></div>
-        <p>Με την εντολή <code>cin</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user. </p>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cin >> x;</code></pre></div></div>
+            
+<h2 class="highlight">Εντολές</h2>
+<div class="accordion" id="roadmapAccordion">
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος & Έξοδος</button></h2>
+    <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+             <p>Με την <code>cout</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
+            <div class="bg_preview">
+            <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cout << "Κείμενο";	</code></pre></div></div>
+            <p>Με την εντολή <code>cin</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user. </p>
+            <div class="bg_preview">
+            <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cin >> x;</code></pre></div></div>
+        </div></div></div>
 
-        <h2 class="highlight">Δομή επανάληψης</h2>
-            <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομή επανάληψης</button></h2>
+    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+        <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.
     <p>Η εντολή <code>while</code> στην C είναι μια δομή επανάληψης που εκτελεί ένα μπλοκ κώδικα επανειλημμένα όσο μια συνθήκη είναι αληθής. Χρησιμοποιείται όταν θέλουμε να επαναλάβουμε μια ενέργεια πολλές φορές, αλλά δεν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων.</p>
     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 1;
 while (i <= 5) {
@@ -66,9 +76,13 @@ do {
   i++;
 }
 while (i < 5);</code></pre></div></div>
-            
-            <h2 class="highlight">Δομή ελέγχου</h2>
-        <p>Η εντολή <code>if</code> στην C++ είναι μια δομή ελέγχου που επιτρέπει στο πρόγραμμα να εκτελέσει ένα συγκεκριμένο μπλοκ κώδικα μόνο εάν μια συνθήκη είναι αληθής (true).</p>
+        </div></div></div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Δομή ελέγχου</button></h2>
+    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+ <p>Η εντολή <code>if</code> στην C++ είναι μια δομή ελέγχου που επιτρέπει στο πρόγραμμα να εκτελέσει ένα συγκεκριμένο μπλοκ κώδικα μόνο εάν μια συνθήκη είναι αληθής (true).</p>
 
         <p>Μπορείτε να χρησιμοποιήσετε αυτές τις συνθήκες για να εκτελέσετε διαφορετικές ενέργειες για διαφορετικές αποφάσεις.</p>
         <p>Χρήση <code>if</code> για να καθορίσετε ένα μπλοκ κώδικα που πρόκειται να εκτελεστεί, εάν η συνθήκη είναι <u>true</u></p>
@@ -125,17 +139,24 @@ switch (day) {
   case 7:
      cout << "Κυριακή" << endl;
     break;
-}</code></pre></div></div>
+}</code></pre></div></div>      </div></div></div>
 
-                    <h2 class="highlight">Συναρτήσεις</h2>
-
-        <h3 class="highlight">Templates</h3>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">template <typename T> T myMax(T x, T y)
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Συναρτήσεις</button></h2>
+    <div id="collapse4" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+            <h3 class="highlight">Templates</h3>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-cpp">template <typename T> T myMax(T x, T y)
 {
     return (x > y) ? x : y;
-}</code></pre></div></div>            
-            <h2 class="highlight">Χειρισμός εξαιρέσεων</h2>
+}</code></pre></div></div> 
+        </div></div></div>
+
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Χειρισμός εξαιρέσεων</button></h2>
+    <div id="collapse5" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
 
         <p>Στην C++, οι εξαιρέσεις χρησιμοποιούνται για να διαχειριστούν καταστάσεις λάθους ή απρόβλεπτες καταστάσεις που συμβαίνουν κατά την εκτέλεση του προγράμματος Η εξαίρεση μπορεί να συλληφθεί και να αντιμετωπιστεί κατάλληλα μέσω της δομής <code>try-catch</code>.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">try { // κώδικας που θα δοκιμαστεί
@@ -154,6 +175,9 @@ catch (type  exception) {
     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">if (something_wrong) {
     throw std::runtime_error("Κάποιο σφάλμα συνέβη");
 }</code></pre></div></div>
+        </div></div></div>
+
+</div>
 
            </div>
     <div id="addFooter"></div>

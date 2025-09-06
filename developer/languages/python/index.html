@@ -49,9 +49,12 @@
             <li><code>str</code> (συμβολοσειρές)</li>
             <li><code>bool</code> (True/False)</li>
         </ul>
-
-        <!-- Έξοδος -->
-        <h2 class="highlight">Είσοδος (Input) & Έξοδος (Output)</h2>
+<h2 class="highlight">Εντολές</h2>
+         <div class="accordion" id="roadmapAccordion">
+            <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος (Input) & Έξοδος (Output)</button></h2>
+    <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
         <p>Με <code>input()</code> λαμβάνουμε δεδομένα από τον χρήστη:</p>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">name = input("Ποιο είναι το όνομά σου; ")
 print("Γειά σου, " + name)</code></pre></div></div>
@@ -64,11 +67,14 @@ print("Είσαι " + str(age) + " χρονών.")</code></pre></div></div>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">name = "Νίκος"
 age = 25
 print("Το όνομά μου είναι", name, "και είμαι", age, "χρονών.")</code></pre></div></div>
-        
 
-        <!-- Δομές ελέγχου -->
-        <h2 class="highlight">Δομές ελέγχου</h2>
-        <p>Χρησιμοποιούνται για λήψη αποφάσεων:</p>
+        </div></div></div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομές ελέγχου</button></h2>
+    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+                <p>Χρησιμοποιούνται για λήψη αποφάσεων:</p>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">x = 10
 if x > 5:
     print("Το x είναι μεγαλύτερο από 5")</code></pre></div></div>
@@ -85,8 +91,14 @@ elif x == 7:
 else:
     print("Μικρότερο από 10 αλλά όχι 7")</code></pre></div></div>
 
-        <h2 class="highlight">Επανάληψη</h2>
-        <h3>Επανάληψη: For</h3>
+        </div></div></div>
+
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Επανάληψη</button></h2>
+    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+<h3>Επανάληψη: For</h3>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-python">for i in range(5):
     print(i)</code></pre></div></div>
         <p>Με αρχική/τελική/βήμα:</p>
@@ -106,6 +118,9 @@ while i <= 5:
     if i == 3:
         continue
     print(i)</code></pre></div></div>
+
+        </div></div></div>
+         </div>
 
     <h2 class="highlight">Χρήσιμοι Σύνδεσμοι</h2>
     <a href="https://github.com/grcodeclub/python/tree/main" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i> Δες παραδείγματα στο GitHub</a>
