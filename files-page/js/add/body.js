@@ -62,7 +62,9 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/">Λειτουργικό Σύστημα</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/extensions">Επεκτάσεις Αρχείων</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/microsoft-windows/">Microsoft Windows</a></li>
-                     <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/linux/">Linux</a></li>            
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/linux/">Linux</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/operating-systems/keyboard-shortcut">Συντομεύσεις Πληκτρολογίου</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
