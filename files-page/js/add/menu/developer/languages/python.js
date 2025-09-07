@@ -10,7 +10,6 @@ const mymenu = `
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
             <option value="https://grcodeclub.gr/developer/languages/python/">Εισαγωγή</option>
-            <option value="https://grcodeclub.gr/developer/languages/python/library">Βιβλιοθήκες</option>
             <option value="https://grcodeclub.gr/developer/languages/python/strings">Strings</option>
             <option value="https://grcodeclub.gr/developer/languages/python/files">Αρχεία</option>
             <option value="https://grcodeclub.gr/developer/languages/python/list">Λίστες</option>

@@ -10,7 +10,6 @@ const mymenu = `
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/developer/languages/java/">Εισαγωγή</option>
-        <option value="https://grcodeclub.gr/developer/languages/java/library">Bιβλιοθήκες και Class</option>
         <option value="https://grcodeclub.gr/developer/languages/java/arrays">Arrays</option>
         <option value="https://grcodeclub.gr/developer/languages/java/class/">Class</option>
         <option value="https://grcodeclub.gr/developer/languages/java/class/interface">Interface</option>

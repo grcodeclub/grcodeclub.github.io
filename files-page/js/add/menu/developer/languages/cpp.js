@@ -10,7 +10,6 @@ const mymenu = `
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
             <option value="https://grcodeclub.gr/developer/languages/cpp/">Εισαγωγή</option>
-            <option value="https://grcodeclub.gr/developer/languages/cpp/library">Bιβλιοθήκες</option>
             <option value="https://grcodeclub.gr/developer/languages/cpp/pointers">Δείκτες</option>
             <option value="https://grcodeclub.gr/developer/languages/cpp/class">Class</option>
             <option value="https://grcodeclub.gr/developer/languages/cpp/operator-overloading">Υπερφόρτωση τελεστών</option>

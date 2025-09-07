@@ -14,18 +14,16 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Java</h1>
-                    <a href="./library" class="btn btn-success btn-lg d-flex align-items-center gap-2 px-4"><i class="fab fa-java"></i>Bιβλιοθήκες της Java</a>
-
-        <p>Η Java είναι αντικειμενοστρεφής γλώσσα προγραμματισμού,  που σχεδιάστηκε από την εταιρεία πληροφορικής Sun Microsystems. </p>
-        <h2 class="highlight">Κώδικας</h2>
-        <p>Όταν λοιπόν κάποιος γράφει κώδικα σε Java, πρώτα μετατρέπεται σε bytecode, μια αναπαράσταση δηλαδή του κώδικά σε χαμηλό επίπεδο, ανεξαρτήτως της πλατφόρμας και έπειτα το bytecode ερμηνεύεται από την Java Virtual Machine (JVM).
-            Η εικονική μηχανή της Java (JVM) αποτελεί ένα στοιχείο λογισμικού που εκτελείται στην πλατφόρμα προορισμού.
-
-            Αρχικά, “διαβάζει” τις οδηγίες bytecode και στη συνέχεια τις εκτελεί.
-        </p>
-        <h2 class="highlight">Java "Hello, World!" Program</h2>
-        <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-java">// Your First Program
+                <a href="./library" class="btn btn-success btn-lg d-flex align-items-center gap-2 px-4"><i class="fab fa-java"></i>Bιβλιοθήκες και Class της Java</a>
+                <p>Η Java είναι αντικειμενοστρεφής γλώσσα προγραμματισμού,  που σχεδιάστηκε από την εταιρεία πληροφορικής Sun Microsystems. </p>
+                
+                <h2 class="highlight">Κώδικας</h2>
+                <p>Όταν λοιπόν κάποιος γράφει κώδικα σε Java, πρώτα μετατρέπεται σε bytecode, μια αναπαράσταση δηλαδή του κώδικά σε χαμηλό επίπεδο, ανεξαρτήτως της πλατφόρμας και έπειτα το bytecode ερμηνεύεται από την Java Virtual Machine (JVM).
+                 Η εικονική μηχανή της Java (JVM) αποτελεί ένα στοιχείο λογισμικού που εκτελείται στην πλατφόρμα προορισμού.
+                Αρχικά, “διαβάζει” τις οδηγίες bytecode και στη συνέχεια τις εκτελεί.</p>
+        
+                <h2 class="highlight">Java "Hello, World!" Program</h2>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">// Your First Program
 
 class HelloWorld {
 public static void main(String[] args) {
@@ -33,8 +31,8 @@ System.out.println("Hello, World!");
 }
 }</code></pre></div></div><br>
 
-        <h2 class="highlight">Δήλωση και αρχικοποίηση μεταβλητών</h2>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public class VariableExample {
+                <h2 class="highlight">Δήλωση και αρχικοποίηση μεταβλητών</h2>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public class VariableExample {
     public static void main(String[] args) {
         int integerVariable = 10; // Ακέραιος
         double doubleVariable = 3.14; / Πραγματικός
@@ -50,24 +48,20 @@ System.out.println("Hello, World!");
     }
 }</code></pre></div></div>
 
-        <h2 class="highlight">Εντολές</h2>
-         <div class="accordion" id="roadmapAccordion">
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος (Input) & Έξοδος (Output)</button></h2>
-    <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-
-            <h3>Εντολή εκτύπωσης</h3>
-        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">System.out.print("Κείμενο προς εκτύπωση");</code></pre></div></div>
-
-        <h3>Εντολή εκτύπωσης με αλλαγή γραμμής</h3>
-        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">System.out.println("Κείμενο προς εκτύπωση");</code></pre></div></div>
-
-        <h3>Εισαγωγή δεδομένων από τον χρήστη</h3>
-        <p>Η <code>Scanner</code> ανήκει στο πακέτο java.util και χρησιμοποιείται για να λαμβάνει είσοδο από διάφορες πηγές, όπως το πληκτρολόγιο, αρχεία, ή συμβολοσειρές.</p>
-        <p><code>new Scanner(System.in)</code>: Δημιουργεί ένα νέο αντικείμενο Scanner που διαβάζει δεδομένα από την τυπική είσοδο, δηλαδή το πληκτρολόγιο. Το System.in είναι το stream για την είσοδο δεδομένων από τον χρήστη.</p>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">import java.util.Scanner;
+                <h2 class="highlight">Εντολές</h2>
+                <div class="accordion" id="roadmapAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος (Input) & Έξοδος (Output)</button></h2>
+                        <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <h3>Εντολή εκτύπωσης</h3>
+                            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">System.out.print("Κείμενο προς εκτύπωση");</code></pre></div></div>
+                            <h3>Εντολή εκτύπωσης με αλλαγή γραμμής</h3>
+                            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">System.out.println("Κείμενο προς εκτύπωση");</code></pre></div></div>
+                            <h3>Εισαγωγή δεδομένων από τον χρήστη</h3>
+                            <p>Η <code>Scanner</code> ανήκει στο πακέτο java.util και χρησιμοποιείται για να λαμβάνει είσοδο από διάφορες πηγές, όπως το πληκτρολόγιο, αρχεία, ή συμβολοσειρές.</p>
+                            <p><code>new Scanner(System.in)</code>: Δημιουργεί ένα νέο αντικείμενο Scanner που διαβάζει δεδομένα από την τυπική είσοδο, δηλαδή το πληκτρολόγιο. Το System.in είναι το stream για την είσοδο δεδομένων από τον χρήστη.</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -88,13 +82,13 @@ public class Main {
         scanner.close(); // Κλείνει το Scanner όταν δεν χρειάζεται πλέον 
     }
 }</code></pre></div></div>
-        </div></div></div>
+                    </div></div></div>
 
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομές ελέγχου</button></h2>
-    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">int time = 22;
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομές ελέγχου</button></h2>
+                    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                    <div class="accordion-body">
+                        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">int time = 22;
   if (time < 10) {
   System.out.println("Good morning.");
   } else if (time < 18) {
@@ -102,51 +96,39 @@ public class Main {
   } else {
   System.out.println("Good evening.");
   }</code></pre></div></div>
+                        <p><strong>Λογικοί Τελεστές: </strong>Μπορείς να συνδυάσεις πολλαπλές συνθήκες με τους λογικούς τελεστές:</p>
+                        <ol>
+                            <li><code>&&</code>: Αληθές μόνο αν όλες οι συνθήκες είναι αληθείς.</li>
+                            <li><code>||</code>: Αληθές αν τουλάχιστον μία συνθήκη είναι αληθής.</li>
+                            <li><code>!</code>: Αντιστρέφει την αλήθεια της συνθήκης.</li>
+                        </ol>
+                    </div></div></div>
 
-    <p><strong>Λογικοί Τελεστές: </strong>Μπορείς να συνδυάσεις πολλαπλές συνθήκες με τους λογικούς τελεστές:</p>
-    <ol>
-        <li><code>&&</code>: Αληθές μόνο αν όλες οι συνθήκες είναι αληθείς.</li>
-        <li><code>||</code>: Αληθές αν τουλάχιστον μία συνθήκη είναι αληθής.</li>
-        <li><code>!</code>: Αντιστρέφει την αλήθεια της συνθήκης.</li>
-    </ol>
-
-        </div></div></div>
-
-
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Επανάληψη</button></h2>
-    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-            <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.</p>
-        <p><code>for</code>: Χρησιμοποιείται για επανάληψη σε μια ακολουθία (λίστες, συμβολοσειρές, range κ.λπ.).</p>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-java">for (int i = 0; i < 5; i++) {
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Επανάληψη</button></h2>
+                    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                    <div class="accordion-body">
+                        <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.</p>
+                        <p><code>for</code>: Χρησιμοποιείται για επανάληψη σε μια ακολουθία (λίστες, συμβολοσειρές, range κ.λπ.).</p>
+                        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">for (int i = 0; i < 5; i++) {
 System.out.println(i);
 }</code></pre></div></div>
-
-        <p><code>while</code>: Επαναλαμβάνει τον κώδικα όσο μια συνθήκη είναι αληθής.</p>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-java">int i = 0;
+                        <p><code>while</code>: Επαναλαμβάνει τον κώδικα όσο μια συνθήκη είναι αληθής.</p>
+                        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">int i = 0;
 while (i < 5) {
 System.out.println(i);
 i++;
 }</code></pre></div></div>
-        <p><code>do/while</code>:Αυτός ο βρόχος θα εκτελεί πρώτα τον κωδικά και μετά θα ελέγχει αν η συνθήκη είναι αληθής. Την πρώτη φορά θα εκτελεστεί ο βρόχος ακόμα και αν η συνθήκη είναι ψευδής.</p>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-java">int i = 0;
+                        <p><code>do/while</code>:Αυτός ο βρόχος θα εκτελεί πρώτα τον κωδικά και μετά θα ελέγχει αν η συνθήκη είναι αληθής. Την πρώτη φορά θα εκτελεστεί ο βρόχος ακόμα και αν η συνθήκη είναι ψευδής.</p>
+                        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">int i = 0;
 do {
   System.out.println(i);
   i++;
 }
 while (i < 5);</code></pre></div></div>
 
-        </div></div></div>
-</div>
-        
-        
-
-
-
+                    </div></div></div>
+                </div>
     </div>
     <div id="addFooter"></div>
 </body>
