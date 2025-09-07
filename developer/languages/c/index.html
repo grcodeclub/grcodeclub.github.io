@@ -13,75 +13,72 @@
 </head>
 <body>
     <div id="addHeader"></div>
-    </div>
     <div class="container">
-           <h1 class="title">Γλώσσα προγραμματισμού C</h1>
-        <a href="https://github.com/grcodeclub/c" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>GitHub</a>
-
-                    <p>Η C θεωρείται γενικά γλώσσα μέσου επιπέδου και αυτό γιατί συνδυάζει στοιχεία των γλωσσών υψηλού επιπέδου (high level languages) και η Pascal και στοιχεία των γλωσσών χαμηλού επιπέδου (low level languages), όπως είναι η Assembly.</p>
-                    <h2 class="highlight">Διαφορά μεταξύ C και C++</h2>
-                    <ol>
-                        <li>C++ αναπτύχθηκε ως επέκταση του C, και οι δύο γλώσσες έχουν σχεδόν την ίδια σύνταξη</li>
-                        <li>Η κύρια διαφορά μεταξύ του, ότι το C++ υποστηρίζει class και αντικείμενα, ενώ το C δεν το κάνει</li>
-                    </ol>
-                    <h2 class="highlight">Γράψιμο Προγράμματος</h2>
-                    <div class="bg_preview">
-                    <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;stdio.h>
+            <h1 class="title">Γλώσσα προγραμματισμού C</h1>
+            <a href="https://github.com/grcodeclub/c" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+            <br>
+            <a href="./library.html" class="btn btn-success btn-lg d-flex align-items-center gap-2 px-4"><i class="fab fa-python"></i>Bιβλιοθήκες της C</a>
+            <br>
+            <p>Η C θεωρείται γενικά γλώσσα μέσου επιπέδου και αυτό γιατί συνδυάζει στοιχεία των γλωσσών υψηλού επιπέδου (high level languages) και η Pascal και στοιχεία των γλωσσών χαμηλού επιπέδου (low level languages), όπως είναι η Assembly.</p>
+            <h2 class="highlight">Διαφορά μεταξύ C και C++</h2>
+            <ol>
+                <li>C++ αναπτύχθηκε ως επέκταση του C, και οι δύο γλώσσες έχουν σχεδόν την ίδια σύνταξη</li>
+                <li>Η κύρια διαφορά μεταξύ του, ότι το C++ υποστηρίζει class και αντικείμενα, ενώ το C δεν το κάνει</li>
+            </ol>    
+            <h2 class="highlight">Γράψιμο Προγράμματος</h2>
+            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;stdio.h>
 
 int main() {
   printf("GrCode Club!");
   return 0;
 }</code></pre></div></div>
-                    <p>Η C επιβάλλει τον καταμερισμό του προγράμματος σε ενότητες, που ονομάζονται συναρτήσεις (functions). Εάν είναι απαραίτητο, οι συναρτήσεις μπορούν να χωριστούν και σε μικρότερες συναρτήσεις. Επίσης, στη C το κύριο πρόγραμμα είναι κι αυτό μια συνάρτηση, που ονομάζεται main().</p>
-                    
-                    <h2 class="highlight">Τύποι δεδομένων</h2>
-                     <table id="table_page"  class="table table-bordered">
-                        <tr id="title-table"><td>Τύπος δεδομένων</td><td>Size (bit)</td><td class="d-none d-lg-block">Εύρος Τιμών</td><td>Περιγραφή</td></tr>
-                        <tr><td>boolean</td><td>8</td><td class="d-none d-lg-block">-</td><td>Αποθηκεύει αληθείς ή ψευδείς τιμές</td></tr>
-                        <tr><td>char</td><td>8</td><td class="d-none d-lg-block">-128 έως 127 (ή 0 έως 255 για unsigned)</td><td>Αποθηκεύει έναν χαρακτήρα/γράμμα/αριθμό ή τιμές ASCII</td></tr>
-                        <tr><td>short int</td><td>16</td><td class="d-none d-lg-block">-32,768 έως 32,767</td><td>Αποθηκεύει ακέραιους αριθμούς</td></tr>
-                        <tr><td>unsigned short int</td><td>16</td><td class="d-none d-lg-block">0 έως 65,535</td><td>Αποθηκεύει μη αρνητικούς ακέραιους αριθμούς</td></tr>
-                        <tr><td>int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647</td><td>Αποθηκεύει ακέραιους αριθμούς</td></tr>
-                        <tr><td>unsigned int</td><td>32</td><td class="d-none d-lg-block">0 έως 4,294,967,295</td><td>Αποθηκεύει μη αρνητικούς ακέραιους αριθμούς</td></tr>
-                        <tr><td>long int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647 </td><td>Αποθηκεύει μεγάλους ακέραιους αριθμούς</td></tr>
-                        <tr><td>unsigned long int</td><td>32</td><td class="d-none d-lg-block">0 έως 4,294,967,295 </td><td>Αποθηκεύει μη αρνητικούς μεγάλους ακέραιους αριθμούς</td></tr>
-                        <tr><td>signed long int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647 </td><td>Αποθηκεύει μεγάλους ακέραιους αριθμούς</td></tr>
-                        <tr><td>float</td><td>32</td><td class="d-none d-lg-block">περίπου -3.4E38 έως 3.4E38</td><td>Αποθηκεύει κλασματικούς αριθμούς με 6-7 δεκαδικά ψηφία</td></tr>
-                        <tr><td>double</td><td>64</td><td class="d-none d-lg-block">περίπου -1.7E308 έως 1.7E308</td><td>Αποθηκεύει κλασματικούς αριθμούς με 15 δεκαδικά ψηφία</td></tr>
-                        <tr><td>long double</td><td>64</td><td class="d-none d-lg-block">περίπου -3.4E4932 έως 1.1E4932</td><td>Αποθηκεύει κλασματικούς αριθμούς με πολύ μεγαλύτερη ακρίβεια</td></tr>                                   
-                    </table>
+            <p>Η C επιβάλλει τον καταμερισμό του προγράμματος σε ενότητες, που ονομάζονται συναρτήσεις (functions). Εάν είναι απαραίτητο, οι συναρτήσεις μπορούν να χωριστούν και σε μικρότερες συναρτήσεις. Επίσης, στη C το κύριο πρόγραμμα είναι κι αυτό μια συνάρτηση, που ονομάζεται main().</p>        
+            
+            <h2 class="highlight">Τύποι δεδομένων</h2>
+            <table id="table_page"  class="table table-bordered">
+                <tr id="title-table"><td>Τύπος δεδομένων</td><td>Size (bit)</td><td class="d-none d-lg-block">Εύρος Τιμών</td><td>Περιγραφή</td></tr>
+                <tr><td>boolean</td><td>8</td><td class="d-none d-lg-block">-</td><td>Αποθηκεύει αληθείς ή ψευδείς τιμές</td></tr>
+                <tr><td>char</td><td>8</td><td class="d-none d-lg-block">-128 έως 127 (ή 0 έως 255 για unsigned)</td><td>Αποθηκεύει έναν χαρακτήρα/γράμμα/αριθμό ή τιμές ASCII</td></tr>
+                <tr><td>short int</td><td>16</td><td class="d-none d-lg-block">-32,768 έως 32,767</td><td>Αποθηκεύει ακέραιους αριθμούς</td></tr>
+                <tr><td>unsigned short int</td><td>16</td><td class="d-none d-lg-block">0 έως 65,535</td><td>Αποθηκεύει μη αρνητικούς ακέραιους αριθμούς</td></tr>
+                <tr><td>int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647</td><td>Αποθηκεύει ακέραιους αριθμούς</td></tr>
+                <tr><td>unsigned int</td><td>32</td><td class="d-none d-lg-block">0 έως 4,294,967,295</td><td>Αποθηκεύει μη αρνητικούς ακέραιους αριθμούς</td></tr>
+                <tr><td>long int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647 </td><td>Αποθηκεύει μεγάλους ακέραιους αριθμούς</td></tr>
+                <tr><td>unsigned long int</td><td>32</td><td class="d-none d-lg-block">0 έως 4,294,967,295 </td><td>Αποθηκεύει μη αρνητικούς μεγάλους ακέραιους αριθμούς</td></tr>
+                <tr><td>signed long int</td><td>32</td><td class="d-none d-lg-block">-2,147,483,648 έως 2,147,483,647 </td><td>Αποθηκεύει μεγάλους ακέραιους αριθμούς</td></tr>
+                <tr><td>float</td><td>32</td><td class="d-none d-lg-block">περίπου -3.4E38 έως 3.4E38</td><td>Αποθηκεύει κλασματικούς αριθμούς με 6-7 δεκαδικά ψηφία</td></tr>
+                <tr><td>double</td><td>64</td><td class="d-none d-lg-block">περίπου -1.7E308 έως 1.7E308</td><td>Αποθηκεύει κλασματικούς αριθμούς με 15 δεκαδικά ψηφία</td></tr>
+                <tr><td>long double</td><td>64</td><td class="d-none d-lg-block">περίπου -3.4E4932 έως 1.1E4932</td><td>Αποθηκεύει κλασματικούς αριθμούς με πολύ μεγαλύτερη ακρίβεια</td></tr>                                   
+            </table>
 
-                    <h2 class="highlight">Compiling</h2>
-                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">gcc main.cpp -o my_program</code></pre></div>  
-                    <h2 class="highlight">Μεταβλητές</h2>
-                    <p> Στην C, οι μεταβλητές είναι βασικά στοιχεία προγραμματισμού που χρησιμοποιούνται για να αποθηκεύουν δεδομένα σε μια συγκεκριμένη θέση μνήμης του υπολογιστή, τα 
-                        οποία μπορούν να μεταβληθούν κατά τη διάρκεια της εκτέλεσης του προγράμματος. Κάθε μεταβλητή έχει ένα όνομα, έναν τύπο δεδομένων και μία τιμή.</p>
-        
-                    <h2 class="highlight">Βασικές Δηλώσεις</h2>
-                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int age = 25;
+            <h2 class="highlight">Compiling</h2>
+            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">gcc main.cpp -o my_program</code></pre></div>  
+            <h2 class="highlight">Μεταβλητές</h2>
+            <p> Στην C, οι μεταβλητές είναι βασικά στοιχεία προγραμματισμού που χρησιμοποιούνται για να αποθηκεύουν δεδομένα σε μια συγκεκριμένη θέση μνήμης του υπολογιστή, τα 
+                οποία μπορούν να μεταβληθούν κατά τη διάρκεια της εκτέλεσης του προγράμματος. Κάθε μεταβλητή έχει ένα όνομα, έναν τύπο δεδομένων και μία τιμή.</p>
+            <h2 class="highlight">Βασικές Δηλώσεις</h2>
+            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int age = 25;
 float price = 12.99;
 double pi = 3.14159;
 char initial = 'A';
 char name[] = "John";</code></pre></div></div>
 
-<h2 class="highlight">Εντολές</h2>
-         <div class="accordion" id="roadmapAccordion">
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος (Input) & Έξοδος (Output)</button></h2>
-    <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-<a href="https://github.com/grcodeclub/c/tree/main/examples/output_input" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>Δες παραδείγματα στο GitHub</a><br>
-                    <p>Με την <code>printf()</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
-                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
+            <h2 class="highlight">Εντολές</h2>
+            <div class="accordion" id="roadmapAccordion">
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος (Input) & Έξοδος (Output)</button></h2>
+                <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                    <div class="accordion-body">
+                        <a href="https://github.com/grcodeclub/c/tree/main/examples/output_input" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>Δες παραδείγματα στο GitHub</a><br>
+                        <p>Με την <code>printf()</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
+                        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
 
 int main() {
 printf("GrCode Club!");
 return 0;
 }</code></pre></div></div>
-
-                    <p>Με την εντολή <code>scanf()</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user. </p>
-                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
+                        <p>Με την εντολή <code>scanf()</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user. </p>
+                        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include <stdio.h>
 
 int main() {
 int x;
@@ -91,14 +88,13 @@ printf("Ο αριθμός είναι: %d", x);
 
 return 0;
 }</code></pre></div></div>
+                </div></div></div>
 
-        </div></div></div>
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομές ελέγχου</button></h2>
-    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-        <p>Η εντολή <code>if</code> στην C (και σε πολλές άλλες γλώσσες προγραμματισμού) είναι μια δομή ελέγχου που επιτρέπει στο πρόγραμμα να εκτελέσει ένα συγκεκριμένο μπλοκ κώδικα μόνο εάν μια συνθήκη είναι αληθής (true).</p>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομές ελέγχου</button></h2>
+                    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                    <div class="accordion-body">
+                    <p>Η εντολή <code>if</code> στην C (και σε πολλές άλλες γλώσσες προγραμματισμού) είναι μια δομή ελέγχου που επιτρέπει στο πρόγραμμα να εκτελέσει ένα συγκεκριμένο μπλοκ κώδικα μόνο εάν μια συνθήκη είναι αληθής (true).</p>
                     <ul>
                         <li>Λιγότερο από: <code>a < b</code></li>
                         <li>Λιγότερο ή ίσο με: <code>a <= b</code></li>
@@ -157,90 +153,156 @@ switch (day) {
     printf("Κυριακή");
     break;
 }</code></pre></div></div>
-        
-        </div></div></div>
+                </div></div></div>
 
-
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Επανάληψη</button></h2>
-    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-
-<a href="https://github.com/grcodeclub/c/tree/main/examples/loop" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>Δες παραδείγματα στο GitHub</a><br>
-                    <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.Οι πιο κοινές δομές επανάληψης είναι:</p>        
-                    <p>Η εντολή <code>while</code> στην C είναι μια δομή επανάληψης που εκτελεί ένα μπλοκ κώδικα επανειλημμένα όσο μια συνθήκη είναι αληθής. Χρησιμοποιείται όταν θέλουμε να επαναλάβουμε μια ενέργεια πολλές φορές, αλλά δεν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων.</p>
-                    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 1;
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Επανάληψη</button></h2>
+                    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                    <div class="accordion-body">
+                        <a href="https://github.com/grcodeclub/c/tree/main/examples/loop" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i>Δες παραδείγματα στο GitHub</a><br>
+                        <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.Οι πιο κοινές δομές επανάληψης είναι:</p>        
+                        <p>Η εντολή <code>while</code> στην C είναι μια δομή επανάληψης που εκτελεί ένα μπλοκ κώδικα επανειλημμένα όσο μια συνθήκη είναι αληθής. Χρησιμοποιείται όταν θέλουμε να επαναλάβουμε μια ενέργεια πολλές φορές, αλλά δεν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων.</p>
+                        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 1;
 while (i <= 5) {
     printf("%d\n", i);
     i++;
 }</code></pre></div></div>
-                    <p>Η εντολή <code>for</code> στην C είναι μια άλλη δομή επανάληψης, όπως η while, αλλά χρησιμοποιείται όταν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων που θέλουμε να εκτελέσει το πρόγραμμα. Η εντολή for είναι ιδιαίτερα χρήσιμη για βρόχους που αφορούν μετρημένες επαναλήψεις και προσφέρει μια πιο συμπυκνωμένη σύνταξη.</p>
-                    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">for (int j = 0; j < 3; j++) {
+                        <p>Η εντολή <code>for</code> στην C είναι μια άλλη δομή επανάληψης, όπως η while, αλλά χρησιμοποιείται όταν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων που θέλουμε να εκτελέσει το πρόγραμμα. Η εντολή for είναι ιδιαίτερα χρήσιμη για βρόχους που αφορούν μετρημένες επαναλήψεις και προσφέρει μια πιο συμπυκνωμένη σύνταξη.</p>
+                        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">for (int j = 0; j < 3; j++) {
     printf("Επανάληψη %d\n", j);
  }</code></pre></div></div>
-                    <p><code>do/while</code>:Αυτός ο βρόχος θα εκτελεί πρώτα τον κωδικά και μετά θα ελέγχει αν η συνθήκη είναι αληθής. Την πρώτη φορά θα εκτελεστεί ο βρόχος ακόμα και αν η συνθήκη είναι ψευδής.</p>
-                    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 0;
+                        <p><code>do/while</code>:Αυτός ο βρόχος θα εκτελεί πρώτα τον κωδικά και μετά θα ελέγχει αν η συνθήκη είναι αληθής. Την πρώτη φορά θα εκτελεστεί ο βρόχος ακόμα και αν η συνθήκη είναι ψευδής.</p>
+                        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 0;
 do {
   printf("%d\n", i);
   i++;
 }
 while (i < 5);</code></pre></div></div>
-        </div></div></div>
-
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Συναρτήσεις</button></h2>
-    <div id="collapse4" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-                    <p>Στη γλώσσα προγραμματισμού C, τα <code>functions</code> είναι τμήματα κώδικα που εκτελούν μια συγκεκριμένη εργασία. Επιτρέπουν την οργάνωση του κώδικα σε μικρότερα, διαχειρίσιμα κομμάτια, προάγοντας την επαναχρησιμοποίηση του κώδικα και την ευκολία συντήρησης.</p>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int add(int a, int b) {
+                </div></div></div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Συναρτήσεις</button></h2>
+                    <div id="collapse4" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Στη γλώσσα προγραμματισμού C, τα <code>functions</code> είναι τμήματα κώδικα που εκτελούν μια συγκεκριμένη εργασία. Επιτρέπουν την οργάνωση του κώδικα σε μικρότερα, διαχειρίσιμα κομμάτια, προάγοντας την επαναχρησιμοποίηση του κώδικα και την ευκολία συντήρησης.</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int add(int a, int b) {
     return a + b;
     }</code></pre></div></div>
+                </div></div></div>
 
-        </div></div></div>
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Δείκτες (Pointers)</button></h2>
-    <div id="collapse5" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-<h3>Διεύθυνση Μνήμης</h3>
-                    <ol>
-                        <li>Όταν μια μεταβλητή δημιουργείται στη C, μια διεύθυνση μνήμης εκχωρείται στη μεταβλητή.</li>
-                        <li>Η διεύθυνση μνήμης είναι η θέση στην μνήμη του υπολογιστή, όπου αποθηκεύεται η μεταβλητή.</li>
-                        <li>Όταν ορίζουμε μια τιμή στην μεταβλητή , στην πραγματικότητα η τιμή αποθηκεύετε στην συγκεκριμένη διεύθυνση μνήμης.</li>
-                        <li>Όταν χρησιμοποιούμαι το & μπροστά από μια μεταβλητή, στην πραγματικότητα μιλάμε για την διεύθυνση μνήμης που δείχνει η συγκεκριμένη μεταβλητή.</li>
-                    </ol>
-                    <div class="bg_preview">
-                    <div  class="line-numbers"><pre class="code_editor"><code class="language-c">int x = 43;
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Δείκτες (Pointers)</button></h2>
+                    <div id="collapse5" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <h3>Διεύθυνση Μνήμης</h3>
+                            <ol>
+                                <li>Όταν μια μεταβλητή δημιουργείται στη C, μια διεύθυνση μνήμης εκχωρείται στη μεταβλητή.</li>
+                                <li>Η διεύθυνση μνήμης είναι η θέση στην μνήμη του υπολογιστή, όπου αποθηκεύεται η μεταβλητή.</li>
+                                <li>Όταν ορίζουμε μια τιμή στην μεταβλητή , στην πραγματικότητα η τιμή αποθηκεύετε στην συγκεκριμένη διεύθυνση μνήμης.</li>
+                                <li>Όταν χρησιμοποιούμαι το & μπροστά από μια μεταβλητή, στην πραγματικότητα μιλάμε για την διεύθυνση μνήμης που δείχνει η συγκεκριμένη μεταβλητή.</li>
+                            </ol>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int x = 43;
 printf("%p", &x);</code></pre></div></div>
-                    <p><strong>Σημείωση:</strong> Η διεύθυνση μνήμης είναι σε δεκαεξαδική μορφή (0x.). </p>
-                    <p> Οι <code>pointers</code> στην C είναι μια από τις πιο ισχυρές και χαρακτηριστικές έννοιες της γλώσσας. Ένας δείκτης είναι μια μεταβλητή που αποθηκεύει τη 
-                        διεύθυνση μνήμης μιας άλλης μεταβλητής. Με τους δείκτες μπορούμε να έχουμε άμεση πρόσβαση στη μνήμη και να διαχειριζόμαστε δεδομένα με πολύ ευέλικτο και αποτελεσματικό τρόπο.</p>
-                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 42;
+                            <p><strong>Σημείωση:</strong> Η διεύθυνση μνήμης είναι σε δεκαεξαδική μορφή (0x.). </p>
+                            <p> Οι <code>pointers</code> στην C είναι μια από τις πιο ισχυρές και χαρακτηριστικές έννοιες της γλώσσας. Ένας δείκτης είναι μια μεταβλητή που αποθηκεύει τη 
+                                διεύθυνση μνήμης μιας άλλης μεταβλητής. Με τους δείκτες μπορούμε να έχουμε άμεση πρόσβαση στη μνήμη και να διαχειριζόμαστε δεδομένα με πολύ ευέλικτο και αποτελεσματικό τρόπο.</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 42;
     int *ptr = &number;
     //Εκτύπωση της τιμής που δείχνει ο δείκτης
     printf("Value: %d\n", *ptr); </code></pre></div></div>
+                </div></div></div>
 
-        </div></div></div>
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">define</button></h2>
-    <div id="collapse6" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body"><div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#define PI 3.14159 </code></pre></div></div></div></div></div>
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">const</button></h2>
-    <div id="collapse7" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-<p>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">define</button></h2>
+                    <div id="collapse6" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body"><div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#define PI 3.14159 </code></pre></div></div></div></div></div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">const</button></h2>
+                    <div id="collapse7" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        
+                <div class="accordion-body">
+                    <p>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
                     <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
 x = 5;  // error: assignment of read-only variable 'x'</code></pre></div></div>
+                </div></div></div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8">Αρχεία</button></h2>
+                    <div id="collapse8" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <h3>Άνοιγμα και Κλείσιμο αρχείου</h3>
+                            <table class="table table-bordered">
+                                <tr><td>Συνάρτηση</td><td>Λειτουργία</td></tr>
+                                <tr><td>fopen()</td><td>Ανοιγεί ένα αρχείο</td></tr>
+                                <tr><td>fclose()</td><td>Κλείνει ένα αρχείο</td></tr>
+                                <tr><td>feof()</td><td>Επιστρέφει true(1) όταν έχουμε ξεπεράσει το τέλος ενός αρχείου</td></tr>
+                                <tr><td>ferror()</td><td>Επιστρέφει true(1) αν προκύψει κάποιο σφάλμα</td></tr>
+                                <tr><td>clearerr()</td><td>Καθαρίζει τη κατάσταση σφάλματος για ένα συγκεκριμένο αρχείο.</td></tr>
+                                <tr><td>fflush()</td><td>Αδειάζει την περιοχή προσωρινής αποθήκευσης εισόδου/εξόδου ενός αρχείου.</td></tr>
+                                <tr><td>fflushall()</td><td>Αδειάζει την περιοχή προσωρινής αποθήκευσης εισόδου/εξόδου όλων των αρχείων.</td></tr>
+                            </table>
+                            <h3>Καταστάσεις που μπόρουμε να ανοίξουμε ένα αρχειο</h3>
+                            <table class="table table-bordered">
+                                    <tr><td>Κατάσταση</td><td>Τύπος</td><td>Λειτουργία</td><td>Δείκτης </td><td>Σχόλια</td></tr>
+                                    <tr><td>"r"</td><td>Κειμένου</td><td>Ανάγνωση</td><td>Αρχή</td><td>Το αρχείο πρέπει να υπάρχει</td></tr>
+                                    <tr><td>"w"</td><td>Κειμένου</td><td>Εγγραφή</td><td>Αρχή</td><td>Αν υπάρχει το αρχείο διαγράφονται τα περιεχόμενα του.</td></tr>
+                                    <tr><td>"a"</td><td>Κειμένου</td><td>Εγγραφή</td><td>Τέλος</td><td></td></tr>
+                                    <tr><td>"r+"</td><td>Κειμένου</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή</td><td>Το αρχείο πρέπει να υπάρχει</td></tr>
+                                    <tr><td>"w+"</td><td>Κειμένου</td><td>Ανάγνωση / Εγγραφή </td><td>Αρχή</td><td>Αν υπάρχει το αρχείο διαγράφονται τα περιεχόμενα του.</td></tr>
+                                    <tr><td>"a+"</td><td>Κειμένου</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή για ανάγνωση και τέλος για εγγραφή</td><td></td></tr>
+                                    <tr><td>"rb"</td><td>Δυαδικό</td><td>Ανάγνωση</td><td>Αρχή</td><td>Το αρχείο πρέπει να υπάρχει</td></tr>
+                                    <tr><td>"wb"</td><td>Δυαδικό</td><td>Εγγραφή</td><td>Αρχή</td><td>Αν υπάρχει το αρχείο διαγράφονται τα περιεχόμενα του</td></tr>
+                                    <tr><td>"ab"</td><td>Δυαδικό</td><td>Εγγραφή</td><td>Τέλος</td><td></td></tr>
+                                    <tr><td>"rb+"</td><td>Δυαδικό</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή</td><td>Το αρχείο πρέπει να υπάρχει</td></tr>
+                                    <tr><td>"wb+"</td><td>Δυαδικό</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή</td><td>Αν υπάρχει το αρχείο διαγράφονται τα περιεχόμενα του.</td></tr>
+                                    <tr><td>"ab+"</td><td>Δυαδικό</td><td>Ανάγνωση / Εγγραφή</td><td>Αρχή για ανάγνωση και τέλος για εγγραφή</td><td></td></tr>
+                            </table>
+                            <h2 class="highlight" ">Διαβάζοντας από ένα αρχείο</h2>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">#include &lt;stdio.h>
+#include &lt;stdlib.h>
+int main() {
+  FILE *file;
+  char ch;
+  // Άνοιγμα του αρχείου
+  file = fopen("example.txt", "r");
+  // Έλεγχος αν το αρχείο άνοιξε επιτυχώς
+  if (file == NULL) {
+      printf("Αδυναμία ανοίγματος του αρχείου.\n");
+      return 1;
+  }
+  // Διάβασμα χαρακτήρα προς χαρακτήρα και εκτύπωση
+  while ((ch = fgetc(file)) != EOF) {
+      printf("%c", ch);
+  }
+  // Κλείσιμο του αρχείου
+  fclose(file);  
+  return 0;
+}</code></pre></div></div>
+                            <p>Αρχεία Κειμένου</p>
+                            <table class="table table-bordered">
+                                <tr><td>Συνάρτηση</td><td>Λειτουργία</td></tr>
+                                <tr><td>fputc()</td><td>Γράφει έναν χαρακτήρα σε ένα αρχείο</td></tr>
+                                <tr><td>fgetc()</td><td>Διαβάζει έναν χαρακτήρα από κάποιο αρχείο</td></tr>
+                                <tr><td>fprintf()</td><td>Πραγματοποιεί εγγραφή σε ένα αρχείο, όπως η printf στην οθόνη </td></tr>
+                                <tr><td>fscanf()</td><td>Πραγματοποιεί ανάγνωση από ένα αρχείο, όπως η scanf από το πληκτρολόγιο</td></tr>
+                                <tr><td>fgets()</td><td>Διαβάζει ένα σύνολο χαρακτήρων από ένα αρχείο</td></tr>
+                                <tr><td>fputs()</td><td>Γράφει ένα σύνολο χαρακτήρων σε ένα αρχείο.</td></tr>
+                                <tr><td>fwrite()</td><td>Γράφει σε ένα αρχείο ένα πλ΄θος από τμήματα συγκεκριμένου μεγέθους σε byte, τα οποια διαβάζει από κάποια περιοχή μνήμης.</td></tr>
+                                <tr><td>fread()</td><td>Έχει παρόμοια σύνταξη με την fwrite(), με την διαφορά ότι διαβαζει από κάποιο αρχείο ένα πλήθος από τμήματα συγκεκριμένου μεγέθους σε byte και τα τοποθετεί σε κάποια περιοχή μνήμης </td></tr>
+                            </table>
+                            <p>Σύνταξη fread()</p>
+                            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-cpp">size_t fread(void *buffer,size_t arbyte, size_t fores, FILE *fp);</code></pre></div></div>
+                            <p> Σύνταξη fwrite()</p>
+                            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-cpp">size_t fwrite(void *buffer,size_t arbyte, size_t fores, FILE *fp);</code></pre></div></div>
+                            <ol>
+                                <li>buffer: Είναι ο δείκτης που δείχνει στην περιοχή της μνλημης απ΄την οποία θα διαβαστούν τα byte που θα εγραφούν στο αρχείο.</li>
+                                <li>arbyte: Δείχνει τον αριθμό των byte του κάθε τμήματος.</li>
+                                <li>fores: Δείχνει το πλήθος των τμημάτων που θα διαβαστούν</li>
+                                <li>fp: Καθαρίζει ρεύμα με το οποίο είναι συνδεδεμένο το αρχείο.</li>
+                            </ol>
         </div></div></div>
-
-
-    </div>
-
     </div>
     <div id="addFooter"></div>
 </body>
