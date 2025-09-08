@@ -157,7 +157,7 @@ switch (day) {
 
 <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Χειρισμός εξαιρέσεων</button></h2>
-    <div id="collapse5" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
         <div class="accordion-body">
 
         <p>Στην C++, οι εξαιρέσεις χρησιμοποιούνται για να διαχειριστούν καταστάσεις λάθους ή απρόβλεπτες καταστάσεις που συμβαίνουν κατά την εκτέλεση του προγράμματος Η εξαίρεση μπορεί να συλληφθεί και να αντιμετωπιστεί κατάλληλα μέσω της δομής <code>try-catch</code>.</p>
@@ -178,10 +178,215 @@ catch (type  exception) {
     throw std::runtime_error("Κάποιο σφάλμα συνέβη");
 }</code></pre></div></div>
         </div></div></div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">Δείκτες</button></h2>
+    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+        <h3>Δείκτες και πίνακες</h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int numbers [20];
+int * p;
+p = numbers;
+// Η p είναι μια μεταβλητή δείκτη, ενώ η numbers είναι σταθερά δείκτη</code></pre></div></div>
 
-</div>
+        <h3>Δείκτες void</h3>
+        <p>Οι δείκτες void είναι ειδικού τύπου δείκτες που μπορεί να δείχνουν σε οποιοδήποτε τύπο δεδομένων, με μοναδικό περιορισμό ότι τα δεδομένα στα οποία δείχνουν δεν μπορούν να αναφερθούν άμεσα, εφόσον το μέγεθός τους είναι ακαθόριστο.</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-cpp">void increase (void* data, int type){......}</code></pre></div></div>
+        <h3>Δείκτες σε συναρτήσεις</h3>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream.h>
 
-           </div>
+int addition (int a, int b)
+{ return (a+b); }
+
+int subtraction (int a, int b)
+{ return (a-b); }
+
+int (*minus)(int,int) = subtraction;
+
+int operation (int x, int y, int (*functocall)(int,int))
+{ int g;
+g = (*functocall)(x,y);
+return (g); }
+
+int main () {
+int m,n;
+m = operation (7, 5, addition);
+n = operation (20, m, minus);
+cout &lt;&lt; n;
+return 0; }</code></pre></div></div>
+        
+        <h3>Δείκτες σε κλάσεις</h3>
+        <p>Δηλώνοντας μια κλάση δημιουργούμε έναν τύπο δεδομένων και συνεπώς μπορούμε να χρησιμοποιούμε το όνομα της κλάσης για τον ορισμό δείκτων του συγκεκριμένου τύπου.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">CRectangle * prect;</code></pre></div></div>
+        <p style="font-size: 18px;">Για την <u>αναφορά</u> σε ένα μέλος αντικειμένου που δεικτοδοτείται μέσω ενός δείκτη χρησιμοποιείται ο τελεστής</p>
+        <p style="font-size: 28px;">-></p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int main () {
+CRectangle a, *b, *c;
+CRectangle * d = new CRectangle[2];
+b= new CRectangle;
+c= &a;
+a.set_values (1,2);
+b->set_values (3,4);
+d->set_values (5,6);
+d[1].set_values (7,8);
+cout 	&lt	&lt "a area: " &lt	&lt a.area() &lt&lt endl;
+cout &lt&lt "*b area: " &lt&lt b->area() &lt&lt endl;
+cout &lt&lt "*c area: " &lt&lt c->area() &lt&lt endl;
+cout &lt&lt "d[0] area: " &lt&lt d[0].area() &lt&lt endl;
+cout &lt&lt "d[1] area: " &lt&lt d[1].area() &lt&lt endl;
+return 0;
+}</code></pre></div></div>
+    <h3>Σύνοψη τελεστών για λειτουργίες δεικτών</h3>
+    <table class="table table-bordered">
+        <tr><td>*x</td><td>δείκτης στο x (δήλωση), περιεχόμενο του x (έκφραση)</td></tr>
+        <tr><td>&x</td><td>διεύθυνση του x (έκφραση), αναφορά (σε πέρασμα)</td></tr>
+        <tr><td>x.y</td><td>μέλος y του αντικειμένου x</td></tr>
+        <tr><td>(*x).y</td><td>μέλος y του αντικειμένου που δεικτοδοτείται από τον x</td></tr>
+        <tr><td>x->y</td><td>ισοδύναμο με το προηγούμενο</td></tr>
+        <tr><td>x[0]</td><td>το πρώτο αντικείμενο που δεικτοδοτείται από τον </td></tr>
+        <tr><td>x[n]</td><td>το n+1 αντικείμενο που δεικτοδοτείται από τον x</td></tr>
+    </table>
+        </div></div></div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">Templates</button></h2>
+    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+<div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-cpp">template &lt;class identifier > func_declaration;
+template &lt;typename identifier > func_declaration;</code></pre></div></div>
+        <p class="highlight">Templates συναρτήσεων</p>
+        <p>Η κλήση μιας template συνάρτησης γίνεται με τον εξής τρόπο:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">function &lt;pattern> (parameters);</code></pre></div></div>
+        <p><u>Παράδειγμα</u></p>
+        <p>Δημιουργία Προτύπου Συνάρτησης:
+            <ol>
+                <li>template &lt;class T>: Δημιουργούμε ένα πρότυπο που ονομάζεται T. Το class εδώ δεν σημαίνει ότι το T πρέπει να είναι τάξη, μπορεί να είναι οποιοσδήποτε τύπος δεδομένων.</li>
+                <li>T GetMax (T a, T b): Ορίζουμε μια συνάρτηση GetMax που δέχεται δύο παραμέτρους τύπου T και επιστρέφει τον τύπο T.</li>    
+            </ol>
+        </p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream> // Χρησιμοποιούμε iostream για την είσοδο και έξοδο
+
+// Δημιουργία προτύπου για την εύρεση του μέγιστου αριθμού
+template &lt;class T>
+T GetMax (T a, T b) {
+return (a > b) ? a : b;
+}
+
+int main () {
+int i = 5, j = 6, k;
+long l = 10, m = 5, n;
+
+// Χρήση της προτυποποιημένης συνάρτησης GetMax για τύπο int
+k = GetMax<int>(i, j); // Ή k = GetMax(i, j); 
+std::cout &lt;&lt; "Το μεγαλύτερο μεταξύ " &lt;&lt; i &lt;&lt; " και " &lt;&lt; j &lt;&lt; " είναι " &lt;&lt; k &lt;&lt; std::endl;
+
+// Χρήση της προτυποποιημένης συνάρτησης GetMax για τύπο long
+n = GetMax<long>(l, m); // Ή n = GetMax(l, m); 
+std::cout &lt;&lt; "Το μεγαλύτερο μεταξύ " &lt;&lt; l &lt;&lt; " και " &lt;&lt; m &lt;&lt; " είναι " &lt;&lt; n &lt;&lt; std::endl;
+
+return 0;
+}
+</code></pre></div></div>
+        </div></div></div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8">Class</button></h2>
+    <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+        <h3>Δημιουργήστε μια class</h3>
+        <p>Για να δημιουργήσετε μια class, χρησιμοποιήστε τη λέξη-κλειδί class:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class MyNumStr {       // The class
+public:         // Access specifier
+int x;          // Attribute (int variable)
+string mystr;   // Attribute (string variable)
+};</code></pre></div></div>
+         
+        <p>Η λέξη-κλειδί  Public είναι ένας προσδιοριστής πρόσβασης. Οι προσδιοριστές πρόσβασης καθορίζουν τον τρόπο πρόσβασης στα μέλη (χαρακτηριστικά και μέθοδοι) μιας κλάσης.
+        <br> Στην C++, υπάρχουν τρεις προσδιοριστές πρόσβασης:</p>
+        <ol>
+            <li>Public : ολα τα στοιχεια είναι προσβάσιμα εκτός της class</li>
+            <li>Private - δεν είναι δυνατή η πρόσβαση (ή η προβολή) των μελών εκτός της class</li>
+            <li>Protected - τα μέλη δεν είναι προσβάσιμα εκτός της class, ωστόσο, μπορούν να προσπελαστούν σε κλάσεις κληρονομιάς. </li>
+        </ol>
+        
+        <h3>Αντικείμενα<</h3>
+        <p>Στον αντικειμενοστραφή προγραμματισμό, τα αντικείμενα (objects) είναι οντότητες που αποτελούνται από δεδομένα και δημιουργούνται από πρότυπα που ονομάζονται class και καθορίζουν τις ιδιότητες και τις συμπεριφορές του αντικειμένου.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class MyNumStr {       // The class
+  public:            
+    int x;        
+    string mystr;
+};
+
+int main() {
+  MyNumStr myObj;  // Δημιουργούμε ένα αντικείμενο της Class MyNumStr 
+
+  // Ορίζουμε τα χαρακτηριστικά και τιμές του αντικειμένου
+  myObj.x = 6;
+  myObj.mystr = "GrCode Club";
+
+  cout << myObj.x << "\n";
+  cout << myObj.mystr;
+
+  // Πολλαπλά αντικείμενα
+  MyNumStr myObj1; 
+  myObj1.x = 16;
+  myObj1.mystr = "GrCode";
+  cout << myObj1.x << "\n";
+  cout << myObj1.mystr;
+
+  return 0;
+}</code></pre></div></div>
+<br><a href="./class">περισσότερα...</a><br>
+        </div></div></div>
+
+        <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="true" aria-controls="collapse9">Υπερφόρτωση τελεστών</button></h2>
+    <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+<p>Τελεστές που δέχονται υπερφόρτωση είναι:</p>
+            <table class="table table-bordered" style="text-align: center;">
+                <tr><td>+</td><td>*</td><td>-</td><td>/</td><td>=</td><td>&lt;</td><td>&gt;</td></tr>
+                <tr><td>+=</td><td>*=</td><td>-=</td><td>/=</td><td>&lt;&lt;</td><td>&gt;&gt;</td><td>++</td></tr>
+                <tr><td>--</td><td>%</td><td>&</td><td>^</td><td>!</td><td>|</td><td>~</td></tr>
+                <tr><td>&=</td><td>^=</td><td>|=</td><td>&&</td><td>||</td><td>%=</td><td>[]</td></tr>
+                <tr><td>()</td><td>new</td><td>delete</td></tr>
+            </table>
+        <p>Για να υπερφορτώσουμε ένα τελεστή:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">type operator sign (parameters);</code></pre></div></div>
+        <a href="https://github.com/grcodeclub/cpp/blob/main/more/operator-overloading.cpp" target="_blank" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4"><i class="fab fa-github"></i>Παράδειγμα</a>
+        </div></div></div>
+
+        <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapse10">Αρχεία</button></h2>
+    <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+        <p>Το #include &lt;fstream> είναι ένα header αρχείο της C++ Standard Library που σου επιτρέπει να διαβάζεις και να γράφεις σε αρχεία (files).</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;fstream></code></pre></div></div>
+        <table class="table table-bordered">
+            <tr><th>Κλάση</th><th>Χρήση</th></tr>
+            <tr><td><code>ifstream</code></th><th>Για ανάγνωση από αρχεία (input file stream)</td></tr>
+            <tr><td><code>ofstream</code></th><th>Για εγγραφή σε αρχεία (output file stream)</td></tr>
+            <tr><td><code>fstream</code></th><th>Για ανάγνωση & εγγραφή ταυτόχρονα</td></tr>
+        </table>
+
+        <h3>Γραφή σε αρχείο (Write to file)</h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include  &lt;fstream>
+using namespace std;
+
+int main() {
+    ofstream outFile("output.txt"); // Δημιουργεί ή αντικαθιστά αρχείο
+
+    if (outFile.is_open()) {
+        outFile << "GrCode Club!\n";
+        outFile << "Αυτό είναι ένα αρχείο.\n";
+        outFile.close(); // ΠΑΝΤΑ κλείσε το αρχείο
+    } else {
+        cout << "Δεν μπορώ να ανοίξω το αρχείο για εγγραφή.\n";
+    }
+
+    return 0;
+}</code></pre></div></div>
+        </div></div></div>
+</div> <!-- end-->
     <div id="addFooter"></div>
 </body>
 </html>

@@ -303,6 +303,36 @@ int main() {
                                 <li>fp: Καθαρίζει ρεύμα με το οποίο είναι συνδεδεμένο το αρχείο.</li>
                             </ol>
         </div></div></div>
+
+        <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="true" aria-controls="collapse9">Δομές (Specific Structures)</button></h2>
+    <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+        <div class="accordion-body">
+<p>Η δομή (structure) στην C επιτρέπει τη δημιουργία σύνθετων τύπων δεδομένων που μπορούν να περιέχουν πολλές μεταβλητές διαφορετικών τύπων, π.χ., ακέραιους, πραγματικούς αριθμούς, χαρακτήρες κ.λπ. Αυτό είναι χρήσιμο για την αναπαράσταση πραγματικών οντοτήτων, όπως αντικείμενα, άτομα ή αρχεία.</p>
+            <p><code>Stuct tm</code>: Χρησιμοποιείται για την αναπαράσταση ημερομηνιών και ωρών.Η δομή struct tm ορίζεται στο αρχείο κεφαλίδας <b><mark>&lt;time.h&gt;</mark></b> και έχει την εξής μορφή
+            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">struct tm {
+int tm_sec;   // Αναπαριστά τα δευτερόλεπτα (0-59)
+int tm_min;   // Αναπαριστά τα λεπτά (0-59)
+int tm_hour;  // Αναπαριστά τις ώρες (0-23)
+int tm_mday;  // Αναπαριστά την ημέρα του μήνα (1-31)
+int tm_mon;   // Αναπαριστά τον μήνα (0-11, 0 = Ιανουάριος)
+int tm_year;  // Αναπαριστά το έτος (έτος - 1900)
+int tm_wday;  // Αναπαριστά την ημέρα της εβδομάδας(0-6, 0 = Κυριακή)
+int tm_yday;  // Αναπαριστά την ημέρα του έτους (0-365)
+int tm_isdst; // Aναπαριστά την ένδειξη θερινής ώρας
+              // (1 = θερινή ώρα, 0 = μη θερινή ώρα, -1 = άγνωστο)
+}; </code></pre></div></div>
+
+                  <p><code>Struct timeval</code>: Χρησιμοποιείται για την αναπαράσταση χρονικών διαστημάτων με ακρίβεια μέχρι τα μικροδευτερόλεπτα.
+                    Η δομή struct timeval ορίζεται στο αρχείο κεφαλίδας <b><mark>&lt;sys/time.h&gt;</mark></b> και έχει την εξής μορφή</p>
+                    <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">struct timeval {
+time_t tv_sec; // Αναπαριστά τον αριθμό των δευτερολέπτων
+long tv_usec;  // Αναπαριστά τον αριθμό των μικροδευτερολέπτων
+};</code></pre></div></div>
+        <br><a href="./stract">περισσότερα...</a>
+        </div></div></div>
+
+
     </div>
     <div id="addFooter"></div>
 </body>
