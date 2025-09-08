@@ -83,7 +83,6 @@ public class Main {
     }
 }</code></pre></div></div>
                     </div></div></div>
-
                     <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομές ελέγχου</button></h2>
                     <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
@@ -103,7 +102,6 @@ public class Main {
                             <li><code>!</code>: Αντιστρέφει την αλήθεια της συνθήκης.</li>
                         </ol>
                     </div></div></div>
-
                     <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Επανάληψη</button></h2>
                     <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
@@ -126,9 +124,54 @@ do {
   i++;
 }
 while (i < 5);</code></pre></div></div>
-
                     </div></div></div>
-                </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Arrays</button></h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names;</code></pre></div></div>
+                            <p> Για να εισαγάγετε τιμές σε αυτό, μπορείτε να τοποθετήσετε τις τιμές σε μια λίστα διαχωρισμένη με κόμμα, μέσα σε άγκιστρα.</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Dimitris", "Ioanna", "Giannis", "Stathis"};</code></pre></div></div>
+                            <p>Πρόσβαση στα Στοιχεία</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Dimitris", "Ioanna", "Giannis", "Stathis"};
+System.out.println(names[0]);</code></pre></div></div>
+                            <p>Αλλαγή στοιχείων</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">names[0] = "Thomas";</code></pre></div></div>
+                            <p>Μήκος</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Thomas", "Ioanna", "Giannis", "Stathis"};
+System.out.println(names.length);</code></pre></div></div>
+                    </div></div></div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Class</button></h2>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Ορισμός της κλάσης</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public class ClassName {
+// Class body
+}</code></pre></div></div>
+                            <p>Μεταβλητές</p>
+                            <div class="bg_preview">
+                            <div  class="line-numbers"><pre class="code_editor"><code class="language-java">private String name; // private μεταβλητή
+public int age; // public μεταβλητή</code></pre></div></div>
+                            <p>Κατασκευαστής (Constructor)</p>
+                            <div class="bg_preview">
+                            <div  class="line-numbers"><pre class="code_editor"><code class="language-java">public ClassName(parameters) {
+// Constructor body
+</code></pre></div></div>
+                            <p>Μέθοδοι</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public ReturnType methodName(parameters) {
+// Method body
+</code></pre></div></div>
+                            <p>Δημιουργία αντικειμένου της κλάσης</p>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">ClassName objectName = new ClassName(parameters);</code></pre></div></div>
+                            <br><a href="./class/">περισσότερα για τις class...</a><br>
+                        </div></div></div>
+                </div><!-- end roadmapAccordion-->
+                <h2 class="highlight">Χρήσιμοι Σύνδεσμοι</h2>
+                <a href="./class/interface" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4"><i class="fab fa-java"></i>Interface (Link)</a>
+                <a href="./class/extends" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4 mt-2"><i class="fab fa-java"></i>Extends (Link)</a>
+                <a href="https://github.com/grcodeclub/java" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4 mt-2"><i class="fab fa-github"></i>GitHub</a>
+
     </div>
     <div id="addFooter"></div>
 </body>
