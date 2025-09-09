@@ -19,81 +19,75 @@
         <BR>
         <table id="search_table_page" class="table table-bordered">
             <tr id="title-table"><th>Κωδικός</th><th>Περιγραφή</th></tr>
-          <!-- 1xx Informational -->
-        <tr><td>100</td><td>Συνέχισε <br> Continue</td></tr>
-        <tr><td>101</td><td>Αλλαγή Πρωτοκόλλου <br> Switching Protocols</td></tr>
-        <tr><td>102</td><td>Επεξεργασία <br> Processing</td></tr>
-        <tr><td>103</td><td>Πρώιμες Υποδείξεις <br> Early Hints</td></tr>
-
-        <!-- 2xx Success -->
-        <tr><td>200</td><td>Εντάξει <br> OK</td></tr>
-        <tr><td>201</td><td>Δημιουργήθηκε <br> Created</td></tr>
-        <tr><td>202</td><td>Αποδεκτό <br> Accepted</td></tr>
-        <tr><td>203</td><td>Μη Αυθεντική Πληροφορία <br> Non-Authoritative Information</td></tr>
-        <tr><td>204</td><td>Χωρίς Περιεχόμενο <br> No Content</td></tr>
-        <tr><td>205</td><td>Επαναφορά Περιεχομένου <br> Reset Content</td></tr>
-        <tr><td>206</td><td>Μερικό Περιεχόμενο <br> Partial Content</td></tr>
-        <tr><td>207</td><td>Πολλαπλή Κατάσταση <br> Multi-Status</td></tr>
-        <tr><td>208</td><td>Ήδη Αναφέρθηκε <br> Already Reported</td></tr>
-        <tr><td>226</td><td>Χρησιμοποιήθηκε IM <br> IM Used</td></tr>
-
-        <!-- 3xx Redirection -->
-        <tr><td>300</td><td>Πολλαπλές Επιλογές <br> Multiple Choices</td></tr>
-        <tr><td>301</td><td>Μεταφέρθηκε Μόνιμα <br> Moved Permanently</td></tr>
-        <tr><td>302</td><td>Βρέθηκε <br> Found</td></tr>
-        <tr><td>303</td><td>Δες Άλλο <br> See Other</td></tr>
-        <tr><td>304</td><td>Δεν Τροποποιήθηκε <br> Not Modified</td></tr>
-        <tr><td>305</td><td>Χρήση Διαμεσολαβητή <br> Use Proxy</td></tr>
-        <tr><td>307</td><td>Προσωρινή Ανακατεύθυνση <br> Temporary Redirect</td></tr>
-        <tr><td>308</td><td>Μόνιμη Ανακατεύθυνση <br> Permanent Redirect</td></tr>
-
-        <!-- 4xx Client Errors -->
-        <tr><td>400</td><td>Κακή Αίτηση <br> Bad Request</td></tr>
-        <tr><td>401</td><td>Μη Εξουσιοδοτημένος <br> Unauthorized</td></tr>
-        <tr><td>402</td><td>Απαίτηση Πληρωμής <br> Payment Required</td></tr>
-        <tr><td>403</td><td>Απαγορευμένο <br> Forbidden</td></tr>
-        <tr><td>404</td><td>Δεν Βρέθηκε <br> Not Found</td></tr>
-        <tr><td>405</td><td>Μη Επιτρεπτή Μέθοδος <br> Method Not Allowed</td></tr>
-        <tr><td>406</td><td>Μη Αποδεκτό <br> Not Acceptable</td></tr>
-        <tr><td>407</td><td>Απαιτείται Πιστοποίηση Proxy <br> Proxy Authentication Required</td></tr>
-        <tr><td>408</td><td>Λήξη Χρόνου Αίτησης <br> Request Timeout</td></tr>
-        <tr><td>409</td><td>Σύγκρουση <br> Conflict</td></tr>
-        <tr><td>410</td><td>Εξαφανίστηκε <br> Gone</td></tr>
-        <tr><td>411</td><td>Απαιτείται Μήκος <br> Length Required</td></tr>
-        <tr><td>412</td><td>Αποτυχία Προϋπόθεσης <br> Precondition Failed</td></tr>
-        <tr><td>413</td><td>Πολύ Μεγάλο Φορτίο <br> Payload Too Large</td></tr>
-        <tr><td>414</td><td>Πολύ Μακρύ URI <br> URI Too Long</td></tr>
-        <tr><td>415</td><td>Μη Υποστηριζόμενος Τύπος Μέσου <br> Unsupported Media Type</td></tr>
-        <tr><td>416</td><td>Μη Αποδεκτό Εύρος <br> Range Not Satisfiable</td></tr>
-        <tr><td>417</td><td>Αποτυχία Προσδοκίας <br> Expectation Failed</td></tr>
-        <tr><td>418</td><td>Είμαι Τσαγιέρα <br> I'm a Teapot</td></tr>
-        <tr><td>421</td><td>Εσφαλμένο Αίτημα Κατεύθυνσης <br> Misdirected Request</td></tr>
-        <tr><td>422</td><td>Μη Επεξεργάσιμη Οντότητα <br> Unprocessable Entity</td></tr>
-        <tr><td>423</td><td>Κλειδωμένο <br> Locked</td></tr>
-        <tr><td>424</td><td>Αποτυχία Εξάρτησης <br> Failed Dependency</td></tr>
-        <tr><td>425</td><td>Πολύ Νωρίς <br> Too Early</td></tr>
-        <tr><td>426</td><td>Απαιτείται Αναβάθμιση <br> Upgrade Required</td></tr>
-        <tr><td>428</td><td>Απαιτείται Προϋπόθεση <br> Precondition Required</td></tr>
-        <tr><td>429</td><td>Πάρα Πολλά Αιτήματα <br> Too Many Requests</td></tr>
-        <tr><td>431</td><td>Πεδίο Κεφαλίδας Πολύ Μεγάλο <br> Request Header Fields Too Large</td></tr>
-        <tr><td>451</td><td>Μη Διαθέσιμο για Νομικούς Λόγους <br> Unavailable For Legal Reasons</td></tr>
-
-        <!-- 5xx Server Errors -->
-        <tr><td>500</td><td>Εσωτερικό Σφάλμα Διακομιστή <br> Internal Server Error</td></tr>
-        <tr><td>501</td><td>Μη Υλοποιημένο <br> Not Implemented</td></tr>
-        <tr><td>502</td><td>Κακή Πύλη <br> Bad Gateway</td></tr>
-        <tr><td>503</td><td>Μη Διαθέσιμη Υπηρεσία <br> Service Unavailable</td></tr>
-        <tr><td>504</td><td>Λήξη Χρόνου Πύλης <br> Gateway Timeout</td></tr>
-        <tr><td>505</td><td>Μη Υποστηριζόμενη Έκδοση HTTP <br> HTTP Version Not Supported</td></tr>
-        <tr><td>506</td><td>Η Παραλλαγή Διαπραγματεύεται Επίσης <br> Variant Also Negotiates</td></tr>
-        <tr><td>507</td><td>Μη Επαρκής Αποθήκευση <br> Insufficient Storage</td></tr>
-        <tr><td>508</td><td>Εντοπίστηκε Βρόχος <br> Loop Detected</td></tr>
-        <tr><td>510</td><td>Μη Επεκταμένο <br> Not Extended</td></tr>
-        <tr><td>511</td><td>Απαιτείται Πιστοποίηση Δικτύου <br> Network Authentication Required</td></tr>
-
+            <!-- 1xx Informational -->
+            <tr><td>100</td><td>Συνέχισε <br> Continue</td></tr>
+            <tr><td>101</td><td>Αλλαγή Πρωτοκόλλου <br> Switching Protocols</td></tr>
+            <tr><td>102</td><td>Επεξεργασία <br> Processing</td></tr>
+            <tr><td>103</td><td>Πρώιμες Υποδείξεις <br> Early Hints</td></tr>
+            <!-- 2xx Success -->
+            <tr><td>200</td><td>Εντάξει <br> OK</td></tr>
+            <tr><td>201</td><td>Δημιουργήθηκε <br> Created</td></tr>
+            <tr><td>202</td><td>Αποδεκτό <br> Accepted</td></tr>
+            <tr><td>203</td><td>Μη Αυθεντική Πληροφορία <br> Non-Authoritative Information</td></tr>
+            <tr><td>204</td><td>Χωρίς Περιεχόμενο <br> No Content</td></tr>
+            <tr><td>205</td><td>Επαναφορά Περιεχομένου <br> Reset Content</td></tr>
+            <tr><td>206</td><td>Μερικό Περιεχόμενο <br> Partial Content</td></tr>
+            <tr><td>207</td><td>Πολλαπλή Κατάσταση <br> Multi-Status</td></tr>
+            <tr><td>208</td><td>Ήδη Αναφέρθηκε <br> Already Reported</td></tr>
+            <tr><td>226</td><td>Χρησιμοποιήθηκε IM <br> IM Used</td></tr>
+            <!-- 3xx Redirection -->
+            <tr><td>300</td><td>Πολλαπλές Επιλογές <br> Multiple Choices</td></tr>
+            <tr><td>301</td><td>Μεταφέρθηκε Μόνιμα <br> Moved Permanently</td></tr>
+            <tr><td>302</td><td>Βρέθηκε <br> Found</td></tr>
+            <tr><td>303</td><td>Δες Άλλο <br> See Other</td></tr>
+            <tr><td>304</td><td>Δεν Τροποποιήθηκε <br> Not Modified</td></tr>
+            <tr><td>305</td><td>Χρήση Διαμεσολαβητή <br> Use Proxy</td></tr>
+            <tr><td>307</td><td>Προσωρινή Ανακατεύθυνση <br> Temporary Redirect</td></tr>
+            <tr><td>308</td><td>Μόνιμη Ανακατεύθυνση <br> Permanent Redirect</td></tr>
+            <!-- 4xx Client Errors -->
+            <tr><td>400</td><td>Κακή Αίτηση <br> Bad Request</td></tr>
+            <tr><td>401</td><td>Μη Εξουσιοδοτημένος <br> Unauthorized</td></tr>
+            <tr><td>402</td><td>Απαίτηση Πληρωμής <br> Payment Required</td></tr>
+            <tr><td>403</td><td>Απαγορευμένο <br> Forbidden</td></tr>
+            <tr><td>404</td><td>Δεν Βρέθηκε <br> Not Found</td></tr>
+            <tr><td>405</td><td>Μη Επιτρεπτή Μέθοδος <br> Method Not Allowed</td></tr>
+            <tr><td>406</td><td>Μη Αποδεκτό <br> Not Acceptable</td></tr>
+            <tr><td>407</td><td>Απαιτείται Πιστοποίηση Proxy <br> Proxy Authentication Required</td></tr>
+            <tr><td>408</td><td>Λήξη Χρόνου Αίτησης <br> Request Timeout</td></tr>
+            <tr><td>409</td><td>Σύγκρουση <br> Conflict</td></tr>
+            <tr><td>410</td><td>Εξαφανίστηκε <br> Gone</td></tr>
+            <tr><td>411</td><td>Απαιτείται Μήκος <br> Length Required</td></tr>
+            <tr><td>412</td><td>Αποτυχία Προϋπόθεσης <br> Precondition Failed</td></tr>
+            <tr><td>413</td><td>Πολύ Μεγάλο Φορτίο <br> Payload Too Large</td></tr>
+            <tr><td>414</td><td>Πολύ Μακρύ URI <br> URI Too Long</td></tr>
+            <tr><td>415</td><td>Μη Υποστηριζόμενος Τύπος Μέσου <br> Unsupported Media Type</td></tr>
+            <tr><td>416</td><td>Μη Αποδεκτό Εύρος <br> Range Not Satisfiable</td></tr>
+            <tr><td>417</td><td>Αποτυχία Προσδοκίας <br> Expectation Failed</td></tr>
+            <tr><td>418</td><td>Είμαι Τσαγιέρα <br> I'm a Teapot</td></tr>
+            <tr><td>421</td><td>Εσφαλμένο Αίτημα Κατεύθυνσης <br> Misdirected Request</td></tr>
+            <tr><td>422</td><td>Μη Επεξεργάσιμη Οντότητα <br> Unprocessable Entity</td></tr>
+            <tr><td>423</td><td>Κλειδωμένο <br> Locked</td></tr>
+            <tr><td>424</td><td>Αποτυχία Εξάρτησης <br> Failed Dependency</td></tr>
+            <tr><td>425</td><td>Πολύ Νωρίς <br> Too Early</td></tr>
+            <tr><td>426</td><td>Απαιτείται Αναβάθμιση <br> Upgrade Required</td></tr>
+            <tr><td>428</td><td>Απαιτείται Προϋπόθεση <br> Precondition Required</td></tr>
+            <tr><td>429</td><td>Πάρα Πολλά Αιτήματα <br> Too Many Requests</td></tr>
+            <tr><td>431</td><td>Πεδίο Κεφαλίδας Πολύ Μεγάλο <br> Request Header Fields Too Large</td></tr>
+            <tr><td>451</td><td>Μη Διαθέσιμο για Νομικούς Λόγους <br> Unavailable For Legal Reasons</td></tr>
+            <!-- 5xx Server Errors -->
+            <tr><td>500</td><td>Εσωτερικό Σφάλμα Διακομιστή <br> Internal Server Error</td></tr>
+            <tr><td>501</td><td>Μη Υλοποιημένο <br> Not Implemented</td></tr>
+            <tr><td>502</td><td>Κακή Πύλη <br> Bad Gateway</td></tr>
+            <tr><td>503</td><td>Μη Διαθέσιμη Υπηρεσία <br> Service Unavailable</td></tr>
+            <tr><td>504</td><td>Λήξη Χρόνου Πύλης <br> Gateway Timeout</td></tr>
+            <tr><td>505</td><td>Μη Υποστηριζόμενη Έκδοση HTTP <br> HTTP Version Not Supported</td></tr>
+            <tr><td>506</td><td>Η Παραλλαγή Διαπραγματεύεται Επίσης <br> Variant Also Negotiates</td></tr>
+            <tr><td>507</td><td>Μη Επαρκής Αποθήκευση <br> Insufficient Storage</td></tr>
+            <tr><td>508</td><td>Εντοπίστηκε Βρόχος <br> Loop Detected</td></tr>
+            <tr><td>510</td><td>Μη Επεκταμένο <br> Not Extended</td></tr>
+            <tr><td>511</td><td>Απαιτείται Πιστοποίηση Δικτύου <br> Network Authentication Required</td></tr>
         </table>
-            <nav aria-label="Σελιδοποίηση">
-                <ul id="pagination" class="pagination justify-content-center"></ul>
+        <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
     
 </div>
     </div>
