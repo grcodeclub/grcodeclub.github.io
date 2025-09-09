@@ -53,7 +53,7 @@ const htmlContentHeader = `
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/protocol/">Πρωτόκολλα</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/services-port">Υπηρεσίες και Ports</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/list/application-and-protocols">Εφαρμογή και Πρωτόκολλο</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/cloud/">Cloud</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/network/more/cloud">Cloud</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
