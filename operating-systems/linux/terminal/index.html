@@ -34,8 +34,18 @@
         </ol>
         <h2 class="highlight">Πώς βρίσκουμε τις εντολές Linux που έχουμε ήδη τρέξει;</h2>
         <p>Αν πατήσουμε το πάνω βελάκι στο τερματικό Linux θα δούμε με τη σειρά όλες τις προηγούμενες εντολές Linux που τρέξαμε με επιτυχία.</p>
-    </div>
-
-    <div id="addFooter"></div>
+     <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Εντολές</td></tr>
+            <tr><td><a href="./network">Εντολές Διαχείριση Δικτύου</a></td></tr>
+            <tr><td><a href="./system/index">Εντολές Διαχείριση Συστήματος</a></td></tr>
+            <tr><td><a href="./system/apt">apt</a></td></tr>
+            <tr><td><a href="./system/snap">snap</a></td></tr>
+            <tr><td><a href="./system/users">user</a></td></tr>
+        </table>
+        <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
+        </div>
+        <div id="addFooter"></div>
 </body>
 </html>
