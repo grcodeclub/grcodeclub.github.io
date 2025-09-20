@@ -13,48 +13,412 @@
 <body>
     <div id="addHeader"></div>
     <div class="container">
-        <h1 class="title">Class Bootstrap (5.3.3)</h1>
-        
-        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση...">
-        <br>
-        <table id="search_table_page"  class="table table-bordered">
-            <tr id="title-table"><td>Class</td><td>Περιγραφή</td></tr>
-            <tr><td>container</td><td>Περιέχει περιεχόμενο με προκαθορισμένο πλάτος.</td></tr>
-            <tr><td>row</td><td>Δημιουργεί μια σειρά από στήλες.</td></tr>
-            <tr><td>col</td><td>Δημιουργεί στήλες με αναλογικό πλάτος.</td></tr>
-            <tr><td>btn</td><td>Ορίζει ένα κουμπί.</td></tr>
-            <tr><td>alert</td><td>Δημιουργεί προειδοποιήσεις.</td></tr>
-            <tr><td>text-center</td><td>Κεντράρει το κείμενο.</td></tr>
-            <tr><td>d-none</td><td>Κρύβει το στοιχείο.</td></tr>
-            <tr><td>bg-primary</td><td>Ορίζει το φόντο σε μπλε χρώμα.</td></tr>
-            <tr><td>border</td><td>Προσθέτει περίγραμμα.</td></tr>
-            <tr><td>rounded</td><td>Προσθέτει στρογγυλεμένες γωνίες.</td></tr>
-            <tr><td>shadow</td><td>Προσθέτει σκιά.</td></tr>
-            <tr><td>m-0</td><td>Ορίζει περιθώριο 0.</td></tr>
-            <tr><td>text-danger</td><td>Ορίζει κόκκινο χρώμα κειμένου.</td></tr>
-            <tr><td>list-group</td><td>Δημιουργεί μια λίστα group</td></tr>
-            <tr><td>card</td><td>Δημιουργεί ένα πλαίσιο κάρτας.</td></tr>
-            <tr><td>navbar</td><td>Δημιουργεί μια γραμμή πλοήγησης.</td></tr>
-            <tr><td>modal</td><td>Δημιουργεί ένα αναδυόμενο παράθυρο.</td></tr>
-            <tr><td>form-control</td><td>Ορίζει στοιχεία ελέγχου φορμών.</td></tr>
-            <tr><td>badge</td><td>Δημιουργεί ετικέτες.</td></tr>
-            <tr><td>align-items-center</td><td>Κεντράρει τα στοιχεία σε κάθετο άξονα.</td></tr>
-            <tr><td>container-fluid</td><td>Περιέχει περιεχόμενο με 100% πλάτος.</td></tr>
-            <tr><td>spinner-border</td><td>Δημιουργεί ένα σπινέρο φόρτωσης.</td></tr>
-            <tr><td>fade</td><td>Εφαρμόζει εφέ fade.</td></tr>
-            <tr><td>collapse</td><td>Επιτρέπει την πτυχή ενός στοιχείου.</td></tr>
-            <tr><td>dropdown</td><td>Δημιουργεί αναπτυσσόμενο μενού.</td></tr>
-            <tr><td>bg-light</td><td>Ορίζει ανοιχτό φόντο</td></tr>
-            <tr><td>text-white</td><td>Ορίζει λευκό χρώμα κειμένου.</td></tr>
-            <tr><td>border-primary</td><td>Ορίζει μπλε περίγραμμα.	</td></tr>
-            <tr><td>overflow-auto</td><td>Προσθέτει κύλιση όταν το περιεχόμενο ξεπερνά το στοιχείο.</td></tr>
-        </table>
-        <nav aria-label="Σελιδοποίηση">
-            <ul id="pagination" class="pagination justify-content-center">
-                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
-            </ul>
-        </nav>        
+        <h1 class="title">Class Bootstrap</h1>
+        <div class="accordion" id="bootstrapAccordion">
 
+          <!-- Layout -->
+             <div class="accordion-item">
+               <h2 class="accordion-header" id="headingLayout">
+                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLayout" aria-expanded="true" aria-controls="collapseLayout">Layout</button>
+               </h2>
+               <div id="collapseLayout" class="accordion-collapse collapse" aria-labelledby="headingLayout" data-bs-parent="#bootstrapAccordion">
+                 <div class="accordion-body">
+                    <p>Οι κλάσεις αυτής της κατηγορίας σχετίζονται με τη δομή της σελίδας. Χρησιμοποιούνται για να οργανώνεις το περιεχόμενο σε containers, rows και columns, δηλαδή το γνωστό grid system του Bootstrap. Με αυτές φτιάχνεις το βασικό “σκελετό” της σελίδας.</p>
+                   <table class="table table-bordered table-striped">
+                     <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                     <tr><td>container</td><td>Περιέχει περιεχόμενο με προκαθορισμένο πλάτος.</td></tr>
+                     <tr><td>container-fluid</td><td>Πλήρες πλάτος (100%).</td></tr>
+                     <tr><td>row</td><td>Δημιουργεί σειρές.</td></tr>
+                     <tr><td>col</td><td>Στήλες με αναλογικό πλάτος.</td></tr>
+                   </table>
+                 </div>
+               </div>
+             </div>
+      
+               <!-- Components -->
+             <div class="accordion-item">
+               <h2 class="accordion-header" id="headingComponents">
+                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false" aria-controls="collapseComponents">
+                   Components</button>
+               </h2>
+               <div id="collapseComponents" class="accordion-collapse collapse" aria-labelledby="headingComponents" data-bs-parent="#bootstrapAccordion">
+                 <div class="accordion-body">
+                    <p>Περιλαμβάνει όλα τα έτοιμα UI components που προσφέρει το Bootstrap, όπως κουμπιά, κάρτες, navigation bars, modals, dropdowns, tooltips, carousels κλπ. Σου δίνουν έτοιμες λειτουργικές ενότητες που μπορείς να ενσωματώσεις στη σελίδα.</p>
+                   <table class="table table-bordered table-striped">
+                     <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                     <tr><td>btn</td><td>Ορίζει κουμπιά.</td></tr>
+                     <tr><td>alert</td><td>Μηνύματα ειδοποίησης.</td></tr>
+                     <tr><td>card</td><td>Πλαίσιο κάρτας.</td></tr>
+                     <tr><td>list-group</td><td>Λίστα στοιχείων.</td></tr>
+                     <tr><td>navbar</td><td>Γραμμή πλοήγησης.</td></tr>
+                     <tr><td>modal</td><td>Αναδυόμενο παράθυρο.</td></tr>
+                     <tr><td>badge</td><td>Μικρή ετικέτα/σήμανση.</td></tr>
+                     <tr><td>spinner-border</td><td>Σπινέρο φόρτωσης.</td></tr>
+                     <tr><td>dropdown</td><td>Αναπτυσσόμενο μενού.</td></tr>
+                     <tr><td>collapse</td><td>Πτυσσόμενο περιεχόμενο.</td></tr>
+                   </table>
+                 </div>
+               </div>
+             </div>
+
+               <!-- Forms -->
+                <div class="accordion" id="bootstrapAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingForms">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="true" aria-controls="collapseForms">
+                        Forms
+                      </button>
+                    </h2>
+                    <div id="collapseForms" class="accordion-collapse collapse" aria-labelledby="headingForms" data-bs-parent="#bootstrapAccordion">
+                      <div class="accordion-body">
+                        <p>Κλάσεις για την μορφοποίηση φορμών.</p>
+                        <table class="table table-bordered table-striped">
+                          <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                          <tr><td>form-control</td><td>Στυλ για input, textarea, select.</td></tr>
+                          <tr><td>form-label</td><td>Στυλ για label φορμών.</td></tr>
+                          <tr><td>form-text</td><td>Μικρό επεξηγηματικό κείμενο κάτω από input.</td></tr>
+                          <tr><td>form-check</td><td>Wrapper για checkbox ή radio.</td></tr>
+                          <tr><td>form-check-input</td><td>Στυλ για input τύπου checkbox/radio.</td></tr>
+                          <tr><td>form-check-label</td><td>Στυλ για label checkbox/radio.</td></tr>
+                          <tr><td>form-switch</td><td>Μετατρέπει checkbox σε switch.</td></tr>
+                          <tr><td>form-select</td><td>Στυλ για dropdown (select).</td></tr>
+                          <tr><td>input-group</td><td>Ομαδοποίηση input με κουμπιά/labels.</td></tr>
+                          <tr><td>input-group-text</td><td>Στυλ για prefix/suffix σε input.</td></tr>
+                          <tr><td>btn-check</td><td>Κρυφό checkbox/radio που γίνεται button toggle.</td></tr>
+                          <tr><td>valid-feedback</td><td>Μήνυμα επιτυχίας (validation).</td></tr>
+                          <tr><td>invalid-feedback</td><td>Μήνυμα λάθους (validation).</td></tr>
+                          <tr><td>was-validated</td><td>Class για trigger client-side validation.</td></tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+             <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingUtilities">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    Utilities</button></h2>
+                <div id="collapseUtilities" class="accordion-collapse collapse" aria-labelledby="headingUtilities" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Οι utility classes είναι μικρές, έτοιμες κλάσεις που σε βοηθούν να κάνεις γρήγορο styling χωρίς να γράψεις CSS. Εδώ ανήκουν χρώματα, backgrounds, borders, text alignment, display, shadows κλπ. Σου λύνουν τα χέρια για μικρο-ρυθμίσεις.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>text-start</td><td>Στοίχιση κειμένου αριστερά.</td></tr>
+                      <tr><td>text-center</td><td>Στοίχιση κειμένου στο κέντρο.</td></tr>
+                      <tr><td>text-end</td><td>Στοίχιση κειμένου δεξιά.</td></tr>
+                      <tr><td>text-uppercase</td><td>Μετατροπή σε κεφαλαία.</td></tr>
+                      <tr><td>text-lowercase</td><td>Μετατροπή σε πεζά.</td></tr>
+                      <tr><td>text-capitalize</td><td>Πρώτο γράμμα κεφαλαίο.</td></tr>
+                      <tr><td>fw-bold</td><td>Έντονη γραφή.</td></tr>
+                      <tr><td>fw-light</td><td>Λεπτή γραφή.</td></tr>
+                      <tr><td>fst-italic</td><td>Πλάγια γραφή.</td></tr>
+                      <tr><td>lh-1 / lh-sm / lh-lg</td><td>Ύψος γραμμής (line-height).</td></tr>
+                      <tr><td>bg-primary</td><td>Φόντο μπλε.</td></tr>
+                      <tr><td>bg-success</td><td>Φόντο πράσινο.</td></tr>
+                      <tr><td>bg-warning</td><td>Φόντο κίτρινο.</td></tr>
+                      <tr><td>bg-danger</td><td>Φόντο κόκκινο.</td></tr>
+                      <tr><td>bg-info</td><td>Φόντο γαλάζιο.</td></tr>
+                      <tr><td>bg-dark</td><td>Σκούρο φόντο.</td></tr>
+                      <tr><td>bg-light</td><td>Ανοιχτό φόντο.</td></tr>
+                      <tr><td>text-white</td><td>Λευκό κείμενο.</td></tr>
+                      <tr><td>text-muted</td><td>Απαλό γκρι κείμενο.</td></tr>
+                      <tr><td>border</td><td>Προσθέτει περίγραμμα.</td></tr>
+                      <tr><td>border-0</td><td>Χωρίς περίγραμμα.</td></tr>
+                      <tr><td>border-top / border-bottom</td><td>Περίγραμμα επάνω/κάτω.</td></tr>
+                      <tr><td>border-start / border-end</td><td>Περίγραμμα αριστερά/δεξιά.</td></tr>
+                      <tr><td>rounded</td><td>Στρογγυλεμένες γωνίες.</td></tr>
+                      <tr><td>rounded-circle</td><td>Κυκλικό σχήμα.</td></tr>
+                      <tr><td>rounded-pill</td><td>Χάπι/ελλειψοειδές σχήμα.</td></tr>
+                      <tr><td>shadow</td><td>Σκιά.</td></tr>
+                      <tr><td>shadow-sm</td><td>Μικρή σκιά.</td></tr>
+                      <tr><td>shadow-lg</td><td>Μεγάλη σκιά.</td></tr>
+                      <tr><td>d-none</td><td>Απόκρυψη στοιχείου.</td></tr>
+                      <tr><td>d-block</td><td>Block εμφάνιση.</td></tr>
+                      <tr><td>d-inline</td><td>Inline εμφάνιση.</td></tr>
+                      <tr><td>d-inline-block</td><td>Inline-block εμφάνιση.</td></tr>
+                      <tr><td>overflow-auto</td><td>Προσθέτει scroll όταν χρειάζεται.</td></tr>
+                      <tr><td>overflow-hidden</td><td>Κρύβει περιεχόμενο που ξεπερνά.</td></tr>
+                      <tr><td>fade</td><td>Εφέ fade.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFlex"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlex" aria-expanded="true" aria-controls="collapseFlex">Flexbox</button></h2>
+                <div id="collapseFlex" class="accordion-collapse collapse" aria-labelledby="headingFlex" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Οι κλάσεις Flexbox χρησιμοποιούνται για στοίχιση και διάταξη στοιχείων με το CSS Flexbox model. Επιτρέπουν εύκολη τοποθέτηση σε γραμμές/στήλες, στοίχιση στο κέντρο, κατανομή χώρου και responsive layouts.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>d-flex</td><td>Ενεργοποιεί flexbox.</td></tr>
+                      <tr><td>d-inline-flex</td><td>Flexbox σε inline στοιχείο.</td></tr>
+                      <tr><td>flex-row</td><td>Οριζόντια διάταξη.</td></tr>
+                      <tr><td>flex-row-reverse</td><td>Αντίστροφη οριζόντια διάταξη.</td></tr>
+                      <tr><td>flex-column</td><td>Κάθετη διάταξη.</td></tr>
+                      <tr><td>flex-column-reverse</td><td>Αντίστροφη κάθετη διάταξη.</td></tr>
+                      <tr><td>flex-wrap</td><td>Αναδίπλωση στοιχείων.</td></tr>
+                      <tr><td>flex-nowrap</td><td>Χωρίς αναδίπλωση.</td></tr>
+                      <tr><td>justify-content-start</td><td>Στοίχιση στοιχείων αριστερά.</td></tr>
+                      <tr><td>justify-content-center</td><td>Στοίχιση στο κέντρο.</td></tr>
+                      <tr><td>justify-content-end</td><td>Στοίχιση δεξιά.</td></tr>
+                      <tr><td>justify-content-between</td><td>Χώρος μεταξύ στοιχείων.</td></tr>
+                      <tr><td>justify-content-around</td><td>Χώρος γύρω από τα στοιχεία.</td></tr>
+                      <tr><td>justify-content-evenly</td><td>Ίσος χώρος παντού.</td></tr>
+                      <tr><td>align-items-start</td><td>Κάθετη στοίχιση επάνω.</td></tr>
+                      <tr><td>align-items-center</td><td>Κάθετη στοίχιση κέντρο.</td></tr>
+                      <tr><td>align-items-end</td><td>Κάθετη στοίχιση κάτω.</td></tr>
+                      <tr><td>align-items-stretch</td><td>Τα στοιχεία τεντώνονται.</td></tr>
+                      <tr><td>align-content-start</td><td>Στοίχιση γραμμών στην αρχή.</td></tr>
+                      <tr><td>align-content-center</td><td>Στοίχιση γραμμών στο κέντρο.</td></tr>
+                      <tr><td>align-content-end</td><td>Στοίχιση γραμμών στο τέλος.</td></tr>
+                      <tr><td>align-content-between</td><td>Χώρος μεταξύ γραμμών.</td></tr>
+                      <tr><td>align-content-around</td><td>Χώρος γύρω από γραμμές.</td></tr>
+                      <tr><td>align-content-stretch</td><td>Γραμμές τεντώνονται.</td></tr>
+                      <tr><td>align-self-start</td><td>Αυτο-στοίχιση επάνω.</td></tr>
+                      <tr><td>align-self-center</td><td>Αυτο-στοίχιση κέντρο.</td></tr>
+                      <tr><td>align-self-end</td><td>Αυτο-στοίχιση κάτω.</td></tr>
+                      <tr><td>align-self-stretch</td><td>Αυτο-τεντωμένο στοιχείο.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSpacing">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpacing" aria-expanded="true" aria-controls="collapseSpacing">
+                    Spacing (Margin & Padding)</button></h2>
+                <div id="collapseSpacing" class="accordion-collapse collapse" aria-labelledby="headingSpacing" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Αυτή η κατηγορία έχει κλάσεις για τον έλεγχο αποστάσεων γύρω ή μέσα στα στοιχεία. Με m-* ρυθμίζεις το margin, με p-* το padding, και υπάρχουν παραλλαγές για κάθε πλευρά (top, bottom, start, end). Πολύ χρήσιμο για λεπτομέρειες στη διάταξη.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>m-0 … m-5</td><td>Ορίζει περιθώριο (margin) από 0 έως 5.</td></tr>
+                      <tr><td>p-0 … p-5</td><td>Ορίζει εσωτερικό περιθώριο (padding) από 0 έως 5.</td></tr>
+                      <tr><td>mt-*</td><td>Margin πάνω (top).</td></tr>
+                      <tr><td>mb-*</td><td>Margin κάτω (bottom).</td></tr>
+                      <tr><td>ms-*</td><td>Margin αριστερά (start).</td></tr>
+                      <tr><td>me-*</td><td>Margin δεξιά (end).</td></tr>
+                      <tr><td>pt-*</td><td>Padding πάνω (top).</td></tr>
+                      <tr><td>pb-*</td><td>Padding κάτω (bottom).</td></tr>
+                      <tr><td>ps-*</td><td>Padding αριστερά (start).</td></tr>
+                      <tr><td>pe-*</td><td>Padding δεξιά (end).</td></tr>
+                      <tr><td>mx-auto</td><td>Αυτόματο margin δεξιά & αριστερά (στοίχιση κέντρο).</td></tr>
+                      <tr><td>my-auto</td><td>Αυτόματο margin πάνω & κάτω.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSizing"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSizing" aria-expanded="true" aria-controls="collapseSizing">Sizing</button></h2>
+                <div id="collapseSizing" class="accordion-collapse collapse" aria-labelledby="headingSizing" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Οι κλάσεις sizing σου επιτρέπουν να ορίσεις διαστάσεις σε ποσοστά ή viewport units. Π.χ. w-100 γεμίζει το πλάτος, h-50 το μισό ύψος, vh-100 γεμίζει το viewport. Χρησιμοποιούνται όταν χρειάζεσαι responsive ύψος/πλάτος.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>w-25 / w-50 / w-75 / w-100</td><td>Ορίζει πλάτος 25%, 50%, 75%, 100%.</td></tr>
+                      <tr><td>mw-100</td><td>Μέγιστο πλάτος 100%.</td></tr>
+                      <tr><td>h-25 / h-50 / h-75 / h-100</td><td>Ορίζει ύψος 25%, 50%, 75%, 100%.</td></tr>
+                      <tr><td>mh-100</td><td>Μέγιστο ύψος 100%.</td></tr>
+                      <tr><td>min-vw-100</td><td>Ελάχιστο πλάτος 100% του viewport.</td></tr>
+                      <tr><td>min-vh-100</td><td>Ελάχιστο ύψος 100% του viewport.</td></tr>
+                      <tr><td>vw-100</td><td>Πλάτος 100% του viewport.</td></tr>
+                      <tr><td>vh-100</td><td>Ύψος 100% του viewport.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTypography">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTypography" aria-expanded="true" aria-controls="collapseTypography">Typography</button></h2>
+                <div id="collapseTypography" class="accordion-collapse collapse" aria-labelledby="headingTypography" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Αφορά την εμφάνιση του κειμένου: γραμματοσειρές, μεγέθη επικεφαλίδων, line-height, έντονα/πλάγια, στοίχιση, κεφαλαία/πεζά, χρώματα, truncation κλπ. Είναι βασικό κομμάτι του Bootstrap για να δίνεις σωστή μορφή στο περιεχόμενο.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>h1 – h6</td><td>Μεγέθη επικεφαλίδων.</td></tr>
+                      <tr><td>display-1 … display-6</td><td>Μεγάλες επικεφαλίδες (display headings).</td></tr>
+                      <tr><td>lead</td><td>Μεγαλύτερη, ελαφριά παράγραφος.</td></tr>
+                      <tr><td>fw-bold</td><td>Έντονη γραφή (bold).</td></tr>
+                      <tr><td>fw-normal</td><td>Κανονικό πάχος γραμματοσειράς.</td></tr>
+                      <tr><td>fw-light</td><td>Λεπτή γραφή.</td></tr>
+                      <tr><td>fst-italic</td><td>Πλάγια γραφή (italic).</td></tr>
+                      <tr><td>fst-normal</td><td>Κανονικό στυλ γραμματοσειράς.</td></tr>
+                      <tr><td>text-start</td><td>Στοίχιση κειμένου αριστερά.</td></tr>
+                      <tr><td>text-center</td><td>Στοίχιση κειμένου στο κέντρο.</td></tr>
+                      <tr><td>text-end</td><td>Στοίχιση κειμένου δεξιά.</td></tr>
+                      <tr><td>text-uppercase</td><td>Όλο το κείμενο κεφαλαία.</td></tr>
+                      <tr><td>text-lowercase</td><td>Όλο το κείμενο πεζά.</td></tr>
+                      <tr><td>text-capitalize</td><td>Πρώτο γράμμα κάθε λέξης κεφαλαίο.</td></tr>
+                      <tr><td>lh-1</td><td>Line-height πολύ μικρό.</td></tr>
+                      <tr><td>lh-sm</td><td>Line-height μικρό.</td></tr>
+                      <tr><td>lh-base</td><td>Κανονικό line-height.</td></tr>
+                      <tr><td>lh-lg</td><td>Μεγάλο line-height.</td></tr>
+                      <tr><td>text-truncate</td><td>Κόβει κείμενο με αποσιωπητικά.</td></tr>
+                      <tr><td>text-wrap</td><td>Επιτρέπει αναδίπλωση κειμένου.</td></tr>
+                      <tr><td>text-nowrap</td><td>Αποτρέπει την αναδίπλωση.</td></tr>
+                      <tr><td>text-break</td><td>Σπάει λέξεις αν είναι μεγάλες.</td></tr>
+                      <tr><td>text-muted</td><td>Απαλό/γκρι κείμενο.</td></tr>
+                      <tr><td>text-primary</td><td>Κείμενο σε μπλε (theme color).</td></tr>
+                      <tr><td>text-success</td><td>Κείμενο πράσινο.</td></tr>
+                      <tr><td>text-warning</td><td>Κείμενο κίτρινο.</td></tr>
+                      <tr><td>text-danger</td><td>Κείμενο κόκκινο.</td></tr>
+                      <tr><td>text-info</td><td>Κείμενο γαλάζιο.</td></tr>
+                      <tr><td>text-dark</td><td>Σκούρο κείμενο.</td></tr>
+                      <tr><td>text-light</td><td>Ανοιχτό κείμενο.</td></tr>
+                      <tr><td>text-white</td><td>Λευκό κείμενο.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTables">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="true" aria-controls="collapseTables">Tables</button></h2>
+                <div id="collapseTables" class="accordion-collapse collapse" aria-labelledby="headingTables" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Κλάσεις για τη μορφοποίηση πινάκων. Σου δίνουν στυλ όπως borders, striped rows, hover effects, responsive tables και alignment σε κελιά. Κάνουν τους πίνακες πιο καθαρούς και προσαρμοστικούς.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>table</td><td>Βασικό στυλ πίνακα.</td></tr>
+                      <tr><td>table-striped</td><td>Εναλλάξ χρωματιστές γραμμές.</td></tr>
+                      <tr><td>table-bordered</td><td>Προσθέτει περίγραμμα στον πίνακα.</td></tr>
+                      <tr><td>table-borderless</td><td>Αφαιρεί τα περιγράμματα.</td></tr>
+                      <tr><td>table-hover</td><td>Highlight στη σειρά με hover.</td></tr>
+                      <tr><td>table-sm</td><td>Μικρότερο ύψος γραμμών (compact table).</td></tr>
+                      <tr><td>table-responsive</td><td>Ο πίνακας γίνεται οριζόντια scrollable σε μικρές οθόνες.</td></tr>
+                      <tr><td>table-primary / table-success / table-danger ...</td><td>Χρωματισμένες γραμμές/κελιά με theme colors.</td></tr>
+                      <tr><td>align-top</td><td>Στοίχιση περιεχομένου κελιού επάνω.</td></tr>
+                      <tr><td>align-middle</td><td>Στοίχιση περιεχομένου κελιού στο κέντρο.</td></tr>
+                      <tr><td>align-bottom</td><td>Στοίχιση περιεχομένου κελιού κάτω.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingImages">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseImages" aria-expanded="true" aria-controls="collapseImages">Images</button></h2>
+                <div id="collapseImages" class="accordion-collapse collapse" aria-labelledby="headingImages" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Κλάσεις για να κάνεις τις εικόνες responsive και όμορφες. Παράδειγμα: img-fluid για auto-scaling, rounded-circle για avatar style, float-start/end για στοίχιση εικόνων.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>img-fluid</td><td>Κάνει την εικόνα responsive (max-width: 100%).</td></tr>
+                      <tr><td>img-thumbnail</td><td>Προσθέτει περίγραμμα και στρογγυλεμένες γωνίες.</td></tr>
+                      <tr><td>rounded</td><td>Στρογγυλεμένες γωνίες στην εικόνα.</td></tr>
+                      <tr><td>rounded-circle</td><td>Μετατρέπει την εικόνα σε κύκλο.</td></tr>
+                      <tr><td>rounded-pill</td><td>Ελλειπτικό/“χαπάκι” στυλ εικόνας.</td></tr>
+                      <tr><td>float-start</td><td>Η εικόνα στοιχίζεται αριστερά.</td></tr>
+                      <tr><td>float-end</td><td>Η εικόνα στοιχίζεται δεξιά.</td></tr>
+                      <tr><td>mx-auto d-block</td><td>Κεντράρει την εικόνα οριζόντια.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingButtons">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseButtons" aria-expanded="true" aria-controls="collapseButtons">Buttons</button></h2>
+                <div id="collapseButtons" class="accordion-collapse collapse" aria-labelledby="headingButtons" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Κλάσεις για την εμφάνιση κουμπιών σε διάφορα χρώματα και μεγέθη. Περιλαμβάνει solid buttons (<code>btn-primary</code>) αλλά και outline buttons (<code>btn-outline-primary</code>), καθώς και modifiers για μέγεθος (<code>btn-lg</code>, <code>btn-sm</code>) και πλήρες πλάτος (<code>w-100</code>).</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>btn</td><td>Βασικό class για κουμπί.</td></tr>
+                      <tr><td>btn-primary</td><td>Μπλε κουμπί (primary theme color).</td></tr>
+                      <tr><td>btn-secondary</td><td>Γκρι κουμπί (secondary theme color).</td></tr>
+                      <tr><td>btn-success</td><td>Πράσινο κουμπί (επιτυχία).</td></tr>
+                      <tr><td>btn-danger</td><td>Κόκκινο κουμπί (προειδοποίηση/σφάλμα).</td></tr>
+                      <tr><td>btn-warning</td><td>Κίτρινο κουμπί (προειδοποίηση).</td></tr>
+                      <tr><td>btn-info</td><td>Γαλάζιο κουμπί (πληροφορία).</td></tr>
+                      <tr><td>btn-light</td><td>Ανοιχτό κουμπί.</td></tr>
+                      <tr><td>btn-dark</td><td>Σκούρο κουμπί.</td></tr>
+                      <tr><td>btn-link</td><td>Κουμπί σε μορφή link.</td></tr>
+                      <tr><td>btn-outline-primary</td><td>Διάφανο κουμπί με μπλε περίγραμμα.</td></tr>
+                      <tr><td>btn-outline-secondary</td><td>Διάφανο κουμπί με γκρι περίγραμμα.</td></tr>
+                      <tr><td>btn-lg</td><td>Μεγάλο κουμπί.</td></tr>
+                      <tr><td>btn-sm</td><td>Μικρό κουμπί.</td></tr>
+                      <tr><td>btn-block (w-100)</td><td>Κουμπί σε πλήρες πλάτος.</td></tr>
+                      <tr><td>active</td><td>Ενεργό κουμπί.</td></tr>
+                      <tr><td>disabled</td><td>Απενεργοποιημένο κουμπί.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingAlerts">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlerts" aria-expanded="true" aria-controls="collapseAlerts">Alerts</button></h2>
+                <div id="collapseAlerts" class="accordion-collapse collapse" aria-labelledby="headingAlerts" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Χρησιμοποιούνται για μηνύματα ειδοποίησης (success, error, warning, info κλπ). Υποστηρίζουν χρώματα, dismissible κουμπί και animations (fade show). Πολύ χρήσιμα για feedback στον χρήστη.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>alert</td><td>Βασικό class για alert box.</td></tr>
+                      <tr><td>alert-primary</td><td>Μπλε alert (πληροφορία).</td></tr>
+                      <tr><td>alert-secondary</td><td>Γκρι alert (δευτερεύον).</td></tr>
+                      <tr><td>alert-success</td><td>Πράσινο alert (επιτυχία).</td></tr>
+                      <tr><td>alert-danger</td><td>Κόκκινο alert (σφάλμα/κίνδυνος).</td></tr>
+                      <tr><td>alert-warning</td><td>Κίτρινο alert (προειδοποίηση).</td></tr>
+                      <tr><td>alert-info</td><td>Γαλάζιο alert (πληροφορία).</td></tr>
+                      <tr><td>alert-light</td><td>Ανοιχτό alert.</td></tr>
+                      <tr><td>alert-dark</td><td>Σκούρο alert.</td></tr>
+                      <tr><td>alert-link</td><td>Σύνδεσμος με στυλ alert.</td></tr>
+                      <tr><td>alert-dismissible</td><td>Alert που μπορεί να κλείσει (με κουμπί).</td></tr>
+                      <tr><td>fade show</td><td>Εφέ fade όταν εμφανίζεται το alert.</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion" id="bootstrapAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBadges"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBadges" aria-expanded="true" aria-controls="collapseBadges">Badges</button></h2>
+                <div id="collapseBadges" class="accordion-collapse collapse" aria-labelledby="headingBadges" data-bs-parent="#bootstrapAccordion">
+                  <div class="accordion-body">
+                    <p>Μικρές ετικέτες που εμφανίζονται δίπλα σε κείμενο ή κουμπιά. Συνήθως χρησιμοποιούνται για αριθμούς ειδοποιήσεων, status ή κατηγορίες. Μπορούν να πάρουν όλα τα theme colors και σχήματα όπως rounded-pill.</p>
+                    <table class="table table-bordered table-striped">
+                      <tr class="table-dark"><td>Class</td><td>Χρήση / Περιγραφή</td></tr>
+                      <tr><td>badge</td><td>Βασικό class για μικρή ετικέτα.</td></tr>
+                      <tr><td>badge-primary</td><td>Μπλε ετικέτα.</td></tr>
+                      <tr><td>badge-secondary</td><td>Γκρι ετικέτα.</td></tr>
+                      <tr><td>badge-success</td><td>Πράσινη ετικέτα.</td></tr>
+                      <tr><td>badge-danger</td><td>Κόκκινη ετικέτα.</td></tr>
+                      <tr><td>badge-warning</td><td>Κίτρινη ετικέτα.</td></tr>
+                      <tr><td>badge-info</td><td>Γαλάζια ετικέτα.</td></tr>
+                      <tr><td>badge-light</td><td>Ανοιχτή ετικέτα.</td></tr>
+                      <tr><td>badge-dark</td><td>Σκούρα ετικέτα.</td></tr>
+                      <tr><td>rounded-pill</td><td>Badge σε σχήμα "χαπιού".</td></tr>
+                      <tr><td>position-absolute top-0 start-100 translate-middle</td><td>Τοποθέτηση badge πάνω σε κουμπί/εικονίδιο (π.χ. ειδοποιήσεις).</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             </div>
 </div>
     <div id="addFooter"></div>
 </body>
