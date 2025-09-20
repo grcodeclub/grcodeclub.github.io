@@ -1,66 +1,156 @@
 <!DOCTYPE html>
 <html lang="el">
-<head>
-    <meta charset="UTF-8">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@grcodeclub">
-    <meta name="twitter:title" content="Html">
-    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/web.png">
-    <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/web.png"/>
-    <meta property="og:title" content="Html">
-    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
-</head>
-<body>
-    <div id="addHeader"></div>
-    <div class="container">
-        <h1 class="title">HyperText Markup Language</h1>
-        <p>Η HTML αποτελείται  από ετικέτες (tags), οι οποίες περικλείονται μέσα σε σύμβολα «μεγαλύτερο από» και «μικρότερο από» (για παράδειγμα &lt;html>). 
-        <br>Οι ετικέτες συνήθως λειτουργούν ανά ζεύγη (για παράδειγμα &lt;h1> και &lt;/h1>), με την πρώτη να ονομάζεται ετικέτα έναρξης και τη δεύτερη ετικέτα λήξης.</p>
-    
-        <h2 class="highlight">Εντολές</h2>
-        <div class="accordion" id="roadmapAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Input</button></h2>
-                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                <div class="accordion-body">
-                    <h3>Κείμενο (Text)</h2>
-                    <p>Αυτός είναι ο προεπιλεγμένος τύπος. Ο χρήστης μπορεί να εισαγάγει κείμενο.</p>
-                    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="text" name="username"></code></pre></div></div>
-                    <input type="text" name="username">
-                    <h3>Κείμενο (Text) - Απενεργοποίηση Autofill (Αυτόματη Συμπλήρωση)</p>
-                    <p>Αυτό μπορεί να εμποδίσει τα προγράμματα περιήγησης από το να προσφέρουν αυτόματη συμπλήρωση σε φόρμες.</p>
-                    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="text" autocomplete="off"></code></pre></div></div>
-                    <h3>Aναζήτησης (Search)</h3>
-                    <p>Αυτός είναι ο προεπιλεγμένος τύπος. Ο χρήστης μπορεί να εισαγάγει κείμενο.</p>
-                    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="search" name="query"></code></pre></div></div>
-                    <input type="search" name="query">
-                    <p>Κωδικός (Password)</p>
-                    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="password" name="password"></code></pre></div></div>
-                    <input type="password" name="password">
-                    <h3>Κουμπί υποβολής (Submit)</h3>
-                    <p>Χρησιμοποιείται για να υποβάλετε μια φόρμα στον server.</p>
-                    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="submit" value="Υποβολή"></code></pre></div></div>
-                    <input type="submit" value="Υποβολή"> 
-                <br><a href="./input">περισσότερα...</a>
-            </div></div></div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Σύνδεσμοι στην html</button></h2>
-                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                <div class="accordion-body">
-                    <p>Στη γλώσσα HTML οι σύνδεσμοι ορίζονται με την ετικέτα &lt;a> ως εξής:</p>
-                    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href=”url”>κείμενο του συνδέσμου&lt;/a></code></pre></div></div>
-                    <h3>Τοπικοί σύνδεσμοι (Local Links)</h3>
-                    <p>Ο τοπικός σύνδεσμος (local link) είναι ένας υπερσύνδεσμος που παραπέμπει σε μια άλλη σελίδα ή αρχείο μέσα στον ίδιο ιστότοπο. Σε αντίθεση με τους εξωτερικούς συνδέσμους, που οδηγούν σε διαφορετικούς ιστότοπους, οι τοπικοί σύνδεσμοι επιτρέπουν την πλοήγηση εντός της ίδιας ιστοσελίδας ή δικτυακής εφαρμογής.</p>
-                    <p>Οι τοπικοί σύνδεσμοι χρησιμοποιούν σχετικά URL (relative URLs), δηλαδή διευθύνσεις που δεν περιλαμβάνουν το πλήρες URL με το πρωτόκολλο (π.χ., http://www.example.com). Αντίθετα, καθορίζουν τη διαδρομή σε σχέση με τη δομή των φακέλων του ιστότοπου.</p>
-                    <div class="alert alert-warning" role="alert">
-                        <p>Ένας τοπικός σύνδεσμος που παραπέμπει σε μια σελίδα "about.html" στον ίδιο φάκελο μπορεί να γραφτεί ως:</p>
-                        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html"></code>&lt;a href="about.html">Σχετικά με εμάς&lt;/a></code></pre></div></div>
-                        <p>Αν η σελίδα βρίσκεται σε έναν υποφάκελο, η σύνταξη θα είναι:</p>
-                        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href="pages/about.html">Σχετικά με εμάς&lt;/a></code></pre></div></div>
-                        <p>Για να επιστρέψουμε σε έναν ανώτερο φάκελο, χρησιμοποιούμε <code>../</code>, όπως στο παράδειγμα:</p>
-                        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href="../about.html">Σχετικά με εμάς&lt;/a></code></pre></div></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="Html">
+        <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/web.png">
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/web.png"/>
+        <meta property="og:title" content="Html">
+        <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+    </head>
+    <body>
+        <div id="addHeader"></div>
+        <div class="container">
+
+            <h1 class="title">HyperText Markup Language</h1>
+            <p>Η HTML αποτελείται  από ετικέτες (tags), οι οποίες περικλείονται μέσα σε σύμβολα «μεγαλύτερο από» και «μικρότερο από» (για παράδειγμα &lt;html>). 
+            <br>Οι ετικέτες συνήθως λειτουργούν ανά ζεύγη (για παράδειγμα &lt;h1> και &lt;/h1>), με την πρώτη να ονομάζεται ετικέτα έναρξης και τη δεύτερη ετικέτα λήξης.</p>
+            
+            <h2 class="highlight">Πίνακας HTML Tags και Χρήσης τους</h2>
+                <input type="text" id="searchInput" class="form-control" placeholder="Αναζήτηση"><br>
+                <table id="search_table_page" class="table table-bordered table-striped">
+                    <tr id="title-table" class="table-dark"><td>Tag</td><td>Χρήση / Περιγραφή</td></tr>
+                    <tr><td>&lt;!DOCTYPE&gt;</td><td>Δήλωση τύπου εγγράφου.</td></tr>
+                    <tr><td>&lt;html&gt;</td><td>Ρίζα του HTML εγγράφου.</td></tr>
+                    <tr><td>&lt;head&gt;</td><td>Περιέχει metadata, τίτλο, links σε CSS/JS.</td></tr>
+                    <tr><td>&lt;body&gt;</td><td>Ορατό περιεχόμενο σελίδας.</td></tr>
+                    <tr><td>&lt;h1&gt; ... &lt;h6&gt;</td><td>Επικεφαλίδες.</td></tr>
+                    <tr><td>&lt;p&gt;</td><td>Παράγραφος κειμένου.</td></tr>
+                    <tr><td>&lt;a&gt;</td><td>Υπερσύνδεσμος.</td></tr>
+                    <tr><td>&lt;span&gt;</td><td>Inline στοιχείο για styling.</td></tr>
+                    <tr><td>&lt;ul&gt;</td><td>Μη ταξινομημένη λίστα.</td></tr>
+                    <tr><td>&lt;ol&gt;</td><td>Ταξινομημένη λίστα.</td></tr>
+                    <tr><td>&lt;li&gt;</td><td>Στοιχείο λίστας.</td></tr>
+                    <tr><td>&lt;img&gt;</td><td>Εικόνα.</td></tr>
+                    <tr><td>&lt;audio&gt;</td><td>Ενσωμάτωση ήχου.</td></tr>
+                    <tr><td>&lt;video&gt;</td><td>Ενσωμάτωση βίντεο.</td></tr>
+                    <tr><td>&lt;form&gt;</td><td>Φόρμα.</td></tr>
+                    <tr><td>&lt;input&gt;</td><td>Πεδία εισαγωγής δεδομένων.</td></tr>
+                    <tr><td>&lt;textarea&gt;</td><td>Περιοχή κειμένου.</td></tr>
+                    <tr><td>&lt;button&gt;</td><td>Κουμπί.</td></tr>
+                    <tr><td>&lt;label&gt;</td><td>Ετικέτα για input.</td></tr>
+                    <tr><td>&lt;select&gt;</td><td>Λίστα επιλογών.</td></tr>
+                    <tr><td>&lt;option&gt;</td><td>Στοιχείο επιλογής.</td></tr>
+                    <tr><td>&lt;table&gt;</td><td>Πίνακας.</td></tr>
+                    <tr><td>&lt;tr&gt;</td><td>Σειρά πίνακα.</td></tr>
+                    <tr><td>&lt;td&gt;</td><td>Κελί πίνακα.</td></tr>
+                    <tr><td>&lt;th&gt;</td><td>Κεφαλίδα πίνακα.</td></tr>
+                    <tr><td>&lt;div&gt;</td><td>Block στοιχείο.</td></tr>
+                    <tr><td>&lt;section&gt;</td><td>Τμήμα εγγράφου.</td></tr>
+                    <tr><td>&lt;article&gt;</td><td>Αυτόνομο περιεχόμενο.</td></tr>
+                    <tr><td>&lt;nav&gt;</td><td>Πλοήγηση.</td></tr>
+                    <tr><td>&lt;footer&gt;</td><td>Υποσέλιδο.</td></tr>
+                    <tr><td>&lt;header&gt;</td><td>Κεφαλίδα.</td></tr>
+                    <tr><td>&lt;script&gt;</td><td>JavaScript.</td></tr>
+                    <tr><td>&lt;link&gt;</td><td>Σύνδεση σε CSS/αρχείο.</td></tr>
+                    <tr><td>&lt;meta&gt;</td><td>Metadata (charset, description).</td></tr>
+                    <tr><td>&lt;style&gt;</td><td>CSS μέσα στο έγγραφο.</td></tr>
+                    <tr><td>&lt;details&gt;</td><td>Πτυσσόμενο περιεχόμενο.</td></tr>
+                    <tr><td>&lt;figure&gt;</td><td>Περιέχει εικόνα/διάγραμμα.</td></tr>
+                    <tr><td>&lt;figcaption&gt;</td><td>Λεζάντα για το &lt;figure&gt;.</td></tr>
+                    <tr><td>&lt;source&gt;</td><td>Πηγή πολυμέσων (για video/audio).</td></tr>
+                    <tr><td>&lt;track&gt;</td><td>Υπότιτλοι/λεζάντες σε video/audio.</td></tr>
+                    <tr><td>&lt;map&gt;</td><td>Περιοχή χάρτη εικόνας.</td></tr>
+                    <tr><td>&lt;area&gt;</td><td>Ορίζει clickable περιοχές σε &lt;map&gt;.</td></tr>
+                    <tr><td>&lt;canvas&gt;</td><td>Σχεδίαση γραφικών με JavaScript.</td></tr>
+                    <tr><td>&lt;svg&gt;</td><td>Διανυσματικά γραφικά.</td></tr>
+                    <tr><td>&lt;br&gt;</td><td>Αλλαγή γραμμής.</td></tr>
+                    <tr><td>&lt;strong&gt;</td><td>Έντονο (σημασιολογικό).</td></tr>
+                    <tr><td>&lt;b&gt;</td><td>Έντονο (χωρίς σημασιολογία).</td></tr>
+                    <tr><td>&lt;em&gt;</td><td>Έμφαση (πλάγια).</td></tr>
+                    <tr><td>&lt;i&gt;</td><td>Πλάγια γράμματα.</td></tr>
+                    <tr><td>&lt;u&gt;</td><td>Υπογράμμιση.</td></tr>
+                    <tr><td>&lt;mark&gt;</td><td>Επισήμανση (highlight).</td></tr>
+                    <tr><td>&lt;small&gt;</td><td>Μικρό κείμενο.</td></tr>
+                    <tr><td>&lt;sup&gt;</td><td>Εκθέτης.</td></tr>
+                    <tr><td>&lt;sub&gt;</td><td>Δείκτης.</td></tr>
+                    <tr><td>&lt;code&gt;</td><td>Κώδικας.</td></tr>
+                    <tr><td>&lt;pre&gt;</td><td>Προμορφοποιημένο κείμενο.</td></tr>
+                    <tr><td>&lt;kbd&gt;</td><td>Πλήκτρο/εντολή πληκτρολογίου.</td></tr>
+                    <tr><td>&lt;samp&gt;</td><td>Δείγμα εξόδου προγράμματος.</td></tr>
+                    <tr><td>&lt;blockquote&gt;</td><td>Απόσπασμα/παράθεση.</td></tr>
+                    <tr><td>&lt;q&gt;</td><td>Σύντομη παράθεση (inline).</td></tr>
+                    <tr><td>&lt;abbr&gt;</td><td>Συντομογραφία (με τίτλο).</td></tr>
+                    <tr><td>&lt;cite&gt;</td><td>Παραπομπή.</td></tr>
+                    <tr><td>&lt;address&gt;</td><td>Διεύθυνση επαφής.</td></tr>
+                    <tr><td>&lt;del&gt;</td><td>Διαγραμμένο κείμενο.</td></tr>
+                    <tr><td>&lt;ins&gt;</td><td>Προσθήκη κειμένου.</td></tr>
+                    <tr><td>&lt;progress&gt;</td><td>Γραμμή προόδου.</td></tr>
+                    <tr><td>&lt;hr&gt;</td><td>Οριζόντια γραμμή.</td></tr>
+                    <tr><td>&lt;fieldset&gt;</td><td>Ομαδοποίηση στοιχείων φόρμας.</td></tr>
+                    <tr><td>&lt;legend&gt;</td><td>Τίτλος για το &lt;fieldset&gt;.</td></tr>
+                    <tr><td>&lt;datalist&gt;</td><td>Προτεινόμενες τιμές για input.</td></tr>
+                    <tr><td>&lt;output&gt;</td><td>Εμφάνιση αποτελέσματος υπολογισμού.</td></tr>
+                </table>
+                <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
+                
+            <h2 class="highlight">Εντολές</h2>
+            <div class="accordion" id="roadmapAccordion">
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Input</button></h2>
+                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+
+                            <h3>Κείμενο (Text)</h3>
+                            <p>Αυτός είναι ο προεπιλεγμένος τύπος. Ο χρήστης μπορεί να εισαγάγει κείμενο.</p>
+                            <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="text" name="username"></code></pre></div></div>
+                            <input type="text" name="username">
+                            <p>Κείμενο (Text) - Απενεργοποίηση Autofill (Αυτόματη Συμπλήρωση)</p>
+                            <p>Αυτό μπορεί να εμποδίσει τα προγράμματα περιήγησης από το να προσφέρουν αυτόματη συμπλήρωση σε φόρμες.</p>
+                            <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="text" autocomplete="off"></code></pre></div></div>
+
+                            <hr><h3>Aναζήτησης (Search)</h3>
+                            <p>Αυτός είναι ο προεπιλεγμένος τύπος. Ο χρήστης μπορεί να εισαγάγει κείμενο.</p>
+                            <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="search" name="query"></code></pre></div></div>
+                            <input type="search" name="query">
+
+                            <hr><h3>Κωδικός (Password)</h3>
+                            <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="password" name="password"></code></pre></div></div>
+                            <input type="password" name="password">
+
+                            <hr><h3>Κουμπί υποβολής (Submit)</h3>
+                            <p>Χρησιμοποιείται για να υποβάλετε μια φόρμα στον server.</p>
+                            <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;input type="submit" value="Υποβολή"></code></pre></div></div>
+                            <input type="submit" value="Υποβολή">
+                            <div class="text-center my-3"><a href="./input" class="btn btn-outline-secondary btn-sm">Περισσότερα <i class="fas fa-arrow-right ms-1"></i></a></div>                
+                        </div>
                     </div>
-                </div></div></div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Σύνδεσμοι στην html</button></h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Στη γλώσσα HTML οι σύνδεσμοι ορίζονται με την ετικέτα &lt;a> ως εξής:</p>
+                            <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href=”url”>κείμενο του συνδέσμου&lt;/a></code></pre></div></div>
+                            <h3>Τοπικοί σύνδεσμοι (Local Links)</h3>
+                            <p>Ο τοπικός σύνδεσμος (local link) είναι ένας υπερσύνδεσμος που παραπέμπει σε μια άλλη σελίδα ή αρχείο μέσα στον ίδιο ιστότοπο. Σε αντίθεση με τους εξωτερικούς συνδέσμους, που οδηγούν σε διαφορετικούς ιστότοπους, οι τοπικοί σύνδεσμοι επιτρέπουν την πλοήγηση εντός της ίδιας ιστοσελίδας ή δικτυακής εφαρμογής.</p>
+                            <p>Οι τοπικοί σύνδεσμοι χρησιμοποιούν σχετικά URL (relative URLs), δηλαδή διευθύνσεις που δεν περιλαμβάνουν το πλήρες URL με το πρωτόκολλο (π.χ., http://www.example.com). Αντίθετα, καθορίζουν τη διαδρομή σε σχέση με τη δομή των φακέλων του ιστότοπου.</p>
+                            <div class="alert alert-warning" role="alert">
+                                <p>Ένας τοπικός σύνδεσμος που παραπέμπει σε μια σελίδα "about.html" στον ίδιο φάκελο μπορεί να γραφτεί ως:</p>
+                                <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html"></code>&lt;a href="about.html">Σχετικά με εμάς&lt;/a></code></pre></div></div>
+                                <p>Αν η σελίδα βρίσκεται σε έναν υποφάκελο, η σύνταξη θα είναι:</p>
+                                <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href="pages/about.html">Σχετικά με εμάς&lt;/a></code></pre></div></div>
+                                <p>Για να επιστρέψουμε σε έναν ανώτερο φάκελο, χρησιμοποιούμε <code>../</code>, όπως στο παράδειγμα:</p>
+                                <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;a href="../about.html">Σχετικά με εμάς&lt;/a></code></pre></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Kείμενο</button></h2>
                     <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
@@ -82,20 +172,23 @@
 &lt;h4&gt;Επικεφαλίδα 4&lt;/h4&gt;
 &lt;h5&gt;Επικεφαλίδα 5&lt;/h5&gt;
 &lt;h6&gt;Επικεφαλίδα 6&lt;/h16&gt;</code></pre></div></div> 
-                </div></div></div>
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Πίνακες</button></h2>
-    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-            <p>Οι πίνακες χρησιμοποιούνται στην HTML για να οργανώνουν δεδομένα σε σειρές και στήλες. Μπορούν να εμφανίζουν πληροφορίες όπως στατιστικά στοιχεία, χρονοδιαγράμματα κ.λπ.</p>
-            <p>Για να δημιουργήσουμε έναν πίνακα στην HTML, χρησιμοποιούμε την ετικέτα <code>&lt;table></code>. Ο πίνακας αποτελείται από:</p>
-            <ol>
-                <li>Γραμμές (<code>&lt;tr></code>): Ορίζουν τις σειρές του πίνακα.</li>
-                <li>Κελιά δεδομένων (<code>&lt;td></code>): Περιέχουν τις πληροφορίες του πίνακα.</li>
-                <li>Κεφαλίδες (<code>&lt;th></code>) → Δημιουργούν επικεφαλίδες στηλών με έντονη γραφή.</li>
-            </ol>
-        <p>Χρησιμοποιούμε το <code>colspan</code> για να συγχωνεύσουμε κελιά σε περισσότερες από μία στήλες.</p>
-        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
+                    </div>
+                </div>
+            </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Πίνακες</button></h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Οι πίνακες χρησιμοποιούνται στην HTML για να οργανώνουν δεδομένα σε σειρές και στήλες. Μπορούν να εμφανίζουν πληροφορίες όπως στατιστικά στοιχεία, χρονοδιαγράμματα κ.λπ.</p>
+                            <p>Για να δημιουργήσουμε έναν πίνακα στην HTML, χρησιμοποιούμε την ετικέτα <code>&lt;table></code>. Ο πίνακας αποτελείται από:</p>
+                            <ol>
+                                <li>Γραμμές (<code>&lt;tr></code>): Ορίζουν τις σειρές του πίνακα.</li>
+                                <li>Κελιά δεδομένων (<code>&lt;td></code>): Περιέχουν τις πληροφορίες του πίνακα.</li>
+                                <li>Κεφαλίδες (<code>&lt;th></code>) → Δημιουργούν επικεφαλίδες στηλών με έντονη γραφή.</li>
+                            </ol>
+                        <p>Χρησιμοποιούμε το <code>colspan</code> για να συγχωνεύσουμε κελιά σε περισσότερες από μία στήλες.</p>
+                        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
     &lt;tr>
         &lt;th colspan="2">Ονοματεπώνυμο&lt;/th>
         &lt;th>Ηλικία&lt;/th>
@@ -106,9 +199,9 @@
         &lt;td>28&lt;/td>
     &lt;/tr>
 &lt;/table></code></pre></div></div>
-        <ul><li>Το border="1" προσθέτει περίγραμμα στον πίνακα.</li></ul>
-        <p>Χρησιμοποιούμε το <code>rowspan</code> για να συγχωνεύσουμε κελιά σε περισσότερες από μία γραμμές.</p>
-        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
+                        <ul><li>Το border="1" προσθέτει περίγραμμα στον πίνακα.</li></ul>
+                        <p>Χρησιμοποιούμε το <code>rowspan</code> για να συγχωνεύσουμε κελιά σε περισσότερες από μία γραμμές.</p>
+                        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
     &lt;tr>
         &lt;th rowspan="2">Όνομα&lt;/th>
         &lt;td>Μαρία&lt;/td>
@@ -117,15 +210,15 @@
         &lt;td>Γιώργος&lt;/td>
     &lt;/tr>
 &lt;/table></code></pre></div></div>
-        <ul><li>Το border="1" προσθέτει περίγραμμα στον πίνακα.</li></ul>
-        <p>Όταν οι πίνακες περιέχουν μεγάλο όγκο δεδομένων, μπορούμε να τους οργανώσουμε καλύτερα χρησιμοποιώντας τις ετικέτες <code>&lt;thead></code>, <code>&lt;tbody></code>, <code>&lt;tfoot></code>.</p>
-        <p>Αυτές οι ετικέτες διαχωρίζουν τον πίνακα σε ξεχωριστά λογικά τμήματα:</p>
-        <ol>
-            <li><code>&lt;thead></code> : Περιέχει τις επικεφαλίδες.</li>
-            <li><code>&lt;tbody></code> : Περιέχει το κυρίως περιεχόμενο.</li>
-            <li><code>&lt;tfoot></code> : Περιέχει σύνολα, υποσημειώσεις ή στατιστικά δεδομένα.</li>
-        </ol>
-        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
+                        <ul><li>Το border="1" προσθέτει περίγραμμα στον πίνακα.</li></ul>
+                        <p>Όταν οι πίνακες περιέχουν μεγάλο όγκο δεδομένων, μπορούμε να τους οργανώσουμε καλύτερα χρησιμοποιώντας τις ετικέτες <code>&lt;thead></code>, <code>&lt;tbody></code>, <code>&lt;tfoot></code>.</p>
+                        <p>Αυτές οι ετικέτες διαχωρίζουν τον πίνακα σε ξεχωριστά λογικά τμήματα:</p>
+                        <ol>
+                            <li><code>&lt;thead></code> : Περιέχει τις επικεφαλίδες.</li>
+                            <li><code>&lt;tbody></code> : Περιέχει το κυρίως περιεχόμενο.</li>
+                            <li><code>&lt;tfoot></code> : Περιέχει σύνολα, υποσημειώσεις ή στατιστικά δεδομένα.</li>
+                        </ol>
+                        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
     &lt;thead>
         &lt;tr>
             &lt;th>Όνομα&lt;/th>
@@ -151,8 +244,8 @@
         &lt;/tr>
     &lt;/tfoot>
 &lt;/table></code></pre></div></div>
-    <p>Η ετικέτα <code>&lt;caption></code> προσθέτει έναν τίτλο στον πίνακα, βελτιώνοντας την προσβασιμότητα και την κατανόηση των δεδομένων.</p>
-    <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
+                        <p>Η ετικέτα <code>&lt;caption></code> προσθέτει έναν τίτλο στον πίνακα, βελτιώνοντας την προσβασιμότητα και την κατανόηση των δεδομένων.</p>
+                        <div class="bg_preview"> <div class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;table border="1">
     &lt;caption>Λίστα Χρηστών&lt;/caption>
     &lt;tr>
         &lt;th>Όνομα&lt;/th>
@@ -170,59 +263,63 @@
         &lt;td>Θεσσαλονίκη&lt;/td>
     &lt;/tr>
 &lt;/table></code></pre></div></div>
-        </div></div></div>
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Λίστα</button></h2>
-    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-            <p>Οι λίστες στην HTML αποτελούν ένα βασικό εργαλείο για τη δομημένη παρουσίαση περιεχομένου, επιτρέποντας την οργάνωση πληροφοριών με σαφή και ευανάγνωστο τρόπο. Διακρίνονται σε τρεις τύπους: μη διατεταγμένες (<code>&lt;ul></code>), όπου τα στοιχεία δεν έχουν συγκεκριμένη σειρά, διατεταγμένες (<code>&lt;ol></code>), όπου τα στοιχεία αριθμούνται ή ταξινομούνται, και λίστες ορισμών (<code>&lt;dl></code>), που χρησιμοποιούνται για τη συσχέτιση όρων με τις αντίστοιχες περιγραφές τους.</p>
-        <h2 class="highlight">Διατεταγμένη Λίστα (Ordered List)</h2>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Λίστα</button></h2>
+                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Οι λίστες στην HTML αποτελούν ένα βασικό εργαλείο για τη δομημένη παρουσίαση περιεχομένου, επιτρέποντας την οργάνωση πληροφοριών με σαφή και ευανάγνωστο τρόπο. Διακρίνονται σε τρεις τύπους: μη διατεταγμένες (<code>&lt;ul></code>), όπου τα στοιχεία δεν έχουν συγκεκριμένη σειρά, διατεταγμένες (<code>&lt;ol></code>), όπου τα στοιχεία αριθμούνται ή ταξινομούνται, και λίστες ορισμών (<code>&lt;dl></code>), που χρησιμοποιούνται για τη συσχέτιση όρων με τις αντίστοιχες περιγραφές τους.</p>
+                            <h2 class="highlight">Διατεταγμένη Λίστα (Ordered List)</h2>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol>
 &lt;il>Στοιχείο 1&lt;/il>
 &lt;il>Στοιχείο 2&lt;/il>
 &lt;il>Στοιχείο 3&lt;/il>                        
 &lt;/ol></code></pre></div></div>
-        <ol>
-            <li>Στοιχείο 1</li>
-            <li>Στοιχείο 2</li>
-            <li>Στοιχείο 3</li>
-        </ol>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-roman;">
+                            <ol>
+                                <li>Στοιχείο 1</li>
+                                <li>Στοιχείο 2</li>
+                                <li>Στοιχείο 3</li>
+                            </ol>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-roman;">
 &lt;li>Στοιχείο 1&lt;/li>
 &lt;li>Στοιχείο 2&lt;/li>
 &lt;li>Στοιχείο 3&lt;/li>
 &lt;/ol></code></pre></div></div>
-        <ol style="list-style:lower-roman;">
-            <li>Στοιχείο 1</li>
-            <li>Στοιχείο 2</li>
-            <li>Στοιχείο 3</li>
-        </ol>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-greek;">
+                            <ol style="list-style:lower-roman;">
+                                <li>Στοιχείο 1</li>
+                                <li>Στοιχείο 2</li>
+                                <li>Στοιχείο 3</li>
+                            </ol>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-greek;">
 &lt;li>Στοιχείο 1&lt;/li>
 &lt;li>Στοιχείο 2&lt;/li>
 &lt;li>Στοιχείο 3&lt;/li>
 &lt;/ol></code></pre></div></div>
-        <ol style="list-style:lower-greek;">
-            <li>Στοιχείο 1</li>
-            <li>Στοιχείο 2</li>
-            <li>Στοιχείο 3</li>
-        </ol>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-latin;">
+                            <ol style="list-style:lower-greek;">
+                                <li>Στοιχείο 1</li>
+                                <li>Στοιχείο 2</li>
+                                <li>Στοιχείο 3</li>
+                            </ol>
+                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-html">&lt;ol style="list-style:lower-latin;">
 &lt;li>Στοιχείο 1&lt;/li>
 &lt;li>Στοιχείο 2&lt;/li>
 &lt;li>Στοιχείο 3&lt;/li>
 &lt;/ol></code></pre></div></div>
-            <br><a href="./list">περισσότερα...</a>
-        </div></div></div>
-
-        </div><!-- end roadmapAccordion-->
+                            <div class="text-center my-3"><a href="./list" class="btn btn-outline-secondary btn-sm">Περισσότερα <i class="fas fa-arrow-right ms-1"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end roadmapAccordion-->
+                
                 <h2 class="highlight">Χρήσιμοι Σύνδεσμοι</h2>
                 <a href="./meta-tags" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4"><i class="fas fa-link"></i>Meta Tags</a><br>
                 <a href="./multimedia" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4"><i class="fas fa-link"></i>Multimedia</a><br>
                 <a href="https://github.com/grcodeclub/html-css" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-github"></i> Δες παραδείγματα στο GitHub</a><br>
                 <a href="https://www.youtube.com/playlist?list=PLccKqff_Oyws1Zgi1tyocDQAl0rsxJjz3" class="btn btn-danger btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fab fa-youtube"></i>  Δες την Playlist στο YouTube</a><br>
-
-    </div>
-    <div id="addFooter"></div>
-</body>
+            </div>
+        <div id="addFooter"></div>
+    </body>
 </html>

@@ -1,113 +1,295 @@
 <!DOCTYPE html>
 <html lang="el">
-<head>
-    <meta charset="UTF-8">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@grcodeclub">
-    <meta name="twitter:title" content="Φτιάξε το δικό σου υπολογιστή">
-     <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
-    <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
-    <meta property="og:title" content="Φτιάξε το δικό σου υπολογιστή">
-    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
-    <style>
-        .mycollapse{padding-top: 5%;}
-    </style>
-</head>
-<body>
-    <div id="addHeader"></div>
-    <div class="container">
-        <h1 class="title">Φτιάξε το δικό σου υπολογιστή</h1>
-        <div class="accordion" id="roadmapAccordion">
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Κεντρική Μονάδα Επεξεργασίας (CPU)</button></h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                <div class="accordion-body">
-                    Η μητρική κάρτα συνδέει όλα τα εξαρτήματα του υπολογιστή και είναι ουσιαστικά το "σπίτι" του gaming PC. Επιλέξτε μια μητρική κάρτα που να συμβαδίζει με τα υπόλοιπα εξαρτήματά σας και να προσφέρει αξιόπιστη απόδοση.
-                </div>
-                </div>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="Φτιάξε το δικό σου υπολογιστή">
+         <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
+        <meta property="og:title" content="Φτιάξε το δικό σου υπολογιστή">
+        <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+        <style>.mycollapse{padding-top: 5%;}</style>
+    </head>
+    <body>
+        <div id="addHeader"></div>
+        <div class="container">
+            <h1 class="title">Φτιάξε το δικό σου υπολογιστή</h1>
+            <div class="accordion" id="roadmapAccordion"> 
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Κεντρική Μονάδα Επεξεργασίας (CPU)</button></h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Η μητρική κάρτα συνδέει όλα τα εξαρτήματα του υπολογιστή και είναι ουσιαστικά το "σπίτι" του gaming PC. Επιλέξτε μια μητρική κάρτα που να συμβαδίζει με τα υπόλοιπα εξαρτήματά σας και να προσφέρει αξιόπιστη απόδοση.</p>
+                            <ul>
+                                <li><strong>Συμβατότητα:</strong> Έλεγξε ότι το socket της CPU ταιριάζει με το socket της μητρικής.</li>
+                                <li><strong>Πυρήνες & Threads:</strong> Περισσότεροι πυρήνες = καλύτερο multitasking (π.χ. 8 για gaming).</li>
+                                <li><strong>Συχνότητα λειτουργίας:</strong> Base/Boost clock επηρεάζει την απόδοση σε single-thread εφαρμογές.</li>
+                                <li><strong>Overclocking:</strong> Intel (σειρά K) & AMD (σειρά X) υποστηρίζουν overclocking για αυξημένη απόδοση.</li>
+                                <li><strong>Ενσωματωμένα γραφικά (iGPU):</strong> Χρήσιμα αν δεν υπάρχει ξεχωριστή κάρτα γραφικών.</li>
+                                <li><strong>Cache:</strong> Όσο μεγαλύτερη L3 cache, τόσο καλύτερη η ταχύτητα.</li>
+                                <li><strong>Κατανάλωση (TDP):</strong> Σημαντικό για επιλογή ψύξης και τροφοδοτικού.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>     
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="ram"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHardware" aria-expanded="false" aria-controls="collapseHardware">Μνήμη RAM</button></h2>
-                <div id="collapseHardware" class="accordion-collapse collapse" aria-labelledby="collapseHardware" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        Η μνήμη RAM είναι υπεύθυνη για την ταχύτητα και την ομαλή λειτουργία του υπολογιστή. Επιλέξτε μνήμη RAM με αρκετή χωρητικότητα για να υποστηρίξει τα παιχνίδια και τις εφαρμογές σας. Μεγαλύτερη μνήμη RAM σημαίνει περισσότερη ταχύτητα και ευκολία στις παράλληλες διαδικασίες.
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="Motherboard"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMotherboard" aria-expanded="false" aria-controls="collapseMotherboard">Μητρική Κάρτα (Motherboard)</button></h2>
+                    <div id="collapseMotherboard" class="accordion-collapse collapse" aria-labelledby="Motherboard" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Socket CPU:</strong> Πρέπει να ταιριάζει με τον επεξεργαστή.</li>
+                                <li><strong>Chipset:</strong> Καθορίζει δυνατότητες.</li>
+                                <li><strong>Υποδοχές RAM:</strong> Αριθμός DIMM slots, μέγιστη χωρητικότητα & συχνότητα (MHz).</li>
+                                <li><strong>Αποθηκευτικά μέσα:</strong> Υποστήριξη για NVMe SSD, SATA SSD/HDD.</li>
+                                <li><strong>PCIe Slots:</strong> Για GPU, κάρτες ήχου/δικτύου, επιπλέον SSD.</li>
+                                <li><strong>Συνδεσιμότητα:</strong> USB 3.2, USB-C, Thunderbolt, HDMI/DP για iGPU.</li>
+                                <li><strong>Δίκτυο:</strong> Ενσωματωμένη κάρτα Ethernet (1Gbps, 2.5Gbps) και Wi-Fi/Bluetooth.</li>
+                                <li><strong>Ψύξη & VRM:</strong> Καλή ποιότητα VRMs = σταθερότητα, ειδικά για overclocking.</li>
+                                <li><strong>RGB & Fan Headers:</strong> Για σύνδεση ανεμιστήρων & φωτισμού.</li>
+                                <li><strong>Μέγεθος:</strong> ATX, Micro-ATX, Mini-ITX (επηρεάζει το κουτί).</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="disk"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDisk" aria-expanded="false" aria-controls="collapseDisk">Σκληρός Δίσκος (HDD) και SSD</button></h2>
-                <div id="collapseDisk" class="accordion-collapse collapse" aria-labelledby="collapseDisk" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        <ol>
-                            <li>HDD: Χρησιμοποιεί μηχανικούς δίσκους και είναι συνήθως πιο αργός </li>
-                            <li>SSD: Χρησιμοποιεί μνήμη flash και είναι ταχύτερος.</li>
-                        </ol>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="ram"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHardware" aria-expanded="false" aria-controls="collapseHardware">Μνήμη RAM</button></h2>
+                    <div id="collapseHardware" class="accordion-collapse collapse" aria-labelledby="collapseHardware" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Η μνήμη RAM είναι υπεύθυνη για την ταχύτητα και την ομαλή λειτουργία του υπολογιστή. Επιλέξτε μνήμη RAM με αρκετή χωρητικότητα για να υποστηρίξει τα παιχνίδια και τις εφαρμογές σας. Μεγαλύτερη μνήμη RAM σημαίνει περισσότερη ταχύτητα και ευκολία στις παράλληλες διαδικασίες.</p>
+                            <ul>
+                                <li><strong>Χωρητικότητα:</strong> 16GB είναι στάνταρ για gaming, 32GB+ για παραγωγική χρήση (video editing, 3D rendering).</li>
+                                <li><strong>Συχνότητα (MHz):</strong> Όσο μεγαλύτερη τόσο καλύτερη (π.χ. 3200MHz).</li>
+                                <li><strong>Latency (CL timings):</strong> Μικρότερα CL σημαίνουν ταχύτερη απόκριση.</li>
+                                <li><strong>Δίαυλοι:</strong> Dual Channel ή Quad Channel για υψηλότερο bandwidth.</li>
+                                <li><strong>XMP/EXPO Profiles:</strong> Διευκολύνουν την αυτόματη ρύθμιση της RAM στις μέγιστες επιδόσεις.</li>
+                                <li><strong>Τύπος:</strong> DDR4 (πιο οικονομική) ή DDR5 (νεότερη και ταχύτερη).</li>
+                                <li><strong>Συμβατότητα:</strong> Έλεγξε αν η μητρική υποστηρίζει την RAM (QVL list).</li>
+                                <li><strong>RGB RAM:</strong> Προαιρετικό για αισθητική σε gaming builds.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>     
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="GPU"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGPU" aria-expanded="false" aria-controls="collapseGPU">Κάρτες Γραφικών (GPU)</h2>
-                <div id="collapseGPU" class="accordion-collapse collapse" aria-labelledby="collapseGPU" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        <p>Αν είσαι gamer ή δουλεύεις με γραφικά, η κάρτα γραφικών είναι ένα από τα πιο σημαντικά εξαρτήματα. Επίλεξε NVIDIA ή AMD.</p>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="disk"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDisk" aria-expanded="false" aria-controls="collapseDisk">Σκληρός Δίσκος (HDD) και SSD</button></h2>
+                    <div id="collapseDisk" class="accordion-collapse collapse" aria-labelledby="collapseDisk" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>HDD (Hard Disk Drive):</strong> 
+                                    <ul>
+                                        <li>Μεγάλη χωρητικότητα (1TB – 10TB+).</li>
+                                        <li>Πιο οικονομικός ανά GB.</li>
+                                        <li>Κατάλληλος για αποθήκευση αρχείων, multimedia, backup.</li>
+                                        <li>Πιο αργός λόγω μηχανικών μερών.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>SATA SSD:</strong>
+                                    <ul>
+                                        <li>Ταχύτερος από HDD.</li>
+                                        <li>Καλή επιλογή για λειτουργικό σύστημα.</li>
+                                        <li>Πιο προσιτός από NVMe SSD.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>NVMe SSD:</strong>
+                                    <ul>
+                                        <li>Εξαιρετικά γρήγορες ταχύτητες ανάγνωσης/εγγραφής.</li>
+                                        <li>Ιδανικός για gaming & επαγγελματικές εφαρμογές.</li>
+                                        <li>Τοποθετείται κατευθείαν στη μητρική (M.2 slot).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Χωρητικότητα:</strong> 
+                                    <ul>
+                                        <li>500GB – 1TB για OS & games.</li>
+                                        <li>2TB+ για μεγάλα projects & αποθήκευση.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Αντοχή (TBW):</strong> Σημαντική για SSD, δείχνει πόσα δεδομένα μπορεί να γράψει πριν φθαρεί.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>     
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="periferiaka"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseperiferiaka" aria-expanded="false" aria-controls="collapseperiferiaka">Περιφερειακά</h2>
-                <div id="collapseperiferiaka" class="accordion-collapse collapse" aria-labelledby="collapseperiferiaka" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        <ol>
-                            <li>Πληκτρολόγιο</li><li>Ποντίκι</li><li>Μικρόφωνο</li><li>Οθόνη (Monitor)</li><li>Ηχεία</li><li>Εκτυπωτής</li>
-                        </ol>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="GPU"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGPU" aria-expanded="false" aria-controls="collapseGPU">Κάρτες Γραφικών (GPU)</h2>
+                    <div id="collapseGPU" class="accordion-collapse collapse" aria-labelledby="collapseGPU" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Αν είσαι gamer ή δουλεύεις με γραφικά, η κάρτα γραφικών είναι ένα από τα πιο σημαντικά εξαρτήματα. Επίλεξε NVIDIA ή AMD.</p>
+                            <ul>
+                                <li><strong>Κατασκευαστές:</strong> NVIDIA (GeForce) και AMD (Radeon).</li>
+                                <li><strong>VRAM:</strong> 6GB–8GB για απλό gaming, 12GB+ για 4K ή επαγγελματική χρήση (3D, video editing).</li>
+                                <li><strong>Τεχνολογίες:</strong> 
+                                    <ul>
+                                        <li>NVIDIA: Ray Tracing, DLSS.</li>
+                                        <li>AMD: Ray Tracing, FSR.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Συμβατότητα με Monitor:</strong> Έλεγξε αν υποστηρίζει HDMI 2.1, DisplayPort, G-Sync ή FreeSync.</li>
+                                <li><strong>Κατανάλωση Ρεύματος:</strong> Σημαντικό για επιλογή τροφοδοτικού (PSU).</li>
+                                <li><strong>Ψύξη:</strong> Custom ψύκτρες (2-fan, 3-fan) για χαμηλότερες θερμοκρασίες & θόρυβο.</li>
+                                <li><strong>Χρήση:</strong>
+                                    <ul>
+                                        <li>Gaming: Υψηλά FPS σε 1080p, 1440p, 4K.</li>
+                                        <li>Επαγγελματική: CUDA cores (NVIDIA) ή OpenCL (AMD) για rendering.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Form Factor:</strong> Έλεγξε μήκος/πάχος GPU ώστε να χωρά στο κουτί.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>     
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="PSU"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePSU" aria-expanded="false" aria-controls="collapsePSU">Τροφοδοτικό (PSU)</h2>
-                <div id="collapsePSU" class="accordion-collapse collapse" aria-labelledby="collapsePSU" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        <p>Βεβαιώσου ότι το τροφοδοτικό σου έχει αρκετή ισχύ για να υποστηρίξει όλα τα εξαρτήματα.</p>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="periferiaka"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseperiferiaka" aria-expanded="false" aria-controls="collapseperiferiaka">Περιφερειακά</h2>
+                    <div id="collapseperiferiaka" class="accordion-collapse collapse" aria-labelledby="collapseperiferiaka" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Πληκτρολόγιο:</strong> 
+                                    <ul>
+                                        <li>Μηχανικό (mechanical) με switches (Red, Blue, Brown).</li>
+                                        <li>Μεμβράνης (πιο οικονομικό).</li>
+                                        <li>RGB φωτισμός για αισθητική.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Ποντίκι:</strong>
+                                    <ul>
+                                        <li>Gaming με υψηλό DPI & macro κουμπιά.</li>
+                                        <li>Ergonomic για άνεση σε πολύωρη χρήση.</li>
+                                        <li>Ασύρματο ή ενσύρματο.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Οθόνη (Monitor):</strong>
+                                    <ul>
+                                        <li>Ανάλυση: 1080p (Full HD), 1440p (QHD), 2160p (4K).</li>
+                                        <li>Ρυθμός ανανέωσης: 60Hz – 144Hz – 240Hz+.</li>
+                                        <li>Τύπος πάνελ: IPS (καλύτερα χρώματα), TN (ταχύτητα), VA (contrast).</li>
+                                        <li>G-Sync (NVIDIA) ή FreeSync (AMD) για ομαλό gaming.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Ακουστικά / Headset:</strong> Stereo ή Surround, με/χωρίς μικρόφωνο, ασύρματα ή ενσύρματα.</li>
+                                <li><strong>Ηχεία:</strong> 2.0, 2.1 ή 5.1 surround για gaming/ταινίες.</li>
+                                <li><strong>Μικρόφωνο:</strong> Για streaming, podcast ή επικοινωνία.</li>
+                                <li><strong>Webcam:</strong> Για βιντεοκλήσεις & streaming.</li>
+                                <li><strong>Εκτυπωτής / Scanner:</strong> Για όσους χρειάζονται παραγωγική εργασία.</li>
+                                <li><strong>Game Controllers:</strong> Gamepads, racing wheels για εμπειρία gaming.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>     
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="CASE"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCASE" aria-expanded="false" aria-controls="collapseCASE">Κουτί Υπολογιστή</h2>
-                <div id="collapseCASE" class="accordion-collapse collapse" aria-labelledby="collapseCASE" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        <p>Επίλεξε ένα περίβλημα που να χωρά όλα τα εξαρτήματα σου και να προσφέρει καλή ροή αέρα. Μην ξεχάσεις να ελέγξεις τη συμβατότητα μεγέθους.</p>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="PSU"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePSU" aria-expanded="false" aria-controls="collapsePSU">Τροφοδοτικό (PSU)</h2>
+                    <div id="collapsePSU" class="accordion-collapse collapse" aria-labelledby="collapsePSU" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Βεβαιώσου ότι το τροφοδοτικό σου έχει αρκετή ισχύ για να υποστηρίξει όλα τα εξαρτήματα.</p>
+                            <ul>
+                                <li><strong>Ισχύς (Watt):</strong> Υπολόγισε τις ανάγκες του συστήματος (CPU, GPU) + περιθώριο 20–30%.</li>
+                                <li><strong>Πιστοποίηση 80 Plus:</strong> Bronze, Silver, Gold, Platinum ή Titanium – δείχνει την απόδοση και την οικονομία ενέργειας.</li>
+                                <li><strong>Modular:</strong> 
+                                    <ul>
+                                        <li>Full Modular – αποσπώμενα όλα τα καλώδια.</li>
+                                        <li>Semi Modular – μερικά αποσπώμενα.</li>
+                                        <li>Non Modular – όλα μόνιμα, πιο οικονομικά.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Ασφάλειες:</strong> OVP (Over Voltage), OCP (Over Current), SCP (Short Circuit), OTP (Over Temperature) για προστασία.</li>
+                                <li><strong>Συμβατότητα:</strong> Μέγεθος (ATX, SFX) ανάλογα με το κουτί.</li>
+                                <li><strong>Αποδοτικότητα:</strong> Υψηλή απόδοση = λιγότερη σπατάλη ενέργειας και χαμηλότερες θερμοκρασίες.</li>
+                                <li><strong>Αθόρυβη λειτουργία:</strong> Fan με Zero RPM Mode για ησυχία σε χαμηλά φορτία.</li>
+                                <li><strong>Ποιότητα κατασκευής:</strong> Ιαπωνικοί πυκνωτές & εγγύηση 5–10 χρόνια για αντοχή.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>     
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="Coolers"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCoolers" aria-expanded="false" aria-controls="collapseCoolers">Ψύκτες & Ανεμιστήρες</h2>
-                <div id="collapseCoolers" class="accordion-collapse collapse" aria-labelledby="collapseCoolers" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="CASE"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCASE" aria-expanded="false" aria-controls="collapseCASE">Κουτί Υπολογιστή</h2>
+                    <div id="collapseCASE" class="accordion-collapse collapse" aria-labelledby="collapseCASE" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Επίλεξε ένα περίβλημα που να χωρά όλα τα εξαρτήματα σου και να προσφέρει καλή ροή αέρα. Μην ξεχάσεις να ελέγξεις τη συμβατότητα μεγέθους.</p>
+                            <ul>
+                                <li><strong>Form Factor:</strong> ATX, Micro-ATX, Mini-ITX – πρέπει να ταιριάζει με τη μητρική και το PSU.</li>
+                                <li><strong>Διαστάσεις:</strong> Έλεγξε αν χωράει GPU μεγάλου μεγέθους και ψύκτρες CPU ή AIO υδρόψυξης.</li>
+                                <li><strong>Ροή αέρα:</strong> Θέσεις για intake (μπροστά/κάτω) και exhaust (πάνω/πίσω) ανεμιστήρες.</li>
+                                <li><strong>Θέσεις ανεμιστήρων & Radiators:</strong> Υποστήριξη για 120mm/140mm fans ή AIO υδρόψυξη (240mm, 360mm).</li>
+                                <li><strong>Εσωτερικός χώρος:</strong> Cable management, κρυφοί δίσκοι SSD/HDD.</li>
+                                <li><strong>Σχεδιασμός:</strong> Tempered Glass πλαϊνό πάνελ, RGB φωτισμός, minimal ή gaming look.</li>
+                                <li><strong>Θύρες I/O:</strong> USB 3.0, USB-C, Audio jacks στο μπροστινό panel.</li>
+                                <li><strong>Θόρυβος:</strong> Cases με ηχομονωτικά πάνελ μειώνουν το θόρυβο.</li>
+                                <li><strong>Συμβατότητα:</strong> Έλεγξε μέγιστο ύψος CPU cooler, μέγιστο μήκος GPU και μέγεθος PSU που χωράει.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>     
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="net"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenet" aria-expanded="false" aria-controls="collapsenet">Δικτυακές Συσκευές</h2>
-                <div id="collapsenet" class="accordion-collapse collapse" aria-labelledby="collapsenet" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        <p>Δικτυακή Κάρτα (NIC): Εσωτερική ή εξωτερική συσκευή που συνδέεται μέσω Ethernet ή ασύρματα μέσω Wi-Fi.</p>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="Coolers"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCoolers" aria-expanded="false" aria-controls="collapseCoolers">Ψύκτες & Ανεμιστήρες</h2>
+                    <div id="collapseCoolers" class="accordion-collapse collapse" aria-labelledby="collapseCoolers" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Αερόψυξη (Air Cooling):</strong> 
+                                    <ul>
+                                        <li>Μεταλλικές ψύκτρες με ανεμιστήρα.</li>
+                                        <li>Οικονομική λύση, αξιόπιστη για τους περισσότερους επεξεργαστές.</li>
+                                        <li>Μειονέκτημα: Μεγαλύτερο μέγεθος, μπορεί να εμποδίζει RAM slots.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Υδρόψυξη (Liquid Cooling):</strong>
+                                    <ul>
+                                        <li>AIO (All-in-One) ή custom loop.</li>
+                                        <li>Καλύτερη θερμοκρασία σε high-end CPUs/GPUs.</li>
+                                        <li>Απαιτεί χώρο στο κουτί για radiators (120mm, 240mm, 360mm).</li>
+                                        <li>Πιο ακριβή και με περισσότερη συντήρηση.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Ανεμιστήρες Κουτιού:</strong> 
+                                    <ul>
+                                        <li>Intake (μπροστά/κάτω) → φέρνουν κρύο αέρα.</li>
+                                        <li>Exhaust (πίσω/πάνω) → βγάζουν ζεστό αέρα.</li>
+                                        <li>120mm / 140mm με PWM για αυτόματη ρύθμιση στροφών.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Ροή Αέρα (Airflow):</strong> Η σωστή τοποθέτηση ανεμιστήρων εξασφαλίζει χαμηλές θερμοκρασίες.</li>
+                                <li><strong>Επίπεδα Θορύβου:</strong> Μετριούνται σε dB – χαμηλότερα dB = πιο αθόρυβη λειτουργία.</li>
+                                <li><strong>Thermal Paste:</strong> Απαραίτητη σωστή εφαρμογή για καλή επαφή CPU-GPU με ψύκτρα.</li>
+                                <li><strong>RGB Cooling:</strong> Προαιρετικό για gaming builds με αισθητική.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </div>     
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="net"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsenet" aria-expanded="false" aria-controls="collapsenet">Δικτυακές Συσκευές</h2>
+                    <div id="collapsenet" class="accordion-collapse collapse" aria-labelledby="collapsenet" data-bs-parent="#roadmapAccordion">
+                        <div class="accordion-body">
+                            <p>Δικτυακή Κάρτα (NIC): Εσωτερική ή εξωτερική συσκευή που συνδέεται μέσω Ethernet ή ασύρματα μέσω Wi-Fi.</p>
+                            <ul>
+                                <li><strong>Κάρτα Δικτύου (NIC):</strong> 
+                                    <ul>
+                                        <li>Ethernet (1Gbps, 2.5Gbps, 10Gbps).</li>
+                                        <li>Wi-Fi 5, Wi-Fi 6/6E ή Wi-Fi 7 για ασύρματη σύνδεση.</li>
+                                        <li>Bluetooth ενσωματωμένο για ασύρματα περιφερειακά.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Router:</strong> Συσκευή που μοιράζει τη σύνδεση internet σε όλα τα μηχανήματα.</li>
+                                <li><strong>Switch:</strong> Για διασύνδεση πολλών υπολογιστών/συσκευών σε τοπικό δίκτυο.</li>
+                                <li><strong>Access Point:</strong> Επεκτείνει το Wi-Fi σε μεγαλύτερους χώρους.</li>
+                                <li><strong>Powerline Adapters:</strong> Χρήση ηλεκτρικών γραμμών σπιτιού για μεταφορά internet.</li>
+                                <li><strong>LAN vs Wi-Fi:</strong> 
+                                    <ul>
+                                        <li>LAN (Ethernet) = Σταθερότητα & χαμηλό latency.</li>
+                                        <li>Wi-Fi = Ευκολία, χωρίς καλώδια, αλλά με πιθανές παρεμβολές.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>VPN & Security:</strong> Υποστήριξη firewall και VPN για ασφαλή πλοήγηση.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>     
             </div>
-
-
-        </div>
-    </div>
-
-    <div id="addFooter"></div>
-</body>
+        </div>     
+        <div id="addFooter"></div>
+    </body>
 </html>
