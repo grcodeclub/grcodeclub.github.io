@@ -9,21 +9,30 @@
         <meta property="og:title" content="WordPress Plugins">
         <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
     </head>
-
     <body>
         <div class="container">
             <div id="addHeader"></div>
             <div class="container">
                 <h1 class="title">WordPress Plugins</h1>
-                <label style="padding-left: 10px;">Φίλτρο:</label>
-                <select id="selectOption" name="code">
-                    <option value="0">Όλα</option>
-                    <option value="Γενικό">Γενικό</option>
-                    <option value="eshop">eshop</option>
-                    <option value="Ασφάλεια">Ασφάλεια</option>
-                    <option value="Extra">Extra</option>
-                    <option value="SEO / Analytics">SEO / Analytics</option>
-                </select><br><br>
+                <p>
+                    Το <strong>WordPress</strong> προσφέρει τη δυνατότητα να επεκτείνεις εύκολα τις δυνατότητες της ιστοσελίδας σου 
+                    μέσω των <strong>plugins</strong>. Με αυτά μπορείς να προσθέσεις λειτουργίες όπως e-shop, φόρμες επικοινωνίας, 
+                    βελτιστοποίηση SEO, ασφάλεια και πολλά άλλα, χωρίς να χρειάζεται να γράψεις κώδικα.  
+                    Στον παρακάτω πίνακα θα βρεις συγκεντρωμένα μερικά από τα πιο χρήσιμα δωρεάν plugins (κατά τη γνώμη μου), 
+                    χωρισμένα σε κατηγορίες, μαζί με σύντομη περιγραφή και τρόπους χρήσης. 
+                    <br> <br>  Όλα τα πρόσθετα προέρχονται από το <a href="https://wordpress.org/plugins/" target="_blank" class="link-primary fw-bold"><i class="fas fa-plug me-1"></i> Επίσημο αποθετήριο του WordPress</a>.
+                </p>
+                <div class="mb-3 d-flex align-items-center">
+                    <label for="selectOption" class="form-label fw-bold text-dark me-2 mb-0"><i class="fas fa-filter me-1"></i> Φίλτρο:</label>
+                    <select id="selectOption" name="code" class="form-select w-auto">
+                      <option value="0">Όλα</option>
+                      <option value="Γενικό">Γενικό</option>
+                      <option value="eshop">E-shop</option>
+                      <option value="Ασφάλεια">Ασφάλεια</option>
+                      <option value="Extra">Extra</option>
+                      <option value="SEO / Analytics">SEO / Analytics</option>
+                    </select>
+                </div>
                 <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
                 <br>
                 <table id="search_table_page" class="table table-bordered">
@@ -47,11 +56,8 @@
                     <tr><td>eshop</td><td><a a href="https://wordpress.org/plugins/woo-min-max-quantity-step-control-single/">Min Max Control - Min Max Quantity & Step Control for WooCommerce</a></td><td></td><td></td></tr>
                 </table>
                 <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
-
-                
             </div>
-            </div>
-    <div id="addFooter"></div>
-
+        </div>
+        <div id="addFooter"></div>
     </body>
 </html>
