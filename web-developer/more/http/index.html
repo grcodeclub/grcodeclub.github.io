@@ -1,82 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="el">
-<head>
-    <meta charset="UTF-8">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@grcodeclub">
-    <meta name="twitter:title" content="HTTP Μέθοδοι">
-    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/web.png">
-    <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/web.png">
-    <meta property="og:title" content="HTTP Μέθοδοι">
-    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
-</head>
-<body>
-    <div id="addHeader"></div>
-    <div class="container">
-        <hr><a href="./status-code.html" class="btn btn-outline-dark w-100">Δες επίσης τον πίνακα με τους HTTP Status Codes (Link here)</a><hr>
-        <h1 class="title">HTTP Μέθοδοι</h1>
-        <p>
-            Οι HTTP μέθοδοι είναι ένα βασικό κομμάτι της επικοινωνίας στο διαδίκτυο, καθώς καθορίζουν τον τρόπο με τον οποίο οι πελάτες (clients) και οι διακομιστές (servers) αλληλεπιδρούν.  
-            Κάθε μέθοδος εξυπηρετεί συγκεκριμένους σκοπούς, όπως η ανάκτηση δεδομένων, η αποστολή πληροφοριών, η ενημέρωση ή η διαγραφή δεδομένων.  
-            Στη σελίδα αυτή, μπορείτε να δείτε τις κύριες HTTP μεθόδους, τις λειτουργίες τους και τις περιπτώσεις χρήσης τους.
-        </p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="HTTP Μέθοδοι">
+        <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/web.png">
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/web.png">
+        <meta property="og:title" content="HTTP Μέθοδοι">
+        <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+    </head>
+    <body>
+        <div id="addHeader"></div>
+        <div class="container">
+            <hr><a href="./status-code.html" class="btn btn-outline-dark w-100">Δες επίσης τον πίνακα με τους HTTP Status Codes (Link here)</a><hr>
+            <h1 class="title">HTTP Μέθοδοι</h1>
+            <p>
+                Οι HTTP μέθοδοι είναι ένα βασικό κομμάτι της επικοινωνίας στο διαδίκτυο, καθώς καθορίζουν τον τρόπο με τον οποίο οι πελάτες (clients) και οι διακομιστές (servers) αλληλεπιδρούν.  
+                Κάθε μέθοδος εξυπηρετεί συγκεκριμένους σκοπούς, όπως η ανάκτηση δεδομένων, η αποστολή πληροφοριών, η ενημέρωση ή η διαγραφή δεδομένων.  
+                Στη σελίδα αυτή, μπορείτε να δείτε τις κύριες HTTP μεθόδους, τις λειτουργίες τους και τις περιπτώσεις χρήσης τους.
+            </p>
 
-        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση...">
-        <BR>
-        <table id="search_table_page" class="table table-bordered">
-            <tr id="title-table"><td>Method</td> <td>Περιγραφή</td> <td>Χρήση</td></tr>
-            <tr>
-                <td>GET</td>
-                <td>Ανάκτηση δεδομένων από τον server χωρίς τροποποίηση.</td>
-                <td>Αναζήτηση σελίδας ή αρχείου.</td>
-            </tr>
-            <tr>
-                <td>POST</td>
-                <td>Αποστολή δεδομένων στον server.</td>
-                <td>Υποβολή φόρμας, δημιουργία νέας εγγραφής.</td>
-            </tr>
-            <tr>
-                <td>PUT</td>
-                <td>Ενημέρωση ή αντικατάσταση δεδομένων στον server.</td>
-                <td>Ενημέρωση στοιχείων χρήστη.</td>
-            </tr>
-            <tr>
-                <td>DELETE</td>
-                <td>Διαγραφή δεδομένων από τον server.</td>
-                <td>Διαγραφή εγγραφής ή χρήστη.</td>
-            </tr>
-            <tr>
-                <td>PATCH</td>
-                <td>Μερική ενημέρωση δεδομένων στον server.</td>
-                <td>Ενημέρωση συγκεκριμένου πεδίου εγγραφής.</td>
-            </tr>
-            <tr>
-                <td>HEAD</td>
-                <td>Επιστροφή μόνο των headers, χωρίς το σώμα.</td>
-                <td>Έλεγχος ύπαρξης ενός πόρου.</td>
-            </tr>
-            <tr>
-                <td>OPTIONS</td>
-                <td>Επιστροφή των υποστηριζόμενων HTTP μεθόδων για έναν πόρο.</td>
-                <td>Χρήσιμο για debugging και CORS.</td>
-            </tr>
-            <tr>
-                <td>CONNECT</td>
-                <td>Δημιουργία ενός HTTP δικτύου μέσω proxy.</td>
-                <td>Tunneling μέσω proxy.</td>
-            </tr>
-            <tr>
-                <td>TRACE</td>
-                <td>Επιστροφή του αιτήματος για debugging.</td>
-                <td>Εντοπισμός προβλημάτων.</td>
-            </tr>
-        </table>
-            <nav aria-label="Σελιδοποίηση">
-                <ul id="pagination" class="pagination justify-content-center"></ul>
-    
-</div>
-    </div>
-    <div id="addFooter"></div>
-</body>
+            <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση...">
+            <BR>
+            <table id="search_table_page" class="table table-bordered table-striped">
+                <tr id="title-table" class="table-dark"><td>Method</td> <td>Περιγραφή</td> <td>Χρήση</td></tr>
+                <tr><td>GET</td><td>Ανάκτηση δεδομένων από τον server χωρίς τροποποίηση.</td><td>Αναζήτηση σελίδας ή αρχείου.</td></tr>
+                <tr><td>POST</td><td>Αποστολή δεδομένων στον server.</td><td>Υποβολή φόρμας, δημιουργία νέας εγγραφής.</td></tr>
+                <tr><td>PUT</td><td>Ενημέρωση ή αντικατάσταση δεδομένων στον server.</td><td>Ενημέρωση στοιχείων χρήστη.</td></tr>
+                <tr><td>DELETE</td><td>Διαγραφή δεδομένων από τον server.</td><td>Διαγραφή εγγραφής ή χρήστη.</td></tr>
+                <tr><td>PATCH</td><td>Μερική ενημέρωση δεδομένων στον server.</td><td>Ενημέρωση συγκεκριμένου πεδίου εγγραφής.</td></tr>
+                <tr><td>HEAD</td><td>Επιστροφή μόνο των headers, χωρίς το σώμα.</td><td>Έλεγχος ύπαρξης ενός πόρου.</td></tr>
+                <tr><td>OPTIONS</td><td>Επιστροφή των υποστηριζόμενων HTTP μεθόδων για έναν πόρο.</td><td>Χρήσιμο για debugging και CORS.</td></tr>
+                <tr><td>CONNECT</td><td>Δημιουργία ενός HTTP δικτύου μέσω proxy.</td><td>Tunneling μέσω proxy.</td></tr>
+                <tr><td>TRACE</td><td>Επιστροφή του αιτήματος για debugging.</td><td>Εντοπισμός προβλημάτων.</td></tr>
+            </table>
+            <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
+        </div>
+        <div id="addFooter"></div>
+    </body>
 </html>
