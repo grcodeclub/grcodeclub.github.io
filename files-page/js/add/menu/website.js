@@ -10,7 +10,6 @@ const mymenu = `
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
         <option value="https://grcodeclub.gr/web-developer/build/">Κατασκευή Ιστοσελίδων</option>
-        <option value="https://grcodeclub.gr/web-developer/build/uploadsite">Κατοχύρωση Website</option>
         <option value="https://grcodeclub.gr/web-developer/build/seo">SEO</option>
         <option value="https://grcodeclub.gr/web-developer/build/font-awesome">Λίστα Font Awesome</option>
         <option value="https://grcodeclub.gr/web-developer/build/input-symbols">Κωδικοί & Σύμβολα Χαρακτήρων HTML</option>
