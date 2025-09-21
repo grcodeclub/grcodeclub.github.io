@@ -70,7 +70,6 @@ const htmlContentHeader = `
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kυβερνοασφάλεια</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown4" style="max-height: 400px; overflow-y: auto;">
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity">Kυβερνοασφάλεια</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity/tools">Εργαλεία</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/cybersecurity/attacks">Επιθέσεις</a></li>
                 </ul>
