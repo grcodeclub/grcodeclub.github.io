@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="el">
-<head>
-    <meta charset="UTF-8">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@grcodeclub">
-    <meta name="twitter:title" content="Κυβερνοασφάλεια | Εργαλεία">
-    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/cybersecurity.png">
-    <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/cybersecurity.png"/>
-    <meta property="og:title" content="Κυβερνοασφάλεια | Εργαλεία">
-    <title>GrCode Club</title>
-    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
-</head>
-<body>
-    <div id="addHeader"></div>
-    <div class="container">
-        <h1 class="title">Εργαλεία</h1>
-        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
-        <br>
-        <table id="search_table_page" class="table table-bordered">
-                <tr id="title-table"><td>Εργαλείο</td><td>Κατηγορία</td><td>Περιγραφή</td></tr>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="Κυβερνοασφάλεια | Εργαλεία">
+        <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/cybersecurity.png">
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/cybersecurity.png"/>
+        <meta property="og:title" content="Κυβερνοασφάλεια | Εργαλεία">
+        <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+    </head>
+    <body>
+        <div id="addHeader"></div>
+        <div class="container">
+            <h1 class="title">Εργαλεία</h1>
+            <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+            <br>
+            <table id="search_table_page" class="table table-bordered table-striped">
+                <tr id="title-table" class="table-dark"><td>Εργαλείο</td><td>Κατηγορία</td><td>Περιγραφή</td></tr>
                 <tr><td><a href="./web/nmap" class="link_here">nmap</a></td><td>Web</td><td>Το Nmap είναι ένα πρόγραμμα για εξερεύνηση δικτύου.</td></tr>
                 <tr><td>Burp Suite</td><td>Web</td><td>Το Burp Suite είναι μια ολοκληρωμένη πλατφόρμα για την εκτέλεση δοκιμών ασφαλείας εφαρμογών web.</td></tr>
                 <tr><td><a  href="./web/gobuster" class="link_here"> gobuster</a></td><td>Web</td><td>-</td></tr>
@@ -28,9 +27,8 @@
                 <tr><td>binwalk</td><td>Stego</td><td>Το Binwalk είναι ένα εργαλείο που έχει σχεδιαστεί για την αναγνώριση αρχείων και κώδικα που είναι ενσωματωμένα μέσα σε εικόνες.</td></tr>
                 <tr><td>exiftool</td><td>Metadata</td><td>Διαβάζει και γραφεί metadata σε αρχεία</td></tr>
             </table>    
-         <div class="pagination" id="pagination"></div>
-
-    </div>
-    <div id="addFooter"></div>
-</body>
+            <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>
+        </div>
+        <div id="addFooter"></div>
+    </body>
 </html>

@@ -25,7 +25,26 @@
             δεδομένων στον browser του ή μπορεί να χρησιμοποιήσει άλλες εντολές για να εμφανίσει μέρη της βάσης δεδομένων ή 
             για να αποκτήσει την δυνατότητα να προσθέσει, να τροποποιήσει ή να διαγράψει τα περιεχόμενα της βάσης δεδομένων.
         </p>
-        <p><a href="./union"  class="link_here">SQL injection UNION attacks</a></p>
+         <h2 class="highlight">SQL injection UNION attacks</h2>
+         <p>Όταν ένα website είναι ευάλωτο σε SQL injection και τα αποτελέσματα του ερωτήματος επιστρέφονται στις απαντήσεις 
+            της εφαρμογής, μπορείτε να χρησιμοποιήσετε τη λέξη-κλειδί UNION για να ανακτήσετε δεδομένα από άλλους πίνακες 
+            στη βάση δεδομένων. <u>Αυτό είναι κοινώς γνωστό ως επίθεση SQL injection UNION.</u></p>
+
+        <h3>Προσδιορισμός του αριθμού των απαιτούμενων στηλών</h3>
+        <h4>1η Μέθοδος: Order/Group by</h4>
+        <p>Για να προσδιορίσετε τον αριθμό των στηλών σε ένα ερώτημα, προσαρμόστε σταδιακά τον αριθμό που χρησιμοποιείται στις προτάσεις ORDER BY 
+            ή GROUP BY έως ότου ληφθεί μια ψευδής απάντηση. Παρά τις ξεχωριστές λειτουργίες των GROUP BY και ORDER BY 
+            εντός της SQL, και οι δύο μπορούν να χρησιμοποιηθούν με τον ίδιο τρόπο για τον προσδιορισμό του αριθμού στηλών του ερωτήματος.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-sql">1' ORDER BY 1--+    #True
+1' ORDER BY 2--+    #True
+1' ORDER BY 3--+    #True
+1' ORDER BY 4--+    #False - Query is only using 3 columns</code></pre></div></div>
+        <h4>2η Μέθοδος: UNION SELECT</h4>
+        <p>Η δεύτερη μέθοδος περιλαμβάνει την υποβολή μιας σειράς UNION SELECT payloads
+            που καθορίζονται με διαφορετικό αριθμό null τιμών.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-sql">1' UNION SELECT null-- - Not working
+1' UNION SELECT null,null-- - Not working
+1' UNION SELECT null,null,null-- - Worked</code></pre></div></div>
     </div>
     <div id="addFooter"></div>
 </body>
