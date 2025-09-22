@@ -16,14 +16,17 @@
     <div class="container">
         <h1  class="title">Πρωτόκολλα</h1>
         <p>Τα πρωτόκολλα δικτύου (network protocols) είναι σύνολα κανόνων και προτύπων που καθορίζουν τον τρόπο με τον οποίο οι συσκευές επικοινωνούν μεταξύ τους σε ένα δίκτυο. Κάθε πρωτόκολλο ορίζει τις διαδικασίες για την αποστολή και λήψη δεδομένων, εξασφαλίζοντας την ομαλή και αποτελεσματική μεταφορά πληροφοριών.</p>
-        <label style="padding-left: 10px;">Φίλτρο:</label>
-        <select id="selectOption" name="code">
-            <option value="0">Όλα</option>
-            <option value="Network Address">Network Address</option>
-            <option value="Εφαρμογής">Εφαρμογής</option>
-            <option value="Δρομολόγησης">Δρομολόγησης</option>
-
-        </select><br><br>
+        <div class="container mt-4">
+            <label for="selectOption" class="form-label  text-dark">
+              <i class="fas fa-filter me-2 text-dark"></i>Φίλτρο:
+            </label>
+            <select id="selectOption" name="code" class="form-select text-dark border-dark w-auto d-inline-block bg-white">
+              <option value="0">Όλα</option>
+              <option value="Network Address">Network Address</option>
+              <option value="Εφαρμογής">Εφαρμογής</option>
+              <option value="Δρομολόγησης">Δρομολόγησης</option>
+            </select>
+        </div>
         <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
         <br>
         <table id="search_table_page" class="table table-bordered table-striped">

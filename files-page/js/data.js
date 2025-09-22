@@ -114,7 +114,6 @@ loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
     const scriptMappings = {
     'https://grcodeclub.gr/web-developer/javascript/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/javascript.js',
     'https://grcodeclub.gr/web-developer/css/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/css.js',
-    'https://grcodeclub.gr/web-developer/cms/wordpress': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/cms/wordpress.js',
     'https://grcodeclub.gr/web-developer/build/': 'https://grcodeclub.github.io/files-page/js/add/menu/website.js',
     'https://grcodeclub.gr/operating-systems/microsoft-windows/': 'https://grcodeclub.github.io/files-page/js/add/menu/windows.js',
     'https://grcodeclub.gr/operating-systems/linux/': 'https://grcodeclub.github.io/files-page/js/add/menu/linux.js',
