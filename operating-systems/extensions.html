@@ -14,10 +14,11 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Επεκτάσεις Ονομάτων Αρχείων</h1>
-        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση ">
-        <br>
-        <label style="padding-left: 10px;">Φίλτρο:</label>
-        <select id="selectOption" name="code">
+        <div class="input-group">
+  <span class="input-group-text bg-white text-dark border-dark">
+    <i class="fas fa-filter"></i> Φίλτρο
+  </span>
+          <select id="selectOption" name="code">
             <option value="0">Όλα</option>
             <option value="Εικόνα">Εικόνα</option>Ήχος
             <option value="Βίντεο">Βίντεο</option>
@@ -28,10 +29,20 @@
             <option value="Windows">Windows</option>
             <option value="Office Pack">Office Pack</option>
             <option value="macOS">macOS</option>
-        </select><br><br>
+            </select>
+</div>
+<br>
+<div class="input-group">
+  <span class="input-group-text bg-white text-dark border-dark">
+    <i class="fas fa-search"></i>
+  </span>
+  <input type="text" id="searchInput" 
+         class="form-control text-dark border-dark" 
+         placeholder="Αναζήτηση">
+</div>
 
-        <table id="search_table_page" class="table table-bordered">
-            <tr id="title-table"><td>Κατηγορία</td><td>Επέκταση</td><td>Περιγραφή</td></tr>
+       <table id="search_table_page" class="table table-bordered table-striped">
+            <tr id="title-table" class="table-dark"><td>Κατηγορία</td><td>Επέκταση</td><td>Περιγραφή</td></tr>
             <tr><td>Εικόνα</td><td>.jpg</td><td>Εικόνα JPEG</td></tr>
             <tr><td>Εικόνα</td><td>.png</td><td>Εικόνα PNG με διαφάνεια</td></tr>
             <tr><td>Εικόνα</td><td>.gif</td><td>Εικόνα GIF (γραφική ανταλλαγή μορφής)</td></tr>
