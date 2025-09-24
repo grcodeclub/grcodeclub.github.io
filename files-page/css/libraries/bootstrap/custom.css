@@ -4,7 +4,7 @@
 .custom-navbar .nav-link:hover { color: #6c757d; }  /* Χρώμα όταν περνάει ο δείκτης του ποντικιού */
 .close-icon { display: none; }  /* Απόκρυψη του close icon από την αρχή */
 .dropdown-submenu {position: relative;}
-
+.bg-dark{background-color: #212529 !important;}
 
 /****** Start Βελος οταν ανοιγει το submenu ******/
 .nav-link.dropdown-toggle {direction: rtl;}
@@ -13,7 +13,33 @@
 /****** Stop Βελος οταν ανοιγει το submenu ******/
 
 
-.bg-dark{background-color: #212529 !important;}
+/******start accordion******/
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #1c1c1c, #4f4e4e);
+  color: #ffffff;
+}
+.accordion-body {
+  background: #1c1c1c;
+  border-left: 3px solid #ffffff;
+  padding: 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.accordion-body ul li strong {color: #1b899f;}
+.accordion-body ul li,.accordion-body p {color: #ffffff;}
+.accordion-button::after {filter: invert(1) brightness(2);} /* Κάνει το βελάκι λευκό */
+.accordion-button {
+    background: #212529;
+    color: #fff;
+}
+/******end accordion******/
+
 /* Mobile Menu */
 /* Ρυθμίσεις για τις τρεις γραμμές */
 .navbar-toggler-icon { background-image: none; } /* Αφαίρεση του default background του navbar-toggler-icon */
