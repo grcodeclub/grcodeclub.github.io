@@ -88,6 +88,7 @@ const htmlContentHeader = `
                 <a class="nav-link dropdown-toggle" id="navbarDropdown6" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Κινητά</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown6" style="max-height: 400px; overflow-y: auto;">
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/mobile/android/">Android</a></li>
+                     <li><a class="dropdown-item" href="https://grcodeclub.gr/mobile/odigos-agoras-kinitou">Οδηγός Αγοράς Κινητού</a></li>
                 </ul>
             </li>
 
