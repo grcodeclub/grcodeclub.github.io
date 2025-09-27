@@ -1,52 +1,130 @@
 <!DOCTYPE html>
 <html lang="el">
-<head>
-    <meta charset="UTF-8">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@grcodeclub">
-    <meta name="twitter:title" content="Τύποι Καλωδίων">
-     <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
-    <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
-    <meta property="og:title" content="Τύποι Καλωδίων">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrCode Club</title>
-    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
-</head>
-<body>
-    <div id="addHeader"></div>
-    <div class="container">
-        <h1 class="title">Τύποι καλωδίων</h1>
-        <label style="padding-left: 10px;">Φίλτρο:</label>
-        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
-        <br>
-        <table id="search_table_page" class="table table">
-            <tr id="title-table"><td>Όνομα</td><td>Χρήση / Περιγραφή</td><td>Eικόνα</td></tr>
-            <tr><td>SATA Cable</td><td>Χρησιμοποιείται για σύνδεση σκληρών δίσκων και SSD με τη μητρική πλακέτα.</td><td><img src="./SATA Cable.webp" width="50%" class="img-fluid"></td></tr>
-            <tr><td>HDMI</td><td>Χρησιμοποιείται για τη σύνδεση οθονών και τηλεοράσεων, υποστηρίζει ήχο και εικόνα υψηλής ανάλυσης.</td><td><img src="./HDMI.webp"  width="50%" class="img-fluid"></td></tr>
-            <tr><td>DVI</td><td>Παλιότερο καλώδιο που χρησιμοποιείται κυρίως για σύνδεση οθονών. Υπάρχουν τύποι DVI-D (μόνο ψηφιακό) και DVI-I (ψηφιακό και αναλογικό).</td><td><img src="./DVI.webp" width="50%" class="img-fluid"></td></tr>
-            <tr><td>VGA</td><td>Αναλογικό καλώδιο που χρησιμοποιείται για παλιότερες οθόνες.</td><td><img src="./VGA.webp" width="50%" class="img-fluid"></td></tr>
-            <tr><td>Ethernet Cable</td><td>Χρησιμοποιείται για τη σύνδεση υπολογιστών σε τοπικά δίκτυα (LAN).</td><td><img src="./Ethernet.webp" width="50%" class="img-fluid"></td></tr>
-            <tr><td>USB Type-A</td><td></td><td><img src="./Type-A.webp" width="50%" class="img-fluid"></td></tr>
-            <tr><td>USB Type-B</td><td></td><td><img src="./Type-B.webp" width="50%" class="img-fluid"></td></tr></tr>
-            <tr><td>USB Type-C</td><td></td><td><img src="./Type-C.webp" width="50%" class="img-fluid"></td></tr></tr>
-            <tr><td>Micro USB</td><td></td><td><img src="./Micro-USB.webp" width="50%" class="img-fluid"></td></tr></tr>
-            <tr><td>Mini USB</td><td></td><td><img src="./Mini-USB.webp" width="50%" class="img-fluid"></td></tr></tr>
-            <tr><td>Thunderbolt Cable</td><td>Χρησιμοποιείται για τη σύνδεση υψηλής ταχύτητας περιφερειακών συσκευών και οθονών.</td><td><img src="./Thunderbolt.webp" width="50%" class="img-fluid"></td></tr></tr>
-            <tr><td>FireWire (IEEE 1394)</td><td>Παλιότερη τεχνολογία που χρησιμοποιούνταν για τη σύνδεση εξωτερικών σκληρών δίσκων και άλλων συσκευών, έχει σχεδόν αντικατασταθεί από το USB.</td><td><img src="./FireWire.webp" width="50%" class="img-fluid"></td></tr>
-            <tr><td>CPU Cooler Cable</td><td>Χρησιμοποιείται για τη σύνδεση της ψύκτρας της CPU στη μητρική πλακέτα.</td><td><img src="./CPU.webp" width="50%" class="img-fluid"></td></tr>
-            <tr><td>SAS Cable</td><td>Χρησιμοποιείται σε διακομιστές και αποθήκες για τη σύνδεση δίσκων με υψηλές ταχύτητες.</td><td><img src="./SAS.webp" width="50%" class="img-fluid"></td></tr>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@grcodeclub">
+        <meta name="twitter:title" content="Τύποι Καλωδίων">
+         <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
+        <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
+        <meta property="og:title" content="Τύποι Καλωδίων">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GrCode Club</title>
+        <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+    </head>
+    <body>
+        <div id="addHeader"></div>
+        <div class="container">
+            <h1 class="title">Τύποι καλωδίων</h1>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-5" id="cardContainer">
+                <div class="col">
+                  <div class="card h-100 shadow-sm">
+                    <img src="./SATA Cable.webp" class="card-img-top" alt="SATA Cable">
+                    <h5 class="card-header bg-dark text-white text-center">SATA Cable</h5>
+                    <div class="card-body"><p class="card-text">Χρησιμοποιείται για σύνδεση σκληρών δίσκων και SSD με τη μητρική πλακέτα.</p></div>
+                  </div>
+                </div>
 
+                <div class="col">
+                  <div class="card h-100 shadow-sm">
+                    <img src="./HDMI.webp" class="card-img-top" alt="HDMI">
+                    <h5 class="card-header bg-dark text-white text-center">HDMI</h5>
+                    <div class="card-body"><p class="card-text">Χρησιμοποιείται για τη σύνδεση οθονών και τηλεοράσεων, υποστηρίζει ήχο και εικόνα υψηλής ανάλυσης.</p></div>
+                  </div>
+                </div>
 
-        </table>
-        <nav aria-label="Σελιδοποίηση">
-            <ul id="pagination" class="pagination justify-content-center">
-                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
-            </ul>
-        </nav>   
+                <div class="col">
+                  <div class="card h-100 shadow-sm">
+                    <img src="./DVI.webp" class="card-img-top" alt="DVI">
+                    <h5 class="card-header bg-dark text-white text-center">DVI</h5>
+                    <div class="card-body"><p class="card-text">Παλιότερο καλώδιο για σύνδεση οθονών. Υπάρχουν τύποι DVI-D (ψηφιακό) και DVI-I (ψηφιακό και αναλογικό).</p></div>
+                  </div>
+                </div>
 
-    </div>
+                <div class="col">
+                  <div class="card h-100 shadow-sm">
+                    <img src="./VGA.webp" class="card-img-top" alt="DVI">
+                    <h5 class="card-header bg-dark text-white text-center">VGA</h5>
+                    <div class="card-body"><p class="card-text">Αναλογικό καλώδιο που χρησιμοποιείται για παλιότερες οθόνες.</p></div>
+                  </div>
+                </div>
 
-    <!-- Footer -->
+                <div class="col">
+                  <div class="card h-100 shadow-sm">
+                    <img src="./Ethernet.webp" class="card-img-top" alt="DVI">
+                    <h5 class="card-header bg-dark text-white text-center">Ethernet Cable</h5>
+                    <div class="card-body"><p class="card-text">Χρησιμοποιείται για τη σύνδεση υπολογιστών σε τοπικά δίκτυα (LAN).</p></div>
+                  </div>
+                </div>
+            
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="./Type-A.webp" class="card-img-top" alt="DVI">
+                    <h5 class="card-header bg-dark text-white text-center">USB Type-A</h5>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="./Type-B.webp" class="card-img-top" alt="DVI">
+                     <h5 class="card-header bg-dark text-white text-center">USB Type-B</h5>
+                  </div>
+                </div>
+            
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="./Type-C.webp" class="card-img-top" alt="DVI">
+                     <h5 class="card-header bg-dark text-white text-center">USB Type-C</h5>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="./Micro-USB.webp" class="card-img-top" alt="DVI">
+                     <h5 class="card-header bg-dark text-white text-center">Micro USB</h5>
+                  </div>
+                </div>
+            
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="./Mini-USB.webp" class="card-img-top" alt="DVI">
+                     <h5 class="card-header bg-dark text-white text-center">Mini USB</h5>
+                  </div>
+                </div>
+            
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="./Thunderbolt.webp" class="card-img-top" alt="DVI">
+                     <h5 class="card-header bg-dark text-white text-center">Thunderbolt Cable</h5>
+                     <div class="card-body"><p class="card-text">Χρησιμοποιείται για τη σύνδεση υψηλής ταχύτητας περιφερειακών συσκευών και οθονών.</p></div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card h-100 shadow-sm">
+                    <img src="./FireWire.webp" class="card-img-top" alt="DVI">
+                    <h5 class="card-header bg-dark text-white text-center">FireWire (IEEE 1394)</h5>
+                    <div class="card-body"><p class="card-text">Παλιότερη τεχνολογία που χρησιμοποιούνταν για τη σύνδεση εξωτερικών σκληρών δίσκων και άλλων συσκευών, έχει σχεδόν αντικατασταθεί από το USB.</p></div>
+                  </div>
+                </div>
+            
+                <div class="col">
+                  <div class="card h-100 shadow-sm">
+                    <img src="./CPU.webp" class="card-img-top" alt="DVI">
+                    <h5 class="card-header bg-dark text-white text-center">CPU Cooler Cable</h5>
+                    <div class="card-body"><p class="card-text">Χρησιμοποιείται για τη σύνδεση της ψύκτρας της CPU στη μητρική πλακέτα.</p></div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card h-100 shadow-sm">
+                    <img src="./SAS.webp" class="card-img-top" alt="DVI">
+                    <h5 class="card-header bg-dark text-white text-center">SAS Cable</h5>
+                    <div class="card-body"><p class="card-text">Χρησιμοποιείται σε διακομιστές και αποθήκες για τη σύνδεση δίσκων με υψηλές ταχύτητες.</p></div>
+                  </div>
+                </div>
+            </div>
+        </div> 
     <div id="addFooter"></div>
 </body>
 </html>
