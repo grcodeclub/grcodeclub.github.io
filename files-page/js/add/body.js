@@ -124,7 +124,7 @@ const htmlContentFooter = `
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="https://www.youtube.com/@codeclub-gr" target="_blank" class="text-dark" title="YouTube">
+                        <a href="https://www.youtube.com/@grcodeclub" target="_blank" class="text-dark" title="YouTube">
                             <i class="fab fa-youtube fa-2x"></i>
                         </a>
                     </li>
