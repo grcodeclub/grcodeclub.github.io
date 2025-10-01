@@ -77,9 +77,10 @@ const htmlContentHeader = `
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Υλικό Υπολογιστών</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown5" style="max-height: 400px; overflow-y: auto;">
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/computer-support">Επίλυση Τεχνικών Προβλημάτων Υπολογιστή</a></li>
+                    <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/pc-builder">PC Builder</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/cables/">Τύποι καλωδίων</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/code-resistors">Χρωματικός Κώδικας Αντιστάσεων</a></li>
-                    <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/pc-builder">PC Builder</a></li>
                     <li><a class="dropdown-item" href="https://grcodeclub.gr/hardware/electronics">Μαθηματικοί τύποι</a></li>
                 </ul>
             </li>
