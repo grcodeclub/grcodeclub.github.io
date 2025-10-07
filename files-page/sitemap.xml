@@ -1,82 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url><loc>https://grcodeclub.gr/orologia/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/more/office-suite/excel</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/files/grep</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/more/image/color-rgb</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/mobile/more/nfc</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/files/decompress</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/tools/git</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/hardware/pc-builder</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/mobile/more/sim</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/cybersecurity/tools/network/wireshark</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/hardware/cables/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/hardware/code-resistors</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/hardware/electronics</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/cybersecurity/tools/web/gobuster</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/cybersecurity/tools/web/wpscan</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/command-line/system/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/command-line/system/winget</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/files/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/cms/wordpress/plugins/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/build/font-awesome</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/javascript/commands/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/javascript/commands/arrays</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/javascript/restriction</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/javascript/messages</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/javascript/libraries-and-framework</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/css/keyframes</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/css/text</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/css/table</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/html/link</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/html/list</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/html/tables</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/html/multimedia</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/php/commands</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/php/frameworks</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/build/input-symbols</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/c/library</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/protocol/network-address/ip/ipv4</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/protocol/network-address/arp</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/protocol/network-address/ip/ipv6</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/protocol/network-address/ip/packet_IPv4</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/python/library</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/java/library</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/html/input</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/more/office-suite/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/more/google</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/protocol/network-address/ip/subnet</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/cpp/commands/files</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/cpp/class/inheritance</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/cpp/library</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/cpp/templates</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/cpp/class/header-file</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/tcp-ip/physical/mac</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/more/http/status-code</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/python/list</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/cms/wordpress/plugins/action-hooks</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/more/run</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/php/files</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/cms/wordpress/wp-files</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/protocol/network-address/icmp</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/css/media</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/cybersecurity/tools/web/nmap</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/cpp/exception</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/c/stract</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/more/http/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/java/class/extends</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/protocol/application/ftp</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/command-line/network</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/java/class/interface</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/network/tcp-ip/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/css/properties</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/cpp/operator-overloading</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/cms/wordpress/plugins/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/c/files</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/developer/languages/python/terminal</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/web-developer/html/meta-tags</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/syntomografies/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://grcodeclub.gr/mobile/android/adb</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://grcodeclub.gr/</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url><loc>https://grcodeclub.gr/web-developer/php/frameworks</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/build/libraries/boostrap</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/build/input-symbols</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/build/font-awesome</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/build/seo</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/build/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/css/media</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/more/http/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/css/properties</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/cms/wordpress/plugins/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/html/meta-tags</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/more/http/status-code</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/php/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/html/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/css/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/web-developer/javascript/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://grcodeclub.gr/developer/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/c/library</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/c/stract</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/python/library</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/cpp/library</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/python/list</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/python/terminal</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/java/class/extends</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/java/class/interface</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/cpp/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/sql</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/docker</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/asciidoc</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/latex</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/matlab</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/developer/languages/markdown</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/network</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/system/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/files/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/system/apt</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/system/snap</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/system/users</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/files/grep</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/files/decompress</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/linux/terminal/tools/git</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/command-line/network</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/command-line/system/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/command-line/system/winget</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/powershell/service</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/powershell/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/operating-systems/microsoft-windows/more/run</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <url><loc>https://grcodeclub.gr/hardware/computer-support</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://grcodeclub.gr/network/protocol/application/ftp</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://grcodeclub.gr/network/protocol/network-address/icmp</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <url><loc>https://grcodeclub.gr/cybersecurity/tools/web/nmap</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+ 
+  <url><loc>https://grcodeclub.gr/syntomografies/</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://grcodeclub.gr/mobile/android/adb</loc><lastmod>2025-08-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>
