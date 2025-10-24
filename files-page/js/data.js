@@ -2,7 +2,6 @@
 const cssLinks = [
     "https://grcodeclub.github.io/files-page/css/libraries/bootstrap/v5-3-3.css",
     "https://grcodeclub.github.io/files-page/css/libraries/bootstrap/custom.css",
-    "https://grcodeclub.github.io/files-page/css/libraries/bootstrap/bootstrap-icons.css",
     "https://grcodeclub.github.io/files-page/css/libraries/font-awesome/6-5-0.css",
     "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap",
     "https://grcodeclub.github.io/files-page/css/code/bg.css",
