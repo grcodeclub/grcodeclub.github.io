@@ -6,6 +6,7 @@ const cssLinks = [
     "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap",
     "https://grcodeclub.github.io/files-page/css/code/bg.css",
     "https://grcodeclub.github.io/files-page/css/text.css",
+    "https://grcodeclub.github.io/files-page/css/bootstrap-icons.css",
     "https://grcodeclub.github.io/files-page/css/elements.css"
 ]; 
 
