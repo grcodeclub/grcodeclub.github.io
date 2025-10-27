@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Πλήρης Λίστα Εντολών Ενεργοποίησης και Άδειας Windows">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/windows.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/windows.png"/>
+    <meta property="og:title" content="Πλήρης Λίστα Εντολών Ενεργοποίησης και Άδειας Windows">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Εντολές Ενεργοποίησης Windows</h1>
+
+        <p>Εμφανίζει βασικές πληροφορίες για την ενεργοποίηση (έκδοση, τύπος καναλιού π.χ. Retail/OEM/Volume).</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /dli</code></pre></div>
+
+        <p>Εμφανίζει αναλυτικές πληροφορίες για την άδεια (κανάλι, ημερομηνία ενεργοποίησης, κλειδί, activation ID).</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /dlv</code></pre></div>
+
+        <p>Δείχνει αν τα Windows είναι μόνιμα ενεργοποιημένα ή αν λήγουν (π.χ. σε δοκιμαστικές εκδόσεις).</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /xpr</code></pre></div>
+
+        <p>Εγκαθιστά νέο κλειδί</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</code></pre></div>
+
+        <p>Ενεργοποιεί τα Windows online (αφού έχεις εισαγάγει το κλειδί).</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /ato</code></pre></div>
+
+        <p>Απεγκαθιστά το τρέχον κλειδί προϊόντος (χρήσιμο πριν το μεταφέρεις σε άλλο PC).</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /upk</code></pre></div>
+   
+        <p>Διαγράφει το κλειδί από το μητρώο (Registry) για λόγους ασφάλειας.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /cpky</code></pre></div>
+
+        <p>Ορίζει KMS server για ενεργοποίηση μέσω εταιρικού δικτύου.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /skms [όνομα_διακομιστή]</code></pre></div>
+
+        <p>Καταργεί τον KMS server και επαναφέρει την προεπιλογή.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /ckms</code></pre></div>
+
+        <p>Ενεργοποιεί συγκεκριμένη άδεια (αν υπάρχουν πολλές).</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">slmgr /ato [activation ID]</code></pre></div>
+
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>
