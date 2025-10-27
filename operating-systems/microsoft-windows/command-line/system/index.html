@@ -39,6 +39,19 @@
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
 <code class="language-shell">gpedit.msc</code></pre></div>
 
+        <p>Performance Monitor (GUI, αλλά μπορεί να τρέξει από CMD)</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">perfmon</code></pre></div>
+
+        <p>Σύντομη αναφορά χρήσης CPU / RAM με WMIC</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic cpu get loadpercentage
+wmic OS get FreePhysicalMemory,TotalVisibleMemorySize</code></pre></div>
+
+        <p>Εμφάνιση διεργασιών που τρώνε περισσότερη μνήμη</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic process get Name,WorkingSetSize | sort /R</code></pre></div>
+
         </div>
     <div id="addFooter"></div>
 </body>

@@ -9,7 +9,6 @@
     <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/windows.png"/>
     <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/windows.png"/>
     <meta property="og:title" content="Command Line | Εντολές Διαχείριση Διεργασιών">
-    <title>GrCode Club</title>
     <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
 
 </head>
@@ -22,18 +21,93 @@
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
 <code class="language-shell">tasklist</code></pre></div>
 
-        <p>Τερματίζει μια εκτελούμενη διεργασία βάσει του ID διεργασίας ή του ονόματος.</p>
+        <p>Εμφανίζει όλες τις διεργασίες με επιπλέον πληροφορίες (window title, session).</p>
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">taskkill</code></pre></div>
+<code class="language-shell">tasklist /v</code></pre></div>
+
+        <p>Φιλτράρει και εμφανίζει μόνο διεργασίες με συγκεκριμένο όνομα</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">tasklist /fi "imagename eq chrome.exe"</code></pre></div>
+
+        <p>Φιλτράρισμα διεργασιών με βάση κατάσταση</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">tasklist /fi "STATUS eq NOT RESPONDING"</code></pre></div>
+
+        <p>Δείξε τις διεργασίες μαζί με τις υπηρεσίες που τις τρέχουν</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">tasklist /svc</code></pre></div>
+
+        <p>Εμφάνιση διεργασιών από συγκεκριμένη session</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">tasklist /FI "SESSION eq 1"</code></pre></div>
+
+        <p>Διεργασίες που τρέχουν από συγκεκριμένο user</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">tasklist /FI "USERNAME eq MyUser"</code></pre></div>
+
+        <p>Τερματισμός διεργασίας με PID</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">taskkill /PID 1234</code></pre></div>
+
+        <p>Τερματισμός διεργασίας με όνομα (force)</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">taskkill /IM chrome.exe /F</code></pre></div>
+
+        <p>Τερματισμός όλων των διεργασιών που δεν απαντούν</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">taskkill /FI "STATUS eq NOT RESPONDING" /F</code></pre></div>
+
+        <p>Τερματισμός όλων των διεργασιών από συγκεκριμένη session</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">taskkill /FI "SESSION eq 1" /F</code></pre></div>
+
+        <p>Τερματισμός όλων των διεργασιών από συγκεκριμένο user</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">taskkill /FI "USERNAME eq MyUser" /F</code></pre></div>
+
+        <p>Τερματισμός διεργασιών με wildcard</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">taskkill /IM "chrome*" /F</code></pre></div>
+
+        <p>Ανοίγει το παράθυρο Services, όπου μπορείτε να διαχειριστείτε τις υπηρεσίες που εκτελούνται στον υπολογιστή σας. Μπορείτε να ενεργοποιήσετε, απενεργοποιήσετε ή αλλάξετε τις ρυθμίσεις των υπηρεσιών.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">services.msc</code></pre></div>
 
         <p>Εκτελεί το Windows Management Instrumentation Command-line (WMIC) και παρέχει προηγμένες λειτουργίες διαχείρισης των διεργασιών, όπως η εμφάνιση λεπτομερών πληροφοριών και η διαχείριση των προτεραιοτήτων των διεργασιών.</p>
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
 <code class="language-shell">wmic process</code></pre></div>
 
-        <p>Ανοίγει το παράθυρο Services, όπου μπορείτε να διαχειριστείτε τις υπηρεσίες που εκτελούνται στον υπολογιστή σας. Μπορείτε να ενεργοποιήσετε, απενεργοποιήσετε ή αλλάξετε τις ρυθμίσεις των υπηρεσιών.</p>
+        <p>Λίστα διεργασιών με PID και memory usage</p>
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">services.msc</code></pre></div>
-        
+<code class="language-shell">wmic process get ProcessId,Name,WorkingSetSize</code></pre></div>
+
+        <p>Λίστα διεργασιών με περισσότερα πεδία (CPU, Threads, Priority)</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic process get ProcessId,Name,ThreadCount,Priority,ExecutablePath</code></pre></div>
+
+        <p>Τερματισμός διεργασίας με WMIC</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic process where "name='notepad.exe'" delete</code></pre></div>
+
+        <p>Φιλτράρισμα διεργασιών με συγκεκριμένο χρήστη</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic process where "name='chrome.exe' and sessionid=1" get ProcessId,Name</code></pre></div>
+
+        <p>Λίστα διεργασιών που χρησιμοποιούν συγκεκριμένο executable path</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic process where "ExecutablePath='C:\\Program Files\\App\\app.exe'" get Name, ProcessId</code></pre></div>
+
+        <p>Λίστα υπηρεσιών και κατάστασή τους</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">net start</code></pre></div>
+
+        <p>Σταμάτημα υπηρεσίας</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">net stop "ServiceName"</code></pre></div>
+
+        <p>Εκκίνηση υπηρεσίας</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">net start "ServiceName"</code></pre></div>
 
         </div>
     <div id="addFooter"></div>
