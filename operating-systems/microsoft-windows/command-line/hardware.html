@@ -18,45 +18,9 @@
     <div class="container">
         <h1 class="title">Εντολές για το Hardware</h1>
 
-        <p>Ελέγχει την κατάσταση του σκληρού δίσκου και επιδιορθώνει τυχόν σφάλματα αρχείων.</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">chkdsk</code></pre></div>
-
-        <p>Εκτελεί τον εργαλείο αποκατάστασης συστήματος αρχείων (Disk Defragmenter) για τη βελτιστοποίηση της τοποθέτησης των αρχείων στον σκληρό δίσκο.</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">defrag</code></pre></div>
-
-        <p>Εκκινεί το DiskPart, ένα εργαλείο γραμμής εντολών που σας επιτρέπει να διαχειρίζεστε τους σκληρούς δίσκους, τις κατατμήσεις και τους τόμους. Μπορείτε να δημιουργήσετε, να διαγράψετε, να μεταβάλετε το μέγεθος και να διαμορφώσετε κατατμήσεις.</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">diskpart</code></pre></div>
-
-        <p>Ανοίγει το παράθυρο Disk Management, όπου μπορείτε να διαχειριστείτε τους δίσκους, τις κατατμήσεις και τους τόμους του συστήματος. Μπορείτε να δημιουργήσετε, να διαγράψετε, να αντιγράψετε, να μεταβάλετε το μέγεθος και να διαμορφώσετε τις κατατμήσεις.</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">diskmgmt.msc</code></pre></div>
-
-        <p>Πληροφορίες για CPU</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">wmic cpu get name,NumberOfCores,NumberOfLogicalProcessors</code></pre></div>
-
-        <p>Πληροφορίες για RAM</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">wmic memorychip get capacity, speed, manufacturer</code></pre></div>
-
-        <p>Πληροφορίες για δίσκους / SSD</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">wmic diskdrive get model,size,serialnumber</code></pre></div>
-
-        <p>Τύπος δίσκου (HDD/SSD/USB) και σύνδεση</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">wmic diskdrive get model,serialnumber,interfacetype,mediatype</code></pre></div>
-
         <p>Λίστα όλων των drives</p>
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
 <code class="language-shell">fsutil fsinfo drives</code></pre></div>
-
-        <p>Διαθέσιμος χώρος δίσκου</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">fsutil volume diskfree C:</code></pre></div>
 
         <p>Ανοίγει System Information GUI με όλα τα hardware resources</p>
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
@@ -70,6 +34,24 @@
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
 <code class="language-shell">wmic bios get smbiosbiosversion,serialnumber,manufacturer</code></pre></div>
 
+        <p>Ανοίγει το παράθυρο Disk Management, όπου μπορείτε να διαχειριστείτε τους δίσκους, τις κατατμήσεις και τους τόμους του συστήματος. Μπορείτε να δημιουργήσετε, να διαγράψετε, να αντιγράψετε, να μεταβάλετε το μέγεθος και να διαμορφώσετε τις κατατμήσεις.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">diskmgmt.msc</code></pre></div>
+
+        <h2 class="highlight">RAM</h2>
+        <p>Πληροφορίες για RAM</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic memorychip get capacity, speed, manufacturer</code></pre></div>
+
+        <p>Πληροφορίες RAM με τύπο και θέση</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic memorychip get devicelocator, capacity, speed, memorytype</code></pre></div>
+
+        <h2 class="highlight">CPU</h2>
+        <p>Πληροφορίες για CPU</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic cpu get name,NumberOfCores,NumberOfLogicalProcessors</code></pre></div>
+
         <p>Ποσοστό τρέχοντος φορτίου CPU</p>
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
 <code class="language-shell">wmic cpu get loadpercentage</code></pre></div>
@@ -78,17 +60,38 @@
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
 <code class="language-shell">wmic cpu get maxclockspeed,currentclockspeed</code></pre></div>
 
-        <p>Πληροφορίες RAM με τύπο και θέση</p>
-        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">wmic memorychip get devicelocator, capacity, speed, memorytype</code></pre></div>
-
-        <p>Ελέγχει</p>
+        <h2 class="highlight">Σκληρό Δίσκο</h2>
+        <p>Ελέγχει την κατάσταση του σκληρού δίσκου και επιδιορθώνει τυχόν σφάλματα αρχείων.</p>
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
 <code class="language-shell">chkdsk</code></pre></div>
 
-        <p>Ελέγχει</p>
+        <p>Εκτελεί τον εργαλείο αποκατάστασης συστήματος αρχείων (Disk Defragmenter) για τη βελτιστοποίηση της τοποθέτησης των αρχείων στον σκληρό δίσκο.</p>
         <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
-<code class="language-shell">chkdsk</code></pre></div>
+<code class="language-shell">defrag</code></pre></div>
+
+        <p>Εκκινεί το DiskPart, ένα εργαλείο γραμμής εντολών που σας επιτρέπει να διαχειρίζεστε τους σκληρούς δίσκους, τις κατατμήσεις και τους τόμους. Μπορείτε να δημιουργήσετε, να διαγράψετε, να μεταβάλετε το μέγεθος και να διαμορφώσετε κατατμήσεις.</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">diskpart</code></pre></div>
+
+        <p>Πληροφορίες για δίσκους / SSD</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic diskdrive get model,size,serialnumber</code></pre></div>
+
+        <p>Τύπος δίσκου (HDD/SSD/USB) και σύνδεση</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic diskdrive get model,serialnumber,interfacetype,mediatype</code></pre></div>
+
+        <p>Διαθέσιμος χώρος δίσκου</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">fsutil volume diskfree C:</code></pre></div>
+
+        <p>Εμφάνιση όλων των δίσκων και partitions</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic logicaldisk get name,description</code></pre></div>
+
+        <p>Εμφάνιση όλων των φυσικών δίσκων</p>
+        <div class="terminal"><pre class="command-line" data-prompt="c:\users\grcodeclub>" data-continuation-prompt=">>" data-filter-output="(out)" data-continuation-str=" `">
+<code class="language-shell">wmic diskdrive list brief</code></pre></div>
         </div>
     <div id="addFooter"></div>
 </body>
