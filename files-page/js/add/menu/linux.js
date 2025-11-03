@@ -8,7 +8,6 @@ const mymenu = `
         <div class="col">
         <select id="page-select" class="form-select" onchange="redirectToPage()">
             <option value="https://grcodeclub.gr/operating-systems/linux/">Linux</option>
-            <option value="https://grcodeclub.gr/operating-systems/linux-directory-structure">Δομή Καταλόγων</option>
             <option value="https://grcodeclub.gr/operating-systems/linux/terminal/">Terminal</option>
             <option value="https://grcodeclub.gr/operating-systems/linux/install/">Εγκατάσταση Προγραμμάτων</option>
             <option value="https://grcodeclub.gr/operating-systems/linux/more/distro">Distros</option>    
