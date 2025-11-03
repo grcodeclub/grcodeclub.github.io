@@ -15,27 +15,56 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Grep</h1>
-        <div id="linux-term"></div>
+        <p>Το <code>grep</code> (Global Regular Expression Print) ψάχνει γραμμές κειμένου που ταιριάζουν σε μοτίβο (pattern) μέσα σε αρχεία ή την έξοδο άλλων εντολών.</p><HR>
         <p>Χρησιμοποιώντας την παρακάτω εντολή θα μας εμφανίσει όλες τις γραμμές του αρχείου file.txt που περιέχουν την λέξη grcodeclub.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep grcodeclub file.txt</code></pre></div>                
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep grcodeclub file.txt</code></pre></div>                
+        <p>Αναζήτηση της λέξης grcodeclub σε πολλά αρχεία.</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep "grcodeclub" file1 file2</code></pre></div>                
+        <p>Αγνοεί πεζά/κεφαλαία</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -i "grcodeclub" file.txt</code></pre></div>
+        <p>Εμφανίζει αριθμό γραμμής</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -n "grcodeclub" file.txt</code></pre></div>                
+        <p>Εξαιρεί γραμμές που περιέχουν το pattern</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -v "grcodeclub" file.txt</code></pre></div>                
+        <p>Εμφανίζει πόσες φορές βρέθηκε</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -c "grcodeclub" file.txt</code></pre></div>                
+        <p>Δείχνει μόνο ποια αρχεία περιέχουν το pattern</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -l "grcodeclub" *.log</code></pre></div>                
+        <p>Αντίστροφο: αρχεία που δεν περιέχουν το pattern</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -L "grcodeclub" *.log</code></pre></div>                
+        <p>Ψάχνει αναδρομικά σε όλους τους υποφακέλους</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -r "grcodeclub" /path</code></pre></div>                
+        <p>Αναζήτηση μόνο σε αρχεία με συγκεκριμένη κατάληξη</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -R --include="*.py" "import" /home</code></pre></div>                
+        <p>Εξαιρεί συγκεκριμένα αρχεία</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -R --exclude="*.log" "error" /var/log</code></pre></div>                
+        <p>Εμφανίζει το pattern με χρώμα</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep --color=auto "grcodeclub" file</code></pre></div>                
+        <p>Εμφανίζει και το όνομα του αρχείου μπροστά από κάθε αποτέλεσμα</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -H "grcodeclub" file</code></pre></div>                
+        <p>Εμφανίζει μόνο το τμήμα που ταιριάζει (όχι ολόκληρη γραμμή)</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -o "pattern" file</code></pre></div>                
+        
+        
+        
+        <h2 class="highlight">Πίνακας Κανονικών Εκφράσεων (Regex) για grep</h2>
+        <table id="search_table_page" class="table table-borders">
+            <tr><td><code>grep "^root" /etc/passwd</code></td><td>Ταιριάζει γραμμές που ξεκινούν με το "root".</td></tr>
+            <tr><td><code>grep "bash$" /etc/passwd</code></td><td>Ταιριάζει γραμμές που τελειώνουν με το "bash".</td></tr>
+            <tr><td><code>grep "r..t" file</code></td><td>Αντιπροσωπεύει οποιονδήποτε χαρακτήρα (εκτός από newline).</td></tr>
+            <tr><td><code>grep "lo*l" file</code></td><td>Επαναλαμβάνει 0 ή περισσότερες φορές τον προηγούμενο χαρακτήρα ή μοτίβο.</td></tr>
+            <tr><td><code>grep "lo+l" file</code></td><td>Επαναλαμβάνει 1 ή περισσότερες φορές τον προηγούμενο χαρακτήρα ή μοτίβο.</td></tr>
+            <tr><td><code>grep "colou?r" file</code></td><td>Ο προηγούμενος χαρακτήρας είναι προαιρετικός (0 ή 1 φορά).</td></tr>
+            <tr><td><code>grep "[ch]at" file</code></td><td>Ταιριάζει οποιονδήποτε από τους χαρακτήρες μέσα στις αγκύλες (a, b ή c).</td></tr>
+            <tr><td><code>grep "[^a-z]" file</code></td><td>Ταιριάζει οποιονδήποτε χαρακτήρα εκτός από τους a, b ή c.</td></tr>
+            <tr><td><code>grep "[a-z]" file</code></td><td>Ταιριάζει οποιονδήποτε πεζό χαρακτήρα από a έως z.</td></tr>
+            <tr><td><code>grep "[0-9]" file</code></td><td>Ταιριάζει οποιονδήποτε αριθμό από 0 έως 9.</td></tr>
+            <tr><td><code>grep "\\." file</code></td><td>Χρησιμοποιείται για να “ξεφύγεις” ειδικούς χαρακτήρες, π.χ. για να ψάξεις τελεία.</td></tr>
+            <tr><td><code>grep -E "cat|dog" file</code></td><td>Ή (OR): ταιριάζει είτε το πρώτο είτε το δεύτερο μοτίβο.</td></tr>
+            <tr><td><code>grep -E "(foo|bar)" file</code></td><td>Ομαδοποιεί εκφράσεις για χρήση με τελεστές όπως + ή *.</td></tr>
+            <tr><td><code>grep -E "a{2,4}" file</code></td><td>Ο προηγούμενος χαρακτήρας επαναλαμβάνεται από n έως m φορές.</td></tr>
+        </table>
 
-            <p>Αναζήτηση σε πολλά αρχεία </p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep grcodeclub file1.txt file2.txt file3.txt</code></pre></div>                
-
-            <p>Αναζήτηση σε όλα τα αρχεία που βρίσκονται στο τρέχον φάκελο.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep grcodeclub *</code></pre></div>                
-
-            <p>Για να βρείτε μόνο ολόκληρες λέξεις.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -w grcodeclub file.txt</code></pre></div>                
-
-            <p>Για να εμφανίζει όλες τις γραμμές που εμφανίζεται η λέξη ανεξάρτητος αν είναι κεφάλαια ή πεζά.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -i grcodeclub file.txt</code></pre></div>                
-
-            <p>Για να εμφανίσουμε όλες τις γραμμές που δεν περιέχουν το μοτίβο/λέξη  που δώσαμε.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -v grcodeclub file1.txt</code></pre></div>                
-
-            <p>Για να δούμε σε ποια αρχεία από το τρέχον φάκελο περιχέουν την λέξη που δώσαμε.</p>
-            <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">grep -l grcodeclub *</code></pre></div>                
       </div>
 
     <div id="addFooter"></div>

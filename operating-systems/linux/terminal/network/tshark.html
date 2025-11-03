@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Καταγραφή (Capture) με tshark">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/linux.png">
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/linux.png"/>
+    <meta property="og:title" content="Καταγραφή (Capture) με tshark">
+    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+    
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Καταγραφή (Capture) με tshark</h1>
+        <p>Εμφανίζει όλα τα διαθέσιμα network interfaces</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tshark -D</code></pre></div>  
+        <p>Καταγράφει πακέτα στο interface eth0</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo tshark -i eth0</code></pre></div>  
+        <p>Συλλέγει 100 πακέτα από το Wi-Fi</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo tshark -i wlan0 -c 100</code></pre></div>  
+        <p>Αποθηκεύει την καταγραφή σε αρχείο</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo tshark -i eth0 -w test.pcap</code></pre></div>  
+        <p>Διαβάζει και εμφανίζει υπάρχουσα καταγραφή</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tshark -r capture.pcap</code></pre></div>  
+        <p>Συλλέγει μόνο πακέτα προς/από 8.8.8.8</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tshark -f "host 8.8.8.8"</code></pre></div>  
+        <p>Καταγράφει μόνο HTTP κίνηση</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tshark -f "port 80"</code></pre></div>  
+        <p>Μόνο TCP πακέτα</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tshark -f "tcp"</code></pre></div>  
+        <p>Μόνο UDP πακέτα</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tshark -f "udp"</code></pre></div>  
+        <p>Μόνο πακέτα του συγκεκριμένου υποδικτύου</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tshark -f "net 192.168.1.0/24"</code></pre></div>  
+    </div>
+
+
+    <div id="addFooter"></div>
+</body>
+</html>
