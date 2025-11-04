@@ -1,5 +1,3 @@
-// Ο κώδικας παραμένει ο ίδιος για την προσθήκη του dropdown
-
 // Το HTML περιεχόμενο του dropdown
 const mymenu = `
 <div class="container dropdown-container contentsMenu">

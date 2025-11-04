@@ -9,13 +9,15 @@
     <meta name="twitter:title" content="Ορολογία">
     <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png">
     <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+    <link href="https://grcodeclub.github.io/files-page/css/libraries/select2/v4-0-13.css" rel="stylesheet">
+    <link href=" https://grcodeclub.github.io/files-page/css/libraries/select2/custom.css" rel="stylesheet">
 </head>
 <body>
     <div id="addHeader"></div>
     <div class="container">
         <h1>Ορολογία</h1>
-        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση αγγλικού όρου">
-        <input type="text"  id='searchInput2' class="form-control" placeholder="Αναζήτηση ελληνικού όρου">
+        <div class="input-group mb-3"><span class="input-group-text bg-white border-end-0"><i class="fi fi-gb"></i></span> <input  type="text" id="searchInput" class="form-control border-start-0"  placeholder="Search..."> </div>
+        <div class="input-group mb-3"><span class="input-group-text bg-white border-end-0"><i class="fi fi-gr"></i></span> <input  type="text" id="searchInput2" class="form-control border-start-0"  placeholder="Αναζήτηση..."> </div>
         <br>
         <table id="search_table_page" class="table table-bordered table-striped">
             <tr id="title-table" class="table-dark"><td>Αγγλικά</td> <td>Ελληνικά</td> <td>Περιγραφή</td></tr>

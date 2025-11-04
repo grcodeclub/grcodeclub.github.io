@@ -1,0 +1,11 @@
+.fi {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 1.5em;
+  background-color: black; /* θα φανεί πίσω */
+  line-height: 1em;
+}
+.fi-gb { background-image: url("./gb.svg"); }
+.fi-xx { background-image: url("./xx.svg"); }
+.fi-gr { background-image: url("./gr.svg"); }

@@ -3,6 +3,7 @@ const cssLinks = [
     "https://grcodeclub.github.io/files-page/css/libraries/bootstrap/v5-3-3.css",
     "https://grcodeclub.github.io/files-page/css/libraries/bootstrap/custom.css",
     "https://grcodeclub.github.io/files-page/css/libraries/font-awesome/6-5-0.css",
+    "https://grcodeclub.github.io/files-page/css/flags/lag-icons.min.css",
     "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap",
     "https://grcodeclub.github.io/files-page/css/code/bg.css",
     "https://grcodeclub.github.io/files-page/css/text.css",
@@ -106,7 +107,7 @@ loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
     }
     
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.github.io/files-page/js/search/tableSearchWithSelect.js');}
-    else if (document.getElementById('searchInput2')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_2_Search.js');}
+    else if (document.getElementById('searchInput2')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_Search.js');}
     else if (document.getElementById('searchInput')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_Search.js');}
     if (document.getElementById('searchInputContents')){ addScript('https://grcodeclub.github.io/files-page/js/search/searchInputContents.js');}
 
