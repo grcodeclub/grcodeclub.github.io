@@ -108,12 +108,11 @@ loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.github.io/files-page/js/search/tableSearchWithSelect.js');}
     if (document.getElementById('search_table_page') && document.getElementById('searchInput') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_Search.js');}
     if (document.getElementById('search_table_page') && document.getElementById('searchInput2') && !document.getElementById('selectOption')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_2_Search.js');}
+    if (document.getElementById('searchInputContents')){ addScript('https://grcodeclub.github.io/files-page/js/search/searchInputContents.js');}
 
     const currentURL = window.location.href;  // Λειτουργία για να ελέγξει το URL και να προσθέσει id στο body
 
     const scriptMappings = {
-    'https://grcodeclub.gr/web-developer/javascript/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/javascript.js',
-    'https://grcodeclub.gr/web-developer/css/': 'https://grcodeclub.github.io/files-page/js/add/menu/developer/web/css.js',
     'https://grcodeclub.gr/web-developer/build/': 'https://grcodeclub.github.io/files-page/js/add/menu/website.js',
     'https://grcodeclub.gr/syntomografies/': 'https://grcodeclub.github.io/files-page/js/add/menu/syntomografies.js',
     'https://grcodeclub.gr/orologia/': 'https://grcodeclub.github.io/files-page/js/add/menu/orologia.js'

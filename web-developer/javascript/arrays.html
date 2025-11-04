@@ -14,7 +14,7 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1>Arrays</h1>
-        <p class="highlight">Δημιουργία Arrays</p>
+        <h2>Δημιουργία Arrays</h2>
         <p>Μπορείς να δημιουργήσεις έναν πίνακα χρησιμοποιώντας αγκύλες <code>[]</code>.</p>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">// Δημιουργία ενός κενών πίνακα
 let emptyArray = [];
@@ -22,17 +22,17 @@ let emptyArray = [];
 // Δημιουργία ενός πίνακα με μάρκες αυτοκινήτων
 let cars = ["Toyota", "Honda", "BMW"];</code></pre></div></div>
 
-        <p class="highlight">Πρόσβαση σε Στοιχεία Πίνακα</p>
+        <h2>Πρόσβαση σε Στοιχεία Πίνακα</h2>
         <p>Η πρόσβαση σε στοιχεία του πίνακα γίνεται με χρήση του index</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">console.log(cars[0]); // Εκτυπώνει: Toyota
 console.log(cars[1]); // Εκτυπώνει: Honda
 console.log(cars[2]); // Εκτυπώνει: BMW</code></pre></div></div>
 
-        <p class="highlight">Μήκος του Πίνακα</p>
+        <h2>Μήκος του Πίνακα</h2>
         <p>Μπορείς να βρεις το μήκος (αριθμό στοιχείων) ενός πίνακα χρησιμοποιώντας την ιδιότητα <code>length</code>.</p>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">console.log(cars.length); // Εκτυπώνει: 3</code></pre></div></div>
 
-        <p class="highlight">Προσθήκη Στοιχείων</p>
+        <h2>Προσθήκη Στοιχείων</h2>
         <p>Στο τέλος χρησιμοποιώντας την <code>push()</code></p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.push("Mercedes");
 console.log(cars); // Εκτυπώνει: ["Toyota", "Honda", "BMW", "Mercedes"]</code></pre></div></div>
@@ -40,7 +40,7 @@ console.log(cars); // Εκτυπώνει: ["Toyota", "Honda", "BMW", "Mercedes"]
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.unshift("Ford");
 console.log(cars); // Εκτυπώνει: ["Ford", "Toyota", "Honda", "BMW", "Mercedes"]</code></pre></div></div>
     
-        <p class="highlight">Αφαίρεση Στοιχείων</p>
+        <h2>Αφαίρεση Στοιχείων</h2>
         <p>Από το τέλος χρησιμοποιώντας την <code>pop()</code></p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.pop(); // Αφαιρεί το τελευταίο στοιχείο (Mercedes)
 console.log(cars); // Εκτυπώνει: ["Ford", "Toyota", "Honda", "BMW"]</code></pre></div></div>
@@ -48,7 +48,7 @@ console.log(cars); // Εκτυπώνει: ["Ford", "Toyota", "Honda", "BMW"]</co
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">cars.shift(); // Αφαιρεί το πρώτο στοιχείο (Ford)
 console.log(cars); // Εκτυπώνει: ["Toyota", "Honda", "BMW"]</code></pre></div></div>
 
-        <p class="highlight">Αναζήτηση Στοιχείων</p>
+        <h2>Αναζήτηση Στοιχείων</h2>
         <p>Μπορείς να βρεις τη θέση ενός στοιχείου στον πίνακα χρησιμοποιώντας την <code>indexOf()</code>.</p>
         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">let index = cars.indexOf("Honda");
 if (index !== -1) {
@@ -57,17 +57,17 @@ if (index !== -1) {
     console.log("Η Honda δεν βρέθηκε στον πίνακα.");
 }</code></pre></div></div>
 
-    <p class="highlight">Δημιουργία Αντιγράφων Πίνακα</p>
+    <h2>Δημιουργία Αντιγράφων Πίνακα</h2>
     <p>Μπορείς να δημιουργήσεις έναν νέο πίνακα από ένα υπάρχοντα χρησιμοποιώντας την <code>slice()</code>.</p>
     <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">let newcars = cars.slice(0, 2); // Παίρνει τα πρώτα 2 cars
 console.log(newcars); // Εκτυπώνει: ["Toyota", "Honda"]</code></pre></div></div>
 
-    <p class="highlight">Συνένωση Πινάκων</p>
+    <h2>Συνένωση Πινάκων</h2>
     <p>Μπορείς να συνενώσεις δύο ή περισσότερους πίνακες χρησιμοποιώντας την <code>concat()</code>.</p>
     <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript"></code>let morecars = newcars.concat(["Nissan", "Mazda"]);
 console.log(morecars); // Εκτυπώνει: ["Toyota", "Honda", "Nissan", "Mazda"]</pre></div></div>
 
-    <p class="highlight">Επαναλήψεις σε Πίνακες</p>
+    <h2>Επαναλήψεις σε Πίνακες</h2>
     <p>Μπορείς να χρησιμοποιήσεις τις μεθόδους <code>forEach()</code> και <code>map()</code> για να επαναλάβεις τα στοιχεία του πίνακα.</p>
     <ol>
         <li>forEach(): Εκτελεί μια συνάρτηση για κάθε στοιχείο του πίνακα.

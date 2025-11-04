@@ -15,6 +15,9 @@
     <div class="container">
         <h1>JavaScript</h1>
         <p><u>Η Javascript δεν θα πρέπει να συγχέεται με τη Java, που είναι διαφορετική γλώσσα προγραμματισμού και με διαφορετικές εφαρμογές</u></h2>
+        <hr>
+        <a href="./libraries-and-framework.html" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-book"></i>Βιβλιοθήκες - Framework</a>    
+        <hr>
         <h2>Τύποι Δεδομένων</h2>
         <ol>
             <li>String: Κείμενο</li>
@@ -128,6 +131,46 @@ console.log(data);
 }).catch(error => {
 console.error(error);
 });</code></pre></div></div>
+
+        <h2>Arrays</h2>
+        <p>Δημιουργία Arrays</p>
+        <p>Μπορείς να δημιουργήσεις έναν πίνακα χρησιμοποιώντας αγκύλες <code>[]</code>.</p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-javascript">// Δημιουργία ενός κενών πίνακα
+let emptyArray = [];
+// Δημιουργία ενός πίνακα με μάρκες αυτοκινήτων
+let cars = ["Toyota", "Honda", "BMW"];</code></pre></div></div>
+        <a href="./arrays" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-arrow-right"></i>περισσότερα...</a>    
+        <h2>Mηνύματα - Ειδοποιήσεις</h2>
+        <p><code>Beforeunload:</code> Αυτό το event τρέχει όταν ο χρήστης πάει να κλείσει ή να ανανεώσει τη σελίδα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">window.addEventListener("beforeunload", function(event) {
+// Προειδοποίηση για ανανέωση ή κλείσιμο της σελίδας
+const message = "Έχετε μη αποθηκευμένα δεδομένα. Θέλετε να συνεχίσετε;";
+event.returnValue = message; // Για συμβατότητα με παλαιότερους browsers
+return message; // Ορισμένα browsers χρειάζονται και αυτή τη γραμμή
+});</code></pre></div></div>
+        <p><code>Alert:</code> Εμφανίζει ένα απλό pop-up μήνυμα με κουμπί OK.Ο χρήστης πρέπει να πατήσει ΟΚ για να συνεχίσει.Είναι blocking ⇒ σταματάει τον κώδικα μέχρι να το πατήσει ο χρήστης.</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">// Εμφάνιση μηνύματος όταν ο χρήστης προσπαθεί να κάνει μια ενέργεια
+function showAlert() {
+alert("Αυτό είναι ένα απλό μήνυμα!");
+}
+
+// Κάλεσε τη συνάρτηση όταν χρειάζεται
+showAlert();</code></pre></div></div>
+        <a href="./messages" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-arrow-right"></i>περισσότερα...</a>    
+        <h2>Περιορισμοί</h2>
+        <p>Αποτροπή Περιήγησης μέσω Συντόμευσης Πλήκτρων</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-javascript">document.addEventListener('keydown', function(event) {
+if ((event.key === 'F12') || // Αποτροπή F12 (άνοιγμα DevTools)
+(event.key === 'F11') || // Αποτροπή F11 (πλήρης οθόνη)
+(event.key === 'F5') ||  // Αποτροπή F5 (ανανέωση σελίδας)
+(event.ctrlKey && event.key === 'r') ) {  // Αποτροπή Ctrl + R (ανανέωση σελίδας)
+event.preventDefault();
+alert('This keyboard shortcut is disabled on this page.');
+}
+});
+</code></pre></div></div>
+        <a href="./restriction" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-arrow-right"></i>περισσότερα...</a>    
 
 
 
