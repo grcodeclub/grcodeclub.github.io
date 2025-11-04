@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
     .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/popper-v2-5-2.js'))
     .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/bootstrap@5-3-3.js'))    
-    .then(() => loadScript('https://grcodeclub.github.io/files-page/js/add/body.js'))
+    .then(() => loadScript('https://grcodeclub.github.io/files-page/js/body.js'))
     .catch(error => console.error(error));
 
 
