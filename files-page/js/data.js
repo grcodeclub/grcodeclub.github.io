@@ -107,7 +107,7 @@ loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
     }
     
     if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.github.io/files-page/js/search/tableSearchWithSelect.js');}
-    else if (document.getElementById('searchInput2')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_Search.js');}
+    else if (document.getElementById('searchInput2')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_2_Search.js');}
     else if (document.getElementById('searchInput')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_Search.js');}
     if (document.getElementById('searchInputContents')){ addScript('https://grcodeclub.github.io/files-page/js/search/searchInputContents.js');}
 
