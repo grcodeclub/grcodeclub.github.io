@@ -24,15 +24,19 @@
 
 
 .terminal{
-  background-color: rgb(33, 37, 41);
+  background-color: #05050d;       /* Σκούρο φόντο */
+  color: #f8f8f2;                  /* Απαλό λευκό κείμενο */
+  border-radius: 0.5rem;           /* Στρογγυλεμένες γωνίες */
+  font-family: 'Fira Code', monospace; /* Monospace font */
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  overflow-x: auto;
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 
-.terminal1{
-  background-color: rgb(51, 50, 59);
-}
 
-command-line
-.code_editor::-webkit-scrollbar-track {
+.command-line .code_editor::-webkit-scrollbar-track {
 box-shadow: inset 0 0 10px rgba(255, 255, 255, 0); 
 border-radius: 5px;}
 .code_editor::-webkit-scrollbar-thumb:hover {
@@ -46,27 +50,7 @@ background: rgba(255, 255, 245, 0.13);
   display:flex;
   gap:10px}
 
-.buttons1{
-  width:12px;
-  height:12px;
-  border-radius:6px;
-  background-color:rgb(82, 3, 3)
-}
 
-.buttons2{
-  width:12px;
-  height:12px;
-  border-radius:6px;
-  background-color:rgb(8, 3, 82)
-}
-
-
-.buttons3{
-  width:12px;
-  height:12px;
-  border-radius:6px;
-  background-color:rgb(82, 74, 3)
-}
 .name_input{
   height:16px;color:var(--frame-title-placeholder-color);
   font-family:Inter,sans-serif;
