@@ -21,9 +21,9 @@
                         <li>C++ αναπτύχθηκε ως επέκταση του C, και οι δύο γλώσσες έχουν σχεδόν την ίδια σύνταξη</li>
                         <li>Η κύρια διαφορά μεταξύ του, ότι το C++ υποστηρίζει class και αντικείμενα, ενώ το C δεν το κάνει</li>
                     </ol>
-         <h2 class="highlight">Μεταγλώττιση</h2>
+         <h2>Μεταγλώττιση</h2>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">g++ main.cpp -o my_program</code></pre></div>          
-        <h2 class="highlight">Βασικοί τύποι δεδομένων</h2>
+        <h2>Βασικοί τύποι δεδομένων</h2>
         <table id="table_page" class="table table-bordered">
             <tr id="title-table"><td>Τύπος δεδομένων</td><td>Size</td><td>Περιγραφή</td></tr>
             <tr><td>boolean</td><td>1 byte</td><td>Αποθηκεύει αληθείς ή ψευδείς τιμές</td></tr>
@@ -33,14 +33,14 @@
             <tr><td>double</td><td>8 bytes</td><td>Αποθηκεύει κλασματικούς αριθμούς που περιέχουν ένα ή περισσότερα δεκαδικά. Επαρκεί για την αποθήκευση 15 δεκαδικών ψηφίων</td></tr>
         </table>
          
-        <h2 class="highlight">Μεταβλητές</h2>
+        <h2>Μεταβλητές</h2>
     <p><strong>const: </strong>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
     <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
 x = 5;  // error: assignment of read-only variable 'x'</code></pre></div></div>
 
             
-<h2 class="highlight">Εντολές</h2>
+<h2>Εντολές</h2>
 <div class="accordion" id="roadmapAccordion">
 <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος & Έξοδος</button></h2>
@@ -172,7 +172,7 @@ catch (type  exception) {
         <li>Αν έχει συμβεί μια εξαίρεση, το μπλοκ catch εκτελείται λαμβάνοντας ως παράμετρο αυτή που περάστηκε από το throw</li>
     </ol>
     <p>Η C++ διαθέτει προκαθορισμένες κλάσεις εξαιρέσεων στην std βιβλιοθήκη. Η std::exception είναι η βασική κλάση από την οποία μπορούν να κληρονομηθούν άλλες κλάσεις εξαιρέσεων.</p>
-    <h2 class="highlight">Throwing Exceptions</h2>
+    <h2>Throwing Exceptions</h2>
     <p>Για να ρίξεις μια εξαίρεση, χρησιμοποιούμε τη λέξη-κλειδί <code>throw</code>:</p>
     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">if (something_wrong) {
     throw std::runtime_error("Κάποιο σφάλμα συνέβη");

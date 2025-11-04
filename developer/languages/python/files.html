@@ -15,13 +15,13 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Αρχεία</h1>
-        <h2 class="highlight">Ανάγνωση (Read)</h2>
+        <h2>Ανάγνωση (Read)</h2>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "r")  # Άνοιγμα για ανάγνωση
 content = file.read()
 print(content)
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Ανάγνωση Γραμμών</h2>
+        <h2>Ανάγνωση Γραμμών</h2>
         <p>readline(): Διαβάζει μία γραμμή τη φορά.<br>
            readlines(): Διαβάζει όλες τις γραμμές και τις επιστρέφει ως λίστα.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "r")
@@ -29,68 +29,68 @@ line = file.readline()
 lines = file.readlines()
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Εγγραφή σε Αρχείο (Write)</h2>
+        <h2>Εγγραφή σε Αρχείο (Write)</h2>
         <p>Ανοίγει το αρχείο για εγγραφή. Αν το αρχείο υπάρχει, διαγράφει το περιεχόμενο και ξεκινάει με νέο περιεχόμενο. Αν δεν υπάρχει, το δημιουργεί.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "w")  # Άνοιγμα αρχείου για εγγραφή
 file.write("Hello, World!")
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Κλείσιμο Αρχείου (Close)</h2>
+        <h2>Κλείσιμο Αρχείου (Close)</h2>
         <p>Πρέπει <u>πάντα να κλείνεις</u> το αρχείο αφού τελειώσεις μαζί του, για να απελευθερωθούν οι πόροι.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "r")
 # Διαχείριση του αρχείου
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Χρήση του with για αυτόματο κλείσιμο</h2>
+        <h2>Χρήση του with για αυτόματο κλείσιμο</h2>
         <p>Η χρήση του with κλείνει αυτόματα το αρχείο όταν η εργασία ολοκληρωθεί.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">with open("example.txt", "r") as file:
 content = file.read()
 print(content)
 # Το αρχείο κλείνει αυτόματα εδώ</code></pre></div></div>
 
-        <h2 class="highlight">Προσθήκη σε Αρχείο (Append)</h2>
+        <h2>Προσθήκη σε Αρχείο (Append)</h2>
         <p>Η λειτουργία append χρησιμοποιείται για την προσθήκη δεδομένων στο τέλος ενός αρχείου.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "a")  # Άνοιγμα αρχείου για προσθήκη
 file.write("\nΠροσθήκη νέας γραμμής")
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Δημιουργία Νέου Αρχείου (Exclusive Creation)</h2>
+        <h2>Δημιουργία Νέου Αρχείου (Exclusive Creation)</h2>
         <p>Δημιουργεί το αρχείο και το ανοίγει για εγγραφή. Αν το αρχείο υπάρχει ήδη, θα προκληθεί σφάλμα.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("newfile.txt", "x")  # Δημιουργία νέου αρχείου
 file.write("This is a new file.")
 file.close()</code></pre></div></div>
 
 
-        <h2 class="highlight">Ανάγνωση δυαδικού αρχείου</h2>
+        <h2>Ανάγνωση δυαδικού αρχείου</h2>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("image.png", "rb")  # Δυαδική ανάγνωση
 content = file.read()
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Εγγραφή σε δυαδικό αρχείο</h2>
+        <h2>Εγγραφή σε δυαδικό αρχείο</h2>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("newimage.png", "wb")  # Δυαδική εγγραφή
 file.write(content)  # content μπορεί να είναι δεδομένα δυαδικής μορφής
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Text</h2>
+        <h2>Text</h2>
         <p>Ανοίγει το αρχείο σε κειμενική μορφή (προεπιλογή). Συνήθως δεν χρειάζεται να προσθέσεις αυτό το mode, καθώς είναι η προεπιλεγμένη συμπεριφορά, αλλά μπορεί να χρησιμοποιηθεί συνδυαστικά με άλλες λειτουργίες όπως 'rt', 'wt', κ.λπ.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "rt")  # Κειμενική ανάγνωση (ίδιο με το "r")
 content = file.read()
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Ανάγνωση και Εγγραφή (Update)</h2>
+        <h2>Ανάγνωση και Εγγραφή (Update)</h2>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "r+")  # Ανάγνωση και εγγραφή
 content = file.read()
 file.write("\nAdding a new line after reading.")
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Δημιουργία και εγγραφή με ανάγνωση</h2>
+        <h2>Δημιουργία και εγγραφή με ανάγνωση</h2>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "w+")  # Δημιουργία/εγγραφή και ανάγνωση
 file.write("Starting fresh with new content.")
 file.seek(0)  # Μετακίνηση στην αρχή του αρχείου
 print(file.read())  # Ανάγνωση του νέου περιεχομένου
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Προσθήκη και Ανάγνωση (Append and Read)</h2>
+        <h2>Προσθήκη και Ανάγνωση (Append and Read)</h2>
         <p>Ανοίγει το αρχείο για προσθήκη και ανάγνωση. Αν το αρχείο δεν υπάρχει, το δημιουργεί.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "a+")  # Προσθήκη και ανάγνωση
 file.write("\nAppending another line.")
@@ -98,7 +98,7 @@ file.seek(0)  # Μετακίνηση στην αρχή του αρχείου γ�
 print(file.read())
 file.close()</code></pre></div></div>
   
-        <h2 class="highlight">Εγγραφή και Ανάγνωση (Write and Read)</h2>
+        <h2>Εγγραφή και Ανάγνωση (Write and Read)</h2>
         <p>Ανοίγει το αρχείο για εγγραφή και ανάγνωση. Διαγράφει το υπάρχον περιεχόμενο του αρχείου, αν υπάρχει.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("example.txt", "w+")  # Εγγραφή και ανάγνωση
 file.write("Overwriting content.")
@@ -106,7 +106,7 @@ file.seek(0)
 print(file.read())
 file.close()</code></pre></div></div>
 
-        <h2 class="highlight">Δημιουργία Νέου Αρχείου και Ανάγνωση (Exclusive Creation and Read)</h2>
+        <h2>Δημιουργία Νέου Αρχείου και Ανάγνωση (Exclusive Creation and Read)</h2>
         <p>Δημιουργεί το αρχείο για εγγραφή και ανάγνωση. Αν το αρχείο υπάρχει ήδη, προκαλεί σφάλμα.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-python">file = open("newfile.txt", "x+")  # Δημιουργία νέου αρχείου για εγγραφή και ανάγνωση
 file.write("This is a new file with read/write access.")

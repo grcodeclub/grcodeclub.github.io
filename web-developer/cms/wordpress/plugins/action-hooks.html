@@ -15,9 +15,9 @@
             <div id="addHeader"></div>
                 <div class="container">
                     <h1 class="title">WordPress Plugins (Action Hooks)</h1>
-                    <h2 class="highlight"><u>Τι είναι τα Action Hooks;</u></h2>
+                    <h2><u>Τι είναι τα Action Hooks;</u></h2>
                     <p>Τα Action Hooks είναι συγκεκριμένα σημεία στον κώδικα του WordPress όπου μπορείς να εισάγεις τη δική σου συνάρτηση (function) που θα εκτελεστεί όταν φτάσει το πρόγραμμα σε αυτά τα σημεία.</p>
-                    <h2 class="highlight">Pages & Post</h2>
+                    <h2>Pages & Post</h2>
                     <p><strong>Περιγραφή: </strong>Εκτελείται όταν αλλάζει η κατάσταση μιας ανάρτησης, π.χ., από προσχέδιο (draft) 
                         σε δημοσιευμένη (published). Μπορείς να το χρησιμοποιήσεις για να παρακολουθήσεις αλλαγές κατάστασης στις αναρτήσεις.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('transition_post_status', 'my_custom_transition_post_status', 10, 3);</code></pre></div></div>  
@@ -31,7 +31,7 @@
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('deleted_post', 'my_custom_deleted_post');</code></pre></div></div>  
 
 
-                    <h2 class="highlight">Plugins</h2>
+                    <h2>Plugins</h2>
                     <p><strong>Περιγραφή: </strong>Εκτελείται αφού έχουν φορτωθεί όλα τα ενεργά plugins, 
                         αλλά πριν το WordPress ξεκινήσει να εκτελεί άλλες λειτουργίες (όπως το init).
                          Είναι ιδανικό για να αρχικοποιήσεις τις λειτουργίες του plugin σου ή να φορτώσεις μεταφράσεις.</p>
@@ -66,7 +66,7 @@
                     <p><strong>Περιγραφή: </strong>Εκτελείται κατά τη φόρτωση της σελίδας plugins και σου επιτρέπει να επεξεργαστείς τη λίστα των plugins που εμφανίζονται εκεί.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_filter('network_admin_plugin_action_links_' . plugin_basename(__FILE__), 'my_custom_network_plugin_action_links');</code></pre></div></div>  
 
-                    <h2 class="highlight">Login & Logout</h2>
+                    <h2>Login & Logout</h2>
                     <p><strong>Περιγραφή: </strong>Εκτελείται όταν ένας χρήστης συνδέεται επιτυχώς στο WordPress. 
                         Μπορείς να το χρησιμοποιήσεις για να καταγράψεις ή να παρακολουθήσεις συμβάντα σύνδεσης.</p>
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('wp_login', 'my_custom_login_function', 10, 2);</code></pre></div></div>  
@@ -76,7 +76,7 @@
                     <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">add_action('wp_logout', 'my_custom_logout_function');</code></pre></div></div>  
              
 
-                    <h2 class="highlight">Themes & </h2>
+                    <h2>Themes & </h2>
 
                     <p><strong>Περιγραφή: </strong>Εκτελείται αμέσως μετά την ενεργοποίηση ενός θέματος. Χρησιμοποιείται συχνά για να 
                         προσθέσεις υποστήριξη για διάφορες δυνατότητες του θέματος, όπως post-thumbnails, custom-logo, κ.λπ.</p>
@@ -119,7 +119,7 @@
 
 
 
-                    <h2 class="highlight">Διαφορα</h2>
+                    <h2>Διαφορα</h2>
                     <p> <strong>Περιγραφή: </strong>Εκτελείται κατά την αρχική φόρτωση του WordPress, 
                         αφού έχουν φορτωθεί όλα τα βασικά αρχεία, αλλά πριν γίνει οτιδήποτε άλλο. Είναι 
                         κατάλληλο για την αρχικοποίηση των ρυθμίσεων, την εγγραφή τύπων περιεχομένου, 

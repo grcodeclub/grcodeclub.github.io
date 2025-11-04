@@ -14,9 +14,9 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Gobuster</h1>
-        <h2 class="highlight">Gobuster Installation</h2></u>
+        <h2>Gobuster Installation</h2></u>
        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt install gobuster</code></pre></div>
-       <h2 class="highlight">Mode</h2>
+       <h2>Mode</h2>
        <p>Το Gobuster έχει τις παρακάτω λειτουργίες (mode):
            <ol>
                <li>dir: Θα προσπαθήσει να εντοπίσει καταλόγους και αρχεία</li>
@@ -25,7 +25,7 @@
            </ol>
        </p>
        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">gobuster [MODE]</code></pre></div>  
-       <h2 class="highlight">Mode: dir</h2>
+       <h2>Mode: dir</h2>
        <p>
            <ol>
                <li>-u:Ορίζουμε το URL του website που θέλουμε να βρούμε καταλόγους και αρχεία.</li>
@@ -37,7 +37,7 @@
        <p>Η επιλογή -x καθορίζει τις επεκτάσεις αρχείων που θα δοκιμάσει το Gobuster . Αυτό σημαίνει ότι θα δοκιμάσει διαδρομές και αρχεία με αυτές τις επεκτάσεις.</p>
        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">gobuster dir -u https://grcodeclub.github.io -w ./dir_wordlist.txt -x php,html</code></pre></div>
        <p>H εντολή χρησιμοποιείται για να ανιχνεύσει πιθανές διαδρομές και αρχεία στον ιστότοπο https://grcodeclub.github.io, δοκιμάζοντας αρχεία με τις επεκτάσεις php, html και χρησιμοποιώντας τις διαδρομές που αναφέρονται στο αρχείο ./dir_wordlist.txt.</p>
-       <h2 class="highlight">Mode: dns</h2>
+       <h2>Mode: dns</h2>
        <p>
            <ol>
                <li>-w: Ορίζουμε το path από την wordlist που περιχέει τα πιθανά subdomain που θέλουμε να ελεξούμε αν υπάρχουν. </li>

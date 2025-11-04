@@ -15,7 +15,7 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1 class="title">Εντολές Δικτύου</h1>
-        <h2 class="highlight">Πληροφορίες Δικτύου και Port</h2>
+        <h2>Πληροφορίες Δικτύου και Port</h2>
         <p>Εμφανίζει πληροφορίες για τις δικτυακές συνδέσεις, τις πόρτες που ακούν και άλλα στατιστικά δικτύου</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">netstat</code></pre></div>
         <p>List all TCP ports</p>
@@ -49,7 +49,7 @@ default         _gateway        0.0.0.0         UG    600    0        0 wlp3s0
 192.168.1.0     0.0.0.0         255.255.255.0   U     600    0        0 wlp3s0
 </pre></div>
 
-        <h2 class="highlight">Βασικές Εντολές Δικτύου</h2>
+        <h2>Βασικές Εντολές Δικτύου</h2>
         <p>Προσθέτει IP σε interface</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo ip addr add 192.168.1.10/24 dev eth0</code></pre></div>                
         <p>Προσθέτει διαδρομή (route)</p>
@@ -58,7 +58,7 @@ default         _gateway        0.0.0.0         UG    600    0        0 wlp3s0
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ip rule</code></pre></div>  
 
 
-        <h2 class="highlight">Έλεγχο Συνδεσιμότητας</h2>
+        <h2>Έλεγχο Συνδεσιμότητας</h2>
         <p>	Αποστέλλει μια ICMP αίτηση προς έναν καθορισμένο προορισμό για να ελέγξει την συνδεσιμότητα και τον χρόνο απόκρισης</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ping www.google.com</code></pre></div>                
         <p>Στέλνει συγκεκριμένο αριθμό πακέτων</p>
@@ -68,13 +68,13 @@ default         _gateway        0.0.0.0         UG    600    0        0 wlp3s0
         <p>Παρόμοιο με traceroute, χωρίς root</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tracepath 8.8.8.8</code></pre></div>                
 
-        <h2 class="highlight">Απομακρυσμένη σύνδεση</h2>
+        <h2>Απομακρυσμένη σύνδεση</h2>
         <p>Επιτρέπει ασφαλή απομακρυσμένη σύνδεση με έναν εξυπηρετητή μέσω του πρωτοκόλλου SSH</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">ssh</code></pre></div>                
         <p>Αντιγράφει αρχεία ασφαλούς απομακρυσμένης σύνδεσης μεταξύ του τοπικού και απομακρυσμένου συστήματος</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">scp</code></pre></div>                
 
-        <h2 class="highlight">Λήψη αρχείων</h2>
+        <h2>Λήψη αρχείων</h2>
         <p>Λήψη αρχείων από το διαδίκτυο μέσω του πρωτοκόλλου HTTP, HTTPS και FTP</p>
         <div class="terminal" ><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">wget  https://grcodeclub.github.io/</code>
 --2023-09-13 14:30:48--  https://grcodeclub.github.io/
@@ -89,7 +89,7 @@ index.html  100%[===============================================================
 
 2023-09-13 14:30:49 (15,8 KB/s) - `index.html' saved [9346/9346]</pre></div>
 
-        <h2 class="highlight">Ανάλυση και Εντοπισμός Προβλημάτων</h2>
+        <h2>Ανάλυση και Εντοπισμός Προβλημάτων</h2>
         <p>Εάν θέλετε να καταγράψετε το traffic στο wlp3s0</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tcpdump -i wlp3s0</code></pre></div>  
         <p>Μπορείτε να φιλτράρετε το traffic που προέρχεται από έναν συγκεκριμένο host. <br> Για παράδειγμα, για να βρείτε το trafic που προέρχεται ή πηγαίνει στο 8.8.8.8, χρησιμοποιήστε την εντολή:</p>
@@ -110,7 +110,7 @@ index.html  100%[===============================================================
         <p>DNS port 53</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">tcpdump -i wlp3s0 port 53</code></pre></div>  
 
-        <h2 class="highlight">DNS & Ονόματα</h2>
+        <h2>DNS & Ονόματα</h2>
         <p>Εκτελεί αντίστροφη αναζήτηση DNS για να ανακτήσει πληροφορίες σχετικά με έναν καθορισμένο κεντρικό διακομιστή ονομάτων</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">nslookup www.google.com</code>
 Server:         192.168.1.1
@@ -129,7 +129,7 @@ Address: 2a00:1450:4017:805::2004
         <p>Δείχνει ρυθμίσεις DNS</b></p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">resolvectl status</code></pre></div>
 
-        <h2 class="highlight">Δημόσια Διεύθυνση IP</h2>
+        <h2>Δημόσια Διεύθυνση IP</h2>
         <p>Η συγκεκριμένη εντολή  χρησιμοποιείται για να λάβεις τη δημόσια Διεύθυνση IP του δικτύου από τον ιστότοπο <b><a href="https://ifconfig.me/" target="_blank">"ifconfig.me"</a></b></p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">curl -s ifconfig.me</code></pre></div>
 

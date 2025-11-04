@@ -16,7 +16,7 @@
     <div class="container">
 
         <h1 class="title">Αρχεία</h1>
-        <h2 class="highlight"> Header: #include <fstream></h2>
+        <h2> Header: #include <fstream></h2>
         <p>Το #include &lt;fstream> είναι ένα header αρχείο της C++ Standard Library που σου επιτρέπει να διαβάζεις και να γράφεις σε αρχεία (files).</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;fstream></code></pre></div></div>
         <table class="table table-bordered">
@@ -26,7 +26,7 @@
             <tr><td><code>fstream</code></th><th>Για ανάγνωση & εγγραφή ταυτόχρονα</td></tr>
         </table>
 
-        <h2 class="highlight">Γραφή σε αρχείο (Write to file)</h2>
+        <h2>Γραφή σε αρχείο (Write to file)</h2>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include  &lt;fstream>
 using namespace std;
 
@@ -64,7 +64,7 @@ int main() {
 
     return 0;
 }</code></pre></div></div>
-        <h2 class="highlight">Προσθήκη (append) σε αρχείο</h2>
+        <h2>Προσθήκη (append) σε αρχείο</h2>
         <ol>
             <li><code>ofstream outFile("output.txt", ios::app);</code>
             <ul><li>Δημιουργεί ένα αντικείμενο ofstream με όνομα outFile.</li><li>Ανοίγει το αρχείο output.txt σε λειτουργία προσθήκης (append).</li>
@@ -78,7 +78,7 @@ int main() {
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">ofstream outFile("output.txt", ios::app); // Άνοιγμα σε λειτουργία append
 outFile << "Νέα γραμμή.\n";
 outFile.close();</code></pre></div></div>
-        <h2 class="highlight">Έλεγχος ύπαρξης αρχείου</h2>
+        <h2>Έλεγχος ύπαρξης αρχείου</h2>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">ifstream file("output.txt");
 if (file.good()) {
     cout << "Το αρχείο υπάρχει.\n";
@@ -95,7 +95,7 @@ file.close();</code></pre></div></div>
             <tr><td>ios::trunc</td><td>Διαγραφή περιεχομένου</td></tr>
             <tr><td>ios::binary</td><td>Δυαδική λειτουργία</td></tr>
         </table>
-        <h2 class="highlight">Διαχείριση αριθμών</h2>
+        <h2>Διαχείριση αριθμών</h2>
         <ol>
             <li><code>ofstream out("nums.txt");</code>
                 <ul>
@@ -119,7 +119,7 @@ double b;
 in >> a >> b;
 cout << "a = " << a << ", b = " << b << endl;
 in.close();</code></pre></div></div>
-        <h2 class="highlight">Έλεγχος αν άνοιξε σωστά το αρχείο</h2>
+        <h2>Έλεγχος αν άνοιξε σωστά το αρχείο</h2>
         <p><u>Πάντα να ελέγχεις αν το αρχείο άνοιξε επιτυχώς</u></p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">ifstream file("data.txt");
 if (!file) {
@@ -127,7 +127,7 @@ if (!file) {
     exit(1);
 }</code></pre></div></div>
 
-        <h2 class="highlight">Παραδείγματα</h2>
+        <h2>Παραδείγματα</h2>
         <label style="margin-left: 10px;">Αρχείο</label>
         <select id="code" style="color: white;border-radius: 10px; background-color: rgba(0, 0, 0, 0.795); border: none;
         font-size: 18px; outline: none; cursor: pointer;">

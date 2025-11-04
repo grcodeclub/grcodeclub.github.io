@@ -15,7 +15,7 @@
     <div class="container">
         <h1 class="title">wpscan</h1>
         <p>Το WPScan είναι ένα εργαλείο ασφαλείας ανοιχτού κώδικα που χρησιμοποιείται για να εντοπίσει τρωτά σημεία σε ιστοσελίδες που βασίζονται στο WordPress. Χρησιμοποιείται κυρίως από επαγγελματίες ασφαλείας και διαχειριστές συστημάτων για να ελέγξουν την ασφάλεια των WordPress εγκαταστάσεων τους.</p>
-        <h2 class="highlight">Πώς να το εγκαταστήσω</h2>
+        <h2>Πώς να το εγκαταστήσω</h2>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">sudo apt install wpscan</code></pre></div>  
 
         <p>Το --url είναι ένα υποχρεωτικό όρισμα που παρέχει τη διεύθυνση URL του website.</p>
@@ -27,7 +27,7 @@
         <p>To -force δεν ελέγχει εάν η διεύθυνση URL που παρέχεται χρησιμοποιεί WordPress ή όχι.</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">wpscan --url https://website.com --force</code></pre></div>  
 
-        <h2 class="highlight">Oρίζει το mode για το enumeration</h2>
+        <h2>Oρίζει το mode για το enumeration</h2>
         <p>Οι διαθέσιμες λειτουργίες είναι:
             <ol>
                 <li>mixed: εκτελεί μεσαίο επίπεδο για το enumeration.</li>
@@ -37,15 +37,15 @@
         </p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">wpscan --url https://website.com -detection-mode MODE</code></pre></div>  
 
-        <h2 class="highlight">Enumerating Website Users</h2>
+        <h2>Enumerating Website Users</h2>
         <p>Με αυτήν την εντολή, το WPScan θα προσπαθήσει να ανιχνεύσει τους χρήστες που είναι εγγεγραμμένοι στον ιστότοπο WordPress https://website.com. Αυτό μπορεί να περιλαμβάνει την εύρεση των ονομάτων χρηστών, 
            τα οποία μπορούν να χρησιμοποιηθούν για επιθέσεις brute-force ή άλλες επιθέσεις ασφαλείας.</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">wpscan --url https://website.com -e u</code></pre></div>  
 
-        <h2 class="highlight">Brute-forcing password για αναγνωρισμένο χρήστη</h2>
+        <h2>Brute-forcing password για αναγνωρισμένο χρήστη</h2>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">wpscan --url https://website.com -U USER_NAME -P PATH_TO_WORDLIST</code></pre></div>  
 
-        <h2 class="highlight">User Agent</h2>
+        <h2>User Agent</h2>
         <p>Όταν προσθέτεις την επιλογή --random-user-agent στο WPScan, το εργαλείο χρησιμοποιεί τυχαίους user agents κατά τη διάρκεια του σκαναρίσματος για να αποφεύγει την ανίχνευση ή το μπλοκάρισμα από τον διακομιστή που σκανάρει.
         <br>Ένας "user agent" είναι μια συμβολοσειρά που χρησιμοποιείται για την ταυτοποίηση της εφαρμογής, του λειτουργικού συστήματος, του παρόχου και της έκδοσης του προγράμματος περιήγησης ή άλλου λογισμικού που κάνει την αίτηση στο διακομιστή. Οι διακομιστές χρησιμοποιούν αυτές τις πληροφορίες για να προσαρμόσουν τις απαντήσεις τους ή για να παρακολουθούν τη χρήση και τα στατιστικά στοιχεία.</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">wpscan --url https://website.com  --random-user-agent</code></pre></div>  
