@@ -5,15 +5,26 @@ const table = document.getElementById('search_table_page_Select');
 const headerRow = table.querySelector('#title_table_Select');
 const allRows = Array.from(table.querySelectorAll('tr')).filter(row => row !== headerRow);
 
+// Εμφάνιση πίνακα
 function displayTable(page) {
     const tableBody = table.querySelector('tbody');
     tableBody.innerHTML = '';
-    
-    // Προσθέτουμε header
+
     if (headerRow) tableBody.appendChild(headerRow);
 
-    // Φίλτρα pagination μόνο σε όλες τις εγγραφές
-    const visibleRows = allRows.filter(row => row.style.display !== 'none');
+    const searchTerm1 = document.getElementById('searchInput_Select').value.trim();
+    const searchTerm2 = document.getElementById('searchInput2_Select').value.trim();
+    const selectedCategory = document.getElementById('selectOption').value;
+
+    const showAll = searchTerm1 || searchTerm2 || selectedCategory !== '0';
+
+    let visibleRows = allRows.filter(row => row.style.display !== 'none');
+
+    if (!showAll) {
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        visibleRows = visibleRows.slice(start, end);
+    }
 
     if (visibleRows.length === 0) {
         const noRow = document.createElement('tr');
@@ -25,14 +36,12 @@ function displayTable(page) {
         return;
     }
 
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    visibleRows.slice(start, end).forEach(row => tableBody.appendChild(row));
-
+    visibleRows.forEach(row => tableBody.appendChild(row));
     applyRowColors();
-    displayPagination(visibleRows.length);
+    if (!showAll) displayPagination(allRows.filter(r => r.style.display !== 'none').length);
 }
 
+// Εφαρμογή φίλτρων
 function applyFilters() {
     const searchTerm1 = document.getElementById('searchInput_Select').value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     const searchTerm2 = document.getElementById('searchInput2_Select').value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -59,7 +68,6 @@ function applyFilters() {
     currentPage = 1;
     displayTable(currentPage);
 
-    // Αν δεν υπάρχουν αποτελέσματα
     if (!anyVisible) {
         const tableBody = table.querySelector('tbody');
         tableBody.innerHTML = '';
@@ -73,17 +81,17 @@ function applyFilters() {
     }
 }
 
+// Pagination
 function displayPagination(totalVisible) {
     const pagination = document.getElementById('pagination');
     pagination.innerHTML = '';
 
-    if (totalVisible <= itemsPerPage) return; // Μην εμφανίζεις pagination αν λίγες εγγραφές
+    if (totalVisible <= itemsPerPage) return;
 
     const totalPages = Math.ceil(totalVisible / itemsPerPage);
     const maxPagesToShow = 5;
     let startPage = Math.max(1, currentPage - 2);
     let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
-
     startPage = Math.max(1, endPage - maxPagesToShow + 1);
 
     const ul = document.createElement('ul');
@@ -140,6 +148,7 @@ function displayPagination(totalVisible) {
     pagination.appendChild(ul);
 }
 
+// Χρωματισμός γραμμών
 function applyRowColors() {
     const tableRows = table.querySelectorAll('tbody tr:not(#title_table_Select)');
     tableRows.forEach((row, index) => {
