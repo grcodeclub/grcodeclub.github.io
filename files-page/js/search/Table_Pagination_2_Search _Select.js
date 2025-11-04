@@ -5,28 +5,18 @@ const table = document.getElementById('search_table_page_Select');
 const headerRow = table.querySelector('#title_table_Select');
 const allRows = Array.from(table.querySelectorAll('tr')).filter(row => row !== headerRow);
 
-// Εμφάνιση πίνακα
+let filteredRows = [...allRows]; // Rows μετά το φιλτράρισμα
+
 function displayTable(page) {
     const tableBody = table.querySelector('tbody');
     tableBody.innerHTML = '';
-
     if (headerRow) tableBody.appendChild(headerRow);
 
-    const searchTerm1 = document.getElementById('searchInput_Select').value.trim();
-    const searchTerm2 = document.getElementById('searchInput2_Select').value.trim();
-    const selectedCategory = document.getElementById('selectOption').value;
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const rowsToShow = filteredRows.slice(start, end);
 
-    const showAll = searchTerm1 || searchTerm2 || selectedCategory !== '0';
-
-    let visibleRows = allRows.filter(row => row.style.display !== 'none');
-
-    if (!showAll) {
-        const start = (page - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-        visibleRows = visibleRows.slice(start, end);
-    }
-
-    if (visibleRows.length === 0) {
+    if (rowsToShow.length === 0) {
         const noRow = document.createElement('tr');
         const noCell = document.createElement('td');
         noCell.colSpan = headerRow.cells.length;
@@ -36,39 +26,34 @@ function displayTable(page) {
         return;
     }
 
-    visibleRows.forEach(row => tableBody.appendChild(row));
+    rowsToShow.forEach(row => tableBody.appendChild(row));
     applyRowColors();
-    if (!showAll) displayPagination(allRows.filter(r => r.style.display !== 'none').length);
+    displayPagination(filteredRows.length);
 }
 
-// Εφαρμογή φίλτρων
 function applyFilters() {
     const searchTerm1 = document.getElementById('searchInput_Select').value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     const searchTerm2 = document.getElementById('searchInput2_Select').value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     const selectedCategory = document.getElementById('selectOption').value.trim().toLowerCase();
 
-    let anyVisible = false;
-
-    allRows.forEach(row => {
+    filteredRows = allRows.filter(row => {
         const cells = row.querySelectorAll('td');
         const rowCategory = row.getAttribute('aria-label')?.trim().toLowerCase() || '';
+
         const categoryMatch = selectedCategory === '0' || rowCategory === selectedCategory;
 
         let searchMatch = true;
         if (searchTerm1) searchMatch = searchMatch && cells[0].textContent.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').includes(searchTerm1);
         if (searchTerm2) searchMatch = searchMatch && cells[1]?.textContent.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').includes(searchTerm2);
 
-        row.style.display = (categoryMatch && searchMatch) ? 'table-row' : 'none';
-        if (row.style.display === 'table-row') anyVisible = true;
+        return categoryMatch && searchMatch;
     });
-
-    const pagination = document.getElementById('pagination');
-    pagination.style.display = (searchTerm1 || searchTerm2 || selectedCategory !== '0') ? 'none' : 'block';
 
     currentPage = 1;
     displayTable(currentPage);
 
-    if (!anyVisible) {
+    // Αν δεν υπάρχουν αποτελέσματα
+    if (filteredRows.length === 0) {
         const tableBody = table.querySelector('tbody');
         tableBody.innerHTML = '';
         if (headerRow) tableBody.appendChild(headerRow);
@@ -81,7 +66,6 @@ function applyFilters() {
     }
 }
 
-// Pagination
 function displayPagination(totalVisible) {
     const pagination = document.getElementById('pagination');
     pagination.innerHTML = '';
@@ -148,7 +132,6 @@ function displayPagination(totalVisible) {
     pagination.appendChild(ul);
 }
 
-// Χρωματισμός γραμμών
 function applyRowColors() {
     const tableRows = table.querySelectorAll('tbody tr:not(#title_table_Select)');
     tableRows.forEach((row, index) => {
