@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
 loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
     .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/popper-v2-5-2.js'))
     .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/bootstrap@5-3-3.js'))    
-    .then(() => loadScript('https://grcodeclub.github.io/files-page/js/libraries/select2-4-0-13.js'))
     .then(() => loadScript('https://grcodeclub.github.io/files-page/js/add/body.js'))
     .catch(error => console.error(error));
 
@@ -105,8 +104,9 @@ loadScript('https://grcodeclub.github.io/files-page/js/libraries/jquery.js')
         addCssFiles("https://grcodeclub.github.io/files-page/css/code/prism.css");
         addScript('https://grcodeclub.github.io/files-page/js/libraries/prism.js');
     }
-    
-    if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.github.io/files-page/js/search/tableSearchWithSelect.js');}
+    if (document.getElementById('searchInput_Select') && document.getElementById('search_table_page')) { 
+        addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_2_Search _Select.js');}
+    else if (document.getElementById('selectOption') && document.getElementById('search_table_page')) { addScript('https://grcodeclub.github.io/files-page/js/search/tableSearchWithSelect.js');}
     else if (document.getElementById('searchInput2')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_2_Search.js');}
     else if (document.getElementById('searchInput')) { addScript('https://grcodeclub.github.io/files-page/js/search/Table_Pagination_Search.js');}
     if (document.getElementById('searchInputContents')){ addScript('https://grcodeclub.github.io/files-page/js/search/searchInputContents.js');}
