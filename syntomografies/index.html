@@ -9,40 +9,46 @@
     <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/main.png"/>
     <meta property="og:title" content="Συντομογραφίες Πληροφορικής">
     <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
-    <script src="https://grcodeclub.github.io/files-page/js/add/menu/syntomografies.js"></script>
 </head>
 <body>
     <div id="addHeader"></div>
     <div class="container">
         <h1>Συντομογραφία</h1>
-        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <div class="input-group mb-3"><span class="input-group-text bg-white border-end-0"><i class="fas fa-search me-1"></i> Αναζήτηση:</span> <input  type="text" id="searchInput" class="form-control border-start-0"  placeholder="Search..."> </div>
+        <div class="mb-3 d-flex flex-nowrap">
+            <label  style="white-space: nowrap;" for="selectOption" class="form-label text-dark me-2 mb-0"><i class="fas fa-filter "></i> Φίλτρο:</label>
+            <select id="selectOption" name="code" class="form-select">
+              <option value="0">Όλα</option>
+              <option value="Γενικό">Γενικό</option>
+            </select>
+        </div>
         <br>
         <table id="search_table_page" class="table table-bordered table-striped">
-            <tr id="title-table" class="table-dark"><td>Συντομογραφία</td> <td>Πλήρες Όνομα</td><td>Περιγραφή </td></tr>
-            <tr><td>ASCII</td><td>American Standard Code for Information Interchange</td><td>Πρότυπο κωδικοποίησης χαρακτήρων που χρησιμοποιείται για την αναπαράσταση κειμένου στους υπολογιστές</td></tr>
-           <tr><td>PSU</td> <td>Power Supply Unit</td><td>Μονάδα Τροφοδοσίας </td></tr>
-           <tr><td>GUI</td> <td>Graphical User Interface</td><td>Γραφικό Περιβάλλον Χρήστη </td></tr>
-           <tr><td>IoT</td> <td>Internet of Things</td><td>Η σύνδεση φυσικών αντικειμένων μέσω του διαδικτύου για την ανταλλαγή δεδομένων και την αυτοματοποίηση διαδικασιών.</td></tr>
-           <tr><td>UI</td> <td>User Interface</td><td>Διεπαφή Χρήστη</td></tr>
-           <tr><td>UX</td> <td>User Experience</td><td>Εμπειρία Χρήστη </td></tr>
-           <tr><td>PaaS</td> <td>Platform as a Service</td><td>Πλατφόρμα ως Υπηρεσία </td></tr>
-           <tr><td>IoB</td> <td>Internet of Behaviors</td><td>Η τεχνολογία που αναλύει τις συμπεριφορές των χρηστών μέσω των δεδομένων που συλλέγονται από διάφορες συσκευές. </td></tr>
-           <tr><td>HCI</td> <td>Human-Computer Interaction</td><td>Αλληλεπίδραση Ανθρώπου-Υπολογιστή</td></tr>
-           <tr><td>NLP</td> <td>Natural Language Processing</td><td>Η τεχνολογία που επιτρέπει σε υπολογιστές να κατανοούν και να επεξεργάζονται ανθρώπινες γλώσσες.</td></tr>
-           <tr><td>RPA</td> <td>Robotic Process Automation</td><td>Η χρήση λογισμικού για την αυτοματοποίηση επαναλαμβανόμενων εργασιών που συνήθως εκτελούνται από ανθρώπους. </td></tr>
-           <tr><td>RAID</td> <td>Redundant Array of Independent Disks</td><td>Τεχνολογία που συνδυάζει πολλούς σκληρούς δίσκους σε έναν πίνακα για τη βελτίωση της απόδοσης και της ανθεκτικότητας</td></tr>
-           <tr><td>AI</td> <td>Artificial Intelligence</td><td>Τεχνητή Νοημοσύνη</td></tr>
-           <tr><td>VM</td><td>Virtual Machine</td><td>Λογισμικό που προσομοιώνει έναν υπολογιστή, επιτρέποντας την εκτέλεση διαφορετικών λειτουργικών συστημάτων</td></tr>
-           <tr><td>IEEE</td><td>Institute of Electrical and Electronics Engineers</td><td>Διεθνής Οργανισμός.</td></tr>
-           <tr><td>ISO</td><td>International Organization for Standardization</td><td>Διεθνής Οργανισμός.</td></tr>
-           <tr><td>UPS</td><td>Uninterruptible Power Supply</td><td>Συσκευή που παρέχει εφεδρική ενέργεια σε περίπτωση διακοπής ρεύματος για την αποφυγή απώλειας δεδομένων.</td></tr>
-           <tr><td>AR</td><td>Augmented Reality</td><td>Μια τεχνολογία που συνδυάζει ψηφιακά στοιχεία με τον πραγματικό κόσμο μέσω συσκευών όπως smartphones ή ειδικά γυαλιά.</td></tr>
-           <tr><td>NFC</td><td>Near Field Communication</td><td>Ασύρματη τεχνολογία που επιτρέπει την ανταλλαγή δεδομένων μεταξύ συσκευών που βρίσκονται σε κοντινή απόσταση.</td></tr>
-           <tr><td>GPS</td><td>Global Positioning System</td><td>Σύστημα δορυφορικής πλοήγησης που παρέχει τοποθεσία και πληροφορίες χρόνου παγκοσμίως.</td></tr>
-           <tr><td>RFID</td><td>Radio Frequency Identification</td><td>Τεχνολογία που χρησιμοποιεί ραδιοκύματα για την ταυτοποίηση αντικειμένων ή προσώπων εξ αποστάσεως.</td></tr>
-           <tr><td>USB</td><td>Universal Serial Bus</td><td>Πρότυπο διασύνδεσης που επιτρέπει τη σύνδεση περιφερειακών συσκευών με υπολογιστές.</td></tr>
-           <tr><td>RF</td><td>Radio Frequency</td><td>Συχνότητα στο ηλεκτρομαγνητικό φάσμα που χρησιμοποιείται για την ασύρματη επικοινωνία.</td></tr>
-           <tr><td>SIM</td><td>Subscriber Identity Module</td><td>Κάρτα που αποθηκεύει δεδομένα χρήστη και χρησιμοποιείται για την ταυτοποίηση σε δίκτυα κινητής τηλεφωνίας.</td></tr>
+           <tr id="title-table" class="table-dark"><td>Συντομογραφία</td> <td>Πλήρες Όνομα</td><td>Περιγραφή </td></tr>
+           <tr><td aria-label="Γενικό">ASCII</td><td>American Standard Code for Information Interchange</td><td>Πρότυπο κωδικοποίησης χαρακτήρων που χρησιμοποιείται για την αναπαράσταση κειμένου στους υπολογιστές</td></tr>
+           <tr><td aria-label="Γενικό">PSU</td> <td>Power Supply Unit</td><td>Μονάδα Τροφοδοσίας </td></tr>
+           <tr><td aria-label="Γενικό">GUI</td> <td>Graphical User Interface</td><td>Γραφικό Περιβάλλον Χρήστη </td></tr>
+           <tr><td aria-label="Γενικό">IoT</td> <td>Internet of Things</td><td>Η σύνδεση φυσικών αντικειμένων μέσω του διαδικτύου για την ανταλλαγή δεδομένων και την αυτοματοποίηση διαδικασιών.</td></tr>
+           <tr><td aria-label="Γενικό">UI</td> <td>User Interface</td><td>Διεπαφή Χρήστη</td></tr>
+           <tr><td aria-label="Γενικό">UX</td> <td>User Experience</td><td>Εμπειρία Χρήστη </td></tr>
+           <tr><td aria-label="Γενικό">PaaS</td> <td>Platform as a Service</td><td>Πλατφόρμα ως Υπηρεσία </td></tr>
+           <tr><td aria-label="Γενικό">IoB</td> <td>Internet of Behaviors</td><td>Η τεχνολογία που αναλύει τις συμπεριφορές των χρηστών μέσω των δεδομένων που συλλέγονται από διάφορες συσκευές. </td></tr>
+           <tr><td aria-label="Γενικό">HCI</td> <td>Human-Computer Interaction</td><td>Αλληλεπίδραση Ανθρώπου-Υπολογιστή</td></tr>
+           <tr><td aria-label="Γενικό">NLP</td> <td>Natural Language Processing</td><td>Η τεχνολογία που επιτρέπει σε υπολογιστές να κατανοούν και να επεξεργάζονται ανθρώπινες γλώσσες.</td></tr>
+           <tr><td aria-label="Γενικό">RPA</td> <td>Robotic Process Automation</td><td>Η χρήση λογισμικού για την αυτοματοποίηση επαναλαμβανόμενων εργασιών που συνήθως εκτελούνται από ανθρώπους. </td></tr>
+           <tr><td aria-label="Γενικό">RAID</td> <td>Redundant Array of Independent Disks</td><td>Τεχνολογία που συνδυάζει πολλούς σκληρούς δίσκους σε έναν πίνακα για τη βελτίωση της απόδοσης και της ανθεκτικότητας</td></tr>
+           <tr><td aria-label="Γενικό">AI</td> <td>Artificial Intelligence</td><td>Τεχνητή Νοημοσύνη</td></tr>
+           <tr><td aria-label="Γενικό">VM</td><td>Virtual Machine</td><td>Λογισμικό που προσομοιώνει έναν υπολογιστή, επιτρέποντας την εκτέλεση διαφορετικών λειτουργικών συστημάτων</td></tr>
+           <tr><td aria-label="Γενικό">IEEE</td><td>Institute of Electrical and Electronics Engineers</td><td>Διεθνής Οργανισμός.</td></tr>
+           <tr><td aria-label="Γενικό">ISO</td><td>International Organization for Standardization</td><td>Διεθνής Οργανισμός.</td></tr>
+           <tr><td aria-label="Γενικό">UPS</td><td>Uninterruptible Power Supply</td><td>Συσκευή που παρέχει εφεδρική ενέργεια σε περίπτωση διακοπής ρεύματος για την αποφυγή απώλειας δεδομένων.</td></tr>
+           <tr><td aria-label="Γενικό">AR</td><td>Augmented Reality</td><td>Μια τεχνολογία που συνδυάζει ψηφιακά στοιχεία με τον πραγματικό κόσμο μέσω συσκευών όπως smartphones ή ειδικά γυαλιά.</td></tr>
+           <tr><td aria-label="Γενικό">NFC</td><td>Near Field Communication</td><td>Ασύρματη τεχνολογία που επιτρέπει την ανταλλαγή δεδομένων μεταξύ συσκευών που βρίσκονται σε κοντινή απόσταση.</td></tr>
+           <tr><td aria-label="Γενικό">GPS</td><td>Global Positioning System</td><td>Σύστημα δορυφορικής πλοήγησης που παρέχει τοποθεσία και πληροφορίες χρόνου παγκοσμίως.</td></tr>
+           <tr><td aria-label="Γενικό">RFID</td><td>Radio Frequency Identification</td><td>Τεχνολογία που χρησιμοποιεί ραδιοκύματα για την ταυτοποίηση αντικειμένων ή προσώπων εξ αποστάσεως.</td></tr>
+           <tr><td aria-label="Γενικό">USB</td><td>Universal Serial Bus</td><td>Πρότυπο διασύνδεσης που επιτρέπει τη σύνδεση περιφερειακών συσκευών με υπολογιστές.</td></tr>
+           <tr><td aria-label="Γενικό">RF</td><td>Radio Frequency</td><td>Συχνότητα στο ηλεκτρομαγνητικό φάσμα που χρησιμοποιείται για την ασύρματη επικοινωνία.</td></tr>
+           <tr><td aria-label="Γενικό">SIM</td><td>Subscriber Identity Module</td><td>Κάρτα που αποθηκεύει δεδομένα χρήστη και χρησιμοποιείται για την ταυτοποίηση σε δίκτυα κινητής τηλεφωνίας.</td></tr>
         </table>
         <nav aria-label="Σελιδοποίηση"><ul id="pagination" class="pagination justify-content-center"></ul></nav>        
     </div>

@@ -47,45 +47,51 @@ function fullTable() {
     if (headerRow) {
         tableBody.appendChild(headerRow.cloneNode(true)); // Use cloneNode to keep original header
     }
-   // Hide pagination
-   const pagination = document.getElementById('pagination');
-   pagination.style.display = 'none';
+
+    // Hide pagination
+    const pagination = document.getElementById('pagination');
+    pagination.style.display = 'none';
+
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-    
-    // Get selected category from the select element
     const selectedCategory = document.getElementById('selectOption').value;
 
-    let foundResults = false; // Flag to track if any results were found
+    let foundResults = false; // Flag για το αν βρέθηκαν αποτελέσματα
 
     rows1.forEach(row => {
         if (row === headerRow) return; // Skip header row
 
         const cells = row.querySelectorAll('td');
+        if (cells.length === 0) return;
 
-        // Check if the category matches the aria-label value
-        const categoryMatch = selectedCategory === '0' || selectedCategory === cells[0].getAttribute('aria-label');
+        // 🔍 Αναζήτηση μόνο στη στήλη 0
+        const searchCell = cells[0];
+        const searchMatch =
+            searchTerm === '' ||
+            (searchCell && searchCell.textContent.toLowerCase().includes(searchTerm));
 
-        // Check if the search term matches
-        const searchMatch = searchTerm === '' || cells[1].textContent.toLowerCase().includes(searchTerm);
+        // 🧩 Φίλτρο (όπως πριν)
+        const categoryMatch =
+            selectedCategory === '0' ||
+            selectedCategory === cells[0].getAttribute('aria-label');
 
-        // Only show the row if it matches both the category and the search term
+        // ✅ Εμφάνιση γραμμών που ταιριάζουν και στα δύο
         if (categoryMatch && searchMatch) {
             tableBody.appendChild(row.cloneNode(true)); // Use cloneNode to copy row
-            foundResults = true; // Mark that we found at least one result
+            foundResults = true;
         }
     });
 
-    // Αν δεν υπάρχουν αποτελέσματα, ενημερώνουμε τον πίνακα
+    // 🛑 Αν δεν υπάρχουν αποτελέσματα
     if (!foundResults) {
         const noResultsRow = document.createElement('tr');
         const noResultsCell = document.createElement('td');
-        noResultsCell.colSpan = headerRow.cells.length; // Να καλύπτει όλες τις στήλες
+        noResultsCell.colSpan = headerRow.cells.length;
         noResultsCell.textContent = "Δεν βρέθηκαν αποτελέσματα";
         noResultsRow.appendChild(noResultsCell);
         tableBody.appendChild(noResultsRow);
     }
 
-    applyRowColors(); // Εφαρμογή χρωματισμού μετά την απόδοση του πλήρους πίνακα
+    applyRowColors();
 }
 
 function displayPagination() {
