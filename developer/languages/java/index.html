@@ -14,7 +14,7 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1>Java</h1>
-                <a href="./library" class="btn btn-success btn-lg d-flex align-items-center gap-2 px-4"><i class="fab fa-java"></i>Bιβλιοθήκες και Class της Java</a>
+                <a href="./library" class="btn btn-success d-flex align-items-center gap-2 px-4"><i class="fab fa-java"></i>Bιβλιοθήκες και Class της Java</a>
                 <p>Η Java είναι αντικειμενοστρεφής γλώσσα προγραμματισμού,  που σχεδιάστηκε από την εταιρεία πληροφορικής Sun Microsystems. </p>
                 
                 <h2>Κώδικας</h2>
@@ -47,21 +47,15 @@ System.out.println("Hello, World!");
         System.out.println("Κείμενο: " + stringVariable);
     }
 }</code></pre></div></div>
-
-                <h2>Εντολές</h2>
-                <div class="accordion" id="roadmapAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος (Input) & Έξοδος (Output)</button></h2>
-                        <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                        <div class="accordion-body">
-                            <h3>Εντολή εκτύπωσης</h3>
-                            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">System.out.print("Κείμενο προς εκτύπωση");</code></pre></div></div>
-                            <h3>Εντολή εκτύπωσης με αλλαγή γραμμής</h3>
-                            <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">System.out.println("Κείμενο προς εκτύπωση");</code></pre></div></div>
-                            <h3>Εισαγωγή δεδομένων από τον χρήστη</h3>
-                            <p>Η <code>Scanner</code> ανήκει στο πακέτο java.util και χρησιμοποιείται για να λαμβάνει είσοδο από διάφορες πηγές, όπως το πληκτρολόγιο, αρχεία, ή συμβολοσειρές.</p>
-                            <p><code>new Scanner(System.in)</code>: Δημιουργεί ένα νέο αντικείμενο Scanner που διαβάζει δεδομένα από την τυπική είσοδο, δηλαδή το πληκτρολόγιο. Το System.in είναι το stream για την είσοδο δεδομένων από τον χρήστη.</p>
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">import java.util.Scanner;
+                <h2>Είσοδος (Input) & Έξοδος (Output)</h2>
+                <strong>Εντολή εκτύπωσης</strong>
+                <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">System.out.print("Κείμενο προς εκτύπωση");</code></pre></div></div>
+                <strong>Εντολή εκτύπωσης με αλλαγή γραμμής</strong>
+                <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">System.out.println("Κείμενο προς εκτύπωση");</code></pre></div></div>
+                <strong>Εισαγωγή δεδομένων από τον χρήστη</strong>
+                <p>Η <code>Scanner</code> ανήκει στο πακέτο java.util και χρησιμοποιείται για να λαμβάνει είσοδο από διάφορες πηγές, όπως το πληκτρολόγιο, αρχεία, ή συμβολοσειρές.</p>
+                <p><code>new Scanner(System.in)</code>: Δημιουργεί ένα νέο αντικείμενο Scanner που διαβάζει δεδομένα από την τυπική είσοδο, δηλαδή το πληκτρολόγιο. Το System.in είναι το stream για την είσοδο δεδομένων από τον χρήστη.</p>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -82,12 +76,8 @@ public class Main {
         scanner.close(); // Κλείνει το Scanner όταν δεν χρειάζεται πλέον 
     }
 }</code></pre></div></div>
-                    </div></div></div>
-                    <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομές ελέγχου</button></h2>
-                    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">int time = 22;
+                <h2>Δομές ελέγχου</h2>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">int time = 22;
   if (time < 10) {
   System.out.println("Good morning.");
   } else if (time < 18) {
@@ -95,18 +85,14 @@ public class Main {
   } else {
   System.out.println("Good evening.");
   }</code></pre></div></div>
-                        <p><strong>Λογικοί Τελεστές: </strong>Μπορείς να συνδυάσεις πολλαπλές συνθήκες με τους λογικούς τελεστές:</p>
-                        <ol>
-                            <li><code>&&</code>: Αληθές μόνο αν όλες οι συνθήκες είναι αληθείς.</li>
-                            <li><code>||</code>: Αληθές αν τουλάχιστον μία συνθήκη είναι αληθής.</li>
-                            <li><code>!</code>: Αντιστρέφει την αλήθεια της συνθήκης.</li>
-                        </ol>
-                    </div></div></div>
-                    <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Επανάληψη</button></h2>
-                    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                    <div class="accordion-body">
-                        <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.</p>
+                <p><strong>Λογικοί Τελεστές: </strong>Μπορείς να συνδυάσεις πολλαπλές συνθήκες με τους λογικούς τελεστές:</p>
+                <ol>
+                    <li><code>&&</code>: Αληθές μόνο αν όλες οι συνθήκες είναι αληθείς.</li>
+                    <li><code>||</code>: Αληθές αν τουλάχιστον μία συνθήκη είναι αληθής.</li>
+                    <li><code>!</code>: Αντιστρέφει την αλήθεια της συνθήκης.</li>
+                </ol>
+                <h2>Επανάληψη</h2>
+                <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.</p>
                         <p><code>for</code>: Χρησιμοποιείται για επανάληψη σε μια ακολουθία (λίστες, συμβολοσειρές, range κ.λπ.).</p>
                         <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">for (int i = 0; i < 5; i++) {
 System.out.println(i);
@@ -123,50 +109,40 @@ do {
   System.out.println(i);
   i++;
 }
-while (i < 5);</code></pre></div></div>
-                    </div></div></div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Arrays</button></h2>
-                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                        <div class="accordion-body">
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names;</code></pre></div></div>
-                            <p> Για να εισαγάγετε τιμές σε αυτό, μπορείτε να τοποθετήσετε τις τιμές σε μια λίστα διαχωρισμένη με κόμμα, μέσα σε άγκιστρα.</p>
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Dimitris", "Ioanna", "Giannis", "Stathis"};</code></pre></div></div>
-                            <p>Πρόσβαση στα Στοιχεία</p>
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Dimitris", "Ioanna", "Giannis", "Stathis"};
+while (i < 5)</code></pre></div></div>
+                <h2>Arrays</h2>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names;</code></pre></div></div>
+                <p> Για να εισαγάγετε τιμές σε αυτό, μπορείτε να τοποθετήσετε τις τιμές σε μια λίστα διαχωρισμένη με κόμμα, μέσα σε άγκιστρα.</p>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Dimitris", "Ioanna", "Giannis", "Stathis"};</code></pre></div></div>
+                <strong>Πρόσβαση στα Στοιχεία</strong>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Dimitris", "Ioanna", "Giannis", "Stathis"};
 System.out.println(names[0]);</code></pre></div></div>
-                            <p>Αλλαγή στοιχείων</p>
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">names[0] = "Thomas";</code></pre></div></div>
-                            <p>Μήκος</p>
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Thomas", "Ioanna", "Giannis", "Stathis"};
+                <strong>Αλλαγή στοιχείων</strong>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">names[0] = "Thomas";</code></pre></div></div>
+                <strong>Μήκος</strong>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">String[] names = {"Thomas", "Ioanna", "Giannis", "Stathis"};
 System.out.println(names.length);</code></pre></div></div>
-                    </div></div></div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Class</button></h2>
-                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-                        <div class="accordion-body">
-                            <p>Ορισμός της κλάσης</p>
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public class ClassName {
+                
+                <h2>Class</h2>
+                <strong>Ορισμός της κλάσης</strong>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public class ClassName {
 // Class body
 }</code></pre></div></div>
-                            <p>Μεταβλητές</p>
-                            <div class="bg_preview">
-                            <div  class="line-numbers"><pre class="code_editor"><code class="language-java">private String name; // private μεταβλητή
+                <strong>Μεταβλητές</strong>
+                <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-java">private String name; // private μεταβλητή
 public int age; // public μεταβλητή</code></pre></div></div>
-                            <p>Κατασκευαστής (Constructor)</p>
-                            <div class="bg_preview">
-                            <div  class="line-numbers"><pre class="code_editor"><code class="language-java">public ClassName(parameters) {
+                <strongp>Κατασκευαστής (Constructor)</strong>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public ClassName(parameters) {
 // Constructor body
 </code></pre></div></div>
-                            <p>Μέθοδοι</p>
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public ReturnType methodName(parameters) {
+                <strong>Μέθοδοι</strong>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">public ReturnType methodName(parameters) {
 // Method body
 </code></pre></div></div>
-                            <p>Δημιουργία αντικειμένου της κλάσης</p>
-                            <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">ClassName objectName = new ClassName(parameters);</code></pre></div></div>
-                            <br><a href="./class/">περισσότερα για τις class...</a><br>
-                        </div></div></div>
-                </div><!-- end roadmapAccordion-->
+                <strong>Δημιουργία αντικειμένου της κλάσης</strong>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-java">ClassName objectName = new ClassName(parameters);</code></pre></div></div>
+                <a href="./class/" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-arrow-right"></i>περισσότερα...</a>    
+
                 <h2>Χρήσιμοι Σύνδεσμοι</h2>
                 <a href="./class/interface" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4"><i class="fab fa-java"></i>Interface (Link)</a>
                 <a href="./class/extends" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4 mt-2"><i class="fab fa-java"></i>Extends (Link)</a>

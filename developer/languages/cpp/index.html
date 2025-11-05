@@ -13,15 +13,16 @@
     <div id="addHeader"></div>
     <div class="container">
         <h1>C++</h1>
-                    <a href="./library" class="btn btn-success btn-lg d-flex align-items-center gap-2 px-4"><i class="fas fa-code"></i>Bιβλιοθήκες της C++</a>
 
+        <a href="./library" class="btn btn-success btn-lg d-flex align-items-center gap-2 px-4"><i class="fas fa-code"></i>Bιβλιοθήκες της C++</a>
         <p>Η C++ είναι μια αντικειμενοστραφή γλώσσα προγραμματισμού. Τα αρχεία που περιέχουν τον κώδικα, έχουν επέκταση cpp.<br>Η επέκταση cpp προέχεται από την c plus plus. </p>
-                            <p class="highlight">Διαφορά μεταξύ C και C++</p>
-                    <ol>
-                        <li>C++ αναπτύχθηκε ως επέκταση του C, και οι δύο γλώσσες έχουν σχεδόν την ίδια σύνταξη</li>
-                        <li>Η κύρια διαφορά μεταξύ του, ότι το C++ υποστηρίζει class και αντικείμενα, ενώ το C δεν το κάνει</li>
-                    </ol>
-         <h2>Μεταγλώττιση</h2>
+        <p class="highlight">Διαφορά μεταξύ C και C++</p>
+        <ol>
+            <li>C++ αναπτύχθηκε ως επέκταση του C, και οι δύο γλώσσες έχουν σχεδόν την ίδια σύνταξη</li>
+            <li>Η κύρια διαφορά μεταξύ του, ότι το C++ υποστηρίζει class και αντικείμενα, ενώ το C δεν το κάνει</li>
+        </ol>
+
+        <h2>Μεταγλώττιση</h2>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">g++ main.cpp -o my_program</code></pre></div>          
         <h2>Βασικοί τύποι δεδομένων</h2>
         <table id="table_page" class="table table-bordered">
@@ -34,67 +35,46 @@
         </table>
          
         <h2>Μεταβλητές</h2>
-    <p><strong>const: </strong>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
-    <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
-    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
+        <p><strong>const: </strong>Εάν δεν θέλετε να αλλάξει η τιμή μια μεταβλητής κατά την διάρκεια που εκτελείτε το πρόγραμμα, μπορείτε να χρησιμοποιήσετε το <code>const</code> λέξη-κλειδί.
+        <br>Θα δηλώσει τη μεταβλητή ως "σταθερή", που σημαίνει αμετάβλητη και μόνο για ανάγνωση</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">const int x = 1;
 x = 5;  // error: assignment of read-only variable 'x'</code></pre></div></div>
 
-            
-<h2>Εντολές</h2>
-<div class="accordion" id="roadmapAccordion">
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Είσοδος & Έξοδος</button></h2>
-    <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-             <p>Με την <code>cout</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cout << "Κείμενο";	</code></pre></div></div>
-            <p>Με την εντολή <code>cin</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user. </p>
-            <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cin >> x;</code></pre></div></div>
-        </div></div></div>
+        <h2>Είσοδος & Έξοδος</h2>
+        <p>Με την <code>cout</code> μπορούμε να εκτυπώσουμε ένα μήνυμα ή την τιμή μιας μεταβλητής στην οθόνη του user.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cout << "Κείμενο";</code></pre></div></div>
+        <p>Με την εντολή <code>cin</code> μπορούμε να διαβάσουμε από το πληκτρολόγιο, δεδομενα που έδωσε ο user.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">cin >> x;</code></pre></div></div>
 
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Δομή επανάληψης</button></h2>
-    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
+        <h2>Δομή επανάληψης</h2>
         <p>Η δομή επανάληψης (ή βρόχος, loop στα Αγγλικά) είναι ένας τρόπος να εκτελούνται οι ίδιες εντολές πολλές φορές μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Αυτές οι δομές χρησιμοποιούνται για να επαναλάβουν ένα σύνολο εντολών χωρίς να χρειάζεται να τις γράφουμε πολλές φορές.
-    <p>Η εντολή <code>while</code> στην C είναι μια δομή επανάληψης που εκτελεί ένα μπλοκ κώδικα επανειλημμένα όσο μια συνθήκη είναι αληθής. Χρησιμοποιείται όταν θέλουμε να επαναλάβουμε μια ενέργεια πολλές φορές, αλλά δεν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων.</p>
-    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 1;
+        <p>Η εντολή <code>while</code> στην C είναι μια δομή επανάληψης που εκτελεί ένα μπλοκ κώδικα επανειλημμένα όσο μια συνθήκη είναι αληθής. Χρησιμοποιείται όταν θέλουμε να επαναλάβουμε μια ενέργεια πολλές φορές, αλλά δεν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int i = 1;
 while (i <= 5) {
     cout << i << endl;
     i++;
 }</code></pre></div></div>
-    <p>Η εντολή <code>for</code> στην C είναι μια άλλη δομή επανάληψης, όπως η while, αλλά χρησιμοποιείται όταν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων που θέλουμε να εκτελέσει το πρόγραμμα. Η εντολή for είναι ιδιαίτερα χρήσιμη για βρόχους που αφορούν μετρημένες επαναλήψεις και προσφέρει μια πιο συμπυκνωμένη σύνταξη.</p>
-    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">for (int j = 0; j < 3; j++) {
+        <p>Η εντολή <code>for</code> στην C είναι μια άλλη δομή επανάληψης, όπως η while, αλλά χρησιμοποιείται όταν γνωρίζουμε εκ των προτέρων τον αριθμό των επαναλήψεων που θέλουμε να εκτελέσει το πρόγραμμα. Η εντολή for είναι ιδιαίτερα χρήσιμη για βρόχους που αφορούν μετρημένες επαναλήψεις και προσφέρει μια πιο συμπυκνωμένη σύνταξη.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">for (int j = 0; j < 3; j++) {
     cout << j << endl;
 }</code></pre></div></div>
-
         <p>Η εντολή <code>do/while</code> εκτελεί πρώτα τον κωδικά και μετά θα ελέγχει αν η συνθήκη είναι αληθής. Την πρώτη φορά θα εκτελεστεί ο βρόχος ακόμα και αν η συνθήκη είναι ψευδής.</p>
-        <div class="bg_preview">
-        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int i = 0;
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int i = 0;
 do {
   cout << i << "\n";
   i++;
 }
 while (i < 5);</code></pre></div></div>
-        </div></div></div>
 
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Δομή ελέγχου</button></h2>
-    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
- <p>Η εντολή <code>if</code> στην C++ είναι μια δομή ελέγχου που επιτρέπει στο πρόγραμμα να εκτελέσει ένα συγκεκριμένο μπλοκ κώδικα μόνο εάν μια συνθήκη είναι αληθής (true).</p>
-
+        <h2>Δομή ελέγχου</h2>
+        <p>Η εντολή <code>if</code> στην C++ είναι μια δομή ελέγχου που επιτρέπει στο πρόγραμμα να εκτελέσει ένα συγκεκριμένο μπλοκ κώδικα μόνο εάν μια συνθήκη είναι αληθής (true).</p>
         <p>Μπορείτε να χρησιμοποιήσετε αυτές τις συνθήκες για να εκτελέσετε διαφορετικές ενέργειες για διαφορετικές αποφάσεις.</p>
         <p>Χρήση <code>if</code> για να καθορίσετε ένα μπλοκ κώδικα που πρόκειται να εκτελεστεί, εάν η συνθήκη είναι <u>true</u></p>
 <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
 if (number > 5) {
     cout << "Ο αριθμός είναι μεγαλύτερος από 5." << endl;
 }</code></pre></div></div>
-
-
-<p>Χρήση <code>else if</code> για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί, εάν η συνθήκη της <code>if</code> είναι false.
+        <p>Χρήση <code>else if</code> για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί, εάν η συνθήκη της <code>if</code> είναι false.
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
 if (number == 5) {
     cout << "Ο αριθμός είναι 5.\n" << endl;
@@ -103,8 +83,7 @@ else if (number == 10) {
     cout << "Ο αριθμός είναι 10.\n" << endl;
 }</code></pre></div></div>
         <p>Χρήση <code>else</code> για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί, εάν η συνθήκη της <code>if</code> ή και της <code>else if</code> είναι false</p>
-        <div class="bg_preview">
-            <div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int number = 10;
 if (number == 5) {
     cout << "Ο αριθμός είναι 5.\n" << endl;
 }
@@ -114,11 +93,8 @@ else if (number == 10) {
 else{
     cout << "Ο αριθμός δεν είναι ουτε 5 ουτε 10." << endl;
 }</code></pre></div></div>
-
-
-    <p>Η εντολή <code>switch</code> στην C είναι μια δομή ελέγχου που χρησιμοποιείται για να διαχειρίζεται πολλαπλές συνθήκες με έναν οργανωμένο και εύχρηστο τρόπο. Είναι ιδιαίτερα χρήσιμη όταν χρειάζεται να ελεγχθεί η τιμή μιας μεταβλητής και να εκτελεστούν διαφορετικές ενέργειες ανάλογα με αυτήν την τιμή. </p>
-    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-c">int day = 2;
-
+        <p>Η εντολή <code>switch</code> στην C είναι μια δομή ελέγχου που χρησιμοποιείται για να διαχειρίζεται πολλαπλές συνθήκες με έναν οργανωμένο και εύχρηστο τρόπο. Είναι ιδιαίτερα χρήσιμη όταν χρειάζεται να ελεγχθεί η τιμή μιας μεταβλητής και να εκτελεστούν διαφορετικές ενέργειες ανάλογα με αυτήν την τιμή. </p>
+        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-c">int day = 2;
 switch (day) {
   case 1:
      cout << "Δευτέρα" << endl;
@@ -141,48 +117,64 @@ switch (day) {
   case 7:
      cout << "Κυριακή" << endl;
     break;
-}</code></pre></div></div>      </div></div></div>
+}</code></pre></div></div>      
 
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">Συναρτήσεις</button></h2>
-    <div id="collapse4" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-            <h3 class="highlight">Templates</h3>
-        <div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-cpp">template <typename T> T myMax(T x, T y)
-{
-    return (x > y) ? x : y;
-}</code></pre></div></div> 
-        </div></div></div>
+        <h2>Templates</h2>
+        <p class="highlight">Templates συναρτήσεων</p>
+        <p>Η κλήση μιας template συνάρτησης γίνεται με τον εξής τρόπο:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">function &lt;pattern> (parameters);</code></pre></div></div>
+        <p><u>Παράδειγμα</u></p>
+        <p>Δημιουργία Προτύπου Συνάρτησης:
+        <ol>
+            <li>template &lt;class T>: Δημιουργούμε ένα πρότυπο που ονομάζεται T. Το class εδώ δεν σημαίνει ότι το T πρέπει να είναι τάξη, μπορεί να είναι οποιοσδήποτε τύπος δεδομένων.</li>
+            <li>T GetMax (T a, T b): Ορίζουμε μια συνάρτηση GetMax που δέχεται δύο παραμέτρους τύπου T και επιστρέφει τον τύπο T.</li>    
+        </ol>
+        </p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream> // Χρησιμοποιούμε iostream για την είσοδο και έξοδο
 
+// Δημιουργία προτύπου για την εύρεση του μέγιστου αριθμού
+template &lt;class T>
+T GetMax (T a, T b) {
+return (a > b) ? a : b;
+}
 
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">Χειρισμός εξαιρέσεων</button></h2>
-    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
+int main () {
+int i = 5, j = 6, k;
+long l = 10, m = 5, n;
 
+// Χρήση της προτυποποιημένης συνάρτησης GetMax για τύπο int
+k = GetMax&lt;int>(i, j); // Ή k = GetMax(i, j); 
+std::cout &lt;&lt; "Το μεγαλύτερο μεταξύ " &lt;&lt; i &lt;&lt; " και " &lt;&lt; j &lt;&lt; " είναι " &lt;&lt; k &lt;&lt; std::endl;
+
+// Χρήση της προτυποποιημένης συνάρτησης GetMax για τύπο long
+n = GetMax<long>(l, m); // Ή n = GetMax(l, m); 
+std::cout &lt;&lt; "Το μεγαλύτερο μεταξύ " &lt;&lt; l &lt;&lt; " και " &lt;&lt; m &lt;&lt; " είναι " &lt;&lt; n &lt;&lt; std::endl;
+
+return 0;
+}
+</code></pre></div></div>
+
+        <h2>Χειρισμός εξαιρέσεων</h2>
         <p>Στην C++, οι εξαιρέσεις χρησιμοποιούνται για να διαχειριστούν καταστάσεις λάθους ή απρόβλεπτες καταστάσεις που συμβαίνουν κατά την εκτέλεση του προγράμματος Η εξαίρεση μπορεί να συλληφθεί και να αντιμετωπιστεί κατάλληλα μέσω της δομής <code>try-catch</code>.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">try { // κώδικας που θα δοκιμαστεί
     throw exception;}
 catch (type  exception) {
     // κώδικας που θα εκτελεστεί σε περίπτωση εξαίρεσης
 }</code></pre></div></div>
-    <ol>
-        <li>Ο κώδικας στο μπλοκ try εκτελείται κανονικά</li>
-        <li>Αν κάτι συμβεί ο κώδικας χρησιμοποιεί τη λέξη throw και μια παράμετρο για να προκαλέσει εξαίρεση</li>
-        <li>Αν έχει συμβεί μια εξαίρεση, το μπλοκ catch εκτελείται λαμβάνοντας ως παράμετρο αυτή που περάστηκε από το throw</li>
-    </ol>
-    <p>Η C++ διαθέτει προκαθορισμένες κλάσεις εξαιρέσεων στην std βιβλιοθήκη. Η std::exception είναι η βασική κλάση από την οποία μπορούν να κληρονομηθούν άλλες κλάσεις εξαιρέσεων.</p>
-    <h2>Throwing Exceptions</h2>
-    <p>Για να ρίξεις μια εξαίρεση, χρησιμοποιούμε τη λέξη-κλειδί <code>throw</code>:</p>
-    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">if (something_wrong) {
+        <ol>
+            <li>Ο κώδικας στο μπλοκ try εκτελείται κανονικά</li>
+            <li>Αν κάτι συμβεί ο κώδικας χρησιμοποιεί τη λέξη throw και μια παράμετρο για να προκαλέσει εξαίρεση</li>
+            <li>Αν έχει συμβεί μια εξαίρεση, το μπλοκ catch εκτελείται λαμβάνοντας ως παράμετρο αυτή που περάστηκε από το throw</li>
+        </ol>
+        <p>Η C++ διαθέτει προκαθορισμένες κλάσεις εξαιρέσεων στην std βιβλιοθήκη. Η std::exception είναι η βασική κλάση από την οποία μπορούν να κληρονομηθούν άλλες κλάσεις εξαιρέσεων.</p>
+        <h3>Throwing Exceptions</h3>
+        <p>Για να ρίξεις μια εξαίρεση, χρησιμοποιούμε τη λέξη-κλειδί <code>throw</code>:</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">if (something_wrong) {
     throw std::runtime_error("Κάποιο σφάλμα συνέβη");
 }</code></pre></div></div>
-        </div></div></div>
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">Δείκτες</button></h2>
-    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-        <h3>Δείκτες και πίνακες</h3>
+
+        <h2>Δείκτες</h2>
+                <h3>Δείκτες και πίνακες</h3>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int numbers [20];
 int * p;
 p = numbers;
@@ -235,64 +227,19 @@ cout &lt&lt "d[0] area: " &lt&lt d[0].area() &lt&lt endl;
 cout &lt&lt "d[1] area: " &lt&lt d[1].area() &lt&lt endl;
 return 0;
 }</code></pre></div></div>
-    <h3>Σύνοψη τελεστών για λειτουργίες δεικτών</h3>
-    <table class="table table-bordered">
-        <tr><td>*x</td><td>δείκτης στο x (δήλωση), περιεχόμενο του x (έκφραση)</td></tr>
-        <tr><td>&x</td><td>διεύθυνση του x (έκφραση), αναφορά (σε πέρασμα)</td></tr>
-        <tr><td>x.y</td><td>μέλος y του αντικειμένου x</td></tr>
-        <tr><td>(*x).y</td><td>μέλος y του αντικειμένου που δεικτοδοτείται από τον x</td></tr>
-        <tr><td>x->y</td><td>ισοδύναμο με το προηγούμενο</td></tr>
-        <tr><td>x[0]</td><td>το πρώτο αντικείμενο που δεικτοδοτείται από τον </td></tr>
-        <tr><td>x[n]</td><td>το n+1 αντικείμενο που δεικτοδοτείται από τον x</td></tr>
-    </table>
-        </div></div></div>
+        <h3>Σύνοψη τελεστών για λειτουργίες δεικτών</h3>
+        <table class="table table-bordered">
+            <tr><td>*x</td><td>δείκτης στο x (δήλωση), περιεχόμενο του x (έκφραση)</td></tr>
+            <tr><td>&x</td><td>διεύθυνση του x (έκφραση), αναφορά (σε πέρασμα)</td></tr>
+            <tr><td>x.y</td><td>μέλος y του αντικειμένου x</td></tr>
+            <tr><td>(*x).y</td><td>μέλος y του αντικειμένου που δεικτοδοτείται από τον x</td></tr>
+            <tr><td>x->y</td><td>ισοδύναμο με το προηγούμενο</td></tr>
+            <tr><td>x[0]</td><td>το πρώτο αντικείμενο που δεικτοδοτείται από τον </td></tr>
+            <tr><td>x[n]</td><td>το n+1 αντικείμενο που δεικτοδοτείται από τον x</td></tr>
+        </table>
 
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">Templates</button></h2>
-    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-<div class="bg_preview"><div class="line-numbers"><pre class="code_editor"><code class="language-cpp">template &lt;class identifier > func_declaration;
-template &lt;typename identifier > func_declaration;</code></pre></div></div>
-        <p class="highlight">Templates συναρτήσεων</p>
-        <p>Η κλήση μιας template συνάρτησης γίνεται με τον εξής τρόπο:</p>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">function &lt;pattern> (parameters);</code></pre></div></div>
-        <p><u>Παράδειγμα</u></p>
-        <p>Δημιουργία Προτύπου Συνάρτησης:
-            <ol>
-                <li>template &lt;class T>: Δημιουργούμε ένα πρότυπο που ονομάζεται T. Το class εδώ δεν σημαίνει ότι το T πρέπει να είναι τάξη, μπορεί να είναι οποιοσδήποτε τύπος δεδομένων.</li>
-                <li>T GetMax (T a, T b): Ορίζουμε μια συνάρτηση GetMax που δέχεται δύο παραμέτρους τύπου T και επιστρέφει τον τύπο T.</li>    
-            </ol>
-        </p>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream> // Χρησιμοποιούμε iostream για την είσοδο και έξοδο
-
-// Δημιουργία προτύπου για την εύρεση του μέγιστου αριθμού
-template &lt;class T>
-T GetMax (T a, T b) {
-return (a > b) ? a : b;
-}
-
-int main () {
-int i = 5, j = 6, k;
-long l = 10, m = 5, n;
-
-// Χρήση της προτυποποιημένης συνάρτησης GetMax για τύπο int
-k = GetMax<int>(i, j); // Ή k = GetMax(i, j); 
-std::cout &lt;&lt; "Το μεγαλύτερο μεταξύ " &lt;&lt; i &lt;&lt; " και " &lt;&lt; j &lt;&lt; " είναι " &lt;&lt; k &lt;&lt; std::endl;
-
-// Χρήση της προτυποποιημένης συνάρτησης GetMax για τύπο long
-n = GetMax<long>(l, m); // Ή n = GetMax(l, m); 
-std::cout &lt;&lt; "Το μεγαλύτερο μεταξύ " &lt;&lt; l &lt;&lt; " και " &lt;&lt; m &lt;&lt; " είναι " &lt;&lt; n &lt;&lt; std::endl;
-
-return 0;
-}
-</code></pre></div></div>
-        </div></div></div>
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8">Class</button></h2>
-    <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-        <h3>Δημιουργήστε μια class</h3>
+        <h2>Class</h2>
+                <h3>Δημιουργήστε μια class</h3>
         <p>Για να δημιουργήσετε μια class, χρησιμοποιήστε τη λέξη-κλειδί class:</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class MyNumStr {       // The class
 public:         // Access specifier
@@ -308,7 +255,7 @@ string mystr;   // Attribute (string variable)
             <li>Protected - τα μέλη δεν είναι προσβάσιμα εκτός της class, ωστόσο, μπορούν να προσπελαστούν σε κλάσεις κληρονομιάς. </li>
         </ol>
         
-        <h3>Αντικείμενα<</h3>
+        <h3>Αντικείμενα</h3>
         <p>Στον αντικειμενοστραφή προγραμματισμό, τα αντικείμενα (objects) είναι οντότητες που αποτελούνται από δεδομένα και δημιουργούνται από πρότυπα που ονομάζονται class και καθορίζουν τις ιδιότητες και τις συμπεριφορές του αντικειμένου.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class MyNumStr {       // The class
   public:            
@@ -335,14 +282,10 @@ int main() {
 
   return 0;
 }</code></pre></div></div>
-<br><a href="./class">περισσότερα...</a><br>
-        </div></div></div>
+        <a href="./class" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-arrow-right"></i>περισσότερα...</a>    
 
-        <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="true" aria-controls="collapse9">Υπερφόρτωση τελεστών</button></h2>
-    <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
-<p>Τελεστές που δέχονται υπερφόρτωση είναι:</p>
+        <h2>Υπερφόρτωση τελεστών</h2>
+        <p>Τελεστές που δέχονται υπερφόρτωση είναι:</p>
             <table class="table table-bordered" style="text-align: center;">
                 <tr><td>+</td><td>*</td><td>-</td><td>/</td><td>=</td><td>&lt;</td><td>&gt;</td></tr>
                 <tr><td>+=</td><td>*=</td><td>-=</td><td>/=</td><td>&lt;&lt;</td><td>&gt;&gt;</td><td>++</td></tr>
@@ -353,22 +296,18 @@ int main() {
         <p>Για να υπερφορτώσουμε ένα τελεστή:</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">type operator sign (parameters);</code></pre></div></div>
         <a href="https://github.com/grcodeclub/cpp/blob/main/more/operator-overloading.cpp" target="_blank" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4"><i class="fab fa-github"></i>Παράδειγμα</a>
-        </div></div></div>
-
-        <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapse10">Αρχεία</button></h2>
-    <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion">
-        <div class="accordion-body">
+        
+        <h2>Αρχεία</h2>
         <p>Το #include &lt;fstream> είναι ένα header αρχείο της C++ Standard Library που σου επιτρέπει να διαβάζεις και να γράφεις σε αρχεία (files).</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;fstream></code></pre></div></div>
         <table class="table table-bordered">
             <tr><th>Κλάση</th><th>Χρήση</th></tr>
-            <tr><td><code>ifstream</code></th><th>Για ανάγνωση από αρχεία (input file stream)</td></tr>
-            <tr><td><code>ofstream</code></th><th>Για εγγραφή σε αρχεία (output file stream)</td></tr>
-            <tr><td><code>fstream</code></th><th>Για ανάγνωση & εγγραφή ταυτόχρονα</td></tr>
+            <tr><td><code>ifstream</code></td><td>Για ανάγνωση από αρχεία (input file stream)</td></tr>
+            <tr><td><code>ofstream</code></td><td>Για εγγραφή σε αρχεία (output file stream)</td></tr>
+            <tr><td><code>fstream</code></td><td>Για ανάγνωση & εγγραφή ταυτόχρονα</td></tr>
         </table>
 
-        <h3>Γραφή σε αρχείο (Write to file)</h3>
+        <strong>Γραφή σε αρχείο (Write to file)</strong>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include  &lt;fstream>
 using namespace std;
 
@@ -385,8 +324,9 @@ int main() {
 
     return 0;
 }</code></pre></div></div>
-        </div></div></div>
-</div> <!-- end-->
-    <div id="addFooter"></div>
-</body>
+        <a href="./files" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-arrow-right"></i>περισσότερα...</a>    
+
+        </div>
+        <div id="addFooter"></div>
+    </body>
 </html>
