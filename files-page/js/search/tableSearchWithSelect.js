@@ -62,8 +62,8 @@ function fullTable() {
 
         const cells = row.querySelectorAll('td');
 
-        // Check if the category matches the selected category from the select
-        const categoryMatch = selectedCategory === '0' || selectedCategory === cells[0].textContent.trim();
+        // Check if the category matches the aria-label value
+        const categoryMatch = selectedCategory === '0' || selectedCategory === cells[0].getAttribute('aria-label');
 
         // Check if the search term matches
         const searchMatch = searchTerm === '' || cells[1].textContent.toLowerCase().includes(searchTerm);
