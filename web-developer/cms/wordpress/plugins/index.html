@@ -23,7 +23,11 @@
                     <br> <br>  Όλα τα πρόσθετα προέρχονται από το <a href="https://wordpress.org/plugins/" target="_blank" class="link-primary fw-bold"><i class="fas fa-plug me-1"></i> Επίσημο αποθετήριο του WordPress</a>.
                 </p>
                 <div class="mb-3 d-flex align-items-center flex-nowrap">
-                    <label  style="white-space: nowrap;" for="selectOption" class="form-label fw-bold text-dark me-2 mb-0"><i class="fas fa-filter me-1"></i> Φίλτρο:</label>
+                    <label for="searchInput" class="form-label fw-bold text-dark me-2 mb-0" style="white-space: nowrap;">  <i class="fas fa-search me-1"></i></label>
+                    <input type="text" id="searchInput" class="form-control flex-grow-1" placeholder="Αναζήτηση...">
+                </div>
+                <div class="mb-3 d-flex align-items-center flex-nowrap">
+                    <label  style="white-space: nowrap;" for="selectOption" class="form-label fw-bold text-dark me-2 mb-0"><i class="fas fa-filter me-1"></i></label>
                     <select id="selectOption" name="code" class="form-select">
                       <option value="0">Όλα</option>
                       <option value="Γενικό">Γενικό</option>
@@ -33,13 +37,9 @@
                       <option value="SEO / Analytics">SEO / Analytics</option>
                     </select>
                 </div>
-                <div class="mb-3 d-flex align-items-center flex-nowrap">
-                    <label for="searchInput" class="form-label fw-bold text-dark me-2 mb-0" style="white-space: nowrap;">  <i class="fas fa-search me-1"></i> Αναζήτηση:</label>
-                    <input type="text" id="searchInput" class="form-control flex-grow-1" placeholder="Αναζήτηση...">
-                </div>
                 <br>
                 <table id="search_table_page" class="table table-bordered">
-                    <tr id="title-table"><td>Όνομα</td><td>Περιγραφή</td></tr>
+                    <tr id="title-table" class="table-light"><td>Όνομα</td><td>Περιγραφή</td></tr>
                     <tr><td aria-label="eshop"><a href="https://wordpress.org/plugins/woocommerce/" target="_blank" >WooCommerce</a></td> <td>Πρόσθετο για WordPress που επιτρέπει τη δημιουργία και διαχείριση ηλεκτρονικού καταστήματος. <br><a href="https://youtu.be/vEzLGtM98Qo?si=PJKkjRz0PFqpwv0E" target="_blank">YouTube</a></td></tr>
                     <tr><td aria-label="SEO / Analytics"><a href="https://wordpress.org/plugins/google-site-kit/" target="_blank" >Site Kit by Google</a></td> <td>Επίσημο πρόσθετο της Google για τη διαχείριση Analytics, Search Console και AdSense μέσα από το WordPress.</td></tr>
                     <tr><td aria-label="Γενικό"><a href="https://wordpress.org/plugins/wp-mail-smtp/" target="_blank" >WP Mail SMTP</a></td> <td>Εξασφαλίζει την αποστολή email στο WordPress</td></tr>

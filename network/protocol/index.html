@@ -16,22 +16,19 @@
     <div class="container">
         <h1>Πρωτόκολλα</h1>
         <p>Τα πρωτόκολλα δικτύου (network protocols) είναι σύνολα κανόνων και προτύπων που καθορίζουν τον τρόπο με τον οποίο οι συσκευές επικοινωνούν μεταξύ τους σε ένα δίκτυο. Κάθε πρωτόκολλο ορίζει τις διαδικασίες για την αποστολή και λήψη δεδομένων, εξασφαλίζοντας την ομαλή και αποτελεσματική μεταφορά πληροφοριών.</p>
-        <div class="mb-3 d-flex align-items-center flex-nowrap">
-            <label  style="white-space: nowrap;" for="selectOption" class="form-label fw-bold text-dark me-2 mb-0"><i class="fas fa-filter me-1"></i> Φίλτρο:</label>
+                <div class="input-group mb-2 " ><span class=" bg-primary input-group-text bg-light border-end-0"><i class="fas fa-search me-1"></i></span> <input  type="text" id="searchInput" class="form-control border-start-0"  placeholder="Αναζήτηση..."> </div>
+        <div class="d-flex align-items-center flex-nowrap">
+            <div class="input-group"><span class="input-group-text bg-light border-end-0"><i class="fas fa-filter"></i></span>
             <select id="selectOption" name="code" class="form-select">
               <option value="0">Όλα</option>
               <option value="Network Address">Network Address</option>
               <option value="Εφαρμογής">Εφαρμογής</option>
               <option value="Δρομολόγησης">Δρομολόγησης</option>
             </select>
-        </div>   
-        <div class="mb-3 d-flex align-items-center flex-nowrap">
-            <label for="searchInput" class="form-label fw-bold text-dark me-2 mb-0" style="white-space: nowrap;">  <i class="fas fa-search me-1"></i> Αναζήτηση:</label>
-            <input type="text" id="searchInput" class="form-control flex-grow-1" placeholder="Αναζήτηση...">
-        </div>        
+        </div></div>
         <br>
         <table id="search_table_page" class="table table-bordered table-striped">
-            <tr id="title-table" class="table-dark"><td>Προτοκολο</td><td>Πλήρες Όνομα</td><td>Περιγραφή</td></tr>
+            <tr id="title-table" class="table-light"><td>Προτοκολο</td><td>Πλήρες Όνομα</td><td>Περιγραφή</td></tr>
             <tr><td aria-label="Network Address"><a href="./network-address/ip/v4" class="link_here">IPv4</a></td> <td>Internet Protocol v4</td> <td>Χρησιμοποιείται για τη μεταφορά πακέτων στο Internet.</td></tr>
             <tr><td aria-label="Network Address"><a href="./network-address/ip/v6" class="link_here">IPv6</a></td> <td>Internet Protocol v6</td> <td>Χρησιμοποιείται για τη μεταφορά πακέτων στο Internet.</td></tr>
             <tr><td aria-label="Network Address"><a href="./network-address/icmp" class="link_here">ICMP</a></td> <td>Internet Control Message Protocol</td> <td>Χρησιμοποιείται για τη μεταφορά μηνυμάτων ελέγχου και σφαλμάτων στο Internet</td></tr>

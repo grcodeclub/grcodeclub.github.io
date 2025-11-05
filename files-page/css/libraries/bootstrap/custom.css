@@ -6,6 +6,8 @@
 .dropdown-submenu {position: relative;}
 .bg-dark{background-color: #212529 !important;}
 
+span .input-group-text { width: 7vw;}
+
 /****** Start Βελος οταν ανοιγει το submenu ******/
 .nav-link.dropdown-toggle {direction: rtl; text-align:left;}
 .nav-link.dropdown-toggle::after{ transform: rotate(-90deg); margin-right:5px; } /* Όταν το dropdown είναι ανοιχτό | Το βελάκι δείχνει προς τα κάτω (0 μοίρες) */
