@@ -22,9 +22,9 @@
                     χωρισμένα σε κατηγορίες, μαζί με σύντομη περιγραφή και τρόπους χρήσης. 
                     <br> <br>  Όλα τα πρόσθετα προέρχονται από το <a href="https://wordpress.org/plugins/" target="_blank" class="link-primary fw-bold"><i class="fas fa-plug me-1"></i> Επίσημο αποθετήριο του WordPress</a>.
                 </p>
-                <div class="mb-3 d-flex align-items-center">
-                    <label for="selectOption" class="form-label fw-bold text-dark me-2 mb-0"><i class="fas fa-filter me-1"></i> Φίλτρο:</label>
-                    <select id="selectOption" name="code" class="form-select w-auto">
+                <div class="mb-3 d-flex align-items-center flex-nowrap">
+                    <label  style="white-space: nowrap;" for="selectOption" class="form-label fw-bold text-dark me-2 mb-0"><i class="fas fa-filter me-1"></i> Φίλτρο:</label>
+                    <select id="selectOption" name="code" class="form-select">
                       <option value="0">Όλα</option>
                       <option value="Γενικό">Γενικό</option>
                       <option value="eshop">E-shop</option>
@@ -33,7 +33,10 @@
                       <option value="SEO / Analytics">SEO / Analytics</option>
                     </select>
                 </div>
-                <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+                <div class="mb-3 d-flex align-items-center flex-nowrap">
+                    <label for="searchInput" class="form-label fw-bold text-dark me-2 mb-0" style="white-space: nowrap;">  <i class="fas fa-search me-1"></i> Αναζήτηση:</label>
+                    <input type="text" id="searchInput" class="form-control flex-grow-1" placeholder="Αναζήτηση...">
+                </div>
                 <br>
                 <table id="search_table_page" class="table table-bordered">
                     <tr id="title-table"><td>Κατηγορία</td><td>Όνομα</td><td>Περιγραφή</td><td>Τρόπος χρήσης</td></tr>
