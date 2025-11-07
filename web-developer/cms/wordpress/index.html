@@ -13,18 +13,8 @@
             <div id="addHeader"></div>
             <div class="container">
                   <h1>WordPress</h1>
-                  <a style="margin-bottom: 10px; margin-top: 10px;"
-                     href="https://www.youtube.com/playlist?list=PLA4ksXuOpdNeEZEGuF_98v9cn-y4uIkjB"
-                     class="btn btn-danger btn-lg d-flex align-items-center gap-2 px-4"
-                     target="_blank"
-                     rel="noopener noreferrer" >
-                     <i class="fab fa-youtube fa-lg"></i> Δες την Playlist στο YouTube </a>
-                  <a style="margin-bottom: 10px; margin-top: 10px;"
-                     href="https://wordpress.org/download/"
-                     class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4"
-                     target="_blank"
-                     rel="noopener noreferrer">
-                     <i class="fas fa-download fa-lg"></i> Κατέβασε το WordPress</a>
+                  <a href="https://wordpress.org/download/" class="btn btn-outline-dark d-flex align-items-center gap-2 px-4 mb-3 mt-3"><i class="fa-brands fa-wordpress fa-lg"></i> Κατέβασε το WordPress</a>    
+
                   <p>Το WordPress είναι ένα σύστημα διαχείρισης περιεχομένου (CMS – Content Management System) που χρησιμοποιείται για τη δημιουργία και διαχείριση ιστοσελίδων και ιστολογίων (blogs). Είναι από τα πιο δημοφιλή CMS παγκοσμίως, κυρίως λόγω της ευκολίας χρήσης και της ευελιξίας του.</p>
                   <h2>Βασικά χαρακτηριστικά του WordPress</h2>
                   <ol>
@@ -35,7 +25,7 @@
                       <li>Υποστήριξη κοινότητας: Έχει τεράστια κοινότητα χρηστών και προγραμματιστών.</li>
                   </ol>
                   <h2>Σημαντικά αρχεία και Φάκελοι</h2>
-                  <table class="table table-bordered">
+                  <table class="table table-bordered table-striped">
                       <tr><td>wp-config.php</td><td>-</td></tr>
                       <tr><td>.htaccess</td><td>-</td></tr>
                       <tr><td>index.php</td><td>-</td></tr>
@@ -52,7 +42,7 @@
                       <tr><td>wp-activate.php</td><td>Αυτό το αρχείο ενεργοποιεί νέους χρήστες σε multisite εγκαταστάσεις του WordPress.</td></tr>
                       <tr><td>wp-comments-post.php</td><td>Αυτό το αρχείο χειρίζεται τη δημοσίευση σχολίων στην ιστοσελίδα.</td></tr>
                     </table>
-                    <p><strong>wp-content:</strong> Αυτός ο φάκελος περιέχει όλα τα αρχεία που δημιουργούνται από το χρήστη, όπως τα θέματα (themes), τα πρόσθετα (plugins), και οι μεταφορτωμένες εικόνες (uploads).</p>
+                    <p><code>wp-content</code>: Αυτός ο φάκελος περιέχει όλα τα αρχεία που δημιουργούνται από το χρήστη, όπως τα θέματα (themes), τα πρόσθετα (plugins), και οι μεταφορτωμένες εικόνες (uploads).</p>
                     <ol>
                       <li>wp-content/themes/<br>
                         Περιέχει τα θέματα που χρησιμοποιούνται για το σχεδιασμό της ιστοσελίδας.</li>
@@ -64,12 +54,55 @@
                           Περιέχει όλα τα αρχεία πολυμέσων που έχουν μεταφορτωθεί από το χρήστη.
                         </li>
                     </ol>
-                    <p><strong>wp-includes:</strong> Αυτός ο φάκελος περιέχει τα βασικά αρχεία κώδικα που χρειάζεται το WordPress για να λειτουργήσει.</p>
-                    <p><strong>wp-admin:</strong> Αυτός ο φάκελος περιέχει τα αρχεία που σχετίζονται με τον πίνακα διαχείρισης (admin dashboard) του WordPress.</p>
-                    <h2>Χρήσιμοι Σύνδεσμοι</h2>
-                    <a href="./plugins/index" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fas fa-link"></i> WordPress Plugins</a><br>
-                    <a href="./plugins/action-hooks" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4" target="_blank"><i class="fas fa-link"></i> WordPress Plugins (Action Hooks)</a><br>
-              </div><!-- Τέλος Background Κειμένου-->
+                    <p><code>wp-includes</code>: Αυτός ο φάκελος περιέχει τα βασικά αρχεία κώδικα που χρειάζεται το WordPress για να λειτουργήσει.</p>
+                    <p><code>wp-admin</code>: Αυτός ο φάκελος περιέχει τα αρχεία που σχετίζονται με τον πίνακα διαχείρισης (admin dashboard) του WordPress.</p>
+                    
+                    <h2>WordPress Plugins</h2>
+                    <p>
+                        Το <strong>WordPress</strong> προσφέρει τη δυνατότητα να επεκτείνεις εύκολα τις δυνατότητες της ιστοσελίδας σου 
+                        μέσω των <strong>plugins</strong>. Με αυτά μπορείς να προσθέσεις λειτουργίες όπως e-shop, φόρμες επικοινωνίας, 
+                        βελτιστοποίηση SEO, ασφάλεια και πολλά άλλα, χωρίς να χρειάζεται να γράψεις κώδικα.  
+                        Στον παρακάτω πίνακα θα βρεις συγκεντρωμένα μερικά από τα πιο χρήσιμα δωρεάν plugins (κατά τη γνώμη μου), 
+                        χωρισμένα σε κατηγορίες, μαζί με σύντομη περιγραφή και τρόπους χρήσης. 
+                    </p>
+                    <a href="./plugins/" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-arrow-right"></i>περισσότερα...</a>    
+
+                    <h2>WordPress Plugins (Action Hooks)</h2>
+                    <p>Τα Action Hooks είναι συγκεκριμένα σημεία στον κώδικα του WordPress όπου μπορείς να εισάγεις τη δική σου συνάρτηση (function) που θα εκτελεστεί όταν φτάσει το πρόγραμμα σε αυτά τα σημεία.</p>
+                    <a href="./plugins/action-hooks" class="btn btn-outline-dark  d-flex align-items-center gap-2 px-4"><i class="fas fa-arrow-right"></i>περισσότερα...</a>    
+                                        
+                    <h2>Playlist στο YouTube</h2>
+                    <div class="card shadow-lg border-0 mt-3 rounded-4">
+                        <div class="card-header bg-danger text-white text-center fs-5 fw-bold">  <i class="fab fa-youtube fa-lg"></i> WordPress</div>
+                        <div class="card-body p-0">
+                          <div class="ratio ratio-16x9">
+                            <iframe 
+                              src="https://www.youtube.com/embed/videoseries?si=FHRIGjHGmRqJB7K7&amp;list=PLn8ko1jviiOsbSa3Itaq6xxmger498q8x" 
+                              title="YouTube video player" 
+                              frameborder="0" 
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                              referrerpolicy="strict-origin-when-cross-origin" 
+                              allowfullscreen>
+                            </iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card shadow-lg border-0 mt-3 rounded-4">
+                        <div class="card-header bg-danger text-white text-center fs-5 fw-bold">  <i class="fab fa-youtube fa-lg"></i> WordPress - Eshop</div>
+                        <div class="card-body p-0">
+                          <div class="ratio ratio-16x9">
+                            <iframe 
+                              src="https://www.youtube.com/embed/videoseries?si=4cpUVDlFZxFfooUw&amp;list=PLn8ko1jviiOteXoxxRAWpQfm9fxUm85Or" 
+                              title="YouTube video player" 
+                              frameborder="0" 
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                              referrerpolicy="strict-origin-when-cross-origin" 
+                              allowfullscreen>
+                            </iframe>
+                          </div>
+                        </div>
+                      </div>
+              </div>
             <div id="addFooter"></div>
       </body>
 </html>
