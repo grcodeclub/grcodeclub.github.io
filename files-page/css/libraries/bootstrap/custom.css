@@ -21,8 +21,6 @@ span .input-group-text { width: 7vw;}
   color: #ffffff;
 }
 .accordion-body {
-  background: #1c1c1c;
-  border-left: 3px solid #ffffff;
   padding: 1.5rem;
   border-radius: 0 0 0.5rem 0.5rem;
 }
@@ -33,13 +31,7 @@ span .input-group-text { width: 7vw;}
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.accordion-body ul li strong {color: #1b899f;}
-.accordion-body ul li,.accordion-body p {color: #ffffff;}
-.accordion-button::after {filter: invert(1) brightness(2);} /* Κάνει το βελάκι λευκό */
-.accordion-button {
-    background: #212529;
-    color: #fff;
-}
+
 /******end accordion******/
 
 /* Mobile Menu */
