@@ -203,10 +203,41 @@ php artisan migrate:fresh --seed</code></pre></div>
 &lt;/form></code></pre></div></div>
 
         <h2>Middleware</h2>
-        <p>Create Middleware</p>
+        <p>Το Middleware είναι ένα φίλτρο που εκτελείται ανάμεσα στο αίτημα (request) του χρήστη και τον Controller.</p>
+        <ol>
+            <li>Authentication / Authorization: Ελέγχει αν ο χρήστης είναι συνδεδεμένος ή έχει δικαιώματα πρόσβασης.</li>
+            <li>Logging / Monitoring: Καταγράφει τα αιτήματα για ανάλυση ή debugging</li>
+            <li>CORS / Headers: Προσθέτει headers στα requests/responses</li>
+            <li>Maintenance Mode: Μπορεί να μπλοκάρει πρόσβαση όταν η εφαρμογή είναι σε συντήρηση</li>
+        </ol>
+        <h3>Create Middleware</h3>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:middleware CheckAdmin</code></pre></div>  
+        <h3>Περιεχόμενο middleware</h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">namespace App\Http\Middleware;
 
+use Closure;
+use Illuminate\Http\Request;
 
+class CheckAge
+{
+    public function handle(Request $request, Closure $next)
+    {
+        if ($request->age < 18) {
+            return redirect('no-access');
+        }
+
+        return $next($request);
+    }
+}
+</code></pre></div></div> 
+        <ol>
+            <li>Το handle() παίρνει το αίτημα και ένα $next closure.</li>
+            <li>Αν πληροί κάποια συνθήκη (π.χ. ηλικία < 18), μπορεί να μπλοκάρει το αίτημα.</li>
+            <li>Αν όχι, συνεχίζει με $next($request) προς τον controller.</li>
+        </ol>
+        <p>Αυτό σημαίνει ότι μόνο συνδεδεμένοι χρήστες (authenticated) μπορούν να επισκεφτούν τη σελίδα.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">Route::get('/profile', [ProfileController::class, 'show'])
+    ->middleware('auth');</code></pre></div></div> 
     </div>
     </div>
     <div id="addFooter"></div>
