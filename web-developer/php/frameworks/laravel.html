@@ -161,39 +161,71 @@ class UserController extends Controller
         <p>Το Eloquent ORM είναι το αντικειμενοστραφές σύστημα χειρισμού βάσης δεδομένων του Laravel. Σου επιτρέπει να δουλεύεις με πίνακες σαν να ήταν αντικείμενα PHP, χωρίς να γράφεις raw SQL.</p>
         <h3>Δημιουργία Model + Migration</h3>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:model Post -m</code></pre></div>  
-
+        <table>
+            <tr><td>Μέθοδος</td><td>Περιγραφή</td></tr>
+            <tr><td><code>Model::all()</code></td><td>Επιστρέφει όλους τους records</td></tr>
+            <tr><td><code>Model::find($id)</code></td><td>Βρίσκει record με συγκεκριμένο ID</td></tr>
+            <tr><td><code>Model::where('field', value)->get()</code></td><td>Φιλτράρει records</td></tr>
+            <tr><td><code>Model::create([...])</code></td><td>Δημιουργεί νέο record (προσοχή $fillable)</td></tr>
+            <tr><td><code>Model::update([...])</code></td><td>Ενημερώνει record</td></tr>
+            <tr><td><code>Model::delete()</code></td><td>Διαγράφει record</td></tr>
+        </table>
         <h2>Migrations</h2>
-        <h3>Δημιουργία Migration</h3>
-        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:migration create_posts_table --create=posts</code></pre></div>  
+        <p>Οι Migrations είναι αρχεία που περιγράφουν τη δομή της βάσης δεδομένων.Βρίσκονται στο φάκελο: <code>database/migrations</code></p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:migration create_users_table --create=users # Δημιουργία Migration
+php artisan migrate                  # Εκτέλεση όλων των pending migrations
+php artisan migrate:rollback         # Ακυρώνει το τελευταίο migration
+php artisan migrate:reset            # Ακυρώνει όλα τα migrations</code></pre></div>  
+        <p>--create=users → δημιουργεί αυτόματα έναν πίνακα users.</p>
+        <h3>Δομή Migration</h3>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateUsersTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->id(); // primary key
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->timestamps(); // created_at, updated_at
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('users'); // Αν γίνει rollback
+    }
+}</code></pre></div></div> 
         <h3>Εκτέλεση Migrations</h3>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan migrate
 php artisan migrate:fresh --seed</code></pre></div>
 
         <h2>Blade Templates</h2>
-        <h3>Conditionals</h3>
+        <p>Το Blade είναι το ενσωματωμένο template engine του Laravel.Βρίσκεται στο φάκελο: <code>resources/views</code></p>
+        <p><code>Conditionals:</code> Επιτρέπει να εμφανίζεις διαφορετικό περιεχόμενο ανάλογα με συνθήκες.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@if($user->isAdmin())
     Admin
 @else
     User
 @endif</code></pre></div></div>
-        <h3>Conditionals</h3>
-        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@if($user->isAdmin())
-    Admin
-@else
-    User
-@endif</code></pre></div></div>
-        <h3>Loop</h3>
+        <p><code>Loop: </code> Υποστηρίζει @foreach, @for, @while, @forelse για συλλογές και arrays.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@foreach($posts as $post)
     <p>{{ $post->title }}</p>
-@endforeach
-</code></pre></div></div>
-        <h3>Extending Layout</h3>
+@endforeach</code></pre></div></div>
+        <p><code>Layouts & Extends: </code> Μπορείς να δημιουργήσεις κοινά layouts και να τα επεκτείνεις στις σελίδες</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@extends('app')
 @section('content')
     <h1>Home Page</h1>
-@endsection
-</code></pre></div></div>
-        
+@endsection</code></pre></div></div>
+        <p>Includes</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@include('partials.navbar')
+@include('partials.footer')</code></pre></div></div>
+
+
         <h2>Forms & Requests</h2>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;form method="POST" action="{{ route('posts.store') }}">
     @csrf
@@ -254,6 +286,25 @@ class CheckAge
         <p>Αυτό σημαίνει ότι μόνο συνδεδεμένοι χρήστες (authenticated) μπορούν να επισκεφτούν τη σελίδα.</p>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">Route::get('/profile', [ProfileController::class, 'show'])
     ->middleware('auth');</code></pre></div></div> 
+
+        <h2>Artisan Commands</h2>
+        <p>Το Artisan είναι το command line tool του Laravel που σου επιτρέπει να διαχειρίζεσαι εφαρμογή, database, controllers, models και άλλα.</p>
+        <table>
+            <tr><td><code>php artisan list</code></td><td>Εμφανίζει όλες τις διαθέσιμες εντολές</td></tr>
+            <tr><td><code>php artisan serve</code></td><td>Εκκινεί local development server (http://127.0.0.1:8000)</td></tr>
+        </table>
+        
+        <h2>Seeders & Factories</h2>
+        <p>Αυτά τα δύο εργαλεία χρησιμοποιούνται όταν θέλουμε να γεμίσουμε τη βάση δεδομένων με δεδομένα — ειδικά για development, testing ή demo σκοπούς</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:seeder UsersTableSeeder
+php artisan db:seed                   # Εκτελεί seeders
+php artisan make:factory UserFactory</code></pre></div>  
+        <h2>Caching & Config</h2>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan config:cache              # Cache configuration
+php artisan route:cache               # Cache routes
+php artisan view:clear                # Καθαρίζει cached views
+php artisan cache:clear               # Καθαρίζει cache </code></pre></div>
+
     </div>
     </div>
     <div id="addFooter"></div>
