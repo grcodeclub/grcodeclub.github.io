@@ -159,35 +159,35 @@ class UserController extends Controller
         <p>Τα Models είναι κλάσεις που αντιπροσωπεύουν πίνακες της βάσης δεδομένων.Βρίσκονται στο φάκελο: <code>app/Models</code></p>
         <p>Κάθε Model αντιστοιχεί σε έναν πίνακα της βάσης δεδομένων και χειρίζεται δεδομένα, σχέσεις και λογική που σχετίζεται με αυτά τα δεδομένα.</p>
         <p>Το Eloquent ORM είναι το αντικειμενοστραφές σύστημα χειρισμού βάσης δεδομένων του Laravel. Σου επιτρέπει να δουλεύεις με πίνακες σαν να ήταν αντικείμενα PHP, χωρίς να γράφεις raw SQL.</p>
-        <p>Δημιουργία Model + Migration</p>
+        <h3>Δημιουργία Model + Migration</h3>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:model Post -m</code></pre></div>  
 
         <h2>Migrations</h2>
-        <p>Δημιουργία Migration</p>
+        <h3>Δημιουργία Migration</h3>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:migration create_posts_table --create=posts</code></pre></div>  
-        <p>Εκτέλεση Migrations</p>
+        <h3>Εκτέλεση Migrations</h3>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan migrate
 php artisan migrate:fresh --seed</code></pre></div>
 
         <h2>Blade Templates</h2>
-        <p>Conditionals</p>
+        <h3>Conditionals</h3>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@if($user->isAdmin())
     Admin
 @else
     User
 @endif</code></pre></div></div>
-        <p>Conditionals</p>
+        <h3>Conditionals</h3>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@if($user->isAdmin())
     Admin
 @else
     User
 @endif</code></pre></div></div>
-        <p>Loop</p>
+        <h3>Loop</h3>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@foreach($posts as $post)
     <p>{{ $post->title }}</p>
 @endforeach
 </code></pre></div></div>
-        <p>Extending Layout</p>
+        <h3>Extending Layout</h3>
         <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@extends('app')
 @section('content')
     <h1>Home Page</h1>
@@ -201,7 +201,23 @@ php artisan migrate:fresh --seed</code></pre></div>
     &lt;textarea name="body">&lt;/textarea>
     &lt;button type="submit">Save&lt;/button>
 &lt;/form></code></pre></div></div>
+        <ol>
+            <li><code>@csrf</code> Προστατεύει από CSRF attacks</li>
+            <li><code>action</code> Η URL στην οποία θα σταλεί η φόρμα</li>
+            <li><code>method="POST"</code> Τύπος HTTP αιτήματος</li>
+            <li>Όταν ο χρήστης υποβάλει τη φόρμα, το Laravel δημιουργεί ένα Request αντικείμενο που περιέχει όλα τα δεδομένα της φόρμας.Αυτό το αντικείμενο περνάει στον controller.</li>
+        </ol>
+        <p>Το Laravel προσφέρει εύκολο τρόπο να επαληθεύεις δεδομένα πριν τα αποθηκεύσεις.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">public function store(Request $request) {
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users,email'
+    ]);
 
+    User::create($validated);
+
+    return redirect()->route('users.index');
+}</code></pre></div></div> 
         <h2>Middleware</h2>
         <p>Το Middleware είναι ένα φίλτρο που εκτελείται ανάμεσα στο αίτημα (request) του χρήστη και τον Controller.</p>
         <ol>
@@ -210,6 +226,7 @@ php artisan migrate:fresh --seed</code></pre></div>
             <li>CORS / Headers: Προσθέτει headers στα requests/responses</li>
             <li>Maintenance Mode: Μπορεί να μπλοκάρει πρόσβαση όταν η εφαρμογή είναι σε συντήρηση</li>
         </ol>
+        <p>Το Laravel προσφέρει εύκολο τρόπο να επαληθεύεις δεδομένα πριν τα αποθηκεύσεις.</p>
         <h3>Create Middleware</h3>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:middleware CheckAdmin</code></pre></div>  
         <h3>Περιεχόμενο middleware</h3>
