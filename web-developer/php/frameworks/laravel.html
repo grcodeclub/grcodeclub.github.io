@@ -41,59 +41,41 @@ php artisan serve</code></pre></div>
         <table class="table">
             <tr class="table-dark"><th>Φάκελος/Αρχείο</th><th>Περιγραφή</th></tr>
             
-            <tr><td><code>app/Http/Controllers</code></td>
-            <td>Περιέχει όλους τους Controllers της εφαρμογής. Οι Controllers διαχειρίζονται τα αιτήματα (requests) και στέλνουν δεδομένα στα views ή models.</td></tr>
+            <tr><td><code>app/Http/Controllers</code></td><td>Περιέχει όλους τους Controllers της εφαρμογής. Οι Controllers διαχειρίζονται τα αιτήματα (requests) και στέλνουν δεδομένα στα views ή models.</td></tr>
 
-            <tr><td><code>app/Models</code></td>
-            <td>Περιέχει τα Eloquent Models. Αντιπροσωπεύουν πίνακες της βάσης και ορίζουν σχέσεις μεταξύ τους, fillable πεδία, scopes, και business logic.</td></tr>
+            <tr><td><code>app/Models</code></td><td>Περιέχει τα Eloquent Models. Αντιπροσωπεύουν πίνακες της βάσης και ορίζουν σχέσεις μεταξύ τους, fillable πεδία, scopes, και business logic.</td></tr>
             
-            <tr><td><code>app/Http/Middleware</code></td>
-            <td>Περιέχει τα middleware, που φιλτράρουν αιτήματα πριν φτάσουν στους controllers (π.χ. έλεγχος authentication, ρυθμίσεις πρόσβασης).</td></tr>
+            <tr><td><code>app/Http/Middleware</code></td><td>Περιέχει τα middleware, που φιλτράρουν αιτήματα πριν φτάσουν στους controllers (π.χ. έλεγχος authentication, ρυθμίσεις πρόσβασης).</td></tr>
             
-            <tr><td><code>routes/web.php</code></td>
-            <td>Αρχείο όπου δηλώνονται τα web routes για την εφαρμογή. Συνδέει URLs με controllers ή views και χειρίζεται web requests.</td></tr>
+            <tr><td><code>routes/web.php</code></td><td>Αρχείο όπου δηλώνονται τα web routes για την εφαρμογή. Συνδέει URLs με controllers ή views και χειρίζεται web requests.</td></tr>
             
-            <tr><td><code>routes/api.php</code></td>
-            <td>Αρχείο όπου δηλώνονται τα API routes. Προορίζεται για RESTful APIs και δεν χρησιμοποιεί session ή cookies.</td></tr>
+            <tr><td><code>routes/api.php</code></td><td>Αρχείο όπου δηλώνονται τα API routes. Προορίζεται για RESTful APIs και δεν χρησιμοποιεί session ή cookies.</td></tr>
             
-            <tr><td><code>resources/views</code></td>
-            <td>Περιέχει τα Blade templates (.blade.php). Εδώ γράφεται το HTML που βλέπει ο χρήστης και μπορεί να περιλαμβάνει loops, conditions, και layouts.</td></tr>
+            <tr><td><code>resources/views</code></td><td>Περιέχει τα Blade templates (.blade.php). Εδώ γράφεται το HTML που βλέπει ο χρήστης και μπορεί να περιλαμβάνει loops, conditions, και layouts.</td></tr>
             
-            <tr><td><code>resources/css</code></td>
-            <td>Περιέχει αρχεία CSS και stylesheets που χρησιμοποιούνται στο frontend της εφαρμογής.</td></tr>
+            <tr><td><code>resources/css</code></td><td>Περιέχει αρχεία CSS και stylesheets που χρησιμοποιούνται στο frontend της εφαρμογής.</td></tr>
             
-            <tr><td><code>resources/js</code></td>
-            <td>Περιέχει αρχεία JavaScript και frontend scripts. Συχνά χρησιμοποιείται μαζί με frameworks όπως Vue ή React.</td></tr>
+            <tr><td><code>resources/js</code></td><td>Περιέχει αρχεία JavaScript και frontend scripts. Συχνά χρησιμοποιείται μαζί με frameworks όπως Vue ή React.</td></tr>
             
-            <tr><td><code>database/migrations</code></td>
-            <td>Περιέχει migration αρχεία που καθορίζουν τη δομή της βάσης δεδομένων. Χρησιμοποιούνται για δημιουργία, αλλαγή ή διαγραφή πινάκων.</td></tr>
+            <tr><td><code>database/migrations</code></td><td>Περιέχει migration αρχεία που καθορίζουν τη δομή της βάσης δεδομένων. Χρησιμοποιούνται για δημιουργία, αλλαγή ή διαγραφή πινάκων.</td></tr>
             
-            <tr><td><code>database/seeders</code></td>
-            <td>Περιέχει seeders για αρχικοποίηση δεδομένων στη βάση (π.χ. δημιουργία test users, default ρυθμίσεων).</td></tr>
+            <tr><td><code>database/seeders</code></td><td>Περιέχει seeders για αρχικοποίηση δεδομένων στη βάση (π.χ. δημιουργία test users, default ρυθμίσεων).</td></tr>
             
-            <tr><td><code>public/</code></td>
-            <td>Περιέχει όλα τα δημόσια αρχεία, όπως CSS, JS, εικόνες, και το index.php που ξεκινάει η εφαρμογή.</td></tr>
+            <tr><td><code>public/</code></td><td>Περιέχει όλα τα δημόσια αρχεία, όπως CSS, JS, εικόνες, και το index.php που ξεκινάει η εφαρμογή.</td></tr>
             
-            <tr><td><code>storage/</code></td>
-            <td>Χρησιμοποιείται για logs, cache, sessions, και αρχεία που φορτώνονται ή δημιουργούνται κατά την εκτέλεση της εφαρμογής.</td></tr>
+            <tr><td><code>storage/</code></td><td>Χρησιμοποιείται για logs, cache, sessions, και αρχεία που φορτώνονται ή δημιουργούνται κατά την εκτέλεση της εφαρμογής.</td></tr>
             
-            <tr><td><code>bootstrap/</code></td>
-            <td>Περιέχει αρχεία για αρχικοποίηση του framework και το <code>app.php</code> που φορτώνει το Laravel.</td></tr>
+            <tr><td><code>bootstrap/</code></td><td>Περιέχει αρχεία για αρχικοποίηση του framework και το <code>app.php</code> που φορτώνει το Laravel.</td></tr>
             
-            <tr><td><code>config/</code></td>
-            <td>Περιέχει όλα τα configuration αρχεία του Laravel (π.χ. database.php, mail.php, app.php).</td></tr>
+            <tr><td><code>config/</code></td><td>Περιέχει όλα τα configuration αρχεία του Laravel (π.χ. database.php, mail.php, app.php).</td></tr>
             
-            <tr><td><code>vendor/</code></td>
-            <td>Περιέχει όλα τα πακέτα και dependencies του Composer. Δεν επεξεργαζόμαστε συνήθως αρχεία εδώ.</td></tr>
+            <tr><td><code>vendor/</code></td><td>Περιέχει όλα τα πακέτα και dependencies του Composer. Δεν επεξεργαζόμαστε συνήθως αρχεία εδώ.</td></tr>
             
-            <tr><td><code>tests/</code></td>
-            <td>Περιέχει unit και feature tests για την εφαρμογή. Χρησιμοποιείται για έλεγχο της λειτουργικότητας.</td></tr>
+            <tr><td><code>tests/</code></td><td>Περιέχει unit και feature tests για την εφαρμογή. Χρησιμοποιείται για έλεγχο της λειτουργικότητας.</td></tr>
             
-            <tr><td><code>artisan</code></td>
-            <td>Το CLI εργαλείο του Laravel για commands όπως migrate, make:model, serve, και πολλά άλλα.</td></tr>
+            <tr><td><code>artisan</code></td><td>Το CLI εργαλείο του Laravel για commands όπως migrate, make:model, serve, και πολλά άλλα.</td></tr>
             
-            <tr><td><code>.env</code></td>
-            <td>Αρχείο ρυθμίσεων περιβάλλοντος (database, app key, mail, debug, κλπ.).</td></tr>
+            <tr><td><code>.env</code></td><td>Αρχείο ρυθμίσεων περιβάλλοντος (database, app key, mail, debug, κλπ.).</td></tr>
         </table>
 
         <h2>Routes (routes/web.php)</h2>
@@ -137,12 +119,47 @@ php artisan serve</code></pre></div>
 });</code></pre></div></div> 
 
         <h2>Controllers</h2>
-        <p>Δημιουργία Controller</p>
+        <p>Οι Controllers είναι αρχεία/κλάσεις που περιέχουν τη λογική της εφαρμογής.Σκοπός τους είναι να διαχωρίσουν τη λογική από το view.Δηλαδή, δεν γράφουμε όλο τον κώδικα απευθείας στις routes (web.php), αλλά τον βάζουμε σε controllers.</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:controller UserController</code></pre></div>  
-        <p>RESTful Resource Controller</p>
+        <p>Παράδειγμα Controller</p><div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    // Εμφάνιση όλων των χρηστών
+    public function index() {
+        $users = User::all();
+        return view('users.index', compact('users'));
+    }
+
+    // Εμφάνιση συγκεκριμένου χρήστη
+    public function show($id) {
+        $user = User::find($id);
+        return view('users.show', compact('user'));
+    }
+}</code></pre></div></div>
+
+        <p><strong>RESTful Resource Controller:</strong> Είναι ένας Controller που ακολουθεί την αρχιτεκτονική REST. Παρέχει προετοιμασμένες μεθόδους για όλες τις CRUD λειτουργίες: Create, Read, Update, Delete.</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:controller PostController --resource</code></pre></div>  
-        
+        <table class="table">
+            <tr><th>Μέθοδος Controller</th><th>HTTP Method</th><th>URL</th><th>Περιγραφή</th></tr><tr>
+            <td>index</td><td>GET</td><td>/posts</td><td>Εμφανίζει τη λίστα όλων των posts</td></tr><tr>
+            <td>create</td><td>GET</td><td>/posts/create</td><td>Εμφανίζει τη φόρμα δημιουργίας νέου post</td></tr><tr>
+            <td>store</td><td>POST</td><td>/posts</td><td>Αποθηκεύει ένα νέο post στη βάση δεδομένων</td></tr><tr>
+            <td>show</td><td>GET</td><td>/posts/{id}</td><td>Εμφανίζει ένα συγκεκριμένο post</td></tr><tr>
+            <td>edit</td><td>GET</td><td>/posts/{id}/edit</td><td>Εμφανίζει τη φόρμα επεξεργασίας ενός post</td></tr><tr>
+            <td>update</td><td>PUT / PATCH</td><td>/posts/{id}</td><td>Ενημερώνει ένα συγκεκριμένο post στη βάση δεδομένων</td></tr><tr>
+            <td>destroy</td><td>DELETE</td><td>/posts/{id}</td><td>Διαγράφει ένα συγκεκριμένο post από τη βάση δεδομένων</td></tr>
+        </table>
+
         <h2>Models & Eloquent ORM</h2>
+        <p>Τα Models είναι κλάσεις που αντιπροσωπεύουν πίνακες της βάσης δεδομένων.Βρίσκονται στο φάκελο: <code>app/Models</code></p>
+        <p>Κάθε Model αντιστοιχεί σε έναν πίνακα της βάσης δεδομένων και χειρίζεται δεδομένα, σχέσεις και λογική που σχετίζεται με αυτά τα δεδομένα.</p>
+        <p>Το Eloquent ORM είναι το αντικειμενοστραφές σύστημα χειρισμού βάσης δεδομένων του Laravel. Σου επιτρέπει να δουλεύεις με πίνακες σαν να ήταν αντικείμενα PHP, χωρίς να γράφεις raw SQL.</p>
         <p>Δημιουργία Model + Migration</p>
         <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:model Post -m</code></pre></div>  
 
