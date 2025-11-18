@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Php και Laravel">
+    <meta name="twitter:image" content="https://grcodeclub.gr/files-page/img/preview/web.png">
+    <meta property="og:image" content="https://grcodeclub.gr/files-page/img/preview/web.png"/>
+    <meta property="og:title" content="Php και Laravel">
+    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1>PHP - Laravel</h1>
+        <p>Η Laravel είναι ένα PHP Framework για την ανάπτυξη web εφαρμογών.</p>
+        <h2>Βασικές Ιδιότητες της Laravel</h2>
+        <ol>
+            <li>MVC Αρχιτεκτονική (Model-View-Controller)
+                <ul>
+                    <li>Model => χειρίζεται τη βάση δεδομένων και τα δεδομένα.</li>
+                    <li>View => εμφάνιση περιεχομένου</li>
+                    <li>Controller => λογική που συνδέει το Model με το View</li>
+                </ul>
+            </li>
+            <li>Eloquent ORM</li> <li>Routing System</li> <li>Blade Templating Engine</li> <li>Migrations & Seeders</li>
+            <li>Security & Middleware: Έλεγχος πρόσβασης / Προστασία από CSRF attacks / Έλεγχος πριν φτάσει το αίτημα στο controller. </li>
+            <lI
+        </ol>
+
+        <h2>Εγκατάσταση Laravel</h2>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">composer create-project laravel/laravel myapp
+cd myapp
+php artisan serve</code></pre></div>
+        <p>- php artisan serve: ξεκινάει τον ενσωματωμένο server <code>(http://127.0.0.1:8000)</code>
+        <br>- <code>.env</code>: αρχείο ρυθμίσεων (database, mail, app key, debug)</p>
+        <h3>Δημιουργία App Key</h3>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan key:generate</code></pre></div>
+        <h2>Βασική Δομή Project</h2>
+        <table class="table">
+            <tr class="table-dark"><th>Φάκελος/Αρχείο</th><th>Περιγραφή</th></tr>
+            
+            <tr><td><code>app/Http/Controllers</code></td>
+            <td>Περιέχει όλους τους Controllers της εφαρμογής. Οι Controllers διαχειρίζονται τα αιτήματα (requests) και στέλνουν δεδομένα στα views ή models.</td></tr>
+
+            <tr><td><code>app/Models</code></td>
+            <td>Περιέχει τα Eloquent Models. Αντιπροσωπεύουν πίνακες της βάσης και ορίζουν σχέσεις μεταξύ τους, fillable πεδία, scopes, και business logic.</td></tr>
+            
+            <tr><td><code>app/Http/Middleware</code></td>
+            <td>Περιέχει τα middleware, που φιλτράρουν αιτήματα πριν φτάσουν στους controllers (π.χ. έλεγχος authentication, ρυθμίσεις πρόσβασης).</td></tr>
+            
+            <tr><td><code>routes/web.php</code></td>
+            <td>Αρχείο όπου δηλώνονται τα web routes για την εφαρμογή. Συνδέει URLs με controllers ή views και χειρίζεται web requests.</td></tr>
+            
+            <tr><td><code>routes/api.php</code></td>
+            <td>Αρχείο όπου δηλώνονται τα API routes. Προορίζεται για RESTful APIs και δεν χρησιμοποιεί session ή cookies.</td></tr>
+            
+            <tr><td><code>resources/views</code></td>
+            <td>Περιέχει τα Blade templates (.blade.php). Εδώ γράφεται το HTML που βλέπει ο χρήστης και μπορεί να περιλαμβάνει loops, conditions, και layouts.</td></tr>
+            
+            <tr><td><code>resources/css</code></td>
+            <td>Περιέχει αρχεία CSS και stylesheets που χρησιμοποιούνται στο frontend της εφαρμογής.</td></tr>
+            
+            <tr><td><code>resources/js</code></td>
+            <td>Περιέχει αρχεία JavaScript και frontend scripts. Συχνά χρησιμοποιείται μαζί με frameworks όπως Vue ή React.</td></tr>
+            
+            <tr><td><code>database/migrations</code></td>
+            <td>Περιέχει migration αρχεία που καθορίζουν τη δομή της βάσης δεδομένων. Χρησιμοποιούνται για δημιουργία, αλλαγή ή διαγραφή πινάκων.</td></tr>
+            
+            <tr><td><code>database/seeders</code></td>
+            <td>Περιέχει seeders για αρχικοποίηση δεδομένων στη βάση (π.χ. δημιουργία test users, default ρυθμίσεων).</td></tr>
+            
+            <tr><td><code>public/</code></td>
+            <td>Περιέχει όλα τα δημόσια αρχεία, όπως CSS, JS, εικόνες, και το index.php που ξεκινάει η εφαρμογή.</td></tr>
+            
+            <tr><td><code>storage/</code></td>
+            <td>Χρησιμοποιείται για logs, cache, sessions, και αρχεία που φορτώνονται ή δημιουργούνται κατά την εκτέλεση της εφαρμογής.</td></tr>
+            
+            <tr><td><code>bootstrap/</code></td>
+            <td>Περιέχει αρχεία για αρχικοποίηση του framework και το <code>app.php</code> που φορτώνει το Laravel.</td></tr>
+            
+            <tr><td><code>config/</code></td>
+            <td>Περιέχει όλα τα configuration αρχεία του Laravel (π.χ. database.php, mail.php, app.php).</td></tr>
+            
+            <tr><td><code>vendor/</code></td>
+            <td>Περιέχει όλα τα πακέτα και dependencies του Composer. Δεν επεξεργαζόμαστε συνήθως αρχεία εδώ.</td></tr>
+            
+            <tr><td><code>tests/</code></td>
+            <td>Περιέχει unit και feature tests για την εφαρμογή. Χρησιμοποιείται για έλεγχο της λειτουργικότητας.</td></tr>
+            
+            <tr><td><code>artisan</code></td>
+            <td>Το CLI εργαλείο του Laravel για commands όπως migrate, make:model, serve, και πολλά άλλα.</td></tr>
+            
+            <tr><td><code>.env</code></td>
+            <td>Αρχείο ρυθμίσεων περιβάλλοντος (database, app key, mail, debug, κλπ.).</td></tr>
+        </table>
+
+        <h2>Routes (routes/web.php)</h2>
+        <p>Το αρχείο routes/web.php στο Laravel είναι το βασικό αρχείο όπου δηλώνεις όλες τις web routes της εφαρμογής σου. Τα web routes είναι οι διαδρομές (routes) που χρησιμοποιούνται για web σελίδες της εφαρμογής σου. Είναι οι “χάρτες” που λένε στο Laravel τι να κάνει όταν ο χρήστης επισκεφθεί κάποιο URL μέσω browser.</p>
+        <p>Πώς λειτουργεί:</p>
+        <ol>
+            <li>Ο χρήστης επισκέπτεται ένα URL, π.χ. http://localhost:8000/users</li>
+            <li>Το Laravel ψάχνει μέσα στο web.php για μία route που ταιριάζει με αυτό το URL.</li>
+            <li>Όταν βρει την route, εκτελεί τον κώδικα που έχει οριστεί σε αυτή (closure ή controller method)</li>
+        </ol>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">Route::get('/about', function () {
+    return view('about');
+});</code></pre></div></div> 
+        <p><strong>Route με Controller: </strong>Μια Route με Controller είναι μια διαδρομή (route) που δεν χειρίζεται τον κώδικα απευθείας μέσα στο routes/web.php, αλλά καλεί μια μέθοδο ενός Controller για να εκτελέσει τη λογική της εφαρμογής.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">Route::get('/users', [UserController::class, 'index']);</code></pre></div></div> 
+        <p><strong>Route με Parameter:</strong> Μια route με parameter είναι μια διαδρομή που δεν είναι σταθερή, αλλά δέχεται δυναμικές τιμές από το URL.</p>
+        <p>Πώς λειτουργεί:
+            <ol>
+                <li>Ο χρήστης επισκέπτεται π.χ. /user/5</li>
+                <li>Το Laravel βλέπει ότι η route έχει ένα parameter {id}.</li>
+                <li>Η τιμή 5 περνάει στη μέθοδο show() του UserController:</li>
+            </ol>
+        </p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">public function show($id) {
+    $user = User::find($id);
+    return view('users.show', compact('user'));
+}</code></pre></div></div> 
+        <p><strong>Named Routes:</strong> Μια Named Route είναι μια route στην οποία δίνουμε ένα όνομα, ώστε να μπορούμε να αναφερόμαστε σε αυτή με όνομα αντί για URL.</p>
+        <p>Πλεονεκτήματα:
+            <ol>
+                <li>Αν αλλάξει το URL, δεν χρειάζεται να ενημερώσουμε όλα τα links στην εφαρμογή.</li>
+                <li>Κάνει τον κώδικα πιο καθαρό και ευανάγνωστο</li>
+                <li>Δίνει ευκολία σε redirects και Blade templates</li>
+            </ol>
+        </p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');</code></pre></div></div> 
+        <p><strong>Route Groups: </strong> Οι Route Groups είναι ένας τρόπος να ομαδοποιήσεις πολλές routes μαζί και να τους εφαρμόσεις κοινά χαρακτηριστικά όπως middleware, prefix ή namespace.
+            Αυτό βοηθά στο να μην επαναλαμβάνεις τα ίδια σε κάθε route και να έχεις καλύτερη οργάνωση στον κώδικά σου.</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+});</code></pre></div></div> 
+
+        <h2>Controllers</h2>
+        <p>Δημιουργία Controller</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:controller UserController</code></pre></div>  
+        <p>RESTful Resource Controller</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:controller PostController --resource</code></pre></div>  
+        
+        <h2>Models & Eloquent ORM</h2>
+        <p>Δημιουργία Model + Migration</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:model Post -m</code></pre></div>  
+
+        <h2>Migrations</h2>
+        <p>Δημιουργία Migration</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:migration create_posts_table --create=posts</code></pre></div>  
+        <p>Εκτέλεση Migrations</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan migrate
+php artisan migrate:fresh --seed</code></pre></div>
+
+        <h2>Blade Templates</h2>
+        <p>Conditionals</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@if($user->isAdmin())
+    Admin
+@else
+    User
+@endif</code></pre></div></div>
+        <p>Conditionals</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@if($user->isAdmin())
+    Admin
+@else
+    User
+@endif</code></pre></div></div>
+        <p>Loop</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@foreach($posts as $post)
+    <p>{{ $post->title }}</p>
+@endforeach
+</code></pre></div></div>
+        <p>Extending Layout</p>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">@extends('app')
+@section('content')
+    <h1>Home Page</h1>
+@endsection
+</code></pre></div></div>
+        
+        <h2>Forms & Requests</h2>
+        <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-php">&lt;form method="POST" action="{{ route('posts.store') }}">
+    @csrf
+    &lt;input type="text" name="title">
+    &lt;textarea name="body">&lt;/textarea>
+    &lt;button type="submit">Save&lt;/button>
+&lt;/form></code></pre></div></div>
+
+        <h2>Middleware</h2>
+        <p>Create Middleware</p>
+        <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">php artisan make:middleware CheckAdmin</code></pre></div>  
+
+
+    </div>
+    </div>
+    <div id="addFooter"></div>
+</body>
+</html>
