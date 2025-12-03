@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@grcodeclub">
+    <meta name="twitter:title" content="Οδηγός για την εγκατάσταση Linux">
+    <meta name="twitter:image" content="https://grcodeclub.github.io/files-page/img/preview/linux.png"/>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/img/preview/linux.png"/>
+    <meta property="og:title" content="Οδηγός για την εγκατάσταση Linux">
+    <script src="https://grcodeclub.github.io/files-page/js/data.js"></script>
+    
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1>Eγκατάσταση Linux</h1>
+         <h2>Προετοιμασία USB για εγκατάσταση</h2>
+         <ol>
+            <li>Κατέβασε το ISO αρχείο του distro από την επίσημη σελ</li>
+            <li>Δημιούργησε ένα bootable USB
+                <ul>
+                    <li>Windows: Χρησιμοποίησε Rufus ή Balena Etcher</li>
+                    <li>Linux: dd ή Etcher</li>
+                    <li>Mac: Etcher</li>
+                </ul>
+            </li>
+            </ol>
+             <div class="alert alert-dark"><i class="fas fa-lightbulb me-2"></i> Χρειάζεσαι USB με τουλάχιστον 4GB.</div>
+            <h2>Επανεκκίνηση και Boot από USB</h2>
+                <ol>
+                    <li>Τοποθέτησε το USB στον υπολογιστή.</li>
+                    <li>Κάνε επανεκκίνηση και μπες στο BIOS/UEFI (συνήθως πατώντας F2, F12 κατά την εκκίνηση)</li>
+                    <li>Επίλεξε το USB ως πρώτη συσκευή εκκίνησης</li>
+                    <li>Αποθήκευσε και κάνε επανεκκίνηση</li>
+                </ol>
+                <div class="alert alert-dark"><i class="fas fa-lightbulb me-2"></i> Αν δεν βλέπεις το USB, έλεγξε αν είναι ενεργοποιημένο το UEFI/Legacy Boot ανάλογα με το partition scheme που επέλεξες.</div>
+            <h2>Δοκιμή ή εγκατάσταση (Live Mode)</h2>
+            <ul>
+                <li>Μπορείς να τρέξεις το Linux απευθείας από το USB χωρίς να επηρεάσεις τα αρχεία σου.</li>
+                <li>Ιδανικό για να δεις αν αναγνωρίζονται όλα τα εξαρτήματα (Wi-Fi, ήχος, οθόνη κ.λπ.)</li>
+            </ul>
+            <div class="alert alert-dark"><i class="fas fa-lightbulb me-2"></i>Συνιστώ πρώτα Try Ubuntu, ειδικά για νέο hardware.</div>
+            <h2>Εκκίνηση Εγκατάστασης</h2>
+            <ol>
+                <li>Εκκίνηση εγκατάστασης από το Live USB</li>
+                <li>Επιλογή γλώσσας (π.χ. Ελληνικά ή Αγγλικά).</li>
+                <li>Επιλογή διάταξης πληκτρολογίου.</li>
+                <li>Επιλογή Normal ή Minimal installation:
+                    <ul>
+                        <li>Normal => Έρχεται με browser, office, media player.</li>
+                        <li>Minimal => Μόνο βασικά εργαλεία.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h2>Επιλογή τύπου εγκατάστασης</h2>
+            <ol>
+                <li>Erase disk and install Ubuntu: Διαγράφει όλα τα δεδομένα στο δίσκο. (ροσοχή: δεν μπορεί να ανακτηθεί τίποτα.)</li>
+                <li>Install Ubuntu alongside Windows: Δημιουργεί dual boot. Μπορείς να επιλέγεις ανάμεσα σε Windows και Ubuntu κατά την εκκίνηση.</li>
+                <li>Something else (προχωρημένο) - Μπορείς να δημιουργήσεις custom partitions: 
+                    <ul>
+                        <li>/ (root) => τοποθετείται το σύστημα, συνήθως 20–50 GB</li>
+                        <li>/home => προσωπικά αρχεία</li>
+                        <li>swap => swap area (συνήθως ίση με τη RAM, ή λιγότερο αν έχεις πολύ RAM)</li>
+                    </ul>
+                </li>
+            </ol>
+            <h2>Ρύθμιση διαμερισμάτων (προχωρημένο)</h2>
+            <p>Αν επιλέξεις <code>Something else</code></p>
+            <ol>
+                <li>Δημιουργία root partition:
+                    <ul>
+                        <li>Type: Ext4</li>
+                        <li>Mount point: /</li>
+                        <li>Size: τουλάχιστον 20GB</li>
+                    </ul>
+                </li>
+                <li>Δημιουργία swap partition:
+                    <ul>
+                        <li>Size: ίσο ή μικρότερο της RAM</li>
+                        <li>Type: swap</li>
+                    </ul>
+                </li>
+                <li>Δημιουργία home partition:
+                    <ul>
+                        <li>Mount point: /home</li>
+                        <li>Type: Ext4</li>
+                        <li>Size: υπόλοιπος χώρος δίσκου</li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="alert alert-dark"><i class="fas fa-lightbulb me-2"></i> Αν θέλεις dual boot με Windows, μην αγγίξεις τα Windows partitions!</div>
+            <h2>Επιλογή ζώνης ώρας</h2>
+            <p>Άφησε το Ubuntu να εντοπίσει την ζώνη ώρας ή επίλεξε χειροκίνητα.</p>
+            <h2>Δημιουργία χρήστη</h2>
+            <ol>
+                <li>Όνομα χρήστη</li>
+                <li>Κωδικός πρόσβασης</li>
+                <li>Όνομα υπολογιστή</li>
+                <li>Επιλογή “Log in automatically” ή “Require password to log in”</li>
+            </ol>
+            <h2>Εκκίνηση εγκατάστασης</h2>
+             <ul>
+                <li>Κλικ στο Install Now</li>
+                <li>Το σύστημα θα ξεκινήσει την αντιγραφή αρχείων</li>
+                <li>Συνήθως χρειάζεται 10–30 λεπτά, ανάλογα με το hardware</li>
+                <li>Μετά την ολοκλήρωση, θα εμφανιστεί μήνυμα: Restart Now.</li>
+            </ul>
+        </div>
+    <div id="addFooter"></div>
+</body>
+</html>
