@@ -27,7 +27,6 @@ span .input-group-text { width: 7vw;}
 .accordion-item {
   border: none;
   margin-bottom: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
   border-radius: 0.5rem;
   overflow: hidden;
 }
